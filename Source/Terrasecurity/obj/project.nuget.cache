@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2OMm//oGTTvoX9hBeEPfFURskBVD4DEKPnz14OtezfzRRJFNZeuB7Z6AtQRsP10iGTNaJlZId8J1dDZL3ocRig==",
+  "dgSpecHash": "QbEdys0Ku4SPEDbTaQP5F0S7aHaIlWxXiL58gYFBEV8M8M3SDnXicuyyW+ylr4KH1I5e6MDEQZKJ2FQKl/qUnA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zerov\\source\\repos\\Terrasecurity\\Terrasecurity.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Terrasecurity\\Source\\Terrasecurity\\Terrasecurity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Night\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3901\\krafs.rimworld.ref.1.4.3901.nupkg.sha512",
+    "C:\\Users\\Night\\.nuget\\packages\\lib.harmony\\2.3.1.1\\lib.harmony.2.3.1.1.nupkg.sha512"
+  ],
   "logs": []
 }

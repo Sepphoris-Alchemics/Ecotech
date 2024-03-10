@@ -1,7 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net481</TargetFramework>
+    <OutputPath>..\..\Assemblies</OutputPath>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath> 
   </PropertyGroup>
+  <ItemGroup>
+	<PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*">
+	  <ExcludeAssets>runtime</ExcludeAssets>
+	</PackageReference>
+    <PackageReference Include="Lib.Harmony" Version="*">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>

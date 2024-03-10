@@ -1,32 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zerov\\source\\repos\\Terrasecurity\\Terrasecurity.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Terrasecurity\\Source\\Terrasecurity\\Terrasecurity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zerov\\source\\repos\\Terrasecurity\\Terrasecurity.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Terrasecurity\\Source\\Terrasecurity\\Terrasecurity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zerov\\source\\repos\\Terrasecurity\\Terrasecurity.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Terrasecurity\\Source\\Terrasecurity\\Terrasecurity.csproj",
         "projectName": "Terrasecurity",
-        "projectPath": "C:\\Users\\zerov\\source\\repos\\Terrasecurity\\Terrasecurity.csproj",
-        "packagesPath": "C:\\Users\\zerov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zerov\\source\\repos\\Terrasecurity\\obj\\",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Terrasecurity\\Source\\Terrasecurity\\Terrasecurity.csproj",
+        "packagesPath": "C:\\Users\\Night\\.nuget\\packages\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Terrasecurity\\Source\\Terrasecurity\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zerov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Night\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net481"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net481": {
+            "targetAlias": "net481",
             "projectReferences": {}
           }
         },
@@ -37,24 +41,21 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+        "net481": {
+          "targetAlias": "net481",
+          "dependencies": {
+            "Krafs.Rimworld.Ref": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[1.4.*, )"
+            },
+            "Lib.Harmony": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[*, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
