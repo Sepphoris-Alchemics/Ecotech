@@ -39,6 +39,10 @@ namespace Terrasecurity
             {
                 GenSpawn.Spawn(Props.replacementToSpawn, parent.PositionHeld, parent.MapHeld, WipeMode.Vanish);
             }
+            if (wieldingPawn != null)
+            {
+                wieldingPawn.jobs.StopAll();
+            }
             parent.Destroy(DestroyMode.KillFinalize);
         }
 

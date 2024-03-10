@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="MeleeWeapon_Mace"]</xpath>
+    <xpath>Defs/ThingDef[defName="Bow_Great"]</xpath>
     <value>
       <comps>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>20000</lifespanTicks>
+          <lifespanTicks>200</lifespanTicks>
           <replacementToSpawn>ChunkSlagSteel</replacementToSpawn>
           <lifespanBarColor>(52, 85, 235)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
