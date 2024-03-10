@@ -20,10 +20,27 @@ namespace Terrasecurity
 
         public ThingCompProperties_EquippedLifespan Props => base.props as ThingCompProperties_EquippedLifespan;
 
+        /// <summary>
+        /// Called while item is not equipped
+        /// </summary>
+        public override void CompTick()
+        {
+            base.CompTick();
+            ProgressLifespan();
+        }
+
+        /// <summary>
+        /// Called while item is equipped
+        /// </summary>
         public override void EquippedTick()
         {
+            ProgressLifespan();
+        }
+
+        private void ProgressLifespan()
+        {
             ageTicks++;
-            if(ageTicks > Props.lifespanTicks)
+            if (ageTicks > Props.lifespanTicks)
             {
                 Expire();
             }

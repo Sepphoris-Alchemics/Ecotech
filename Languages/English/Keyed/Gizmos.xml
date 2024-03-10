@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <Terrasecurity_Gizmo_LifespanTicksRemaining>Item lifespan:</Terrasecurity_Gizmo_LifespanTicksRemaining>
-  <Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>The lifespan of {ITEMNAME} reduces whilst equipped. Once the lifespan elapses, the item is destroyed.</Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>
+  <Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>{ITEMNAME} has a limited lifespan. Once the lifespan elapses, the item is destroyed.</Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>
 </LanguageData>
