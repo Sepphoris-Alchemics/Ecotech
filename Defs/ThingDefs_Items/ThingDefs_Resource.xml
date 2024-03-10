@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
+	-To-do: Later used in Perrenial Weapons.
+-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_SunDrop</defName>
+    <label>Sundrop</label>
+    <description>A sphere infused with golden energy directly from the sun. Despite the source of it's power, it is only warm to the touch.\n\nCan be used to revitialize the life force of certain Terraweapons, increasing the time before they wither away.</description>
+    <possessionCount>10</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SunDrop</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>0.5</heatPerSecond>
+        <heatPushMaxTemperature>12</heatPushMaxTemperature>
+      </li>
+    </comps>
+    <allowedArchonexusCount>100</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Glowsap</defName>
+    <label>Glowsap</label>
+    <description>A jar of harvested glowsap. Used as a supplement or nutrition source for terratech plants. Unfortunately, it cannot affect baseline plants, such crops and most trees.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Glowsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>90</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <!--<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>-->
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Endosap</defName>
+    <label>Endosap</label>
+    <description>A jar of harvested endosap. People and colonies skilled with Terratech can use this to replace the mundane sap of immature Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
+\n\nNew traits:
+30-40% health increase
+30-40% more uses before expiry
+Flammability lowered by 75%
+Regeneration factor lowered by 50% (immature only)</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Endosap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>90</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>352</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <!--<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>-->
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Archsap</defName>
+    <label>Archsap</label>
+    <description>A jar of harvested archsap. People and colonies skilled with Terratech can use this to replace the mundane sap of immature Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
+\nArchsap is incredibly rare and valuable, due to the secrets of it's growth being lost to time, alongside it's trait of making any Terraweapon semi-immortal. Careful care and usage is highly advised.
+\n\nNew traits:
+Hitpoint decay when shot nullified
+Regeneration factor lowered by 50% (immature only)</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Archsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>3</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>1408</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <!--<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>-->
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_SurgeSeed_PrimaTurret</defName>
+    <label>Prima Turret Seed</label>
+    <description>A special seed containing vast amounts of energy and nutrients. Once planted on any soil that can support plants, the seed will immediately burst into vines and wood, taking root and forming into the biotic pattern of a Prima Turret.\n\nSurge Seeds expend their energy quite rapidly, deteriorating their condition. They will wither away if not planted within a few days after harvesting.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>240000</lifespanTicks>
+      </li>
+    </comps>
+    <allowedArchonexusCount>20</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_SurgeSeed_GlowsapTree</defName>
+    <label>Glowsap Tree Seed</label>
+    <description>A special seed containing vast amounts of energy and nutrients. Once planted on any soil that can support plants, the seed will immediately burst into vines and wood, taking root and forming into the biotic pattern of a Prima Turret.\n\nSurge Seeds expend their energy quite rapidly, deteriorating their condition. They will wither away if not planted within a few days after harvesting.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>TS_GlowsapTree</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>240000</lifespanTicks>
+      </li>
+    </comps>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

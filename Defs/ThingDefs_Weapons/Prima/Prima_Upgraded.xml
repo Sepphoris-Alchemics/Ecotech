@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DesignatorDropdownGroupDef>
+		<defName>TS_PrimaTurretGroup</defName>
+		<label>prima turrets</label>
+	</DesignatorDropdownGroupDef>
+
+<!--Health increase percentages should be 50-60%: For guns of 150 health, this should be a range of 225-240-->
+
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_ShotgunUpgraded</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
+		<label>prima briarburster</label>
+		<description>The matured form of the Prima Pinburster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/PrimaShotgunUpgraded</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+			<li>PlantWeaponsUpgraded</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>ShortShots</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>240</MaxHitPoints> <!--Base has 60 shots; matured has 80. Health is 60% higher than it's immature form-->
+			<AccuracyTouch>0.85</AccuracyTouch> <!--.05 higher accuracy in all areas-->
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.4</Mass> <!--Mass increased by .2 from base-->
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>13.9</range> <!--1 higher range than it's immature form-->
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>3</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_SMGUpgraded</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
+		<label>prima pinecaster</label>
+		<description>The matured form of the Prima Thorncaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
+\nAdditionally, the matured form no longer has inconsistent output. It will always fire 3 projectiles per burst, instead of a random range of 2-4 projectiles.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/PrimaSMGUpgraded</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+      <li>ShortShots</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>240</MaxHitPoints> <!--80 bursts-->
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>17.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+    </comps>
+		<modExtensions>
+			<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>1</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+		
+		
+		<ThingDef Abstract="True" Name="MeleeWeaponPlantBase" ParentName="BaseWeapon">
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponTags>
+      <li>PlantWeapons</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+  </ThingDef>-->
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>TS_Knife</defName>
+		<label>terraknife</label>
+		<description>A biotic curved dagger. One of the weakest terraweapons, but extremely quick to attack with, and to grow.</description>
+		<techLevel>Neolithic</techLevel>
+		<graphicData>
+			<texPath>Things/WeaponMelee/TS_Dagger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+    <!--<costList>
+      <WoodLog>30</WoodLog>
+    </costList>-->
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+			<Mass>0.3</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>TS_Mace</defName>
+		<label>terramace</label>
+		<description>A half-vine, half-wooden club, with several sharp protrusions.</description>
+		<techLevel>Neolithic</techLevel>
+		<graphicData>
+			<texPath>Things/WeaponMelee/TS_Mace</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+    <!--<costList>
+      <WoodLog>50</WoodLog>
+    </costList>-->
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+			<Mass>1.1</Mass>
+			<Flammability>1</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>TS_Phytosword</defName>
+		<label>phytosword</label>
+		<description>A sharp, curved sword grown from a weapon pod. Apparently the names "terrablade" and "terrasword" were refused to be used for the sake of avoiding potential confusion.</description>
+		<techLevel>Neolithic</techLevel>
+		<graphicData>
+			<texPath>Things/WeaponMelee/TS_Sword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+    <costList>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+			<Mass>0.7</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+		</tools>
+	</ThingDef>
+
+</Defs>

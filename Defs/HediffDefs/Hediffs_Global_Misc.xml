@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>TS_BriarHediff</defName>
+		<description>Effects and consequences caused by being in direct contact with the thorny tendrils of briars. The higher the affliction, the more the briar is tangled around - and enlodged into - the entire body.
+\nBriars themselves aren't initially deadly, but the dozens - and in extreme cases, hundreds - of thorns can result in literal death by a thousand cuts. Briars will cover and grow into even the slightest indent or opening, putting sensitive areas - such as the eyes or the inside of the mouth - at extreme risk.</description>
+    <descriptionShort>Effects of being in direct contact to briar tendrils and thorns.</descriptionShort>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>briar vines</label>
+		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.6</severityPerDay>
+      </li>
+		</comps>
+      <stages>
+        <li>
+					<minSeverity>0</minSeverity>
+					<label>prickled</label>
+          <painFactor>1.2</painFactor>
+        </li>
+
+				<li>
+					<minSeverity>0.3</minSeverity>
+					<label>slight tangles</label>
+          <painFactor>1.4</painFactor>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.05</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>-0.1</offset>
+            </li>
+          </capMods>
+				</li>
+
+				<li>
+					<minSeverity>0.5</minSeverity>
+					<label>moderately tangled</label>
+          <painFactor>1.6</painFactor>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.10</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>-0.25</offset>
+            </li>
+          </capMods>
+          <hediffGivers>
+            <!--<li Class="HediffGiver_Random">
+              <hediff>Cut</hediff>
+              <mtbDays>2</mtbDays>
+              <partsToAffect>
+                <li>Torso</li>
+                <li>Legs</li>
+              </partsToAffect>
+            </li>-->
+          </hediffGivers>
+				</li>
+
+				<li>
+					<minSeverity>0.7</minSeverity>
+					<label>heavily entangled</label>
+          <painFactor>1.8</painFactor>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.35</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>-0.5</offset>
+            </li>
+          </capMods>
+          <hediffGivers>
+            <!--<li Class="HediffGiver_Random">
+              <hediff>Cut</hediff>
+              <mtbDays>1</mtbDays>
+              <partsToAffect>
+                <li>Torso</li>
+                <li>Legs</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+              </partsToAffect>
+            </li>-->
+            <li Class="HediffGiver_Random">
+              <hediff>Blindness</hediff>
+              <mtbDays>9</mtbDays>
+            </li>
+          </hediffGivers>
+				</li>
+
+				<li>
+					<minSeverity>0.9</minSeverity>
+					<label>completely ensnared</label>
+          <painFactor>2</painFactor>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.9</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>-0.75</offset>
+            </li>
+          </capMods>
+          <hediffGivers>
+            <!--<li Class="HediffGiver_Random">
+              <hediff>Cut</hediff>
+              <mtbDays>0.5</mtbDays>
+              <partsToAffect>
+                <li>Torso</li>
+                <li>Legs</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Neck</li>
+                <li>Head</li>
+                <li>Tongue</li>
+              </partsToAffect>
+            </li>-->
+            <li Class="HediffGiver_Random">
+              <hediff>Blindness</hediff>
+              <mtbDays>3</mtbDays>
+            </li>
+          </hediffGivers>
+        </li>
+      </stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>TS_PsychicDamageBuildup</defName>
+		<description>Affected by psionic interference. Pawn is constantly bombarded by mental anguish and screams from nowhere, heavily affecting their mental capabilities.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>psychic interference</label>
+		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+      </li>
+		</comps>
+      <stages>
+        <li>
+					<minSeverity>0</minSeverity>
+					<label>ignorable</label>
+				  <statOffsets>
+          	<GlobalLearningFactor>-0.1</GlobalLearningFactor>
+						<RestRateMultiplier>-0.1</RestRateMultiplier>
+        	</statOffsets>
+        </li>
+
+				<li>
+					<minSeverity>0.2</minSeverity>
+					<label>minor</label>
+				  <statOffsets>
+          	<GlobalLearningFactor>-0.2</GlobalLearningFactor>
+						<RestRateMultiplier>-0.2</RestRateMultiplier>
+						<!--<PainShockThreshold>-0.1</PainShockThreshold>-->
+        	</statOffsets>
+				</li>
+
+				<li>
+					<minSeverity>0.5</minSeverity>
+					<label>moderate</label>
+				  <statOffsets>
+          	<GlobalLearningFactor>-0.35</GlobalLearningFactor>
+						<RestRateMultiplier>-0.35</RestRateMultiplier>
+						<!--<PainShockThreshold>-0.2</PainShockThreshold>-->
+        	</statOffsets>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>-0.1</offset>
+            </li>
+          </capMods>
+				</li>
+
+				<li>
+					<minSeverity>0.8</minSeverity>
+					<label>severe</label>
+				  <statOffsets>
+          	<GlobalLearningFactor>-0.5</GlobalLearningFactor>
+						<RestRateMultiplier>-0.5</RestRateMultiplier>
+						<PainShockThreshold>-0.1</PainShockThreshold>
+        	</statOffsets>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>-0.2</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.1</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>-0.1</offset>
+            </li>
+          </capMods>
+					<hediffGivers>
+            <li Class="HediffGiver_Random">
+              <hediff>PsychicComa</hediff>
+              <mtbDays>80</mtbDays>
+              <partsToAffect>
+                <li>Brain</li>
+              </partsToAffect>
+            </li>
+          </hediffGivers>
+				</li>
+
+				<li>
+					<minSeverity>1</minSeverity>
+					<label>acute</label>
+				  <statOffsets>
+          	<GlobalLearningFactor>-0.7</GlobalLearningFactor>
+						<RestRateMultiplier>-0.7</RestRateMultiplier>
+						<PainShockThreshold>-0.2</PainShockThreshold>
+        	</statOffsets>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>-0.3</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>-0.3</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>-0.3</offset>
+            </li>
+          </capMods>
+					<hediffGivers>
+            <li Class="HediffGiver_Random">
+              <hediff>CatatonicBreakdown</hediff>
+              <mtbDays>120</mtbDays>
+              <partsToAffect>
+                <li>Brain</li>
+              </partsToAffect>
+            </li>
+          </hediffGivers>
+				</li>
+      </stages>
+	</HediffDef>
+
+</Defs>

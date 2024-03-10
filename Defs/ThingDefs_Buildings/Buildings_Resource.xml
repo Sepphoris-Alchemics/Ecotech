@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>TS_GlowsapBay</defName>
+		<label>Glowsap Bay</label>
+		<description>A large container filled with glowsap, intended for indoor or emergency growth. Doesn't require electricity, but will frequently need to be refilled with healthy glowsap as it's nutrients are depleted.
+\n\nSince this basin was specifically designed to house glowsap, this basin cannot support anything else besides Terratech plants. However, it will give all supported plants a slight growth boost.</description>
+		<thingClass>Building_PlantGrower</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>		
+		<graphicData>
+			<texPath>Things/Building/Production/GlowsapBay/GlowsapBay</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<defaultPlacingRot>East</defaultPlacingRot>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>TS_GlowsapBays</li>
+    </researchPrerequisites>
+		<!--<constructEffect>ConstructWood</constructEffect>-->
+		<fillPercent>0.30</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<statBases>
+			<WorkToBuild>2800</WorkToBuild>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>2</Flammability>
+			<Cleanliness>-2</Cleanliness>
+			<Mass>7.5</Mass>
+		</statBases>
+		<size>(1,4)</size>
+		<costList>
+			<TS_Glowsap>30</TS_Glowsap>
+			<WoodLog>40</WoodLog>
+		</costList>
+		<fertility>1.2</fertility>
+		<building>
+			<defaultPlantToGrow>TS_GlowsapBloom</defaultPlantToGrow>
+			<sowTag>TS_GlowsapCompatible</sowTag>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <!--<li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.05</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>12</maxDistance>
+      </li>-->
+      <li Class="CompProperties_Art">
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>1.5</fuelConsumptionRate>
+        <fuelCapacity>30.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>TS_Glowsap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Glowsap</fuelLabel>
+        <fuelGizmoLabel>Healthy glowsap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires glowsap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+      </li>
+    </comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+</Defs>

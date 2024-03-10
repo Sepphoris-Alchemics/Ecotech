@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Pods should follow the following skill rules:
+Tier 1 weapons: 1-4
+Tier 1 heavy: 5-7
+Tier 1 upgrades: 6-8
+Tier 1 surge seeds: 6-8
+
+Tier 2 weapons: 4-8
+Tier 2 heavy: 9-11
+Tier 2 upgrades: 10-12
+Tier 2 surge seeds: 10-12
+
+Tier 3 weapons: 8-12
+Tier 3 heavy: 13-15
+Tier 3 upgrades: 14-16
+Tier 3 surge seeds: 14-16
+
+Tier 4 weapons: 16-20
+Tier 4 heavy: 17-19
+Tier 4 upgrades: 20
+Tier 4 surge seeds: 20
+-->
+
+<!--Melee Weapons-->
+
+  <ThingDef Name="TS_WeaponPodBase" ParentName="PlantBaseNonEdible" Abstract="True">
+    <graphicData>
+      <texPath>Things/Plant/WeaponPod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>105</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>
+    <plant>
+      <fertilityMin>1</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>300</harvestWork>
+      <harvestedThingDef>TS_Knife</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>1</harvestYield>
+      <harvestMinGrowth>0.9</harvestMinGrowth>
+      <harvestAfterGrowth>0</harvestAfterGrowth>
+      <harvestTag>Standard</harvestTag>
+      <harvestFailable>false</harvestFailable>
+      <harvestYieldAffectedByDifficulty>false</harvestYieldAffectedByDifficulty>
+      <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
+      <sowWork>400</sowWork>
+      <sowTags>
+        <li>Ground</li>
+        <li>TS_GlowsapCompatible</li>
+      </sowTags>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>2.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.4~0.75</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Knife</defName>
+    <label>Terrapod: Knife</label>
+    <description>A plant pod that will slowly grow a biotic pistol. Requires highly fertile terrain.</description>
+    <descriptionHyperlinks>
+      <ThingDef>TS_OverviewPrimaWeapons</ThingDef>
+    </descriptionHyperlinks>
+    <plant>
+      <harvestedThingDef>TS_Knife</harvestedThingDef>
+      <sowMinSkill>1</sowMinSkill>
+      <growDays>4</growDays>
+      <harvestWork>300</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_FundamentalArms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Phytosword</defName>
+    <label>Terrapod: Phytosword</label>
+    <description>A plant pod that will slowly grow a biotic sword. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_Phytosword</harvestedThingDef>
+      <sowMinSkill>2</sowMinSkill>
+      <growDays>5</growDays>
+      <harvestWork>300</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_FundamentalArms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Mace</defName>
+    <label>Terrapod: Mace</label>
+    <description>A plant pod that will slowly grow a biotic mace. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_Mace</harvestedThingDef>
+      <sowMinSkill>2</sowMinSkill>
+      <growDays>5</growDays>
+      <harvestWork>300</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_FundamentalArms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_StakeCaster</defName>
+    <label>Terrapod: Stakecaster</label>
+    <description>A plant pod that will slowly grow a biotic stakecaster. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_StakeCaster</harvestedThingDef>
+      <sowMinSkill>3</sowMinSkill>
+      <growDays>6</growDays>
+      <sowResearchPrerequisites>
+        <li>TS_FundamentalArms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+<!--Light Weapons-->
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Pistol</defName>
+    <label>Terrapod: Pistol</label>
+    <description>A plant pod that will slowly grow a biotic pistol. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_Pistol</harvestedThingDef>
+      <sowMinSkill>4</sowMinSkill>
+      <growDays>6</growDays>
+      <harvestWork>450</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_BasicFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_SMG</defName>
+    <label>Terrapod: SMG</label>
+    <description>A plant pod that will slowly grow a biotic SMG. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_SMG</harvestedThingDef>
+      <sowMinSkill>4</sowMinSkill>
+      <growDays>6</growDays>
+      <harvestWork>450</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_BasicFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+<!--Standard arms-->
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Shotgun</defName>
+    <label>Terrapod: Scattergun</label>
+    <description>A plant pod that will slowly grow a biotic shotgun. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_Shotgun</harvestedThingDef>
+      <sowMinSkill>5</sowMinSkill>
+      <growDays>7</growDays>
+      <harvestWork>600</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_StandardFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Carbine</defName>
+    <label>Terrapod: Carbine</label>
+    <description>A plant pod that will slowly grow a biotic carbine. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_Carbine</harvestedThingDef>
+      <sowMinSkill>5</sowMinSkill>
+      <growDays>7</growDays>
+      <harvestWork>600</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_StandardFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Rifle</defName>
+    <label>Terrapod: Rifle</label>
+    <description>A plant pod that will slowly grow a biotic rifle. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_Rifle</harvestedThingDef>
+      <sowMinSkill>6</sowMinSkill>
+      <growDays>8</growDays>
+      <harvestWork>600</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_StandardFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+<!--Heavy Weapons-->
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_LMG</defName>
+    <label>Terrapod: Heavy Rifle</label>
+    <description>A plant pod that will slowly grow a biotic, heavy assault rifle. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_LMG</harvestedThingDef>
+      <sowMinSkill>7</sowMinSkill>
+      <growDays>9</growDays>
+      <harvestWork>750</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_HeavyFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_Seedburster</defName>
+    <label>Terrapod: Seedburster</label>
+    <description>A plant pod that will slowly grow a biotic launcher that lobs explosive shells filled with sharp seeds. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_Seedburster</harvestedThingDef>
+      <sowMinSkill>8</sowMinSkill>
+      <growDays>10</growDays>
+      <harvestWork>750</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_HeavyFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_WeaponPod_AcidLauncher</defName>
+    <label>Terrapod: Acid Launcher</label>
+    <description>A plant pod that will slowly grow a biotic launcher that sprays acid. Requires highly fertile terrain.</description>
+    <plant>
+      <harvestedThingDef>TS_AcidLauncher</harvestedThingDef>
+      <sowMinSkill>8</sowMinSkill>
+      <growDays>10</growDays>
+      <harvestWork>750</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_HeavyFirearms</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+<!--Turrets-->
+
+  <ThingDef ParentName="TS_WeaponPodBase">
+    <defName>TS_SurgePod_PrimaTurret</defName>
+    <label>Surgepod: Prima Turret</label>
+    <description>An enhanced Terrapod that will provide a surge seed for Prima Turrets. This provided seed will need to be manually planted, then will immediately sprout into the Prima Turret.</description>
+    <graphicData>
+      <texPath>Things/Plant/SurgePod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>125</MaxHitPoints>
+    </statBases>
+    <plant>
+      <harvestedThingDef>TS_SurgeSeed_PrimaTurret</harvestedThingDef>
+      <sowMinSkill>8</sowMinSkill>
+      <growDays>10</growDays>
+      <harvestWork>750</harvestWork>
+      <sowResearchPrerequisites>
+        <li>TS_PrimaTurretSeeds</li>
+      </sowResearchPrerequisites>
+    </plant>
+  </ThingDef>
+
+</Defs>

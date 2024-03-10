@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--<HediffDef Name="TS_OverviewPlants" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+	<makesAlert>false</makesAlert>
+	<makesSickThought>false</makesSickThought>
+	</HediffDef>
+
+	<HediffDef Name="TS_OverviewPlantWeapons" ParentName="TS_OverviewPlants" Abstract="True">
+    <chronic>true</chronic>
+  </HediffDef>-->
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>TS_OverviewPrimaWeapons</defName>
+    <label>Overview: Prima Family</label>
+		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Terratech will learn to grow. They are the easiest to bioengineer, the fastest to research, and have the shortest growth range.
+\nCertain Terraweapons have a final growth stage that can be influenced. This final growth stage reveals new capabilities of a Terraweapon.
+\nFor Prima Weapons, the main trait is the evolution of the projectile, which will burst into briar tangles upon impact. This enables each projectile to wrap and stick around live targets, and repeated projectiles will further increase this ensnarement.
+This also develops the weapon's protective traits, causing more wood to form, external fluid growths to be used, and hardened epidermis plates to form in their location. These changes improve the overall weapon health.
+\nGeneral Prima family guidelines:
+-Effective Alternative Range: Machining-Blowback Operation
+-Growth Method: Terrapod
+-Minimum Soil Fertility: 90%
+-Minimum Growth Duration: 4 days
+-Maximum Growth Duration: 10 days
+-Maximum Hitpoints (Immature): 180
+\n-How to mature: Insert into Terravat
+-When Matured: Projectiles grow into briars upon impact
+-When Matured: 50-60% Higher health pool
+-When Matured: Lower damage
+-Evolution Growth Duration: 10 days + 50% of initial growth time
+-Maximum Hitpoints (Matured): 240
+\nGuideline notes:
+-Effective Alternative Range: any weapon that requires these research options are weapons that Prima weapons were designed to compete with.
+-Growth does not account for external factors, i.e. soil fertility and daylight.
+-All immature weapons regenerate health, but only regenerate when unequipped and left alone.
+-Other minimum stats can be found in the accompanying description.</description>
+    <graphicData>
+      <texPath>Things/Plant/WeaponPod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+    </statBases>
+    <selectable>false</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.8</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>900</harvestWork>
+      <harvestedThingDef>TS_StakeCaster</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>1</harvestYield>
+      <harvestMinGrowth>0.9</harvestMinGrowth>
+      <harvestTag>Standard</harvestTag>
+      <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
+      <sowWork>1500</sowWork>
+      <sowTags>
+        <li>TS_OverviewTagOnly</li>
+      </sowTags>
+      <sowMinSkill>1</sowMinSkill>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>2.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>5</growDays>
+      <visualSizeRange>0.4~0.95</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
+
+</Defs>

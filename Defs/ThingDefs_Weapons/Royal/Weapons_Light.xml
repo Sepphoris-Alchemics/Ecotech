@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Royal weapons should follow the following:
+Hit points should always be lower than any other counterpart
+Damage should match their Prima counterpart
+Speed should be 80-100
+All shots should inflct additional psychic damage
+Armor penetration should be .3-.4
+Accuracy follows charge rifles-->
+
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_RoyalRifle</defName>
+		<label>Royal Hyperstem</label>
+		<description>A biotic rifle heavily influenced by Anima biology. Very few of these exist, as the knowledge to grow them is beyond the Rimworld. However, the few that do exist are known to rival charge weaponry on the battlefield. Not to mention, masterpieces showing what nature is truly capable of.\n\nBeing a plant weapon, this weapon has a limited amount of shots, but benefits from speed, lack of recoil, and armor penetration. Anima weapons benefit from very high fire rate, and will inflict psychic injury on top of physical injury. However, their sensitive design impacts their durability quite significantly.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Anima/TS_AnimaRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+    <relicChance>1</relicChance>
+		<statBases>
+			<Beauty>3</Beauty>
+      <MaxHitPoints>120</MaxHitPoints>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.70</AccuracyLong>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.6</Mass>
+			<Flammability>1</Flammability>
+      <WorkToMake>45000</WorkToMake>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_AnimaRifle</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>24.9</range>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>TS_Sound_AnimaShot1</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>1</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>
+		</modExtensions>
+		<tradeTags>
+			<li>ExoticMisc</li>
+      <li>Artifact</li>
+    </tradeTags>
+	</ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_AnimaRifle</defName>
+    <label>psy-charged stinger</label>
+    <graphicData>
+      <texPath>Things/Projectile/TS_AnimaThorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>TS_PsychicShot</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

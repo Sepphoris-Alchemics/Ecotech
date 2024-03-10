@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <MeditationFocusPerTerravatAbstract>{1} per nearby terravat (max {0})</MeditationFocusPerTerravatAbstract>
+  <MeditationFocusPerTerravat>{2} per nearby terravat ({0} / {1})</MeditationFocusPerTerravat>
+</LanguageData>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>TS_Filth_Acid</defName>
+    <label>acid puddle</label>
+	<description>A puddle of acid</description>
+    <statBases>
+      <Beauty>-30</Beauty>
+      <Cleanliness>-15</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/Spatter</texPath>
+      <color>(100, 152, 100, 170)</color>
+    </graphicData>
+	<pathCost>30</pathCost>
+    <filth>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+	  <maxThickness>2</maxThickness>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>TS_Filth_Sap</defName>
+    <label>sap puddle</label>
+    <description>A puddle of sap. Flammable.</description>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <Beauty>-10</Beauty>
+      <Cleanliness>-5</Cleanliness>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>2.0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/PoolSoft</texPath>
+      <color>(200, 200, 140, 50)</color>
+      <drawSize>0.5</drawSize>
+    </graphicData>
+    <filth>
+      <rainWashes>true</rainWashes>
+      <disappearsInDays>1~2</disappearsInDays>
+      <cleaningWorkToReduceThickness>45</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+    </filth>
+  </ThingDef>
+
+</Defs>

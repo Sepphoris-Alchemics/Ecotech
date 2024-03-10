@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+
+  <ScenarioDef>
+    <defName>TS_TerratechKeepers</defName>
+    <label>Sentries of the Terratech</label>
+
+    <scenario>
+		  <summary>Four guardians of Terratech build anew to preserve their culture.</summary>
+		  <description>Your near-extinct tribe was the last on the planet that knew the sacred secrets of the Terraseed. Half of you have been sent off to start a new home, in pursuit of keeping the knowledge alive.
+\n\nYour solemn vow starts you off with extensive Terratech knowledge, weapons, seeds, and a couple turrets to secure your location. All your colonists will be able to harvest very quickly, and will know how to get the most out of any and all plants... to the point where even Terrapods may double their output.
+\n\nHowever, your vow also forbids you from delving too far into the unnatural methods of evolution, forbidding you from the Hi-Tech Research Bench and the Multi-Analyzer (and thus, any technologies that require them).</description>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>PlayerTribe</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnChoiceCount>8</pawnChoiceCount>
+				<pawnCount>4</pawnCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+        <method>Standing</method>
+			</li>
+			<li Class="ScenPart_StatFactor">
+				<def>StatFactor</def>
+				<stat>PlantWorkSpeed</stat>
+				<factor>2</factor>
+			</li>
+			<!--<li Class="ScenPart_StatFactor">
+				<def>StatFactor</def>
+				<stat>PlantHarvestYield</stat>
+				<factor>1.5</factor>
+			</li>-->
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Pemmican</thingDef>
+				<count>600</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>TS_Phytosword</thingDef>
+        <count>4</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>TS_StakeCaster</thingDef>
+        <count>4</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>TS_SurgeSeed_GlowsapTree</thingDef>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>TS_SurgeSeed_PrimaTurret</thingDef>
+				<count>2</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>WoodLog</thingDef>
+				<count>750</count>
+				<allowRoofed>True</allowRoofed>
+			</li>
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>TS_FundamentalArms</project>
+			</li>
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>TS_BasicFirearms</project>
+			</li>
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>TS_StandardFirearms</project>
+			</li>
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>TS_SurgeSeeds</project>
+			</li>
+			<!--<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>TS_PrimaTurretSeeds</project>
+			</li>-->
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>TS_GlowsapCultivation</project>
+			</li>
+			<li Class="ScenPart_DisallowBuilding">
+				<def>Rule_DisallowBuilding</def>
+				<building>HiTechResearchBench</building>
+			</li>
+			<li Class="ScenPart_DisallowBuilding">
+				<def>Rule_DisallowBuilding</def>
+				<building>MultiAnalyzer</building>
+			</li>
+			<li Class="ScenPart_ForcedTrait">
+				<def>ForcedTrait</def>
+				<chance>0.1</chance>
+				<context>PlayerStarter</context>
+				<trait>GreatMemory</trait>
+			</li>
+			<li Class="ScenPart_ForcedTrait">
+				<def>ForcedTrait</def>
+				<chance>0.1</chance>
+				<context>PlayerStarter</context>
+				<trait>FastLearner</trait>
+			</li>
+			<!--<li Class="ScenPart_ForcedTrait">
+				<def>ForcedTrait</def>
+				<chance>0.1</chance>
+				<context>PlayerStarter</context>
+				<trait>Nerves</trait>
+				<degree>2</degree>
+			</li>-->
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>For generations, your last tribe was sworn to follow and guard the secrets of the sacred Terratech. Now that you were only a few deaths away from extinction, it was decided that the only way to ensure preservation of the secrets was to split apart and begin a new tribe, dedicated to the rise of new keepers.
+
+Note: this scenario has been designed for runs that intend to have little-to-none electronic influence. Have fun!</text>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+</Defs>

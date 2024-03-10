@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Terrasecurity</name>
+	<author>Sepphoris</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<modDependencies>
+	</modDependencies>
+	<loadAfter>
+	</loadAfter>
+	<packageId>SA.Terrasecurity</packageId>
+	<description>Mod Version: 1.2.4 (last updated @ 2.19.2024, ~4:00PM PST)
+
+====================
+
+A mod that introduces the ability to grow weapons and defenses in your garden, rather than machining them together.
+
+Currently introduces terraweapons, which only require a green thumb to plant, and patience to grow. They are just as effective as fabricated weapons, giving you a 100% all-natural, viable alternative to your colony defenses.
+
+However, terraweapons require highly fertile soil, take a significant amount of time to grow, and will wither over time.
+
+This was originally is intended to provide decent weapons and equipment during a tech-limited, magic playthrough. No more relying on just bows!
+
+More additions, such as other weapons, turrets, traps, and even armor will come over time!
+
+====================
+
+Latest Minor Update:
+-
+
+Latest Major Features and Changes:
+
+-Tribal Colonies gain access to Terraseed knowledge immediately, due to this mod being intended as a total alternative to mechanical weapons. Industrial+ colonies will needs to pour significant time into understanding this exclusive tribal power.
+
+-New Terraweapon: Prima Turret, a short-range turret that requires fertile soil instead of electricity.
+
+-New Terraweapon: Prima Seedburster, an organic ballistic launcher.
+
+-New Terraweapon: Royal Hyperstem, which is the first in a new line of Terraweapons, and can only (currently) be bought (seeds will come later once more weapons are made; colonies using Ideology can aqcuire it via relic)
+
+-Added Surge Seed research, which unlocks seeds for constructed/building-based equipment (like turrets and traps).
+
+-Added a teaser research for future additions.
+
+-Stake Caster is now an entry weapon.
+
+-Simplified a couple researches; entry researches cost slightly more, but provides more weapons, and will provide more over time.
+Be aware these changes might impact early research progress. Any errors referencing them are one-time, and can be safely ignored.
+
+-Please report balancing and bug issues on the workshop page!
+
+</description>
+</ModMetaData>

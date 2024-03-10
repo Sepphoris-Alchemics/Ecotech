@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Prima Stakecaster downgraded to an entry weapon. Still quite powerful, but very limited on ammo and speed.-->
+
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_Rifle</defName>
+		<label>prima OMR</label>
+		<description>The OMR (Organic Marksman Rifle) is a biotic weapon patterned off of a long-range rifle, and grown straight from a specialized pod. Due to its plant nature, no optics are present, giving it a lower range than most other longrifles.\n\nBeing a plant weapon, this weapon has a limited amount of shots, but benefits from speed, lack of recoil, and armor penetration.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/TS_Rifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>LongShots</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>160</MaxHitPoints> <!--80 shots-->
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>1</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornRifle</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>29.9</range>
+        <soundCast>TS_Sound_Blowgun1</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>2</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_Seedburster</defName>
+		<label>prima spinecannon</label>
+		<description>A biotic weapon, patterned off a basic grenade launcher. While nature can't easily replicate actual explosives, this weapon improvises by lobbing pressure-sensitive pods that will spew razor-sharp seeds in every direction.\n\nThe seeds it spreads are inert and purely an offensive mechanism; additionally, the effective radius of these seeds is much lower than industrial grenade launchers.\n\nBeing a plant weapon, this weapon has a limited amount of shots, but benefits from speed and lack of recoil.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/TS_SeedBurster</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>160</MaxHitPoints> <!--32 shots-->
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.4</Mass>
+			<Flammability>1</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TS_SeedbursterShot</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+        <range>20.9</range>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>5</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_AcidLauncher</defName>
+		<label>prima acid launcher</label>
+		<description>A biotic weapon, specially engineered to launch an acidic globule that covers a small area upon impact. This weapon was initially designed to help clear rocky terrain and old ruins; however, it is just as effective - if not moreso - at melting away flesh and armor.\n\nThankfully, this weapon is very slow to grow and has a very limited amount of sprays, forcing those who employ it to be selective about what they use it on.\n\nBeing a plant weapon, this weapon has a limited amount of shots, but benefits from speed and lack of recoil.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/TS_AcidLauncher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>160</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>1</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TS_AcidShot</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>8</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_LMG</defName>
+		<label>prima spinecaster</label>
+		<description>A biotic weapon, patterned off of a heavy assault rifle, and grown straight from a specialized pod. It is somewhat inaccurate, but the large reservoir of biofluids make it excellent for supression.\n\nBeing a plant weapon, this weapon has a limited amount of shots, but benefits from speed, lack of recoil, and armor penetration.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/TS_HeavyAR</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>180</MaxHitPoints> <!--30 shots-->
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>3.8</Mass>
+			<Flammability>1</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornLMG</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>1</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

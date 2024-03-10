@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>TS_TerrasecurityTab</defName>
+    <label>Terrasecurity</label>
+  </ResearchTabDef>
+
+  <!--Ultimate Research Options:
+    1: Seed Cultivation: Learn how to properly identify and plant Terrasecurity seeds. This allows the player to know use the plants.
+      -The first reseach will teach how to plant Prima Terraseeds as well, which are the most basic.
+    2: Basic Firearms (Small): Learn how to make smaller firearms, such as pistols, pocket shotguns, and PDWs
+    3: Standard Melee Patterns: Learn how to grow standard melee weapons, ranging from daggers, swords, and hammers.
+    4: Basic Firearms (Medium): Learn how to make larger firearms, such as shotguns, assault rifles, magnums, and stakecasters.
+    5: Basic Firearms (Heavy): Learn how to make heavier firearms, such as LMGs, heavy bowguns, and cluster launchers.
+    6: Fluid Sacs: Learn how to make various weapons that utilize liquid materials, such as sap and acids.
+        -Acid Launcher: fires globules of acid, which cover a small area.
+        -Sap Launcher: fires globues of sap, which slow anything caught in it and lowers manipulation.
+    7: Spore weapons: Learn how to make weapons that leave behind spore clouds, which remain active for days.
+        -Spore Launcher: Grenade Launcher variant.
+        -Spore Mortar: A long-ranged mortar that is quite inaccurate, but leaves lingering spores.
+    8: Splinter weapons: learn how to make weapons that fire shots which break off into lethal splinters, such as pine grenades and specailized LMGs. Basically "explosive" weapons.
+    9: Grenades: Learn how to make throwable grenades:
+        -Pellet Grenade: Default. Damages nearby targets, with a chance to stun.
+        -Pine Grenade: Requires Splinter Rsearch
+        -Caustic Grenade: Requires Fluid Sacs
+        -Sap Grenade: Requires Fluid Sacs
+        -Spore Grenade: Requires Spore Weapons
+    10: Venom Arms: make melee weapons that will poison anyone hit.
+
+  ***NAMING***
+    Melee weapons follow loose naming
+    Caster = Stakecaster or SMG
+    Burster = Shotgun
+    Cannon = grenade launcher
+
+  ***WEAPON SEED TYPES***
+    1: Prima Seeds: Learn how to make the basic weapons of terraweapons, which cover all weapons up to Pre-Microelectronics. Prima Weapons stike a balance between damage and durability, but cannot regenerate health. These are currently in the game.
+    2: Verdant Seeds: Learn how to make verdant weapons, which cover all weapons up to Multi-Analyzer. Verdant Weapons have the highest durability, lower damage, but regenerate health over time when in direct sunlight.
+    3: Royal/Anima Seeds: Learn how to make the most powerful weapons, which specifically cover weapons that are Spacer+. Royal weapons have extreme damage and the highest range, but the lowest durability. Their health can be regenerated within special buildings.
+    4: Perrenial: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
+
+  ***WEAPON DAMAGE VALUES***
+  1: Prima Weapons - will need to have stats knocked down once Perrenial Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
+  2: Verdant Weapons: will have stats similar to original launch Prima Weapons. These will be the weapons that complete with industrial weapons. Slightly lower damage and range than normal weapons, but innate armor piercing, and health regen.
+  3: Perrenial Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
+  4: Anima Weapons: Powerful, weapons with a very small ammo reserve, but will recharge. Covers weapons that are long-range, such as snipers. Very high damage, lower reserves and warmup.
+
+***WEAPON SUBGROUPS***
+  -Subgroups are a desired feature that will allow players to "upgrade" weapons by putting it within a fluid sac, which will then split out the weapon 1-3 days later, giving them new properties. The properties are as follows:
+
+  1: Splinter Weapons: An upgrade of Prima weapons. These weapons create nasty splinters, causing quite a lot of bleeding and pain/mood debuffs.
+  2: Blight/Miasma Weapons: An upgrade of Verdant weapons. The gene that prevent rotten growth is removed, allowing the weapon to inflict disease and capacitating hediffs.
+  3: Meld Weapons: An upgrade of Perrenial Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
+  4: Deeproot Weapons: An upgrade to Anima Weapons. Deeproot Weapons are able to communicate with one another, and work together. When a deeproot weapon kills a target, that target's innards may be removed, growing it into another Deeproot plant, such as sacs, turrets, or even a new weapon.
+  
+  6: Grenades: Learn how to make throwable grenades:
+      -Pellet Grenade: Default. Damages nearby targets, with a chance to stun.
+      -Pine Grenade: Grenades that brewak off into sharpnel that causes extreme injury.
+      -Caustic Grenade: Grenades that explode into acidic clouds.
+      -Sap Grenade: Grenades that stun those in it's radius, alongside leaving behind a resin that slows down anything in it.
+      -Spore Grenade: Grenades that leave a long-lasting mist that poisons anything within it, causing a hediff to slowly build up. Target dies once this hediff builds up to 100%.
+
+  5: Basic Melee Patterns: Learn how to make various melee weapons that are generally one piece. Includes daggers, swords, and maces.
+  6: Heavy Melee Patterns: Learn how to make melee weapons that consist of larger weapons. Includes warhammers, battleaxes, and greatswords.
+
+  8: Potted Turrets: Learn how to make small turrets that are potted. Easily made, but extremely limited on ammo due to lack of space.
+  9: Prima/Verdant/Perrenial/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
+  10: Biocannons: Large artillery plants that mimic mortars. Biocannons rely off specialize plants that are grown near them, using them as ammunition. Capable of firing spore shots, splinter shots, caustic shots, or sap shots.
+
+    ?: Crystalline Infusion: Allows specialized plants that grow their own optics, allowing the creation of long-ranged weapons, such as sniper rifles and DMRs.
+    ?: Regenerative Weapons: Allows the creation of specialized weapons which have lower ammo, but regenerate said ammo over time.
+
+    ... turrets and other automated sucurity to be added later.
+    
+  ***ARMOR TYPES***
+    1: Periderm Armor: Steel-tier armor that is flexible enough to be formed around the body. More like a protective jumpsuit
+    2: ???: Flak-level armor.
+    3: Terraplate: Marine-level armor. Requires a method similar to techprints to learn about.
+    4: Prima Armor: Cataphract-level armor. Requires a method similar to techprints to learn about
+    -->
+
+<!--Cost of research projects should be the cost of the most expensive, vanilla similar rearch project, x1.5-->
+
+  <ResearchProjectDef>
+    <defName>TS_TerraseedEssentials</defName>
+    <label>Terraseed Essentials</label>
+    <description>Learn how to properly create and grow Terraseeds; specialized seeds that are used to grow biotic gear and equipment, instead of food or materials.\n\nTerraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded. Replicating their secrets as outsiders is indeed possible, but requires excessive effort.</description>
+    <baseCost>1750</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TreeSowing</li>
+    </prerequisites>
+    <tags>
+      <li>TribalStart</li>
+    </tags>
+    <!--<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>-->
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_PrimaTerraweaponSeeds</defName>
+    <label>Prima Terraseed Cultivation</label>
+    <description>Learn how to nuture and handle Prima Terraseeds, which are one of four lines of terraweapons. Prima weapons are fast to grow and easy to handle, but are limited in their damage, and wither away relatively quickly.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <hiddenPrerequisites>
+      <li>TS_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <tags>
+      <li>TribalStart</li>
+    </tags>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <!--<ResearchProjectDef>
+    <defName>TS_TerrashellSeeds</defName>
+    <label>???</label>
+    <description>The technology for growing something on this scope is still being discovered...\n\nThis research node serves no purpose (yet) beyond teasing upcoming content. It can be safely disregarded.</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TreeSowing</li>
+    </prerequisites>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>-->
+
+  <ResearchProjectDef>
+    <defName>TS_FundamentalArms</defName> <!--Outdated name-->
+    <label>Prima Weapons: Integral Design</label>
+    <description>Learn how to grow biotic weapon patterns of simply-formed weapons. This covers weapons that don't rely on advanced internal movement, notably melee weapons and weapons that utilize simple growth for offense.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_PrimaTerraweaponSeeds</li>
+    </prerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_SurgeSeeds</defName>
+    <label>Surge Seed Cultivation</label>
+    <description>Not everything can be grown in a Terrapod: Some products or patterns are too large, require more resources to properly grow, or may need to be fully grown at situational moments. Surge Seeds are designed to address issues such as these by concentrating a vast amount of nurtients, then releasing them all at once properly buried into the ground.
+\n\nSurge Terrapods still require time to grow their initial seed, but once that new seed is placed, it will instantly take root and form into it's given pattern.
+\n\n\n"Okay okay, let's not panic. You know, I read somewhere that plants have feelings. So... come on. Say something nice to it."
+\n"Okay. Let me just think for a second.... Hi little plant-"</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <hiddenPrerequisites>
+      <li>TS_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_BasicFirearms</defName>
+    <label>Prima Weapons: Basic Patterns</label>
+    <description>Learn how to grow Prima weapon patterns of small arms, such SMGs and pistols.</description>
+    <baseCost>1250</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_FundamentalArms</li>
+    </prerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>TS_GlowsapBasinResearch</li>
+    </requiredResearchFacilities>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>TS_StandardFirearms</defName>
+    <label>Prima Weapons: Standard Patterns</label>
+    <description>Learn how to grow biotic weapon patterns of standard arms, such as marksman rifles, carbines, and shotguns.</description>
+    <baseCost>1250</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_BasicFirearms</li>
+    </prerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>TS_GlowsapBasinResearch</li>
+    </requiredResearchFacilities>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_HeavyFirearms</defName>
+    <label>Prima Weapons: Heavy Patterns</label>
+    <description>Learn how to grow biotic weapon patterns that require especially tough parts, such as chemical launchers, and high-capacity weapons.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_StandardFirearms</li>
+    </prerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>TS_GlowsapBasinResearch</li>
+    </requiredResearchFacilities>
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_PrimaTurretSeeds</defName>
+    <label>Prima Turret Seeds</label>
+    <description>Learn how to grow specialized seeds which will instantly sprout into biotic plant patterns akin to small turrets. The nature of turrets requires them to be placed in soil that can grow plants.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_StandardFirearms</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>TS_SurgeSeeds</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>TS_PrimaVatGlowsap</li>
+    </requiredResearchFacilities>
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_RoyalSeeds</defName>
+    <label>Lore Entry: Psychic Weaponry</label>
+    <description>Records tell of a special, exclusive breed of Terraweapons that only the highest of societies and engineers know of. This research will provide additional information about this unique breed....
+\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>1.00</researchViewY>
+    <discoveredLetterTitle>Secrets of Terratech: Royal Seeds</discoveredLetterTitle>
+    <discoveredLetterText>You have discovered that Prima Terraweapons are just one of several known types of Terraseeds. This particular research has unveiled that one of the most powerful types are known as "Royal" Terraseeds, and are carefully engineered with the mysterious - and massive - power of Anima. Products of these seeds are documented to take up to years to grow, and properly growing them requires skill that only prodigies can achieve; however, any given Royal Terraweapon contains power that rivals - or even completely overshadows - Spacer tech that's widely believed to be superior. The secrets behind producing the weapons are currently lost and not known to any; however, records rumor that *very* few surviving Anima weapons may still be out there, perhaps within relative reach....</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_GlowsapCultivation</defName>
+    <label>Glowsap</label>
+    <description>Learn how to cultivate vines and trees that produce Glowsap, a bio-engineered sap specially designed as Terraseed super-nutrients, and used to further support research.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_SurgeSeeds</li>
+    </prerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+    <ResearchProjectDef>
+    <defName>TS_GlowsapBays</defName>
+    <label>Glowsap Bays</label>
+    <description>Learn how to construct simple - but not very space-friendly - basins that utilize glowsap to sustain Terratech plants. Ideal for locations where fertile soil is scarce or entirely absent.</description>
+    <baseCost>1250</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_GlowsapCultivation</li>
+    </prerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_Terravats</defName>
+    <label>Terravats</label>
+    <description>Learn how to construct Terravats, special vats that are used for live research and experimentation on various possible creations. Terravats are required to delve deeper into the potential Terraweapons can posess, as further progression often requires experimentation on not only the base plant, but also the final products.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_GlowsapCultivation</li>
+    </prerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.75</researchViewY>
+  </ResearchProjectDef>
+
+  <!--<ResearchProjectDef>
+    <defName>TS_TerraPlate</defName>
+    <label>???</label>
+    <description>... however, whispers tell of beings covered in organic, resilient shells that almost rivalled military protection. It is unclear if this was merely armor... or another creature entirely.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <prerequisites>
+      <li>TS_TerrashellSeeds</li>
+    </prerequisites>
+  <researchViewX>0.00</researchViewX>
+  <researchViewY>2.00</researchViewY>
+  </ResearchProjectDef>-->
+
+
+</Defs>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Glowsap Tree Surge Pod-->
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>TS_SurgePod_GlowsapTree</defName>
+    <label>Surgepod: Glowsap Tree</label>
+    <description>An enhanced Terrapod that will provide a surge seed for Glowsap Trees. This provided seed will need to be manually planted, then will immediately begin to grow into a Glowsap Tree.
+\n\n Due to the massive amounts of nutrition and resources within the surge seed, the glowsap tree should fully mature in a few days.</description>
+    <graphicData>
+      <texPath>Things/Plant/SurgePod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>125</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.8</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>900</harvestWork>
+      <harvestedThingDef>TS_SurgeSeed_GlowsapTree</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>1</harvestYield>
+      <harvestMinGrowth>0.95</harvestMinGrowth>
+      <harvestTag>Standard</harvestTag>
+      <immatureGraphicPath>Things/Plant/SurgePod_Immature</immatureGraphicPath>
+      <sowWork>2400</sowWork>
+      <sowTags>
+        <li>Ground</li>
+        <li>TS_GlowsapCompatible</li>
+      </sowTags>
+      <sowMinSkill>6</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>TS_GlowsapCultivation</li>
+      </sowResearchPrerequisites>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>24</growDays>
+      <visualSizeRange>0.5~1.05</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
+
+</Defs>

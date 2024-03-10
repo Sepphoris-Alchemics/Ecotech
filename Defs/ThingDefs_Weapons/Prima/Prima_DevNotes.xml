@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--BASE BALANCE MODIFICATIONS:
+Range of touch is unaffected
+Range of shorter weapons is brought down by 3 (Short = 13-25, minimum 4)
+Range of medium weapons is brought down by 7 (Medium = 26-40)
+Range of long weapons is brought down by 11 (Long = 41+)
+ALKALI short weapons is brought down by 2, medium by 4, long by 6
+Anima medium range is brought down by 6, long by 9
+
+GROWTH TIMES:
+5-20 days = fast growth time
+21-40 days = normal growth
+41-60 days = medium growth
+61-80 days = slow growth
+81-120 (max) days = extremely slow
+These times do not account for soil acceleration.
+
+MAX HEALTH:
+Prima: 180
+Verdant: 290
+
+Alkali Weapons: 240
+Blight: 280
+
+Perrenial: 750
+Elder: 1400
+
+Royal: 600
+Deeproot: 1000
+
+Spore: 200
+Archwood: 2000
+
+====================
+
+	***GENERAL NOTES***
+		Each family has two variants: the basic, and the evolved
+		Basic weapons will be the fastest to aquire, but will run out of health as they are used. You can use Sundrops to revitalize these.
+		Evolved weapons will be fully matured weapons. They will not run out of health as they are used, but will wither away (expire) after some time. They cannot be rivitalized.
+		Expiry on weapons is the following:
+			Prima: 15 days (can also expire via usage)
+			Verdant: 30 days
+
+			Alkali: N/A
+			Blight: 30 days
+
+			Spore: 45 days
+
+			Perrenial: 60 days
+			Deeproot (was Elder): 120 days (2 quadrums)
+
+			Anima: N/A
+			Linkroot: 90 days
+
+			Archwood: 300 days (5 quadrums)
+
+		Recharing weapons is the following:
+			ALL WEAPONS CAN BE RECHARGED WITH THE RARE HEARTWOOD TREE
+
+			Prima: Sundrop
+			Verdant: Sundrop
+
+			Alkali: Sundrop
+			Blight: Sundrop
+
+			Spore: Seed Spore Extraction
+
+			Perrenial: Can be planted to regrow back into a new perrenial weapon 50% faster
+			Deeproot: Sundrop Vat or Terraroot Vat
+
+			Anima: Sundrop Vat
+			Linkroot: Terraroot Vat
+
+====================
+
+	***GROWTH METHODS***
+		Each family has a different growth method. This is the way they are aqcuired.
+		Growth methods are the following:
+			Prima: pods planted at a growing zone
+			Verdant: Grown at a Metamorphic Pool
+
+			Alkaloid: selected via specific surge seed. These surge seeds are grown quickly, but the pods produce a naseous gas.
+			Blight: Metamorphic Pool
+
+			Spore: Harvested from tumors that are only produced by a specific mushroom tree. Must be planted in stone.
+
+			Perrenial: Selected from a special surge seed that's grown inside a special tree. This tree must be cut down to produce the weapon.
+			Deeproot: Grown from a Perrenial weapon that forms a new tree. This tree takes an entire year to grow.
+
+			Anima/Royal: grown from a special pod that must be planted near an Anima tree. If Royalty is not installed, then it's simply grown from a special pod.
+			Linkroot: done via operation between a pawn and a special pod. The pawn will be in a coma while this operation is done.
+
+
+====================
+
+	***	BALANCING NOTES***
+		Immature weapons should follow the Makeshift random ammo feature.
+		Immature weapons should lose health as they are used.
+		Immature weapon health can be restored in special pools or vats.
+		Immature weapons can accept new saps. However, the evolved weapon will also contain the sap.
+		Multiple weapons shouldn't be acquirable from pods.
+
+		Mature weapons have higher health
+		Mature weapons will have more uses
+		Mature weapons can't accept saps
+
+
+		Balancing should get a rework in the Labs Update.
+	 	-Prima Weapons should last longer and have their ammo reserves increased by 50-100%. Health should still be low.
+		-Prima Weapons should have their growth time halved.
+		-Prima Weapons should be the only weapons that can grow on normal soil.
+		-Damage type should be cut for fast weapons, and stab for slow/accurate weapons.
+		-Damage should further lowered down by 25-33%.
+		-Prima weapons can only accept glowsap
+
+
+====================
+
+	***SAP NOTES***
+		Sap is used to modify plant stats. This sap is extracted from the corresponding tree or bloom, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant. The effects are the following:
+		-Sunsap: default, regenerates health when left alone (yellow)
+		-Glowsap: quickly evolves the weapon (torch color)
+		-Endosap: higher health (40-50%) and lower flammability (green)
+		-Darksap: higher damage, speed, and AP (darklight color)
+		-Hypersap: more shots and faster fire rate (white)
+		-Deepsap: Can be planted on any growable terrain to regrow another weapon (light blue)
+		-Archsap: weapon will never expire (purple)
+		-Hemsap/Toxsap: projectiles inflict slight poison
+
+
+====================
+
+
+  ***PRIMA NOTES***
+    Prima Weapons feature fast growth times.
+		Prima Weapons will need to have stats knocked down once Perrenial Weapons are introduced. 
+		Prima Weapons should be fall within fast growth time (5-20 days).
+		Prima Weapons should reflect early-game sidearms that are above power in bows, but lower than normal guns. They should not mirror anything above Hi-Tech.
+		Verdant Weapons will require 10 days + half of the original growth time. This can bypass fast growth time.
+		Verdant Weapons have 50-60% more health, inflict the briar condition, and does cut damage alongside pierce.
+		Most Prima weapons should not go above 150 health. Heavy is 160-200.
+
+	Prima Turrets:
+		-Spear Turret: basic turret. Slow firing, medium damage, fires two stakes at medium range. Comparable to a greatbow firing two shots at once.
+		-Quill Turret: Miniturret. Very fast firing, low range, low damage. Comparable to the SMG.
+		-Burst Turret: Miniturret. Slow firing, low range, high damage. Comparable to the shotgun.
+		-Briar Turret: Extracted from evolved wepaons. Medium fire rate, medium range, low damage. Close stats to a normal miniturret.
+-->
+
+
+	<!--Test SMG; unfortunately this also means ammo can be unloaded, and that won't fly.-->
+	<ThingDef ParentName="BaseGun">
+		<defName>TS_SMGTest</defName>
+		<label>prima test smg</label>
+		<description>You shouldn't have this.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/TS_SMG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+      <li>ShortShots</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.25</AccuracyMedium>
+			<AccuracyLong>0.10</AccuracyLong>
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+
+				<!--<verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>-->
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<!--<comps>
+		</comps>-->
+		<!--<li Class="MVCF.Comps.CompProperties_VerbProps">
+			<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+			<verbProps>
+				<li>
+					<label>prima splintcaster</label>
+					<canBeToggled>false</canBeToggled>
+					<description>This weapon can be revitalized with special nutrients</description>
+					<comps>
+						<li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+							<compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+							<MaxShots>120</MaxShots>
+							<AmmoFilter>
+								<thingDefs>
+									<li>TS_SunDrop</li>
+								</thingDefs>
+							</AmmoFilter>
+							<ItemsPerShot>1</ItemsPerShot>
+							<ReloadTimePerShot>0.015</ReloadTimePerShot>
+		          <ReloadSound>Interact_Rifle</ReloadSound>
+              <StartLoaded>false</StartLoaded>
+						</li>
+					</comps>
+				</li>
+			</verbProps>
+		</li>
+		</comps>-->
+		<!--<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>4~8</shots>
+			</li>
+		</modExtensions>-->
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>TS_PrimaVatGlowsap</defName>
+    <label>Prima Vat</label>
+    <description>A vat filled with glowsap, designed to sustain and present a live sample for easy study and testing. This particular vat contains a Prima Terraweapon subject, and allows further experimentation and research into Prima products.
+\n\nThe interior glowsap will eventually be fully absorbed, requiring it to be replenished. However, this process takes a long while.</description>
+    <size>(1,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <TS_Glowsap>30</TS_Glowsap>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Terravats/PrimaGlowsap</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.5,1.5)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>TS_Terravats</li>
+    </researchPrerequisites>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>3400</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>1</Flammability>
+      <Beauty>1.5</Beauty>
+      <Cleanliness>1</Cleanliness>
+    </statBases>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>Production</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <uiOrder>2600</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.05</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>4</maxSimultaneous>
+        <maxDistance>9</maxDistance>
+      </li>
+      <li Class="CompProperties_Art">
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>30</initialConfigurableTargetFuelLevel>
+        <fuelConsumptionRate>0.75</fuelConsumptionRate>
+        <fuelCapacity>60.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>TS_Glowsap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <fuelLabel>Glowsap</fuelLabel>
+        <fuelGizmoLabel>Healthy glowsap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires Glowsap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
