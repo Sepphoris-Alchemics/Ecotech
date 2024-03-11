@@ -153,7 +153,7 @@ Archwood: 2000
 	<!--Test SMG; unfortunately this also means ammo can be unloaded, and that won't fly.-->
 	<ThingDef ParentName="BaseGun">
 		<defName>TS_SMGTest</defName>
-		<label>prima test smg</label>
+		<label>prima thorncaster</label>
 		<description>You shouldn't have this.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/TS_SMG</texPath>
@@ -183,6 +183,7 @@ Archwood: 2000
 		</statBases>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
+		<tickerType>Normal</tickerType>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -227,8 +228,15 @@ Archwood: 2000
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<!--<comps>
-		</comps>-->
+      <comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>4000</lifespanTicks>
+          <replacementToSpawn>ChunkSlagSteel</replacementToSpawn>
+          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+        </li>
+      </comps>
 		<!--<li Class="MVCF.Comps.CompProperties_VerbProps">
 			<compClass>MVCF.Comps.Comp_VerbProps</compClass>
 			<verbProps>
