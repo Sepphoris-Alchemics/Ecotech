@@ -241,7 +241,9 @@
 	<ThingDef ParentName="BaseGun"> <!--Counterpart: LMG-->
 		<defName>TS_LMG</defName>
 		<label>prima thorncaster</label>
-		<description>A biotic weapon, patterned off of a heavy assault rifle, and grown straight from a specialized pod. It is somewhat inaccurate, but it's ability to generate several projectiles at once makes it excellent at supression.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>A biotic weapon, patterned off of a heavy assault rifle, and grown straight from a specialized pod. It is somewhat inaccurate, but it's ability to generate several projectiles at once makes it excellent at supression.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
+\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as five, to as many as nine.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/TS_HeavyAR</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -271,7 +273,7 @@
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
-      <li>
+      <!--<li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornLMG</defaultProjectile>
@@ -281,7 +283,20 @@
         <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
         <soundCast>Shot_Minigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>-->
+
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornLMG</defaultProjectile>
+        <warmupTime>2.25</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
 		<tools>
@@ -316,6 +331,19 @@
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>5~9</shots>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 </Defs>

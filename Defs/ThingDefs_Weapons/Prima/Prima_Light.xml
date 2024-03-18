@@ -186,7 +186,9 @@
 	<ThingDef ParentName="BaseGun"> <!--Counterpart: Machine Pistol-->
 		<defName>TS_SMG</defName>
 		<label>prima pincaster</label>
-		<description>A biotic weapon, patterned off of a compact submachine gun, and grown straight from a specialized pod. They are quick and suppressive, but their sporadic bursts can cause their damage and accuracy to be inconsistent.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>A biotic weapon, patterned off of a compact submachine gun, and grown straight from a specialized pod. They are quick and suppressive, but their sporadic bursts can cause their damage and accuracy to be inconsistent.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
+\n\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as three, to as many as six. When matured, this range will be much more narrow.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/TS_PrimaSMGBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -217,8 +219,21 @@
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
-      <li>
+      <!--<li>
         <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>-->
+
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
         <warmupTime>0.75</warmupTime>
@@ -265,6 +280,19 @@
         	<plantDefToSpawn>TS_PrimaSMGUpgradePod</plantDefToSpawn>
       	</li>
 		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>2~6</shots>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseGun"> <!--Counterpart: Pump Shotgun-->
@@ -351,7 +379,9 @@
 	<ThingDef ParentName="BaseGun">
 		<defName>TS_Carbine</defName>
 		<label>prima carbine</label>
-		<description>A biotic weapon, patterned off of an old rifle, and grown straight from a specialized pod. Their growth time, damage, and narrow projectile count range make this a well-rounded Terraweapon.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>A biotic weapon, patterned off of an old rifle, and grown straight from a specialized pod. Their growth time, damage, and narrow projectile range make this a well-rounded Terraweapon.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
+\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as two, to as many as five.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/TS_Carbine</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -377,9 +407,22 @@
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <li>
+    <verbs> <!--First one is if VWE Makeshift becomes unavailable-->
+      <!--<li>
         <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>23.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>-->
+
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
         <warmupTime>0.6</warmupTime>
@@ -423,6 +466,19 @@
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>2~5</shots>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 </Defs>

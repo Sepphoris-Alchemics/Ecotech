@@ -96,7 +96,7 @@
 		<defName>TS_SMGUpgraded</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
 		<label>prima pineshredder</label>
 		<description>The Apex form of the Prima Pincaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
-\nAdditionally, the Apex form no longer has inconsistent output. It will now fire 4-5 projectiles per burst instead of a random range of 2-6 projectiles, providing a much higher average DPS.</description>
+\nAdditionally, the Apex form no longer has inconsistent output. It will now fire 4-5 projectiles per burst instead of a random range of 2-6 projectiles, resulting in a higher average DPS.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/PrimaSMGUpgraded</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -127,8 +127,21 @@
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
-      <li>
+      <!--<li>
         <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>17.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>-->
+
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
         <warmupTime>0.75</warmupTime>
@@ -169,6 +182,19 @@
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>4~5</shots>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseGun">
