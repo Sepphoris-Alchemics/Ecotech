@@ -217,10 +217,10 @@
     <comps Inherit="False">
       <li Class="CompProperties_Refuelable"> <!--Same life duration-->
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
-        <fuelConsumptionRate>1.25</fuelConsumptionRate>
+        <fuelConsumptionRate>1.5</fuelConsumptionRate>
         <destroyOnNoFuel>true</destroyOnNoFuel>
         <fuelCapacity>100</fuelCapacity>
-        <fuelLabel>Lifeforce left</fuelLabel>
+        <fuelLabel>Life percentage left</fuelLabel>
         <initialFuelPercent>1</initialFuelPercent>
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
@@ -284,9 +284,9 @@
       <AccuracyShort>0.70</AccuracyShort>
       <AccuracyMedium>0.70</AccuracyMedium>
       <AccuracyLong>0.70</AccuracyLong>
-      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
       <Mass>4</Mass>
-      <Flammability>1</Flammability>
+      <Flammability>3</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <weaponTags>
@@ -297,10 +297,10 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>TS_PrimaTurretSMGShot</defaultProjectile>
-        <warmupTime>8.0</warmupTime>
+        <warmupTime>4.0</warmupTime>
         <range>16.9</range>
-        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <burstShotCount>10</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
         <soundCast>TS_Sound_Blowgun1</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>TS_GlowsapBloom</defName>
+    <label>Glowsap Bloom</label>
+    <description>A small plant bioengineered to produce Glowsap. Glowsap builds up underneath it's durable, transparent skin, and is ready for harvest once glowsap begins to break through. Also produces a moderate amount of light, but does provide any heat.
+The glowsap bloom can be harvested relatively fast, but it's harvesting yield is quite small. It is advised to have a Glowsap Tree as a reliable source.</description>
+    <graphicData>
+      <texPath>Things/Plant/GlowsapBloom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>8</Beauty>
+      <BeautyOutdoors>8</BeautyOutdoors>
+      <Flammability>3</Flammability>
+      <MaxHitPoints>55</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <harvestWork>750</harvestWork>
+      <harvestedThingDef>TS_Glowsap</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>4</harvestYield> <!--One will produce about 60 every year, not accounting yield differences-->
+      <harvestMinGrowth>0.8</harvestMinGrowth>
+      <harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestTag>Standard</harvestTag>
+      <allowAutoCut>false</allowAutoCut>
+      <sowWork>1000</sowWork>
+      <sowTags>
+        <li>Ground</li>
+        <li>Decorative</li>
+        <li>TS_GlowsapCompatible</li>
+      </sowTags>
+      <sowMinSkill>2</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>TS_SapBasics</li>
+      </sowResearchPrerequisites>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>4</growDays>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <visualSizeRange>0.3~0.8</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5.9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>TS_DarksapBloom</defName>
+    <label>Darksap Bloom</label>
+    <description>A small plant that produces glowsap, but has a modified appearance. Glows a pale purple color, and compliments darklight ambience quite well.
+Like most other blooms, it can quickly produce sap, but provides a very small yield. A Glowsap Tree is recommended for a reliable source.</description>
+    <!--<description>A small plant bioengineered to produce Darksap. Glows a pale purple color, and compliments darklight ambience quite well.
+Like most other blooms, it can quickly produce sap, but provides a very small yield. A Darksap Tree is recommended for a reliable source.</description>-->
+    <graphicData>
+      <texPath>Things/Plant/DarksapBloom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>8</Beauty>
+      <BeautyOutdoors>8</BeautyOutdoors>
+      <Flammability>3</Flammability>
+      <MaxHitPoints>55</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <harvestWork>750</harvestWork>
+      <harvestedThingDef>TS_Glowsap</harvestedThingDef>
+      <!--<harvestedThingDef>TS_Darksap</harvestedThingDef>-->
+      <burnedThingDef IsNull="True" />
+      <harvestYield>4</harvestYield> <!--One will produce about 30 every year, not accounting yield differences-->
+      <harvestMinGrowth>0.8</harvestMinGrowth>
+      <harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestTag>Standard</harvestTag>
+      <allowAutoCut>false</allowAutoCut>
+      <sowWork>1000</sowWork>
+      <sowTags>
+        <li>Ground</li>
+        <li>Decorative</li>
+        <li>TS_GlowsapCompatible</li>
+      </sowTags>
+      <sowMinSkill>2</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>TS_SapBasics</li>
+      </sowResearchPrerequisites>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>4</growDays>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <visualSizeRange>0.3~0.8</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5.9</glowRadius>
+        <glowColor>(78,226,229,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

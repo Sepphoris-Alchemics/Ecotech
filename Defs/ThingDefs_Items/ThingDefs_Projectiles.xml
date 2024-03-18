@@ -112,6 +112,23 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
+  <ThingDef ParentName="BaseBullet"> <!--upgraded stakecaster shot-->
+    <defName>Bullet_StakeBriar</defName>
+    <label>large briar tangle</label>
+    <graphicData>
+      <texPath>Things/Projectile/TS_StakeBriar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>TS_BriarDamageStake</damageDef>
+      <damageAmountBase>11</damageAmountBase> <!--40% damage removed, rounded from 11.4-->
+      <stoppingPower>0.75</stoppingPower>
+      <armorPenetrationBase>0.04</armorPenetrationBase>
+      <speed>35</speed> <!--slightly slower speed-->
+    </projectile>
+  </ThingDef>
+
   <ThingDef ParentName="BaseBullet"> <!--pump shotgun counterpart, medium weapon-->
     <defName>Bullet_ThornShotgun</defName>
     <label>scatter blast</label>
@@ -139,7 +156,7 @@ Anima long range is brought down by 3
       <damageDef>TS_BriarDamage</damageDef>
       <damageAmountBase>12</damageAmountBase> <!--40% damage removed-->
       <stoppingPower>1.5</stoppingPower> <!-- Same stopping power-->
-      <armorPenetrationBase>0.06</armorPenetrationBase> <!--AP down by half-->
+      <armorPenetrationBase>0.04</armorPenetrationBase> <!--AP down by half-->
       <speed>40</speed> <!--Slower speed-->
     </projectile>
   </ThingDef>

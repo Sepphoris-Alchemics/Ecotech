@@ -17,7 +17,7 @@
     <defName>TS_OverviewPrimaWeapons</defName>
     <label>Overview: Prima Family</label>
 		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Terratech will learn to grow. They are the easiest to bioengineer, the fastest to research, and have the shortest growth range.
-\nCertain Terraweapons have a final growth stage that can be influenced. This final growth stage reveals new capabilities of a Terraweapon.
+\nCertain Terraweapons were of particular interest to Terratech Ancients, and have a final "Apex" stage that can be influenced. This final growth stage reveals new capabilities of a Terraweapon.
 \nFor Prima Weapons, the main trait is the evolution of the projectile, which will burst into briar tangles upon impact. This enables each projectile to wrap and stick around live targets, and repeated projectiles will further increase this ensnarement.
 This also develops the weapon's protective traits, causing more wood to form, external fluid growths to be used, and hardened epidermis plates to form in their location. These changes improve the overall weapon health.
 \nGeneral Prima family guidelines:
@@ -26,17 +26,19 @@ This also develops the weapon's protective traits, causing more wood to form, ex
 -Minimum Soil Fertility: 90%
 -Minimum Growth Duration: 4 days
 -Maximum Growth Duration: 10 days
--Maximum Hitpoints (Immature): 180
-\n-How to mature: Insert into Terravat
--When Matured: Projectiles grow into briars upon impact
--When Matured: 50-60% Higher health pool
--When Matured: Lower damage
--Evolution Growth Duration: 10 days + 50% of initial growth time
--Maximum Hitpoints (Matured): 240
+-Maximum Lifespan (Dormant): 14 days
+-Maximum Hitpoints (Dormant): 50
+\n-How to mature: Click on the weapon while it's on the ground, and use the "plant" option.
+-Apex Trait: Projectiles grow into briars upon impact
+-Apex Trait: +20 health
+-Apex Trait: Lower Flammability
+-Apex Growth Duration: 10 days + 50% of initial growth time
+-Maximum Lifespan (Apex): 18 days
+-Maximum Hitpoints (Apex): 70
 \nGuideline notes:
 -Effective Alternative Range: any weapon that requires these research options are weapons that Prima weapons were designed to compete with.
 -Growth does not account for external factors, i.e. soil fertility and daylight.
--All immature weapons regenerate health, but only regenerate when unequipped and left alone.
+-All dormant weapons regenerate health, but only regenerate when unequipped and left alone.
 -Other minimum stats can be found in the accompanying description.</description>
     <graphicData>
       <texPath>Things/Plant/WeaponPod_Mature</texPath>
@@ -49,7 +51,7 @@ This also develops the weapon's protective traits, causing more wood to form, ex
     <selectable>false</selectable>
     <pathCost>14</pathCost>
     <plant>
-      <fertilityMin>0.8</fertilityMin>
+      <fertilityMin>0.9</fertilityMin>
       <fertilitySensitivity>0.1</fertilitySensitivity>
       <growMinGlow>0.3</growMinGlow>
       <harvestWork>900</harvestWork>

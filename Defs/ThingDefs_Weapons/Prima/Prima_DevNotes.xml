@@ -39,7 +39,7 @@ Archwood: 2000
 		Each family has two variants: the basic, and the evolved
 		Basic weapons will be the fastest to aquire, but will run out of health as they are used. You can use Sundrops to revitalize these.
 		Evolved weapons will be fully matured weapons. They will not run out of health as they are used, but will wither away (expire) after some time. They cannot be rivitalized.
-		Expiry on weapons is the following:
+		Expiry on weapons is generally the following:
 			Prima: 15 days (can also expire via usage)
 			Verdant: 30 days
 
@@ -103,7 +103,6 @@ Archwood: 2000
 		Multiple weapons shouldn't be acquirable from pods.
 
 		Mature weapons have higher health
-		Mature weapons will have more uses
 		Mature weapons can't accept saps
 
 
@@ -114,6 +113,21 @@ Archwood: 2000
 		-Damage type should be cut for fast weapons, and stab for slow/accurate weapons.
 		-Damage should further lowered down by 25-33%.
 		-Prima weapons can only accept glowsap
+		-Cooldown should decrease by half of it's base
+		-Warmup increased by 25% of it's base
+
+
+	-Tick time that each weapon lives should be based on the weapon size and maturity.
+		-Prima Immature weapons should be below 15 days, while matured will increase the total days by 4.
+		-Prima health will be very low, with matured weapons increasing the health by 20
+			-1 day = 60,000 ticks
+			-Immature light: 10 days (600000) | 40 health
+			-Immature normal: 12 days (720000) | 45 health
+			-Immature heavy: 14 days (840000) | 50 health
+
+			-Mature light: 14 days (840000) | 60 health
+			-Mature normal: 16 days (960000) | 65 health
+			-Mature heavy: 18 days (1080000) | 70 health
 
 
 ====================
@@ -140,7 +154,10 @@ Archwood: 2000
 		Prima Weapons should reflect early-game sidearms that are above power in bows, but lower than normal guns. They should not mirror anything above Hi-Tech.
 		Verdant Weapons will require 10 days + half of the original growth time. This can bypass fast growth time.
 		Verdant Weapons have 50-60% more health, inflict the briar condition, and does cut damage alongside pierce.
-		Most Prima weapons should not go above 150 health. Heavy is 160-200.
+
+		Stakecaster shares stats with light and heavy weapons, having the benefits of both. This is specific to the Stakecaster and it's variants.
+
+
 
 	Prima Turrets:
 		-Spear Turret: basic turret. Slow firing, medium damage, fires two stakes at medium range. Comparable to a greatbow firing two shots at once.
@@ -181,6 +198,7 @@ Archwood: 2000
 			<Flammability>2</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
+		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
 		<tickerType>Normal</tickerType>

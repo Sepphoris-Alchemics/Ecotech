@@ -3,7 +3,7 @@
 <!--
   <ThingDef ParentName="ApparelBase" Name="PlantApparelBase" Abstract="True">
     <techLevel>Neolithic</techLevel>
-    <smeltable>false</smeltable>
+		<smeltable>false</smeltable>
     <tradeTags>
       <li>PlateApparel</li>
     </tradeTags>

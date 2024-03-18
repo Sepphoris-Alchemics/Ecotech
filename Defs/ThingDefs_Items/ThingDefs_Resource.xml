@@ -76,6 +76,31 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
+    <defName>TS_Darksap</defName>
+    <label>Darksap</label>
+    <description>A jar of harvested darksap. Used as an equal alternative to glowsap in many colonies and regions.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Darksap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>90</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
     <defName>TS_Endosap</defName>
     <label>Endosap</label>
     <description>A jar of harvested endosap. People and colonies skilled with Terratech can use this to replace the mundane sap of immature Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.

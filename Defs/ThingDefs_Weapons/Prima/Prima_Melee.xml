@@ -5,12 +5,12 @@
 		
 		
 		<ThingDef Abstract="True" Name="MeleeWeaponPlantBase" ParentName="BaseWeapon">
-    <techLevel>Neolithic</techLevel>
     <statBases>
       <MarketValue>200</MarketValue>
       <Mass>1</Mass>
     </statBases>
-    <smeltable>false</smeltable>
+    <techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
     <burnableByRecipe>true</burnableByRecipe>
     <thingCategories>
       <li>WeaponsMelee</li>
@@ -27,7 +27,6 @@
 		<defName>TS_Knife</defName>
 		<label>terraknife</label>
 		<description>A biotic curved dagger. One of the weakest terraweapons, but extremely quick to attack with, and to grow.</description>
-		<techLevel>Neolithic</techLevel>
 		<graphicData>
 			<texPath>Things/WeaponMelee/TS_Dagger</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -44,10 +43,12 @@
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>80</MaxHitPoints>
+      <MaxHitPoints>30</MaxHitPoints>
 			<Mass>0.3</Mass>
-			<Flammability>1</Flammability>
+			<Flammability>3</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
+		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
 		<tools>
@@ -78,13 +79,21 @@
         <cooldownTime>1.5</cooldownTime>
       </li>
 		</tools>
+		<comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>720000</lifespanTicks>
+          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeapon">
 		<defName>TS_Mace</defName>
 		<label>terramace</label>
 		<description>A half-vine, half-wooden club, with several sharp protrusions.</description>
-		<techLevel>Neolithic</techLevel>
 		<graphicData>
 			<texPath>Things/WeaponMelee/TS_Mace</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -101,11 +110,13 @@
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>80</MaxHitPoints>
+      <MaxHitPoints>35</MaxHitPoints>
 			<Mass>1.1</Mass>
-			<Flammability>1</Flammability>
+			<Flammability>3</Flammability>
       <WorkToMake>12000</WorkToMake>
+			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
+		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
 		<tools>
@@ -128,21 +139,29 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
+		<comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>720000</lifespanTicks>
+          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeapon">
 		<defName>TS_Phytosword</defName>
 		<label>phytosword</label>
 		<description>A sharp, curved sword grown from a weapon pod. Apparently the names "terrablade" and "terrasword" were refused to be used for the sake of avoiding potential confusion.</description>
-		<techLevel>Neolithic</techLevel>
 		<graphicData>
 			<texPath>Things/WeaponMelee/TS_Sword</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
-    <costList>
+    <!--<costList>
       <WoodLog>50</WoodLog>
-    </costList>
+    </costList>-->
     <thingCategories>
       <li>WeaponsMelee</li>
     </thingCategories>
@@ -151,10 +170,12 @@
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>80</MaxHitPoints>
+      <MaxHitPoints>35</MaxHitPoints>
 			<Mass>0.7</Mass>
-			<Flammability>1</Flammability>
+			<Flammability>3</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
+		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
 		<tools>
@@ -183,6 +204,15 @@
         <cooldownTime>1.5</cooldownTime>
       </li>
 		</tools>
+		<comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>720000</lifespanTicks>
+          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
 	</ThingDef>
 
 </Defs>

@@ -260,9 +260,9 @@
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_GlowsapCultivation</defName>
-    <label>Glowsap</label>
-    <description>Learn how to cultivate vines and trees that produce Glowsap, a bio-engineered sap specially designed as Terraseed super-nutrients, and used to further support research.</description>
+    <defName>TS_SapBasics</defName>
+    <label>Terrasaps</label>
+    <description>Learn how to cultivate plants and trees that produce Terrasaps, which are special saps designed to support and evolve Terraweapons.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
@@ -282,7 +282,7 @@
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
     <prerequisites>
-      <li>TS_GlowsapCultivation</li>
+      <li>TS_SapBasics</li>
     </prerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>3.00</researchViewX>
@@ -297,7 +297,7 @@
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
     <prerequisites>
-      <li>TS_GlowsapCultivation</li>
+      <li>TS_SapBasics</li>
     </prerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>3.00</researchViewX>

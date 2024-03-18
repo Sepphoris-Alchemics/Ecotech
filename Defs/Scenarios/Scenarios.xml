@@ -87,7 +87,7 @@
 			</li>-->
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_GlowsapCultivation</project>
+				<project>TS_SapBasics</project>
 			</li>
 			<li Class="ScenPart_DisallowBuilding">
 				<def>Rule_DisallowBuilding</def>

@@ -35,6 +35,7 @@ Total shots increased by 30%</description>
 			<Flammability>0.5</Flammability> <!--75% less flammability-->
       <WorkToMake>12000</WorkToMake>
 		</statBases>
+		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
@@ -114,6 +115,7 @@ Total shots increased by 30%</description>
 			<Flammability>0.5</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
+		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>

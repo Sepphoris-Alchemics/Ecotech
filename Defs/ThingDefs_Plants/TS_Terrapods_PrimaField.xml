@@ -118,8 +118,8 @@ Tier 4 surge seeds: 20
     <description>A plant pod that will slowly grow a biotic stakecaster. Requires highly fertile terrain.</description>
     <plant>
       <harvestedThingDef>TS_StakeCaster</harvestedThingDef>
-      <sowMinSkill>3</sowMinSkill>
-      <growDays>6</growDays>
+      <sowMinSkill>4</sowMinSkill>
+      <growDays>7</growDays>
       <sowResearchPrerequisites>
         <li>TS_FundamentalArms</li>
       </sowResearchPrerequisites>
@@ -134,7 +134,7 @@ Tier 4 surge seeds: 20
     <description>A plant pod that will slowly grow a biotic pistol. Requires highly fertile terrain.</description>
     <plant>
       <harvestedThingDef>TS_Pistol</harvestedThingDef>
-      <sowMinSkill>4</sowMinSkill>
+      <sowMinSkill>3</sowMinSkill>
       <growDays>6</growDays>
       <harvestWork>450</harvestWork>
       <sowResearchPrerequisites>
@@ -145,11 +145,11 @@ Tier 4 surge seeds: 20
 
   <ThingDef ParentName="TS_WeaponPodBase">
     <defName>TS_WeaponPod_SMG</defName>
-    <label>Terrapod: SMG</label>
+    <label>Terrapod: Pincaster</label>
     <description>A plant pod that will slowly grow a biotic SMG. Requires highly fertile terrain.</description>
     <plant>
       <harvestedThingDef>TS_SMG</harvestedThingDef>
-      <sowMinSkill>4</sowMinSkill>
+      <sowMinSkill>3</sowMinSkill>
       <growDays>6</growDays>
       <harvestWork>450</harvestWork>
       <sowResearchPrerequisites>
@@ -162,7 +162,7 @@ Tier 4 surge seeds: 20
 
   <ThingDef ParentName="TS_WeaponPodBase">
     <defName>TS_WeaponPod_Shotgun</defName>
-    <label>Terrapod: Scattergun</label>
+    <label>Terrapod: Spreadburster</label>
     <description>A plant pod that will slowly grow a biotic shotgun. Requires highly fertile terrain.</description>
     <plant>
       <harvestedThingDef>TS_Shotgun</harvestedThingDef>

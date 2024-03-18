@@ -12,7 +12,8 @@ Accuracy follows charge rifles-->
 	<ThingDef ParentName="BaseGun">
 		<defName>TS_RoyalRifle</defName>
 		<label>Royal Hyperstem</label>
-		<description>A biotic rifle heavily influenced by Anima biology. Very few of these exist, as the knowledge to grow them is beyond the Rimworld. However, the few that do exist are known to rival charge weaponry on the battlefield. Not to mention, masterpieces showing what nature is truly capable of.\n\nBeing a plant weapon, this weapon has a limited amount of shots, but benefits from speed, lack of recoil, and armor penetration. Anima weapons benefit from very high fire rate, and will inflict psychic injury on top of physical injury. However, their sensitive design impacts their durability quite significantly.</description>
+		<description>A biotic rifle heavily influenced by Anima biology. Very few of these exist, as the knowledge to grow them is beyond the Rimworld. However, the few that do exist are known to rival most weaponry on the battlefield. Not to mention, masterpieces showing what nature is truly capable of.\n\nThis weapon is entirely organic, however it's supreme design allows it to regenerate both physical and time-based damage, effictvely making it semi-immortal. Anima weapons benefit from very high fire rate, and will inflict psychic injury on top of physical injury.
+\n\nDespite it's hyper-regeneration abilities, this weapon can still be entirely destroyed if directly damaged enough, or if not given a brief time to address physical issues (the weapon will need to be unequipped and left alone in order to regenerate hitpoints).</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Anima/TS_AnimaRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -25,29 +26,30 @@ Accuracy follows charge rifles-->
 		<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>
 		</thingSetMakerTags>
-    <relicChance>1</relicChance>
+    <relicChance>2</relicChance>
 		<statBases>
 			<Beauty>3</Beauty>
-      <MaxHitPoints>120</MaxHitPoints>
+      <MaxHitPoints>90</MaxHitPoints>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.75</AccuracyMedium>
 			<AccuracyLong>0.70</AccuracyLong>
-			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>2.6</Mass>
-			<Flammability>1</Flammability>
+			<Flammability>3</Flammability>
       <WorkToMake>45000</WorkToMake>
 			<MarketValue>1500</MarketValue>
 		</statBases>
+		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
       <li>
-        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_AnimaRifle</defaultProjectile>
-        <warmupTime>0.6</warmupTime>
+        <warmupTime>1.2</warmupTime>
         <range>24.9</range>
 				<burstShotCount>6</burstShotCount>
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
@@ -75,12 +77,12 @@ Accuracy follows charge rifles-->
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<modExtensions>
-			<li Class="HeavyWeapons.HeavyWeapon">
-				<weaponHitPointsDeductionOnShot>1</weaponHitPointsDeductionOnShot>
-				<isHeavy>false</isHeavy>
-			</li>
-		</modExtensions>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+		</comps>
 		<tradeTags>
 			<li>ExoticMisc</li>
       <li>Artifact</li>
@@ -98,7 +100,7 @@ Accuracy follows charge rifles-->
     <projectile>
       <damageDef>TS_PsychicShot</damageDef>
       <damageAmountBase>15</damageAmountBase>
-      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <armorPenetrationBase>0.12</armorPenetrationBase>
       <speed>100</speed>
     </projectile>
   </ThingDef>

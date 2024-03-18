@@ -35,7 +35,7 @@
       </sowTags>
       <sowMinSkill>6</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>TS_GlowsapCultivation</li>
+        <li>TS_SapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Pods should follow the following skill rules:
+Tier 1 weapons: 1-4
+Tier 1 heavy: 5-7
+Tier 1 upgrades: 6-8
+Tier 1 surge seeds: 6-8
+
+Tier 2 weapons: 4-8
+Tier 2 heavy: 9-11
+Tier 2 upgrades: 10-12
+Tier 2 surge seeds: 10-12
+
+Tier 3 weapons: 8-12
+Tier 3 heavy: 13-15
+Tier 3 upgrades: 14-16
+Tier 3 surge seeds: 14-16
+
+Tier 4 weapons: 16-20
+Tier 4 heavy: 17-19
+Tier 4 upgrades: 20
+Tier 4 surge seeds: 20
+-->
+
+  <ThingDef Name="TS_PrimaUpgradePodBase" ParentName="PlantBaseNonEdible" Abstract="True">
+    <graphicData>
+      <texPath>Things/Plant/WeaponPod_Fortified</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>
+    <plant>
+      <growDays>2.5</growDays> 
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.1</growMinGlow>
+      <burnedThingDef IsNull="True" />
+      <immatureGraphicPath>Things/Plant/WeaponPod_Fortified</immatureGraphicPath>
+      <sowWork>200</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.05</topWindExposure>
+      <visualSizeRange>0.4~1</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
+
+
+  <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
+    <defName>TS_PrimaSMGUpgradePod</defName>
+    <label>Pineshredder Pod</label>
+    <description>A fortified Terrapod that is further advancing a Prima Pincaster. Will produce a single, revitalized Pineshredder when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <plant>
+      <growDays>7</growDays> 
+    </plant>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>TS_SMGUpgraded</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>780000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3 days (180,000)-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>780001</lifespanTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Shotgun Upgrade-->
+    <defName>TS_PrimaShotgunUpgradePod</defName>
+    <label>Pineburster Pod</label>
+    <description>A fortified Terrapod that is further advancing a Prima Spreadshot. Will produce a single, revitalized Pineburster when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <plant>
+      <growDays>7</growDays> 
+    </plant>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>TS_SMGUpgraded</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>780000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3 days (180,000)-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>780001</lifespanTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
+    <defName>TS_StakecasterUpgradePod</defName>
+    <label>Twincaster Pod</label>
+    <description>A fortified Terrapod that is further advancing a Prima Stakecaster. Will produce a single, revitalized Twincaster when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <plant>
+      <growDays>7</growDays> 
+    </plant>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>TS_PrimaStakeCasterUpgraded</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>810000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3.5 days (210,000)-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>810001</lifespanTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
