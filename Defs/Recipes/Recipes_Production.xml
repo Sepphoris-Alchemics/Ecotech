@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--<RecipeDef>
+    <defName>TS_FilterGlowsap</defName>
+    <label>filter glowsap</label>
+    <description>Filter a large amount of glowsap to obtain another sap type. The filtered amount will be just enough to fill a single jar. Useful for excess glowsap that has stocked up over time.</description>
+    <jobString>Filtering glowsap.</jobString>
+    <workSpeedStat>ResearchSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>1000</workAmount>
+    <unfinishedThingDef>UnfinishedFilteredTerrasap</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TS_Glowsap</li>
+          </thingDefs>
+        </filter>
+        <count>200</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>TS_Glowsap</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <TerrasapRandom>1</TerrasapRandom>
+    </products>
+	<researchPrerequisite>TS_AdvancedGlowsapUsage</researchPrerequisite>
+		<skillRequirements>
+			<Plants>8</Plants>
+		</skillRequirements>
+    <workSkill>Plants</workSkill>
+    <recipeUsers>
+			<li>TS_BasicResearchBench</li>
+		</recipeUsers>
+  </RecipeDef>-->
+
+  <!--<ThingDef ParentName="UnfinishedBase">
+    <defName>TS_TerrasapRandom</defName>    
+    <label>filtered terrasap</label> 
+    <description>Terrasap that has been carefully filtered to provide a single jar of a more valuable terrasap.</description>
+    <graphicData>
+      <texPath>Things/Items/UnfinishedTerrasap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <MarketValue>1</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="RRO.CompProperties_RandomOutcomeComp">
+        <canProvideTags>
+          <li>FilteredTerrasap</li>
+        </canProvideTags>
+      </li>
+    </comps>
+  </ThingDef>-->
+
+</Defs>

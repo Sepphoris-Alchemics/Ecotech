@@ -5,12 +5,9 @@
 		<defName>TS_GlowsapBay</defName>
 		<label>Glowsap Bay</label>
 		<description>A large container filled with glowsap, intended for indoor or emergency growth. Doesn't require electricity, but will frequently need to be refilled with healthy glowsap as it's nutrients are depleted.
-\n\nSince this basin was specifically designed to house glowsap, this basin cannot support anything else besides Terratech plants. However, it will give all supported plants a slight growth boost.</description>
+Since this basin was specifically designed to house glowsap, this basin cannot support anything else besides Terratech plants. However, it will give all supported plants a slight growth boost.</description>
 		<thingClass>Building_PlantGrower</thingClass>
-		<minifiedDef>MinifiedThing</minifiedDef>
-        <thingCategories>
-			<li>BuildingsProduction</li>
-		</thingCategories>		
+		<minifiedDef>MinifiedThing</minifiedDef>	
 		<graphicData>
 			<texPath>Things/Building/Production/GlowsapBay/GlowsapBay</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -27,6 +24,7 @@
 		<defaultPlacingRot>East</defaultPlacingRot>
 		<passability>PassThroughOnly</passability>
 		<pathCost>30</pathCost>
+		<techLevel>Neolithic</techLevel>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
       <li>TS_GlowsapBays</li>
@@ -36,9 +34,9 @@
 		<canOverlapZones>false</canOverlapZones>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<statBases>
-			<WorkToBuild>2800</WorkToBuild>
-			<MaxHitPoints>180</MaxHitPoints>
-			<Flammability>2</Flammability>
+			<WorkToBuild>800</WorkToBuild>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>5</Flammability>
 			<Cleanliness>-2</Cleanliness>
 			<Mass>7.5</Mass>
 		</statBases>
@@ -61,17 +59,15 @@
       <li Class="CompProperties_Glower">
         <glowRadius>4</glowRadius>
         <glowColor>(239,84,203,0)</glowColor>
+				<darklightToggle>true</darklightToggle>
       </li>
       <!--<li Class="CompProperties_Facility">
         <statOffsets>
-          <ResearchSpeedFactor>0.05</ResearchSpeedFactor>
+          <ResearchSpeedFactor>0.10</ResearchSpeedFactor>
         </statOffsets>
-        <maxSimultaneous>2</maxSimultaneous>
+        <maxSimultaneous>1</maxSimultaneous>
         <maxDistance>12</maxDistance>
       </li>-->
-      <li Class="CompProperties_Art">
-        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
-      </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>1.5</fuelConsumptionRate>
         <fuelCapacity>30.0</fuelCapacity>
@@ -90,5 +86,7 @@
       </li>
     </comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>TerratechDesignation</designationCategory>
+		<uiOrder>2620</uiOrder>
 	</ThingDef>
 </Defs>

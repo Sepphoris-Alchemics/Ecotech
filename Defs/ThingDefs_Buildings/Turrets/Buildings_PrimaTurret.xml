@@ -100,7 +100,8 @@
     </costList>
     <!--<constructionSkillPrerequisite>5</constructionSkillPrerequisite>-->
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>TerratechDesignation</designationCategory>
+    <uiOrder>2640</uiOrder>
     <specialDisplayRadius>23</specialDisplayRadius>
     <stealable>false</stealable>
     <rotatable>true</rotatable>
@@ -182,7 +183,7 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>TS_PrimaMicroTurret_SMG</defName>
-    <label>Prima Burst Microturret</label>
+    <label>Prima Pin Microturret</label>
     <description>A small organic turret that doesn't require power. Fires rapid volleys of tiny thorns.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -238,7 +239,8 @@
       <TS_SurgeSeed_PrimaTurret>1</TS_SurgeSeed_PrimaTurret>
     </costList>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>TerratechDesignation</designationCategory>
+    <uiOrder>2650</uiOrder>
     <specialDisplayRadius>16.9</specialDisplayRadius>
     <stealable>false</stealable>
     <rotatable>true</rotatable>

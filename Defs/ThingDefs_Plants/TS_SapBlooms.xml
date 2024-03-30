@@ -46,6 +46,7 @@ The glowsap bloom can be harvested relatively fast, but it's harvesting yield is
       <blockAdjacentSow>true</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <visualSizeRange>0.3~0.8</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
@@ -53,7 +54,7 @@ The glowsap bloom can be harvested relatively fast, but it's harvesting yield is
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>5.9</glowRadius>
+        <glowRadius>6.9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
@@ -109,6 +110,7 @@ Like most other blooms, it can quickly produce sap, but provides a very small yi
       <blockAdjacentSow>true</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <visualSizeRange>0.3~0.8</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
@@ -116,7 +118,7 @@ Like most other blooms, it can quickly produce sap, but provides a very small yi
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>5.9</glowRadius>
+        <glowRadius>6.9</glowRadius>
         <glowColor>(78,226,229,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">

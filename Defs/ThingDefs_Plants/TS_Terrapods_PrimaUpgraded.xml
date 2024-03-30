@@ -35,11 +35,12 @@ Tier 4 surge seeds: 20
     <selectable>true</selectable>
     <pathCost>14</pathCost>
     <maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>
+    <tickerType>Normal</tickerType>
     <plant>
-      <growDays>2.5</growDays> 
+      <growDays>1</growDays> 
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.1</fertilitySensitivity>
-      <growMinGlow>0.1</growMinGlow>
+      <growMinGlow>0</growMinGlow>
       <burnedThingDef IsNull="True" />
       <immatureGraphicPath>Things/Plant/WeaponPod_Fortified</immatureGraphicPath>
       <sowWork>200</sowWork>
@@ -48,9 +49,14 @@ Tier 4 surge seeds: 20
       </sowTags>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
-      <topWindExposure>0.05</topWindExposure>
+      <topWindExposure>0.25</topWindExposure>
       <visualSizeRange>0.4~1</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <sowResearchPrerequisites Inherit="False" />
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
     </plant>
   </ThingDef>
 
@@ -61,7 +67,7 @@ Tier 4 surge seeds: 20
     <description>A fortified Terrapod that is further advancing a Prima Pincaster. Will produce a single, revitalized Pineshredder when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <plant>
-      <growDays>7</growDays> 
+      <growDays>1</growDays> 
     </plant>
     <comps>
       <li Class="CompProperties_Spawner">
@@ -74,7 +80,7 @@ Tier 4 surge seeds: 20
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>780001</lifespanTicks>
+        <lifespanTicks>780030</lifespanTicks>
       </li>
     </comps>
   </ThingDef>
@@ -86,7 +92,7 @@ Tier 4 surge seeds: 20
     <description>A fortified Terrapod that is further advancing a Prima Spreadshot. Will produce a single, revitalized Pineburster when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <plant>
-      <growDays>7</growDays> 
+      <growDays>1</growDays> 
     </plant>
     <comps>
       <li Class="CompProperties_Spawner">
@@ -99,7 +105,7 @@ Tier 4 surge seeds: 20
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>780001</lifespanTicks>
+        <lifespanTicks>780030</lifespanTicks>
       </li>
     </comps>
   </ThingDef>
@@ -111,7 +117,7 @@ Tier 4 surge seeds: 20
     <description>A fortified Terrapod that is further advancing a Prima Stakecaster. Will produce a single, revitalized Twincaster when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <plant>
-      <growDays>7</growDays> 
+      <growDays>1</growDays> 
     </plant>
     <comps>
       <li Class="CompProperties_Spawner">
@@ -124,7 +130,7 @@ Tier 4 surge seeds: 20
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>810001</lifespanTicks>
+        <lifespanTicks>810030</lifespanTicks>
       </li>
     </comps>
   </ThingDef>

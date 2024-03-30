@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Terrasecurity.ThingCompProperties_EquippedLifespan will need to be local
+
+	***SAP NOTES***
+		Sap is used to modify plant stats. This sap is extracted from the corresponding plant, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant. The effects are the following:
+		-Glowsap/Darksap: Doubles the lifetime growth increase a weapon would get. I.e. instead of +2 days for Prima, it gets +4. This persists across growth. This sap can be replaced on maturity - Common
+
+		-Sleepsap: 50% longer lifespan, but severly impacts damage and speed stats. Shooting the weapon with this sap will damage it, and the sap will need to be replaced. (pink)
+		-Endosap: 50% higher item health and 75% lower flammability (green) - Uncommon
+		-Hypersap: more shots and faster projectile speed (red) - Uncommon
+
+		-Deepsap: Can be planted on any growable terrain to quickly regrow the weapon (90% grow time decrease) (light blue) - Rare
+			-This includes mature weapons. After being planted, the sap will default to normal sap.
+		-Hemsap/Toxsap: projectiles inflict slight poison (light purple) - Rare
+		-Sunsap: 50% longer lifespan and 15 HP/day persistent health regen (golden) - Rare
+		-Surgesap: weapon unlocks a new, powerful fire mode that can be used sparingly. Second fire mode varies on the weapon, generally dependent on the weapon's main fire method. - Rare
+
+		-Archsap: weapon will never expire (royal purple). - Ultra Rare
+			-Weapon can still be destroyed by having 0 hitpoints.
+		-Symbiosap: weapon binds to user. The user links to the wepaon and has highly increased accuracy and aiming times, but once the weapon expires, the user suffers withdrawal. Must be acquired from special mushrooms. - Ultra Rare
+		-Cyclesap: weapon lasts 30 days from when it spawns. After these 30 days, the weapon will need to be regrown over another 30 days, and then ready to be used once more. - Ultra Rare
+
+		-(Removed) Glowsap: 20% higher item health and 20% longer lifespan (torch color)
+		-(Removed) Darksap: higher damage, speed, and AP (darklight color)
+		
+		Rarities determine harvest time:
+			Common: Specifically glowsap and darksap
+			Uncommon: 1 every 30 days
+			Rare: 1 every 60 days
+			Ultra Rare: Bought or found
+			Legendary: One-time quest, or relic
+			Unique: Specific details (usually harvest yield or time)
+
+		Market value is modified by the following, in this order:
+			40 base for Prima
+			+2 for light
+			+4 for normal
+			+6 for heavy
+			+2 per lifespan day
+			-25% if evolved without a sap (rounded down)
+			+25% if evolved with a sap (rounded up)
+
+			1.25x if Common Sap
+			2x if Uncommon Sap
+			3x if Rare Sap
+			4x if Ultra Rare Sap
+			5x if Legendary Sap
+
+
+		Example: Pincaster: 124 final value
+			Base: 40
+			Light weapon: +2 (42)
+			10 day lifespan: +20 (62)
+			Contains Endosap: x2 (124)
+			
+		Example: Pineshredder: 176 final value
+			Base: 40
+			Light weapon: +2 (42)
+			14 day lifespan: +28 (70)
+			Evolved with a sap: +18 (88)
+			Contains Endosap: x2 (176)
+			
+		Uncommon and Rare saps can also produced by filtering a large amount of glowsap. Which one is produced will be random. This will produce 1 sap at the cost of 120 glowsap or darksap
+		
+		SAPS ARE NOT CUMMULATIVE: unless stated otherwise, modifications are all based off the basic stats-->
+
+
+<!--Lifespan colors:
+Base Dormant: 81, 89, 45
+Base Mature: 28, 31, 15
+Endosap: 70, 178, 83-->
+
+<!--=====Basic=====-->
+
+	<ThingDef Name="BaseUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+      <MarketValue>40</MarketValue>
+    </statBases>
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+		</plant>
+		<tickerType>Normal</tickerType>
+  	<comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Standard Genome | Dormant
+Accepts any sap transplant | +5 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+
+	<ThingDef Name="UpgradedUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+      <MarketValue>30</MarketValue>
+    </statBases>
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+		</plant>
+		<tickerType>Normal</tickerType>
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>18000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Standard Genome | Matured
+Transplants impossible | +3.75 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+<!--=====Archsap=====-->
+
+
+	<ThingDef Name="BaseArchsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Archsap Genome | Immutable
+Unlimited lifespan | Persistent regeneration | +5 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+
+	<ThingDef Name="UpgradedArchsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Archsap Genome | Matured
+Unlimited Lifespan | Persistent regeneration | +5 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+<!--=====Deepsap=====-->
+
+
+	<ThingDef Name="BaseDeepsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Deepsap Genome | Immutable
+Lifespan renewable via Vitapod | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+
+	<ThingDef Name="UpgradedDeepsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<!--No regeneration when matured-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Deepsap Genome | Matured
+Lifespan renewable via Vitapod</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+<!--=====Endosap=====-->
+
+
+	<ThingDef Name="BaseEndosapTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+      <MarketValue>85</MarketValue>
+    </statBases>
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+		</plant>
+		<tickerType>Normal</tickerType>
+   <comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+      </li>
+    	<!--InspectString will have variable health, and needs to be done locally.
+		However, it should look something like this:
+			<li Class="CompProperties_InspectString">
+      	<inspectString>Endosap Genome
++20 health | +2.5 lifetime days | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>-->
+    </comps>
+	</ThingDef>
+
+
+
+	<ThingDef Name="UpgradedEndosapTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+      <MarketValue>105</MarketValue>
+    </statBases>
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+		</plant>
+		<tickerType>Normal</tickerType>
+   <comps>
+		<!--No healing over time-->
+    <!--InspectString will have variable health, and needs to be done locally-->
+    </comps>
+	</ThingDef>
+
+
+<!--=====Hemsap=====-->
+
+
+	<ThingDef Name="BaseHemsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>18000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Hemsap Genome | Immutable
++1 damage | Projectiles inject neurotoxin | +3.75 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+
+	<ThingDef Name="UpgradedHemsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+			<!--No healing over time-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Hemsap Genome | Matured
++1 damage | Projectiles inflict neurotoxin</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+<!--=====Hypersap=====-->
+
+
+	<ThingDef Name="BaseHypersapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>18000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Hyerpsap Genome | Immutable
+Increased projectiles | +25% projectile speed | +3.75 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+
+	<ThingDef Name="UpgradedHypersapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+			<!--No healing over time-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Hyerpsap Genome | Matured
+Increased projectiles | +25% projectile speed</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+<!--=====Sunsap=====-->
+
+
+	<ThingDef Name="BaseSunsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>3000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Sunsap Genome | Immutable
++50% lifetime days | +15 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+
+	<ThingDef Name="UpgradedSunsapTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>3000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Sunsap Genome | Matured
++25% lifetime days| +15 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+
+<!--==========UNIQUE/RELIC SAPS==========-->
+
+
+	<ThingDef Name="BaseSpringTerraweapon" Abstract="True" ParentName="BaseGun">
+  	<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    	</li>
+    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+      	<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    	</li>
+    	<li Class="CompProperties_InspectString">
+      	<inspectString>Bathed in the Spirits of Springs | Immutable
+5x health | +5 damage | Can be rebirthed | Passively heals wielder</inspectString>
+    	</li>
+  	</comps>
+	</ThingDef>
+
+	<ThingDef Name="UpgradedSpringTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+      <!--<expireEffect></expireEffect>-->
+			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Bathed in the Strength of Springs | Matured
+5x health | +5 damage | Can be rebirthed | Passively heals wielder</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+<!---->
+
+
+	<ThingDef Name="BaseSummerTerraweapon" Abstract="True" ParentName="BaseGun">
+  	<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    	</li>
+    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+      	<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    	</li>
+    	<li Class="CompProperties_InspectString">
+      	<inspectString>Bathed in the Soul of Summers | Immutable
+10x health | +5 damage | Inflicts fire damage | Passively increases stats</inspectString>
+    	</li>
+  	</comps>
+	</ThingDef>
+
+	<ThingDef Name="UpgradedSummerTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+      <!--<expireEffect></expireEffect>-->
+			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Bathed in the Soul of Summers | Matured
+5x health | +10 damage | Inflicts fire damage | Passively increases stats</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+<!---->
+
+
+	<ThingDef Name="BaseAutumnTerraweapon" Abstract="True" ParentName="BaseGun">
+  	<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    	</li>
+    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+      	<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    	</li>
+    	<li Class="CompProperties_InspectString">
+      	<inspectString>Bathed in the Abundance of Autumns | Immutable
+10x health | +5 damage | Pod doubles nearby harvest yield | Provides mood bonuses</inspectString>
+    	</li>
+  	</comps>
+	</ThingDef>
+
+	<ThingDef Name="UpgradedAutumnTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+      <!--<expireEffect></expireEffect>-->
+			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    </li>
+    	<li Class="CompProperties_InspectString">
+      	<inspectString>Bathed in the Abundance of Autumns | Matured
+10x health | +5 damage | Pod doubles nearby harvest yield | Provides mood bonuses</inspectString>
+    	</li>
+    </comps>
+	</ThingDef>
+
+
+<!---->
+
+
+	<ThingDef Name="BaseWinterTerraweapon" Abstract="True" ParentName="BaseGun">
+  	<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    	</li>
+    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+      	<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    	</li>
+    	<li Class="CompProperties_InspectString">
+      	<inspectString>Bathed in the Woe of Winters | Immutable
+5x health | +10 damage | Inflicts frost damage | Decreases various requirements</inspectString>
+    	</li>
+  	</comps>
+	</ThingDef>
+
+	<ThingDef Name="UpgradedWinterTerraweapon" Abstract="True" ParentName="BaseGun">
+   <comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+      <!--<expireEffect></expireEffect>-->
+			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    </li>
+    	<li Class="CompProperties_InspectString">
+      	<inspectString>Bathed in the Woe of Winters | Matured
+5x health | +10 damage | Inflicts frost damage | Decreases various requirements</inspectString>
+    	</li>
+    </comps>
+	</ThingDef>
+
+</Defs>

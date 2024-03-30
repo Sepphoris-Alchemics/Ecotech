@@ -13,9 +13,19 @@
 
 			-Mature light: 14 days (840000) | 60 health
 			-Mature normal: 16 days (960000) | 65 health
-			-Mature heavy: 18 days (1080000) | 70 health-->
+			-Mature heavy: 18 days (1080000) | 70 health
+			
+			
+			POST-TESTING LIFESPANS: Prima weapons now generally last more than a quadrum. Their upgraded growth time is only +2 instead of +3 or +4, due to their ease of access.
+			Immature Light: 14 days (840000) | 30 health
+			Immature Normal: 16 days (960000) | 35 health
+			Immature Heavy: 18 days (1080000) | 40 health
+			
+			Mature Light: 16 days (960000) | 50 health
+			Mature Normal: 18 days (1080000) | 55 health
+			Mature Heavy: 20 days (1200000) | 60 health-->
 
-	<ThingDef ParentName="BaseGun">
+	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>TS_ShotgunUpgraded</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
 		<label>prima pineburster</label>
 		<description>The matured form of the Prima Spreadshot. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.</description>
@@ -30,11 +40,12 @@
 			<li>PlantWeaponsUpgraded</li>
 		</weaponTags>
     <weaponClasses>
-      <li>ShortShots</li>
+			<li>ShortShots</li>
+      <li>Ranged</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>65</MaxHitPoints> <!--From 45 to 65: 20 health increase-->
+      <MaxHitPoints>55</MaxHitPoints> <!--From 35 to 55: 20 health increase-->
 			<AccuracyTouch>0.85</AccuracyTouch> <!--.05 higher accuracy in all areas-->
 			<AccuracyShort>0.85</AccuracyShort>
 			<AccuracyMedium>0.75</AccuracyMedium>
@@ -83,8 +94,8 @@
 		<comps>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
@@ -92,7 +103,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseGun">
+	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>TS_SMGUpgraded</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
 		<label>prima pineshredder</label>
 		<description>The Apex form of the Prima Pincaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
@@ -108,11 +119,11 @@
 		</weaponTags>
     <weaponClasses>
       <li>RangedLight</li>
-      <li>ShortShots</li>
+			<li>ShortShots</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>60</MaxHitPoints>
+      <MaxHitPoints>50</MaxHitPoints>
 			<AccuracyTouch>0.90</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.30</AccuracyMedium>
@@ -176,8 +187,8 @@
 		<comps>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks> <!--Light weapon-->
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
@@ -197,7 +208,7 @@
 		</modExtensions>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGun">
+	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>TS_PrimaStakeCasterUpgraded</defName>
 		<label>Twincaster</label>
 		<description>The second-generation form of the Prima Stakecaster. The evolution has drastically impacted this weapon's projectiles, resulting in large masses of briar tangles that are wrapped around a small stake, as opposed to the larger stake that the dormant form fires. Much of the reserved sap has been consumed to create a stronger and durable epidermis. All these changes have provided better slightlines for accuracy, higher health, and a longer lifespan.
@@ -210,17 +221,15 @@
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
-      <li>NeolithicRangedHeavy</li>
-      <li>NeolithicRangedChief</li>
 		</weaponTags>
     <weaponClasses>
       <li>LongShots</li>
       <li>Ranged</li>
-      <li>RangedHeavy</li>
+			<li>RangedHeavy</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>70</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
 			<AccuracyTouch>0.70</AccuracyTouch> <!--.05 higher accuracies than dormant-->
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
@@ -273,8 +282,8 @@
       </li>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>

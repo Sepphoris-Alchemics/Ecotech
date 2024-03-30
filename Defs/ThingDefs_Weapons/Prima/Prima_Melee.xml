@@ -82,8 +82,8 @@
 		<comps>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>720000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>840000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
@@ -142,8 +142,8 @@
 		<comps>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>720000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>960000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
@@ -207,8 +207,8 @@
 		<comps>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>720000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>960000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>

@@ -1,6 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--==========1.5 RELEASE TO-DO==========
+
+
+"Lifetime left" changed to "<Weapon> lifetime:"
+
+Change evolved weapon text from "Dormant" to "infused"
+Terrapod description stating the pod will be dormant if unable to grow
+Descriptions stating if a weapon will survive through winter.
+All matured and endosap weapons able to survive through winter (15+ days).
+Scenario starting with x2 stakecaster, x1 OMR, and x1 Pinburster
+Glowsap Bay research time reduced to 1000
+Terravat time decreased to 800
+Complete all endoweapons
+
+HIGH PRIORITY:
+
+Wall-mounted glowvine
+Terratech Tab
+Shotgun Turret
+All 1x1 Prima turrets in the same designator
+
+-->
+
 <!--BASE BALANCE MODIFICATIONS:
 Range of touch is unaffected
 Range of shorter weapons is brought down by 3 (Short = 13-25, minimum 4)
@@ -36,7 +59,7 @@ Archwood: 2000
 ====================
 
 	***GENERAL NOTES***
-		Each family has two variants: the basic, and the evolved
+		Each family has two variants: the basic/dormant, and the evolved/matured/Apex
 		Basic weapons will be the fastest to aquire, but will run out of health as they are used. You can use Sundrops to revitalize these.
 		Evolved weapons will be fully matured weapons. They will not run out of health as they are used, but will wither away (expire) after some time. They cannot be rivitalized.
 		Expiry on weapons is generally the following:
@@ -121,6 +144,7 @@ Archwood: 2000
 		-Prima Immature weapons should be below 15 days, while matured will increase the total days by 4.
 		-Prima health will be very low, with matured weapons increasing the health by 20
 			-1 day = 60,000 ticks
+			-18 days = 1080000 ticks
 			-Immature light: 10 days (600000) | 40 health
 			-Immature normal: 12 days (720000) | 45 health
 			-Immature heavy: 14 days (840000) | 50 health
@@ -129,19 +153,52 @@ Archwood: 2000
 			-Mature normal: 16 days (960000) | 65 health
 			-Mature heavy: 18 days (1080000) | 70 health
 
+	
+		-POST-TESTING LIFESPANS: Prima weapons now generally last more than a quadrum. Their upgraded growth time is only +2 instead of +3 or +4, due to their ease of access.
+			-Immature Light: 14 days (840000) | 30 health
+			-Immature Normal: 16 days (960000) | 35 health
+			-Immature Heavy: 18 days (1080000) | 40 health
+			
+			-Mature Light: 16 days (960000) | 50 health
+			-Mature Normal: 18 days (1080000) | 55 health
+			-Mature Heavy: 20 days (1200000) | 60 health
+
 
 ====================
 
 	***SAP NOTES***
-		Sap is used to modify plant stats. This sap is extracted from the corresponding tree or bloom, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant. The effects are the following:
-		-Sunsap: default, regenerates health when left alone (yellow)
-		-Glowsap: quickly evolves the weapon (torch color)
-		-Endosap: higher health (40-50%) and lower flammability (green)
-		-Darksap: higher damage, speed, and AP (darklight color)
-		-Hypersap: more shots and faster fire rate (white)
-		-Deepsap: Can be planted on any growable terrain to regrow another weapon (light blue)
-		-Archsap: weapon will never expire (purple)
-		-Hemsap/Toxsap: projectiles inflict slight poison
+		Sap is used to modify plant stats. This sap is extracted from the corresponding plant, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant. The effects are the following:
+		-Glowsap: Puts the weapon in hibernation for longer storage. Weapon will have 50% longer life, but heavily impacted speed and damage. This sap can be replaced on maturity - Common
+		-Darksap: Doubles the lifetime growth increase a weapon would get. (I.e. instead of +2 days for Prima, it gets +4. This persists across growth. This sap can be replaced on maturity) - Common
+
+		-Endosap: 50% higher item health and 75% lower flammability (green) - Uncommon
+		-Hypersap: more shots/higher bursts and faster projectile speed (red) - Uncommon
+			-Burst Weapons will have their min and max projectiles increased by 1
+			-Most other weapons will be given a range of 1-2. Specific weapons like the Stakecasters will be given a new name entirely.
+				Stakecaster - Roguecaster (1-2 shots)
+				Twincaster - Hypercaster I (3-4 shots)
+				Tricaster - Hypercaster II (4-5 shots)
+				Quadcaster - Hypercaster III (5-6 shots)
+				Quincaster - Hypercaster IV (6-7 shots)
+				Hexcaster - Swarmcaster (8-10 shots)
+
+		-Deepsap: Can be planted on any growable terrain to quickly regrow the weapon (90% grow time decrease) (light blue) - Rare
+		-Hemsap/Toxsap: projectiles inflict slight poison (light purple) - Rare
+		-Sunsap: 50% longer lifespan and 15 HP/day persistent health regen (golden) - Rare
+
+		-Archsap: weapon will never expire (royal purple) - Ultra Rare
+
+		-(Not acquirable) Basesap: default, regenerates health when left alone. Not available as an item. (yellow)
+		
+		Rarities determine harvest time:
+			Common: Specifically glowsap and darksap | 1.25x market value
+			Uncommon: 1 every 30 days |2x + 5 market value
+			Rare: 1 every 60 days | 3x + 10 market value
+			Ultra Rare: Bought or found | 4x + 15 market value
+			Legendary: One-time quest, or relic | 5x + 20 market value
+			Unique: Specific details (usually harvest yield or time)
+			
+		Uncommon and Rare saps can also produced by filtering a large amount of glowsap. Which one is produced will be random. This will produce 1 sap at the cost of 80 glowsap
 
 
 ====================
@@ -182,8 +239,7 @@ Archwood: 2000
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>RangedLight</li>
-      <li>ShortShots</li>
+      <li>Ranged</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
@@ -251,7 +307,7 @@ Archwood: 2000
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>4000</lifespanTicks>
           <replacementToSpawn>ChunkSlagSteel</replacementToSpawn>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
         </li>
       </comps>

@@ -3,10 +3,10 @@
 
 <!--Prima Stakecaster downgraded to an entry weapon. Still quite powerful, but very limited on ammo and speed.-->
 
-	<ThingDef ParentName="BaseGun">
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
 		<defName>TS_Rifle</defName> <!--Counterpart: Bolt Action-->
 		<label>prima OLR</label>
-		<description>The OMR (Organic Long Rifle) is a biotic weapon patterned off of a long-range rifle, and grown straight from a specialized pod. Due to its plant nature, no optics are present, giving it a lower range than most other longrifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>The OLR (Organic Long Rifle) is a biotic weapon patterned off of a long-range rifle, and grown straight from a specialized pod. Due to its plant nature, no optics are present, giving it a lower range than most other longrifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/TS_Rifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -17,11 +17,11 @@
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>LongShots</li>
+      <li>Ranged</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>50</MaxHitPoints> <!--80 shots-->
+      <MaxHitPoints>40</MaxHitPoints> <!--80 shots-->
 			<AccuracyTouch>0.70</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.70</AccuracyMedium>
@@ -68,19 +68,19 @@
 		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGun"> <!--Counterpart: Incendiary Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Incendiary Launcher-->
 		<defName>TS_Seedburster</defName>
 		<label>prima splintcannon</label>
 		<description>A biotic weapon, patterned off a basic grenade launcher. While nature can't easily replicate actual explosives, this weapon improvises by lobbing pressure-sensitive pods that will spew razor-sharp splinters in every direction.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -94,11 +94,12 @@
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>RangedHeavy</li>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>50</MaxHitPoints> <!--32 shots-->
+      <MaxHitPoints>40</MaxHitPoints> <!--32 shots-->
 			<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.4</Mass>
@@ -147,19 +148,19 @@
 		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGun"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>TS_AcidLauncher</defName>
 		<label>prima acid launcher</label>
 		<description>A biotic weapon, specially engineered to launch an acidic globule that covers a small area upon impact. This weapon was initially designed to help clear rocky terrain and old ruins; however, it is just as effective - if not moreso - at melting away flesh and armor.\n\nThankfully, this weapon is very slow to grow, and thus not quickly acquired.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -173,11 +174,12 @@
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>RangedHeavy</li>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>50</MaxHitPoints> <!--20 shots-->
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
 			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.6</Mass>
@@ -226,19 +228,19 @@
 		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGun"> <!--Counterpart: LMG-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: LMG-->
 		<defName>TS_LMG</defName>
 		<label>prima thorncaster</label>
 		<description>A biotic weapon, patterned off of a heavy assault rifle, and grown straight from a specialized pod. It is somewhat inaccurate, but it's ability to generate several projectiles at once makes it excellent at supression.
@@ -254,11 +256,12 @@
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>RangedHeavy</li>
+			<li>RangedHeavy</li>
+      <li>Ranged</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>50</MaxHitPoints> <!--30 shots-->
+      <MaxHitPoints>40</MaxHitPoints> <!--30 shots-->
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.40</AccuracyMedium>
@@ -321,12 +324,12 @@
 		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
         <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
           <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks>
-          <lifespanBarColor>(47, 56, 35)</lifespanBarColor>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>

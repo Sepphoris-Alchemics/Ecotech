@@ -103,12 +103,10 @@
   <ThingDef ParentName="ResourceBase">
     <defName>TS_Endosap</defName>
     <label>Endosap</label>
-    <description>A jar of harvested endosap. People and colonies skilled with Terratech can use this to replace the mundane sap of immature Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
+    <description>A jar of harvested endosap. People and colonies skilled with Terratech can use this to replace the mundane sap of dormant Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
 \n\nNew traits:
-30-40% health increase
-30-40% more uses before expiry
-Flammability lowered by 75%
-Regeneration factor lowered by 50% (immature only)</description>
+50% health increase
+Flammability lowered by 75%</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Endosap</texPath>
@@ -120,7 +118,7 @@ Regeneration factor lowered by 50% (immature only)</description>
     <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
-      <MarketValue>352</MarketValue>
+      <MarketValue>82</MarketValue>
       <Mass>0.05</Mass>
       <Flammability>1</Flammability>
       <DeteriorationRate>0.25</DeteriorationRate>

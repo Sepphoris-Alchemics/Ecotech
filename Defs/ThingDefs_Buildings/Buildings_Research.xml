@@ -13,13 +13,13 @@
       <li>Woody</li>
       <li>Stony</li>
     </stuffCategories>
-    <costStuffCount>100</costStuffCount>
+    <costStuffCount>30</costStuffCount>
     <costList>
-      <WoodLog>20</WoodLog>
+      <WoodLog>10</WoodLog>
     </costList>
     <graphicData>
-      <texPath>Things/Building/Production/TerraseedResearchBench</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Production/ResearchBench/ResearchBench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(3,3)</drawSize>
       <drawOffset>(0,0,0.09)</drawOffset>
@@ -39,10 +39,10 @@
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
-    <rotatable>false</rotatable>
+    <rotatable>true</rotatable>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>3400</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2200</WorkToBuild>
       <Flammability>1.0</Flammability>
       <ResearchSpeedFactor>0.6</ResearchSpeedFactor>
     </statBases>
@@ -62,7 +62,7 @@
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>TerratechDesignation</designationCategory>
     <uiOrder>2600</uiOrder>
     <surfaceType>Item</surfaceType>
     <building>
@@ -159,7 +159,8 @@
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
       </li>
     </comps>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>TerratechDesignation</designationCategory>
+    <uiOrder>2610</uiOrder>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 	</ThingDef>
 

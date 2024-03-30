@@ -54,14 +54,14 @@
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>TerratechDesignation</designationCategory>
+    <uiOrder>2630</uiOrder>
     <minifiedDef>MinifiedThing</minifiedDef>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
     <thingCategories>
       <li>BuildingsMisc</li>
     </thingCategories>
-    <uiOrder>2600</uiOrder>
     <surfaceType>Item</surfaceType>
     <building>
       <paintable>true</paintable>

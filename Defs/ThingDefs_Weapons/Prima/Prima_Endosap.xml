@@ -1,35 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="BaseGun">
+<!--Endosap differences are applied to their dormant form.
+At their matured form, they are given their maturity increases-->
+
+	<ThingDef ParentName="BaseEndosapTerraweapon">
 		<defName>TS_PrimaSMGEndosap</defName>
-		<label>prima thorncaster</label>
-		<description>A biotic SMG, infused with Endosap. Endosap is much more potent than the initial one, allowing the Thorncaster to create a more durable epidermis, and also use less sap to create projectiles.
+		<label>prima pincaster</label>
+		<description>A biotic SMG, infused with Endosap. The presence of the endosap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.
 The Endosap will persist into it's matured form, having the same effects and potency throughout it's entire lifetime, on top of what the matured form applies innately.
 \nSpecific Alterations:
-Health increased by 30%
-Total shots increased by 30%</description>
+Hitpoints increased by 50%
+Flammability decreased by 75%
+2.5 HP/Day (persists into matured form)</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Endosap/PrimaSMGBasic_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.9</drawSize>
+			<drawSize>0.75</drawSize>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>RangedLight</li>
-      <li>ShortShots</li>
+      <li>Ranged</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>195</MaxHitPoints> <!--65 bursts, 30% more-->
+      <MaxHitPoints>45</MaxHitPoints> <!--50% (+15) more hitpoints-->
 			<AccuracyTouch>0.85</AccuracyTouch>
 			<AccuracyShort>0.65</AccuracyShort>
 			<AccuracyMedium>0.25</AccuracyMedium>
 			<AccuracyLong>0.10</AccuracyLong>
-			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.2</Mass>
 			<Flammability>0.5</Flammability> <!--75% less flammability-->
@@ -39,17 +42,30 @@ Total shots increased by 30%</description>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
-      <li>
-        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+      <!--<li>
+        <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
-        <warmupTime>0.3</warmupTime>
+        <warmupTime>0.75</warmupTime>
         <range>16.9</range>
-        <burstShotCount>3</burstShotCount>
-        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
         <soundCast>Shot_MachinePistol</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
+      </li>-->
+
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
 		<tools>
@@ -72,39 +88,58 @@ Total shots increased by 30%</description>
 			</li>
 		</tools>
 		<tickerType>Normal</tickerType>
-		<comps>
+   <comps>
+    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+    	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    	<lifespanTicks>1260000</lifespanTicks> <!--21 days-->
+    	<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+    	<!--<expireEffect></expireEffect>-->
+			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Endosap Genome | Dormant
++20 health | -75% flammability | +2.5 hp/day (unequipped)</inspectString>
+      </li>
     </comps>
 		<modExtensions>
-			<li Class="HeavyWeapons.HeavyWeapon">
-				<weaponHitPointsDeductionOnShot>1</weaponHitPointsDeductionOnShot>
-				<isHeavy>false</isHeavy>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>2~6</shots>
 			</li>
 		</modExtensions>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseGun">
+	<ThingDef ParentName="BaseEndosapTerraweapon">
 		<defName>TS_PrimaShotgunEndosap</defName>
-		<label>prima pinburster</label>
-		<description>A biotic shotgun, infused with Endosap. Endosap is much more potent than the initial one, allowing the Pinburster to create a more durable epidermis, and also use less sap to create projectiles.
+		<label>prima spreadshot</label>
+		<description>A biotic shotgun, infused with Endosap. The presence of the endosap has enabled the spreadshot to create a more durable epidermis, alongside noticeably boosting it's lifespan.
 The Endosap will persist into it's matured form, having the same effects and potency throughout it's entire lifetime, on top of what the matured form applies innately.
 \nSpecific Alterations:
-Health increased by 30%
-Total shots increased by 30%</description>
+Health increased by 50% (rounded up)
+Lifespan increased by 50%
+Flammability decreased by 75%</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Endosap/PrimaShotgunBasic_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1</drawSize>
+			<drawSize>0.85</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>ShortShots</li>
+      <li>Ranged</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>195</MaxHitPoints> <!--65 shots total, 30% more-->
+      <MaxHitPoints>55</MaxHitPoints> <!--rounded up-->
 			<AccuracyTouch>0.80</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.70</AccuracyMedium>
@@ -120,10 +155,10 @@ Total shots increased by 30%</description>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
       <li>
-        <verbClass>HeavyWeapons.Verb_Shoot</verbClass>
+        <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
-        <warmupTime>0.5</warmupTime>
+        <warmupTime>1.125</warmupTime>
         <range>12.9</range>
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -149,12 +184,20 @@ Total shots increased by 30%</description>
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<modExtensions>
-			<li Class="HeavyWeapons.HeavyWeapon">
-				<weaponHitPointsDeductionOnShot>3</weaponHitPointsDeductionOnShot>
-				<isHeavy>false</isHeavy>
-			</li>
-		</modExtensions>
+		<tickerType>Normal</tickerType>
+   <comps>
+    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+    	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    	<lifespanTicks>1440000</lifespanTicks> <!--24 days-->
+    	<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+    	<!--<expireEffect></expireEffect>-->
+			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+    </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Endosap Genome | Dormant
++25 health | -75% flammability | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+    </comps>
 	</ThingDef>
 
 </Defs>

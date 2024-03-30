@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignationCategoryDef>
+    <defName>TerratechDesignation</defName>
+    <label>Terratech</label>
+    <order>429</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_PlantsHarvestWood</li>
+      <li>Designator_PlantsCut</li>
+      <li>Designator_PlantsHarvest</li>
+    </specialDesignatorClasses>
+    <researchPrerequisites>
+      <li>TS_TerraseedEssentials</li>
+    </researchPrerequisites>
+  </DesignationCategoryDef>
+
+</Defs>
