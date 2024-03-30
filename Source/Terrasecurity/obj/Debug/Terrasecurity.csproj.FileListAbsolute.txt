@@ -1,9 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Source\Terrasecurity\obj\Debug\Terrasecurity.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Source\Terrasecurity\obj\Debug\Terrasecurity.GeneratedMSBuildEditorConfig.editorconfig
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Source\Terrasecurity\obj\Debug\Terrasecurity.AssemblyInfoInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Source\Terrasecurity\obj\Debug\Terrasecurity.AssemblyInfo.cs
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Source\Terrasecurity\obj\Debug\Terrasecurity.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Source\Terrasecurity\obj\Debug\Terrasecurity.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Source\Terrasecurity\obj\Debug\Terrasecurity.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Assemblies\Terrasecurity.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Terrasecurity\Assemblies\Terrasecurity.pdb

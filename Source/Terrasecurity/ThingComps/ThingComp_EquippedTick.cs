@@ -14,9 +14,9 @@ namespace Terrasecurity
 
         abstract public void EquippedTick();
 
-        public override void PostSpawnSetup(bool respawningAfterLoad)
+        public override void Initialize(CompProperties props)
         {
-            base.PostSpawnSetup(respawningAfterLoad);
+            base.Initialize(props);
             Current.Game.GetComponent<GameComponent_EquippedThingTicker>().AddTickingComp(this);
         }
 
