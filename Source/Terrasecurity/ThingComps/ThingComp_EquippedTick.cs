@@ -14,26 +14,26 @@ namespace Terrasecurity
 
         abstract public void EquippedTick();
 
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            Current.Game.GetComponent<GameComponent_EquippedThingTicker>().AddTickingComp(this);
+        }
+
         public override void Notify_Equipped(Pawn pawn)
         {
             base.Notify_Equipped(pawn);
             wieldingPawn = pawn;
-            Map map = pawn.Map;
-            if(map != null)
-            {
-                map.GetComponent<MapComponent_EquippedThingTicker>().AddTickingComp(this);
-            }
+
+            Current.Game.GetComponent<GameComponent_EquippedThingTicker>().AddTickingComp(this);
         }
 
         public override void Notify_Unequipped(Pawn pawn)
         {
             base.Notify_Unequipped(pawn);
             wieldingPawn = null;
-            Map map = pawn.Map;
-            if (map != null)
-            {
-                map.GetComponent<MapComponent_EquippedThingTicker>().RemoveTickingComp(this);
-            }
+
+            Current.Game.GetComponent<GameComponent_EquippedThingTicker>().RemoveTickingComp(this);
         }
 
         public override void PostExposeData()

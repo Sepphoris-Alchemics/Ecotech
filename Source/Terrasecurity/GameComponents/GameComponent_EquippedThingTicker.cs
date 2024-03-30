@@ -8,15 +8,17 @@ using Verse;
 
 namespace Terrasecurity
 {
-    public class MapComponent_EquippedThingTicker : MapComponent
+    public class GameComponent_EquippedThingTicker : GameComponent
     {
         List<ThingComp_EquippedTick> currentlyTrackedComps = new List<ThingComp_EquippedTick>();
-        List<ThingWithComps> scribedThings = new List<ThingWithComps>();
-
-        public MapComponent_EquippedThingTicker(Map map) : base(map) { }
+        public GameComponent_EquippedThingTicker() { }
 
         public void AddTickingComp(ThingComp_EquippedTick thingComp)
         {
+            if (currentlyTrackedComps.Contains(thingComp))
+            {
+                return;
+            }
             currentlyTrackedComps.Add(thingComp);
         }
 
@@ -25,9 +27,9 @@ namespace Terrasecurity
             currentlyTrackedComps.Remove(thingComp);
         }
 
-        public override void MapComponentTick()
+        public override void GameComponentTick()
         {
-            base.MapComponentTick();
+            base.GameComponentTick();
 
             // reverse for loop iteration to prevent CollectionModifiedException
             for (int i = currentlyTrackedComps.Count - 1; i >= 0; i--)
@@ -37,7 +39,7 @@ namespace Terrasecurity
                 {
                     thingComp.EquippedTick();
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Log.Error($"Exception ticking {thingComp.GetType().Name} for {thingComp.parent}: {e.Message}");
                 }
@@ -46,28 +48,30 @@ namespace Terrasecurity
 
         /// <summary>
         /// ThingComps cannot be scribed, so the parent ThingWithComps is retrieved instead and scribed. Upon loading the parents comps are iterated and all valid comps restored.
+        /// 
+        /// Update: No longer using the scribing attempt as thing comps subscribe themselves on spawning now. Persistence is no longer needed.
         /// </summary>
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            if(Scribe.mode == LoadSaveMode.Saving)
-            {
-                scribedThings = currentlyTrackedComps
-                    .Select(c => c.parent)
-                    .Distinct()
-                    .ToList();
-            }
+        //public override void ExposeData()
+        //{
+        //    base.ExposeData();
+        //    if (Scribe.mode == LoadSaveMode.Saving)
+        //    {
+        //        scribedThings = currentlyTrackedComps
+        //            .Select(c => c.parent)
+        //            .Distinct()
+        //            .ToList();
+        //    }
 
-            Scribe_Collections.Look(ref scribedThings, nameof(scribedThings), LookMode.Reference);
+        //    Scribe_Collections.Look(ref scribedThings, nameof(scribedThings), LookMode.Reference);
 
-            if(Scribe.mode == LoadSaveMode.PostLoadInit)
-            {
-                currentlyTrackedComps = scribedThings
-                    .SelectMany(t => t.AllComps)
-                    .Where(t => t is ThingComp_EquippedTick)
-                    .Cast<ThingComp_EquippedTick>()
-                    .ToList();
-            }
-        }
+        //    if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        //    {
+        //        currentlyTrackedComps = scribedThings
+        //            .SelectMany(t => t.AllComps)
+        //            .Where(t => t is ThingComp_EquippedTick)
+        //            .Cast<ThingComp_EquippedTick>()
+        //            .ToList();
+        //    }
+        //}
     }
 }
