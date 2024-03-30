@@ -2,4 +2,7 @@
 <LanguageData>
   <Terrasecurity_Gizmo_LifespanTicksRemaining>Weapon lifetime:</Terrasecurity_Gizmo_LifespanTicksRemaining>
   <Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>The {ITEMNAME} is a living organism. And like all living organisms, it's time is limited. Once this runs out, it will wither away.</Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>
+
+  <Terrasecurity_Gizmo_MultiLifespanTicksRemaining>Lifespan equipment</Terrasecurity_Gizmo_MultiLifespanTicksRemaining>
+  <Terrasecurity_Gizmo_MultiLifespanTicksRemaining_Desc>Open a detailed view for the currently lifespan equipment for the selected pawns.</Terrasecurity_Gizmo_MultiLifespanTicksRemaining_Desc>
 </LanguageData>

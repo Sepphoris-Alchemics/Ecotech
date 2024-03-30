@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 
 namespace Terrasecurity
@@ -66,13 +67,6 @@ namespace Terrasecurity
             parent.Destroy(DestroyMode.KillFinalize);
         }
 
-        //public override string CompInspectStringExtra()
-        //{
-        //    string text = base.CompInspectStringExtra();
-        //    text += "Terrasecurity_Gizmo_LifespanTicksRemaining".Translate(TicksRemainingReadable);
-        //    return text;
-        //}
-
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             foreach (Gizmo gizmo in base.CompGetGizmosExtra())
@@ -93,6 +87,22 @@ namespace Terrasecurity
                 }
                 return _timeSpanReadoutGizmo;
             }
+        }
+
+        public void DrawLifespanBar(Rect rect)
+        {
+            Widgets.FillableBar(rect, LifespanRemainingRatio, Props.LifespanBarTexture);
+
+            TextAnchor previousAnchor = Text.Anchor;
+            GameFont previousFont = Text.Font;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Text.Font = GameFont.Small;
+
+            Rect barLabelRect = rect.ContractedBy(Gizmo_LifespanReadout.Padding);
+            Widgets.Label(barLabelRect, TicksRemainingReadable);
+
+            Text.Anchor = previousAnchor;
+            Text.Font = previousFont;
         }
 
         public override void PostExposeData()

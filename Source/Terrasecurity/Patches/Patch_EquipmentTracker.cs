@@ -14,9 +14,14 @@ namespace Terrasecurity
         [HarmonyPostfix]
         public static IEnumerable<Gizmo> AddLifespanGizmos(IEnumerable<Gizmo> __result, Pawn_EquipmentTracker __instance)
         {
-            foreach(Gizmo gizmo in __result)
+            foreach (Gizmo gizmo in __result)
             {
                 yield return gizmo;
+            }
+            // if multiple pawns are selected, do not draw the gizmos for each pawn
+            if (Find.Selector.SingleSelectedThing != __instance.pawn)
+            {
+                yield break;
             }
             foreach (ThingWithComps equipment in __instance.AllEquipmentListForReading)
             {

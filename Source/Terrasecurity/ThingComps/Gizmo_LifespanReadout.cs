@@ -13,7 +13,7 @@ namespace Terrasecurity
     public class Gizmo_LifespanReadout : Gizmo
     {
         const float width = 140f;
-        const float padding = 4f;
+        public const float Padding = 4f;
 
         ThingComp_EquippedLifespan thingComp;
 
@@ -32,7 +32,7 @@ namespace Terrasecurity
             Rect fullGizmoRect = new Rect(topLeft, new Vector2(width, Gizmo.Height));
             Widgets.DrawWindowBackground(fullGizmoRect);
             TooltipHandler.TipRegion(fullGizmoRect, "Terrasecurity_Gizmo_LifespanTicksRemaining_Desc".Translate(itemName));
-            fullGizmoRect = fullGizmoRect.ContractedBy(padding);
+            fullGizmoRect = fullGizmoRect.ContractedBy(Padding);
 
             TextAnchor previousAnchor = Text.Anchor;
             GameFont previousFont = Text.Font;
@@ -42,14 +42,11 @@ namespace Terrasecurity
             Rect titleLabelRect = fullGizmoRect.TopPartPixels(fullGizmoRect.height * (1 - barHeightRatio));
             Widgets.Label(titleLabelRect, "Terrasecurity_Gizmo_LifespanTicksRemaining".Translate(itemName));
 
-            Rect barRect = fullGizmoRect.BottomPartPixels(fullGizmoRect.height * barHeightRatio);
-            Widgets.FillableBar(barRect, thingComp.LifespanRemainingRatio, thingComp.Props.LifespanBarTexture);
-
-            Rect barLabelRect = barRect.ContractedBy(padding);
-            Widgets.Label(barLabelRect, thingComp.TicksRemainingReadable);
-
             Text.Anchor = previousAnchor;
             Text.Font = previousFont;
+
+            Rect barRect = fullGizmoRect.BottomPartPixels(fullGizmoRect.height * barHeightRatio);
+            thingComp.DrawLifespanBar(barRect);
 
             return new GizmoResult(GizmoState.Clear);
         }
