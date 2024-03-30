@@ -11,7 +11,8 @@ namespace Terrasecurity
     public class GameComponent_EquippedThingTicker : GameComponent
     {
         List<ThingComp_EquippedTick> currentlyTrackedComps = new List<ThingComp_EquippedTick>();
-        public GameComponent_EquippedThingTicker() { }
+
+        public GameComponent_EquippedThingTicker(Game game) { }
 
         public void AddTickingComp(ThingComp_EquippedTick thingComp)
         {

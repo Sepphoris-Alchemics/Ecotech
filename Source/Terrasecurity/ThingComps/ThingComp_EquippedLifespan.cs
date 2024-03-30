@@ -48,17 +48,20 @@ namespace Terrasecurity
 
         private void Expire()
         {
-            if (Props.expireEffect != null)
+            if(parent.MapHeld != null)
             {
-                Props.expireEffect.Spawn(parent.Position, parent.Map, 1f).Cleanup();
-            }
-            if (Props.replacementToSpawn != null)
-            {
-                GenSpawn.Spawn(Props.replacementToSpawn, parent.PositionHeld, parent.MapHeld, WipeMode.Vanish);
-            }
-            if (wieldingPawn != null)
-            {
-                wieldingPawn.jobs.StopAll();
+                if (Props.expireEffect != null)
+                {
+                    Props.expireEffect.Spawn(parent.Position, parent.MapHeld, 1f).Cleanup();
+                }
+                if (Props.replacementToSpawn != null)
+                {
+                    GenSpawn.Spawn(Props.replacementToSpawn, parent.PositionHeld, parent.MapHeld, WipeMode.Vanish);
+                }
+                if (wieldingPawn != null)
+                {
+                    wieldingPawn.jobs.StopAll();
+                }
             }
             parent.Destroy(DestroyMode.KillFinalize);
         }
