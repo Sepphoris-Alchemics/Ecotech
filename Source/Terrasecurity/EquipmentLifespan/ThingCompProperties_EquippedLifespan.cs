@@ -12,6 +12,7 @@ namespace Terrasecurity
     public class ThingCompProperties_EquippedLifespan : CompProperties
     {
         public int lifespanTicks = 100;
+        public int showExpirationAlertOnRemainingTicks = -1;
         public EffecterDef expireEffect;
         public ThingDef replacementToSpawn;
         Color lifespanBarColor = Color.blue;
