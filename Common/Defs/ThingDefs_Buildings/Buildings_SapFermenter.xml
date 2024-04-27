@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" ParentName="BuildingBase" Name="TS_SapFermentingBarrel_Base">
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>42</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2710</uiOrder>
+    <constructEffect>ConstructWood</constructEffect>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_SapFermentingBarrel_Base">
+    <defName>TS_SapFermentingBarrel_Basic</defName>
+    <label>basic sap fermenting barrel</label>
+    <description>Your text here.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_ThingConverter">
+        <compClass>Terrasecurity.ThingComp_ThingConverter</compClass>
+        <!-- when a pawn carries items to the converter / takes them out, this is how long they stand in front of the building-->
+        <timeToFillTicks>200</timeToFillTicks>
+        <timeToEmptyTicks>200</timeToEmptyTicks>
+        <drawFillableBar>true</drawFillableBar>
+        <!-- x, y, z offset for the bar. centered by default -->
+        <fillableBarDrawOffset>(0, 0.00001, 0)</fillableBarDrawOffset>
+        <fillableBarSize>(0.55, 0.1)</fillableBarSize>
+        <fillableBarBackgroundColor>(21, 25, 29)</fillableBarBackgroundColor>
+        <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
+        <inputThings>
+            <!-- needs exactly one entry -->
+            <WoodLog>1</WoodLog>
+        </inputThings>
+        <conversionDurationTicks>1000</conversionDurationTicks>
+        <!-- after 1000 ticks, randomly produce either 3-5 wood (66.66% chance) or 1 steel (33.33% chance)-->
+        <potentialResults>
+          <li>
+            <weight>2</weight>
+            <things>
+                <!-- can have any number of entries -->
+                <WoodLog>3~5</WoodLog>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+                <Steel>1</Steel>
+            </things>
+          </li>
+        </potentialResults>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <!--<li>Brewing</li>-->
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

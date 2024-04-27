@@ -21,7 +21,7 @@ namespace Terrasecurity
         {
             get
             {
-                if(_lifespanBarTexture == null)
+                if (_lifespanBarTexture == null)
                 {
                     _lifespanBarTexture = SolidColorMaterials.NewSolidColorTexture(lifespanBarColor);
                 }

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkGiverDef>
+    <defName>TS_FillThingConverter</defName>
+    <label>fill thing converter</label>
+    <giverClass>Terrasecurity.WorkGiver_FillThingConverter</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>TS_EmptyThingConverter</defName>
+    <label>empty thing converter</label>
+    <giverClass>Terrasecurity.WorkGiver_EmptyThingConverter</giverClass>
+    <workType>Hauling</workType>
+    <verb>empty</verb>
+    <gerund>emptying</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+</Defs>
