@@ -32,8 +32,10 @@ namespace Terrasecurity
         private void Transform()
         {
             Map map = parent.Map;
+            Faction faction = parent.Faction;
             parent.Destroy(DestroyMode.WillReplace);
             Thing thingToSpawn = Props.MakeThing();
+            thingToSpawn.SetFaction(faction);
             GenSpawn.Spawn(thingToSpawn, parent.Position, map, WipeMode.FullRefund);
         }
     }
