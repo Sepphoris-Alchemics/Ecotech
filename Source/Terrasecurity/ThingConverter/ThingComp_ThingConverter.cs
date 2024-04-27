@@ -15,8 +15,19 @@ namespace Terrasecurity
 {
     public class ThingComp_ThingConverter : ThingComp
     {
-        int currentConversionTicks = 0;
-        int RemainingConversionTicks => Props.conversionDurationTicks - currentConversionTicks;
+        int converstionStartTick = 0;
+        int PassedConversionTicks => GenTicks.TicksGame - converstionStartTick;
+        int RemainingConversionTicks
+        {
+            get
+            {
+                if (!isCurrentlyConverting)
+                {
+                    return 0;
+                }
+                return Props.conversionDurationTicks - PassedConversionTicks;
+            }
+        }// => Props.conversionDurationTicks - converstionStartTick;
         float ConversionProgress => 1 - ((float)RemainingConversionTicks / Props.conversionDurationTicks);
         int inputCount = 0;
         int InputCountRequiredToStart => Props.InputThing.count - inputCount;
@@ -138,8 +149,7 @@ namespace Terrasecurity
             {
                 return;
             }
-            currentConversionTicks += GenTicks.TickRareInterval;
-            if (currentConversionTicks > Props.conversionDurationTicks)
+            if (GenTicks.TicksGame > converstionStartTick + Props.conversionDurationTicks)
             {
                 FinishConversion();
             }
@@ -156,6 +166,7 @@ namespace Terrasecurity
                 return "NotContainingRequiredThings";
             }
             isCurrentlyConverting = true;
+            converstionStartTick = GenTicks.TicksGame;
             return true;
         }
 
@@ -206,7 +217,6 @@ namespace Terrasecurity
 
         private void FinishConversion()
         {
-            currentConversionTicks = 0;
             isCurrentlyConverting = false;
             inputCount = 0;
             outputContents = Props.ProduceRandomItems();
@@ -298,6 +308,10 @@ namespace Terrasecurity
 
         private void DrawFillableBar()
         {
+            if (!isCurrentlyConverting)
+            {
+                return;
+            }
             Vector3 drawPos = parent.DrawPos;
             drawPos += Props.fillableBarDrawOffset;
             GenDraw.DrawFillableBar(new GenDraw.FillableBarRequest
@@ -315,7 +329,7 @@ namespace Terrasecurity
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look(ref currentConversionTicks, nameof(currentConversionTicks));
+            Scribe_Values.Look(ref converstionStartTick, nameof(converstionStartTick));
             Scribe_Values.Look(ref inputCount, nameof(inputCount));
             Scribe_Collections.Look(ref outputContents, nameof(outputContents), LookMode.Deep);
             Scribe_Values.Look(ref isCurrentlyConverting, nameof(isCurrentlyConverting));
