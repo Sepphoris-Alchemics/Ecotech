@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- plop this in a planting pot and let the plant grow. Spawns a chair and refunds the pot materials. -->
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>TS_ChairSeed</defName>
+    <label>chair seed</label>
+    <description>Lmao, why not</description>
+    <graphicData>
+      <texPath>Things/Plant/Rose</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>125</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <sowWork>750</sowWork>
+      <sowTags>
+        <li>Decorative</li>
+      </sowTags>
+      <growMinGlow>0.3</growMinGlow>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>0.1</growDays>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>DiningChair</transformedThing>
+        <transformedThingStuff>WoodLog</transformedThingStuff>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
