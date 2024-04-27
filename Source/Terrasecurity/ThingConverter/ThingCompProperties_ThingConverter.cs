@@ -35,16 +35,7 @@ namespace Terrasecurity
 
         public List<Thing> ProduceRandomItems()
         {
-            return potentialResults
-                .RandomElementByWeight(result => result.weight)
-                .things
-                .Select(thingDefCountRange =>
-                {
-                    Thing thing = ThingMaker.MakeThing(thingDefCountRange.thingDef);
-                    thing.stackCount = thingDefCountRange.countRange.RandomInRange;
-                    return thing;
-                })
-                .ToList();
+            return potentialResults.MakeRandomThings();
         }
 
         public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
@@ -73,11 +64,5 @@ namespace Terrasecurity
                 yield return $"Field \"{nameof(conversionDurationTicks)}\" must be larger than 0";
             }
         }
-    }
-
-    public class WeightedThingResult
-    {
-        public float weight;
-        public List<ThingDefCountRangeClass> things;
     }
 }
