@@ -45,6 +45,7 @@
       <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
         <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>50~100</cycleDurationRangeTicks>
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
             <weight>2</weight>

@@ -51,6 +51,11 @@ namespace Terrasecurity
             {
                 GenPlace.TryPlaceThing(thing, parent.Position, parent.Map, ThingPlaceMode.Near);
             }
+            if (Props.showNotificationWhenSpawningThings)
+            {
+                string messageText = "Terrasecurity_Message_SpawnedThingFromThingSpawner".Translate(parent.Label.Named("SOURCE"));
+                Messages.Message(messageText, things, MessageTypeDefOf.NeutralEvent);
+            }
         }
 
         public override void PostExposeData()

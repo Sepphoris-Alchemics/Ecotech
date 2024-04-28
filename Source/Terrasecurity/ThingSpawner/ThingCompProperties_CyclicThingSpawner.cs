@@ -12,6 +12,7 @@ namespace Terrasecurity
     {
         public IntRange cycleDurationRangeTicks = new IntRange(250, 500);
         List<WeightedThingResult> potentialSpawnedThings;
+        public bool showNotificationWhenSpawningThings = false;
 
         public List<Thing> ProduceRandomItems()
         {
