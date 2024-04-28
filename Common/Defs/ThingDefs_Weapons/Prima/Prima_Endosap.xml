@@ -7,12 +7,7 @@ At their matured form, they are given their maturity increases-->
 	<ThingDef ParentName="BaseEndosapTerraweapon">
 		<defName>TS_PrimaSMGEndosap</defName>
 		<label>prima pincaster</label>
-		<description>A biotic SMG, infused with Endosap. The presence of the endosap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.
-The Endosap will persist into it's matured form, having the same effects and potency throughout it's entire lifetime, on top of what the matured form applies innately.
-\nSpecific Alterations:
-Hitpoints increased by 50%
-Flammability decreased by 75%
-2.5 HP/Day (persists into matured form)</description>
+		<description>A biotic SMG, infused with Endosap. The presence of the endosap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Endosap/PrimaSMGBasic_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -119,12 +114,7 @@ Flammability decreased by 75%
 	<ThingDef ParentName="BaseEndosapTerraweapon">
 		<defName>TS_PrimaShotgunEndosap</defName>
 		<label>prima spreadshot</label>
-		<description>A biotic shotgun, infused with Endosap. The presence of the endosap has enabled the spreadshot to create a more durable epidermis, alongside noticeably boosting it's lifespan.
-The Endosap will persist into it's matured form, having the same effects and potency throughout it's entire lifetime, on top of what the matured form applies innately.
-\nSpecific Alterations:
-Health increased by 50% (rounded up)
-Lifespan increased by 50%
-Flammability decreased by 75%</description>
+		<description>A biotic shotgun, infused with Endosap. The presence of the endosap has enabled the spreadshot to create a more durable epidermis, alongside noticeably boosting it's lifespan.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Endosap/PrimaShotgunBasic_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

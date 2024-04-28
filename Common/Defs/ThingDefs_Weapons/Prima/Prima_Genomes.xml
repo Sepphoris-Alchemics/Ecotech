@@ -10,15 +10,18 @@
 		-Sleepsap: 50% longer lifespan, but severly impacts damage and speed stats. Shooting the weapon with this sap will damage it, and the sap will need to be replaced. (pink)
 		-Endosap: 50% higher item health and 75% lower flammability (green) - Uncommon
 		-Hypersap: more shots and faster projectile speed (red) - Uncommon
+		-Chronosap: 75% shorter lifespan, 75% higher health regen, and 25% faster weapon cooldown. Designed to get weapons to it's next stage faster. - Uncommon
 
 		-Deepsap: Can be planted on any growable terrain to quickly regrow the weapon (90% grow time decrease) (light blue) - Rare
 			-This includes mature weapons. After being planted, the sap will default to normal sap.
 		-Hemsap/Toxsap: projectiles inflict slight poison (light purple) - Rare
-		-Sunsap: 50% longer lifespan and 15 HP/day persistent health regen (golden) - Rare
+		-Sunsap: 50% longer lifespan and 15 HP/day persistent health regen (golden). - Rare
+			-Also the only sap that can act as a fuel source for specific defs, i.e. turrets.
 		-Surgesap: weapon unlocks a new, powerful fire mode that can be used sparingly. Second fire mode varies on the weapon, generally dependent on the weapon's main fire method. - Rare
 
 		-Archsap: weapon will never expire (royal purple). - Ultra Rare
 			-Weapon can still be destroyed by having 0 hitpoints.
+			-Also the only sap that can be used on seeds, and give an unlimited lifespan to certain defs, i.e. turrets.
 		-Symbiosap: weapon binds to user. The user links to the wepaon and has highly increased accuracy and aiming times, but once the weapon expires, the user suffers withdrawal. Must be acquired from special mushrooms. - Ultra Rare
 		-Cyclesap: weapon lasts 30 days from when it spawns. After these 30 days, the weapon will need to be regrown over another 30 days, and then ready to be used once more. - Ultra Rare
 

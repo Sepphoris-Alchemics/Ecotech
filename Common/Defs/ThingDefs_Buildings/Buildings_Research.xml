@@ -4,7 +4,7 @@
     <defName>TS_BasicResearchBench</defName>
     <label>Terraseed Research Bench</label>
     <description>A research bench designed to develop and awaken the secrets of Terraseeds. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terraseed biotechnology. All research pertaining to them can only be done here.
-\n\nContains compartments for highly fertile soil, flasks for water and nutrients, and a trough that can be used for any purpose that may pop up.</description>
+\n\nContains compartments for highly fertile soil, flasks for water and nutrients, and a trough that can be used for relatively simple Terratech procudures.</description>
     <thingClass>Building_ResearchBench</thingClass>
     <minifiedDef>MinifiedThing</minifiedDef>
     <size>(3,1)</size>
@@ -49,7 +49,7 @@
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
-          <li>TS_PrimaVatGlowsap</li>
+          <li>TS_TerravatGlowsap</li>
           <li>TS_GlowsapBasinResearch</li>
           <!--<li>TS_DarksapBasinResearch</li>-->
         </linkableFacilities>
@@ -74,7 +74,7 @@
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>TS_GlowsapBasinResearch</defName>
-		<label>Glowsap Research Basin</label>
+		<label>Glowsap Testing Basin</label>
 		<description>A small tub filled with glowsap. Required to properly experiment on early-tier Terraplants. It's small size makes it unusable as a basin for growing fully matured and healthy Terraplants.
 \n\nAt least one of these basins is required for developing most Terraplants.</description>
 		<minifiedDef>MinifiedThing</minifiedDef>

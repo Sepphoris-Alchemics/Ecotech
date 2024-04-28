@@ -63,8 +63,8 @@ Tier 4 surge seeds: 20
 
   <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
     <defName>TS_PrimaSMGUpgradePod</defName>
-    <label>Pineshredder Pod</label>
-    <description>A fortified Terrapod that is further advancing a Prima Pincaster. Will produce a single, revitalized Pineshredder when finished.
+    <label>Briarcaster Pod</label>
+    <description>A fortified Terrapod that is further advancing a Prima Pincaster. Will produce a single, revitalized Briarcaster when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <plant>
       <growDays>1</growDays> 
@@ -88,8 +88,8 @@ Tier 4 surge seeds: 20
 
   <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Shotgun Upgrade-->
     <defName>TS_PrimaShotgunUpgradePod</defName>
-    <label>Pineburster Pod</label>
-    <description>A fortified Terrapod that is further advancing a Prima Spreadshot. Will produce a single, revitalized Pineburster when finished.
+    <label>Briarshredder Pod</label>
+    <description>A fortified Terrapod that is further advancing a Prima Spreadshot. Will produce a single, revitalized Briarshredder when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <plant>
       <growDays>1</growDays> 

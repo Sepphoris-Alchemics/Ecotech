@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Seed_PrimaSMGTurret</defName>
+    <label>Thistle Turret Seed</label>
+    <description>A special seed acquired from rapid-firing Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into the quick-firing Thistle Turret.
+Proper knowledge on the seed is required to plant it safely and effectively.
+\n\nThe seed will wither away if not planted soon after acquisition.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/ImmatureSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>250</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks> <!--1.5x longer than surge seeds-->
+      </li>
+    </comps>
+    <allowedArchonexusCount>8</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Seed_PrimaShotgunTurret</defName>
+    <label>Scatter Turret Seed</label>
+    <description>A special seed acquired from area-focused or short-burst Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into the shotgun-like Scatter Turret.
+Proper knowledge on the seed is required to plant it safely and effectively.
+\n\nThe seed will wither away if not planted soon after acquisition.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/ImmatureSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>250</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks> <!--1.5x longer than surge seeds-->
+      </li>
+    </comps>
+    <allowedArchonexusCount>8</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Seed_PrimaStakeTurret</defName>
+    <label>Spear Turret Seed</label>
+    <description>A special seed acquired from Prima weapons that only fire up to a few projectiles at a time. Once planted, the seed will immediately burst into vines and wood, taking root and forming into a Prima Spear Turret.
+Proper knowledge on the seed is required to plant it safely and effectively.
+\n\nThe seed will wither away if not planted soon after acquisition.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/ImmatureSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>250</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks> <!--1.5x longer than surge seeds-->
+      </li>
+    </comps>
+    <allowedArchonexusCount>8</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Seed_PrimaApexTurret</defName>
+    <label>Prima Apex Seed</label>
+    <description>A special seed acquired from Apex (fully matured) Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into a Prima Turret.
+This seed once could be awakened by hand, and at will; however, that knowledge is either secretive, or lost to time. Yoiu will need to awaken it at a Terravat.
+\n\nUnlike other seeds, this seed remains in a dormant, hypergenerative state, and will not expire over time.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/ApexSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>550</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

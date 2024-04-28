@@ -34,7 +34,7 @@
     Burster = Shotgun
     Cannon = grenade launcher
 
-  ***WEAPON SEED TYPES***
+  ***WEAPON SEED TYPES (OUTDATED)***
     1: Prima Seeds: Learn how to make the basic weapons of terraweapons, which cover all weapons up to Pre-Microelectronics. Prima Weapons stike a balance between damage and durability, but cannot regenerate health. These are currently in the game.
     2: Verdant Seeds: Learn how to make verdant weapons, which cover all weapons up to Multi-Analyzer. Verdant Weapons have the highest durability, lower damage, but regenerate health over time when in direct sunlight.
     3: Royal/Anima Seeds: Learn how to make the most powerful weapons, which specifically cover weapons that are Spacer+. Royal weapons have extreme damage and the highest range, but the lowest durability. Their health can be regenerated within special buildings.
@@ -218,6 +218,7 @@
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>TS_GlowsapBasinResearch</li>
+      <li>TS_TerravatGlowsap</li>
     </requiredResearchFacilities>
   <researchViewX>5.00</researchViewX>
   <researchViewY>0.00</researchViewY>
@@ -225,8 +226,9 @@
 
   <ResearchProjectDef>
     <defName>TS_PrimaTurretSeeds</defName>
-    <label>Prima Turret Seeds</label>
-    <description>Learn how to grow specialized seeds which will instantly sprout into biotic plant patterns akin to small turrets. The nature of turrets requires them to be placed in soil that can grow plants.</description>
+    <label>Prima Sentry Seeds</label>
+    <description>Learn how to properly grow and plant specialized seeds which will instantly sprout into biotic plant patterns akin to small turrets. The nature of these plants - labelled as "Sentries" - requires them to be placed in soil that can grow plants.
+Instead of using electricity or requiring fuel, these sentries have a limited lifepspan, which drains over time and whenever they generate projectiles. The seeds these sentries come from are acquired directly from Prima Terraweapons.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
@@ -238,7 +240,8 @@
     </hiddenPrerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
-      <li>TS_PrimaVatGlowsap</li>
+      <li>TS_GlowsapBasinResearch</li>
+      <li>TS_TerravatGlowsap</li>
     </requiredResearchFacilities>
   <researchViewX>5.00</researchViewX>
   <researchViewY>1.00</researchViewY>
@@ -286,13 +289,13 @@
     </prerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>3.00</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewY>1.75</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>TS_Terravats</defName>
     <label>Terravats</label>
-    <description>Learn how to construct Terravats, special vats that are used for live research and experimentation on various possible creations. Terravats are required to delve deeper into the potential Terraweapons can posess, as further progression often requires experimentation on not only the base plant, but also the final products.</description>
+    <description>Learn how to grow Terravats, which are crucial for delving deeper into Terratech as a whole. These ancient vats enable you to experiment, create, and modify Terratech creations of all types, including creations that are beyond the capabilities of the very planet.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
@@ -301,7 +304,7 @@
     </prerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>3.00</researchViewX>
-    <researchViewY>1.75</researchViewY>
+    <researchViewY>1</researchViewY>
   </ResearchProjectDef>
 
   <!--<ResearchProjectDef>

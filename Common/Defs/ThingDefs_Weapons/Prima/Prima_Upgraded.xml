@@ -27,7 +27,7 @@
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>TS_ShotgunUpgraded</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
-		<label>prima pineburster</label>
+		<label>prima briarburster</label>
 		<description>The matured form of the Prima Spreadshot. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/PrimaShotgunUpgraded</texPath>
@@ -97,7 +97,7 @@
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>
@@ -190,7 +190,7 @@
           <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 		<modExtensions>
@@ -285,7 +285,7 @@
           <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>

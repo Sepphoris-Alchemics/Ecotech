@@ -17,4 +17,27 @@
     </researchPrerequisites>
   </DesignationCategoryDef>
 
+  <ThingCategoryDef>
+    <defName>TS_PrimaWeaponsMature</defName>
+    <label>prima weapons - matured</label>
+    <parent>Root</parent>
+  </ThingCategoryDef>
+
+   <WorkGiverDef>
+    <defName>TS_ExtractPrimaTurretSeed</defName>
+    <label>extract prima turret seed</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TS_TerravatGlowsap</li>
+    </fixedBillGiverDefs>
+    <verb>extract seed at</verb>
+    <gerund>extracting seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
 </Defs>

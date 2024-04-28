@@ -33,6 +33,9 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<fillPercent>0.30</fillPercent>
 		<canOverlapZones>false</canOverlapZones>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
 		<statBases>
 			<WorkToBuild>800</WorkToBuild>
 			<MaxHitPoints>80</MaxHitPoints>

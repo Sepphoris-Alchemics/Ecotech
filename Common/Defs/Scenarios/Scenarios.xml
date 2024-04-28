@@ -56,8 +56,8 @@
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_SurgeSeed_PrimaTurret</thingDef>
-				<count>2</count>
+				<thingDef>TS_Seed_PrimaApexTurret</thingDef>
+				<count>3</count>
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>ScatterThingsAnywhere</def>

@@ -16,13 +16,13 @@
   <ThingDef ParentName="PlantBaseNonEdible">
     <defName>TS_OverviewPrimaWeapons</defName>
     <label>Overview: Prima Family</label>
-		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Terratech will learn to grow. They are the easiest to bioengineer, the fastest to research, and have the shortest growth range.
-\nCertain Terraweapons were of particular interest to Terratech Ancients, and have a final "Apex" stage that can be influenced. This final growth stage reveals new capabilities of a Terraweapon.
-\nFor Prima Weapons, the main trait is the evolution of the projectile, which will burst into briar tangles upon impact. This enables each projectile to wrap and stick around live targets, and repeated projectiles will further increase this ensnarement.
+		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Terratech will learn to grow. They are the easiest to bioengineer, the fastest to research, and are (relatively) quickly grown.
+\nPrima Terratech was the first gift from the Primordials, and could both provide both offense and defense... but it soon paled in comparison to every-pacing technology. Eventually, new Terratech would be granted.
+\nAfter growing to their mature form, the projectile of the weapon is capable of inflicting thick briar tangles upon impact. This enables each projectile to wrap and stick around live targets, and repeated projectiles will further increase this ensnarement.
 This also develops the weapon's protective traits, causing more wood to form, external fluid growths to be used, and hardened epidermis plates to form in their location. These changes improve the overall weapon health.
 \nGeneral Prima family guidelines:
 -Effective Alternative Range: Machining-Blowback Operation
--Dormant Trait: Burst weapons will have varied projectile counts
+-Genetic Trait: Burst weapons will have varied projectile counts
 -Growth Method: Terrapod
 -Minimum Soil Fertility: 90%
 -Minimum Growth Duration: 4 days
@@ -30,13 +30,16 @@ This also develops the weapon's protective traits, causing more wood to form, ex
 -Maximum Lifespan (Dormant): 14 days
 -Maximum Hitpoints (Dormant): 50
 \n-How to mature: Click on the weapon while it's on the ground, and use the "plant" option.
--Apex Trait: Projectiles grow into briars upon impact
--Apex Trait: Burst weapons will have little-to-no varied projectile counts
--Apex Trait: +20 health
--Apex Trait: Lower Flammability
--Apex Growth Duration: 10 days + 50% of initial growth time
--Maximum Lifespan (Apex): 18 days
--Maximum Hitpoints (Apex): 70
+-Matured Trait: Projectiles grow into briars upon impact
+-Matured Trait: Burst weapons will have little-to-no varied projectile counts
+-Matured Trait: +20 health
+-Matured Trait: Lower Flammability
+-Matured Growth Duration: 10 days + 50% of initial growth time
+-Maximum Lifespan (Matured): 18 days
+-Maximum Hitpoints (Matured): 70
+\nHow to access "Apex" Stage:
+-Extract seed from any Prima weapon at a Terravat.
+-Wait until a seed is produced at the end of a matured weapon's lifetime, which provides the strongest and most vertisile seed.
 \nGuideline notes:
 -Effective Alternative Range: any weapon that requires these research options are weapons that Prima weapons were designed to compete with.
 -Growth does not account for external factors, i.e. soil fertility and daylight.

@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="BuildingBase">
-    <defName>TS_PrimaVatGlowsap</defName>
-    <label>Prima Vat</label>
-    <description>A vat filled with glowsap, designed to sustain and present a live sample for easy study and testing. This particular vat contains a Prima Terraweapon subject, and allows further experimentation and research into Prima products.
-\n\nThe interior glowsap will eventually be fully absorbed, requiring it to be replenished. However, this process takes a long while.</description>
+  <ThingDef ParentName="BenchBase">
+    <defName>TS_TerravatGlowsap</defName>
+    <label>Glowsap Terravat</label>
+    <description>An organic wooden growth that sustains an accessible glowsap chamber, designed for Terratech study, experimentation, and creations. This structure is critical for utilizing Terratech that the planet can't support, or what we do not yet understand.
+\n\nOver time some of it's capabilities may be able to be performed in other, more efficient manners. In these cases, the Terravat will simply stop supporting these redundant procedures.</description>
+    <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>80</costStuffCount>
     <costList>
+      <WoodLog>80</WoodLog>
       <TS_Glowsap>30</TS_Glowsap>
     </costList>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/Terravats/PrimaGlowsap</texPath>
+      <texPath>Things/Building/Terravats/VatGlowsap</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>(1.5,1.5)</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(2,2)</drawSize>
       <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
       <damageData>
         <rect>(0.3,0,2.7,1)</rect>
         <cornerTR>Damage/Corner</cornerTR>
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <uiIconScale>0.8</uiIconScale>
+    <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
       <li>TS_Terravats</li>
@@ -38,44 +35,59 @@
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
-    <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>3400</WorkToBuild>
       <Mass>60</Mass>
-      <Flammability>1</Flammability>
+      <Flammability>3</Flammability>
       <Beauty>1.5</Beauty>
       <Cleanliness>1</Cleanliness>
     </statBases>
+    <interactionCellIcon IsNull="True"/>
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True"/>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
-    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <!--<defaultPlacingRot>South</defaultPlacingRot>-->
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <designationCategory>TerratechDesignation</designationCategory>
     <uiOrder>2630</uiOrder>
-    <minifiedDef>MinifiedThing</minifiedDef>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
-    <thingCategories>
-      <li>BuildingsMisc</li>
-    </thingCategories>
+    <recipes>
+      <li>TS_ExtractPrimaStakeTurretSeed</li>
+      <li>TS_ExtractPrimaSMGTurretSeed</li>
+      <li>TS_ExtractPrimaShotgunTurretSeed</li>
+      <li>TS_PrimaTurretSeedApexToStake</li>
+      <li>TS_PrimaTurretSeedApexToSMG</li>
+      <li>TS_PrimaTurretSeedApexToShotgun</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
     <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>12</WoodLog>
+    </killedLeavings>
     <building>
-      <paintable>true</paintable>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
     </building>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>3</glowRadius>
+        <glowRadius>3.9</glowRadius>
         <glowColor>(239,84,203,0)</glowColor>
       </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <ResearchSpeedFactor>0.05</ResearchSpeedFactor>
+          <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
         </statOffsets>
-        <maxSimultaneous>4</maxSimultaneous>
+        <maxSimultaneous>1</maxSimultaneous>
         <maxDistance>9</maxDistance>
       </li>
       <li Class="CompProperties_Art">
@@ -83,9 +95,9 @@
       </li>
       <li Class="CompProperties_Refuelable">
         <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>30</initialConfigurableTargetFuelLevel>
-        <fuelConsumptionRate>0.75</fuelConsumptionRate>
-        <fuelCapacity>60.0</fuelCapacity>
+        <initialConfigurableTargetFuelLevel>15</initialConfigurableTargetFuelLevel>
+        <fuelConsumptionRate>0.25</fuelConsumptionRate>
+        <fuelCapacity>30</fuelCapacity>
         <fuelFilter>
           <thingDefs>
             <li>TS_Glowsap</li>

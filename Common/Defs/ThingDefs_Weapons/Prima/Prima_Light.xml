@@ -290,7 +290,7 @@
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Pump Shotgun-->
 		<defName>TS_Shotgun</defName>
-		<label>prima spreadshot</label>
+		<label>prima scattershot</label>
 		<description>A biotic weapon, patterned off of a semi-automatic shotgun, and grown straight from a specialized pod. They are quite powerful, but have very limited range and speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/PrimaShotgunBasic</texPath>
