@@ -3,6 +3,7 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
@@ -54,8 +55,27 @@ namespace Terrasecurity
             if (Props.showNotificationWhenSpawningThings)
             {
                 string messageText = "Terrasecurity_Message_SpawnedThingFromThingSpawner".Translate(parent.Label.Named("SOURCE"));
-                Messages.Message(messageText, things, MessageTypeDefOf.NeutralEvent);
+                Messages.Message(messageText, parent, MessageTypeDefOf.NeutralEvent);
             }
+        }
+
+        string cachedIntervalText;
+        public override string CompInspectStringExtra()
+        {
+            StringBuilder text = new StringBuilder(base.CompInspectStringExtra());
+
+            if(cachedIntervalText == null)
+            {
+                string intervalText = ((int)Props.cycleDurationRangeTicks.Average).ToStringTicksToPeriodVague();
+                cachedIntervalText = "Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval".Translate(intervalText.Named("INTERVAL"));
+            }
+            if(text.Length > 0)
+            {
+                text.AppendLine();
+            }
+            text.Append(cachedIntervalText);
+
+            return text.ToString();
         }
 
         public override void PostExposeData()
