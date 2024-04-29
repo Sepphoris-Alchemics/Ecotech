@@ -13,6 +13,7 @@ namespace Terrasecurity
     public class ThingComp_EquippedLifespan : ThingComp_EquippedTick
     {
         int ageTicks = 0;
+        bool hasShownAlert = false;
 
         int TicksRemaining => Props.lifespanTicks - ageTicks;
         public string TicksRemainingReadable => TicksRemaining.ToStringTicksToPeriodVerbose();
@@ -36,6 +37,7 @@ namespace Terrasecurity
         public override void EquippedTick()
         {
             ProgressLifespan();
+            ShowAlertOnLowLifespan();
         }
 
         private void ProgressLifespan()
@@ -65,6 +67,28 @@ namespace Terrasecurity
                 }
             }
             parent.Destroy(DestroyMode.KillFinalize);
+        }
+
+        private void ShowAlertOnLowLifespan()
+        {
+            if (Props.showExpirationAlertOnRemainingTicks == -1)
+            {
+                return;
+            }
+            if (hasShownAlert)
+            {
+                return;
+            }
+            if(parent.Faction != Faction.OfPlayer)
+            {
+                return;
+            }
+            if(TicksRemaining > Props.showExpirationAlertOnRemainingTicks)
+            {
+                return;
+            }
+            hasShownAlert = true;
+            Messages.Message("Terrasecurity_Message_LifespanAboutToExpire".Translate(parent.LabelShort.Named("THING")), parent, MessageTypeDefOf.NeutralEvent);
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -109,6 +133,7 @@ namespace Terrasecurity
         {
             base.PostExposeData();
             Scribe_Values.Look(ref ageTicks, nameof(ageTicks));
+            Scribe_Values.Look(ref hasShownAlert, nameof(hasShownAlert));
         }
     }
 }

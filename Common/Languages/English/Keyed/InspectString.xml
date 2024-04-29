@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <Terrasecurity_InspectString_ConverterFinished>Ready to be emptied</Terrasecurity_InspectString_ConverterFinished>
+  <Terrasecurity_InspectString_ConverterContents>Contents: {CONTENTS}</Terrasecurity_InspectString_ConverterContents>
+  <Terrasecurity_InspectString_ConverterTimeRemaining>Time remaining to finish: {TIME}</Terrasecurity_InspectString_ConverterTimeRemaining>
+
+  <Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval>Produces random items approximately every {INTERVAL}</Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval>
+</LanguageData>

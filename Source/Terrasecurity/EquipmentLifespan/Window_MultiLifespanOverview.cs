@@ -31,7 +31,7 @@ namespace Terrasecurity
                 DrawLifespanCompEntry(list, pawn, comp);
             }
 
-            UIUtility.EndScrollView(list, out scrollHeight);
+            list.EndScrollView(out scrollHeight);
         }
 
         const float windowWidth = 300f;
