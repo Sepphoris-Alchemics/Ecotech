@@ -24,7 +24,12 @@ namespace Terrasecurity
                 return false;
             }
             ThingComp_ThingConverter converterComp = thingWithComps.GetComp<ThingComp_ThingConverter>();
-            return converterComp.CanBeFilledBy(pawn, out _, out _);
+            AcceptanceReport hasJobReport = converterComp.CanBeFilledBy(pawn, out _, out _);
+            if (!hasJobReport)
+            {
+                JobFailReason.Is(hasJobReport.Reason);
+            }
+            return hasJobReport;
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)

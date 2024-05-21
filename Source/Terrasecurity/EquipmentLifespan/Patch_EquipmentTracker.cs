@@ -31,6 +31,10 @@ namespace Terrasecurity
                     {
                         yield return lifespanComp.TimeSpanReadoutGizmo;
                     }
+                    if(equipmentComp is ThingComp_InstallableInSlottedThingTransformer installableInTransformerComp)
+                    {
+                        yield return installableInTransformerComp.InstallGizmo;
+                    }
                 }
             }
         }

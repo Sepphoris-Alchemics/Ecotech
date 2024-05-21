@@ -15,6 +15,7 @@ namespace Terrasecurity
         {
             Harmony harmony = new Harmony(nameof(Terrasecurity));
             harmony.PatchAll();
+            PostGameLoadConfigErrors.RunPostLoadConfigErrorChecks();
         }
     }
 }

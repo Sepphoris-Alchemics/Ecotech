@@ -78,5 +78,47 @@ namespace Terrasecurity
             Widgets.EndScrollView();
         }
         #endregion
+
+        #region Vertical Fillable Bar
+        public static Rect VerticalFillableBar(Rect inRect, float fillPercent, bool doBorder, Texture2D fillTex = null, bool drawBackground = true, Texture2D bgTex = null)
+        {
+            if(fillTex == null)
+            {
+                fillTex = Widgets.BarFullTexHor;
+            }
+            if(bgTex == null)
+            {
+                bgTex = BaseContent.BlackTex;
+            }
+            if (doBorder)
+            {
+                GUI.DrawTexture(inRect, BaseContent.BlackTex);
+                inRect = inRect.ContractedBy(3f);
+            }
+            if (drawBackground)
+            {
+                GUI.DrawTexture(inRect, bgTex);
+            }
+
+            Rect filledRect = inRect.BottomPart(fillPercent);
+            GUI.DrawTexture(filledRect, fillTex);
+
+            return inRect;
+        }
+
+        #endregion
+
+        #region Label drawing
+        public static void Label(Rect inRect, string label, GameFont font = GameFont.Small, TextAnchor anchor = TextAnchor.UpperLeft)
+        {
+            GameFont previousFont = Text.Font;
+            TextAnchor previousAnchor = Text.Anchor;
+            Text.Font = font;
+            Text.Anchor = anchor;
+            Widgets.Label(inRect, label);
+            Text.Anchor = previousAnchor;
+            Text.Font = previousFont;
+        }
+        #endregion
     }
 }

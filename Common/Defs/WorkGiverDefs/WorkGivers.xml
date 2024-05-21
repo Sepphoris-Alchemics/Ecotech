@@ -13,7 +13,7 @@
     </requiredCapacities>
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
-  
+
   <WorkGiverDef>
     <defName>TS_EmptyThingConverter</defName>
     <label>empty thing converter</label>
@@ -27,5 +27,35 @@
     </requiredCapacities>
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>TS_FillAutoHaulThingContainer</defName>
+    <label>fill thing container</label>
+    <giverClass>Terrasecurity.WorkGiver_FillAutoHaulThingContainer</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>true</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>TS_EmptyAutoHaulThingContainer</defName>
+    <label>empty thing container</label>
+    <giverClass>Terrasecurity.WorkGiver_EmptyAutoHaulThingContainer</giverClass>
+    <workType>Hauling</workType>
+    <verb>empty</verb>
+    <gerund>emptying</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>true</canBeDoneByMechs>
+  </WorkGiverDef>
+  
+  
 
 </Defs>

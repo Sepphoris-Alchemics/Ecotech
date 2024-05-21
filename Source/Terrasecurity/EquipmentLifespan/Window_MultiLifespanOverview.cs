@@ -57,7 +57,7 @@ namespace Terrasecurity
                 return;
             }
 
-            Log.Message($"Recaching lifespan window");
+            //Log.Message($"Recaching lifespan window");
             cachedPawnsWithLifespanComp.Clear();
             cachedPawnsListHash = selectedPawns.GetHashCode();
 

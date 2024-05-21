@@ -15,4 +15,12 @@
     <suspendable>false</suspendable>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
+  <JobDef>
+    <defName>TS_InsertIntoSlottedThingTransformer</defName>
+    <driverClass>Terrasecurity.JobDriver_InsertIntoSlottedThingTransformer</driverClass>
+    <reportString>inserting TargetA into TargetB.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
 </Defs>
