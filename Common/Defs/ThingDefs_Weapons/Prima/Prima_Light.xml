@@ -97,6 +97,7 @@
 				<li Class="CompProperties_Plantable">
         	<plantDefToSpawn>TS_StakecasterUpgradePod</plantDefToSpawn>
       	</li>
+      <li Class="Terrasecurity.ThingCompProperties_InstallableInSlottedThingTransformer"/>
 		</comps>
 	</ThingDef>
 

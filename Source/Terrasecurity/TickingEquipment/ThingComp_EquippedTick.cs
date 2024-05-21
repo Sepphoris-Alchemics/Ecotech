@@ -38,8 +38,10 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
+            Scribe.EnterNode(nameof(ThingComp_EquippedTick));
             base.PostExposeData();
             Scribe_References.Look(ref wieldingPawn, nameof(wieldingPawn));
+            Scribe.ExitNode();
         }
     }
 
