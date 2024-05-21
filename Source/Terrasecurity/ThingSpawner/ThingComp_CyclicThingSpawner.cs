@@ -80,8 +80,10 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
+            Scribe.EnterNode(nameof(ThingComp_CyclicThingSpawner));
             base.PostExposeData();
             Scribe_Values.Look(ref nextSpawnTick, nameof(nextSpawnTick), -1);
+            Scribe.ExitNode();
         }
     }
 }

@@ -46,56 +46,55 @@ namespace Terrasecurity
         List<Thing> outputContents = new List<Thing>();
         bool isCurrentlyConverting = false;
         public ThingCompProperties_ThingConverter Props => props as ThingCompProperties_ThingConverter;
-        
-        public bool CanBeFilledOrEmtpiedBy(Pawn pawn)
+        public Building ParentBuilding => parent as Building;
+
+        public AcceptanceReport CanBeFilledOrEmtpiedBy(Pawn pawn)
         {
             if (isCurrentlyConverting)
             {
-                JobFailReason.Is("CurrentlyConverting");
-                return false;
+                return "CurrentlyConverting";
             }
-            if (pawn.Map.designationManager.DesignationOn(parent, DesignationDefOf.Deconstruct) != null)
+            if (!(parent is Building building))
             {
-                JobFailReason.Is("DesignatedForDeconstruct");
-                return false;
+                return "NotABuilding";
             }
-            if (parent.IsForbidden(pawn))
+            if (pawn.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) != null)
             {
-                JobFailReason.Is("IsForbidden");
-                return false;
+                return "DesignatedForDeconstruct";
             }
-            if (!pawn.CanReserve(parent))
+            if (building.IsForbidden(pawn))
             {
-                JobFailReason.Is("CannotReserve");
-                return false;
+                return "IsForbidden";
             }
+            if (!pawn.CanReserve(building))
+            {
+                return "CannotReserve";
+            }
+
             return true;
         }
 
-        public bool CanBeFilledBy(Pawn pawn, out Thing thingToFillWith, out int thingCount)
+        public AcceptanceReport CanBeFilledBy(Pawn pawn, out Thing thingToFillWith, out int thingCount)
         {
             thingToFillWith = null;
             thingCount = 0;
-
-            if (!CanBeFilledOrEmtpiedBy(pawn))
+            AcceptanceReport filledOrEmptiedReport = CanBeFilledOrEmtpiedBy(pawn);
+            if (!filledOrEmptiedReport)
             {
-                return false;
+                return filledOrEmptiedReport;
             }
             if (!outputContents.NullOrEmpty())
             {
-                JobFailReason.Is("NeedsToBeEmptied");
-                return false;
+                return "NeedsToBeEmptied";
             }
             if (inputCount >= Props.InputThing.count)
             {
-                JobFailReason.Is("AlreadyFull");
-                return false;
+                return "AlreadyFull";
             }
             thingToFillWith = FindInputFor(pawn, out thingCount);
             if (thingToFillWith == null)
             {
-                JobFailReason.Is("NoItemToFillWith");
-                return false;
+                return "NoItemToFillWith";
             }
             return true;
         }
@@ -328,11 +327,13 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
+            Scribe.EnterNode(nameof(ThingComp_ThingConverter));
             base.PostExposeData();
             Scribe_Values.Look(ref converstionStartTick, nameof(converstionStartTick));
             Scribe_Values.Look(ref inputCount, nameof(inputCount));
             Scribe_Collections.Look(ref outputContents, nameof(outputContents), LookMode.Deep);
             Scribe_Values.Look(ref isCurrentlyConverting, nameof(isCurrentlyConverting));
+            Scribe.ExitNode();
         }
     }
 }

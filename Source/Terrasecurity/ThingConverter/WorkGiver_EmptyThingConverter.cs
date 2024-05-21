@@ -34,7 +34,7 @@ namespace Terrasecurity
                 return null;
             }
             ThingComp_ThingConverter converterComp = thingWithComps.GetComp<ThingComp_ThingConverter>();
-            if (!converterComp.CanBeFilledOrEmtpiedBy(pawn))
+            if (!converterComp.CanBeEmptiedBy(pawn))
             {
                 return null;
             }

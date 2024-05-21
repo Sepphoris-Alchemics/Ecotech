@@ -73,6 +73,23 @@
         <glowColor>(370,370,370,0)</glowColor>
       </li>
     </comps>-->
+    <modExtensions>
+      <li Class="Terrasecurity.ThingDefExtension_TransformerRecipe">
+        <recipes>
+          <li>
+            <fuelCount>5</fuelCount>
+            <inputThingDef>WoodLog</inputThingDef>
+            <outputThingDef>DiningChair</outputThingDef>
+            <outputStuff>WoodLog</outputStuff>
+          </li>
+          <li>
+            <fuelCount>15</fuelCount>
+            <inputThingDef>TS_StakeCaster</inputThingDef>
+            <outputThingDef>TS_Pistol</outputThingDef>
+          </li>
+        </recipes>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">

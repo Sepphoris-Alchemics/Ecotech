@@ -7,7 +7,7 @@
 		<description>A large container filled with glowsap, intended for indoor or emergency growth. Doesn't require electricity, but will frequently need to be refilled with healthy glowsap as it's nutrients are depleted.
 Since this basin was specifically designed to house glowsap, this basin cannot support anything else besides Terratech plants. However, it will give all supported plants a slight growth boost.</description>
 		<thingClass>Building_PlantGrower</thingClass>
-		<minifiedDef>MinifiedThing</minifiedDef>	
+		<!--<minifiedDef>MinifiedThing</minifiedDef>-->	
 		<graphicData>
 			<texPath>Things/Building/Production/GlowsapBay/GlowsapBay</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>

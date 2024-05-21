@@ -131,9 +131,11 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
+            Scribe.EnterNode(nameof(ThingComp_EquippedLifespan));
             base.PostExposeData();
             Scribe_Values.Look(ref ageTicks, nameof(ageTicks));
             Scribe_Values.Look(ref hasShownAlert, nameof(hasShownAlert));
+            Scribe.ExitNode();
         }
     }
 }
