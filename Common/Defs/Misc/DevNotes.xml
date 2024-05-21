@@ -102,10 +102,14 @@ Archwood: 2000
 		Each family has a different growth method. This is the way they are aqcuired.
 		Growth methods are the following:
 			Prima: pods planted at a growing zone
-			Verdant: Grown at a Metamorphic Pool
+			Verdant: Planted by using the wepaon as a seed.
 
-			Alkaloid: selected via specific surge seed. These surge seeds are grown quickly, but the pods produce a naseous gas.
-			Blight: Metamorphic Pool
+			Rotvine/Soulbloom: Grown via pods that are spawned by a special tree. The harvested item produces a random Rotvine or Soulbloom weapon. The pods produce a naseous gas.
+				Both of these weapons share designs: Soulbloom weapons have the base design, while rotvine weapons add vines and decay on top of them.
+				Rotvine are the basic and most common weapons. Rotvine weapons have improved poison and faster fire rate, but lower damage and AP.
+				Soulbloom are the stronger and rarer weapons. Soulbloom has high damage, AP, and range, but miniscule poison and fire rate.
+				The type of weapon that appears can be influenced by special buildings.
+			
 
 			Spore: Harvested from tumors that are only produced by a specific mushroom tree. Must be planted in stone.
 

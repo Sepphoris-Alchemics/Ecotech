@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef Abstract="True" ParentName="BuildingBase" Name="TS_SapFermentingBarrel_Base">
+  <ThingDef Abstract="True" ParentName="BuildingBase" Name="TS_SapFilter_Base">
     <drawerType>MapMeshAndRealTime</drawerType>
     <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
@@ -23,10 +23,11 @@
     </building>
   </ThingDef>
 
-  <ThingDef ParentName="TS_SapFermentingBarrel_Base">
-    <defName>TS_SapFermentingBarrel_Basic</defName>
-    <label>basic sap fermenting barrel</label>
-    <description>Your text here.</description>
+  <ThingDef ParentName="TS_SapFilter_Base">
+    <defName>TS_GlowsapFilter</defName>
+    <label>Cauldron of Transposition</label>
+    <description>A deeply rooted basin that, when filled with glowsap, will slowly filter and absorb most of the elements and nutrients within. This process destroys the given glowsap, but the preserved contents produce a powerful, highly valuable sap. These new saps can then either be used, or sold.
+The outcome will always be one vial of refined sap, but which one it is will be entirely random. It's not an efficient use of glowsap, but is useful if glowsap reserves are plentiful.</description>
     <graphicData>
       <texPath>Things/Building/Production/FermentingBarrel</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -51,8 +52,8 @@
       <li Class="Terrasecurity.ThingCompProperties_ThingConverter">
         <compClass>Terrasecurity.ThingComp_ThingConverter</compClass>
         <!-- when a pawn carries items to the converter / takes them out, this is how long they stand in front of the building-->
-        <timeToFillTicks>200</timeToFillTicks>
-        <timeToEmptyTicks>200</timeToEmptyTicks>
+        <timeToFillTicks>600</timeToFillTicks>
+        <timeToEmptyTicks>100</timeToEmptyTicks>
         <drawFillableBar>true</drawFillableBar>
         <!-- x, y, z offset for the bar. centered by default -->
         <fillableBarDrawOffset>(0, 0.00001, 0)</fillableBarDrawOffset>
@@ -61,22 +62,26 @@
         <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
         <inputThings>
             <!-- needs exactly one entry -->
-            <WoodLog>1</WoodLog>
+            <TS_Glowsap>240</TS_Glowsap>
         </inputThings>
-        <conversionDurationTicks>1000</conversionDurationTicks>
-        <!-- after 1000 ticks, randomly produce either 3-5 wood (66.66% chance) or 1 steel (33.33% chance)-->
+        <conversionDurationTicks>1200</conversionDurationTicks>
         <potentialResults>
           <li>
-            <weight>2</weight>
+            <weight>4</weight>
             <things>
-                <!-- can have any number of entries -->
-                <WoodLog>3~5</WoodLog>
+                <TS_Endosap>1</TS_Endosap>
             </things>
           </li>
           <li>
-            <weight>1</weight>
+            <weight>4</weight>
             <things>
-                <Steel>1</Steel>
+                <TS_Sunsap>1</TS_Sunsap>
+            </things>
+          </li>
+          <li>
+            <weight>2</weight>
+            <things>
+                <TS_Hypersap>1</TS_Hypersap>
             </things>
           </li>
         </potentialResults>

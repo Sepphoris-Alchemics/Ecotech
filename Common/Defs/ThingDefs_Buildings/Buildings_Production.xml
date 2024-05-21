@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Terraforge
+  The Terraforge is the last line of defense to make sure undeserving or technology-driven colonies cannot access the sacred Terratech.
+  This forge takes a "locked" product, and the user channels wild energies to will the product to retract or shed it's defenses.
+  The forge is basically a station that makes Terratech ORM (Organic Rights Management)-free.
+  This forge is specifically used for unlocking items that only Terratech Keeper tribes had. These items were intended to be powerful, valuable, or used for war.
+  Terratech families that was meant for ALL tribes - Prima and Perrenial - do not have these defenses, and do not require a forge. Some families, like fungal, may have parts that can be 100% grown, and parts that require a forge.
+  Only one forge is given to those deemed worthy. If the seed is lost, they are undeserving of it, and anything it enables.
+  
+  The forge has its own safety measure as well: it takes 15 days to grow. Every 5 days, it will send a powerful psychic wave, which do not impose any changes on the colonists, but rather serves as a "notice" signal.
+  If the player is medevial or neolithic, nothing will happen. However, if the player is Industrial or higher, powerful raids will spawn that are determined to destroy the forge. After it is fully grown, these signals stop.
+  If an Industrial+ colony can survive these waves, they will now have one of the most important tools for using Terratech.
+  
+  This forge is acquired as follows:
+    -Researching "Terraforge"
+    -Starting with the Terratech scenario
+    -Acquiring the seed once destroyed
+    -Grown in a Deepsap Vault
+
+    There shouldn't be a case when the forge is truly lost, as the seed will be indestructable and not worth anything. Ho
+    -->
+
+  <!--Deepsap Vault
+    The Deepsap Vault is the player's "oh crap" structure when they royally make a mistake, or a structure essential for progression is lost (i.e. the terraforge).
+    This vault allows the player to grow new seeds for these structures. However, the cost for doing so is extremely demanding.
+    The Deepsap Vault doesn't just require sap. It may start destroying the land, angering creatures, and causing aftereffects that can span years.
+    Usage of the Deepsap Vault is (hopefully) never, as it's specifically meant as a fix to things that shouldn't happen.
+    Usage of the vault is also seen as heretical, as it taps into the life force of the very planet. Terratech coloniests will not be happy.
+    Everything within the vault shouldn't normally be lost unless it was very mishandled, or intentionally lost. It will not be needed in a proper colony.
+
+    Later on, the Deepsap Vault may have functions that give it a high risk vs reward factor.
+  -->
+
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>TS_Terraforge</defName>
+    <label>Terraforge</label>
+    <description>A grown building that channels natural energies of the world, which can be used to shape and influence Terratech.
+Some Terratech creations may have features that simply make the product unusable, or even dangerous, to most races (generally to ward off undeserving colonies). The Terraforge exists to refine that Terratech into a usable state - not by destruction, by rather by letting the creation know that it is in safe hands.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <size>(1,1)</size>
+    <costList>
+      <WoodLog>80</WoodLog>
+      <TS_Glowsap>30</TS_Glowsap>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Terravats/VatGlowsap</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>TS_Terravats</li>
+    </researchPrerequisites>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>3400</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>3</Flammability>
+      <Beauty>1.5</Beauty>
+      <Cleanliness>1</Cleanliness>
+    </statBases>
+    <interactionCellIcon IsNull="True"/>
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True"/>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <!--<defaultPlacingRot>South</defaultPlacingRot>-->
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>TerratechDesignation</designationCategory>
+    <uiOrder>2630</uiOrder>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
+    <!--<recipes>
+      <li>TS_ExtractPrimaStakeTurretSeed</li>
+      <li>TS_ExtractPrimaSMGTurretSeed</li>
+      <li>TS_ExtractPrimaShotgunTurretSeed</li>
+      <li>TS_PrimaTurretSeedApexToStake</li>
+      <li>TS_PrimaTurretSeedApexToSMG</li>
+      <li>TS_PrimaTurretSeedApexToShotgun</li>
+    </recipes>-->
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>12</WoodLog>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>9</maxDistance>
+      </li>
+      <li Class="CompProperties_Art">
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>15</initialConfigurableTargetFuelLevel>
+        <fuelConsumptionRate>0.25</fuelConsumptionRate>
+        <fuelCapacity>30</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>TS_Glowsap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <fuelLabel>Glowsap</fuelLabel>
+        <fuelGizmoLabel>Healthy glowsap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires Glowsap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

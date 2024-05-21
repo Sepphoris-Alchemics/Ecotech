@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_TreeOfGifts</defName>
-    <label>Tree of gifts</label>
-    <description>Your text here.</description>
+    <defName>TS_RandomSapGiver</defName>
+    <label>Cauldron of Change</label>
+    <description>The Cauldron of Change is one of the three fundamental conduits that Terratech devotees learn to properly create, with each one dedicated to supporting and assisting Terratech tribes in different ways.
+The swirling liquids and energies within the Cauldron of Change represent the ever-present shifting of nature; to symbolize this, the cauldron occasionally gifts tribes with pure, potent saps that are highly desirable for improving weapons and gear.
+Must be built </description>
     <graphicData>
       <texPath>Things/Plant/TreeOak</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -20,6 +22,7 @@
     </statBases>
     <costList>
       <WoodLog>50</WoodLog>
+      <TS_Glowsap>80</TS_Glowsap>
     </costList>
     <drawerType>MapMeshAndRealTime</drawerType>
     <minifiedDef>MinifiedThing</minifiedDef>
@@ -32,7 +35,7 @@
     </thingCategories>
     <tickerType>Rare</tickerType>
     <rotatable>true</rotatable>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>TerratechDesignation</designationCategory>
     <uiOrder>2710</uiOrder>
     <constructEffect>ConstructWood</constructEffect>
     <building>
@@ -48,15 +51,39 @@
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
-            <weight>2</weight>
+            <weight>1.5</weight>
             <things>
-                <WoodLog>3~5</WoodLog>
+              <TS_Endosap>1</TS_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+                <TS_Hypersap>1</TS_Hypersap>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-                <Steel>1</Steel>
+                <TS_Sunsap>1</TS_Sunsap>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <TS_Endosap>2~3</TS_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>0.2</weight>
+            <things>
+              <TS_Hypersap>2</TS_Hypersap>
+            </things>
+          </li>
+          <li>
+            <weight>0.3</weight>
+            <things>
+              <TS_Sunsap>2~3</TS_Sunsap>
             </things>
           </li>
         </potentialSpawnedThings>

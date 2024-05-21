@@ -102,10 +102,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>TS_Endosap</defName>
-    <label>Endosap</label>
-    <description>A jar of harvested endosap. People and colonies skilled with Terratech can use this to replace the mundane sap of dormant Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
-\nSpecific Alterations (persists into matured form):
-Hitpoints increased by 50% (rounded up)
+    <label>Sap of Permanence</label>
+    <description>A vial of refined, potent terrasap, named due to it's unique features. These unique features can be applied to mature terraweapons, giving them the following alterations:
+\n\nHitpoints increased by 50% (rounded up)
 Flammability decreased by 75%
 Regenerates 2.5 HP/Day</description>
     <tickerType>Normal</tickerType>
@@ -114,7 +113,7 @@ Regenerates 2.5 HP/Day</description>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>90</stackLimit>
+    <stackLimit>3</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
@@ -137,16 +136,49 @@ Regenerates 2.5 HP/Day</description>
 
   <ThingDef ParentName="ResourceBase">
     <defName>TS_Hypersap</defName>
-    <label>Hypersap</label>
-    <description>A jar of harvested hypersap. People and colonies skilled with Terratech can use this to replace the mundane sap of dormant Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
-\n\nSpecific alterations:
-Static-shot weapons may generate an additional projectile (example: OLR now fires 1~2 projectiles)
-Min and Max projectile generation for multi-shot weapons increased by 1 (example: Pincaster burst range = 3~7 instead of 2~6)
-Certain weapons adapt into unique subvariants (example: Twincaster turns into Hypercaster)
-Max lifespan decreased by 20% (round down)</description>
+    <label>Sap of Disorder</label>
+    <description>A vial of refined, potent terrasap, named due to it's unique features. These unique features can be applied to mature terraweapons, giving them the following alterations:
+\n\nStatic-shot weapons may generate an additional projectile
+Min and Max projectile generation for multi-shot weapons increased by 1
+Certain weapons adapt into unique subvariants
+Max lifespan decreased by 20% (rounded down)</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Hypersap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>90</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>104</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <!--<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>-->
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Sunsap</defName>
+    <label>Sap of Vivication</label>
+    <description>A vial of refined, potent terrasap, named due to it's unique features. These unique features can be applied in a multitude of ways:
+\n\nReplenishes the life force of turrets
+Replenishes the lifespan of any Terraweapon
+    </description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Sunsap</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
