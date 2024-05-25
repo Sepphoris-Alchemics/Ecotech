@@ -212,12 +212,16 @@ namespace Terrasecurity
 
         public override string CompInspectStringExtra()
         {
-            string text = base.CompInspectStringExtra();
-            if(text != "")
+            string contentsString = "Nothing".Translate();
+            if (!base.Empty)
             {
-                text += "\n";
+                contentsString = string.Join(", ", slottedThings
+                    .Where(t => t != null)
+                    .Select(t => t.LabelCap));
             }
-            if(isTransforming)
+            string text = $"{TransformerProps.contentsTranslationKey.Translate(contentsString.Named("CONTENTS"))}";
+            text += "\n";
+            if (isTransforming)
             {
                 string formattedDuration = (transformationEndTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
                 text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));

@@ -10,6 +10,8 @@ namespace Terrasecurity
 {
     public class ThingCompProperties_MonoThingContainer : CompProperties_ThingContainer
     {
+        public string contentsTranslationKey = "Contents";
+
         public ThingCompProperties_MonoThingContainer()
         {
             compClass = typeof(ThingComp_MonoThingContainer);

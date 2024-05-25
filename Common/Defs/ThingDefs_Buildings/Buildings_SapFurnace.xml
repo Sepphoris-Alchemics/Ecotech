@@ -45,11 +45,13 @@
         <!-- max fuel-->
         <stackLimit>50</stackLimit>
         <drawContainedThing>false</drawContainedThing>
+        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
       </li>
       <li Class="Terrasecurity.ThingCompProperties_SlottedThingTransformer">
         <!-- this *might* look okay, but probably won't. Will probably only ever draw slot 0 -->
         <drawContainedThing>false</drawContainedThing>
 
+        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
         <baseFuelColor>(56,204,220)</baseFuelColor>
         <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
         <sufficientFuelColor>(33,209,69)</sufficientFuelColor>

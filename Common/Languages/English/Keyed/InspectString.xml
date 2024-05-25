@@ -5,4 +5,7 @@
   <Terrasecurity_InspectString_ConverterTimeRemaining>Time remaining to finish: {TIME}</Terrasecurity_InspectString_ConverterTimeRemaining>
 
   <Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval>Produces random items approximately every {INTERVAL}</Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval>
+  
+  <Terrasecurity_InspectString_ThingTransformerFuelContents>Fuel: {CONTENTS}</Terrasecurity_InspectString_ThingTransformerFuelContents>
+  <Terrasecurity_InspectString_ThingTransformerSlotContents>Slot contents: {CONTENTS}</Terrasecurity_InspectString_ThingTransformerSlotContents>
 </LanguageData>
