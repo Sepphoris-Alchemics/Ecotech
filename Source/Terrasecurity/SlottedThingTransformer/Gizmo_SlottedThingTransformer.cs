@@ -171,7 +171,7 @@ namespace Terrasecurity
             slotRect = slotRect.ContractedBy(slotPadding);
             Widgets.DrawBoxSolidWithOutline(slotRect, slotBackgroundColor, slotBorderColor);
             slotRect = slotRect.ContractedBy(slotPadding);
-            TooltipHandler.TipRegion(slotRect, "Terrasecurity_Gizmo_SlottedThingConverter_SlotDescription".Translate(index.Named("SLOTINDEX")));
+            TooltipHandler.TipRegion(slotRect, "Terrasecurity_Gizmo_SlottedThingConverter_SlotDescription".Translate((index + 1).Named("SLOTINDEX")));
             Thing slottedThing = transformerComp.slottedThings[index];
 
             if (slottedThing == null)
@@ -237,7 +237,7 @@ namespace Terrasecurity
                 }
                 int targetSlot = i;
                 Action swapAction = () => transformerComp.SwapSlots(slotIndex, targetSlot);
-                options.Add(new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot".Translate(slotIndex.Named("FROM"), targetSlot.Named("TO")), swapAction));
+                options.Add(new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot".Translate((slotIndex+1).Named("FROM"), (targetSlot+1).Named("TO")), swapAction));
             }
 
             foreach (FloatMenuOption option in options)
