@@ -63,6 +63,7 @@ namespace Terrasecurity
                     slottedThings.Add(null);
                 }
             }
+            ProgressCycle();
         }
 
         public AcceptanceReport CanTake(Thing thing)
@@ -127,7 +128,12 @@ namespace Terrasecurity
         public override void CompTickRare()
         {
             base.CompTickRare();
-            if(transformationStartTick == -1)
+            ProgressCycle();
+        }
+
+        private void ProgressCycle()
+        {
+            if (transformationStartTick == -1)
             {
                 transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
             }
@@ -210,6 +216,9 @@ namespace Terrasecurity
                 string formattedDuration = (transformationStartTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
                 text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));
             }
+            //text += $"\nstart: {transformationStartTick}";
+            //text += $"\nend: {transformationEndTick}";
+            //text += $"\ntransforming ? {isTransforming}";
             return text;
         }
 
