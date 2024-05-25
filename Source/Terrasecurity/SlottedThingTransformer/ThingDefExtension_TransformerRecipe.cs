@@ -103,10 +103,19 @@ namespace Terrasecurity
                 return "CouldNotRemoveThingFromContainer";
             }
             inputThing.Destroy();
+            producedThing = ExecuteRecipe(out consumedFuel);
+            return true;
+        }
+
+        private Thing ExecuteRecipe(out int consumedFuel)
+        {
+            Thing producedThing;
             producedThing = ThingMaker.MakeThing(outputThingDef, outputStuff);
             producedThing = producedThing.TryMakeMinified();
+
             consumedFuel = fuelCount;
-            return true;
+
+            return producedThing;
         }
 
         public IEnumerable<string> ConfigErrors()

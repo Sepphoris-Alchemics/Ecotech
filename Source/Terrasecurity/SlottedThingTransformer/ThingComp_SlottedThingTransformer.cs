@@ -180,6 +180,7 @@ namespace Terrasecurity
                 return;
             }
             ThingDefExtension_TransformerRecipe recipeExtension = CurrentFuelDef.GetModExtension<ThingDefExtension_TransformerRecipe>();
+            bool anyThingTransformed = false;
             for (int i = 0; i < slottedThings.Capacity; i++)
             {
                 //Log.Message($"Trying to retrieve index {i} for list count {slottedThings.Count} list capacity {slottedThings.Capacity}");
@@ -194,7 +195,12 @@ namespace Terrasecurity
                     slottedThings[i] = null;
                     //Log.Message($"Slot {i} consumed fuel: {consumedFuel}");
                     fuelStorageComp.ContainedThing.stackCount -= consumedFuel;
+                    anyThingTransformed = true;
                 }
+            }
+            if (anyThingTransformed)
+            {
+                Messages.Message("Terrasecurity_Message_ThingTransformerFinishedTransformation".Translate(parent.LabelCap.Named("TRANSFORMER")), new LookTargets(parent), MessageTypeDefOf.NeutralEvent);
             }
             RecacheFuelCost();
         }
