@@ -191,7 +191,7 @@ namespace Terrasecurity
                 }
                 if(recipeExtension.TryDoWork(this, slotThing, out Thing producedThing, out int consumedFuel))
                 {
-                    GenPlace.TryPlaceThing(producedThing, parent.Position, parent.Map, ThingPlaceMode.Near);
+                    GenPlace.TryPlaceThing(producedThing, parent.Position, parent.Map, ThingPlaceMode.Near, nearPlaceValidator: CanPlaceRecipeProductOn);
                     slottedThings[i] = null;
                     //Log.Message($"Slot {i} consumed fuel: {consumedFuel}");
                     fuelStorageComp.ContainedThing.stackCount -= consumedFuel;
@@ -203,6 +203,11 @@ namespace Terrasecurity
                 Messages.Message("Terrasecurity_Message_ThingTransformerFinishedTransformation".Translate(parent.LabelCap.Named("TRANSFORMER")), new LookTargets(parent), MessageTypeDefOf.NeutralEvent);
             }
             RecacheFuelCost();
+        }
+
+        private bool CanPlaceRecipeProductOn(IntVec3 pos)
+        {
+            return !parent.OccupiedRect().Contains(pos);
         }
 
         public override string CompInspectStringExtra()
