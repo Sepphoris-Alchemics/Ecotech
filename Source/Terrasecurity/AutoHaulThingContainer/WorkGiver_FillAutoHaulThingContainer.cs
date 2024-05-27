@@ -13,8 +13,28 @@ namespace Terrasecurity
     {
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-            return pawn.Map.listerBuildings.allBuildingsColonist
-                .Where(building => building.def.HasAssignableCompFrom(typeof(ThingComp_AutoHaulThingContainer)));
+            var buildings = pawn.Map.listerBuildings.allBuildingsColonist
+                .Where(IsValidWorkBuilding);
+            Log.Message($"work things: {string.Join(", ", buildings)}");
+            return buildings;
+        }
+
+        protected virtual bool IsValidWorkBuilding(Building building)
+        {
+            if (!building.def.HasAssignableCompFrom(typeof(ThingComp_AutoHaulThingContainer)))
+            {
+                return false;
+            }
+            CompThingContainer containerComp = building.GetComp<ThingComp_AutoHaulThingContainer>();
+            if(containerComp == null)
+            {
+                return false;
+            }
+            if (containerComp.Full)
+            {
+                return false;
+            }
+            return true;
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)

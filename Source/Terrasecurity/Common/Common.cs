@@ -16,6 +16,7 @@ namespace Terrasecurity
         public static JobDef emptyThingConverterJobDef = DefDatabase<JobDef>.GetNamed("TS_EmptyThingConverter");
         public static JobDef insertIntoSlottedTransformerJobDef = DefDatabase<JobDef>.GetNamed("TS_InsertIntoSlottedThingTransformer");
         public static Texture2D installableInSlottedThingTransformerGizmoTexture = ContentFinder<Texture2D>.Get("UI/Gizmo/InstallableInSlottedThingTransformerGizmo");
+        public static DesignationDef installInSlottedThingTransformerDesignation = DefDatabase<DesignationDef>.GetNamed("TS_InstallInSlottedThingTransformer");
 
         static List<TransformerRecipe> _allTransformerRecipes;
         public static List<TransformerRecipe> AllTransformerRecipes

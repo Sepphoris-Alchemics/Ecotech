@@ -14,7 +14,7 @@ using static UnityEngine.GraphicsBuffer;
 
 namespace Terrasecurity
 {
-    public class ThingComp_SlottedThingTransformer : CompThingContainer
+    public class ThingComp_SlottedThingTransformer : ThingComp_AutoHaulThingContainer
     {
         [Unsaved]
         public ThingComp_MonoThingContainer fuelStorageComp;
@@ -24,6 +24,8 @@ namespace Terrasecurity
         public bool AllowsInteractions => !isTransforming;
         int transformationStartTick = -1;
         int transformationEndTick = -1;
+
+        protected override ThingRequest ThingRequest => ThingRequest.ForGroup(ThingRequestGroup.Weapon);
 
         public override void PostExposeData()
         {
@@ -64,6 +66,34 @@ namespace Terrasecurity
                 }
             }
             ProgressCycle();
+        }
+
+        public override Thing FindHaulThingFor(Pawn pawn)
+        {
+            return pawn.Map.designationManager.SpawnedDesignationsOfDef(Common.installInSlottedThingTransformerDesignation)
+                .Select(des => des.target.Thing)
+                .Where(t => !t.IsForbidden(pawn) && pawn.CanReach(t, Verse.AI.PathEndMode.ClosestTouch, Danger.Deadly))
+                .MinBy(t => t.Position.DistanceToSquared(pawn.Position));
+        }
+
+        public override int HaulCountFor(Thing thing)
+        {
+            return 1;
+        }
+
+        public override AcceptanceReport ShouldFill(Pawn pawn)
+        {
+            AcceptanceReport baseReport = base.ShouldFill(pawn);
+            if (!baseReport)
+            {
+                return baseReport;
+            }
+            bool areAllSlowsFilled = slottedThings.All(slot => slot != null);
+            if (areAllSlowsFilled)
+            {
+                return false;
+            }
+            return true;
         }
 
         public AcceptanceReport CanTake(Thing thing)
@@ -275,5 +305,6 @@ namespace Terrasecurity
                 return _transformerGizmo;
             }
         }
+
     }
 }

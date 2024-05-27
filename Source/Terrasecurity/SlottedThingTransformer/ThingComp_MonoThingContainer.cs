@@ -44,7 +44,7 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
-            Scribe.EnterNode(nameof(ThingCompProperties_MonoThingContainer));
+            Scribe.EnterNode(this.GetType().Name);
             base.PostExposeData();
             Scribe_Defs.Look(ref currentlyAcceptedThingDef, nameof(currentlyAcceptedThingDef));
             Scribe_Values.Look(ref canCurrentlyReceiveThings, nameof(canCurrentlyReceiveThings));
