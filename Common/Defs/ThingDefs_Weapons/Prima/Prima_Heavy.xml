@@ -29,7 +29,7 @@
 			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.6</Mass>
-			<Flammability>2</Flammability>
+			<Flammability>3</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -103,7 +103,7 @@
 			<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.4</Mass>
-			<Flammability>2</Flammability>
+			<Flammability>3</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -183,7 +183,7 @@
 			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.6</Mass>
-			<Flammability>2</Flammability>
+			<Flammability>3</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -269,7 +269,7 @@
 			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>3.8</Mass>
-			<Flammability>2</Flammability>
+			<Flammability>3</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>

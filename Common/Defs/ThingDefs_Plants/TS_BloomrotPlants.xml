@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--Alkali Process (only step 2 and 5 are done manually):
+<!--Bloomrot Process (only step 2 and 5 are done manually):
   1: Acquire Seed, either by finishing research or by creating the seed
   2: Plant tree. Tree will grow extremely quickly. Tree can be planted in any Terrain with fertility.
-  3: Alkali Tree will plant a pod every 5 days in terrain with at least 100% fertility.
-  4: Pods grow over a few days, produce a Rotvine mass after a set period of time, then expire shortly after.
+  3: Bloomrot Tree will plant a pod every 5 days in terrain with at least 100% fertility.
+  4: Pods grow over a few days, produce a Bloomrot mass after a set period of time, then expire shortly after.
   5: Player unseals the mass at a Cauldron of Unveiling, which then produces the random weapon.
   
-  Alkali Pods take 3~5 days to produce a mass. They expire after 5.25 days. With all time combined, a weapon can be acquired every 8~10 days. They cannot be harvested.
-  Rotvine Mass should be indestructable, but will expire after 7 days.
-  Rotvine weapons only last 7, 9, or 11 days. In exchange for their low life, they can inflict poison and necrosis, are handled by the tree, and double as melee weapons.
-    -Matured Rotvines (Bloom) last 11, 13, or 15 days, and cause killed enemies to produce various plants on death, ranging from cosmetic to productive.-->
+  Bloomrot Pods take 3~5 days to produce a mass. They expire after 5.25 days. With all time combined, a weapon can be acquired every 8~10 days. They cannot be harvested.
+  Bloomrot Mass should be indestructable, but will expire after 7 days.
+  Bloomrot weapons only last 7, 9, or 11 days. In exchange for their low life, they can inflict poison and necrosis, are handled by the tree, and double as melee weapons.
+    -Matured last 11, 13, or 15 days, and cause killed enemies to produce various plants on death, ranging from cosmetic to productive.-->
   <ThingDef ParentName="PlantBaseNonEdible">
-    <defName>TS_AlkaliTree</defName>
-    <label>Alkali Tree</label>
+    <defName>TS_BloomrotTree</defName>
+    <label>Bloomrot Tree</label>
     <description>A powerful, bioengineered tree, designed to utlilize both life and death as a medium for Terratech. Ultimately produces Alkali weapons, the second generation of Terraweapons.
 \n\nThe roots and vines of an Alkali Tree spread over a very wide area, and will eventually create a distinct pod on highly fertil`e terrain. After a period of time, it will produce a random sealed Rotvine weapon, which can be unsealed at a Terraforge.</description>
     <graphicData>

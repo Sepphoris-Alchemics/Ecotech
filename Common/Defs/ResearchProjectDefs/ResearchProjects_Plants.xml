@@ -218,7 +218,7 @@
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>TS_GlowsapBasinResearch</li>
-      <li>TS_TerravatGlowsap</li>
+      <li>TS_TerravatBasic</li>
     </requiredResearchFacilities>
   <researchViewX>5.00</researchViewX>
   <researchViewY>0.00</researchViewY>
@@ -241,7 +241,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>TS_GlowsapBasinResearch</li>
-      <li>TS_TerravatGlowsap</li>
+      <li>TS_TerravatBasic</li>
     </requiredResearchFacilities>
   <researchViewX>5.00</researchViewX>
   <researchViewY>1.00</researchViewY>

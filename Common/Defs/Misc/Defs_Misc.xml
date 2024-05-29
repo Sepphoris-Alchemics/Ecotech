@@ -30,7 +30,7 @@
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>TS_TerravatGlowsap</li>
+      <li>TS_TerravatBasic</li>
     </fixedBillGiverDefs>
     <verb>extract seed at</verb>
     <gerund>extracting seed at</gerund>

@@ -38,8 +38,8 @@ Tier 4 surge seeds: 20
     <pathCost>14</pathCost>
     <maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>
     <plant>
-      <fertilityMin>1</fertilityMin>
-      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <fertilityMin>70</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
       <growMinGlow>0.3</growMinGlow>
       <harvestWork>300</harvestWork>
       <harvestedThingDef>TS_Knife</harvestedThingDef>

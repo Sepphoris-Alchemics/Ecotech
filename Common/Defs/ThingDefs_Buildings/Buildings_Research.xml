@@ -49,7 +49,7 @@
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
-          <li>TS_TerravatGlowsap</li>
+          <li>TS_TerravatBasic</li>
           <li>TS_GlowsapBasinResearch</li>
           <!--<li>TS_DarksapBasinResearch</li>-->
         </linkableFacilities>

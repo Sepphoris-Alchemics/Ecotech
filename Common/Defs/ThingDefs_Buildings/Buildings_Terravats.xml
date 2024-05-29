@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="BenchBase">
-    <defName>TS_TerravatGlowsap</defName>
-    <label>Glowsap Terravat</label>
-    <description>An organic wooden growth that sustains an accessible glowsap chamber, designed for Terratech study, experimentation, and creations. This structure is critical for utilizing Terratech that the planet can't support, or what we do not yet understand.
-\n\nOver time some of it's capabilities may be able to be performed in other, more efficient manners. In these cases, the Terravat will simply stop supporting these redundant procedures.</description>
-    <thingClass>Building_WorkTable</thingClass>
+  <ThingDef ParentName="BuildingBase">
+    <defName>TS_TerravatBasic</defName>
+    <label>Small Terravat</label>
+    <description>An organic wooden growth that sustains an accessible sap chamber, designed for Terratech experimentation and evolution. Twice a season, this vat will utilize the glowsap within, and will "advance" the various items within into another form. This unlocks security measures that Terratech might employ, or even advance it into a unique, more powerful variant.</description>
     <size>(1,1)</size>
-    <costList>
-      <WoodLog>80</WoodLog>
-      <TS_Glowsap>30</TS_Glowsap>
-    </costList>
-    <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Building/Terravats/VatGlowsap</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -25,51 +18,37 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <uiIconScale>0.5</uiIconScale>
-    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
-    <researchPrerequisites>
-      <li>TS_Terravats</li>
-    </researchPrerequisites>
-    <castEdgeShadows>false</castEdgeShadows>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>3400</WorkToBuild>
-      <Mass>60</Mass>
-      <Flammability>3</Flammability>
-      <Beauty>1.5</Beauty>
-      <Cleanliness>1</Cleanliness>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
     </statBases>
-    <interactionCellIcon IsNull="True"/>
-    <minifiedDef IsNull="True" />
-    <thingCategories IsNull="True"/>
+    <costList>
+      <WoodLog>80</WoodLog>
+      <TS_Glowsap>30</TS_Glowsap>
+    </costList>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
-    <!--<defaultPlacingRot>South</defaultPlacingRot>-->
     <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <designationCategory>TerratechDesignation</designationCategory>
-    <uiOrder>2630</uiOrder>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
-    <recipes>
-      <li>TS_ExtractPrimaStakeTurretSeed</li>
-      <li>TS_ExtractPrimaSMGTurretSeed</li>
-      <li>TS_ExtractPrimaShotgunTurretSeed</li>
-      <li>TS_PrimaTurretSeedApexToStake</li>
-      <li>TS_PrimaTurretSeedApexToSMG</li>
-      <li>TS_PrimaTurretSeedApexToShotgun</li>
-    </recipes>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>TS_Terravats</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <!--<thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>-->
     <surfaceType>Item</surfaceType>
     <killedLeavings>
       <WoodLog>12</WoodLog>
@@ -77,7 +56,14 @@
     <building>
       <deconstructible>false</deconstructible>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>3.9</glowRadius>
@@ -93,22 +79,29 @@
       <li Class="CompProperties_Art">
         <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
       </li>
-      <li Class="CompProperties_Refuelable">
-        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>15</initialConfigurableTargetFuelLevel>
-        <fuelConsumptionRate>0.25</fuelConsumptionRate>
-        <fuelCapacity>30</fuelCapacity>
-        <fuelFilter>
-          <thingDefs>
-            <li>TS_Glowsap</li>
-          </thingDefs>
-        </fuelFilter>
-        <initialFuelPercent>0.5</initialFuelPercent>
-        <fuelLabel>Glowsap</fuelLabel>
-        <fuelGizmoLabel>Healthy glowsap</fuelGizmoLabel>
-        <outOfFuelMessage>Requires Glowsap replacement</outOfFuelMessage>
-        <showFuelGizmo>true</showFuelGizmo>
-        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      <li Class="Terrasecurity.ThingCompProperties_MonoThingContainer">
+        <!-- max fuel-->
+        <stackLimit>50</stackLimit>
+        <drawContainedThing>false</drawContainedThing>
+      </li>
+      <li Class="Terrasecurity.ThingCompProperties_SlottedThingTransformer">
+        <!-- this *might* look okay, but probably won't. Will probably only ever draw slot 0 -->
+        <drawContainedThing>false</drawContainedThing>
+        <baseFuelColor>(56,204,220)</baseFuelColor>
+        <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
+        <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
+        <!-- how long it takes a pawn to put a thing into a slot -->
+        <timeToInsertTicks>100</timeToInsertTicks>
+        <!-- the ticks to wait for until a transformation cycle starts (does NOT include cycle duration! -->
+        <transformationCycleIntervalTicks>3000</transformationCycleIntervalTicks>
+        <!-- the ticks to lock input/output for while doing a transformation -->
+        <transformationCycleTicks>1500</transformationCycleTicks>
+        <!-- each thingDef listed here must have a ThingDefExtension_TransformerRecipe on it -->
+        <validFuelThings>
+          <li>TS_Glowsap</li>
+        </validFuelThings>
+        <!-- gizmo width adapts to the slot count automatically -->
+        <transformerSlots>2</transformerSlots>
       </li>
     </comps>
   </ThingDef>

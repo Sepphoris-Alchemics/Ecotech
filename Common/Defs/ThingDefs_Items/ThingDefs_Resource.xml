@@ -191,8 +191,7 @@ Max lifespan decreased by 20% (rounded down)</description>
     <label>Sap of Vivication</label>
     <description>A vial of refined, potent terrasap, named due to it's unique features. These unique features can be applied in a multitude of ways:
 \n\nReplenishes the life force of turrets
-Replenishes the lifespan of any Terraweapon
-    </description>
+Replenishes the lifespan of any Terraweapon</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Sunsap</texPath>
