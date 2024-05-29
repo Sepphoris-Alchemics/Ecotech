@@ -327,7 +327,7 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
-            Scribe.EnterNode(nameof(ThingComp_ThingConverter));
+            Scribe.EnterNode(this.GetType().Name);
             base.PostExposeData();
             Scribe_Values.Look(ref converstionStartTick, nameof(converstionStartTick));
             Scribe_Values.Look(ref inputCount, nameof(inputCount));

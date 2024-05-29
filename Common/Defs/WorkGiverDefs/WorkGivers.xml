@@ -55,7 +55,20 @@
     </requiredCapacities>
     <canBeDoneByMechs>true</canBeDoneByMechs>
   </WorkGiverDef>
-  
+
+  <WorkGiverDef>
+    <defName>TS_FillSlottedThingTransformer</defName>
+    <label>fill transformer</label>
+    <giverClass>Terrasecurity.WorkGiver_FillSlottedThingTransformer</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>true</canBeDoneByMechs>
+  </WorkGiverDef>
   
 
 </Defs>

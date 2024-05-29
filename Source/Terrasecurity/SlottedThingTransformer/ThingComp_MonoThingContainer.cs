@@ -16,6 +16,8 @@ namespace Terrasecurity
         public ThingDef CurrentlyAcceptedThingDef => currentlyAcceptedThingDef;
         public bool canCurrentlyReceiveThings = true;
 
+        public ThingCompProperties_MonoThingContainer MonoContainerProps => base.props as ThingCompProperties_MonoThingContainer;
+
         protected override ThingRequest ThingRequest => currentlyAcceptedThingDef == null ? ThingRequest.ForUndefined() : ThingRequest.ForDef(currentlyAcceptedThingDef);
 
         public override bool Accepts(Thing thing)
@@ -42,11 +44,21 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
-            Scribe.EnterNode(nameof(ThingCompProperties_MonoThingContainer));
+            Scribe.EnterNode(this.GetType().Name);
             base.PostExposeData();
             Scribe_Defs.Look(ref currentlyAcceptedThingDef, nameof(currentlyAcceptedThingDef));
             Scribe_Values.Look(ref canCurrentlyReceiveThings, nameof(canCurrentlyReceiveThings));
             Scribe.ExitNode();
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            string contentsString = "Nothing".Translate();
+            if (!base.Empty)
+            {
+                contentsString = base.LabelCapWithTotalCount;
+            }
+            return $"{MonoContainerProps.contentsTranslationKey.Translate(contentsString.Named("CONTENTS"))}";
         }
 
         public override AcceptanceReport ShouldFill(Pawn pawn)

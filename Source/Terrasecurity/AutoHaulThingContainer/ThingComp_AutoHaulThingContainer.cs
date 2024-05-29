@@ -20,7 +20,7 @@ namespace Terrasecurity
 
         public override void PostExposeData()
         {
-            Scribe.EnterNode(nameof(ThingComp_AutoHaulThingContainer));
+            Scribe.EnterNode(this.GetType().Name);
             base.PostExposeData();
             Scribe_Values.Look(ref canFill, nameof(canFill), true);
             Scribe_Values.Look(ref canEmpty, nameof(canEmpty), true);
@@ -113,7 +113,7 @@ namespace Terrasecurity
             return "NotScheduledToEmpty";
         }
 
-        public Thing FindHaulThingFor(Pawn pawn)
+        public virtual Thing FindHaulThingFor(Pawn pawn)
         {
             TraverseParms traverseParms = TraverseParms.For(pawn);
             Thing foundThing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest, PathEndMode.ClosestTouch, traverseParms, validator: HaulThingValidator);

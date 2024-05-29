@@ -171,7 +171,7 @@ namespace Terrasecurity
             slotRect = slotRect.ContractedBy(slotPadding);
             Widgets.DrawBoxSolidWithOutline(slotRect, slotBackgroundColor, slotBorderColor);
             slotRect = slotRect.ContractedBy(slotPadding);
-            TooltipHandler.TipRegion(slotRect, "Terrasecurity_Gizmo_SlottedThingConverter_SlotDescription".Translate(index.Named("SLOTINDEX")));
+            TooltipHandler.TipRegion(slotRect, "Terrasecurity_Gizmo_SlottedThingConverter_SlotDescription".Translate((index + 1).Named("SLOTINDEX")));
             Thing slottedThing = transformerComp.slottedThings[index];
 
             if (slottedThing == null)
@@ -237,7 +237,7 @@ namespace Terrasecurity
                 }
                 int targetSlot = i;
                 Action swapAction = () => transformerComp.SwapSlots(slotIndex, targetSlot);
-                options.Add(new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot".Translate(slotIndex.Named("FROM"), targetSlot.Named("TO")), swapAction));
+                options.Add(new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot".Translate((slotIndex+1).Named("FROM"), (targetSlot+1).Named("TO")), swapAction));
             }
 
             foreach (FloatMenuOption option in options)
@@ -270,31 +270,33 @@ namespace Terrasecurity
 
             Action<LocalTargetInfo> targetAction = (LocalTargetInfo target) =>
             {
-                Job job = JobMaker.MakeJob(Common.insertIntoSlottedTransformerJobDef, target.Thing, transformerComp.parent);
-                job.count = 1;
-                BeginPawnTargeting(job);
+                Designation designation = new Designation(target, Common.installInSlottedThingTransformerDesignation);
+                target.Thing.Map.designationManager.AddDesignation(designation);
+                //Job job = JobMaker.MakeJob(Common.insertIntoSlottedTransformerJobDef, target.Thing, transformerComp.parent);
+                //job.count = 1;
+                //BeginPawnTargeting(job);
             };
 
             Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Terrasecurity_Gizmo_SlottedThingConverter_SelectThingForSlot".Translate());
             Find.Targeter.BeginTargeting(targetParameters, targetAction, null, null, onGuiAction: guiAction);
         }
 
-        private void BeginPawnTargeting(Job jobToGive)
-        {
-            TargetingParameters parameters = new TargetingParameters()
-            {
-                onlyTargetColonists = true,
-                validator = (TargetInfo target) => target.Thing is Pawn pawn && transformerComp.parent.CanBeInteractedWithBy(pawn)
-            };
+        //private void BeginPawnTargeting(Job jobToGive)
+        //{
+        //    TargetingParameters parameters = new TargetingParameters()
+        //    {
+        //        onlyTargetColonists = true,
+        //        validator = (TargetInfo target) => target.Thing is Pawn pawn && transformerComp.parent.CanBeInteractedWithBy(pawn)
+        //    };
 
-            Action<LocalTargetInfo> targetAction = (LocalTargetInfo target) =>
-            {
-                target.Pawn.jobs.TryTakeOrderedJob(jobToGive);
-                Find.Targeter.StopTargeting();
-            };
-            Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Terrasecurity_Gizmo_SlottedThingConverter_SelectPawnForJob".Translate());
+        //    Action<LocalTargetInfo> targetAction = (LocalTargetInfo target) =>
+        //    {
+        //        target.Pawn.jobs.TryTakeOrderedJob(jobToGive);
+        //        Find.Targeter.StopTargeting();
+        //    };
+        //    Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Terrasecurity_Gizmo_SlottedThingConverter_SelectPawnForJob".Translate());
 
-            Find.Targeter.BeginTargeting(parameters, targetAction, null, null, onGuiAction: guiAction);
-        }
+        //    Find.Targeter.BeginTargeting(parameters, targetAction, null, null, onGuiAction: guiAction);
+        //}
     }
 }

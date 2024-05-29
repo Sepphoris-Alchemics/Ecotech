@@ -24,6 +24,7 @@ namespace Terrasecurity
         // the ticks to lock input/output for while doing a transformation
         int transformationCycleTicks = 300;
         public int TransformationCycleTicks => transformationCycleTicks;
+        public string contentsTranslationKey = "Contents";
 
         Texture2D _baseFuelTexture;
         public Texture2D BaseFuelTexture

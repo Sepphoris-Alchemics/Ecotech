@@ -14,7 +14,7 @@ using static UnityEngine.GraphicsBuffer;
 
 namespace Terrasecurity
 {
-    public class ThingComp_SlottedThingTransformer : CompThingContainer
+    public class ThingComp_SlottedThingTransformer : ThingComp_AutoHaulThingContainer
     {
         [Unsaved]
         public ThingComp_MonoThingContainer fuelStorageComp;
@@ -24,6 +24,8 @@ namespace Terrasecurity
         public bool AllowsInteractions => !isTransforming;
         int transformationStartTick = -1;
         int transformationEndTick = -1;
+
+        protected override ThingRequest ThingRequest => ThingRequest.ForGroup(ThingRequestGroup.Weapon);
 
         public override void PostExposeData()
         {
@@ -63,6 +65,35 @@ namespace Terrasecurity
                     slottedThings.Add(null);
                 }
             }
+            ProgressCycle();
+        }
+
+        public override Thing FindHaulThingFor(Pawn pawn)
+        {
+            return pawn.Map.designationManager.SpawnedDesignationsOfDef(Common.installInSlottedThingTransformerDesignation)
+                .Select(des => des.target.Thing)
+                .Where(t => !t.IsForbidden(pawn) && pawn.CanReach(t, Verse.AI.PathEndMode.ClosestTouch, Danger.Deadly))
+                .MinBy(t => t.Position.DistanceToSquared(pawn.Position));
+        }
+
+        public override int HaulCountFor(Thing thing)
+        {
+            return 1;
+        }
+
+        public override AcceptanceReport ShouldFill(Pawn pawn)
+        {
+            AcceptanceReport baseReport = base.ShouldFill(pawn);
+            if (!baseReport)
+            {
+                return baseReport;
+            }
+            bool areAllSlowsFilled = slottedThings.All(slot => slot != null);
+            if (areAllSlowsFilled)
+            {
+                return false;
+            }
+            return true;
         }
 
         public AcceptanceReport CanTake(Thing thing)
@@ -127,7 +158,12 @@ namespace Terrasecurity
         public override void CompTickRare()
         {
             base.CompTickRare();
-            if(transformationStartTick == -1)
+            ProgressCycle();
+        }
+
+        private void ProgressCycle()
+        {
+            if (transformationStartTick == -1)
             {
                 transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
             }
@@ -174,6 +210,7 @@ namespace Terrasecurity
                 return;
             }
             ThingDefExtension_TransformerRecipe recipeExtension = CurrentFuelDef.GetModExtension<ThingDefExtension_TransformerRecipe>();
+            bool anyThingTransformed = false;
             for (int i = 0; i < slottedThings.Capacity; i++)
             {
                 //Log.Message($"Trying to retrieve index {i} for list count {slottedThings.Count} list capacity {slottedThings.Capacity}");
@@ -184,23 +221,37 @@ namespace Terrasecurity
                 }
                 if(recipeExtension.TryDoWork(this, slotThing, out Thing producedThing, out int consumedFuel))
                 {
-                    GenPlace.TryPlaceThing(producedThing, parent.Position, parent.Map, ThingPlaceMode.Near);
+                    GenPlace.TryPlaceThing(producedThing, parent.Position, parent.Map, ThingPlaceMode.Near, nearPlaceValidator: CanPlaceRecipeProductOn);
                     slottedThings[i] = null;
                     //Log.Message($"Slot {i} consumed fuel: {consumedFuel}");
                     fuelStorageComp.ContainedThing.stackCount -= consumedFuel;
+                    anyThingTransformed = true;
                 }
+            }
+            if (anyThingTransformed)
+            {
+                Messages.Message("Terrasecurity_Message_ThingTransformerFinishedTransformation".Translate(parent.LabelCap.Named("TRANSFORMER")), new LookTargets(parent), MessageTypeDefOf.NeutralEvent);
             }
             RecacheFuelCost();
         }
 
+        private bool CanPlaceRecipeProductOn(IntVec3 pos)
+        {
+            return !parent.OccupiedRect().Contains(pos);
+        }
+
         public override string CompInspectStringExtra()
         {
-            string text = base.CompInspectStringExtra();
-            if(text != "")
+            string contentsString = "Nothing".Translate();
+            if (!base.Empty)
             {
-                text += "\n";
+                contentsString = string.Join(", ", slottedThings
+                    .Where(t => t != null)
+                    .Select(t => t.LabelCap));
             }
-            if(isTransforming)
+            string text = $"{TransformerProps.contentsTranslationKey.Translate(contentsString.Named("CONTENTS"))}";
+            text += "\n";
+            if (isTransforming)
             {
                 string formattedDuration = (transformationEndTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
                 text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));
@@ -210,6 +261,9 @@ namespace Terrasecurity
                 string formattedDuration = (transformationStartTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
                 text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));
             }
+            //text += $"\nstart: {transformationStartTick}";
+            //text += $"\nend: {transformationEndTick}";
+            //text += $"\ntransforming ? {isTransforming}";
             return text;
         }
 
@@ -251,5 +305,6 @@ namespace Terrasecurity
                 return _transformerGizmo;
             }
         }
+
     }
 }

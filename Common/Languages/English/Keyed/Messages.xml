@@ -2,4 +2,5 @@
 <LanguageData>
   <Terrasecurity_Message_LifespanAboutToExpire>Life span of {THING} is low.</Terrasecurity_Message_LifespanAboutToExpire>
   <Terrasecurity_Message_SpawnedThingFromThingSpawner>{SOURCE} has provided a new gift.</Terrasecurity_Message_SpawnedThingFromThingSpawner>
+  <Terrasecurity_Message_ThingTransformerFinishedTransformation>{TRANSFORMER} successfully transformed items.</Terrasecurity_Message_ThingTransformerFinishedTransformation>
 </LanguageData>
