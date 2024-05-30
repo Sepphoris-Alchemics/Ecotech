@@ -50,13 +50,22 @@ namespace Terrasecurity
             this.shouldEmpty = shouldEmpty;
         }
 
+        /// <summary>
+        /// The "Full" property sadly cannot be overwritten, so a new method is in place that allows subclasses to define their own fullness that is not limited to single-def containers
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool IsFull()
+        {
+            return Full;
+        }
+
         public virtual AcceptanceReport ShouldFill(Pawn pawn)
         {
             if (!canFill)
             {
                 return "CurrentlyNotFillable";
             }
-            if (Full)
+            if (IsFull())
             {
                 return "AlreadyFull";
             }

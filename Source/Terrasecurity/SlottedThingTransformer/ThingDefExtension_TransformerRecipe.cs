@@ -39,6 +39,10 @@ namespace Terrasecurity
         {
             return recipes.Any(recipe => recipe.AppliesTo(thing));
         }
+        public bool AnyRecipeAppliesTo(ThingDef thingDef)
+        {
+            return recipes.Any(recipe => recipe.AppliesTo(thingDef));
+        }
 
         public int FuelCostFor(Thing thing)
         {

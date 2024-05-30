@@ -11,7 +11,7 @@ namespace Terrasecurity
 {
     public class WorkGiver_FillSlottedThingTransformer : WorkGiver_FillAutoHaulThingContainer
     {
-        override protected bool IsValidWorkBuilding(Building building)
+        override protected bool IsValidWorkBuilding(Building building, Pawn pawn)
         {
             if (!building.def.HasAssignableCompFrom(typeof(ThingComp_SlottedThingTransformer)))
             {
@@ -22,8 +22,10 @@ namespace Terrasecurity
             {
                 return false;
             }
-            if (containerComp.Full)
+            AcceptanceReport report = containerComp.ShouldFill(pawn);
+            if (!report)
             {
+                Log.Message($"{building} is not valid: {report.Reason}");
                 return false;
             }
             return true;

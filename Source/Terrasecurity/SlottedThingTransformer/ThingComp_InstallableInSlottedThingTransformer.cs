@@ -66,7 +66,7 @@ namespace Terrasecurity
             {
                 return false;
             }
-            if (!comp.CanTake(parent))
+            if (!comp.Accepts(parent))
             {
                 return false;
             }

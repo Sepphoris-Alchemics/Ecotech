@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using Mono.Security.Protocol.Tls;
 using RimWorld;
+using RimWorld.BaseGen;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
@@ -88,29 +89,33 @@ namespace Terrasecurity
             {
                 return baseReport;
             }
-            bool areAllSlowsFilled = slottedThings.All(slot => slot != null);
-            if (areAllSlowsFilled)
+            if (isTransforming)
+            {
+                return "CurrentlyTransforming";
+            }
+            return true;
+        }
+
+        public override bool Accepts(ThingDef thingDef)
+        {
+            if (CurrentFuelCount == 0)
+            {
+                return false;
+            }
+            if (!FuelRecipes.AnyRecipeAppliesTo(thingDef))
+            {
+                return false;
+            }
+            if(!slottedThings.Any(slot => slot == null))
             {
                 return false;
             }
             return true;
         }
 
-        public AcceptanceReport CanTake(Thing thing)
+        public override bool IsFull()
         {
-            if (!base.Accepts(thing))
-            {
-                return "base.Accepts does not allow";
-            }
-            if(CurrentFuelCount == 0)
-            {
-                return "NoFuel";
-            }
-            if (!FuelRecipes.AnyRecipeAppliesTo(thing))
-            {
-                return "NoRecipeApplies";
-            }
-            return true;
+            return slottedThings.All(slot => slot != null);
         }
 
         public AcceptanceReport TryTake(Thing thing)
