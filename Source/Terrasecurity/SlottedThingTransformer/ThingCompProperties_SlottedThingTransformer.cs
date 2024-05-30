@@ -21,10 +21,14 @@ namespace Terrasecurity
         // the ticks to wait for until a transformation cycle starts (does NOT include cycle duration!)
         int transformationCycleIntervalTicks = 2000;
         public int TransformationCycleIntervalTicks => transformationCycleIntervalTicks;
+        int transformationCycleIntervalModulo = -1;
+        public int TransformationCycleIntervalModulo => transformationCycleIntervalModulo;
         // the ticks to lock input/output for while doing a transformation
         int transformationCycleTicks = 300;
         public int TransformationCycleTicks => transformationCycleTicks;
         public string contentsTranslationKey = "Contents";
+        int cycleInspectStringRelativeToAbsoluteThreshold = -1;
+        public int CycleInspectStringRelativeToAbsoluteThreshold => cycleInspectStringRelativeToAbsoluteThreshold;
 
         Texture2D _baseFuelTexture;
         public Texture2D BaseFuelTexture
@@ -68,7 +72,10 @@ namespace Terrasecurity
             {
                 yield return error;
             }
-
+            if(transformationCycleTicks != -1 && transformationCycleIntervalModulo != -1)
+            {
+                yield return $"Cannot use {nameof(transformationCycleTicks)} and {nameof(transformationCycleIntervalModulo)} at the same time. Either of these values must be set to -1.";
+            }
             if (validFuelThings.NullOrEmpty())
             {
                 yield return $"List \"{nameof(validFuelThings)}\" is null or empty";

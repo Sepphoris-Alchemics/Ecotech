@@ -170,7 +170,7 @@ namespace Terrasecurity
         {
             if (transformationStartTick == -1)
             {
-                transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
+                SetNextTransformationStartTick();
             }
             if (isTransforming)
             {
@@ -202,9 +202,21 @@ namespace Terrasecurity
         {
             isTransforming = false;
             DoTransformations();
-            transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
+            SetNextTransformationStartTick();
             fuelStorageComp.SetCanEmpty(true);
             fuelStorageComp.SetCanFill(true);
+        }
+
+        private void SetNextTransformationStartTick()
+        {
+            if(TransformerProps.TransformationCycleIntervalTicks != -1)
+            {
+                transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
+            }
+            else
+            {
+                transformationStartTick = GenTicks.TicksGame + (TransformerProps.TransformationCycleIntervalModulo - (GenTicks.TicksGame % TransformerProps.TransformationCycleIntervalModulo));
+            }
         }
 
         public void DoTransformations()
@@ -256,20 +268,35 @@ namespace Terrasecurity
             }
             string text = $"{TransformerProps.contentsTranslationKey.Translate(contentsString.Named("CONTENTS"))}";
             text += "\n";
-            if (isTransforming)
-            {
-                string formattedDuration = (transformationEndTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
-                text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));
-            }
-            else
-            {
-                string formattedDuration = (transformationStartTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
-                text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));
-            }
+            text += GetCurrentCycleDurationText();
             //text += $"\nstart: {transformationStartTick}";
             //text += $"\nend: {transformationEndTick}";
             //text += $"\ntransforming ? {isTransforming}";
             return text;
+        }
+
+        private string GetCurrentCycleDurationText()
+        {
+            int cycleEndTicksAbsolute = isTransforming ? transformationEndTick : transformationStartTick;
+            int cycleEndTicksRelative = cycleEndTicksAbsolute - GenTicks.TicksGame;
+
+            bool shouldDisplayTimeRelative = TransformerProps.CycleInspectStringRelativeToAbsoluteThreshold != -1
+                && cycleEndTicksRelative < TransformerProps.CycleInspectStringRelativeToAbsoluteThreshold;
+
+            string formattedDuration;
+            if (shouldDisplayTimeRelative)
+            {
+                formattedDuration = cycleEndTicksRelative.ToStringTicksToPeriodVerbose();
+            }
+            else
+            {
+                formattedDuration = GenDate.QuadrumDateStringAt(GenDate.TickGameToAbs(cycleEndTicksAbsolute), Find.WorldGrid.LongLatOf(parent.Map.Tile).x);
+            }
+
+            string translationKey = isTransforming ? "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn" : "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn";
+            translationKey += shouldDisplayTimeRelative ? "_Relative" : "_Absolute";
+            
+            return translationKey.Translate(formattedDuration.Named("FORMATTEDDURATION"));
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()

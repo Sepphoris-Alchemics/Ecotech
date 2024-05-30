@@ -15,7 +15,7 @@ namespace Terrasecurity
         {
             var buildings = pawn.Map.listerBuildings.allBuildingsColonist
                 .Where(building => IsValidWorkBuilding(building, pawn));
-            Log.Message($"work things: {string.Join(", ", buildings)}");
+            //Log.Message($"work things: {string.Join(", ", buildings)}");
             return buildings;
         }
 

@@ -25,7 +25,7 @@ namespace Terrasecurity
             AcceptanceReport report = containerComp.ShouldFill(pawn);
             if (!report)
             {
-                Log.Message($"{building} is not valid: {report.Reason}");
+                //Log.Message($"{building} is not valid: {report.Reason}");
                 return false;
             }
             return true;
@@ -52,7 +52,7 @@ namespace Terrasecurity
             }
             ThingComp_SlottedThingTransformer transformerComp = thingWithComps.GetComp<ThingComp_SlottedThingTransformer>();
             AcceptanceReport fillReport = transformerComp.ShouldFill(pawn);
-            Log.Message($"Report on {t}: {fillReport.Reason}");
+            //Log.Message($"Report on {t}: {fillReport.Reason}");
             if (!fillReport)
             {
                 JobFailReason.Is(fillReport.Reason);
