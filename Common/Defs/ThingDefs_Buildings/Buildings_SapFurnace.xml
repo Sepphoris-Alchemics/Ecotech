@@ -3,7 +3,7 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_TerravatBasic</defName>
+    <defName>TS_DebugTransformer</defName>
     <label>Sap Forge</label>
     <description>Your text here.</description>
     <graphicData>
@@ -75,8 +75,6 @@
           That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
         -->
         <transformationCycleIntervalModulo>300000</transformationCycleIntervalModulo>
-        <!-- the ticks to lock input/output for while doing a transformation -->
-        <transformationCycleTicks>1500</transformationCycleTicks>
         <validFuelThings>
           <li>TS_Glowsap</li>
         </validFuelThings>
