@@ -63,15 +63,15 @@ namespace Terrasecurity
         {
             if (!canFill)
             {
-                return "CurrentlyNotFillable";
+                return "Terrasecurity_FailureReason_CurrentlyNotFillable".Translate();
             }
             if (IsFull())
             {
-                return "AlreadyFull";
+                return "Terrasecurity_FailureReason_AlreadyFull".Translate();
             }
             if (ThingRequest.IsUndefined)
             {
-                return "NoThingRequested";
+                return "Terrasecurity_FailureReason_NoThingRequested".Translate();
             }
             AcceptanceReport baseReport = parent.CanBeInteractedWithBy(pawn);
             if (!baseReport)
@@ -81,11 +81,11 @@ namespace Terrasecurity
             Thing fillThing = FindHaulThingFor(pawn);
             if(fillThing == null)
             {
-                return "NoFillThing";
+                return "Terrasecurity_FailureReason_NoFillThing".Translate();
             }
             if (ShouldEmpty(pawn, false))
             {
-                return "ShouldBeEmptied";
+                return "Terrasecurity_FailureReason_ShouldBeEmptied".Translate();
             }
             return true;
         }
@@ -94,11 +94,11 @@ namespace Terrasecurity
         {
             if (!canEmpty)
             {
-                return "CurrentlyNotEmptiable";
+                return "Terrasecurity_FailureReason_CurrentlyNotEmptiable".Translate();
             }
             if (Empty)
             {
-                return "AlreadyEmpty";
+                return "Terrasecurity_FailureReason_AlreadyEmpty".Translate();
             }
             if (recheckBaseInteractibility)
             {
@@ -119,7 +119,7 @@ namespace Terrasecurity
             {
                 return true;
             }
-            return "NotScheduledToEmpty";
+            return "Terrasecurity_FailureReason_NotScheduledToEmpty".Translate();
         }
 
         public virtual Thing FindHaulThingFor(Pawn pawn)

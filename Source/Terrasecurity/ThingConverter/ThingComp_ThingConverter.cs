@@ -52,23 +52,23 @@ namespace Terrasecurity
         {
             if (isCurrentlyConverting)
             {
-                return "CurrentlyConverting";
+                return "Terrasecurity_FailureReason_CurrentlyConverting".Translate();
             }
             if (!(parent is Building building))
             {
-                return "NotABuilding";
+                return "Terrasecurity_FailureReason_NotABuilding".Translate();
             }
             if (pawn.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) != null)
             {
-                return "DesignatedForDeconstruct";
+                return "Terrasecurity_FailureReason_DesignatedForDeconstruct".Translate();
             }
             if (building.IsForbidden(pawn))
             {
-                return "IsForbidden";
+                return "Terrasecurity_FailureReason_IsForbidden".Translate();
             }
             if (!pawn.CanReserve(building))
             {
-                return "CannotReserve";
+                return "Terrasecurity_FailureReason_CannotReserve".Translate();
             }
 
             return true;
@@ -85,16 +85,16 @@ namespace Terrasecurity
             }
             if (!outputContents.NullOrEmpty())
             {
-                return "NeedsToBeEmptied";
+                return "Terrasecurity_FailureReason_NeedsToBeEmptied".Translate();
             }
             if (inputCount >= Props.InputThing.count)
             {
-                return "AlreadyFull";
+                return "Terrasecurity_FailureReason_AlreadyFull".Translate();
             }
             thingToFillWith = FindInputFor(pawn, out thingCount);
             if (thingToFillWith == null)
             {
-                return "NoItemToFillWith";
+                return "Terrasecurity_FailureReason_NoFillThing".Translate();
             }
             return true;
         }
@@ -158,11 +158,11 @@ namespace Terrasecurity
         {
             if (isCurrentlyConverting)
             {
-                return "AlreadyConverting";
+                return "Terrasecurity_FailureReason_AlreadyConverting".Translate();
             }
             if (!ContainsAllThingsRequiredForConversion)
             {
-                return "NotContainingRequiredThings";
+                return "Terrasecurity_FailureReason_NotContainingRequiredThings".Translate();
             }
             isCurrentlyConverting = true;
             converstionStartTick = GenTicks.TicksGame;
@@ -173,7 +173,7 @@ namespace Terrasecurity
         {
             if (thing.def != Props.InputThing.thingDef)
             {
-                return "InvalidThingDef";
+                return "Terrasecurity_FailureReason_InvalidThingDef".Translate();
             }
             int requiredCount = Props.InputThing.count - inputCount;
             int countToTake = Math.Min(requiredCount, thing.stackCount);

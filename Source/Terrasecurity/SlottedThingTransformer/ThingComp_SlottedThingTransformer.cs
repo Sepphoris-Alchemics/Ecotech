@@ -91,7 +91,7 @@ namespace Terrasecurity
             }
             if (isTransforming)
             {
-                return "CurrentlyTransforming";
+                return "Terrasecurity_FailureReason_CurrentlyTransforming".Translate();
             }
             return true;
         }
@@ -127,14 +127,14 @@ namespace Terrasecurity
                     bool isThingAddedToContainer = base.innerContainer.TryAddOrTransfer(thing);
                     if (!isThingAddedToContainer)
                     {
-                        return "CouldNotAddToInnerContainer";
+                        return "Terrasecurity_FailureReason_CouldNotAddToInnerContainer".Translate();
                     }
                     slottedThings[i] = thing;
                     RecacheFuelCost();
                     return true;
                 }
             }
-            return "NoSlotAvailable";
+            return "Terrasecurity_FailureReason_NoSlotAvailable".Translate();
         }
         public AcceptanceReport TryRemove(Thing thing)
         {
@@ -142,12 +142,12 @@ namespace Terrasecurity
             Thing removedThing = base.ContainedThing.SplitOff(1);
             if(removedThing == null)
             {
-                return "CouldNotRemoveOrSplitFromInnerContainer";
+                return "Terrasecurity_FailureReason_CouldNotRemoveOrSplitFromInnerContainer".Translate();
             }
             int slotIndex = slottedThings.IndexOf(thing);
             if(slotIndex < 0)
             {
-                return "CouldNotDetermineSlotIndex";
+                return "Terrasecurity_FailureReason_CouldNotDetermineSlotIndex".Translate();
             }
             slottedThings[slotIndex] = null;
             GenPlace.TryPlaceThing(removedThing, parent.Position, parent.Map, ThingPlaceMode.Near);

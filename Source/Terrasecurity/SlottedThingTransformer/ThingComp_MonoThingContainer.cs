@@ -70,7 +70,7 @@ namespace Terrasecurity
             }
             if(currentlyAcceptedThingDef == null)
             {
-                return "NoThingAccepted";
+                return "Terrasecurity_FailureReason_NoThingAccepted".Translate();
             }
             return true;
         }
