@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using static UnityEngine.GraphicsBuffer;
 
 namespace Terrasecurity
 {
@@ -14,9 +15,11 @@ namespace Terrasecurity
         static Texture2D noFuelIcon = ContentFinder<Texture2D>.Get("UI/Gizmo/NoFuelInTransformerIcon");
         ThingComp_SlottedThingTransformer transformerComp;
         float allSlotsWidth;
+        DesignationManager designationManager;
         const float fuelGaugeWidth = Gizmo.Height / 2;
         const float slotColumnWidth = Gizmo.Height;
         const int slotsPerColumn = 2;
+
         int SlotColumnCount => Mathf.CeilToInt((float)transformerComp.TransformerProps.transformerSlots / slotsPerColumn);
         public ThingComp_MonoThingContainer FuelStorageComp => transformerComp.fuelStorageComp;
 
@@ -24,6 +27,7 @@ namespace Terrasecurity
         {
             transformerComp = parent.GetComp<ThingComp_SlottedThingTransformer>();
             allSlotsWidth = SlotColumnCount * slotColumnWidth;
+            designationManager = transformerComp.parent.MapHeld.designationManager;
         }
 
         public override float GetWidth(float maxWidth)
@@ -265,13 +269,13 @@ namespace Terrasecurity
                 canTargetPawns = false,
                 canTargetItems = true,
                 mapObjectTargetsMustBeAutoAttackable = false,
-                validator = (TargetInfo target) => target.HasThing && transformerComp.HasFuel && transformerComp.FuelRecipes.AnyRecipeAppliesTo(target.Thing),
+                validator = CanTargetThing,
             };
 
             Action<LocalTargetInfo> targetAction = (LocalTargetInfo target) =>
             {
                 Designation designation = new Designation(target, Common.installInSlottedThingTransformerDesignation);
-                target.Thing.Map.designationManager.AddDesignation(designation);
+                designationManager.AddDesignation(designation);
                 //Job job = JobMaker.MakeJob(Common.insertIntoSlottedTransformerJobDef, target.Thing, transformerComp.parent);
                 //job.count = 1;
                 //BeginPawnTargeting(job);
@@ -279,6 +283,27 @@ namespace Terrasecurity
 
             Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Terrasecurity_Gizmo_SlottedThingConverter_SelectThingForSlot".Translate());
             Find.Targeter.BeginTargeting(targetParameters, targetAction, null, null, onGuiAction: guiAction);
+        }
+
+        private bool CanTargetThing(TargetInfo target)
+        {
+            if(!target.HasThing)
+            {
+                return false;
+            }
+            if(designationManager.DesignationOn(target.Thing) != null)
+            {
+                return false;
+            }
+            if (!transformerComp.HasFuel)
+            {
+                return false;
+            }
+            if (!transformerComp.FuelRecipes.AnyRecipeAppliesTo(target.Thing))
+            {
+                return false;
+            }
+            return true;
         }
 
         //private void BeginPawnTargeting(Job jobToGive)
