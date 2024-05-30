@@ -21,6 +21,6 @@
   <Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot>Swap slot {FROM} with slot {TO}</Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot>
   <Terrasecurity_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation>Cannot change fuel (currently reserved)</Terrasecurity_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation>
   
-  <Terrasecurity_Gizmo_InstallableInThingTransformer_Label>Install in transformer</Terrasecurity_Gizmo_InstallableInThingTransformer_Label>
+  <Terrasecurity_Gizmo_InstallableInThingTransformer_Label>Install in Terravat</Terrasecurity_Gizmo_InstallableInThingTransformer_Label>
   <Terrasecurity_Gizmo_InstallableInThingTransformer_Description>Select a valid transformer building with a fuel that accepts this thing.</Terrasecurity_Gizmo_InstallableInThingTransformer_Description>
 </LanguageData>

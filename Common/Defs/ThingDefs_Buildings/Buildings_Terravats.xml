@@ -46,9 +46,6 @@
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
-    <!--<thingCategories>
-      <li>BuildingsProduction</li>
-    </thingCategories>-->
     <surfaceType>Item</surfaceType>
     <killedLeavings>
       <WoodLog>12</WoodLog>
@@ -80,28 +77,23 @@
         <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
       </li>
       <li Class="Terrasecurity.ThingCompProperties_MonoThingContainer">
-        <!-- max fuel-->
         <stackLimit>50</stackLimit>
         <drawContainedThing>false</drawContainedThing>
+        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
       </li>
       <li Class="Terrasecurity.ThingCompProperties_SlottedThingTransformer">
-        <!-- this *might* look okay, but probably won't. Will probably only ever draw slot 0 -->
         <drawContainedThing>false</drawContainedThing>
+        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
         <baseFuelColor>(56,204,220)</baseFuelColor>
         <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
         <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
-        <!-- how long it takes a pawn to put a thing into a slot -->
         <timeToInsertTicks>100</timeToInsertTicks>
-        <!-- the ticks to wait for until a transformation cycle starts (does NOT include cycle duration! -->
         <transformationCycleIntervalTicks>3000</transformationCycleIntervalTicks>
-        <!-- the ticks to lock input/output for while doing a transformation -->
         <transformationCycleTicks>1500</transformationCycleTicks>
-        <!-- each thingDef listed here must have a ThingDefExtension_TransformerRecipe on it -->
         <validFuelThings>
           <li>TS_Glowsap</li>
         </validFuelThings>
-        <!-- gizmo width adapts to the slot count automatically -->
-        <transformerSlots>2</transformerSlots>
+        <transformerSlots>3</transformerSlots>
       </li>
     </comps>
   </ThingDef>
