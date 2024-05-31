@@ -2,8 +2,8 @@
 <!--Exists for fallback reasons, unchanged from origina besides defName-->
 
 <Defs>
-  <!--<ThingDef ParentName="BuildingBase">
-    <defName>TS_TerravatBasic</defName>
+  <ThingDef ParentName="BuildingBase">
+    <defName>TS_DebugTransformer</defName>
     <label>Sap Forge</label>
     <description>Your text here.</description>
     <graphicData>
@@ -50,18 +50,36 @@
       </li>
       <li Class="Terrasecurity.ThingCompProperties_SlottedThingTransformer">
         <drawContainedThing>false</drawContainedThing>
+        <!-- 
+          When the cycle is more than this many ticks away, the time is displayed in absolute format (on the xth), otherwise in relative (in x hours) 
+          Can be set to -1 or omitted to always display in relative format
+        -->
+        <cycleInspectStringRelativeToAbsoluteThreshold>60000</cycleInspectStringRelativeToAbsoluteThreshold>
         <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
         <baseFuelColor>(56,204,220)</baseFuelColor>
         <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
         <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
         <timeToInsertTicks>100</timeToInsertTicks>
         <transformationCycleIntervalTicks>3000</transformationCycleIntervalTicks>
-        <transformationCycleTicks>1500</transformationCycleTicks>
+        <!-- the ticks to wait for until a transformation cycle starts (does NOT include cycle duration! -->
+        <transformationCycleIntervalTicks>-1</transformationCycleIntervalTicks>
+        <!-- 
+          Can be used to target exact days.
+          !!If this field is used, transformationCycleIntervalTicks must not be used. Set to -1 or omit from the Def to use cycle interval ticks!!
+          The current in-game ticks are modulo'd and added with this value, which allows targeting an exact tick in a cycle.
+          E.g: 
+          - Current game tick: 7,572,374
+          - modulo set to 900,000 (ticks in a season) 
+          The following math is executed:
+          7572374 + (900000 - (7572374 % 900000)) = 8100000
+          That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
+        -->
+        <transformationCycleIntervalModulo>300000</transformationCycleIntervalModulo>
         <validFuelThings>
           <li>TS_Glowsap</li>
         </validFuelThings>
         <transformerSlots>3</transformerSlots>
       </li>
     </comps>
-  </ThingDef>-->
+  </ThingDef>
 </Defs>

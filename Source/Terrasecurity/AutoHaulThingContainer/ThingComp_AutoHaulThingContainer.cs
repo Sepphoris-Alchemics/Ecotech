@@ -50,19 +50,28 @@ namespace Terrasecurity
             this.shouldEmpty = shouldEmpty;
         }
 
+        /// <summary>
+        /// The "Full" property sadly cannot be overwritten, so a new method is in place that allows subclasses to define their own fullness that is not limited to single-def containers
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool IsFull()
+        {
+            return Full;
+        }
+
         public virtual AcceptanceReport ShouldFill(Pawn pawn)
         {
             if (!canFill)
             {
-                return "CurrentlyNotFillable";
+                return "Terrasecurity_FailureReason_CurrentlyNotFillable".Translate();
             }
-            if (Full)
+            if (IsFull())
             {
-                return "AlreadyFull";
+                return "Terrasecurity_FailureReason_AlreadyFull".Translate();
             }
             if (ThingRequest.IsUndefined)
             {
-                return "NoThingRequested";
+                return "Terrasecurity_FailureReason_NoThingRequested".Translate();
             }
             AcceptanceReport baseReport = parent.CanBeInteractedWithBy(pawn);
             if (!baseReport)
@@ -72,11 +81,11 @@ namespace Terrasecurity
             Thing fillThing = FindHaulThingFor(pawn);
             if(fillThing == null)
             {
-                return "NoFillThing";
+                return "Terrasecurity_FailureReason_NoFillThing".Translate();
             }
             if (ShouldEmpty(pawn, false))
             {
-                return "ShouldBeEmptied";
+                return "Terrasecurity_FailureReason_ShouldBeEmptied".Translate();
             }
             return true;
         }
@@ -85,11 +94,11 @@ namespace Terrasecurity
         {
             if (!canEmpty)
             {
-                return "CurrentlyNotEmptiable";
+                return "Terrasecurity_FailureReason_CurrentlyNotEmptiable".Translate();
             }
             if (Empty)
             {
-                return "AlreadyEmpty";
+                return "Terrasecurity_FailureReason_AlreadyEmpty".Translate();
             }
             if (recheckBaseInteractibility)
             {
@@ -110,7 +119,7 @@ namespace Terrasecurity
             {
                 return true;
             }
-            return "NotScheduledToEmpty";
+            return "Terrasecurity_FailureReason_NotScheduledToEmpty".Translate();
         }
 
         public virtual Thing FindHaulThingFor(Pawn pawn)

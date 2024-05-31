@@ -39,6 +39,10 @@ namespace Terrasecurity
         {
             return recipes.Any(recipe => recipe.AppliesTo(thing));
         }
+        public bool AnyRecipeAppliesTo(ThingDef thingDef)
+        {
+            return recipes.Any(recipe => recipe.AppliesTo(thingDef));
+        }
 
         public int FuelCostFor(Thing thing)
         {
@@ -92,7 +96,7 @@ namespace Terrasecurity
             consumedFuel = 0;
             if (transformerComp.CurrentFuelCount < fuelCount)
             {
-                return "NotEnoughFuel";
+                return "Terrasecurity_FailureReason_NotEnoughFuel".Translate();
             }
             if (!AppliesTo(inputThing))
             {
@@ -100,7 +104,7 @@ namespace Terrasecurity
             }
             if (!transformerComp.innerContainer.Remove(inputThing))
             {
-                return "CouldNotRemoveThingFromContainer";
+                return "Terrasecurity_FailureReason_CouldNotRemoveThingFromContainer".Translate();
             }
             inputThing.Destroy();
             producedThing = ExecuteRecipe(out consumedFuel);

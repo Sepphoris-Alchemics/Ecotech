@@ -39,8 +39,13 @@ namespace Terrasecurity
             yield return Toils_Goto.GotoThing(thingIndex, PathEndMode.ClosestTouch)
                 .FailOnDespawnedNullOrForbidden(thingIndex)
                 .FailOnSomeonePhysicallyInteracting(thingIndex);
-            yield return Toils_Haul.StartCarryThing(thingIndex, subtractNumTakenFromJobCount: true)
+            Toil startCarryToil = Toils_Haul.StartCarryThing(thingIndex, subtractNumTakenFromJobCount: true)
                 .FailOnDestroyedNullOrForbidden(thingIndex);
+            startCarryToil.AddPreInitAction(() =>
+            {
+                TargetThing.MapHeld.designationManager.TryRemoveDesignationOn(TargetThing, Common.installInSlottedThingTransformerDesignation);
+            });
+            yield return startCarryToil;
             yield return Toils_Goto.GotoThing(buildingIndex, PathEndMode.Touch);
             yield return Toils_General.Wait(TransformerComp.TransformerProps.timeToInsertTicks, buildingIndex)
                 .FailOnDestroyedNullOrForbidden(thingIndex)

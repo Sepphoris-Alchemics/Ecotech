@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using Mono.Security.Protocol.Tls;
 using RimWorld;
+using RimWorld.BaseGen;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
@@ -88,29 +89,33 @@ namespace Terrasecurity
             {
                 return baseReport;
             }
-            bool areAllSlowsFilled = slottedThings.All(slot => slot != null);
-            if (areAllSlowsFilled)
+            if (isTransforming)
+            {
+                return "Terrasecurity_FailureReason_CurrentlyTransforming".Translate();
+            }
+            return true;
+        }
+
+        public override bool Accepts(ThingDef thingDef)
+        {
+            if (CurrentFuelCount == 0)
+            {
+                return false;
+            }
+            if (!FuelRecipes.AnyRecipeAppliesTo(thingDef))
+            {
+                return false;
+            }
+            if(!slottedThings.Any(slot => slot == null))
             {
                 return false;
             }
             return true;
         }
 
-        public AcceptanceReport CanTake(Thing thing)
+        public override bool IsFull()
         {
-            if (!base.Accepts(thing))
-            {
-                return "base.Accepts does not allow";
-            }
-            if(CurrentFuelCount == 0)
-            {
-                return "NoFuel";
-            }
-            if (!FuelRecipes.AnyRecipeAppliesTo(thing))
-            {
-                return "NoRecipeApplies";
-            }
-            return true;
+            return slottedThings.All(slot => slot != null);
         }
 
         public AcceptanceReport TryTake(Thing thing)
@@ -122,14 +127,14 @@ namespace Terrasecurity
                     bool isThingAddedToContainer = base.innerContainer.TryAddOrTransfer(thing);
                     if (!isThingAddedToContainer)
                     {
-                        return "CouldNotAddToInnerContainer";
+                        return "Terrasecurity_FailureReason_CouldNotAddToInnerContainer".Translate();
                     }
                     slottedThings[i] = thing;
                     RecacheFuelCost();
                     return true;
                 }
             }
-            return "NoSlotAvailable";
+            return "Terrasecurity_FailureReason_NoSlotAvailable".Translate();
         }
         public AcceptanceReport TryRemove(Thing thing)
         {
@@ -137,12 +142,12 @@ namespace Terrasecurity
             Thing removedThing = base.ContainedThing.SplitOff(1);
             if(removedThing == null)
             {
-                return "CouldNotRemoveOrSplitFromInnerContainer";
+                return "Terrasecurity_FailureReason_CouldNotRemoveOrSplitFromInnerContainer".Translate();
             }
             int slotIndex = slottedThings.IndexOf(thing);
             if(slotIndex < 0)
             {
-                return "CouldNotDetermineSlotIndex";
+                return "Terrasecurity_FailureReason_CouldNotDetermineSlotIndex".Translate();
             }
             slottedThings[slotIndex] = null;
             GenPlace.TryPlaceThing(removedThing, parent.Position, parent.Map, ThingPlaceMode.Near);
@@ -165,7 +170,7 @@ namespace Terrasecurity
         {
             if (transformationStartTick == -1)
             {
-                transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
+                SetNextTransformationStartTick();
             }
             if (isTransforming)
             {
@@ -197,9 +202,21 @@ namespace Terrasecurity
         {
             isTransforming = false;
             DoTransformations();
-            transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
+            SetNextTransformationStartTick();
             fuelStorageComp.SetCanEmpty(true);
             fuelStorageComp.SetCanFill(true);
+        }
+
+        private void SetNextTransformationStartTick()
+        {
+            if(TransformerProps.TransformationCycleIntervalTicks != -1)
+            {
+                transformationStartTick = GenTicks.TicksGame + TransformerProps.TransformationCycleIntervalTicks;
+            }
+            else
+            {
+                transformationStartTick = GenTicks.TicksGame + (TransformerProps.TransformationCycleIntervalModulo - (GenTicks.TicksGame % TransformerProps.TransformationCycleIntervalModulo));
+            }
         }
 
         public void DoTransformations()
@@ -251,20 +268,35 @@ namespace Terrasecurity
             }
             string text = $"{TransformerProps.contentsTranslationKey.Translate(contentsString.Named("CONTENTS"))}";
             text += "\n";
-            if (isTransforming)
-            {
-                string formattedDuration = (transformationEndTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
-                text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));
-            }
-            else
-            {
-                string formattedDuration = (transformationStartTick - GenTicks.TicksGame).ToStringTicksToPeriodVerbose();
-                text += "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn".Translate(formattedDuration.Named("FORMATTEDDURATION"));
-            }
+            text += GetCurrentCycleDurationText();
             //text += $"\nstart: {transformationStartTick}";
             //text += $"\nend: {transformationEndTick}";
             //text += $"\ntransforming ? {isTransforming}";
             return text;
+        }
+
+        private string GetCurrentCycleDurationText()
+        {
+            int cycleEndTicksAbsolute = isTransforming ? transformationEndTick : transformationStartTick;
+            int cycleEndTicksRelative = cycleEndTicksAbsolute - GenTicks.TicksGame;
+
+            bool shouldDisplayTimeRelative = TransformerProps.CycleInspectStringRelativeToAbsoluteThreshold != -1
+                && cycleEndTicksRelative < TransformerProps.CycleInspectStringRelativeToAbsoluteThreshold;
+
+            string formattedDuration;
+            if (shouldDisplayTimeRelative)
+            {
+                formattedDuration = cycleEndTicksRelative.ToStringTicksToPeriodVerbose();
+            }
+            else
+            {
+                formattedDuration = GenDate.QuadrumDateStringAt(GenDate.TickGameToAbs(cycleEndTicksAbsolute), Find.WorldGrid.LongLatOf(parent.Map.Tile).x);
+            }
+
+            string translationKey = isTransforming ? "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn" : "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn";
+            translationKey += shouldDisplayTimeRelative ? "_Relative" : "_Absolute";
+            
+            return translationKey.Translate(formattedDuration.Named("FORMATTEDDURATION"));
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
