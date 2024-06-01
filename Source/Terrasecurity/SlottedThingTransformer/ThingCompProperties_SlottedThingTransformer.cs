@@ -6,6 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using static Mono.Security.X509.X520;
+using static UnityEngine.GraphicsBuffer;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 namespace Terrasecurity
 {
@@ -21,6 +24,18 @@ namespace Terrasecurity
         // the ticks to wait for until a transformation cycle starts (does NOT include cycle duration!)
         int transformationCycleIntervalTicks = -1;
         public int TransformationCycleIntervalTicks => transformationCycleIntervalTicks;
+
+        /// <summary>
+        /// Can be used to target exact days.
+        /// !!If this field is used, transformationCycleIntervalTicks must not be used.Set to -1 or omit from the Def to use cycle interval ticks!!
+        /// The current in-game ticks are modulo'd and added with this value, which allows targeting an exact tick in a cycle.
+        /// E.g: 
+        ///- Current game tick: 7,572,374
+        /// - modulo set to 900,000 (ticks in a season) 
+        /// The following math is executed:
+        /// 7572374 + (900000 - (7572374 % 900000)) = 8100000
+        /// That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
+        /// </summary>
         int transformationCycleIntervalModulo = -1;
         public int TransformationCycleIntervalModulo => transformationCycleIntervalModulo;
         // the ticks to lock input/output for while doing a transformation
@@ -72,9 +87,9 @@ namespace Terrasecurity
             {
                 yield return error;
             }
-            if(transformationCycleTicks != -1 && transformationCycleIntervalModulo != -1)
+            if(transformationCycleIntervalTicks != -1 && transformationCycleIntervalModulo != -1)
             {
-                yield return $"Cannot use {nameof(transformationCycleTicks)} and {nameof(transformationCycleIntervalModulo)} at the same time. Either of these values must be set to -1.";
+                yield return $"Cannot use {nameof(transformationCycleIntervalTicks)} and {nameof(transformationCycleIntervalModulo)} at the same time. Either of these values must be set to -1.";
             }
             if (validFuelThings.NullOrEmpty())
             {
