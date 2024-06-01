@@ -69,13 +69,18 @@ namespace Terrasecurity
             ProgressCycle();
         }
 
-        public override Thing FindHaulThingFor(Pawn pawn)
-        {
-            return pawn.Map.designationManager.SpawnedDesignationsOfDef(Common.installInSlottedThingTransformerDesignation)
-                .Select(des => des.target.Thing)
-                .Where(t => !t.IsForbidden(pawn) && pawn.CanReach(t, Verse.AI.PathEndMode.ClosestTouch, Danger.Deadly))
-                .MinBy(t => t.Position.DistanceToSquared(pawn.Position));
-        }
+public override Thing FindHaulThingFor(Pawn pawn)
+{
+    IEnumerable<Designation> spawnedDesignations = pawn.MapHeld?.designationManager?.SpawnedDesignationsOfDef(Common.installInSlottedThingTransformerDesignation);
+    if (spawnedDesignations.EnumerableNullOrEmpty())
+    {
+        return null;
+    }
+    return spawnedDesignations
+        .Select(des => des.target.Thing)
+        .Where(t => !t.IsForbidden(pawn) && pawn.CanReach(t, Verse.AI.PathEndMode.ClosestTouch, Danger.Deadly))
+        .MinBy(t => t.Position.DistanceToSquared(pawn.Position));
+}
 
         public override int HaulCountFor(Thing thing)
         {

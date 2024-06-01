@@ -19,7 +19,7 @@ namespace Terrasecurity
         Color insufficientFuelColor = Color.red;
         Color sufficientFuelColor = Color.green;
         // the ticks to wait for until a transformation cycle starts (does NOT include cycle duration!)
-        int transformationCycleIntervalTicks = 2000;
+        int transformationCycleIntervalTicks = -1;
         public int TransformationCycleIntervalTicks => transformationCycleIntervalTicks;
         int transformationCycleIntervalModulo = -1;
         public int TransformationCycleIntervalModulo => transformationCycleIntervalModulo;

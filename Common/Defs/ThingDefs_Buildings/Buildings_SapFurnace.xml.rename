@@ -19,7 +19,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
-    <costList>
+    <costList> 
       <Steel>50</Steel>
     </costList>
     <drawerType>MapMeshAndRealTime</drawerType>
