@@ -94,7 +94,7 @@
         <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
         <timeToInsertTicks>100</timeToInsertTicks>
         <!-- the ticks to wait for until a transformation cycle starts (does NOT include cycle duration! -->
-        <transformationCycleIntervalTicks>-1</transformationCycleIntervalTicks>
+        <!--<transformationCycleIntervalTicks>-1</transformationCycleIntervalTicks>-->
         <!-- 
           Can be used to target exact days.
           !!If this field is used, transformationCycleIntervalTicks must not be used. Set to -1 or omit from the Def to use cycle interval ticks!!
