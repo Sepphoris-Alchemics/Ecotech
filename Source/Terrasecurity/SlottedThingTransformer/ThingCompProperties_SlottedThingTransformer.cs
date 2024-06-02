@@ -12,9 +12,16 @@ using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 namespace Terrasecurity
 {
+    public class FuelEntry
+    {
+        public ThingDef fuelThingDef;
+        public GraphicData extraGraphicDataIfNotTransforming;
+        public GraphicData extraGraphicDataIfTransforming;
+    }
+
     public class ThingCompProperties_SlottedThingTransformer : CompProperties_ThingContainer
     {
-        public List<ThingDef> validFuelThings;
+        public List<FuelEntry> validFuels;
         public int transformerSlots = 1;
         public int timeToInsertTicks = 100;
         public int timeToRemoveTicks = 100;
@@ -24,6 +31,7 @@ namespace Terrasecurity
         // the ticks to wait for until a transformation cycle starts (does NOT include cycle duration!)
         int transformationCycleIntervalTicks = -1;
         public int TransformationCycleIntervalTicks => transformationCycleIntervalTicks;
+        string gizmoOverlayIfTransformingPath;
 
         /// <summary>
         /// Can be used to target exact days.
@@ -75,6 +83,8 @@ namespace Terrasecurity
                 return _sufficientFuelTexture;
             }
         }
+        public GraphicData extraGraphicDataIfNotTransformingAndNoFuel;
+        public GraphicData extraGraphicDataIfTransformingAndNoFuel;
 
         public ThingCompProperties_SlottedThingTransformer()
         {
@@ -91,17 +101,18 @@ namespace Terrasecurity
             {
                 yield return $"Cannot use {nameof(transformationCycleIntervalTicks)} and {nameof(transformationCycleIntervalModulo)} at the same time. Either of these values must be set to -1.";
             }
-            if (validFuelThings.NullOrEmpty())
+            if (validFuels.NullOrEmpty())
             {
-                yield return $"List \"{nameof(validFuelThings)}\" is null or empty";
+                yield return $"List \"{nameof(validFuels)}\" is null or empty";
             }
             else
             {
-                foreach (ThingDef fuelDef in validFuelThings)
+                foreach (FuelEntry fuelEntry in validFuels)
                 {
-                    if (!fuelDef.HasModExtension<ThingDefExtension_TransformerRecipe>())
+                    ThingDef fuelThingDef = fuelEntry.fuelThingDef;
+                    if (!fuelThingDef.HasModExtension<ThingDefExtension_TransformerRecipe>())
                     {
-                        yield return $"Fuel def {fuelDef.defName} has no {nameof(ThingDefExtension_TransformerRecipe)}";
+                        yield return $"Fuel def {fuelThingDef.defName} has no {nameof(ThingDefExtension_TransformerRecipe)}";
                     }
                 }
             }
