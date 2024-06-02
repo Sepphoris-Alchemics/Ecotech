@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+<!--TERRAVAT RECIPES (most saps progress a weapon into their Apex state, if applicable)
+  GLOWSAP:
+    Used for opening seeds
+    Used for progressing most weapons quickly
+    Used for refining other items
+
+  ENDOSAP/SAP OF PERMANENCE:
+    Used for improving durability and lifespan
+
+  SUNSAP/SAP OF VIVICATION:
+    Used for revitalizing any weapon
+
+  HYPERSAP/SAP OF DISORDER:
+    Used for improving shot capacity
+
+  ARCHSAP:
+    Removes any weapon's lifespan
+  -->
+
   <ThingDef ParentName="BuildingBase">
     <defName>TS_TerravatBasic</defName>
     <label>Small Terravat</label>
@@ -76,8 +96,8 @@
       <li Class="CompProperties_Art">
         <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
       </li>
-      <li Class="Terrasecurity.ThingCompProperties_MonoThingContainer">
-        <stackLimit>50</stackLimit>
+      <li Class="Terrasecurity.ThingCompProperties_MonoThingContainer"> <!-- for the fuel limit-->
+        <stackLimit>60</stackLimit>
         <drawContainedThing>false</drawContainedThing>
         <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
       </li>
@@ -107,12 +127,19 @@
           That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
         -->
         <transformationCycleIntervalModulo>300000</transformationCycleIntervalModulo>
+<<<<<<< Updated upstream
         <validFuels>
           <li>
             <fuelThingDef>TS_Glowsap</fuelThingDef>
           </li>
         </validFuels>
         <transformerSlots>3</transformerSlots>
+=======
+        <validFuelThings>
+          <li>TS_Glowsap</li>
+        </validFuelThings>
+        <transformerSlots>4</transformerSlots>
+>>>>>>> Stashed changes
       </li>
     </comps>
   </ThingDef>

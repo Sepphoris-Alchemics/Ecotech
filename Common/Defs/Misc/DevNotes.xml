@@ -29,7 +29,7 @@ Range of touch is unaffected
 Range of shorter weapons is brought down by 3 (Short = 13-25, minimum 4)
 Range of medium weapons is brought down by 7 (Medium = 26-40)
 Range of long weapons is brought down by 11 (Long = 41+)
-ALKALI short weapons is brought down by 2, medium by 4, long by 6
+BLOOMROT short weapons is brought down by 2, medium by 4, long by 6
 Anima medium range is brought down by 6, long by 9
 
 GROWTH TIMES:
@@ -228,6 +228,32 @@ Archwood: 2000
 		-Quill Turret: Miniturret. Very fast firing, low range, low damage. Comparable to the SMG.
 		-Burst Turret: Miniturret. Slow firing, low range, high damage. Comparable to the shotgun.
 		-Briar Turret: Extracted from evolved wepaons. Medium fire rate, medium range, low damage. Close stats to a normal miniturret.
+
+
+====================
+
+	***TRANSFORMATION RECIPES***
+		NATURALLY:
+			APEX TURRET (ANY): Created from Apex Seed
+			APEX TURRET (SPECIFIC): Created from planted Prima Mature Weapon
+			APEX TURRET (SPECIFIC): Extracted from Prima Immature Weapon
+			APEX SEED: Dropped OR extracted from Prima Mature
+			
+		CAULDRON/FILTER (RNG-BASED):
+			BLOOMROT WEAPON: Created from Bloomrot Mass
+			ENDOSAP: Created from x150 Glowsap
+			SUNSAP: Created from x150 Glowsap
+			HYPERSAP: Created from x150 Glowsap
+
+		TERRAVAT (TIME-BASED):
+			MATURED WEAPONS: Created from immature weapon + Glowsap
+			ENDOSAP WEAPONS: Created from immature weapon + Endosap
+			REVITALIZED WEAPONS: Created from any weapon + Sunsap
+			HYPERSAP WEAPONS: Created from immature weapon + Hypersap
+			ARCHSAP WEAPONS: Created from immature weapon + Archsap
+			SCOPED WEAPONS: Created from mid-range+ weapons + molten Terracrystals
+
+
 -->
 
 

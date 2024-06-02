@@ -77,15 +77,21 @@
       <li Class="Terrasecurity.ThingDefExtension_TransformerRecipe">
         <recipes>
           <li>
-            <fuelCount>5</fuelCount>
-            <inputThingDef>WoodLog</inputThingDef>
-            <outputThingDef>DiningChair</outputThingDef>
-            <outputStuff>WoodLog</outputStuff>
+            <fuelCount>15</fuelCount>
+            <inputThingDef>TS_SMG</inputThingDef>
+            <outputThingDef>TS_SMGUpgraded</outputThingDef>
+            <!--outputStuff only for items or structures that are stuffable-->
+            <!--<outputStuff>WoodLog</outputStuff>-->
           </li>
           <li>
             <fuelCount>15</fuelCount>
             <inputThingDef>TS_StakeCaster</inputThingDef>
-            <outputThingDef>TS_Pistol</outputThingDef>
+            <outputThingDef>TS_PrimaStakeCasterUpgraded</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>15</fuelCount>
+            <inputThingDef>TS_Shotgun</inputThingDef>
+            <outputThingDef>TS_ShotgunUpgraded</outputThingDef>
           </li>
         </recipes>
       </li>
