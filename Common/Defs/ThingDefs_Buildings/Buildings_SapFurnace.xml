@@ -59,10 +59,8 @@
         <baseFuelColor>(56,204,220)</baseFuelColor>
         <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
         <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
-        <timeToInsertTicks>100</timeToInsertTicks>
-        <transformationCycleIntervalTicks>3000</transformationCycleIntervalTicks>
         <!-- the ticks to wait for until a transformation cycle starts (does NOT include cycle duration! -->
-        <transformationCycleIntervalTicks>-1</transformationCycleIntervalTicks>
+        <timeToInsertTicks>100</timeToInsertTicks>
         <!-- 
           Can be used to target exact days.
           !!If this field is used, transformationCycleIntervalTicks must not be used. Set to -1 or omit from the Def to use cycle interval ticks!!
@@ -74,10 +72,35 @@
           7572374 + (900000 - (7572374 % 900000)) = 8100000
           That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
         -->
-        <transformationCycleIntervalModulo>300000</transformationCycleIntervalModulo>
-        <validFuelThings>
-          <li>TS_Glowsap</li>
-        </validFuelThings>
+        <transformationCycleIntervalTicks>2000</transformationCycleIntervalTicks>
+        <validFuels>
+          <li>
+            <fuelThingDef>TS_Glowsap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Misc/DropBeacon</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+              <drawOffset>(0, 0.01, 0)</drawOffset>
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Production/TableButcher</texPath>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawOffset>(0, 0.01, 0)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+        </validFuels>
+        <!-- these graphics can be omitted without breaking anything. -->
+        <extraGraphicDataIfNotTransformingAndNoFuel>
+          <texPath>Things/Building/Exotic/ShipChunk</texPath>
+          <graphicClass>Graphic_Random</graphicClass>
+          <drawOffset>(0, 0.01, 0)</drawOffset>
+        </extraGraphicDataIfNotTransformingAndNoFuel>
+        <extraGraphicDataIfTransformingAndNoFuel>
+          <texPath>Things/Building/Misc/Shuttle</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawOffset>(0, 0.01, 0)</drawOffset>
+        </extraGraphicDataIfTransformingAndNoFuel>
         <transformerSlots>3</transformerSlots>
       </li>
     </comps>

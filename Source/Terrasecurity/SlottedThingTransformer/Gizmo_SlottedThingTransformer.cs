@@ -129,8 +129,9 @@ namespace Terrasecurity
             {
                 yield return new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_Eject".Translate(), RemoveFuel);
             }
-            foreach (ThingDef fuelThingDef in transformerComp.TransformerProps.validFuelThings)
+            foreach (FuelEntry fuelEntry in transformerComp.TransformerProps.validFuels)
             {
+                ThingDef fuelThingDef = fuelEntry.fuelThingDef;
                 yield return new FloatMenuOption(fuelThingDef.LabelCap, () => FuelStorageComp.SetAcceptedThingDef(fuelThingDef), shownItemForIcon: fuelThingDef);
             }
         }

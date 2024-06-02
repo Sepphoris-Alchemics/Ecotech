@@ -51,6 +51,7 @@ namespace Terrasecurity
         public ThingCompProperties_SlottedThingTransformer TransformerProps => base.props as ThingCompProperties_SlottedThingTransformer;
         public int CurrentFuelCount => fuelStorageComp.TotalStackCount;
         public ThingDef CurrentFuelDef => fuelStorageComp.ContainedThing?.def;
+        public FuelEntry CurrentFuelEntry => CurrentFuelDef == null ? null : TransformerProps.validFuels.Find(entry => entry.fuelThingDef == CurrentFuelDef);
         public ThingDefExtension_TransformerRecipe FuelRecipes => CurrentFuelDef?.GetModExtension<ThingDefExtension_TransformerRecipe>();
         public bool HasFuel => CurrentFuelDef != null;
 
@@ -69,18 +70,18 @@ namespace Terrasecurity
             ProgressCycle();
         }
 
-public override Thing FindHaulThingFor(Pawn pawn)
-{
-    IEnumerable<Designation> spawnedDesignations = pawn.MapHeld?.designationManager?.SpawnedDesignationsOfDef(Common.installInSlottedThingTransformerDesignation);
-    if (spawnedDesignations.EnumerableNullOrEmpty())
-    {
-        return null;
-    }
-    return spawnedDesignations
-        .Select(des => des.target.Thing)
-        .Where(t => !t.IsForbidden(pawn) && pawn.CanReach(t, Verse.AI.PathEndMode.ClosestTouch, Danger.Deadly))
-        .MinBy(t => t.Position.DistanceToSquared(pawn.Position));
-}
+        public override Thing FindHaulThingFor(Pawn pawn)
+        {
+            IEnumerable<Designation> spawnedDesignations = pawn.MapHeld?.designationManager?.SpawnedDesignationsOfDef(Common.installInSlottedThingTransformerDesignation);
+            if (spawnedDesignations.EnumerableNullOrEmpty())
+            {
+                return null;
+            }
+            return spawnedDesignations
+                .Select(des => des.target.Thing)
+                .Where(t => !t.IsForbidden(pawn) && pawn.CanReach(t, Verse.AI.PathEndMode.ClosestTouch, Danger.Deadly))
+                .MinBy(t => t.Position.DistanceToSquared(pawn.Position));
+        }
 
         public override int HaulCountFor(Thing thing)
         {
@@ -278,6 +279,39 @@ public override Thing FindHaulThingFor(Pawn pawn)
             //text += $"\nend: {transformationEndTick}";
             //text += $"\ntransforming ? {isTransforming}";
             return text;
+        }
+
+        public override void PostDraw()
+        {
+            base.PostDraw();
+            GraphicData extraGraphic;
+            bool anyFuelPresent = CurrentFuelDef != null && CurrentFuelCount > 0;
+            if (anyFuelPresent)
+            {
+                if (isTransforming)
+                {
+                    extraGraphic = CurrentFuelEntry.extraGraphicDataIfTransforming;
+                }
+                else
+                {
+                    extraGraphic = CurrentFuelEntry.extraGraphicDataIfNotTransforming;
+                }
+            }
+            else
+            {
+                if (isTransforming)
+                {
+                    extraGraphic = TransformerProps.extraGraphicDataIfTransformingAndNoFuel;
+                }
+                else
+                {
+                    extraGraphic = TransformerProps.extraGraphicDataIfNotTransformingAndNoFuel;
+                }
+            }
+            if(extraGraphic != null)
+            {
+                extraGraphic.Graphic.Draw(parent.DrawPos, parent.Rotation, parent);
+            }
         }
 
         private string GetCurrentCycleDurationText()
