@@ -127,19 +127,10 @@
           That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
         -->
         <transformationCycleIntervalModulo>300000</transformationCycleIntervalModulo>
-<<<<<<< Updated upstream
-        <validFuels>
-          <li>
-            <fuelThingDef>TS_Glowsap</fuelThingDef>
-          </li>
-        </validFuels>
-        <transformerSlots>3</transformerSlots>
-=======
         <validFuelThings>
           <li>TS_Glowsap</li>
         </validFuelThings>
         <transformerSlots>4</transformerSlots>
->>>>>>> Stashed changes
       </li>
     </comps>
   </ThingDef>
