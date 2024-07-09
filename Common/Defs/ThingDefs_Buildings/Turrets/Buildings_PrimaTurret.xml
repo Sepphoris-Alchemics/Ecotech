@@ -2,8 +2,8 @@
 <Defs>
   <!-- Prima Turrets/Traps -->
 
-  <!-- The main prima turret is intended to be very early game, comparable to a mounted great bow.
-  It is only intended as a light defensive weapon, and multiple will be needed for strong defense.
+  <!-- Prima Turrets are meant to be for early game. Fragile, flammable, and weak.
+  Multiple will be needed for strong defense.
   
   "Microturrets". are small turrets that can be quickly acquired, but weak on health and one major stat.
   This stat may be damage, range, or firing speed. The advantage of microturrets is that the seed
@@ -40,12 +40,15 @@
     -Evolved Weapons: Briar Tangle (inflicts cut damage and inflicts large amounts of the briar hediff)
 
       -Like turrets, traps have a limited lifespan. However, they will not auto-destroy until then.
+
+    
+  Later turrets require dedicated planting, but live far longer.
   -->
 
 <!--=====SPEAR/STAKE TURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_PrimaTurret_Base</defName>
+    <defName>TS_PrimaTurret_Spear</defName>
     <label>Prima Spear Sentry</label>
     <description>A small, organic sentry that fires two mid-range stakes. Does not require power or fuel.</description>
     <!--Old description: <description>A turret grown from a specialized seed. Fire two spear-like projectiles at targets within it's radius, which are slow to shoot, but can be devastating on impact.
@@ -85,7 +88,7 @@
     <comps Inherit="False">
       <li Class="CompProperties_Refuelable">
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
-        <fuelConsumptionRate>1.25</fuelConsumptionRate>
+        <fuelConsumptionRate>1.5</fuelConsumptionRate>
         <destroyOnNoFuel>true</destroyOnNoFuel>
         <fuelCapacity>100</fuelCapacity>
         <fuelLabel>Lifeforce left</fuelLabel>
@@ -119,7 +122,7 @@
     </killedLeavings>
     <building>
       <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>TS_PrimaTurretGun</turretGunDef>
+      <turretGunDef>TS_PrimaTurretSpearGun</turretGunDef>
       <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
@@ -144,7 +147,7 @@
 <!--Prima Turret Gun-->
 
   <ThingDef ParentName="BaseWeaponTurret">
-    <defName>TS_PrimaTurretGun</defName>
+    <defName>TS_PrimaTurretSpearGun</defName>
     <label>Prima Spear Sentry</label>
     <description>A sentry grown from specialized seeds. Despite being a plant, a network of sensitive roots allow the sentry to identify hostiles from a short distance, and a hardy wooden shell allows it to withstand a limited amount of damage.
 \n\nPrima Sentries are entirely organic, and do not require power. However due to it's biological nature, old or expired Prima Sentries will need to be replaced with fresh ones.</description>
@@ -190,7 +193,7 @@
 <!--=====THISTLE  MICROTURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_PrimaMicroTurret_SMG</defName>
+    <defName>TS_PrimaTurret_SMG</defName>
     <label>Prima Thistle Sentry</label>
     <description>A small organic sentry that fires rapid volleys of tiny thorns. Does not require power or fuel.</description>
     <thingClass>Building_TurretGun</thingClass>
@@ -227,7 +230,7 @@
     <comps Inherit="False">
       <li Class="CompProperties_Refuelable"> <!--Same life duration-->
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
-        <fuelConsumptionRate>1.5</fuelConsumptionRate>
+        <fuelConsumptionRate>3</fuelConsumptionRate>
         <destroyOnNoFuel>true</destroyOnNoFuel>
         <fuelCapacity>100</fuelCapacity>
         <fuelLabel>Life percentage left</fuelLabel>
@@ -323,7 +326,7 @@
 <!--=====SCATTER MICROTURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_PrimaMicroTurret_Shotgun</defName>
+    <defName>TS_PrimaTurret_Shotgun</defName>
     <label>Prima Scatter Sentry</label>
     <description>A small organic sentry that fires a tight spread of pellets. Does not require power or fuel.</description>
     <thingClass>Building_TurretGun</thingClass>
@@ -360,7 +363,7 @@
     <comps Inherit="False">
       <li Class="CompProperties_Refuelable"> <!--Same life duration-->
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
-        <fuelConsumptionRate>1.5</fuelConsumptionRate>
+        <fuelConsumptionRate>3</fuelConsumptionRate>
         <destroyOnNoFuel>true</destroyOnNoFuel>
         <fuelCapacity>100</fuelCapacity>
         <fuelLabel>Life percentage left</fuelLabel>

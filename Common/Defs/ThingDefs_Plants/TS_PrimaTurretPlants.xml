@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+
+-->
+
+  <ThingDef Name="TS_PrimaTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+    <graphicData>
+      <texPath>Things/Plant/PrimaTurret/ShotgunTurret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <plant>
+      <maxMeshCount>1</maxMeshCount>
+      <growDays>0.5</growDays> 
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <burnedThingDef IsNull="True" />
+      <immatureGraphicPath>Things/Plant/PrimaTurret/ShotgunTurret_Immature</immatureGraphicPath>
+      <sowWork>540</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0</topWindExposure>
+      <visualSizeRange>0.7~1</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <sowResearchPrerequisites Inherit="False" />
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <purpose>Misc</purpose>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_PrimaTurretPlantBase"> <!--Prima shotgun turret-->
+    <defName>TS_PrimaTurretPlant_Shotgun</defName>
+    <label>Scatter Sentry Sprout</label>
+    <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
+\nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires short-range, packed splinters.</description>
+    <graphicData>
+      <texPath>Things/Plant/PrimaTurret/ShotgunTurret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <growDays>0.5</growDays> 
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>TS_PrimaTurret_Shotgun</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Inactive until fully grown</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_PrimaTurretPlantBase"> <!--Prima spear turret-->
+    <defName>TS_PrimaTurretPlant_Spear</defName>
+    <label>Spear Sentry Sprout</label>
+    <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
+\nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires large, armor-penetrating stakes.</description>
+    <graphicData>
+      <texPath>Things/Plant/PrimaTurret/SpearTurret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <growDays>0.5</growDays>
+      <immatureGraphicPath>Things/Plant/PrimaTurret/SpearTurret_Immature</immatureGraphicPath>
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>TS_PrimaTurret_Spear</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Inactive until fully grown</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_PrimaTurretPlantBase"> <!--Prima thistle turret-->
+    <defName>TS_PrimaTurretPlant_SMG</defName>
+    <label>Thistle Sentry Sprout</label>
+    <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
+\nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires a volley of painful, needle-thin spines.</description>
+    <graphicData>
+      <texPath>Things/Plant/PrimaTurret/SpearTurret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <growDays>0.5</growDays>
+      <immatureGraphicPath>Things/Plant/PrimaTurret/SpearTurret_Immature</immatureGraphicPath>
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>TS_PrimaTurret_SMG</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Inactive until fully grown</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

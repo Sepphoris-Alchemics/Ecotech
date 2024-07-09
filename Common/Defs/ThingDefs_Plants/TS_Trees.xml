@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--<ThingDef ParentName="PlantBaseNonEdible">
+    <defName>TS_GlowsapVine</defName>
+    <label>Glowsap Vine</label>
+    <description>A vine engineered to produce Glowsap. Glowsap slowly leaks from the top of the vine when ready for harvesting. Relatively fast, but cannot produce much glowsap at once.</description>
+    <graphicData>
+      <texPath>Things/Plant/GlowsapVine/GlowsapVine_Mature</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>14</Beauty>
+      <BeautyOutdoors>14</BeautyOutdoors>
+      <Flammability>2</Flammability>
+      <MaxHitPoints>140</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <harvestWork>900</harvestWork>
+      <harvestedThingDef>TS_Glowsap</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>15</harvestYield>
+      <harvestMinGrowth>0.95</harvestMinGrowth>
+      <harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestTag>Standard</harvestTag>
+      <immatureGraphicPath>Things/Plant/GlowsapVine/GlowsapVine_Immature</immatureGraphicPath>
+      <sowWork>1200</sowWork>
+      <sowTags>
+        <li>Ground</li>
+        <li>Decorative</li>
+      </sowTags>
+      <sowMinSkill>4</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>TS_SapBasics</li>
+      </sowResearchPrerequisites>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>8</growDays>
+      <visualSizeRange>0.5~1.5</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+    </comps>
+  </ThingDef>-->
+
+
+  <ThingDef ParentName="TreeBase">
+    <defName>TS_FoundationTree</defName>
+    <label>Tree of Foundations</label>
+    <description>A large, glowing tree with several layers of bark. Extremely durable and just as hard as steel, but produces sections of it's own wood that can be easily slid out from the tree, and used to create various structures.
+\n\nLike many other Terratech trees, the Tree of Foundation grows quickly, and seems unaffected by age, soil fertility, temperature, or other sources that are normally detrimental to trees. If somehow destroyed, it will drop a seed that can be used to regrow it.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Plant/GlowsapTree/GlowsapTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <canScatterOver>false</canScatterOver>
+    <descriptionHyperlinks>
+      <ThingDef>TS_Glowsap</ThingDef>
+      <!--<ThingDef>GlowsapTumor</ThingDef>-->
+    </descriptionHyperlinks>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>18</Beauty>
+      <BeautyOutdoors>18</BeautyOutdoors>
+      <Flammability>2</Flammability>
+      <MaxHitPoints>250</MaxHitPoints>
+    </statBases>
+    <killedLeavings>
+      <TS_Glowsap>120</TS_Glowsap>
+      <WoodLog>40</WoodLog>
+    </killedLeavings>
+    <ingestible />
+    <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
+    <plant>
+      <growDays>1</growDays> 
+      <visualSizeRange>1.8~2.4</visualSizeRange>
+      <!--<sowMinSkill>6</sowMinSkill>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>-->
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <!--<mustBeWildToSow>true</mustBeWildToSow>
+      <sowWork>400</sowWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestYield>30</harvestYield>
+			<harvestedThingDef>TS_Glowsap</harvestedThingDef>
+			<harvestFailable>false</harvestFailable>
+			<harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestMinGrowth>0.9</harvestMinGrowth>-->
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <!--<sowResearchPrerequisites>
+        <li>TS_SapBasics</li>
+      </sowResearchPrerequisites>-->
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>34.9</minSpacingBetweenSamePlant>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+			<burnedThingDef IsNull="True" />
+			<choppedThingDef IsNull="True" />
+			<smashedThingDef IsNull="True" />
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>400000~600000</cycleDurationRangeTicks>
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <li>
+            <weight>4</weight>
+            <things>
+              <TS_ElderwoodMaterial>75</TS_ElderwoodMaterial>
+            </things>
+          </li>
+          <li>
+            <weight>2</weight>
+            <things>
+              <TS_ElderwoodMaterial>150</TS_ElderwoodMaterial>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+                <TS_ElderwoodMaterial>225</TS_ElderwoodMaterial>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+                <TS_ElderwoodMaterial>300</TS_ElderwoodMaterial>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+      <li Class="CompProperties_MeditationFocus" MayRequire="Ludeon.RimWorld.Ideology">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Natural</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_ArtificialBuildings">
+            <radius>34.9</radius> <!-- was 15.9-->
+            <curve>
+              <points>
+                <li>(0,   0.0)</li>
+                <li>(5,  -0.08)</li>
+                <li>(10, -0.15)</li>
+                <li>(50, -0.3)</li>
+              </points>
+            </curve>
+          </li>
+        </offsets>
+      </li>
+    </comps>
+    <specialDisplayRadius>34.9</specialDisplayRadius>
+    <ritualFocus>
+      <spectateDistance>4</spectateDistance>
+      <allowedSpectateSides>All</allowedSpectateSides>
+    </ritualFocus>
+  </ThingDef>
+
+</Defs>

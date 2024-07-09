@@ -68,6 +68,9 @@ Proper knowledge on the seed is required to plant it safely and effectively.
       <li>PlantMatter</li>
     </thingCategories>
     <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>TS_PrimaTurretPlant_Shotgun</plantDefToSpawn>
+      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
         <glowColor>(370,370,370,0)</glowColor>

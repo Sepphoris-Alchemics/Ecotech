@@ -1,0 +1,58 @@
+<Defs>
+
+    <!-- ================ Elderwood ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>TS_ElderwoodMaterial</defName>
+        <label>Elderwood Bark</label>
+        <description>Organic plates of Elderwood, often confused as "living wood" by those less familiar with it. It's unique adaptive traits allow multiple peices of it to meld together, producing a psdeudo-composite material that's quite resilient.</description>
+        <graphicData>
+			<texPath>Things/Resource/Elderwood</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <MaxHitPoints>225</MaxHitPoints>
+            <Mass>0.55</Mass>
+            <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>true</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>elderwood</stuffAdjective>
+            <categories>
+				<li>Woody</li>
+			</categories>
+            <color>(51,38,27)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructWood</constructEffect>
+			<appearance>Planks</appearance>
+            <statFactors>
+                <MaxHitPoints>0.8</MaxHitPoints>
+                <Flammability>1</Flammability>
+				<WorkToMake>0.8</WorkToMake>
+				<WorkToBuild>0.8</WorkToBuild>
+				<DoorOpenSpeed>1.1</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+        <techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+</Defs>

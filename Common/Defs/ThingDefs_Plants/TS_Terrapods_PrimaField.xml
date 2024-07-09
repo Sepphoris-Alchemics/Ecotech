@@ -252,28 +252,4 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-<!--Prima Turrets: moved to instead be plantyable by matured weapons-->
-
-  <!--<ThingDef ParentName="TS_WeaponPodBase">
-    <defName>TS_SurgePod_PrimaTurret</defName>
-    <label>Surgepod: Prima Turret</label>
-    <description>An enhanced Terrapod that will provide a surge seed for Prima Turrets. This provided seed will need to be manually planted, then will immediately sprout into the Prima Turret.</description>
-    <graphicData>
-      <texPath>Things/Plant/SurgePod_Mature</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>125</MaxHitPoints>
-    </statBases>
-    <plant>
-      <harvestedThingDef>TS_Seed_PrimaApexTurret</harvestedThingDef>
-      <sowMinSkill>8</sowMinSkill>
-      <growDays>10</growDays>
-      <harvestWork>750</harvestWork>
-      <sowResearchPrerequisites>
-        <li>TS_PrimaTurretSeeds</li>
-      </sowResearchPrerequisites>
-    </plant>
-  </ThingDef>-->
-
 </Defs>
