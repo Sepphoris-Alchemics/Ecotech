@@ -137,6 +137,21 @@
   </ResearchProjectDef>-->
 
   <ResearchProjectDef>
+    <defName>TS_TerrastructureBasics</defName> <!--Outdated name-->
+    <label>Basic Terrastructures</label>
+    <description>Learn how to grow biotic weapon patterns of simply-formed weapons. This covers weapons that don't rely on advanced internal movement, notably melee weapons and weapons that utilize simple growth for offense.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
+    <hiddenPrerequisites>
+      <li>TS_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
     <defName>TS_FundamentalArms</defName> <!--Outdated name-->
     <label>Prima Weapons: Integral Design</label>
     <description>Learn how to grow biotic weapon patterns of simply-formed weapons. This covers weapons that don't rely on advanced internal movement, notably melee weapons and weapons that utilize simple growth for offense.</description>

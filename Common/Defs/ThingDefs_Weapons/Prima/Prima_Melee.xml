@@ -151,11 +151,12 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeapon">
-		<defName>TS_Phytosword</defName>
-		<label>phytosword</label>
-		<description>A sharp, curved sword grown from a weapon pod. Apparently the names "terrablade" and "terrasword" were refused to be used for the sake of avoiding potential confusion.</description>
+		<defName>TS_PrimaSword</defName>
+		<label>Prima Briarblade</label>
+		<description>An organic sword with a blade that makes up it's blade dullness for the many thorny, needle-sharp growths alongside it. Terratech scribes have stated the name "terrablade" was refused to be used for the sake of avoiding potential confusion.
+\nUnlike it's ranged counterparts, Prima melee weapons are simple enough to be fully grown upon first harvest. This allows them to be infused with a different sap as soon as desired.</description>
 		<graphicData>
-			<texPath>Things/WeaponMelee/TS_Sword</texPath>
+			<texPath>Things/WeaponPrima/Basic/PrimaSwordBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>

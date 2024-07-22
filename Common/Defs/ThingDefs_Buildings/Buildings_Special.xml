@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_RandomSapGiver</defName>
-    <label>Cauldron of Change</label>
-    <description>The Cauldron of Change is one of the three fundamental conduits that Terratech devotees learn to properly create, with each one dedicated to supporting and assisting Terratech tribes in different ways.
-The swirling liquids and energies within the Cauldron of Change represent the ever-present shifting of nature; to symbolize this, the cauldron occasionally gifts tribes with pure, potent saps that are highly desirable for improving weapons and gear.</description>
+    <defName>TS_GiftTreeTierOne</defName>
+    <label>Elderwood Tidetree</label>
+    <description>TBE.</description>
     <graphicData>
-      <texPath>Things/Plant/TreeOak</texPath>
+      <texPath>Things/Plant/Custodians/ElderwoodCustodian</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.2, 0.35, 0.13)</volume>

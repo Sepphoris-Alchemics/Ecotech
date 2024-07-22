@@ -16,7 +16,7 @@
     <defName>TS_BloomrotTree</defName>
     <label>Bloomrot Tree</label>
     <description>A powerful, bioengineered tree, designed to utlilize both life and death as a medium for Terratech. Ultimately produces Alkali weapons, the second generation of Terraweapons.
-\n\nThe roots and vines of an Alkali Tree spread over a very wide area, and will eventually create a distinct pod on highly fertil`e terrain. After a period of time, it will produce a random sealed Rotvine weapon, which can be unsealed at a Terraforge.</description>
+\n\nThe roots and vines of an Alkali Tree spread over a very wide area, and will eventually create a distinct pod on highly fertile terrain. After a period of time, it will produce a random sealed Rotvine weapon, which can be unsealed at a Terraforge.</description>
     <graphicData>
       <texPath>Things/Plant/SurgePod_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>

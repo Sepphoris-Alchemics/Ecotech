@@ -40,7 +40,7 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
-  <ThingDef Abstract="True" ParentName="BuildingBase" Name="TS_MuseumDisplayBase">
+  <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="TS_MuseumDisplayBase">
     <label>Display Case</label>
     <thingClass>Building</thingClass>
     <description>A display case to display things in.</description>
@@ -94,24 +94,23 @@
     <defName>TS_LinkedDisplayBase</defName>
     <label>Museum Display</label>
     <description>Displays Items.</description>
-
     <graphicData>
       <texPath>Temp/Display/Display_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>	
       <shaderType>Transparent</shaderType>
     </graphicData>
-    <!--<uiIconPath></uiIconPath>-->
     <statBases>
       <MaxHitPoints>90</MaxHitPoints>
       <WorkToBuild>350</WorkToBuild>
       <Flammability>0</Flammability>
       <Beauty>2</Beauty>	  
     </statBases>
-
     <costList>
 	    <WoodLog>5</WoodLog>
     </costList>		
-
+    <linkFlags Inherit="False">
+        <li>Custom6</li>
+    </linkFlags>
     <tickerType>Normal</tickerType>
     <costStuffCount>0</costStuffCount>
     <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
@@ -121,6 +120,6 @@
     </building>
 	
     <designationCategory>Furniture</designationCategory>
-</ThingDef>
+</ThingDef>-->
 
 </Defs>

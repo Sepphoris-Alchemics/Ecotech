@@ -18,7 +18,7 @@
     -Acquiring the seed once destroyed
     -Grown in a Deepsap Vault
 
-    There shouldn't be a case when the forge is truly lost, as the seed will be indestructable and not worth anything. Ho
+    There shouldn't be a case when the forge is truly lost, as the seed will be indestructable and not worth anything.
     -->
 
   <!--Deepsap Vault
@@ -36,21 +36,20 @@
   <ThingDef ParentName="BenchBase">
     <defName>TS_Terraforge</defName>
     <label>Terraforge</label>
-    <description>A grown building that channels natural energies of the world, which can be used to shape and influence Terratech.
+    <description>A grown building that channels natural energies of the world, allowing you to shape existing Terratech, or grow new Terratech formations.
 Some Terratech creations may have features that simply make the product unusable, or even dangerous, to most races (generally to ward off undeserving colonies). The Terraforge exists to refine that Terratech into a usable state - not by destruction, by rather by letting the creation know that it is in safe hands.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
     <costList>
-      <WoodLog>80</WoodLog>
-      <TS_Glowsap>30</TS_Glowsap>
+      <TS_Seed_Terraforge>1</TS_Seed_Terraforge>
     </costList>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/Terravats/VatGlowsap</texPath>
+      <texPath>Things/Building/Terraforge</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>(2,2)</drawSize>
-      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawOffset>(0,0,0)</drawOffset>
       <drawRotated>false</drawRotated>
       <damageData>
         <rect>(0.3,0,2.7,1)</rect>
@@ -105,7 +104,7 @@ Some Terratech creations may have features that simply make the product unusable
     </inspectorTabs>
     <surfaceType>Item</surfaceType>
     <killedLeavings>
-      <WoodLog>12</WoodLog>
+      <TS_Seed_Terraforge>1</TS_Seed_Terraforge>
     </killedLeavings>
     <building>
       <deconstructible>false</deconstructible>
@@ -121,7 +120,7 @@ Some Terratech creations may have features that simply make the product unusable
           <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
-        <maxDistance>9</maxDistance>
+        <maxDistance>18</maxDistance>
       </li>
       <li Class="CompProperties_Art">
         <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
@@ -136,7 +135,7 @@ Some Terratech creations may have features that simply make the product unusable
             <li>TS_Glowsap</li>
           </thingDefs>
         </fuelFilter>
-        <initialFuelPercent>0.5</initialFuelPercent>
+        <initialFuelPercent>1</initialFuelPercent>
         <fuelLabel>Glowsap</fuelLabel>
         <fuelGizmoLabel>Healthy glowsap</fuelGizmoLabel>
         <outOfFuelMessage>Requires Glowsap replacement</outOfFuelMessage>

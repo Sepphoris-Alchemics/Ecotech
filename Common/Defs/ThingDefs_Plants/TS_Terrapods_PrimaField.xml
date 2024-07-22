@@ -87,7 +87,7 @@ Tier 4 surge seeds: 20
     <label>Terrapod: Phytosword</label>
     <description>A plant pod that will slowly grow a biotic sword. Requires highly fertile terrain.</description>
     <plant>
-      <harvestedThingDef>TS_Phytosword</harvestedThingDef>
+      <harvestedThingDef>TS_PrimaSword</harvestedThingDef>
       <sowMinSkill>2</sowMinSkill>
       <growDays>5</growDays>
       <harvestWork>300</harvestWork>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--==========1.5 Checklist==========
+
+COMPLETE:
+	-Create art for Terraforge
+	-Create Terraforge seed
+
+INCOMPLETE:
+	-Elderwood Custodian:
+		-Create Art (finished)
+		-Create XML (UNFINISHED)
+		-Tie to a research (UNFINISHED)
+		-Tie recipe to Terraforge (UNFINISHED)
+		-Create Elderwood item graphics (finished)
+		-Create passive growing wall feature (UNFINISHED)
+
+	-Create art for Cauldron of Change 
+	-Give Terraforge a base plant
+	-Make sure Terraforge seed is indestructable
+	-Implement Sap of Permanence on the following:
+
+	-Implement Sap of Permanence recipes:
+		-Briarblade (UNFINISHED)
+		-Briarburster (UNFINISHED)
+		-Pineshredder (UNFINISHED)
+		-Briarbolter (UNFINISHED)
+
+	-Implement Sap of Disorder recipes:
+		-Briarburster (UNFINISHED)
+		-Pineshredder (UNFINISHED)
+		-Briarbolter (UNFINISHED)
+
+	-Implement Sap of Vivication recipes:
+
+	-Implement Glowsap acceleration recipes:
+		-Pincaster (UNFINISHED)
+		-Scattershot (UNFINISHED)
+		-Stakecaster (UNFINISHED)
+	-->
+
+</Defs>

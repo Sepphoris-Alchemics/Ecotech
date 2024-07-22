@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+
+-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>TS_ElderwoodGrowSpot</defName>
+    <label>elderwood growing spot</label>
+    <description>Inlay a little glowsap into terrain, and coerce Sentinels to grow walls here over time. Works on most terrains.
+This particular spot will grow elderwood walls, which are fast to grow, but have sub-par resilience.
+You need an Elderwood Custodian present on the map in order for the walls to grow.</description>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/MeditationSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>False</useHitPoints>
+    <designationCategory>TerratechDesignation</designationCategory>
+    <statBases>
+      <WorkToBuild>30</WorkToBuild>
+    </statBases>
+    <costList>
+      <TS_Glowsap>2</TS_Glowsap>
+    </costList>
+    <uiOrder>2600</uiOrder>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <building>
+      <sowTag>ElderwoodSowTag</sowTag>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+      <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+  </ThingDef>
+</Defs>

@@ -60,14 +60,16 @@
 
 
   <ThingDef ParentName="TreeBase">
-    <defName>TS_FoundationTree</defName>
-    <label>Tree of Foundations</label>
-    <description>A large, glowing tree with several layers of bark. Extremely durable and just as hard as steel, but produces sections of it's own wood that can be easily slid out from the tree, and used to create various structures.
-\n\nLike many other Terratech trees, the Tree of Foundation grows quickly, and seems unaffected by age, soil fertility, temperature, or other sources that are normally detrimental to trees. If somehow destroyed, it will drop a seed that can be used to regrow it.</description>
+    <defName>TS_SentinelTreeTierOne</defName>
+    <label>Elderwood Sentinel</label>
+    <description>The Elderwood Sentinel is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Sentinels protect a colony by creating various structures and defenses.
+The structures Sentinels create generally cannot be created manually, or are stronger than the manually created variants.
+
+While this tree is present, Elderwood walls and doors will automatically grow on designated spots, which can be found under the "Terratech" menu. Multiple Sentinels can exist together, but extensive spacing is required between each one.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Plant/GlowsapTree/GlowsapTree</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Plant/Sentinels/ElderwoodSentinel</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
       </shadowData>
@@ -83,7 +85,7 @@
       <Beauty>18</Beauty>
       <BeautyOutdoors>18</BeautyOutdoors>
       <Flammability>2</Flammability>
-      <MaxHitPoints>250</MaxHitPoints>
+      <MaxHitPoints>300</MaxHitPoints>
     </statBases>
     <killedLeavings>
       <TS_Glowsap>120</TS_Glowsap>
@@ -120,7 +122,7 @@
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
-      <minSpacingBetweenSamePlant>34.9</minSpacingBetweenSamePlant>
+      <minSpacingBetweenSamePlant>67.9</minSpacingBetweenSamePlant>
       <blockAdjacentSow>true</blockAdjacentSow>
       <warnIfMarkedForCut>true</warnIfMarkedForCut>
 			<burnedThingDef IsNull="True" />
@@ -167,14 +169,14 @@
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
-      <li Class="CompProperties_MeditationFocus" MayRequire="Ludeon.RimWorld.Ideology">
+      <!--<li Class="CompProperties_MeditationFocus" MayRequire="Ludeon.RimWorld.Ideology">
         <statDef>MeditationFocusStrength</statDef>
         <focusTypes>
           <li>Natural</li>
         </focusTypes>
         <offsets>
           <li Class="FocusStrengthOffset_ArtificialBuildings">
-            <radius>34.9</radius> <!-- was 15.9-->
+            <radius>34.9</radius>
             <curve>
               <points>
                 <li>(0,   0.0)</li>
@@ -185,9 +187,23 @@
             </curve>
           </li>
         </offsets>
+      </li>-->
+      <li Class="CompProperties_SpawnSubplant">
+        <compClass>CompSpawnSubplantDuration</compClass>
+        <subplant>TS_ElderwoodWallPlant</subplant>
+        <maxRadius>67.9</maxRadius>
+        <subplantSpawnDays>0.2</subplantSpawnDays> <!--5 walls per day-->
+        <minGrowthForSpawn>0.1</minGrowthForSpawn>
+        <initialGrowthRange>0.2~0.8</initialGrowthRange>
+        <canSpawnOverPlayerSownPlants>true</canSpawnOverPlayerSownPlants>
+        <plantsToNotOverwrite>
+          <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+        </plantsToNotOverwrite>
       </li>
     </comps>
-    <specialDisplayRadius>34.9</specialDisplayRadius>
+    <specialDisplayRadius>67.9</specialDisplayRadius>
     <ritualFocus>
       <spectateDistance>4</spectateDistance>
       <allowedSpectateSides>All</allowedSpectateSides>
