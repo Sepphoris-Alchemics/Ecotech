@@ -28,6 +28,10 @@ namespace Terrasecurity
         public override void CompTick()
         {
             base.CompTick();
+            if (parent.Destroyed)
+            {
+                return;
+            }
             ProgressLifespan();
         }
 
@@ -36,6 +40,10 @@ namespace Terrasecurity
         /// </summary>
         public override void EquippedTick()
         {
+            if (parent.Destroyed)
+            {
+                return;
+            }
             ProgressLifespan();
             ShowAlertOnLowLifespan();
         }
