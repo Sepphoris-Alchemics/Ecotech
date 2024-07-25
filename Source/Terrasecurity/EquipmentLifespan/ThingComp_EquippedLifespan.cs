@@ -74,7 +74,15 @@ namespace Terrasecurity
                     wieldingPawn.jobs.StopAll();
                 }
             }
-            parent.Destroy(DestroyMode.KillFinalize);
+            try
+            {
+                parent.Destroy(DestroyMode.KillFinalize);
+            }
+            catch(Exception ex)
+            {
+                Log.Error($"Could not destroy {parent} due to unhandled exception: {ex}");
+            }
+            Current.Game.GetComponent<GameComponent_EquippedThingTicker>().RemoveTickingComp(this);
         }
 
         private void ShowAlertOnLowLifespan()
