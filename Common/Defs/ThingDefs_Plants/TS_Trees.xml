@@ -188,11 +188,11 @@ While this tree is present, Elderwood walls and doors will automatically grow on
           </li>
         </offsets>
       </li>-->
-      <li Class="CompProperties_SpawnSubplant">
+      <!--<li Class="CompProperties_SpawnSubplant">
         <compClass>CompSpawnSubplantDuration</compClass>
         <subplant>TS_ElderwoodWallPlant</subplant>
         <maxRadius>67.9</maxRadius>
-        <subplantSpawnDays>0.2</subplantSpawnDays> <!--5 walls per day-->
+        <subplantSpawnDays>0.2</subplantSpawnDays>
         <minGrowthForSpawn>0.1</minGrowthForSpawn>
         <initialGrowthRange>0.2~0.8</initialGrowthRange>
         <canSpawnOverPlayerSownPlants>true</canSpawnOverPlayerSownPlants>
@@ -201,7 +201,7 @@ While this tree is present, Elderwood walls and doors will automatically grow on
           <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
           <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
         </plantsToNotOverwrite>
-      </li>
+      </li>-->
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>
     <ritualFocus>
