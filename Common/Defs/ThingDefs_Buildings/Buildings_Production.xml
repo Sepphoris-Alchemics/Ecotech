@@ -69,7 +69,7 @@ Some Terratech creations may have features that simply make the product unusable
     <pathCost>50</pathCost>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>3400</WorkToBuild>
+      <!--<WorkToBuild>3400</WorkToBuild>-->
       <Mass>60</Mass>
       <Flammability>3</Flammability>
       <Beauty>1.5</Beauty>
@@ -91,14 +91,14 @@ Some Terratech creations may have features that simply make the product unusable
     <uiOrder>2630</uiOrder>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
-    <!--<recipes>
-      <li>TS_ExtractPrimaStakeTurretSeed</li>
-      <li>TS_ExtractPrimaSMGTurretSeed</li>
+    <recipes>
+      <li>TS_ConduitTreeSeedRecipe</li>
+      <!--<li>TS_ExtractPrimaSMGTurretSeed</li>
       <li>TS_ExtractPrimaShotgunTurretSeed</li>
       <li>TS_PrimaTurretSeedApexToStake</li>
       <li>TS_PrimaTurretSeedApexToSMG</li>
-      <li>TS_PrimaTurretSeedApexToShotgun</li>
-    </recipes>-->
+      <li>TS_PrimaTurretSeedApexToShotgun</li>-->
+    </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>

@@ -147,31 +147,8 @@
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
-      <li Class="CompProperties_MeditationFocus" MayRequire="Ludeon.RimWorld.Ideology">
-        <statDef>MeditationFocusStrength</statDef>
-        <focusTypes>
-          <li>Natural</li>
-        </focusTypes>
-        <offsets>
-          <li Class="FocusStrengthOffset_ArtificialBuildings">
-            <radius>34.9</radius> <!-- was 15.9-->
-            <curve>
-              <points>
-                <li>(0,   0.0)</li>
-                <li>(5,  -0.08)</li>
-                <li>(10, -0.15)</li>
-                <li>(50, -0.3)</li>
-              </points>
-            </curve>
-          </li>
-        </offsets>
-      </li>
     </comps>
     <specialDisplayRadius>34.9</specialDisplayRadius>
-    <ritualFocus>
-      <spectateDistance>4</spectateDistance>
-      <allowedSpectateSides>All</allowedSpectateSides>
-    </ritualFocus>
   </ThingDef>
 
 

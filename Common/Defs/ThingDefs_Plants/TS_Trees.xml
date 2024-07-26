@@ -84,7 +84,7 @@ While this tree is present, Elderwood walls and doors will automatically grow on
     <statBases>
       <Beauty>18</Beauty>
       <BeautyOutdoors>18</BeautyOutdoors>
-      <Flammability>2</Flammability>
+      <Flammability>3</Flammability>
       <MaxHitPoints>300</MaxHitPoints>
     </statBases>
     <killedLeavings>
@@ -169,45 +169,136 @@ While this tree is present, Elderwood walls and doors will automatically grow on
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
-      <!--<li Class="CompProperties_MeditationFocus" MayRequire="Ludeon.RimWorld.Ideology">
-        <statDef>MeditationFocusStrength</statDef>
-        <focusTypes>
-          <li>Natural</li>
-        </focusTypes>
-        <offsets>
-          <li Class="FocusStrengthOffset_ArtificialBuildings">
-            <radius>34.9</radius>
-            <curve>
-              <points>
-                <li>(0,   0.0)</li>
-                <li>(5,  -0.08)</li>
-                <li>(10, -0.15)</li>
-                <li>(50, -0.3)</li>
-              </points>
-            </curve>
-          </li>
-        </offsets>
-      </li>-->
-      <!--<li Class="CompProperties_SpawnSubplant">
-        <compClass>CompSpawnSubplantDuration</compClass>
-        <subplant>TS_ElderwoodWallPlant</subplant>
-        <maxRadius>67.9</maxRadius>
-        <subplantSpawnDays>0.2</subplantSpawnDays>
-        <minGrowthForSpawn>0.1</minGrowthForSpawn>
-        <initialGrowthRange>0.2~0.8</initialGrowthRange>
-        <canSpawnOverPlayerSownPlants>true</canSpawnOverPlayerSownPlants>
-        <plantsToNotOverwrite>
-          <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
-          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
-          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
-        </plantsToNotOverwrite>
-      </li>-->
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>
-    <ritualFocus>
-      <spectateDistance>4</spectateDistance>
-      <allowedSpectateSides>All</allowedSpectateSides>
-    </ritualFocus>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="TreeBase">
+    <defName>TS_SapTreeTierOne</defName>
+    <label>Elderwood Tidetree</label>
+    <description>The Elderwood Tidetree is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Tidetrees provide a colony with various saps that enhance weapons and certain structures.
+The saps provided are generally hard to get ahold of, and if not used, can fetch a pretty penny from collectors.
+
+While this tree is present, a random sap (ranging from a count of 1-3) will occasionally appear at it's base. This tree does not produce glowsap.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Plant/Sentinels/ElderwoodSentinel</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <canScatterOver>false</canScatterOver>
+    <descriptionHyperlinks>
+      <ThingDef>TS_Glowsap</ThingDef>
+      <!--<ThingDef>GlowsapTumor</ThingDef>-->
+    </descriptionHyperlinks>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>18</Beauty>
+      <BeautyOutdoors>18</BeautyOutdoors>
+      <Flammability>4</Flammability>
+      <MaxHitPoints>250</MaxHitPoints>
+    </statBases>
+    <killedLeavings>
+      <TS_Glowsap>60</TS_Glowsap>
+      <WoodLog>20</WoodLog>
+    </killedLeavings>
+    <ingestible />
+    <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
+    <plant>
+      <growDays>1</growDays> 
+      <visualSizeRange>1.8~2.4</visualSizeRange>
+      <!--<sowMinSkill>6</sowMinSkill>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>-->
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <!--<mustBeWildToSow>true</mustBeWildToSow>
+      <sowWork>400</sowWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestYield>30</harvestYield>
+			<harvestedThingDef>TS_Glowsap</harvestedThingDef>
+			<harvestFailable>false</harvestFailable>
+			<harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestMinGrowth>0.9</harvestMinGrowth>-->
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <!--<sowResearchPrerequisites>
+        <li>TS_SapBasics</li>
+      </sowResearchPrerequisites>-->
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>67.9</minSpacingBetweenSamePlant>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+			<burnedThingDef IsNull="True" />
+			<choppedThingDef IsNull="True" />
+			<smashedThingDef IsNull="True" />
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>400000~600000</cycleDurationRangeTicks>
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <li>
+            <weight>1.5</weight>
+            <things>
+              <TS_Endosap>1</TS_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+                <TS_Hypersap>1</TS_Hypersap>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+                <TS_Sunsap>1</TS_Sunsap>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <TS_Endosap>2~3</TS_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>0.2</weight>
+            <things>
+              <TS_Hypersap>2~3</TS_Hypersap>
+            </things>
+          </li>
+          <li>
+            <weight>0.3</weight>
+            <things>
+              <TS_Sunsap>2~3</TS_Sunsap>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+    </comps>
+    <specialDisplayRadius>67.9</specialDisplayRadius>
   </ThingDef>
 
 </Defs>

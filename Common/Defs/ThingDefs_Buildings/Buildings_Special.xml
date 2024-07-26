@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef ParentName="BuildingBase">
+  <!--<ThingDef ParentName="BuildingBase">
     <defName>TS_GiftTreeTierOne</defName>
     <label>Elderwood Tidetree</label>
     <description>TBE.</description>
@@ -87,5 +87,5 @@
         </potentialSpawnedThings>
       </li>
     </comps>
-  </ThingDef>
+  </ThingDef>-->
 </Defs>

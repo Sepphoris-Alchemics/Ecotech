@@ -43,4 +43,45 @@
     </comps>
     <allowedArchonexusCount>2</allowedArchonexusCount>
   </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>TS_Seed_ConduitTrees</defName>
+    <label>Conduit Tree Seed</label>
+    <description>A durable seed that can be planted in a variety of ways. How this seed is planted determines what it grows into, requiring precise manipulation and knowledge to properly utilize.
+\n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/MiscSeeds/ChannelingSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>105</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>TS_SentinelTreeTierOne</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>TS_SapTreeTierOne</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
 </Defs>

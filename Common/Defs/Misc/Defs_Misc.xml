@@ -40,6 +40,23 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
+   <WorkGiverDef>
+    <defName>TS_DoBillsTerraforge</defName>
+    <label>shape seeds</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TS_Terraforge</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
   <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="TS_MuseumDisplayBase">
     <label>Display Case</label>
     <thingClass>Building</thingClass>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>TS_ConduitTreeSeedRecipe</defName>
+    <label>shape conduit seed</label>
+    <description>Shape a Conduit Tree seed, which is used to create one of the four vital Conduit Trees.</description>
+    <jobString>shaping a conduit seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workAmount>2160</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>TS_Glowsap</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>TS_Glowsap</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <TS_Seed_ConduitTrees>1</TS_Seed_ConduitTrees>
+    </products>
+    <displayPriority>0</displayPriority>
+  </RecipeDef>
+
+</Defs>
