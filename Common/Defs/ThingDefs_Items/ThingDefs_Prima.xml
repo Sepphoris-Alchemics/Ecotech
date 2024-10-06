@@ -131,7 +131,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     <defName>TS_Seed_PrimaApexTurret</defName>
     <label>Prima Apex Seed</label>
     <description>A special seed acquired from Apex (fully matured) Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into a Prima Turret.
-This seed once could be awakened by hand, and at will; however, that knowledge is either secretive, or lost to time. Yoiu will need to awaken it at a Terravat.
+This seed once could be awakened by hand, and at will; however, that knowledge is either secretive, or lost to time. You will need to awaken it at a Terravat.
 \n\nUnlike other seeds, this seed remains in a dormant, hypergenerative state, and will not expire over time.</description>
     <possessionCount>4</possessionCount>
     <tickerType>Normal</tickerType>

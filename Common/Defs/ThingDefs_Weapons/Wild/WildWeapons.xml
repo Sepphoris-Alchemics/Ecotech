@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>TS_NightshadeRifle</defName>		<!--Counterpart: Prima OLR-->
+		<label>nightshade rifle</label>
+		<description>The Nightshade Rifle is a biotic weapon produced exclusively by a Sentinel Tree. It is patterned off of a long-range rifle, and is capable of firing poisonous thorns. Due to its plant nature, no optics are present, giving it a lower range than most other rifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown. Additionally, it's ancient design prevents it from accepting other saps.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/NightshadeRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_NightshadeRifle</defaultProjectile>
+				<warmupTime>2.125</warmupTime>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<range>29.9</range>
+				<soundCast>TS_Sound_Blowgun1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+      <!--<li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>TS_NightshadeExplosion</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>pneumatic sac</chargeNoun>
+        <ammoDef>TS_Sunsap</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>90</baseReloadTicks>
+      </li>-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Immutable
+Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>TS_GaubornShotgun</defName>		<!--Counterpart: Prima Briarburster-->
+		<label>gauborn shredder</label>
+		<description>An ancient design of an organic weapon, produced exclusively by a Sentinel Tree. Using the Gauranlen tree as a starting point for it's traits, this weapon posesses hardiness and high damage, but it's quite low range, and it's resistance to change - contrary to the tree itself - may explain why it's genome was never expanded into a larger family.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/GaubornShotgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_GaubornShotgun</defaultProjectile>
+				<warmupTime>1.4</warmupTime>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<range>8.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1200000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Immutable
+Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+</Defs>

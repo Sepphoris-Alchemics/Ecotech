@@ -106,7 +106,62 @@
     <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
     <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
     <soundExplosion>TS_Sound_WoodExplosion1</soundExplosion>
-  </DamageDef>    
+  </DamageDef>
+
+
+<!--Wild damage defs-->
+
+
+  <DamageDef>
+	  <defName>TS_NightshadeThornDamage</defName>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stabbed to death.</deathMessage>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+	  <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <additionalHediffs>
+      <li>
+        <hediff>TS_NightshadeDamageBuildup</hediff>
+        <severityPerDamageDealt>0.2</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+
+
+  <!--<DamageDef>
+	<defName>TS_NightshadeDamage</defName>
+	<label>nightshade coating</label>
+	<workerClass>DamageWorker_AddInjury</workerClass>
+	<externalViolence>true</externalViolence>
+	<isRanged>true</isRanged>
+	<impactSoundType>Slice</impactSoundType>
+    <additionalHediffs>
+      <li>
+        <hediff>TS_NightshadeDamageBuildup</hediff>
+        <severityPerDamageDealt>0.2</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+        <inverseStatScaling>true</inverseStatScaling>
+      </li>
+    </additionalHediffs>
+	  <harmsHealth>false</harmsHealth>
+	  <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	  <armorCategory>Heat</armorCategory>
+	  <defaultArmorPenetration>0</defaultArmorPenetration>
+	  <explosionCellMote>Mote_SmokeFlake</explosionCellMote>
+    <explosionColorCenter>(69, 0, 99)</explosionColorCenter>
+    <explosionColorEdge>(69, 0, 99)</explosionColorEdge>
+    <soundExplosion>DeathAcidifier</soundExplosion>
+    <combatLogRules>Damage_Smoke</combatLogRules>
+	<buildingDamageFactor>0</buildingDamageFactor>
+  </DamageDef>-->
+
+<!--Anima Damage-->
 
 
   <DamageDef> <!--Basically a copy of RangedStab with Psychic hediff, since RangedStab can't be referenced as a parent.-->

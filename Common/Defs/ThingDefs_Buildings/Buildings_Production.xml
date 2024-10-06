@@ -48,7 +48,7 @@ Some Terratech creations may have features that simply make the product unusable
       <texPath>Things/Building/Terraforge</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>(1.4,1.4)</drawSize>
+      <drawSize>(1.6,1.6)</drawSize>
       <drawOffset>(0,0,0.25)</drawOffset>
       <drawRotated>false</drawRotated>
       <damageData>
@@ -92,9 +92,9 @@ Some Terratech creations may have features that simply make the product unusable
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
     <recipes>
-      <li>TS_ConduitTreeSeedRecipe</li>
-      <!--<li>TS_ExtractPrimaSMGTurretSeed</li>
-      <li>TS_ExtractPrimaShotgunTurretSeed</li>
+      <li>TS_SapTreeSeedRecipe</li>
+      <li>TS_SentinelTreeSeedRecipe</li>
+      <!--<li>TS_ExtractPrimaShotgunTurretSeed</li>
       <li>TS_PrimaTurretSeedApexToStake</li>
       <li>TS_PrimaTurretSeedApexToSMG</li>
       <li>TS_PrimaTurretSeedApexToShotgun</li>-->

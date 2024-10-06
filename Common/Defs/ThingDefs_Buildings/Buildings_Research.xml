@@ -3,8 +3,8 @@
   <ThingDef ParentName="BenchBase">
     <defName>TS_BasicResearchBench</defName>
     <label>Terraseed Research Bench</label>
-    <description>A research bench designed to develop and awaken the secrets of Terraseeds. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terraseed biotechnology. All research pertaining to them can only be done here.
-\n\nContains compartments for highly fertile soil, flasks for water and nutrients, and a trough that can be used for relatively simple Terratech procudures.</description>
+    <description>A research bench designed to develop and discover the secrets of Terraseeds. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terraseed biotechnology. All research pertaining to them can only be done here.
+\n\nContains compartments for highly fertile soil, and flasks for water and nutrients.</description>
     <thingClass>Building_ResearchBench</thingClass>
     <minifiedDef>MinifiedThing</minifiedDef>
     <size>(3,1)</size>
@@ -163,6 +163,77 @@
     <uiOrder>2610</uiOrder>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 	</ThingDef>
+
+  <!--<ThingDef ParentName="BenchBase">
+    <defName>TS_BasicSeedBench</defName>
+    <label>Terraseed Bench</label>
+    <description>A workstation designed to shape Terraseeds from glowsap. Most seeds for specific plants can be developed here.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <size>(1,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <WoodLog>10</WoodLog>
+      <TS_Glowsap>10</TS_Glowsap>
+    </costList>
+    <graphicData>
+      <texPath>Things/Building/Production/SeedBench/SeedBench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0,0.09)</drawOffset>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>TreeSowing</li>
+    </researchPrerequisites>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>1100</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <WorkTableWorkSpeedFactor>0.7</WorkTableWorkSpeedFactor>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>TS_GlowsapBasinResearch</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>TerratechDesignation</designationCategory>
+    <uiOrder>2600</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <paintable>true</paintable>
+    </building>
+  </ThingDef>-->
 
 	<!--<ThingDef ParentName="BuildingBase">
 		<defName>TS_DarksapBasinResearch</defName>

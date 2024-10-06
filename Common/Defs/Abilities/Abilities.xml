@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> <!--Todo: add secondary fire mode to Nightshade rifle. 1.5+ only-->
+
+  <!-- Base -->
+
+  <!--<AbilityDef Name="TS_AbilityBase" Abstract="True">
+    <label>Secondary shot.</label>
+    <description>Fire a secondary shot.</description>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Shot_IncendiaryLauncher</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>-->
+
+<!--Nightshade Sac-->
+
+  <!--<AbilityDef ParentName="TS_AbilityBase">
+    <defName>TS_NightshadeSacAbility</defName>
+    <label>launch nightshade sac</label>
+    <description>Launch a pnumatic sac that will cover an area with nightshade toxins.</description>
+    <verbProperties>
+      <range>7.9</range>
+      <defaultProjectile>TS_NightshadeSac</defaultProjectile>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>TS_NightshadeSac</defName>
+    <label>nightshade globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(69, 0, 99)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>TS_NightshadeDamage</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>TS_Filth_Nightshade</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>-->
+</Defs>

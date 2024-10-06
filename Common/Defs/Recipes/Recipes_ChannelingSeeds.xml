@@ -2,10 +2,10 @@
 <Defs>
 
   <RecipeDef>
-    <defName>TS_ConduitTreeSeedRecipe</defName>
-    <label>shape conduit seed</label>
-    <description>Shape a Conduit Tree seed, which is used to create one of the four vital Conduit Trees.</description>
-    <jobString>shaping a conduit seed.</jobString>
+    <defName>TS_SapTreeSeedRecipe</defName>
+    <label>shape conduit seed (tidetree) </label>
+    <description>Shape a Tidetree seed. Tidetrees produce potent saps.</description>
+    <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
     <effectWorking>Surgery</effectWorking>
@@ -13,25 +13,45 @@
     <workAmount>2160</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>TS_Glowsap</li>
-          </thingDefs>
-        </filter>
-        <count>5</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>TS_Glowsap</li>
-      </thingDefs>
-    </fixedIngredientFilter>
     <products>
-      <TS_Seed_ConduitTrees>1</TS_Seed_ConduitTrees>
+      <TS_Seed_SapTree>1</TS_Seed_SapTree>
     </products>
     <displayPriority>0</displayPriority>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>TS_SentinelTreeSeedRecipe</defName>
+    <label>shape conduit seed (sentinel) </label>
+    <description>Shape a Sentinel tree seed. Sentinel trees produce various unique defenses.</description>
+    <jobString>shaping a conduit tree.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workAmount>2160</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <TS_Seed_SentinelTree>1</TS_Seed_SentinelTree>
+    </products>
+    <displayPriority>0</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>TS_BuildingTreeSeedRecipe</defName>
+    <label>shape conduit seed (overgrowth)</label>
+    <description>Shape an Overgrowth tree seed. Overgrowth trees provide crafting materials, and passively create growable structures.</description>
+    <jobString>shaping a conduit tree.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workAmount>2160</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <TS_Seed_SapTree>1</TS_Seed_SapTree>
+    </products>
+    <displayPriority>0</displayPriority>
+  </RecipeDef>
 </Defs>

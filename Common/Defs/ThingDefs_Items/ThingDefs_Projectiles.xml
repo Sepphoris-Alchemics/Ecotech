@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--Balancing should go by the following:
+  <!--Balancing should go by the following:
 Prima base damage should be +2 to their industrial counterpart
 Verdant base damage should be +3
 Perrenial should be +1
@@ -30,7 +30,7 @@ VERDANT short weapons is brought down by 1, medium by 3, long by 5
 Anima long range is brought down by 3
 -->
 
-  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_revolver-->
+  <ThingDef ParentName="BaseBullet">    <!--Base Def: Bullet_revolver-->
     <defName>Bullet_ThornPistol</defName>
     <label>light terrathorn</label>
     <graphicData>
@@ -47,7 +47,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_SMG-->
+  <ThingDef ParentName="BaseBullet">    <!--Base Def: Bullet_SMG-->
     <defName>Bullet_ThornSMG</defName>
     <label>light terrathorn</label>
     <graphicData>
@@ -62,7 +62,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet"> <!--Assault Rifle counterpart-->
+  <ThingDef ParentName="BaseBullet">    <!--Assault Rifle counterpart-->
     <defName>Bullet_ThornCarbine</defName>
     <label>terrathorn</label>
     <graphicData>
@@ -78,7 +78,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet"> <!--Bolt-Action Rifle counterpart; considered a heavy weapon-->
+  <ThingDef ParentName="BaseBullet">    <!--Bolt-Action Rifle counterpart; considered a heavy weapon-->
     <defName>Bullet_ThornRifle</defName>
     <label>terrathorn</label>
     <graphicData>
@@ -95,7 +95,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet"> <!--Greatbow counterpart, but with some stats treated as heavyr-->
+  <ThingDef ParentName="BaseBullet">    <!--Greatbow counterpart, but with some stats treated as heavyr-->
     <defName>Bullet_StakeLight</defName>
     <label>stake</label>
     <graphicData>
@@ -112,7 +112,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet"> <!--upgraded stakecaster shot-->
+  <ThingDef ParentName="BaseBullet">    <!--upgraded stakecaster shot-->
     <defName>Bullet_StakeBriar</defName>
     <label>large briar tangle</label>
     <graphicData>
@@ -122,14 +122,14 @@ Anima long range is brought down by 3
     </graphicData>
     <projectile>
       <damageDef>TS_BriarDamageStake</damageDef>
-      <damageAmountBase>11</damageAmountBase> <!--40% damage removed, rounded from 11.4-->
+      <damageAmountBase>11</damageAmountBase>      <!--40% damage removed, rounded from 11.4-->
       <stoppingPower>0.75</stoppingPower>
       <armorPenetrationBase>0.04</armorPenetrationBase>
-      <speed>35</speed> <!--slightly slower speed-->
+      <speed>35</speed>      <!--slightly slower speed-->
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet"> <!--pump shotgun counterpart, medium weapon-->
+  <ThingDef ParentName="BaseBullet">    <!--pump shotgun counterpart, medium weapon-->
     <defName>Bullet_ThornShotgun</defName>
     <label>scatter blast</label>
     <graphicData>
@@ -145,7 +145,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-    <ThingDef ParentName="BaseBullet"> <!--upgraded shotgun shot-->
+  <ThingDef ParentName="BaseBullet">    <!--upgraded shotgun shot-->
     <defName>Bullet_BriarShotgun</defName>
     <label>briar tangles</label>
     <graphicData>
@@ -154,14 +154,14 @@ Anima long range is brought down by 3
     </graphicData>
     <projectile>
       <damageDef>TS_BriarDamage</damageDef>
-      <damageAmountBase>12</damageAmountBase> <!--40% damage removed-->
-      <stoppingPower>1.5</stoppingPower> <!-- Same stopping power-->
-      <armorPenetrationBase>0.04</armorPenetrationBase> <!--AP down by half-->
-      <speed>40</speed> <!--Slower speed-->
+      <damageAmountBase>12</damageAmountBase>      <!--40% damage removed-->
+      <stoppingPower>1.5</stoppingPower>      <!-- Same stopping power-->
+      <armorPenetrationBase>0.04</armorPenetrationBase>      <!--AP down by half-->
+      <speed>40</speed>      <!--Slower speed-->
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet"> <!--LMG counterpart-->
+  <ThingDef ParentName="BaseBullet">    <!--LMG counterpart-->
     <defName>Bullet_ThornLMG</defName>
     <label>heavy terrathorn</label>
     <graphicData>
@@ -195,8 +195,8 @@ Anima long range is brought down by 3
       <explosionRadius>2.4</explosionRadius>
       <armorPenetrationBase>0.12</armorPenetrationBase>
       <arcHeightFactor>0.2</arcHeightFactor>
-	    <postExplosionSpawnThingDef>TS_Filth_Sap</postExplosionSpawnThingDef>
-	    <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <postExplosionSpawnThingDef>TS_Filth_Sap</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
     </projectile>
   </ThingDef>
 
@@ -206,21 +206,54 @@ Anima long range is brought down by 3
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>TransparentPostLight</shaderType>
-	  <color>(100, 152, 100)</color>
-	  <drawSize>0.9</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
     </graphicData>
-	<thingClass>Projectile_Explosive</thingClass>
+    <thingClass>Projectile_Explosive</thingClass>
     <projectile>
       <damageDef>TS_AcidDamage</damageDef>
       <damageAmountBase>9</damageAmountBase>
-	    <armorPenetrationBase>0.40</armorPenetrationBase>
+      <armorPenetrationBase>0.40</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
-	  <explosionRadius>3.4</explosionRadius>	      
-	  <postExplosionSpawnThingDef>TS_Filth_Acid</postExplosionSpawnThingDef>
-	  <postExplosionSpawnChance>1</postExplosionSpawnChance>
-      <speed>17</speed>	  
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>TS_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
     </projectile>
   </ThingDef>
 
+  <!--Wild projectiles-->
+  <ThingDef ParentName="BaseBullet">    <!--chain shotgun counterpart, medium weapon-->
+    <defName>Bullet_GaubornShotgun</defName>
+    <label>scatter blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <stoppingPower>1.75</stoppingPower>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--upgraded stakecaster shot-->
+    <defName>Bullet_NightshadeRifle</defName>
+    <label>poisonous terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>TS_NightshadeThornDamage</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <stoppingPower>0.25</stoppingPower>
+      <armorPenetrationBase>0.01</armorPenetrationBase>
+      <speed>40</speed>      <!--slightly higher speed-->
+    </projectile>
+  </ThingDef>
 </Defs>

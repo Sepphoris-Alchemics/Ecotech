@@ -81,9 +81,6 @@ Endosap: 70, 178, 83-->
 		<statBases>
       <MarketValue>40</MarketValue>
     </statBases>
-		<plant>
-			<dieIfLeafless>false</dieIfLeafless>
-		</plant>
 		<tickerType>Normal</tickerType>
   	<comps>
 		<li Class="CompProperties_SelfhealHitpoints">
@@ -102,9 +99,6 @@ Accepts any sap transplant | +5 hp/day (unequipped)</inspectString>
 		<statBases>
       <MarketValue>30</MarketValue>
     </statBases>
-		<plant>
-			<dieIfLeafless>false</dieIfLeafless>
-		</plant>
 		<tickerType>Normal</tickerType>
    <comps>
 		<li Class="CompProperties_SelfhealHitpoints">
@@ -114,6 +108,20 @@ Accepts any sap transplant | +5 hp/day (unequipped)</inspectString>
       <inspectString>Standard Genome | Matured
 Transplants impossible | +3.75 hp/day (unequipped)</inspectString>
       </li>
+    </comps>
+	</ThingDef>
+
+<!--=====Wild=====-->
+
+	<ThingDef Name="BaseWildTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+      <MarketValue>40</MarketValue>
+    </statBases>
+		<tickerType>Normal</tickerType>
+  	<comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
     </comps>
 	</ThingDef>
 
@@ -183,9 +191,6 @@ Lifespan renewable via Vitapod</inspectString>
 		<statBases>
       <MarketValue>85</MarketValue>
     </statBases>
-		<plant>
-			<dieIfLeafless>false</dieIfLeafless>
-		</plant>
 		<tickerType>Normal</tickerType>
    <comps>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -207,9 +212,6 @@ Lifespan renewable via Vitapod</inspectString>
 		<statBases>
       <MarketValue>105</MarketValue>
     </statBases>
-		<plant>
-			<dieIfLeafless>false</dieIfLeafless>
-		</plant>
 		<tickerType>Normal</tickerType>
    <comps>
 		<!--No healing over time-->

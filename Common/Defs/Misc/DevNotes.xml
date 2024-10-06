@@ -167,6 +167,17 @@ Archwood: 2000
 			-Mature Normal: 18 days (1080000) | 55 health
 			-Mature Heavy: 20 days (1200000) | 60 health
 
+		-WILD WEAPON LIFESPANS:
+			-As wild weapons are matured when produced, they should follow mature times.
+			-Their health should be 25% lower than their counterpart (rounded down to the nearest 5th)
+			-Lifespan one tier lower than their counterpart.
+			-Health regen half of their counterpart.
+		-EXAMPLE: Nightshade Rifle (counterpart Prima OLR) 30 health. Since Prima OLR is a Matured Normal weapon, it's lifespan would be knocked down a tier, following the rules of a Mature Light.
+			-Nightshade Rifle: 16 days (960000) | 35 health
+
+
+
+
 
 ====================
 
