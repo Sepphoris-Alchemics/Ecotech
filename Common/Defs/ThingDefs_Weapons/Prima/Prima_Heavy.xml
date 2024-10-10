@@ -82,7 +82,7 @@
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Incendiary Launcher-->
 		<defName>TS_Seedburster</defName>
-		<label>prima splintcannon</label>
+		<label>prima seedburster</label>
 		<description>A biotic weapon, patterned off a basic grenade launcher. While nature can't easily replicate actual explosives, this weapon improvises by lobbing pressure-sensitive pods that will spew razor-sharp splinters in every direction.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/TS_SeedBurster</texPath>
@@ -119,6 +119,90 @@
 				<burstShotCount>1</burstShotCount>
         <range>20.9</range>
         <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: N/A-->
+		<defName>TS_Hailcannon</defName>
+		<label>prima hailcannon</label>
+		<description>A biotic weapon, patterned off an LMG but designed for it's own unique role. Rather than being an anti-personel weapon, the hailcannon has been designed to wear down structures, making it effective against destroying mechanoid and other unwanted structures.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/TS_PrimaHailcannonBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.8</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TS_HailcannonShot</defaultProjectile>
+        <warmupTime>4.5</warmupTime>
+				<burstShotCount>10</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <range>15.9</range>
+        <soundCast>TS_Sound_Blowgun1</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
         <targetParams>
@@ -348,5 +432,68 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+
+<!--Briar Grenade-->
+
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>TS_BriarGrenade</defName>
+    <label>briar grenades</label>
+    <description>Small organic pods that oddly look like fruits. Covered with spines that are linked to one another, upon impact these explode into several large splinters, cutting - and possibly wrapping around - anything nearby.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Grenades/BriarGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.7</drawSize>
+    </graphicData>
+    <uiIconScale>1.3</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.9</RangedWeapon_Cooldown>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <weaponTags>
+      <li>PlantGrenade</li>
+      <li>PlantWeapons</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <smeltable>false</smeltable>
+    <verbs>
+      <li>
+        <label>throw briar grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>10.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.7</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>TS_BriarGrenadeProj</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>TS_SplinterDamage</explosiveDamageType>
+        <requiredDamageTypeToExplode>TS_BriarDamage</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFragGrenadeProjectile">
+    <defName>TS_BriarGrenadeProj</defName>
+    <label>briar grenade</label>
+  </ThingDef>
 
 </Defs>

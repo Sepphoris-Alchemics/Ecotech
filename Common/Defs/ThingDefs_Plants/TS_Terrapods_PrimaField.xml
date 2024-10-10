@@ -42,7 +42,7 @@ Tier 4 surge seeds: 20
       <fertilitySensitivity>0.5</fertilitySensitivity>
       <growMinGlow>0.3</growMinGlow>
       <harvestWork>300</harvestWork>
-      <harvestedThingDef>TS_Knife</harvestedThingDef>
+      <harvestedThingDef>TS_PrimaKnife</harvestedThingDef>
       <burnedThingDef IsNull="True" />
       <harvestYield>1</harvestYield>
       <harvestMinGrowth>0.9</harvestMinGrowth>
@@ -72,7 +72,7 @@ Tier 4 surge seeds: 20
       <ThingDef>TS_OverviewPrimaWeapons</ThingDef>
     </descriptionHyperlinks>
     <plant>
-      <harvestedThingDef>TS_Knife</harvestedThingDef>
+      <harvestedThingDef>TS_PrimaKnife</harvestedThingDef>
       <sowMinSkill>1</sowMinSkill>
       <growDays>4</growDays>
       <harvestWork>300</harvestWork>
@@ -83,8 +83,8 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
   <ThingDef ParentName="TS_WeaponPodBase">
-    <defName>TS_WeaponPod_Phytosword</defName>
-    <label>Terrapod: Phytosword</label>
+    <defName>TS_WeaponPod_PrimaSword</defName>
+    <label>Terrapod: Briarsword</label>
     <description>A plant pod that will slowly grow a biotic sword. Requires highly fertile terrain.</description>
     <plant>
       <harvestedThingDef>TS_PrimaSword</harvestedThingDef>
@@ -98,11 +98,11 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
   <ThingDef ParentName="TS_WeaponPodBase">
-    <defName>TS_WeaponPod_Mace</defName>
-    <label>Terrapod: Mace</label>
+    <defName>TS_WeaponPod_PrimaMace</defName>
+    <label>Terrapod: Briarmaul</label>
     <description>A plant pod that will slowly grow a biotic mace. Requires highly fertile terrain.</description>
     <plant>
-      <harvestedThingDef>TS_Mace</harvestedThingDef>
+      <harvestedThingDef>TS_PrimaMace</harvestedThingDef>
       <sowMinSkill>2</sowMinSkill>
       <growDays>5</growDays>
       <harvestWork>300</harvestWork>

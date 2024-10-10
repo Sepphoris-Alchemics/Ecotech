@@ -12,7 +12,7 @@
     </thingCategories>
     <tickerType>Rare</tickerType>
     <rotatable>true</rotatable>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>TerratechDesignation</designationCategory>
     <uiOrder>2710</uiOrder>
     <constructEffect>ConstructWood</constructEffect>
     <building>
@@ -25,12 +25,14 @@
 
   <ThingDef ParentName="TS_SapFilter_Base">
     <defName>TS_GlowsapFilter</defName>
-    <label>Cauldron of Transposition</label>
+    <label>Sap Transposer</label>
     <description>A deeply rooted basin that, when filled with glowsap, will slowly filter and absorb most of the elements and nutrients within. This process destroys the given glowsap, but the preserved contents produce a powerful, highly valuable sap. These new saps can then either be used, or sold.
 The outcome will always be one vial of refined sap, but which one it is will be entirely random. It's not an efficient use of glowsap, but is useful if glowsap reserves are plentiful.</description>
     <graphicData>
-      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <texPath>Things/Building/Production/Transposer/Transposer</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>
       </damageData>
@@ -41,9 +43,12 @@ The outcome will always be one vial of refined sap, but which one it is will be 
     <statBases>
       <WorkToBuild>600</WorkToBuild>
       <Mass>10</Mass>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>1.0</Flammability>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>3</Flammability>
     </statBases>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>TerratechDesignation</designationCategory>
     <costList>
       <Steel>10</Steel>
       <WoodLog>30</WoodLog>
@@ -61,27 +66,27 @@ The outcome will always be one vial of refined sap, but which one it is will be 
         <fillableBarBackgroundColor>(21, 25, 29)</fillableBarBackgroundColor>
         <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
         <inputThings>
-            <!-- needs exactly one entry -->
-            <TS_Glowsap>240</TS_Glowsap>
+          <!-- needs exactly one entry -->
+          <TS_Glowsap>300</TS_Glowsap>
         </inputThings>
         <conversionDurationTicks>1200</conversionDurationTicks>
         <potentialResults>
           <li>
-            <weight>4</weight>
+            <weight>2</weight>
             <things>
-                <TS_Endosap>1</TS_Endosap>
-            </things>
-          </li>
-          <li>
-            <weight>4</weight>
-            <things>
-                <TS_Sunsap>1</TS_Sunsap>
+              <TS_Endosap>1</TS_Endosap>
             </things>
           </li>
           <li>
             <weight>2</weight>
             <things>
-                <TS_Hypersap>1</TS_Hypersap>
+              <TS_Sunsap>1</TS_Sunsap>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <TS_Hypersap>1</TS_Hypersap>
             </things>
           </li>
         </potentialResults>

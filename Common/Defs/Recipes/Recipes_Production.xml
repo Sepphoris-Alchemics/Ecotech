@@ -1,71 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <!--<RecipeDef>
-    <defName>TS_FilterGlowsap</defName>
-    <label>filter glowsap</label>
-    <description>Filter a large amount of glowsap to obtain another sap type. The filtered amount will be just enough to fill a single jar. Useful for excess glowsap that has stocked up over time.</description>
-    <jobString>Filtering glowsap.</jobString>
-    <workSpeedStat>ResearchSpeed</workSpeedStat>
-    <effectWorking>Smith</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>1000</workAmount>
-    <unfinishedThingDef>UnfinishedFilteredTerrasap</unfinishedThingDef>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>TS_Glowsap</li>
-          </thingDefs>
-        </filter>
-        <count>200</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>TS_Glowsap</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <TerrasapRandom>1</TerrasapRandom>
-    </products>
-	<researchPrerequisite>TS_AdvancedGlowsapUsage</researchPrerequisite>
-		<skillRequirements>
-			<Plants>8</Plants>
-		</skillRequirements>
+  <RecipeDef>
+    <defName>TS_TerraforgeSeedRecipe</defName>
+    <label>shape channeling seed (terraforge) </label>
+    <description>Shape a seed that will quickly grow into a Terraforge. The terraforge is crucial in utilizing and advancing Terratech.</description>
+    <jobString>shaping a sap transposer seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
-    <recipeUsers>
-			<li>TS_BasicResearchBench</li>
-		</recipeUsers>
-  </RecipeDef>-->
+    <researchPrerequisite>TS_TerraseedEssentials</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>6400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <TS_Seed_Terraforge>1</TS_Seed_Terraforge>
+    </products>
+    <displayPriority>900</displayPriority>
+  </RecipeDef>
 
-  <!--<ThingDef ParentName="UnfinishedBase">
-    <defName>TS_TerrasapRandom</defName>    
-    <label>filtered terrasap</label> 
-    <description>Terrasap that has been carefully filtered to provide a single jar of a more valuable terrasap.</description>
-    <graphicData>
-      <texPath>Things/Items/UnfinishedTerrasap</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Metal_Drop</soundInteract>
-    <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>1</stackLimit>
-    <statBases>
-      <MaxHitPoints>25</MaxHitPoints>
-      <MarketValue>1</MarketValue>
-      <Mass>0.6</Mass>
-      <Flammability>2</Flammability>
-      <DeteriorationRate>2</DeteriorationRate>
-    </statBases>
-    <intricate>true</intricate>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="RRO.CompProperties_RandomOutcomeComp">
-        <canProvideTags>
-          <li>FilteredTerrasap</li>
-        </canProvideTags>
-      </li>
-    </comps>
-  </ThingDef>-->
+  <RecipeDef>
+    <defName>TS_SapFilterSeedRecipe</defName>
+    <label>shape channeling seed (sap transposer) </label>
+    <description>Shape a seed that will quickly grow into a Sap Transposer. Sap Transposers take excess glowsap, and filter it into a random, more specialized sap.</description>
+    <jobString>shaping a sap transposer seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <researchPrerequisite>TS_GlowsapRefinement</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>3200</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <TS_Seed_SapFilter>1</TS_Seed_SapFilter>
+    </products>
+    <displayPriority>910</displayPriority>
+  </RecipeDef>
 
 </Defs>

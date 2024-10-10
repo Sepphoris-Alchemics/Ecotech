@@ -201,6 +201,22 @@ Anima long range is brought down by 3
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
+    <defName>TS_HailcannonShot</defName>
+    <label>heavy terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.4</drawSize>
+    </graphicData>
+    <projectile>
+      <speed>32</speed>
+      <damageDef>TS_HailcannonDamage</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <armorPenetrationBase>0.12</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
     <defName>TS_AcidShot</defName>
     <label>acidic globule</label>
     <graphicData>
@@ -254,6 +270,21 @@ Anima long range is brought down by 3
       <stoppingPower>0.25</stoppingPower>
       <armorPenetrationBase>0.01</armorPenetrationBase>
       <speed>40</speed>      <!--slightly higher speed-->
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet"> <!--heavy SMG -->
+    <defName>Bullet_PerrenialNeedle</defName>
+    <label>perrenial needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/TS_PerrenialNeedle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <speed>52</speed>
     </projectile>
   </ThingDef>
 </Defs>

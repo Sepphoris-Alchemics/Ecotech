@@ -27,7 +27,18 @@
     <soundExplosion>DeathAcidifier</soundExplosion>
     <combatLogRules>Damage_Flame</combatLogRules>
 	<buildingDamageFactor>6.5</buildingDamageFactor>
-  </DamageDef>  
+  </DamageDef>
+
+  <!--Hailcannon damage-->
+    <DamageDef ParentName="CutBase">
+    <defName>TS_HailcannonDamage</defName>
+    <label>cut</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <hediff>Cut</hediff>
+    <impactSoundType />
+    <armorCategory />
+    <buildingDamageFactor>4</buildingDamageFactor>
+  </DamageDef> 
 
   <!-- Briar Cutting damage-->
     <DamageDef ParentName="CutBase">
@@ -68,6 +79,7 @@
   </DamageDef>
 
 
+
   <DamageDef>
 	<defName>TS_SeedbursterDamage</defName>
 	<label>pierce</label>
@@ -98,6 +110,7 @@
 	  <hediff>Stab</hediff>
     <hediffSolid>Crack</hediffSolid>
 	  <harmsHealth>true</harmsHealth>
+    <defaultDamage>15</defaultDamage>
 	  <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 	  <armorCategory>Sharp</armorCategory>
     <stabChanceOfForcedInternal>0.3</stabChanceOfForcedInternal>

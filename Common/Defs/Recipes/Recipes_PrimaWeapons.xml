@@ -126,7 +126,7 @@
         <filter>
           <thingDefs>
             <li>TS_StakeCaster</li>
-            <li>TS_PrimaStakeCasterUpgraded</li>
+            <li>TS_PrimaTwincaster</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -135,7 +135,7 @@
     <fixedIngredientFilter>
       <thingDefs>
         <li>TS_StakeCaster</li>
-        <li>TS_PrimaStakeCasterUpgraded</li>
+        <li>TS_PrimaTwincaster</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>

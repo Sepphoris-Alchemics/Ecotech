@@ -85,7 +85,9 @@
   <ResearchProjectDef>
     <defName>TS_TerraseedEssentials</defName>
     <label>Terraseed Essentials</label>
-    <description>Learn how to properly create and grow Terraseeds; specialized seeds that are used to grow biotic gear and equipment, instead of food or materials.\n\nTerraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded. Replicating their secrets as outsiders is indeed possible, but requires excessive effort.</description>
+    <description>Learn how to properly create and grow Terraseeds; specialized seeds that are used to grow biotic gear and equipment, instead of food or materials.
+Teaches you how to nurture a Terraforge channeling seed, which can be done at a proper designated spot.
+Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded. Replicating their secrets as outsiders is indeed possible, but requires excessive effort.</description>
     <baseCost>1750</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
@@ -95,10 +97,6 @@
     <tags>
       <li>TribalStart</li>
     </tags>
-    <!--<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <requiredResearchFacilities>
-      <li>MultiAnalyzer</li>
-    </requiredResearchFacilities>-->
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>0.00</researchViewY>
@@ -136,10 +134,10 @@
   <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>-->
 
-  <ResearchProjectDef>
-    <defName>TS_TerrastructureBasics</defName> <!--Outdated name-->
+  <!--<ResearchProjectDef>
+    <defName>TS_TerrastructureBasics</defName>
     <label>Basic Terrastructures</label>
-    <description>Learn how to grow biotic weapon patterns of simply-formed weapons. This covers weapons that don't rely on advanced internal movement, notably melee weapons and weapons that utilize simple growth for offense.</description>
+    <description>Learn how to grow structures crucial to manipulating or utilizing core Terratech applications.\n\nWays these structures can be used will require further insight.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
@@ -147,9 +145,9 @@
       <li>TS_TerraseedEssentials</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
+    <researchViewX>0.00</researchViewX>
     <researchViewY>1.00</researchViewY>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <ResearchProjectDef>
     <defName>TS_FundamentalArms</defName> <!--Outdated name-->
@@ -167,20 +165,18 @@
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_SurgeSeeds</defName>
-    <label>Surge Seed Cultivation</label>
-    <description>Not everything can be grown in a Terrapod: Some products or patterns are too large, require more resources to properly grow, or may need to be fully grown at situational moments. Surge Seeds are designed to address issues such as these by concentrating a vast amount of nurtients, then releasing them all at once properly buried into the ground.
-\n\nSurge Terrapods still require time to grow their initial seed, but once that new seed is placed, it will instantly take root and form into it's given pattern.
-\n\n\n"Okay okay, let's not panic. You know, I read somewhere that plants have feelings. So... come on. Say something nice to it."
-\n"Okay. Let me just think for a second.... Hi little plant-"</description>
-    <baseCost>500</baseCost>
+    <defName>TS_ConduitSeeds</defName>
+    <label>Elderwood Conduit Seeds</label>
+    <description>Not everything is hands-on; while you take care of the planet, the planet will take care of you back. This research enables you to create "Conduit" seeds, which - when planted - grow powerful trees that protect and supply your colony.
+\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
+    <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
     <hiddenPrerequisites>
       <li>TS_TerraseedEssentials</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
+    <researchViewX>3.00</researchViewX>
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
@@ -250,9 +246,9 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <prerequisites>
       <li>TS_StandardFirearms</li>
     </prerequisites>
-    <hiddenPrerequisites>
+    <!--<hiddenPrerequisites>
       <li>TS_SurgeSeeds</li>
-    </hiddenPrerequisites>
+    </hiddenPrerequisites>-->
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>TS_GlowsapBasinResearch</li>
@@ -272,24 +268,40 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <tab>TS_TerrasecurityTab</tab>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>0.00</researchViewX>
-  <researchViewY>1.00</researchViewY>
+  <researchViewY>2.00</researchViewY>
     <discoveredLetterTitle>Secrets of Terratech: Royal Seeds</discoveredLetterTitle>
     <discoveredLetterText>You have discovered that Prima Terraweapons are just one of several known types of Terraseeds. This particular research has unveiled that one of the most powerful types are known as "Royal" Terraseeds, and are carefully engineered with the mysterious - and massive - power of Anima. Products of these seeds are documented to take up to years to grow, and properly growing them requires skill that only prodigies can achieve; however, any given Royal Terraweapon contains power that rivals - or even completely overshadows - Spacer tech that's widely believed to be superior. The secrets behind producing the weapons are currently lost and not known to any; however, records rumor that *very* few surviving Anima weapons may still be out there, perhaps within relative reach....</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_SapBasics</defName>
-    <label>Terrasaps</label>
-    <description>Learn how to cultivate plants and trees that produce Terrasaps, which are special saps designed to support and evolve Terraweapons.</description>
+    <defName>TS_SapBasics</defName> <!--Unlocks Glowsap plants, -->
+    <label>Glowsap Cultivation</label>
+    <description>Learn how to cultivate plants and trees that produce Glowsap, a crucial item that fuels many structures and processes.
+Dark mode included!</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
+    <hiddenPrerequisites>
+      <li>TS_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TS_GlowsapRefinement</defName> <!--for Sap Transposer-->
+    <label>Glowsap Refinement</label>
+    <description>Learn how to refine Glowsap into valuable terrasaps that can modify and strengthen Terraweapons.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>TS_TerrasecurityTab</tab>
     <prerequisites>
-      <li>TS_SurgeSeeds</li>
+      <li>TS_SapBasics</li>
     </prerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -303,8 +315,8 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
       <li>TS_SapBasics</li>
     </prerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>1.75</researchViewY>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -315,11 +327,11 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>
     <prerequisites>
-      <li>TS_SapBasics</li>
+      <li>TS_GlowsapRefinement</li>
     </prerequisites>
     <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
   <!--<ResearchProjectDef>

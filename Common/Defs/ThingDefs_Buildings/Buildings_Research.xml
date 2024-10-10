@@ -51,8 +51,12 @@
         <linkableFacilities>
           <li>TS_TerravatBasic</li>
           <li>TS_GlowsapBasinResearch</li>
-          <!--<li>TS_DarksapBasinResearch</li>-->
+          <li>TS_Terraforge</li>
         </linkableFacilities>
+      </li>
+      <li Class="CompProperties_ReportWorkSpeed">
+        <workSpeedStat>ResearchSpeedFactor</workSpeedStat>
+        <displayReasons>false</displayReasons>
       </li>
     </comps>
     <placeWorkers>

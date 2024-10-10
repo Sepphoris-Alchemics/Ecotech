@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Example. Plop this in a planting pot and let the plant grow. Spawns a chair and refunds the pot materials. -->
+  <!--<ThingDef ParentName="PlantBaseNonEdible">
+    <defName>TS_ChairSeed</defName>
+    <label>chair seed</label>
+    <description>Lmao, why not</description>
+    <graphicData>
+      <texPath>Things/Plant/Rose</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>125</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <sowWork>750</sowWork>
+      <sowTags>
+        <li>Decorative</li>
+      </sowTags>
+      <growMinGlow>0.3</growMinGlow>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>0.1</growDays>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>DiningChair</transformedThing>
+        <transformedThingStuff>WoodLog</transformedThingStuff>
+      </li>
+    </comps>
+  </ThingDef>-->
+
+  <ThingDef Name="TS_BasicProductionPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+    <graphicData>
+      <texPath>Things/Plant/SapFilter/SapFilter</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <plant>
+      <maxMeshCount>1</maxMeshCount>
+      <growDays>0.25</growDays>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <burnedThingDef IsNull="True" />
+      <immatureGraphicPath>Things/Plant/SapFilter/SapFilter_Immature</immatureGraphicPath>
+      <sowWork>540</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <blockAdjacentSow>false</blockAdjacentSow>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.4~1</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <sowResearchPrerequisites Inherit="False" />
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <purpose>Misc</purpose>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_BasicProductionPlantBase">
+    <defName>TS_SapFilterPlant</defName>
+    <label>sap transposer sprout</label>
+    <description>A lump of plant matter and soft wood that will sprout into a sap transposer. Takes roughly a day to fully grow. Proper nutrients are stored in the seed, allowing it to grow on most surfaces.</description>
+    <graphicData>
+      <texPath>Things/Plant/Rose</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <sowTags>
+        <li>Decorative</li>
+      </sowTags>
+      <growMinGlow>0.3</growMinGlow>
+      <growDays>0.25</growDays>
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>TS_GlowsapFilter</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Inactive until fully grown</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

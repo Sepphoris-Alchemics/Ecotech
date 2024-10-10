@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--
+  <!--IMPORTANT: Most saps can only be applied to second-stage weapons.
+      This is done to avoid texture bloat and excessive XML.
+      Any immature weapons can only be given Glowsap, in order to change into their matured form.-->
+
+  <!--
 	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
 	-To-do: Later used in Perrenial Weapons.
 -->
@@ -19,7 +23,7 @@
     </graphicData>
     <stackLimit>150</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <MarketValue>5.5</MarketValue>
@@ -56,7 +60,7 @@
     </graphicData>
     <stackLimit>90</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <MarketValue>5.5</MarketValue>
@@ -74,24 +78,29 @@
       </li>
     </comps>-->
     <modExtensions>
-      <li Class="Terrasecurity.ThingDefExtension_TransformerRecipe">
+      <li Class="Terrasecurity.ThingDefExtension_TransformerRecipe">        <!--recipes used by Terravats-->
         <recipes>
           <li>
-            <fuelCount>15</fuelCount>
-            <inputThingDef>TS_SMG</inputThingDef>
-            <outputThingDef>TS_SMGUpgraded</outputThingDef>
+            <fuelCount>30</fuelCount>            <!--how much fuel the Terravat uses for the process-->
+            <inputThingDef>TS_SMG</inputThingDef>            <!--the input item needed inside the Terravat-->
+            <outputThingDef>TS_SMGUpgraded</outputThingDef>            <!--the item produced after the transformation-->
             <!--outputStuff only for items or structures that are stuffable-->
             <!--<outputStuff>WoodLog</outputStuff>-->
           </li>
           <li>
-            <fuelCount>15</fuelCount>
+            <fuelCount>30</fuelCount>
             <inputThingDef>TS_StakeCaster</inputThingDef>
-            <outputThingDef>TS_PrimaStakeCasterUpgraded</outputThingDef>
+            <outputThingDef>TS_PrimaTwincaster</outputThingDef>
           </li>
           <li>
-            <fuelCount>15</fuelCount>
+            <fuelCount>30</fuelCount>
             <inputThingDef>TS_Shotgun</inputThingDef>
             <outputThingDef>TS_ShotgunUpgraded</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>30</fuelCount>
+            <inputThingDef>TS_SMG</inputThingDef>
+            <outputThingDef>TS_SMGUpgraded</outputThingDef>
           </li>
         </recipes>
       </li>
@@ -108,7 +117,7 @@
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>90</stackLimit>
+    <stackLimit>6</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>
     <statBases>
@@ -126,7 +135,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>TS_Endosap</defName>
     <label>Sap of Permanence</label>
-    <description>A vial of refined, potent terrasap, named due to it's unique features. These unique features can be applied to mature terraweapons, giving them the following alterations:
+    <description>A jar of refined, potent terrasap, named due to it's unique features. These unique features can be applied to mature terraweapons, giving them the following alterations:
 \n\nHitpoints increased by 50% (rounded up)
 Flammability decreased by 75%
 Regenerates 2.5 HP/Day</description>
@@ -136,9 +145,9 @@ Regenerates 2.5 HP/Day</description>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>3</stackLimit>
+    <stackLimit>6</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <MarketValue>82</MarketValue>
@@ -155,6 +164,29 @@ Regenerates 2.5 HP/Day</description>
         <glowColor>(370,370,370,0)</glowColor>
       </li>
     </comps>-->
+    <modExtensions>
+      <li Class="Terrasecurity.ThingDefExtension_TransformerRecipe">        <!--recipes used by Terravats-->
+        <recipes>
+          <li>
+            <fuelCount>1</fuelCount>            <!--how much fuel the Terravat uses for the process-->
+            <inputThingDef>TS_SMGUpgraded</inputThingDef>            <!--the input item needed inside the Terravat-->
+            <outputThingDef>TS_PrimaSMGEndosap</outputThingDef>            <!--the item produced after the transformation-->
+            <!--outputStuff only for items or structures that are stuffable-->
+            <!--<outputStuff>WoodLog</outputStuff>-->
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>TS_PrimaTwincaster</inputThingDef>
+            <outputThingDef>TS_PrimaTwincasterEndosap</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>TS_ShotgunUpgraded</inputThingDef>
+            <outputThingDef>TS_PrimaShotgunEndosap</outputThingDef>
+          </li>
+        </recipes>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -171,9 +203,9 @@ Max lifespan decreased by 20% (rounded down)</description>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>90</stackLimit>
+    <stackLimit>6</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <MarketValue>104</MarketValue>
@@ -195,18 +227,17 @@ Max lifespan decreased by 20% (rounded down)</description>
   <ThingDef ParentName="ResourceBase">
     <defName>TS_Sunsap</defName>
     <label>Sap of Vivication</label>
-    <description>A vial of refined, potent terrasap, named due to it's unique features. These unique features can be applied in a multitude of ways:
-\n\nReplenishes the life force of turrets
-Replenishes the lifespan of any Terraweapon</description>
+    <description>A vial of refined, potent terrasap, named due to it's unique features. When used as a fuel in a Terraforge, this sap can completely revitialize and restore the lifespan of various Terraweapons within it.
+\n\nSaps of Vivication can be used on any matured weapon within a Terravat. To use it, insert this sap as a fuel source, then insert the weapon you wish to revitalize.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Sunsap</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>90</stackLimit>
+    <stackLimit>3</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <MarketValue>104</MarketValue>
@@ -223,6 +254,34 @@ Replenishes the lifespan of any Terraweapon</description>
         <glowColor>(370,370,370,0)</glowColor>
       </li>
     </comps>-->
+    <modExtensions>
+      <li Class="Terrasecurity.ThingDefExtension_TransformerRecipe">        <!--recipes used by Terravats-->
+        <recipes>
+          <li>
+            <fuelCount>1</fuelCount>            <!--how much fuel the Terravat uses for the process-->
+            <inputThingDef>TS_SMGUpgraded</inputThingDef>            <!--the input item needed inside the Terravat-->
+            <outputThingDef>TS_SMGUpgraded</outputThingDef>            <!--the item produced after the transformation-->
+            <!--outputStuff only for items or structures that are stuffable-->
+            <!--<outputStuff>WoodLog</outputStuff>-->
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>TS_PrimaTwincaster</inputThingDef>
+            <outputThingDef>TS_PrimaTwincaster</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>TS_ShotgunUpgraded</inputThingDef>
+            <outputThingDef>TS_ShotgunUpgraded</outputThingDef>
+          </li>
+          <!--<li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>TS_SMGUpgraded</inputThingDef>
+            <outputThingDef>TS_SMGUpgraded</outputThingDef>
+          </li>-->
+        </recipes>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -242,7 +301,7 @@ Flammability lowered by 50%</description>
     </graphicData>
     <stackLimit>3</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <MarketValue>1408</MarketValue>
@@ -275,7 +334,7 @@ Flammability lowered by 50%</description>
     </graphicData>
     <stackLimit>150</stackLimit>
     <healthAffectsPrice>true</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>20</MaxHitPoints>
       <MarketValue>5.5</MarketValue>

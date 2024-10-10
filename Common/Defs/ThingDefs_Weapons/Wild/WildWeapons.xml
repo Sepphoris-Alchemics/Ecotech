@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>TS_NightshadeRifle</defName>		<!--Counterpart: Prima OLR-->
 		<label>nightshade rifle</label>
-		<description>The Nightshade Rifle is a biotic weapon produced exclusively by a Sentinel Tree. It is patterned off of a long-range rifle, and is capable of firing poisonous thorns. Due to its plant nature, no optics are present, giving it a lower range than most other rifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown. Additionally, it's ancient design prevents it from accepting other saps.</description>
+		<description>The Nightshade Rifle is a biotic weapon produced exclusively by a Sentinel Tree. It is patterned off of a long-range rifle, and is capable of firing poisonous thorns. Due to its plant nature, no optics are present, giving it a lower range than most other rifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire. Additionally, it's ancient design prevents it from accepting other saps.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/NightshadeRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -40,7 +40,7 @@
 				<defaultProjectile>Bullet_NightshadeRifle</defaultProjectile>
 				<warmupTime>2.125</warmupTime>
 				<burstShotCount>2</burstShotCount>
-				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
 				<range>29.9</range>
 				<soundCast>TS_Sound_Blowgun1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
@@ -93,10 +93,96 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 		</comps>
 	</ThingDef>
 
+<!--Perrenial Rifle-->
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>TS_PerrenialRifle</defName>		<!--Counterpart: Heavy SMG-->
+		<label>Perrenial Needler</label>
+		<description>The Perrenial Needler is a biotic weapon produced exclusively by a Sentinel Tree. Designed for colonies that have trouble growing plants, The Perrenial Needler trades potent projectiles for a significanty longer lifespan, alongside the ability to be replanted, and revitialized. As the name implies, the lesser projectiles are small and weak, but have the single advantage of firing quite fast.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but the weapon itself can be planted and revitialized over time. Additionally, it's ancient design prevents it from accepting other saps.\n\nLegend has it that other Perrenial weapons exist, but whether or not that's true remains to be seen....</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/PerrenialRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.55</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>0.60</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PerrenialNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>1.4</warmupTime>
+				<burstShotCount>7</burstShotCount>
+				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+				<range>19.9</range>
+				<soundCast>TS_Sound_Blowgun1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1800000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Immutable
+Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+<!--Gau Shotgun-->
+
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>TS_GaubornShotgun</defName>		<!--Counterpart: Prima Briarburster-->
 		<label>gauborn shredder</label>
-		<description>An ancient design of an organic weapon, produced exclusively by a Sentinel Tree. Using the Gauranlen tree as a starting point for it's traits, this weapon posesses hardiness and high damage, but it's quite low range, and it's resistance to change - contrary to the tree itself - may explain why it's genome was never expanded into a larger family.</description>
+		<description>An ancient design of an organic weapon, produced exclusively by a Sentinel Tree. Using the Gauranlen tree as a starting point for it's traits, this weapon posesses hardiness and high damage, but it's quite low range, and it's resistance to change - contrary to the tree itself - may explain why it's genome was never expanded into a larger family.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire. Additionally, it's ancient design prevents it from accepting other saps.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/GaubornShotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

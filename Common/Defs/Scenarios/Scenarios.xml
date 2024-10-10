@@ -42,7 +42,12 @@
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>TS_PrimaSword</thingDef>
-        <count>2</count>
+        <count>1</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>TS_PrimaKnife</thingDef>
+        <count>1</count>
 			</li>
 			<!--<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
@@ -75,8 +80,14 @@
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>ScatterThingsAnywhere</def>
+				<thingDef>TS_ElderwoodMaterial</thingDef>
+				<count>500</count>
+				<allowRoofed>True</allowRoofed>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsAnywhere</def>
 				<thingDef>WoodLog</thingDef>
-				<count>750</count>
+				<count>250</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
 			<li Class="ScenPart_StartingResearch">
@@ -93,7 +104,7 @@
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_SurgeSeeds</project>
+				<project>TS_ConduitSeeds</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>

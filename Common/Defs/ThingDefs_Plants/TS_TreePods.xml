@@ -2,7 +2,7 @@
 <Defs>
 
 <!--Glowsap Tree Surge Pod-->
-  <ThingDef ParentName="PlantBaseNonEdible">
+  <!--<ThingDef ParentName="PlantBaseNonEdible">
     <defName>TS_SurgePod_GlowsapTree</defName>
     <label>Surgepod: Glowsap Tree</label>
     <description>An enhanced Terrapod that will provide a surge seed for Glowsap Trees. This provided seed will need to be manually planted, then will immediately begin to grow into a Glowsap Tree.
@@ -44,6 +44,6 @@
       <visualSizeRange>0.5~1.05</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
     </plant>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>

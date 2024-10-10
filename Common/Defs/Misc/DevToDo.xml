@@ -12,13 +12,13 @@ INCOMPLETE:
 		-Create Art (finished)
 		-Create XML (UNFINISHED)
 		-Tie to a research (UNFINISHED)
-		-Tie recipe to Terraforge (UNFINISHED)
+		-Tie recipe to Terraforge (finished)
 		-Create Elderwood item graphics (finished)
 		-Create passive growing wall feature (UNFINISHED)
 
-	-Create art for Cauldron of Change 
-	-Give Terraforge a base plant
-	-Make sure Terraforge seed is indestructable
+	-Create art for Sap Transposer (finished)
+	-Give Terraforge a base plant (finished)
+	-Make sure Terraforge seed is indestructable (finished)
 	-Implement Sap of Permanence on the following:
 
 	-Implement Sap of Permanence recipes:
@@ -35,9 +35,9 @@ INCOMPLETE:
 	-Implement Sap of Vivication recipes:
 
 	-Implement Glowsap acceleration recipes:
-		-Pincaster (UNFINISHED)
-		-Scattershot (UNFINISHED)
-		-Stakecaster (UNFINISHED)
+		-Pincaster (FINISHED)
+		-Scattershot (FINISHED)
+		-Stakecaster (FINISHED)
 	-->
 
 </Defs>

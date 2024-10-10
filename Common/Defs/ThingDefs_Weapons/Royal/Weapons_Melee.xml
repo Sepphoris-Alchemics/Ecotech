@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Royal weapons should follow the following:
+Hit points should always be lower than any other counterpart
+Damage should match their Prima counterpart
+Speed should be 80-100
+All shots should inflct additional psychic damage
+Armor penetration should be .3-.4
+Accuracy follows charge rifles-->
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>TS_RoyalSword</defName>
+		<label>Royal Hyperblade</label>
+		<description>A beatuful half-plant sword, with a razor-sharp blade made of Terraquartz. Capable of competing with some of the most hi-tech melee weaponry out there, this weapon is as valuable and prestigous as it is rare. Like other royal weapons, it has a very high regeneration factor, and is semi-immortal.
+\n\nDespite it's hyper-regeneration abilities, this weapon can still be entirely destroyed if directly damaged enough, or if not given a brief time to address physical issues (the weapon will need to be unequipped and left alone in order to regenerate hitpoints).</description>
+		<graphicData>
+			<texPath>Things/WeaponRoyal/Basic/TS_RoyalSword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+    <relicChance>2</relicChance>
+		<statBases>
+			<Beauty>5</Beauty>
+      <MaxHitPoints>110</MaxHitPoints>
+			<Mass>3.2</Mass>
+			<Flammability>2</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.3</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>TS_PsychicShot</def>
+            <amount>10</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+			</li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.3</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>TS_PsychicShot</def>
+            <amount>10</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+      <li>Artifact</li>
+    </tradeTags>
+	</ThingDef>
+
+
+</Defs>

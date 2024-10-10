@@ -24,7 +24,7 @@
   </ThingDef>-->
 
 	<ThingDef ParentName="BaseWeapon">
-		<defName>TS_Knife</defName>
+		<defName>TS_PrimaKnife</defName>
 		<label>terraknife</label>
 		<description>A biotic curved dagger. One of the weakest terraweapons, but extremely quick to attack with, and to grow.</description>
 		<graphicData>
@@ -91,13 +91,14 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeapon">
-		<defName>TS_Mace</defName>
-		<label>terramace</label>
-		<description>A half-vine, half-wooden club, with several sharp protrusions.</description>
+		<defName>TS_PrimaMace</defName>
+		<label>prima briarmaul</label>
+		<description>A hefy organic mace, lined with both massive spikes, and tiny thistles. The uniquely formed head inflicts both crushing and cutting damage.
+\nUnlike it's ranged counterparts, Prima melee weapons are simple enough to be fully grown upon first harvest. This allows them to be infused with a different sap as soon as desired.</description>
 		<graphicData>
-			<texPath>Things/WeaponMelee/TS_Mace</texPath>
+			<texPath>Things/WeaponPrima/Basic/PrimaMaceBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
+			<drawSize>1</drawSize>
 		</graphicData>
     <!--<costList>
       <WoodLog>50</WoodLog>
@@ -135,7 +136,7 @@
 					<li>Blunt</li>
 					<li>Poke</li>
 				</capacities>
-				<power>16</power>
+				<power>21</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
@@ -185,7 +186,7 @@
 				<capacities>
 					<li>Poke</li>
 				</capacities>
-				<power>8</power>
+				<power>7</power>
 				<cooldownTime>1.5</cooldownTime>
 			</li>
 			<li>
@@ -193,7 +194,7 @@
 				<capacities>
 					<li>Stab</li>
 				</capacities>
-				<power>18</power>
+				<power>14</power>
 				<cooldownTime>1.5</cooldownTime>
 			</li>
       <li>
@@ -201,7 +202,7 @@
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>18</power>
+        <power>14</power>
         <cooldownTime>1.5</cooldownTime>
       </li>
 		</tools>

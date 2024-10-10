@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<!--TERRAVAT RECIPES (most saps progress a weapon into their Apex state, if applicable)
+  <!--TERRAVAT RECIPES (most saps progress a weapon into their Apex state, if applicable)
   GLOWSAP:
     Used for opening seeds
     Used for progressing most weapons quickly
@@ -23,13 +23,20 @@
   <ThingDef ParentName="BuildingBase">
     <defName>TS_TerravatBasic</defName>
     <label>Small Terravat</label>
-    <description>An organic wooden growth that sustains an accessible sap chamber, designed for Terratech experimentation and evolution. Twice a season, this vat will utilize the glowsap within, and will "advance" the various items within into another form. This unlocks security measures that Terratech might employ, or even advance it into a unique, more powerful variant.</description>
+    <description>An organic wooden growth that sustains an accessible sap chamber, designed for Terratech experimentation and evolution. Twice a season, this vat will utilize the glowsap within, and will "advance" the various items within into another form. This unlocks security measures that Terratech might employ, or even advance it into a unique, more powerful variant.
+\n\nTo use a Terravat:
+\nInsert a sap. Every sap can apply a different trait; to see it's applications, check the sap's info.
+\nSelect and insert the item you wish to apply the sap's traits on. Generally these will be matured weapons.
+\nOnce every quadrum, the Terravat will "cycle" and apply the sap traits to the contained item(s) during this time.
+\nOnce the contained item(s) have been altered, they will automatically be ejected for hauling.
+\nItems incompatible with saps will not be altered, or use any of the provided sap.
+\nYou can generally remove the saps and inserted items if you change your mind. However, the Terravat will seal the sap and item(s) shortly before it cycles, so don't wait until the last second!</description>
     <size>(1,1)</size>
     <graphicData>
-      <texPath>Things/Building/Terravats/VatGlowsap</texPath>
+      <texPath>Things/Building/Terravats/SmallVat/Empty</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(1.8,1.8)</drawSize>
       <drawOffset>(0,0,0.3)</drawOffset>
       <drawRotated>false</drawRotated>
       <damageData>
@@ -97,7 +104,7 @@
         <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
       </li>
       <li Class="Terrasecurity.ThingCompProperties_MonoThingContainer">
-        <stackLimit>40</stackLimit>
+        <stackLimit>30</stackLimit>
         <drawContainedThing>false</drawContainedThing>
         <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
       </li>
@@ -125,22 +132,58 @@
           7572374 + (900000 - (7572374 % 900000)) = 8100000
           That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
         -->
-        <transformationCycleIntervalTicks>2000</transformationCycleIntervalTicks>
+        <transformationCycleIntervalTicks>900000</transformationCycleIntervalTicks>
         <validFuels>
           <li>
             <fuelThingDef>TS_Glowsap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
-            <!--<extraGraphicDataIfNotTransforming>
-              <texPath>Things/Building/Misc/DropBeacon</texPath>
-              <graphicClass>Graphic_Single</graphicClass>-->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Glowsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
               <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
-              <!--<drawOffset>(0, 0.01, 0)</drawOffset>
             </extraGraphicDataIfNotTransforming>
             <extraGraphicDataIfTransforming>
-              <texPath>Things/Building/Production/TableButcher</texPath>
-              <graphicClass>Graphic_Multi</graphicClass>
-              <drawOffset>(0, 0.01, 0)</drawOffset>
-            </extraGraphicDataIfTransforming>-->
+              <texPath>Things/Building/Terravats/SmallVat/Glowsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+          <li>
+            <fuelThingDef>TS_Sunsap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Sunsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Sunsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+          <li>
+            <fuelThingDef>TS_Endosap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Endosap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Endosap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
           </li>
         </validFuels>
         <!-- these graphics can be omitted without breaking anything. -->
@@ -154,7 +197,7 @@
           <graphicClass>Graphic_Single</graphicClass>
           <drawOffset>(0, 0.01, 0)</drawOffset>
         </extraGraphicDataIfTransformingAndNoFuel>-->
-        <transformerSlots>2</transformerSlots>
+        <transformerSlots>1</transformerSlots>
       </li>
     </comps>
   </ThingDef>

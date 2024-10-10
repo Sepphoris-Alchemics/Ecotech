@@ -12,7 +12,7 @@
   Bloomrot Mass should be indestructable, but will expire after 7 days.
   Bloomrot weapons only last 7, 9, or 11 days. In exchange for their low life, they can inflict poison and necrosis, are handled by the tree, and double as melee weapons.
     -Matured last 11, 13, or 15 days, and cause killed enemies to produce various plants on death, ranging from cosmetic to productive.-->
-  <ThingDef ParentName="PlantBaseNonEdible">
+  <!--<ThingDef ParentName="PlantBaseNonEdible">
     <defName>TS_BloomrotTree</defName>
     <label>Bloomrot Tree</label>
     <description>A powerful, bioengineered tree, designed to utlilize both life and death as a medium for Terratech. Ultimately produces Alkali weapons, the second generation of Terraweapons.
@@ -54,6 +54,6 @@
       <visualSizeRange>0.5~1.05</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
     </plant>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>

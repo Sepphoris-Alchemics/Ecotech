@@ -63,7 +63,7 @@
     <defName>TS_GlowsapTree</defName>
     <label>Glowsap tree</label>
     <description>A large, glowing tree that produces vast amounts of glowsap. Several cavities covered with a strong organic film reveal the vast amounts of glowsap inside, which is expelled roughly once every quadrum. Naturally, this constant glow also acts as a constant and reliable light source.
-\n\nGlowsap trees require a massive amount of nutrition, and two (or more) being too close to each other will eventually kill one another out. Therefore, each requires ample territory to survive. Glowsap Trees can be cut down for their products, but is not recommended.</description>
+\n\nGlowsap trees require a massive amount of nutrition, and two (or more) being too close to each other will eventually kill one another out. Therefore, each requires ample territory to survive. Glowsap Trees can be cut down for a quick sum of glowsap, but this is not recommended.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Plant/GlowsapTree/GlowsapTree</texPath>
@@ -86,13 +86,13 @@
       <MaxHitPoints>250</MaxHitPoints>
     </statBases>
     <killedLeavings>
-      <TS_Glowsap>120</TS_Glowsap>
-      <WoodLog>40</WoodLog>
+      <TS_Glowsap>45</TS_Glowsap>
+      <TS_ElderwoodMaterial>10</TS_ElderwoodMaterial>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <plant>
-      <growDays>1</growDays> 
+      <growDays>3</growDays> 
       <visualSizeRange>1.8~2.4</visualSizeRange>
       <!--<sowMinSkill>6</sowMinSkill>
 			<sowTags>
@@ -102,6 +102,7 @@
       <fertilityMin>0.05</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
       <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
       <!--<mustBeWildToSow>true</mustBeWildToSow>
       <sowWork>400</sowWork>
       <harvestTag>Standard</harvestTag>
