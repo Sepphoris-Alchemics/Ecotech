@@ -25,9 +25,9 @@ Accuracy follows charge rifles-->
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
 		</weaponTags>
-		<thingSetMakerTags>
+		<!--<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>
-		</thingSetMakerTags>
+		</thingSetMakerTags>-->
     <relicChance>2</relicChance>
 		<statBases>
 			<Beauty>5</Beauty>

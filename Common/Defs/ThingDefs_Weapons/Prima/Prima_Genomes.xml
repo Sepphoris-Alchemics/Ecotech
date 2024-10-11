@@ -257,20 +257,31 @@ Lifespan renewable via Vitapod</inspectString>
         <ticksPerHeal>18000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
       </li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Hyerpsap Genome | Immutable
-Increased projectiles | +25% projectile speed | +3.75 hp/day (unequipped)</inspectString>
+      <inspectString>Disorder Genome | Immutable
+Increased projectiles | Increased range | +3.75 hp/day (unequipped)</inspectString>
       </li>
     </comps>
 	</ThingDef>
 
 
 
-	<ThingDef Name="UpgradedHypersapTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="UpgradedHypersapTerraweapon_Burst" Abstract="True" ParentName="BaseGun">
    <comps>
 			<!--No healing over time-->
     <li Class="CompProperties_InspectString">
-      <inspectString>Hyerpsap Genome | Matured
-Increased projectiles | +25% projectile speed</inspectString>
+      <inspectString>Disorder Genome | Matured
+Increased projectiles | Increased range | Faster fire rate</inspectString>
+      </li>
+    </comps>
+	</ThingDef>
+
+
+	<ThingDef Name="UpgradedHypersapTerraweapon_Single" Abstract="True" ParentName="BaseGun">
+   <comps>
+			<!--No healing over time-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Disorder Genome | Matured
+Increased range | Faster fire rate</inspectString>
       </li>
     </comps>
 	</ThingDef>

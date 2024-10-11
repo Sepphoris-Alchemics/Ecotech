@@ -1,36 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--Endosap differences are applied to their dormant form.
+	<!--Endosap differences are applied to their dormant form.
 At their matured form, they are given their maturity increases-->
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>TS_PrimaSMGEndosap</defName>
-		<label>prima pincaster</label>
-		<description>A biotic SMG, infused with Endosap. The presence of the endosap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.</description>
+		<defName>TS_PrimaSMGEndosap</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
+		<label>prima endoshredder</label>
+		<description>The Apex form of the Prima Pincaster, infused with the Sap of Permanence. The presence of the endosap has enabled the pincaster to create a more durable epidermis, and decreasing flammability.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Endosap/PrimaSMGBasic_ES</texPath>
+			<texPath>Things/WeaponPrima/Endosap/PrimaSMGUpgraded_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.75</drawSize>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
 		</weaponTags>
     <weaponClasses>
-      <li>Ranged</li>
+      <li>RangedLight</li>
+			<li>ShortShots</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>45</MaxHitPoints> <!--50% (+15) more hitpoints-->
-			<AccuracyTouch>0.85</AccuracyTouch>
-			<AccuracyShort>0.65</AccuracyShort>
-			<AccuracyMedium>0.25</AccuracyMedium>
-			<AccuracyLong>0.10</AccuracyLong>
+      <MaxHitPoints>75</MaxHitPoints> <!--50% more than 50-->
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
 			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.2</Mass>
-			<Flammability>0.5</Flammability> <!--75% less flammability-->
+			<Flammability>0.5</Flammability> <!--75% lower flammability-->
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -42,7 +43,7 @@ At their matured form, they are given their maturity increases-->
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
         <warmupTime>0.75</warmupTime>
-        <range>16.9</range>
+        <range>17.9</range>
         <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
         <soundCast>Shot_MachinePistol</soundCast>
@@ -55,12 +56,12 @@ At their matured form, they are given their maturity increases-->
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
         <warmupTime>0.75</warmupTime>
-        <range>16.9</range>
+        <range>17.9</range>
         <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
         <soundCast>Shot_MachinePistol</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>0</muzzleFlashScale>
+        <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
 		<tools>
@@ -83,19 +84,19 @@ At their matured form, they are given their maturity increases-->
 			</li>
 		</tools>
 		<tickerType>Normal</tickerType>
-   <comps>
-    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-    	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-    	<lifespanTicks>1260000</lifespanTicks> <!--21 days-->
-    	<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
-    	<!--<expireEffect></expireEffect>-->
-			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    </li>
-      <li Class="CompProperties_InspectString">
-        <inspectString>Permanence Genome | Dormant
-+20 health | -75% flammability | +2.5 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Permanence Genome | Dormant
++25 health | +8 lifetime days | +2.5 hp/day (unequipped)</inspectString>
+			</li>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1440000</lifespanTicks> <!--Light weapon, 960000+480000-->
+          <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+        </li>
+		</comps>
 		<modExtensions>
 			<li Class="VWEMakeshift.MoteProperties">
 				<fleckDef>WoodBit</fleckDef>
@@ -106,37 +107,39 @@ At their matured form, they are given their maturity increases-->
 				<numTimesThrown>1</numTimesThrown>
 			</li>
 			<li Class="VWEMakeshift.MakeshiftProperties">
-				<shots>2~6</shots>
+				<shots>4~5</shots>
 			</li>
 		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>TS_PrimaShotgunEndosap</defName>
-		<label>prima spreadshot</label>
-		<description>A biotic shotgun, infused with Endosap. The presence of the endosap has enabled the spreadshot to create a more durable epidermis, alongside noticeably boosting it's lifespan.</description>
+		<defName>TS_PrimaShotgunEndosap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
+		<label>prima endoburster</label>
+		<description>The matured form of the Prima Spreadshot, infused with the Sap of Permanence. The presence of the endosap has enabled the pincaster to create a more durable epidermis, and decreasing flammability.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Endosap/PrimaShotgunBasic_ES</texPath>
+			<texPath>Things/WeaponPrima/Endosap/PrimaShotgunUpgraded_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.85</drawSize>
+			<drawSize>0.9</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
+			<li>PlantWeaponsUpgraded</li>
 		</weaponTags>
     <weaponClasses>
+			<li>ShortShots</li>
       <li>Ranged</li>
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>55</MaxHitPoints> <!--rounded up-->
-			<AccuracyTouch>0.80</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.70</AccuracyMedium>
-			<AccuracyLong>0.30</AccuracyLong>
-			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <MaxHitPoints>85</MaxHitPoints> <!--50% of 55, rounded to next 5th-->
+			<AccuracyTouch>0.85</AccuracyTouch> <!--.05 higher accuracy in all areas-->
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.2</Mass>
+			<Mass>1.4</Mass> <!--Mass increased by .2 from base-->
 			<Flammability>0.5</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
@@ -147,9 +150,9 @@ At their matured form, they are given their maturity increases-->
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
+        <defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
         <warmupTime>1.125</warmupTime>
-        <range>12.9</range>
+        <range>13.9</range> <!--1 higher range than it's dormant form-->
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
@@ -175,26 +178,26 @@ At their matured form, they are given their maturity increases-->
 			</li>
 		</tools>
 		<tickerType>Normal</tickerType>
-   <comps>
-    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-    	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-    	<lifespanTicks>1440000</lifespanTicks> <!--24 days-->
-    	<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
-    	<!--<expireEffect></expireEffect>-->
-			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    </li>
-      <li Class="CompProperties_InspectString">
-        <inspectString>Permanence Genome | Dormant
-+25 health | -75% flammability | +2.5 hp/day (unequipped)</inspectString>
+		<comps>
+			<li Class="CompProperties_InspectString">
+      	<inspectString>Permanence Genome | Infused
++28 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
       </li>
-    </comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1620000</lifespanTicks> <!--1080000+540000-->
+          <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+        </li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
 		<defName>TS_PrimaTwincasterEndosap</defName>
 		<label>Twincaster</label>
-		<description>The second-generation form of the Prima Stakecaster, infused with Endosap. The presence of the endosap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.
-\nUnfortunately the Endosap has also neutralized the Twincaster's growth potential, preventing it from being evolved further.</description>
+		<description>The second-generation form of the Prima Stakecaster, infused with the sap of Permanence. The presence of the sap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.
+\nUnfortunately the sap has also neutralized the Twincaster's growth potential, preventing it from being evolved further.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Endosap/PrimaCrossbowUpgraded_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -202,17 +205,17 @@ At their matured form, they are given their maturity increases-->
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+			<li>PlantWeapons</li>
 		</weaponTags>
-    <weaponClasses>
-      <li>LongShots</li>
-      <li>Ranged</li>
+		<weaponClasses>
+			<li>LongShots</li>
+			<li>Ranged</li>
 			<li>RangedHeavy</li>
-    </weaponClasses>
-    <relicChance>0</relicChance>
+		</weaponClasses>
+		<relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>90</MaxHitPoints> <!--+50% hitpoints-->
-			<AccuracyTouch>0.70</AccuracyTouch> <!--.05 higher accuracies than dormant-->
+			<MaxHitPoints>90</MaxHitPoints>			<!--+50% hitpoints-->
+			<AccuracyTouch>0.70</AccuracyTouch>			<!--.05 higher accuracies than dormant-->
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
 			<AccuracyLong>0.60</AccuracyLong>
@@ -220,24 +223,24 @@ At their matured form, they are given their maturity increases-->
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>2.8</Mass>
 			<Flammability>0.5</Flammability>
-      <WorkToMake>4000</WorkToMake>
+			<WorkToMake>4000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_StakeBriar</defaultProjectile>
-        <warmupTime>3</warmupTime>
-        <range>32.9</range>
-        <burstShotCount>2</burstShotCount>
-        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>TS_Sound_LightStake</soundCast>
-        <muzzleFlashScale>0</muzzleFlashScale>
-      </li>
-    </verbs>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_StakeBriar</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>32.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<soundCast>TS_Sound_LightStake</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
 		<tools>
 			<li>
 				<label>grip</label>
@@ -259,14 +262,15 @@ At their matured form, they are given their maturity increases-->
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-      <li Class="CompProperties_InspectString">
-        <inspectString>Endosap Genome | Dormant
-+30 health | -75% flammability | +2.5 hp/day (unequipped)</inspectString>
+			<li Class="CompProperties_InspectString">
+      	<inspectString>Permanence Genome | Infused
++30 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
-          <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>

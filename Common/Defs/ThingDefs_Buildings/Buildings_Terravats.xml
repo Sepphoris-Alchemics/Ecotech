@@ -185,18 +185,24 @@
               <drawOffset>(0, 1, 0.3)</drawOffset>
             </extraGraphicDataIfTransforming>
           </li>
+          <li>
+            <fuelThingDef>TS_Hypersap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Hypersap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Hypersap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
         </validFuels>
-        <!-- these graphics can be omitted without breaking anything. -->
-        <!--<extraGraphicDataIfNotTransformingAndNoFuel>
-          <texPath>Things/Building/Exotic/ShipChunk</texPath>
-          <graphicClass>Graphic_Random</graphicClass>
-          <drawOffset>(0, 0.01, 0)</drawOffset>
-        </extraGraphicDataIfNotTransformingAndNoFuel>
-        <extraGraphicDataIfTransformingAndNoFuel>
-          <texPath>Things/Building/Misc/Shuttle</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-          <drawOffset>(0, 0.01, 0)</drawOffset>
-        </extraGraphicDataIfTransformingAndNoFuel>-->
         <transformerSlots>1</transformerSlots>
       </li>
     </comps>

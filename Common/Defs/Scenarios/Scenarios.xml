@@ -66,7 +66,7 @@
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_SurgeSeed_GlowsapTree</thingDef>
+				<thingDef>TS_Seed_Terraforge</thingDef>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>

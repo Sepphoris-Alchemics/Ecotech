@@ -136,7 +136,9 @@
     <defName>TS_Endosap</defName>
     <label>Sap of Permanence</label>
     <description>A jar of refined, potent terrasap, named due to it's unique features. These unique features can be applied to mature terraweapons, giving them the following alterations:
-\n\nHitpoints increased by 50% (rounded up)
+\n\nEvolves the weapon into it's matured form.
+Lifespan increased by 50%
+Hitpoints increased by 50% (rounded up)
 Flammability decreased by 75%
 Regenerates 2.5 HP/Day</description>
     <tickerType>Normal</tickerType>
@@ -169,19 +171,19 @@ Regenerates 2.5 HP/Day</description>
         <recipes>
           <li>
             <fuelCount>1</fuelCount>            <!--how much fuel the Terravat uses for the process-->
-            <inputThingDef>TS_SMGUpgraded</inputThingDef>            <!--the input item needed inside the Terravat-->
+            <inputThingDef>TS_SMG</inputThingDef>            <!--the input item needed inside the Terravat-->
             <outputThingDef>TS_PrimaSMGEndosap</outputThingDef>            <!--the item produced after the transformation-->
             <!--outputStuff only for items or structures that are stuffable-->
             <!--<outputStuff>WoodLog</outputStuff>-->
           </li>
           <li>
             <fuelCount>1</fuelCount>
-            <inputThingDef>TS_PrimaTwincaster</inputThingDef>
+            <inputThingDef>TS_StakeCaster</inputThingDef>
             <outputThingDef>TS_PrimaTwincasterEndosap</outputThingDef>
           </li>
           <li>
             <fuelCount>1</fuelCount>
-            <inputThingDef>TS_ShotgunUpgraded</inputThingDef>
+            <inputThingDef>TS_Shotgun</inputThingDef>
             <outputThingDef>TS_PrimaShotgunEndosap</outputThingDef>
           </li>
         </recipes>
@@ -193,7 +195,8 @@ Regenerates 2.5 HP/Day</description>
     <defName>TS_Hypersap</defName>
     <label>Sap of Disorder</label>
     <description>A vial of refined, potent terrasap, named due to it's unique features. These unique features can be applied to mature terraweapons, giving them the following alterations:
-\n\nStatic-shot weapons may generate an additional projectile
+\n\nEvolves the weapon into it's matured form.
+Static-shot weapons may generate an additional projectile
 Min and Max projectile generation for multi-shot weapons increased by 1
 Certain weapons adapt into unique subvariants
 Max lifespan decreased by 20% (rounded down)</description>
@@ -222,6 +225,29 @@ Max lifespan decreased by 20% (rounded down)</description>
         <glowColor>(370,370,370,0)</glowColor>
       </li>
     </comps>-->
+    <modExtensions>
+      <li Class="Terrasecurity.ThingDefExtension_TransformerRecipe">        <!--recipes used by Terravats-->
+        <recipes>
+          <li>
+            <fuelCount>1</fuelCount>            <!--how much fuel the Terravat uses for the process-->
+            <inputThingDef>TS_SMG</inputThingDef>            <!--the input item needed inside the Terravat-->
+            <outputThingDef>TS_PrimaSMGHypersap</outputThingDef>            <!--the item produced after the transformation-->
+            <!--outputStuff only for items or structures that are stuffable-->
+            <!--<outputStuff>WoodLog</outputStuff>-->
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>TS_PrimaTwincaster</inputThingDef>
+            <outputThingDef>TS_HypercasterI</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>TS_Shotgun</inputThingDef>
+            <outputThingDef>TS_PrimaShotgunHypersap</outputThingDef>
+          </li>
+        </recipes>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -235,7 +261,7 @@ Max lifespan decreased by 20% (rounded down)</description>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>3</stackLimit>
+    <stackLimit>6</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>

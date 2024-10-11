@@ -322,7 +322,8 @@ Dark mode included!</description>
   <ResearchProjectDef>
     <defName>TS_Terravats</defName>
     <label>Terravats</label>
-    <description>Learn how to grow Terravats, which are crucial for delving deeper into Terratech as a whole. These ancient vats enable you to experiment, create, and modify Terratech creations of all types, including creations that are beyond the capabilities of the very planet.</description>
+    <description>Learn how to grow Terravats, which are crucial for delving deeper into Terratech as a whole. These ancient vats enable you to experiment, create, and modify Terratech creations of all types, including creations that are beyond the capabilities of the very planet.
+\n\nTerravats utilize large amounts of glowsap, and refined terrasaps. You will need access to both to properly utilize Terravats.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>TS_TerrasecurityTab</tab>

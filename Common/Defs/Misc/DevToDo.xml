@@ -9,9 +9,9 @@ COMPLETE:
 
 INCOMPLETE:
 	-Elderwood Custodian:
-		-Create Art (finished)
-		-Create XML (UNFINISHED)
-		-Tie to a research (UNFINISHED)
+		-Create Art (unfinished)
+		-Create XML (finished)
+		-Tie to a research (finished)
 		-Tie recipe to Terraforge (finished)
 		-Create Elderwood item graphics (finished)
 		-Create passive growing wall feature (UNFINISHED)
@@ -23,14 +23,14 @@ INCOMPLETE:
 
 	-Implement Sap of Permanence recipes:
 		-Briarblade (UNFINISHED)
-		-Briarburster (UNFINISHED)
-		-Pineshredder (UNFINISHED)
-		-Briarbolter (UNFINISHED)
+		-Briarburster (FINISHED)
+		-Pineshredder (FINISHED)
+		-Briarbolter (FINISHED)
 
 	-Implement Sap of Disorder recipes:
-		-Briarburster (UNFINISHED)
-		-Pineshredder (UNFINISHED)
-		-Briarbolter (UNFINISHED)
+		-Briarburster (FINISHED)
+		-Pineshredder (FINISHED)
+		-Briarbolter (FINISHED)
 
 	-Implement Sap of Vivication recipes:
 

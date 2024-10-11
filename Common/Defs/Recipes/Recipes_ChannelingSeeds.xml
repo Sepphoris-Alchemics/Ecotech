@@ -22,8 +22,8 @@
 
   <RecipeDef>
     <defName>TS_BuildingTreeSeedRecipe</defName>
-    <label>shape conduit seed (overgrowth)</label>
-    <description>Shape an Overgrowth tree seed. Overgrowth trees provide crafting materials, and passively create growable structures.</description>
+    <label>shape conduit seed (custodian)</label>
+    <description>Shape a Custodian tree seed. Custodian trees provide crafting materials, and passively create growable structures.</description>
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>

@@ -162,13 +162,13 @@ While this tree is present, weapons and seeds will be created at the base of the
             </things>
           </li>
           <li>
-            <weight>0.1</weight>
+            <weight>0.01</weight>
             <things>
               <TS_RoyalSword>1</TS_RoyalSword>
             </things>
           </li>
           <li>
-            <weight>0.1</weight>
+            <weight>0.01</weight>
             <things>
               <TS_RoyalRifle>1</TS_RoyalRifle>
             </things>
@@ -189,8 +189,8 @@ While this tree is present, weapons and seeds will be created at the base of the
 
   <ThingDef ParentName="TreeBase"> <!--todo: add zone growth coding-->
     <defName>TS_BuildingTreeTierOne</defName>
-    <label>Elderwood Overgrowth Tree</label>
-    <description>The Elderwood Overgrowth Tree is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Overgrowth trees produce malleable plates of wood that can be used as a crafting material.
+    <label>Elderwood Custodian Tree</label>
+    <description>The Elderwood Custodian Tree is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Custodian trees produce malleable plates of wood that can be used as a crafting material.
 This material is stronger and less flammable than normal wood, and is infinitely renewable.
 
 Legend has it this tree was once able to independently shelter entire colonies. Whether or not that is true remains to be seen....</description>

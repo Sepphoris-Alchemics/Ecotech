@@ -55,8 +55,8 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>TS_Seed_BuildingTree</defName>
-    <label>Overgrowth Tree Seed</label>
-    <description>A durable seed that can be planted to grow an Overgrowth Tree.
+    <label>Custodian Tree Seed</label>
+    <description>A durable seed that can be planted to grow an Custodian Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
     <tickerType>Normal</tickerType>

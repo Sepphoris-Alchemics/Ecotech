@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--Hypersap differences are applied to their dormant form.
+At their matured form, they are given their maturity increases-->
+
+	<ThingDef ParentName="UpgradedHypersapTerraweapon_Single">
+		<defName>TS_PrimaShotgunHypersap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
+		<label>prima hyperburster</label>
+		<description>The matured form of the Prima Spreadshot, infused with the Sap of Discorder. The presence of the sap has increased it's range, projectile speed, and fire rate.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Hypersap/PrimaShotgunUpgraded_HS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+			<li>PlantWeaponsUpgraded</li>
+		</weaponTags>
+    <weaponClasses>
+			<li>ShortShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>55</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown> <!--Lowers cooldown time by 0.25, from 0.75-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.4</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
+        <warmupTime>1.125</warmupTime>
+        <range>15.9</range> <!--1 higher range than it's dormant form, +2 from Hypersap-->
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<ThingDef ParentName="UpgradedHypersapTerraweapon_Single">
+		<defName>TS_PrimaSMGHypersap</defName>
+		<label>prima hypershredder</label>
+		<description>The Apex form of the Prima Pincaster, infused with the Sap of Disorder. The presence of the sap has enabled the pineshredder has increased the range, projectile speed, and fire rate.
+\nAdditionally, the sap has also altered the minimum and maximum projectiles. It now fires 3-7 projectiles per burst, instead of 4-5.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Hypersap/PrimaSMGUpgraded_HS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+			<li>ShortShots</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>0.20</RangedWeapon_Cooldown> <!--Lowered from 0.45-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
+          <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>3~7</shots> <!--Hypersap burst count is lowered by 1, but increased by 2.-->
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="UpgradedHypersapTerraweapon_Burst">
+		<defName>TS_HypercasterI</defName>
+		<label>Hypercaster I</label>
+		<description>A special iteration of the Stakecaster evolution line. The addition of Hypersap has improved the range, projectile speed, fire rate, and projectile potential.
+\nStronger variants of the Hypercaster exist, which can be achieved by replacing the sap of higher-evolved Stakecasters.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Hypersap/PrimaCrossbowUpgraded_HS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>LongShots</li>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+			<AccuracyTouch>0.70</AccuracyTouch> <!--.05 higher accuracies than dormant-->
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>0.925</RangedWeapon_Cooldown> <!--lowered from 1.125-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.8</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>4000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_StakeLight</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>34.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>TS_Sound_LightStake</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<!--<verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_StakeBriar</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>34.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>TS_Sound_LightStake</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>-->
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
+          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+          <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>2</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>3~4</shots> <!--Hypersap burst count min/max increases by 1 every iteration.-->
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>
