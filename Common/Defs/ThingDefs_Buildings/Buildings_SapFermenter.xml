@@ -12,7 +12,7 @@
     </thingCategories>
     <tickerType>Rare</tickerType>
     <rotatable>true</rotatable>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <!--<designationCategory>TerratechDesignation</designationCategory>-->
     <uiOrder>2710</uiOrder>
     <constructEffect>ConstructWood</constructEffect>
     <building>
@@ -48,11 +48,11 @@ The outcome will always be one vial of refined sap, but which one it is will be 
     </statBases>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>TerratechDesignation</designationCategory>
-    <costList>
+    <!--<designationCategory>TerratechDesignation</designationCategory>-->
+    <!--<costList>
       <Steel>10</Steel>
       <WoodLog>30</WoodLog>
-    </costList>
+    </costList>-->
     <comps>
       <li Class="Terrasecurity.ThingCompProperties_ThingConverter">
         <compClass>Terrasecurity.ThingComp_ThingConverter</compClass>

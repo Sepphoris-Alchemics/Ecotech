@@ -4,9 +4,12 @@
     <defName>TS_TerraforgeSeedRecipe</defName>
     <label>shape channeling seed (terraforge) </label>
     <description>Shape a seed that will quickly grow into a Terraforge. The terraforge is crucial in utilizing and advancing Terratech.</description>
-    <jobString>shaping a sap transposer seed.</jobString>
+    <jobString>shaping a sap terraforge seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
+      <skillRequirements>
+        <Plants>4</Plants>
+      </skillRequirements>
     <researchPrerequisite>TS_TerraseedEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -26,6 +29,9 @@
     <jobString>shaping a sap transposer seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
+      <skillRequirements>
+        <Plants>4</Plants>
+      </skillRequirements>
     <researchPrerequisite>TS_GlowsapRefinement</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -36,6 +42,28 @@
       <TS_Seed_SapFilter>1</TS_Seed_SapFilter>
     </products>
     <displayPriority>910</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>TS_SmallTerravatSeedRecipe</defName>
+    <label>shape channeling seed (small terravat) </label>
+    <description>Shape a seed that will quickly grow into a small Terravat. This terravat is quite compact, but can only hold one item at a time.</description>
+    <jobString>shaping a terrvat seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+      <skillRequirements>
+        <Plants>6</Plants>
+      </skillRequirements>
+    <researchPrerequisite>TS_Terravats</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>4800</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <TS_Seed_SmallTerravat>1</TS_Seed_SmallTerravat>
+    </products>
+    <displayPriority>920</displayPriority>
   </RecipeDef>
 
 </Defs>

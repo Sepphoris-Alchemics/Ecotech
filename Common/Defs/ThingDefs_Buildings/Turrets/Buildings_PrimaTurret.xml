@@ -107,12 +107,12 @@
     <!--<thingCategories>
       <li>BuildingsSecurity</li>
     </thingCategories>-->
-    <costList>
+    <!--<costList>
       <TS_Seed_PrimaStakeTurret>1</TS_Seed_PrimaStakeTurret>
-    </costList>
+    </costList>-->
     <!--<constructionSkillPrerequisite>5</constructionSkillPrerequisite>-->
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <!--<designationCategory>TerratechDesignation</designationCategory>-->
     <uiOrder>2640</uiOrder>
     <specialDisplayRadius>23</specialDisplayRadius>
     <stealable>false</stealable>
@@ -121,12 +121,12 @@
       <WoodLog>4</WoodLog>
     </killedLeavings>
     <building>
+      <claimable>true</claimable>
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>TS_PrimaTurretSpearGun</turretGunDef>
       <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
-      <claimable>false</claimable>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
     <placeWorkers>
@@ -248,10 +248,10 @@
     <hasTooltip>true</hasTooltip>
     <costList>
       <!--<TS_SurgeSeed_PrimaMicroTurret>1</TS_SurgeSeed_PrimaMicroTurret>-->
-      <TS_Seed_PrimaSMGTurret>1</TS_Seed_PrimaSMGTurret>
+      <!--<TS_Seed_PrimaSMGTurret>1</TS_Seed_PrimaSMGTurret>-->
     </costList>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <!--<designationCategory>TerratechDesignation</designationCategory>-->
     <uiOrder>2650</uiOrder>
     <specialDisplayRadius>16.9</specialDisplayRadius>
     <stealable>false</stealable>
@@ -260,12 +260,12 @@
       <WoodLog>4</WoodLog>
     </killedLeavings>
     <building>
+      <claimable>true</claimable>
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>TS_PrimaTurretSMGGun</turretGunDef>
       <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
-      <claimable>false</claimable>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
     <placeWorkers>
@@ -381,10 +381,10 @@
     <hasTooltip>true</hasTooltip>
     <costList>
       <!--<TS_SurgeSeed_PrimaMicroTurret>1</TS_SurgeSeed_PrimaMicroTurret>-->
-      <TS_Seed_PrimaShotgunTurret>1</TS_Seed_PrimaShotgunTurret>
+      <!--<TS_Seed_PrimaShotgunTurret>1</TS_Seed_PrimaShotgunTurret>-->
     </costList>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <!--<designationCategory>TerratechDesignation</designationCategory>-->
     <uiOrder>2650</uiOrder>
     <specialDisplayRadius>12.9</specialDisplayRadius>
     <stealable>false</stealable>
@@ -393,12 +393,12 @@
       <WoodLog>4</WoodLog>
     </killedLeavings>
     <building>
+      <claimable>true</claimable>
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>TS_PrimaTurretShotgunGun</turretGunDef>
       <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
-      <claimable>false</claimable>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
     <placeWorkers>

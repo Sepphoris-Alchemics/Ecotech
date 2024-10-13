@@ -134,7 +134,7 @@ While this tree is present, weapons and seeds will be created at the base of the
     <comps>
       <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
         <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>1080000~1320000</cycleDurationRangeTicks> <!--18 to 22 days-->
+        <cycleDurationRangeTicks>900000~1200000</cycleDurationRangeTicks> <!--15 to 20 days-->
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
@@ -196,7 +196,7 @@ This material is stronger and less flammable than normal wood, and is infinitely
 Legend has it this tree was once able to independently shelter entire colonies. Whether or not that is true remains to be seen....</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Plant/ConduitTrees/ElderwoodSentinelTree</texPath>
+      <texPath>Things/Plant/ConduitTrees/ElderwoodCustodianTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
@@ -267,25 +267,25 @@ Legend has it this tree was once able to independently shelter entire colonies. 
           <li>
             <weight>4</weight>
             <things>
-              <TS_ElderwoodMaterial>75</TS_ElderwoodMaterial>
+              <TS_ElderwoodMaterial>150</TS_ElderwoodMaterial>
             </things>
           </li>
           <li>
             <weight>2</weight>
             <things>
-              <TS_ElderwoodMaterial>150</TS_ElderwoodMaterial>
+              <TS_ElderwoodMaterial>225</TS_ElderwoodMaterial>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-                <TS_ElderwoodMaterial>225</TS_ElderwoodMaterial>
+                <TS_ElderwoodMaterial>300</TS_ElderwoodMaterial>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-                <TS_ElderwoodMaterial>300</TS_ElderwoodMaterial>
+                <TS_ElderwoodMaterial>450</TS_ElderwoodMaterial>
             </things>
           </li>
         </potentialSpawnedThings>
@@ -305,8 +305,8 @@ Legend has it this tree was once able to independently shelter entire colonies. 
 
   <ThingDef ParentName="TreeBase">
     <defName>TS_SapTreeTierOne</defName>
-    <label>Elderwood Tidetree</label>
-    <description>The Elderwood Tidetree is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Tidetrees provide a colony with various saps that enhance weapons and certain structures.
+    <label>Elderwood Spectra Tree</label>
+    <description>The Elderwood Spectra tree is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra trees provide a colony with various saps that enhance weapons and certain structures.
 The saps provided are generally hard to get ahold of, and if not used, can fetch a pretty penny from collectors.
 
 While this tree is present, a random sap will occasionally appear at it's base. This tree does not produce glowsap.</description>

@@ -81,13 +81,13 @@
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>ScatterThingsAnywhere</def>
 				<thingDef>TS_ElderwoodMaterial</thingDef>
-				<count>500</count>
+				<count>750</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
-				<def>ScatterThingsAnywhere</def>
-				<thingDef>WoodLog</thingDef>
-				<count>250</count>
+				<def>StartingThing_Defined</def>
+				<thingDef>TS_Glowsap</thingDef>
+				<count>75</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
 			<li Class="ScenPart_StartingResearch">

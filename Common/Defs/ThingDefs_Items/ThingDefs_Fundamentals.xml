@@ -54,6 +54,53 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
+    <defName>TS_Seed_SmallTerravat</defName>
+    <label>Small Terravat Channeling Seed</label>
+    <description>A durable seed specifically patterned to quickly grow into a small Terravat, which modifies items with contained saps. The Terravat deeply roots into the surface beneath it, making it unable to be moved once planted.
+\n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>105</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <!--<recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Plants>6</Plants>
+      </skillRequirements>
+      <displayPriority>510</displayPriority>
+    </recipeMaker>-->
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>TS_SmallTerravatPlant</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
     <defName>TS_Seed_BuildingTree</defName>
     <label>Custodian Tree Seed</label>
     <description>A durable seed that can be planted to grow an Custodian Tree.
@@ -131,8 +178,8 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>TS_Seed_SapTree</defName>
-    <label>Tidetree Seed</label>
-    <description>A durable seed that can be planted to grow a Tidetree.
+    <label>Spectra Tree Seed</label>
+    <description>A durable seed that can be planted to grow a Spectra Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
     <tickerType>Normal</tickerType>

@@ -8,6 +8,9 @@
     <jobString>shaping a sap transposer seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
+      <skillRequirements>
+        <Plants>4</Plants>
+      </skillRequirements>
     <researchPrerequisite>TS_SapBasics</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -27,6 +30,9 @@
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
+      <skillRequirements>
+        <Plants>6</Plants>
+      </skillRequirements>
     <researchPrerequisite>TS_ConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -41,11 +47,14 @@
 
   <RecipeDef>
     <defName>TS_SapTreeSeedRecipe</defName>
-    <label>shape conduit seed (tidetree) </label>
-    <description>Shape a Tidetree seed. Tidetrees periodically produce potent saps.</description>
+    <label>shape conduit seed (spectra) </label>
+    <description>Shape a Spectra tree seed. Spectra trees periodically produce potent saps.</description>
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
+      <skillRequirements>
+        <Plants>6</Plants>
+      </skillRequirements>
     <researchPrerequisite>TS_ConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -65,6 +74,9 @@
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
+      <skillRequirements>
+        <Plants>6</Plants>
+      </skillRequirements>
     <researchPrerequisite>TS_ConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>

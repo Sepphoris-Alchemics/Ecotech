@@ -92,9 +92,9 @@
 Some Terratech creations may have features that simply make the product unusable, or even dangerous, to most races (generally to ward off undeserving colonies). The Terraforge exists to refine that Terratech into a usable state - not by destruction, by rather by letting the creation know that it is in safe hands.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
-    <costList>
+    <!--<costList>
       <TS_Seed_Terraforge>1</TS_Seed_Terraforge>
-    </costList>
+    </costList>-->
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Building/Terraforge</texPath>
@@ -139,7 +139,7 @@ Some Terratech creations may have features that simply make the product unusable
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <!--<designationCategory>TerratechDesignation</designationCategory>-->
     <uiOrder>2630</uiOrder>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
@@ -149,7 +149,9 @@ Some Terratech creations may have features that simply make the product unusable
       <li>TS_SentinelTreeSeedRecipe</li>
       <li>TS_SapFilterSeedRecipe</li>
       <li>TS_TerraforgeSeedRecipe</li>
-      <!--<li>TS_PrimaTurretSeedApexToShotgun</li>-->
+      <li>TS_PrimaTurretSeedApexToStake</li>
+      <li>TS_PrimaTurretSeedApexToSMG</li>
+      <li>TS_PrimaTurretSeedApexToShotgun</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>

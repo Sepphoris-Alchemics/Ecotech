@@ -1,22 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!--How seeds work:
+  <!--How seeds work:
   Immature and mature weapons: Creates a microturret seed that's based on what weapon it came from.
   Immature weapon death: creates a microturret seed that's based on what weapon it came from.
   Matured weapon death: creates an Apex Turret seed, which can be freely turned into any turret. Does not expire.
     -Also enables special Apex turrets: Briar Sentry, and Briar Watcher-->
 
 
-<!--Apex Seed to Prima Stake Turret-->
+  <!--Apex Seed to Prima Stake Turret-->
   <RecipeDef>
     <defName>TS_PrimaTurretSeedApexToStake</defName>
     <label>awaken prima apex seed (spear)</label>
     <description>Awaken a prima apex seed, and coerce it to turn into a stake turret seed.</description>
     <jobString>awakening prima apex seed into spear turret seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Surgery</effectWorking>
-    <soundWorking>Recipe_Surgery</soundWorking>
-    <workAmount>720</workAmount>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>4</Plants>
+    </skillRequirements>
+    <researchPrerequisite>TS_PrimaTerraweaponSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>1200</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <ingredients>
@@ -37,20 +42,24 @@
     <products>
       <TS_Seed_PrimaStakeTurret>1</TS_Seed_PrimaStakeTurret>
     </products>
-    <workSkill>Plants</workSkill>
-    <displayPriority>0</displayPriority>
+    <displayPriority>90</displayPriority>
   </RecipeDef>
 
-<!--Apex Seed to Prima Thistle Turret-->
+  <!--Apex Seed to Prima Thistle Turret-->
   <RecipeDef>
     <defName>TS_PrimaTurretSeedApexToSMG</defName>
     <label>awaken prima apex seed (thistle)</label>
     <description>Awaken a prima apex seed, and coerce it to turn into a thistle turret seed.</description>
     <jobString>awakening prima apex seed into a thistle turret seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Surgery</effectWorking>
-    <soundWorking>Recipe_Surgery</soundWorking>
-    <workAmount>720</workAmount>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>4</Plants>
+    </skillRequirements>
+    <researchPrerequisite>TS_PrimaTerraweaponSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>1200</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <ingredients>
@@ -71,20 +80,24 @@
     <products>
       <TS_Seed_PrimaSMGTurret>1</TS_Seed_PrimaSMGTurret>
     </products>
-    <workSkill>Plants</workSkill>
-    <displayPriority>0</displayPriority>
+    <displayPriority>91</displayPriority>
   </RecipeDef>
 
-<!--Apex Seed to Prima Scatter Turret-->
+  <!--Apex Seed to Prima Scatter Turret-->
   <RecipeDef>
     <defName>TS_PrimaTurretSeedApexToShotgun</defName>
     <label>awaken prima apex seed (scatter)</label>
     <description>Awaken a prima apex seed, and coerce it to turn into a scatter turret seed.</description>
     <jobString>awakening prima apex seed into a scatter turret seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Surgery</effectWorking>
-    <soundWorking>Recipe_Surgery</soundWorking>
-    <workAmount>720</workAmount>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>4</Plants>
+    </skillRequirements>
+    <researchPrerequisite>TS_PrimaTerraweaponSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>1200</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <ingredients>
@@ -105,11 +118,10 @@
     <products>
       <TS_Seed_PrimaShotgunTurret>1</TS_Seed_PrimaShotgunTurret>
     </products>
-    <workSkill>Plants</workSkill>
-    <displayPriority>0</displayPriority>
+    <displayPriority>92</displayPriority>
   </RecipeDef>
 
-<!--Spear Turret from a matured weapon-->
+  <!--Spear Turret from a matured weapon-->
   <RecipeDef>
     <defName>TS_ExtractPrimaStakeTurretSeed</defName>
     <label>extract prima turret seed (spear)</label>
@@ -145,7 +157,7 @@
     <displayPriority>0</displayPriority>
   </RecipeDef>
 
-<!--Thistle Turret from an appropriate weapon.-->
+  <!--Thistle Turret from an appropriate weapon.-->
   <RecipeDef>
     <defName>TS_ExtractPrimaSMGTurretSeed</defName>
     <label>extract prima turret seed (thistle)</label>
@@ -181,7 +193,7 @@
     <displayPriority>0</displayPriority>
   </RecipeDef>
 
-<!--Scatter Turret from an appropriate weapon.-->
+  <!--Scatter Turret from an appropriate weapon.-->
   <RecipeDef>
     <defName>TS_ExtractPrimaShotgunTurretSeed</defName>
     <label>extract prima turret seed (scatter)</label>

@@ -45,8 +45,8 @@
 
   <ThingDef ParentName="TS_FundamentalPlantBase">
     <defName>TS_TerraforgePlant</defName>
-    <label>Terraforge Growth</label>
-    <description>A quickly growing growth that will shape itself into a Terraforge. Terraforges are critical in utilizing Terratech.</description>
+    <label>Terraforge Sprout</label>
+    <description>A quickly growing sprout that will shape itself into a Terraforge. Terraforges are critical in utilizing Terratech.</description>
     <graphicData>
       <texPath>Things/Plant/Terraforge_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -58,6 +58,29 @@
       <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>TS_Terraforge</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Growing into: Terraforge</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TS_FundamentalPlantBase">
+    <defName>TS_SmallTerravatPlant</defName>
+    <label>Small Terravat Sprout</label>
+    <description>A quickly growing sprout that will shape itself into a small Terravat. Takes a fewdays to fully grow.</description>
+    <graphicData>
+      <texPath>Things/Plant/Terraforge_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <growDays>1</growDays> 
+    </plant>
+    <comps>
+      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>TS_TerravatBasic</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">

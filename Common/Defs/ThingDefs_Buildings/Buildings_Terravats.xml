@@ -51,10 +51,10 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
-    <costList>
+    <!--<costList>
       <WoodLog>80</WoodLog>
       <TS_Glowsap>30</TS_Glowsap>
-    </costList>
+    </costList>-->
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
@@ -63,7 +63,7 @@
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <!--<designationCategory>TerratechDesignation</designationCategory>-->
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
