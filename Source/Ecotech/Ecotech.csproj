@@ -4,19 +4,7 @@
     <TargetFramework>net481</TargetFramework>
     <OutputPath>..\..\Assemblies</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <Configurations>Debug;Release;1.4;1.5</Configurations>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;CS0649</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;CS0649</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='1.4|AnyCPU'">
-    <NoWarn>1701;1702;CS0649</NoWarn>
+    <Configurations>1.5</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='1.5|AnyCPU'">
@@ -24,17 +12,6 @@
   </PropertyGroup>
 
   <Choose>
-    <When Condition="'$(Configuration)|$(Platform)' == '1.4|AnyCPU'">
-      <PropertyGroup>
-        <DefineConstants>$(DefineConstants);v1_4</DefineConstants>
-        <OutputPath>..\..\1.4\Assemblies\</OutputPath>
-      </PropertyGroup>
-      <ItemGroup>
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*">
-          <ExcludeAssets>runtime</ExcludeAssets>
-        </PackageReference>
-      </ItemGroup>
-    </When>
     <When Condition="'$(Configuration)|$(Platform)' == '1.5|AnyCPU'">
       <PropertyGroup>
         <DefineConstants>$(DefineConstants);v1_5</DefineConstants>
