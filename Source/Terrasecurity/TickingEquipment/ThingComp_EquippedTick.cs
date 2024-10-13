@@ -6,7 +6,7 @@ using Verse;
 
 
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public abstract class ThingComp_EquippedTick : ThingComp
     {

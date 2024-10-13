@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <JobDef>
-    <defName>TS_FillThingConverter</defName>
-    <driverClass>Terrasecurity.JobDriver_FillThingConverter</driverClass>
+    <defName>EC_FillThingConverter</defName>
+    <driverClass>Ecotech.JobDriver_FillThingConverter</driverClass>
     <reportString>filling TargetA.</reportString>
     <suspendable>false</suspendable>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
   <JobDef>
-    <defName>TS_EmptyThingConverter</defName>
-    <driverClass>Terrasecurity.JobDriver_EmptyThingConverter</driverClass>
+    <defName>EC_EmptyThingConverter</defName>
+    <driverClass>Ecotech.JobDriver_EmptyThingConverter</driverClass>
     <reportString>emptying TargetA.</reportString>
     <suspendable>false</suspendable>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
   <JobDef>
-    <defName>TS_InsertIntoSlottedThingTransformer</defName>
-    <driverClass>Terrasecurity.JobDriver_InsertIntoSlottedThingTransformer</driverClass>
+    <defName>EC_InsertIntoSlottedThingTransformer</defName>
+    <driverClass>Ecotech.JobDriver_InsertIntoSlottedThingTransformer</driverClass>
     <reportString>inserting TargetA into TargetB.</reportString>
     <suspendable>false</suspendable>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>

@@ -5,7 +5,7 @@
 
 -->
 
-  <ThingDef Name="TS_FundamentalPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="EC_FundamentalPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/Terraforge_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -43,10 +43,10 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="TS_FundamentalPlantBase">
-    <defName>TS_TerraforgePlant</defName>
+  <ThingDef ParentName="EC_FundamentalPlantBase">
+    <defName>EC_TerraforgePlant</defName>
     <label>Terraforge Sprout</label>
-    <description>A quickly growing sprout that will shape itself into a Terraforge. Terraforges are critical in utilizing Terratech.</description>
+    <description>A quickly growing sprout that will shape itself into a Terraforge. Terraforges are critical in utilizing Ecotech.</description>
     <graphicData>
       <texPath>Things/Plant/Terraforge_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -55,9 +55,9 @@
       <growDays>0.5</growDays> 
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>TS_Terraforge</transformedThing>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>EC_Terraforge</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
@@ -66,8 +66,8 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="TS_FundamentalPlantBase">
-    <defName>TS_SmallTerravatPlant</defName>
+  <ThingDef ParentName="EC_FundamentalPlantBase">
+    <defName>EC_SmallTerravatPlant</defName>
     <label>Small Terravat Sprout</label>
     <description>A quickly growing sprout that will shape itself into a small Terravat. Takes a fewdays to fully grow.</description>
     <graphicData>
@@ -78,9 +78,9 @@
       <growDays>1</growDays> 
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>TS_TerravatBasic</transformedThing>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>EC_TerravatBasic</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">

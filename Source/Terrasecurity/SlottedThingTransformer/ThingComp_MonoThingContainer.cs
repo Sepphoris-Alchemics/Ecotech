@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingComp_MonoThingContainer : ThingComp_AutoHaulThingContainer
     {
@@ -70,7 +70,7 @@ namespace Terrasecurity
             }
             if(currentlyAcceptedThingDef == null)
             {
-                return "Terrasecurity_FailureReason_NoThingAccepted".Translate();
+                return "Ecotech_FailureReason_NoThingAccepted".Translate();
             }
             return true;
         }

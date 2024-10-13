@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <Terrasecurity_FailureReason_CurrentlyNotFillable>Currently not fillable</Terrasecurity_FailureReason_CurrentlyNotFillable>
-  <Terrasecurity_FailureReason_AlreadyFull>Already full</Terrasecurity_FailureReason_AlreadyFull>
-  <Terrasecurity_FailureReason_NoThingRequested>No thing requested</Terrasecurity_FailureReason_NoThingRequested>
-  <Terrasecurity_FailureReason_NoFillThing>No fill thing</Terrasecurity_FailureReason_NoFillThing>
-  <Terrasecurity_FailureReason_ShouldBeEmptied>Should be emptied</Terrasecurity_FailureReason_ShouldBeEmptied>
-  <Terrasecurity_FailureReason_CurrentlyNotEmptiable>Currently not emptiable</Terrasecurity_FailureReason_CurrentlyNotEmptiable>
-  <Terrasecurity_FailureReason_AlreadyEmpty>Already empty</Terrasecurity_FailureReason_AlreadyEmpty>
-  <Terrasecurity_FailureReason_NotScheduledToEmpty>Not scheduled to empty</Terrasecurity_FailureReason_NotScheduledToEmpty>
-  <Terrasecurity_FailureReason_NoThingAccepted>No thing accepted</Terrasecurity_FailureReason_NoThingAccepted>
-  <Terrasecurity_FailureReason_CurrentlyTransforming>Currently transforming</Terrasecurity_FailureReason_CurrentlyTransforming>
-  <Terrasecurity_FailureReason_CouldNotAddToInnerContainer>Could not add to inner container</Terrasecurity_FailureReason_CouldNotAddToInnerContainer>
-  <Terrasecurity_FailureReason_NoSlotAvailable>No slot available</Terrasecurity_FailureReason_NoSlotAvailable>
-  <Terrasecurity_FailureReason_CouldNotRemoveOrSplitFromInnerContainer>Could not remove or split from inner container</Terrasecurity_FailureReason_CouldNotRemoveOrSplitFromInnerContainer>
-  <Terrasecurity_FailureReason_CouldNotDetermineSlotIndex>Could not determine slot index</Terrasecurity_FailureReason_CouldNotDetermineSlotIndex>
-  <Terrasecurity_FailureReason_NotEnoughFuel>Not enough fuel</Terrasecurity_FailureReason_NotEnoughFuel>
-  <Terrasecurity_FailureReason_CouldNotRemoveThingFromContainer>Could not remove thing from container</Terrasecurity_FailureReason_CouldNotRemoveThingFromContainer>
-  <Terrasecurity_FailureReason_CurrentlyConverting>Currently converting</Terrasecurity_FailureReason_CurrentlyConverting>
-  <Terrasecurity_FailureReason_NotABuilding>Not a building</Terrasecurity_FailureReason_NotABuilding>
-  <Terrasecurity_FailureReason_DesignatedForDeconstruct>Designated for deconstruct</Terrasecurity_FailureReason_DesignatedForDeconstruct>
-  <Terrasecurity_FailureReason_IsForbidden>Is forbidden</Terrasecurity_FailureReason_IsForbidden>
-  <Terrasecurity_FailureReason_CannotReserve>Cannot reserve</Terrasecurity_FailureReason_CannotReserve>
-  <Terrasecurity_FailureReason_NeedsToBeEmptied>Needs to be emptied</Terrasecurity_FailureReason_NeedsToBeEmptied>
-  <Terrasecurity_FailureReason_AlreadyConverting>Already converting</Terrasecurity_FailureReason_AlreadyConverting>
-  <Terrasecurity_FailureReason_NotContainingRequiredThing>Not containing required thing</Terrasecurity_FailureReason_NotContainingRequiredThing>
-  <Terrasecurity_FailureReason_InvalidThingDef>Invalid thing def</Terrasecurity_FailureReason_InvalidThingDef>
-  <Terrasecurity_FailureReason_CannotReach>Cannot reach</Terrasecurity_FailureReason_CannotReach>
+  <Ecotech_FailureReason_CurrentlyNotFillable>Currently not fillable</Ecotech_FailureReason_CurrentlyNotFillable>
+  <Ecotech_FailureReason_AlreadyFull>Already full</Ecotech_FailureReason_AlreadyFull>
+  <Ecotech_FailureReason_NoThingRequested>No thing requested</Ecotech_FailureReason_NoThingRequested>
+  <Ecotech_FailureReason_NoFillThing>No fill thing</Ecotech_FailureReason_NoFillThing>
+  <Ecotech_FailureReason_ShouldBeEmptied>Should be emptied</Ecotech_FailureReason_ShouldBeEmptied>
+  <Ecotech_FailureReason_CurrentlyNotEmptiable>Currently not emptiable</Ecotech_FailureReason_CurrentlyNotEmptiable>
+  <Ecotech_FailureReason_AlreadyEmpty>Already empty</Ecotech_FailureReason_AlreadyEmpty>
+  <Ecotech_FailureReason_NotScheduledToEmpty>Not scheduled to empty</Ecotech_FailureReason_NotScheduledToEmpty>
+  <Ecotech_FailureReason_NoThingAccepted>No thing accepted</Ecotech_FailureReason_NoThingAccepted>
+  <Ecotech_FailureReason_CurrentlyTransforming>Currently transforming</Ecotech_FailureReason_CurrentlyTransforming>
+  <Ecotech_FailureReason_CouldNotAddToInnerContainer>Could not add to inner container</Ecotech_FailureReason_CouldNotAddToInnerContainer>
+  <Ecotech_FailureReason_NoSlotAvailable>No slot available</Ecotech_FailureReason_NoSlotAvailable>
+  <Ecotech_FailureReason_CouldNotRemoveOrSplitFromInnerContainer>Could not remove or split from inner container</Ecotech_FailureReason_CouldNotRemoveOrSplitFromInnerContainer>
+  <Ecotech_FailureReason_CouldNotDetermineSlotIndex>Could not determine slot index</Ecotech_FailureReason_CouldNotDetermineSlotIndex>
+  <Ecotech_FailureReason_NotEnoughFuel>Not enough fuel</Ecotech_FailureReason_NotEnoughFuel>
+  <Ecotech_FailureReason_CouldNotRemoveThingFromContainer>Could not remove thing from container</Ecotech_FailureReason_CouldNotRemoveThingFromContainer>
+  <Ecotech_FailureReason_CurrentlyConverting>Currently converting</Ecotech_FailureReason_CurrentlyConverting>
+  <Ecotech_FailureReason_NotABuilding>Not a building</Ecotech_FailureReason_NotABuilding>
+  <Ecotech_FailureReason_DesignatedForDeconstruct>Designated for deconstruct</Ecotech_FailureReason_DesignatedForDeconstruct>
+  <Ecotech_FailureReason_IsForbidden>Is forbidden</Ecotech_FailureReason_IsForbidden>
+  <Ecotech_FailureReason_CannotReserve>Cannot reserve</Ecotech_FailureReason_CannotReserve>
+  <Ecotech_FailureReason_NeedsToBeEmptied>Needs to be emptied</Ecotech_FailureReason_NeedsToBeEmptied>
+  <Ecotech_FailureReason_AlreadyConverting>Already converting</Ecotech_FailureReason_AlreadyConverting>
+  <Ecotech_FailureReason_NotContainingRequiredThing>Not containing required thing</Ecotech_FailureReason_NotContainingRequiredThing>
+  <Ecotech_FailureReason_InvalidThingDef>Invalid thing def</Ecotech_FailureReason_InvalidThingDef>
+  <Ecotech_FailureReason_CannotReach>Cannot reach</Ecotech_FailureReason_CannotReach>
 </LanguageData>

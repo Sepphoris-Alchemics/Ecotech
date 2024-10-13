@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!--<HediffDef Name="TS_OverviewPlants" Abstract="True">
+	<!--<HediffDef Name="EC_OverviewPlants" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
     <isBad>false</isBad>
@@ -9,15 +9,15 @@
 	<makesSickThought>false</makesSickThought>
 	</HediffDef>
 
-	<HediffDef Name="TS_OverviewPlantWeapons" ParentName="TS_OverviewPlants" Abstract="True">
+	<HediffDef Name="EC_OverviewPlantWeapons" ParentName="EC_OverviewPlants" Abstract="True">
     <chronic>true</chronic>
   </HediffDef>-->
 
   <ThingDef ParentName="PlantBaseNonEdible">
-    <defName>TS_OverviewPrimaWeapons</defName>
+    <defName>EC_OverviewPrimaWeapons</defName>
     <label>Overview: Prima Family</label>
-		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Terratech will learn to grow. They are the easiest to bioengineer, the fastest to research, and are (relatively) quickly grown.
-\nPrima Terratech was the first gift from the Primordials, and could both provide both offense and defense... but it soon paled in comparison to every-pacing technology. Eventually, new Terratech would be granted.
+		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Ecotech will learn to grow. They are the easiest to bioengineer, the fastest to research, and are (relatively) quickly grown.
+\nPrima Ecotech was the first gift from the Primordials, and could both provide both offense and defense... but it soon paled in comparison to every-pacing technology. Eventually, new Ecotech would be granted.
 \nAfter growing to their mature form, the projectile of the weapon is capable of inflicting thick briar tangles upon impact. This enables each projectile to wrap and stick around live targets, and repeated projectiles will further increase this ensnarement.
 This also develops the weapon's protective traits, causing more wood to form, external fluid growths to be used, and hardened epidermis plates to form in their location. These changes improve the overall weapon health.
 \nGeneral Prima family guidelines:
@@ -60,7 +60,7 @@ This also develops the weapon's protective traits, causing more wood to form, ex
       <fertilitySensitivity>0.1</fertilitySensitivity>
       <growMinGlow>0.3</growMinGlow>
       <harvestWork>900</harvestWork>
-      <harvestedThingDef>TS_StakeCaster</harvestedThingDef>
+      <harvestedThingDef>EC_StakeCaster</harvestedThingDef>
       <burnedThingDef IsNull="True" />
       <harvestYield>1</harvestYield>
       <harvestMinGrowth>0.9</harvestMinGrowth>
@@ -68,7 +68,7 @@ This also develops the weapon's protective traits, causing more wood to form, ex
       <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
       <sowWork>1500</sowWork>
       <sowTags>
-        <li>TS_OverviewTagOnly</li>
+        <li>EC_OverviewTagOnly</li>
       </sowTags>
       <sowMinSkill>1</sowMinSkill>
       <blockAdjacentSow>true</blockAdjacentSow>

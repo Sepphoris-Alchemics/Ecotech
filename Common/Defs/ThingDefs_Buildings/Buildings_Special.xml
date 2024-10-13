@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!--<ThingDef ParentName="BuildingBase">
-    <defName>TS_GiftTreeTierOne</defName>
+    <defName>EC_GiftTreeTierOne</defName>
     <label>Elderwood Tidetree</label>
     <description>TBE.</description>
     <graphicData>
@@ -20,7 +20,7 @@
     </statBases>
     <costList>
       <WoodLog>50</WoodLog>
-      <TS_Glowsap>80</TS_Glowsap>
+      <EC_Glowsap>80</EC_Glowsap>
     </costList>
     <drawerType>MapMeshAndRealTime</drawerType>
     <minifiedDef>MinifiedThing</minifiedDef>
@@ -33,7 +33,7 @@
     </thingCategories>
     <tickerType>Rare</tickerType>
     <rotatable>true</rotatable>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <designationCategory>EcotechDesignation</designationCategory>
     <uiOrder>2710</uiOrder>
     <constructEffect>ConstructWood</constructEffect>
     <building>
@@ -43,45 +43,45 @@
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
-        <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>90000~120000</cycleDurationRangeTicks>
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
             <weight>1.5</weight>
             <things>
-              <TS_Endosap>1</TS_Endosap>
+              <EC_Endosap>1</EC_Endosap>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-                <TS_Hypersap>1</TS_Hypersap>
+                <EC_Hypersap>1</EC_Hypersap>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-                <TS_Sunsap>1</TS_Sunsap>
+                <EC_Sunsap>1</EC_Sunsap>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-              <TS_Endosap>2~3</TS_Endosap>
+              <EC_Endosap>2~3</EC_Endosap>
             </things>
           </li>
           <li>
             <weight>0.2</weight>
             <things>
-              <TS_Hypersap>2</TS_Hypersap>
+              <EC_Hypersap>2</EC_Hypersap>
             </things>
           </li>
           <li>
             <weight>0.3</weight>
             <things>
-              <TS_Sunsap>2~3</TS_Sunsap>
+              <EC_Sunsap>2~3</EC_Sunsap>
             </things>
           </li>
         </potentialSpawnedThings>

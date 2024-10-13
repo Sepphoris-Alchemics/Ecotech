@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     /// <summary>
     /// When multiple pawns are selected their distinct gizmos are not drawn. Instead we draw one gizmo that summarizes the state of equipped lifespan weapons
@@ -51,8 +51,8 @@ namespace Terrasecurity
                 {
                     _multiLifespanGizmo = new Command_Action()
                     {
-                        defaultLabel = "Terrasecurity_Gizmo_MultiLifespanTicksRemaining".Translate(),
-                        defaultDesc = "Terrasecurity_Gizmo_MultiLifespanTicksRemaining_Desc".Translate(),
+                        defaultLabel = "Ecotech_Gizmo_MultiLifespanTicksRemaining".Translate(),
+                        defaultDesc = "Ecotech_Gizmo_MultiLifespanTicksRemaining_Desc".Translate(),
                         icon = gizmoIcon,
                         action = OpenMultiLifespanWindow
                     };

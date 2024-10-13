@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <Terrasecurity_InspectString_ConverterFinished>Ready to be emptied</Terrasecurity_InspectString_ConverterFinished>
-  <Terrasecurity_InspectString_ConverterContents>Contents: {CONTENTS}</Terrasecurity_InspectString_ConverterContents>
-  <Terrasecurity_InspectString_ConverterTimeRemaining>Time remaining to finish: {TIME}</Terrasecurity_InspectString_ConverterTimeRemaining>
+  <Ecotech_InspectString_ConverterFinished>Ready to be emptied</Ecotech_InspectString_ConverterFinished>
+  <Ecotech_InspectString_ConverterContents>Contents: {CONTENTS}</Ecotech_InspectString_ConverterContents>
+  <Ecotech_InspectString_ConverterTimeRemaining>Time remaining to finish: {TIME}</Ecotech_InspectString_ConverterTimeRemaining>
 
-  <Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval>Produces random items approximately every {INTERVAL}</Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval>
+  <Ecotech_InspectString_ThingSpawner_AverageSpawnInterval>Produces random items approximately every {INTERVAL}</Ecotech_InspectString_ThingSpawner_AverageSpawnInterval>
   
-  <Terrasecurity_InspectString_ThingTransformerFuelContents>Fuel: {CONTENTS}</Terrasecurity_InspectString_ThingTransformerFuelContents>
-  <Terrasecurity_InspectString_ThingTransformerSlotContents>Slot contents: {CONTENTS}</Terrasecurity_InspectString_ThingTransformerSlotContents>
+  <Ecotech_InspectString_ThingTransformerFuelContents>Fuel: {CONTENTS}</Ecotech_InspectString_ThingTransformerFuelContents>
+  <Ecotech_InspectString_ThingTransformerSlotContents>Slot contents: {CONTENTS}</Ecotech_InspectString_ThingTransformerSlotContents>
 </LanguageData>

@@ -34,7 +34,7 @@ Anima long range is brought down by 3
     <defName>Bullet_ThornPistol</defName>
     <label>light terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <texPath>Things/Projectile/EC_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -51,7 +51,7 @@ Anima long range is brought down by 3
     <defName>Bullet_ThornSMG</defName>
     <label>light terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <texPath>Things/Projectile/EC_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -66,7 +66,7 @@ Anima long range is brought down by 3
     <defName>Bullet_ThornCarbine</defName>
     <label>terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <texPath>Things/Projectile/EC_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -82,7 +82,7 @@ Anima long range is brought down by 3
     <defName>Bullet_ThornRifle</defName>
     <label>terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <texPath>Things/Projectile/EC_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -99,7 +99,7 @@ Anima long range is brought down by 3
     <defName>Bullet_StakeLight</defName>
     <label>stake</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_StakeSmall</texPath>
+      <texPath>Things/Projectile/EC_StakeSmall</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -116,12 +116,12 @@ Anima long range is brought down by 3
     <defName>Bullet_StakeBriar</defName>
     <label>large briar tangle</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_StakeBriar</texPath>
+      <texPath>Things/Projectile/EC_StakeBriar</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.3</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>TS_BriarDamageStake</damageDef>
+      <damageDef>EC_BriarDamageStake</damageDef>
       <damageAmountBase>11</damageAmountBase>      <!--40% damage removed, rounded from 11.4-->
       <stoppingPower>0.75</stoppingPower>
       <armorPenetrationBase>0.04</armorPenetrationBase>
@@ -153,7 +153,7 @@ Anima long range is brought down by 3
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>TS_BriarDamage</damageDef>
+      <damageDef>EC_BriarDamage</damageDef>
       <damageAmountBase>12</damageAmountBase>      <!--40% damage removed-->
       <stoppingPower>1.5</stoppingPower>      <!-- Same stopping power-->
       <armorPenetrationBase>0.04</armorPenetrationBase>      <!--AP down by half-->
@@ -165,7 +165,7 @@ Anima long range is brought down by 3
     <defName>Bullet_ThornLMG</defName>
     <label>heavy terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <texPath>Things/Projectile/EC_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -179,7 +179,7 @@ Anima long range is brought down by 3
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
-    <defName>TS_SeedbursterShot</defName>
+    <defName>EC_SeedbursterShot</defName>
     <label>seedburster shell</label>
     <graphicData>
       <texPath>Things/Projectile/Charge_Small</texPath>
@@ -190,34 +190,34 @@ Anima long range is brought down by 3
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
       <speed>32</speed>
-      <damageDef>TS_SeedbursterDamage</damageDef>
+      <damageDef>EC_SeedbursterDamage</damageDef>
       <damageAmountBase>16</damageAmountBase>
       <explosionRadius>2.4</explosionRadius>
       <armorPenetrationBase>0.12</armorPenetrationBase>
       <arcHeightFactor>0.2</arcHeightFactor>
-      <postExplosionSpawnThingDef>TS_Filth_Sap</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>EC_Filth_Sap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
     </projectile>
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
-    <defName>TS_HailcannonShot</defName>
+    <defName>EC_HailcannonShot</defName>
     <label>heavy terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <texPath>Things/Projectile/EC_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.4</drawSize>
     </graphicData>
     <projectile>
       <speed>32</speed>
-      <damageDef>TS_HailcannonDamage</damageDef>
+      <damageDef>EC_HailcannonDamage</damageDef>
       <damageAmountBase>6</damageAmountBase>
       <armorPenetrationBase>0.12</armorPenetrationBase>
     </projectile>
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
-    <defName>TS_AcidShot</defName>
+    <defName>EC_AcidShot</defName>
     <label>acidic globule</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
@@ -228,12 +228,12 @@ Anima long range is brought down by 3
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
-      <damageDef>TS_AcidDamage</damageDef>
+      <damageDef>EC_AcidDamage</damageDef>
       <damageAmountBase>9</damageAmountBase>
       <armorPenetrationBase>0.40</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>TS_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>EC_Filth_Acid</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -260,12 +260,12 @@ Anima long range is brought down by 3
     <defName>Bullet_NightshadeRifle</defName>
     <label>poisonous terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_Thorn</texPath>
+      <texPath>Things/Projectile/EC_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.2</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>TS_NightshadeThornDamage</damageDef>
+      <damageDef>EC_NightshadeThornDamage</damageDef>
       <damageAmountBase>3</damageAmountBase>
       <stoppingPower>0.25</stoppingPower>
       <armorPenetrationBase>0.01</armorPenetrationBase>
@@ -277,7 +277,7 @@ Anima long range is brought down by 3
     <defName>Bullet_PerrenialNeedle</defName>
     <label>perrenial needle</label>
     <graphicData>
-      <texPath>Things/Projectile/TS_PerrenialNeedle</texPath>
+      <texPath>Things/Projectile/EC_PerrenialNeedle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.4</drawSize>
     </graphicData>

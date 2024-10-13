@@ -2,8 +2,8 @@
 <Defs>
 
   <DesignationCategoryDef>
-    <defName>TerratechDesignation</defName>
-    <label>Terratech</label>
+    <defName>EcotechDesignation</defName>
+    <label>Ecotech</label>
     <order>429</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
@@ -13,24 +13,24 @@
       <li>Designator_PlantsHarvest</li>
     </specialDesignatorClasses>
     <researchPrerequisites>
-      <li>TS_TerraseedEssentials</li>
+      <li>EC_TerraseedEssentials</li>
     </researchPrerequisites>
   </DesignationCategoryDef>
 
   <ThingCategoryDef>
-    <defName>TS_PrimaWeaponsMature</defName>
+    <defName>EC_PrimaWeaponsMature</defName>
     <label>prima weapons - matured</label>
     <parent>Root</parent>
   </ThingCategoryDef>
 
    <WorkGiverDef>
-    <defName>TS_ExtractPrimaTurretSeed</defName>
+    <defName>EC_ExtractPrimaTurretSeed</defName>
     <label>extract prima turret seed</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>TS_TerravatBasic</li>
+      <li>EC_TerravatBasic</li>
     </fixedBillGiverDefs>
     <verb>extract seed at</verb>
     <gerund>extracting seed at</gerund>
@@ -41,13 +41,13 @@
   </WorkGiverDef>
 
    <WorkGiverDef>
-    <defName>TS_DoBillsTerraforge</defName>
+    <defName>EC_DoBillsTerraforge</defName>
     <label>shape seeds</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>TS_Terraforge</li>
+      <li>EC_Terraforge</li>
     </fixedBillGiverDefs>
     <verb>shape seed at</verb>
     <gerund>shaping seed at</gerund>
@@ -57,7 +57,7 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
-  <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="TS_MuseumDisplayBase">
+  <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="EC_MuseumDisplayBase">
     <label>Display Case</label>
     <thingClass>Building</thingClass>
     <description>A display case to display things in.</description>
@@ -88,8 +88,8 @@
     </building>
   </ThingDef>
 
-  <ThingDef ParentName="TS_MuseumDisplayBase">
-    <defName>TS_Museums_DisplayCase_Small</defName>
+  <ThingDef ParentName="EC_MuseumDisplayBase">
+    <defName>EC_Museums_DisplayCase_Small</defName>
     <rotatable>false</rotatable>
     <size>(1,1)</size>
     <statBases>
@@ -108,7 +108,7 @@
   </ThingDef>
 
     <ThingDef ParentName="Wall">
-    <defName>TS_LinkedDisplayBase</defName>
+    <defName>EC_LinkedDisplayBase</defName>
     <label>Museum Display</label>
     <description>Displays Items.</description>
     <graphicData>

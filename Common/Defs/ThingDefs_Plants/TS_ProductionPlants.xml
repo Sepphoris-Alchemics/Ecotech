@@ -3,7 +3,7 @@
 
   <!-- Example. Plop this in a planting pot and let the plant grow. Spawns a chair and refunds the pot materials. -->
   <!--<ThingDef ParentName="PlantBaseNonEdible">
-    <defName>TS_ChairSeed</defName>
+    <defName>EC_ChairSeed</defName>
     <label>chair seed</label>
     <description>Lmao, why not</description>
     <graphicData>
@@ -29,15 +29,15 @@
       <visualSizeRange>0.3~1.05</visualSizeRange>
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>DiningChair</transformedThing>
         <transformedThingStuff>WoodLog</transformedThingStuff>
       </li>
     </comps>
   </ThingDef>-->
 
-  <ThingDef Name="TS_BasicProductionPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="EC_BasicProductionPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/SapFilter/SapFilter</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -74,8 +74,8 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="TS_BasicProductionPlantBase">
-    <defName>TS_SapFilterPlant</defName>
+  <ThingDef ParentName="EC_BasicProductionPlantBase">
+    <defName>EC_SapFilterPlant</defName>
     <label>sap transposer sprout</label>
     <description>A lump of plant matter and soft wood that will sprout into a sap transposer. Takes roughly a day to fully grow. Proper nutrients are stored in the seed, allowing it to grow on most surfaces.</description>
     <graphicData>
@@ -96,9 +96,9 @@
       <growDays>0.25</growDays>
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>TS_GlowsapFilter</transformedThing>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>EC_GlowsapFilter</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
       <li Class="CompProperties_InspectString">

@@ -2,7 +2,7 @@
 <Defs>
 
 	<DesignatorDropdownGroupDef>
-		<defName>TS_PrimaTurretGroup</defName>
+		<defName>EC_PrimaTurretGroup</defName>
 		<label>prima turrets</label>
 	</DesignatorDropdownGroupDef>
 
@@ -26,7 +26,7 @@
 			Mature Heavy: 20 days (1200000) | 60 health-->
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
-		<defName>TS_ShotgunUpgraded</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
+		<defName>EC_ShotgunUpgraded</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
 		<label>prima briarburster</label>
 		<description>The matured form of the Prima Spreadshot. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.</description>
 		<graphicData>
@@ -92,19 +92,19 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+					<replacementToSpawn>EC_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>
 
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
-		<defName>TS_SMGUpgraded</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
+		<defName>EC_SMGUpgraded</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
 		<label>prima pineshredder</label>
 		<description>The Apex form of the Prima Pincaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
 \nAdditionally, the Apex form no longer has inconsistent output. It will now fire 4-5 projectiles per burst instead of a random range of 2-6 projectiles, resulting in a higher average DPS.</description>
@@ -185,12 +185,12 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+					<replacementToSpawn>EC_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 		<modExtensions>
@@ -209,7 +209,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
-		<defName>TS_PrimaTwincaster</defName>
+		<defName>EC_PrimaTwincaster</defName>
 		<label>Twincaster</label>
 		<description>The second-generation form of the Prima Stakecaster. The evolution has drastically impacted this weapon's projectiles, resulting in large masses of briar tangles that are wrapped around a small stake, as opposed to the larger stake that the dormant form fires. Much of the reserved sap has been consumed to create a stronger and durable epidermis. All these changes have provided better slightlines for accuracy, higher health, and a longer lifespan.
 \nUnlike every other Prima Apex weapon, the Stakecaster has the potential for much more evolution, making this only the second form of potentially several. This early growth still enables it to regenerate health when idle, but causes it to lack certain matured features, notably higher damage and speed.</description>
@@ -252,7 +252,7 @@
         <range>32.9</range>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>TS_Sound_LightStake</soundCast>
+        <soundCast>EC_Sound_LightStake</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
@@ -280,12 +280,12 @@
 			<li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+					<replacementToSpawn>EC_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class Window_MultiLifespanOverview : Window
     {

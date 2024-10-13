@@ -6,7 +6,7 @@
 	-To-do: Later used in Perrenial Weapons.
 -->
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_SapFilter</defName>
+    <defName>EC_Seed_SapFilter</defName>
     <label>Sap Transposer Seed</label>
     <description>A special seed that will grow into a sap transposer. The sap transposer will grow in roughly a day</description>
     <possessionCount>1</possessionCount>
@@ -32,7 +32,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_SapFilterPlant</plantDefToSpawn>
+        <plantDefToSpawn>EC_SapFilterPlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>

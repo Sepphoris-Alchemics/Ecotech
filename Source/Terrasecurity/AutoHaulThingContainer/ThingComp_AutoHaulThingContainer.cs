@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public abstract class ThingComp_AutoHaulThingContainer : CompThingContainer
     {
@@ -63,15 +63,15 @@ namespace Terrasecurity
         {
             if (!canFill)
             {
-                return "Terrasecurity_FailureReason_CurrentlyNotFillable".Translate();
+                return "Ecotech_FailureReason_CurrentlyNotFillable".Translate();
             }
             if (IsFull())
             {
-                return "Terrasecurity_FailureReason_AlreadyFull".Translate();
+                return "Ecotech_FailureReason_AlreadyFull".Translate();
             }
             if (ThingRequest.IsUndefined)
             {
-                return "Terrasecurity_FailureReason_NoThingRequested".Translate();
+                return "Ecotech_FailureReason_NoThingRequested".Translate();
             }
             AcceptanceReport baseReport = parent.CanBeInteractedWithBy(pawn);
             if (!baseReport)
@@ -81,11 +81,11 @@ namespace Terrasecurity
             Thing fillThing = FindHaulThingFor(pawn);
             if(fillThing == null)
             {
-                return "Terrasecurity_FailureReason_NoFillThing".Translate();
+                return "Ecotech_FailureReason_NoFillThing".Translate();
             }
             if (ShouldEmpty(pawn, false))
             {
-                return "Terrasecurity_FailureReason_ShouldBeEmptied".Translate();
+                return "Ecotech_FailureReason_ShouldBeEmptied".Translate();
             }
             return true;
         }
@@ -94,11 +94,11 @@ namespace Terrasecurity
         {
             if (!canEmpty)
             {
-                return "Terrasecurity_FailureReason_CurrentlyNotEmptiable".Translate();
+                return "Ecotech_FailureReason_CurrentlyNotEmptiable".Translate();
             }
             if (Empty)
             {
-                return "Terrasecurity_FailureReason_AlreadyEmpty".Translate();
+                return "Ecotech_FailureReason_AlreadyEmpty".Translate();
             }
             if (recheckBaseInteractibility)
             {
@@ -119,7 +119,7 @@ namespace Terrasecurity
             {
                 return true;
             }
-            return "Terrasecurity_FailureReason_NotScheduledToEmpty".Translate();
+            return "Ecotech_FailureReason_NotScheduledToEmpty".Translate();
         }
 
         public virtual Thing FindHaulThingFor(Pawn pawn)

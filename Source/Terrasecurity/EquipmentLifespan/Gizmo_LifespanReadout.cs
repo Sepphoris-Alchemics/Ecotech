@@ -8,7 +8,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class Gizmo_LifespanReadout : Gizmo
     {
@@ -31,7 +31,7 @@ namespace Terrasecurity
 
             Rect fullGizmoRect = new Rect(topLeft, new Vector2(width, Gizmo.Height));
             Widgets.DrawWindowBackground(fullGizmoRect);
-            TooltipHandler.TipRegion(fullGizmoRect, "Terrasecurity_Gizmo_LifespanTicksRemaining_Desc".Translate(itemName));
+            TooltipHandler.TipRegion(fullGizmoRect, "Ecotech_Gizmo_LifespanTicksRemaining_Desc".Translate(itemName));
             fullGizmoRect = fullGizmoRect.ContractedBy(Padding);
 
             TextAnchor previousAnchor = Text.Anchor;
@@ -40,7 +40,7 @@ namespace Terrasecurity
             Text.Font = GameFont.Small;
 
             Rect titleLabelRect = fullGizmoRect.TopPartPixels(fullGizmoRect.height * (1 - barHeightRatio));
-            Widgets.Label(titleLabelRect, "Terrasecurity_Gizmo_LifespanTicksRemaining".Translate(itemName));
+            Widgets.Label(titleLabelRect, "Ecotech_Gizmo_LifespanTicksRemaining".Translate(itemName));
 
             Text.Anchor = previousAnchor;
             Text.Font = previousFont;

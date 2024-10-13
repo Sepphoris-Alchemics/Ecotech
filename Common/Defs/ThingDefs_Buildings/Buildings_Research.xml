@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BenchBase">
-    <defName>TS_BasicResearchBench</defName>
+    <defName>EC_BasicResearchBench</defName>
     <label>Terraseed Research Bench</label>
     <description>A research bench designed to develop and discover the secrets of Terraseeds. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terraseed biotechnology. All research pertaining to them can only be done here.
 \n\nContains compartments for highly fertile soil, and flasks for water and nutrients.</description>
@@ -49,9 +49,9 @@
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
-          <li>TS_TerravatBasic</li>
-          <li>TS_GlowsapBasinResearch</li>
-          <li>TS_Terraforge</li>
+          <li>EC_TerravatBasic</li>
+          <li>EC_GlowsapBasinResearch</li>
+          <li>EC_Terraforge</li>
         </linkableFacilities>
       </li>
       <li Class="CompProperties_ReportWorkSpeed">
@@ -66,7 +66,7 @@
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <designationCategory>EcotechDesignation</designationCategory>
     <uiOrder>2600</uiOrder>
     <surfaceType>Item</surfaceType>
     <building>
@@ -77,7 +77,7 @@
 
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>TS_GlowsapBasinResearch</defName>
+		<defName>EC_GlowsapBasinResearch</defName>
 		<label>Glowsap Testing Basin</label>
 		<description>A small tub filled with glowsap. Required to properly experiment on early-tier Terraplants. It's small size makes it unusable as a basin for growing fully matured and healthy Terraplants.
 \n\nAt least one of these basins is required for developing most Terraplants.</description>
@@ -104,7 +104,7 @@
 		<pathCost>30</pathCost>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>TS_SapBasics</li>
+      <li>EC_SapBasics</li>
     </researchPrerequisites>
 		<!--<constructEffect>ConstructWood</constructEffect>-->
 		<fillPercent>0.30</fillPercent>
@@ -122,14 +122,14 @@
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
 		<size>(1,1)</size>
 		<costList>
-			<TS_Glowsap>7</TS_Glowsap>
+			<EC_Glowsap>7</EC_Glowsap>
 			<WoodLog>20</WoodLog>
 		</costList>
 		<tickerType>Normal</tickerType>
     <!--fertility>1</fertility>
 		<building>
-			<defaultPlantToGrow>TS_GlowsapVine</defaultPlantToGrow>
-			<sowTag>TS_GlowsapCompatible</sowTag>
+			<defaultPlantToGrow>EC_GlowsapVine</defaultPlantToGrow>
+			<sowTag>EC_GlowsapCompatible</sowTag>
 			<buildingTags>
 				<li>Production</li>
 			</buildingTags>
@@ -152,7 +152,7 @@
         <fuelCapacity>7</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>TS_Glowsap</li>
+            <li>EC_Glowsap</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>
@@ -163,13 +163,13 @@
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
       </li>
     </comps>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <designationCategory>EcotechDesignation</designationCategory>
     <uiOrder>2610</uiOrder>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 	</ThingDef>
 
   <!--<ThingDef ParentName="BenchBase">
-    <defName>TS_BasicSeedBench</defName>
+    <defName>EC_BasicSeedBench</defName>
     <label>Terraseed Bench</label>
     <description>A workstation designed to shape Terraseeds from glowsap. Most seeds for specific plants can be developed here.</description>
     <thingClass>Building_WorkTable</thingClass>
@@ -183,7 +183,7 @@
     <costStuffCount>10</costStuffCount>
     <costList>
       <WoodLog>10</WoodLog>
-      <TS_Glowsap>10</TS_Glowsap>
+      <EC_Glowsap>10</EC_Glowsap>
     </costList>
     <graphicData>
       <texPath>Things/Building/Production/SeedBench/SeedBench</texPath>
@@ -220,7 +220,7 @@
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
-          <li>TS_GlowsapBasinResearch</li>
+          <li>EC_GlowsapBasinResearch</li>
         </linkableFacilities>
       </li>
     </comps>
@@ -231,7 +231,7 @@
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <designationCategory>EcotechDesignation</designationCategory>
     <uiOrder>2600</uiOrder>
     <surfaceType>Item</surfaceType>
     <building>
@@ -240,7 +240,7 @@
   </ThingDef>-->
 
 	<!--<ThingDef ParentName="BuildingBase">
-		<defName>TS_DarksapBasinResearch</defName>
+		<defName>EC_DarksapBasinResearch</defName>
 		<label>Darksap Research Basin</label>
 		<description>A small container filled with darksap. Contributes to the discovery and development of Terraplants. It's small size makes it unusable as a basin for growing fully matured and healthy Terraplants.
 \n\nThe slight differences in the sap composition doesn't allow a darksap basin to entirely carry research projects, but they can still contribute to smaller experimentation.</description>
@@ -267,7 +267,7 @@
 		<pathCost>30</pathCost>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>TS_SapBasics</li>
+      <li>EC_SapBasics</li>
     </researchPrerequisites>
 		<fillPercent>0.30</fillPercent>
 		<statBases>
@@ -284,7 +284,7 @@
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
 		<size>(1,1)</size>
 		<costList>
-			<TS_Darksap>7</TS_Darksap>
+			<EC_Darksap>7</EC_Darksap>
 			<WoodLog>20</WoodLog>
 		</costList>
 		<tickerType>Normal</tickerType>
@@ -305,7 +305,7 @@
         <fuelCapacity>7</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>TS_Darksap</li>
+            <li>EC_Darksap</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>

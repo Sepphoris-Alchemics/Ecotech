@@ -2,7 +2,7 @@
 <Defs>
 
   <!--<ThingDef ParentName="PlantBaseNonEdible">
-    <defName>TS_GlowsapVine</defName>
+    <defName>EC_GlowsapVine</defName>
     <label>Glowsap Vine</label>
     <description>A vine engineered to produce Glowsap. Glowsap slowly leaks from the top of the vine when ready for harvesting. Relatively fast, but cannot produce much glowsap at once.</description>
     <graphicData>
@@ -23,7 +23,7 @@
       <fertilitySensitivity>0</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <harvestWork>900</harvestWork>
-      <harvestedThingDef>TS_Glowsap</harvestedThingDef>
+      <harvestedThingDef>EC_Glowsap</harvestedThingDef>
       <burnedThingDef IsNull="True" />
       <harvestYield>15</harvestYield>
       <harvestMinGrowth>0.95</harvestMinGrowth>
@@ -37,7 +37,7 @@
       </sowTags>
       <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>TS_SapBasics</li>
+        <li>EC_SapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
@@ -60,7 +60,7 @@
 
 
   <ThingDef ParentName="TreeBase">
-    <defName>TS_GlowsapTree</defName>
+    <defName>EC_GlowsapTree</defName>
     <label>Glowsap tree</label>
     <description>A large, glowing tree that produces vast amounts of glowsap. Several cavities covered with a strong organic film reveal the vast amounts of glowsap inside, which is expelled roughly once every quadrum. Naturally, this constant glow also acts as a constant and reliable light source.
 \n\nGlowsap trees require a massive amount of nutrition, and two (or more) being too close to each other will eventually kill one another out. Therefore, each requires ample territory to survive. Glowsap Trees can be cut down for a quick sum of glowsap, but this is not recommended.</description>
@@ -75,7 +75,7 @@
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
-      <ThingDef>TS_Glowsap</ThingDef>
+      <ThingDef>EC_Glowsap</ThingDef>
       <!--<ThingDef>GlowsapTumor</ThingDef>-->
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
@@ -86,8 +86,8 @@
       <MaxHitPoints>250</MaxHitPoints>
     </statBases>
     <killedLeavings>
-      <TS_Glowsap>45</TS_Glowsap>
-      <TS_ElderwoodMaterial>10</TS_ElderwoodMaterial>
+      <EC_Glowsap>45</EC_Glowsap>
+      <EC_ElderwoodMaterial>10</EC_ElderwoodMaterial>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
@@ -107,7 +107,7 @@
       <sowWork>400</sowWork>
       <harvestTag>Standard</harvestTag>
       <harvestYield>30</harvestYield>
-			<harvestedThingDef>TS_Glowsap</harvestedThingDef>
+			<harvestedThingDef>EC_Glowsap</harvestedThingDef>
 			<harvestFailable>false</harvestFailable>
 			<harvestAfterGrowth>0.05</harvestAfterGrowth>
       <harvestMinGrowth>0.9</harvestMinGrowth>-->
@@ -117,7 +117,7 @@
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>TS_SapBasics</li>
+        <li>EC_SapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
@@ -132,7 +132,7 @@
     <comps>
       <li Class="CompProperties_Spawner">
         <requiresPower>false</requiresPower>
-        <thingToSpawn>TS_Glowsap</thingToSpawn>
+        <thingToSpawn>EC_Glowsap</thingToSpawn>
         <spawnCount>180</spawnCount> <!--Creates roughly 720 glowsap a year-->
         <spawnIntervalRange>
           <min>800000</min>
@@ -155,7 +155,7 @@
 
 
   <ThingDef ParentName="StumpChoppedBase">
-    <defName>TS_ChoppedStump_GlowsapTree</defName>
+    <defName>EC_ChoppedStump_GlowsapTree</defName>
     <label>chopped glowsap tree stump</label>
     <description>A stump left behind after a glowsap tree has been felled. Left outdoors, the stump will deteriorate in time.</description>
     <graphicData>
@@ -165,7 +165,7 @@
   </ThingDef>
 
     <ThingDef ParentName="StumpSmashedBase">
-    <defName>TS_SmashedStump_GlowsapTree</defName>
+    <defName>EC_SmashedStump_GlowsapTree</defName>
     <label>smashed glowsap tree stump</label>
     <description>The remnants of a glowsap tree destroyed by damage. Left outdoors, the stump will deteriorate in time.</description>
     <graphicData>

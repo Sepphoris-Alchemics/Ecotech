@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_PrimaSMGTurret</defName>
+    <defName>EC_Seed_PrimaSMGTurret</defName>
     <label>Thistle Turret Seed</label>
     <description>A special seed acquired from rapid-firing Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into the quick-firing Thistle Turret.
 Proper knowledge on the seed is required to plant it safely and effectively.
@@ -30,7 +30,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_PrimaTurretPlant_SMG</plantDefToSpawn>
+        <plantDefToSpawn>EC_PrimaTurretPlant_SMG</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -44,7 +44,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_PrimaShotgunTurret</defName>
+    <defName>EC_Seed_PrimaShotgunTurret</defName>
     <label>Scatter Turret Seed</label>
     <description>A special seed acquired from area-focused or short-burst Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into the shotgun-like Scatter Turret.
 Proper knowledge on the seed is required to plant it safely and effectively.
@@ -72,7 +72,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_PrimaTurretPlant_Shotgun</plantDefToSpawn>
+        <plantDefToSpawn>EC_PrimaTurretPlant_Shotgun</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -86,7 +86,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_PrimaStakeTurret</defName>
+    <defName>EC_Seed_PrimaStakeTurret</defName>
     <label>Spear Turret Seed</label>
     <description>A special seed acquired from Prima weapons that only fire up to a few projectiles at a time. Once planted, the seed will immediately burst into vines and wood, taking root and forming into a Prima Spear Turret.
 Proper knowledge on the seed is required to plant it safely and effectively.
@@ -114,7 +114,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_PrimaTurretPlant_Spear</plantDefToSpawn>
+        <plantDefToSpawn>EC_PrimaTurretPlant_Spear</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -128,7 +128,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_PrimaApexTurret</defName>
+    <defName>EC_Seed_PrimaApexTurret</defName>
     <label>Prima Apex Seed</label>
     <description>A special seed acquired from Apex (fully matured) Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into a Prima Turret.
 This seed once could be awakened by hand, and at will; however, that knowledge is either secretive, or lost to time. You will need to awaken it at a Terravat.

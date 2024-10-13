@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!--<ThingDef ParentName="BenchBase">
-    <defName>TS_TerravatBasic</defName>
+    <defName>EC_TerravatBasic</defName>
     <label>Glowsap Terravat</label>
-    <description>An organic wooden growth that sustains an accessible glowsap chamber, designed for Terratech study, experimentation, and creations. This structure is critical for utilizing Terratech that the planet can't support, or what we do not yet understand.
+    <description>An organic wooden growth that sustains an accessible glowsap chamber, designed for Ecotech study, experimentation, and creations. This structure is critical for utilizing Ecotech that the planet can't support, or what we do not yet understand.
 \n\nOver time some of it's capabilities may be able to be performed in other, more efficient manners. In these cases, the Terravat will simply stop supporting these redundant procedures.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
     <costList>
       <WoodLog>80</WoodLog>
-      <TS_Glowsap>30</TS_Glowsap>
+      <EC_Glowsap>30</EC_Glowsap>
     </costList>
     <tickerType>Normal</tickerType>
     <graphicData>
@@ -28,7 +28,7 @@
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>TS_Terravats</li>
+      <li>EC_Terravats</li>
     </researchPrerequisites>
     <castEdgeShadows>false</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
@@ -54,17 +54,17 @@
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>TerratechDesignation</designationCategory>
+    <designationCategory>EcotechDesignation</designationCategory>
     <uiOrder>2630</uiOrder>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
     <recipes>
-      <li>TS_ExtractPrimaStakeTurretSeed</li>
-      <li>TS_ExtractPrimaSMGTurretSeed</li>
-      <li>TS_ExtractPrimaShotgunTurretSeed</li>
-      <li>TS_PrimaTurretSeedApexToStake</li>
-      <li>TS_PrimaTurretSeedApexToSMG</li>
-      <li>TS_PrimaTurretSeedApexToShotgun</li>
+      <li>EC_ExtractPrimaStakeTurretSeed</li>
+      <li>EC_ExtractPrimaSMGTurretSeed</li>
+      <li>EC_ExtractPrimaShotgunTurretSeed</li>
+      <li>EC_PrimaTurretSeedApexToStake</li>
+      <li>EC_PrimaTurretSeedApexToSMG</li>
+      <li>EC_PrimaTurretSeedApexToShotgun</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -99,7 +99,7 @@
         <fuelCapacity>30</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>TS_Glowsap</li>
+            <li>EC_Glowsap</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>0.5</initialFuelPercent>

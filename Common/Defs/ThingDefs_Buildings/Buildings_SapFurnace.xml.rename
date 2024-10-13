@@ -3,7 +3,7 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_DebugTransformer</defName>
+    <defName>EC_DebugTransformer</defName>
     <label>Sap Forge</label>
     <description>Your text here.</description>
     <graphicData>
@@ -43,19 +43,19 @@
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_MonoThingContainer">
+      <li Class="Ecotech.ThingCompProperties_MonoThingContainer">
         <stackLimit>50</stackLimit>
         <drawContainedThing>false</drawContainedThing>
-        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
       </li>
-      <li Class="Terrasecurity.ThingCompProperties_SlottedThingTransformer">
+      <li Class="Ecotech.ThingCompProperties_SlottedThingTransformer">
         <drawContainedThing>false</drawContainedThing>
         <!-- 
           When the cycle is more than this many ticks away, the time is displayed in absolute format (on the xth), otherwise in relative (in x hours) 
           Can be set to -1 or omitted to always display in relative format
         -->
         <cycleInspectStringRelativeToAbsoluteThreshold>60000</cycleInspectStringRelativeToAbsoluteThreshold>
-        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
         <baseFuelColor>(56,204,220)</baseFuelColor>
         <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
         <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
@@ -75,7 +75,7 @@
         <transformationCycleIntervalTicks>2000</transformationCycleIntervalTicks>
         <validFuels>
           <li>
-            <fuelThingDef>TS_Glowsap</fuelThingDef>
+            <fuelThingDef>EC_Glowsap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Misc/DropBeacon</texPath>

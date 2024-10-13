@@ -21,9 +21,9 @@
   -->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>TS_TerravatBasic</defName>
+    <defName>EC_TerravatBasic</defName>
     <label>Small Terravat</label>
-    <description>An organic wooden growth that sustains an accessible sap chamber, designed for Terratech experimentation and evolution. Twice a season, this vat will utilize the glowsap within, and will "advance" the various items within into another form. This unlocks security measures that Terratech might employ, or even advance it into a unique, more powerful variant.
+    <description>An organic wooden growth that sustains an accessible sap chamber, designed for Ecotech experimentation and evolution. Twice a season, this vat will utilize the glowsap within, and will "advance" the various items within into another form. This unlocks security measures that Ecotech might employ, or even advance it into a unique, more powerful variant.
 \n\nTo use a Terravat:
 \nInsert a sap. Every sap can apply a different trait; to see it's applications, check the sap's info.
 \nSelect and insert the item you wish to apply the sap's traits on. Generally these will be matured weapons.
@@ -53,7 +53,7 @@
     </statBases>
     <!--<costList>
       <WoodLog>80</WoodLog>
-      <TS_Glowsap>30</TS_Glowsap>
+      <EC_Glowsap>30</EC_Glowsap>
     </costList>-->
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
@@ -63,11 +63,11 @@
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <!--<designationCategory>TerratechDesignation</designationCategory>-->
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>TS_Terravats</li>
+      <li>EC_Terravats</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
@@ -103,19 +103,19 @@
       <li Class="CompProperties_Art">
         <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
       </li>
-      <li Class="Terrasecurity.ThingCompProperties_MonoThingContainer">
+      <li Class="Ecotech.ThingCompProperties_MonoThingContainer">
         <stackLimit>30</stackLimit>
         <drawContainedThing>false</drawContainedThing>
-        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
       </li>
-      <li Class="Terrasecurity.ThingCompProperties_SlottedThingTransformer">
+      <li Class="Ecotech.ThingCompProperties_SlottedThingTransformer">
         <drawContainedThing>false</drawContainedThing>
         <!-- 
           When the cycle is more than this many ticks away, the time is displayed in absolute format (on the xth), otherwise in relative (in x hours) 
           Can be set to -1 or omitted to always display in relative format
         -->
         <cycleInspectStringRelativeToAbsoluteThreshold>60000</cycleInspectStringRelativeToAbsoluteThreshold>
-        <contentsTranslationKey>Terrasecurity_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
         <baseFuelColor>(56,204,220)</baseFuelColor>
         <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
         <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
@@ -135,7 +135,7 @@
         <transformationCycleIntervalTicks>900000</transformationCycleIntervalTicks>
         <validFuels>
           <li>
-            <fuelThingDef>TS_Glowsap</fuelThingDef>
+            <fuelThingDef>EC_Glowsap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Glowsap</texPath>
@@ -152,7 +152,7 @@
             </extraGraphicDataIfTransforming>
           </li>
           <li>
-            <fuelThingDef>TS_Sunsap</fuelThingDef>
+            <fuelThingDef>EC_Sunsap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Sunsap</texPath>
@@ -169,7 +169,7 @@
             </extraGraphicDataIfTransforming>
           </li>
           <li>
-            <fuelThingDef>TS_Endosap</fuelThingDef>
+            <fuelThingDef>EC_Endosap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Endosap</texPath>
@@ -186,7 +186,7 @@
             </extraGraphicDataIfTransforming>
           </li>
           <li>
-            <fuelThingDef>TS_Hypersap</fuelThingDef>
+            <fuelThingDef>EC_Hypersap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Hypersap</texPath>

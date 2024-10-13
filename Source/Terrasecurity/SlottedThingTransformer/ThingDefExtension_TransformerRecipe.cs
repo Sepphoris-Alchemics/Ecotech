@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingDefExtension_TransformerRecipe : DefModExtension
     {
@@ -96,7 +96,7 @@ namespace Terrasecurity
             consumedFuel = 0;
             if (transformerComp.CurrentFuelCount < fuelCount)
             {
-                return "Terrasecurity_FailureReason_NotEnoughFuel".Translate();
+                return "Ecotech_FailureReason_NotEnoughFuel".Translate();
             }
             if (!AppliesTo(inputThing))
             {
@@ -104,7 +104,7 @@ namespace Terrasecurity
             }
             if (!transformerComp.innerContainer.Remove(inputThing))
             {
-                return "Terrasecurity_FailureReason_CouldNotRemoveThingFromContainer".Translate();
+                return "Ecotech_FailureReason_CouldNotRemoveThingFromContainer".Translate();
             }
             inputThing.Destroy();
             producedThing = ExecuteRecipe(out consumedFuel);

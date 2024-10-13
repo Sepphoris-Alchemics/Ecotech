@@ -11,7 +11,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingComp_ThingConverter : ThingComp
     {
@@ -52,23 +52,23 @@ namespace Terrasecurity
         {
             if (isCurrentlyConverting)
             {
-                return "Terrasecurity_FailureReason_CurrentlyConverting".Translate();
+                return "Ecotech_FailureReason_CurrentlyConverting".Translate();
             }
             if (!(parent is Building building))
             {
-                return "Terrasecurity_FailureReason_NotABuilding".Translate();
+                return "Ecotech_FailureReason_NotABuilding".Translate();
             }
             if (pawn.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) != null)
             {
-                return "Terrasecurity_FailureReason_DesignatedForDeconstruct".Translate();
+                return "Ecotech_FailureReason_DesignatedForDeconstruct".Translate();
             }
             if (building.IsForbidden(pawn))
             {
-                return "Terrasecurity_FailureReason_IsForbidden".Translate();
+                return "Ecotech_FailureReason_IsForbidden".Translate();
             }
             if (!pawn.CanReserve(building))
             {
-                return "Terrasecurity_FailureReason_CannotReserve".Translate();
+                return "Ecotech_FailureReason_CannotReserve".Translate();
             }
 
             return true;
@@ -85,16 +85,16 @@ namespace Terrasecurity
             }
             if (!outputContents.NullOrEmpty())
             {
-                return "Terrasecurity_FailureReason_NeedsToBeEmptied".Translate();
+                return "Ecotech_FailureReason_NeedsToBeEmptied".Translate();
             }
             if (inputCount >= Props.InputThing.count)
             {
-                return "Terrasecurity_FailureReason_AlreadyFull".Translate();
+                return "Ecotech_FailureReason_AlreadyFull".Translate();
             }
             thingToFillWith = FindInputFor(pawn, out thingCount);
             if (thingToFillWith == null)
             {
-                return "Terrasecurity_FailureReason_NoFillThing".Translate();
+                return "Ecotech_FailureReason_NoFillThing".Translate();
             }
             return true;
         }
@@ -158,11 +158,11 @@ namespace Terrasecurity
         {
             if (isCurrentlyConverting)
             {
-                return "Terrasecurity_FailureReason_AlreadyConverting".Translate();
+                return "Ecotech_FailureReason_AlreadyConverting".Translate();
             }
             if (!ContainsAllThingsRequiredForConversion)
             {
-                return "Terrasecurity_FailureReason_NotContainingRequiredThings".Translate();
+                return "Ecotech_FailureReason_NotContainingRequiredThings".Translate();
             }
             isCurrentlyConverting = true;
             converstionStartTick = GenTicks.TicksGame;
@@ -173,7 +173,7 @@ namespace Terrasecurity
         {
             if (thing.def != Props.InputThing.thingDef)
             {
-                return "Terrasecurity_FailureReason_InvalidThingDef".Translate();
+                return "Ecotech_FailureReason_InvalidThingDef".Translate();
             }
             int requiredCount = Props.InputThing.count - inputCount;
             int countToTake = Math.Min(requiredCount, thing.stackCount);
@@ -233,17 +233,17 @@ namespace Terrasecurity
 
             if (!outputContents.NullOrEmpty())
             {
-                text.AppendLine("Terrasecurity_InspectString_ConverterFinished".Translate());
-                text.Append("Terrasecurity_InspectString_ConverterContents".Translate(FormattedOutputContents.Named("CONTENTS")));
+                text.AppendLine("Ecotech_InspectString_ConverterFinished".Translate());
+                text.Append("Ecotech_InspectString_ConverterContents".Translate(FormattedOutputContents.Named("CONTENTS")));
             }
             else if (isCurrentlyConverting)
             {
-                text.AppendLine("Terrasecurity_InspectString_ConverterTimeRemaining".Translate(RemainingConversionTicks.ToStringTicksToPeriod().Named("TIME")));
-                text.Append("Terrasecurity_InspectString_ConverterContents".Translate(FormattedInputContents.Named("CONTENTS")));
+                text.AppendLine("Ecotech_InspectString_ConverterTimeRemaining".Translate(RemainingConversionTicks.ToStringTicksToPeriod().Named("TIME")));
+                text.Append("Ecotech_InspectString_ConverterContents".Translate(FormattedInputContents.Named("CONTENTS")));
             }
             else
             {
-                text.Append("Terrasecurity_InspectString_ConverterContents".Translate(FormattedInputContents.Named("CONTENTS")));
+                text.Append("Ecotech_InspectString_ConverterContents".Translate(FormattedInputContents.Named("CONTENTS")));
             }
 
             return text.ToString();

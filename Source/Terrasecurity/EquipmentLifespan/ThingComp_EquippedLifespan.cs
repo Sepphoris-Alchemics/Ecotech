@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingComp_EquippedLifespan : ThingComp_EquippedTick
     {
@@ -104,7 +104,7 @@ namespace Terrasecurity
                 return;
             }
             hasShownAlert = true;
-            Messages.Message("Terrasecurity_Message_LifespanAboutToExpire".Translate(parent.LabelShort.Named("THING")), parent, MessageTypeDefOf.NeutralEvent);
+            Messages.Message("Ecotech_Message_LifespanAboutToExpire".Translate(parent.LabelShort.Named("THING")), parent, MessageTypeDefOf.NeutralEvent);
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()

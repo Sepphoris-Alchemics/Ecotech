@@ -3,7 +3,7 @@
     <!-- ================ Elderwood ================ -->
 
     <ThingDef ParentName="ResourceBase">
-        <defName>TS_ElderwoodMaterial</defName>
+        <defName>EC_ElderwoodMaterial</defName>
         <label>Elderwood Plating</label>
         <description>Organic plates of Elderwood, often confused as "living wood" by those less familiar with it. It's unique adaptive traits allow multiple pieces of it to meld together, producing a psdeudo-composite material that's quite resilient.</description>
         <graphicData>

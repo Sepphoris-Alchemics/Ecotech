@@ -3,13 +3,13 @@
   
 
   <ScenarioDef>
-    <defName>TS_TerratechKeepers</defName>
-    <label>Sentries of the Terratech</label>
+    <defName>EC_EcotechKeepers</defName>
+    <label>Sentries of the Ecotech</label>
 
     <scenario>
-		  <summary>Four guardians of Terratech build anew to preserve their culture.</summary>
+		  <summary>Four guardians of Ecotech build anew to preserve their culture.</summary>
 		  <description>Your near-extinct tribe was the last on the planet that knew the sacred secrets of the Terraseed. Half of you have been sent off to start a new home, in pursuit of keeping the knowledge alive.
-\nThis scenario starts you off with several Terratech technologies and items, but prohibits you from progressing mechanical tech too far. Designed for low-tech-only playthroughs.</description>
+\nThis scenario starts you off with several Ecotech technologies and items, but prohibits you from progressing mechanical tech too far. Designed for low-tech-only playthroughs.</description>
 		<playerFaction>
 			<def>PlayerFaction</def>
 			<factionDef>PlayerTribe</factionDef>
@@ -41,78 +41,78 @@
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_PrimaSword</thingDef>
+				<thingDef>EC_PrimaSword</thingDef>
         <count>1</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_PrimaKnife</thingDef>
+				<thingDef>EC_PrimaKnife</thingDef>
         <count>1</count>
 			</li>
 			<!--<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_StakeCaster</thingDef>
+				<thingDef>EC_StakeCaster</thingDef>
         <count>2</count>
 			</li>-->
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_SMG</thingDef>
+				<thingDef>EC_SMG</thingDef>
         <count>1</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_Carbine</thingDef>
+				<thingDef>EC_Carbine</thingDef>
         <count>1</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_Seed_Terraforge</thingDef>
+				<thingDef>EC_Seed_Terraforge</thingDef>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_Seed_PrimaStakeTurret</thingDef>
+				<thingDef>EC_Seed_PrimaStakeTurret</thingDef>
 				<count>2</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_Seed_PrimaSMGTurret</thingDef>
+				<thingDef>EC_Seed_PrimaSMGTurret</thingDef>
 				<count>1</count>
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>ScatterThingsAnywhere</def>
-				<thingDef>TS_ElderwoodMaterial</thingDef>
+				<thingDef>EC_ElderwoodMaterial</thingDef>
 				<count>750</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>StartingThing_Defined</def>
-				<thingDef>TS_Glowsap</thingDef>
+				<thingDef>EC_Glowsap</thingDef>
 				<count>75</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_FundamentalArms</project>
+				<project>EC_FundamentalArms</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_BasicFirearms</project>
+				<project>EC_BasicFirearms</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_StandardFirearms</project>
+				<project>EC_StandardFirearms</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_ConduitSeeds</project>
+				<project>EC_ConduitSeeds</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_PrimaTurretSeeds</project>
+				<project>EC_PrimaTurretSeeds</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>TS_SapBasics</project>
+				<project>EC_SapBasics</project>
 			</li>
 			<li Class="ScenPart_DisallowBuilding">
 				<def>Rule_DisallowBuilding</def>
@@ -137,7 +137,7 @@
 			</li>-->
 			<li Class="ScenPart_GameStartDialog">
 				<def>GameStartDialog</def>
-				<text>For generations, your last tribe was sworn to follow and guard the secrets of the sacred Terratech. Your prior tribe decided the only way to ensure preservation of the secrets was to besgin establishing new tribes, dedicated to the rise of new keepers.
+				<text>For generations, your last tribe was sworn to follow and guard the secrets of the sacred Ecotech. Your prior tribe decided the only way to ensure preservation of the secrets was to besgin establishing new tribes, dedicated to the rise of new keepers.
 
 Note: this scenario has been designed for runs that intend to have little-to-none electronic influence. Have fun!</text>
 				<closeSound>GameStartSting</closeSound>

@@ -6,14 +6,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     [StaticConstructorOnStartup]
     public static class Startup
     {
         static Startup()
         {
-            Harmony harmony = new Harmony(nameof(Terrasecurity));
+            Harmony harmony = new Harmony(nameof(Ecotech));
             harmony.PatchAll();
             PostGameLoadConfigErrors.RunPostLoadConfigErrorChecks();
         }

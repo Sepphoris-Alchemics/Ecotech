@@ -2,12 +2,12 @@
 <Defs>
 
   <ResearchTabDef>
-    <defName>TS_TerrasecurityTab</defName>
-    <label>Terrasecurity</label>
+    <defName>EC_EcotechTab</defName>
+    <label>Ecotech</label>
   </ResearchTabDef>
 
   <!--Ultimate Research Options:
-    1: Seed Cultivation: Learn how to properly identify and plant Terrasecurity seeds. This allows the player to know use the plants.
+    1: Seed Cultivation: Learn how to properly identify and plant Ecotech seeds. This allows the player to know use the plants.
       -The first reseach will teach how to plant Prima Terraseeds as well, which are the most basic.
     2: Basic Firearms (Small): Learn how to make smaller firearms, such as pistols, pocket shotguns, and PDWs
     3: Standard Melee Patterns: Learn how to grow standard melee weapons, ranging from daggers, swords, and hammers.
@@ -83,50 +83,50 @@
 <!--Cost of research projects should be the cost of the most expensive, vanilla similar rearch project, x1.5-->
 
   <ResearchProjectDef>
-    <defName>TS_TerraseedEssentials</defName>
+    <defName>EC_TerraseedEssentials</defName>
     <label>Terraseed Essentials</label>
     <description>Learn how to properly create and grow Terraseeds; specialized seeds that are used to grow biotic gear and equipment, instead of food or materials.
 Teaches you how to nurture a Terraforge channeling seed, which can be done at a proper designated spot.
 Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded. Replicating their secrets as outsiders is indeed possible, but requires excessive effort.</description>
     <baseCost>1750</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
     <tags>
       <li>TribalStart</li>
     </tags>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_PrimaTerraweaponSeeds</defName>
+    <defName>EC_PrimaTerraweaponSeeds</defName>
     <label>Prima Terraseed Cultivation</label>
     <description>Learn how to nuture and handle Prima Terraseeds, which are one of four lines of terraweapons. Prima weapons are fast to grow and easy to handle, but are limited in their damage, and wither away relatively quickly.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>TS_TerraseedEssentials</li>
+      <li>EC_TerraseedEssentials</li>
     </hiddenPrerequisites>
     <tags>
       <li>TribalStart</li>
     </tags>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>1.00</researchViewX>
   <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
   <!--<ResearchProjectDef>
-    <defName>TS_TerrashellSeeds</defName>
+    <defName>EC_TerrashellSeeds</defName>
     <label>???</label>
     <description>The technology for growing something on this scope is still being discovered...\n\nThis research node serves no purpose (yet) beyond teasing upcoming content. It can be safely disregarded.</description>
     <baseCost>2200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -135,215 +135,215 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
   </ResearchProjectDef>-->
 
   <!--<ResearchProjectDef>
-    <defName>TS_TerrastructureBasics</defName>
+    <defName>EC_TerrastructureBasics</defName>
     <label>Basic Terrastructures</label>
-    <description>Learn how to grow structures crucial to manipulating or utilizing core Terratech applications.\n\nWays these structures can be used will require further insight.</description>
+    <description>Learn how to grow structures crucial to manipulating or utilizing core Ecotech applications.\n\nWays these structures can be used will require further insight.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>TS_TerraseedEssentials</li>
+      <li>EC_TerraseedEssentials</li>
     </hiddenPrerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>-->
 
   <ResearchProjectDef>
-    <defName>TS_FundamentalArms</defName> <!--Outdated name-->
+    <defName>EC_FundamentalArms</defName> <!--Outdated name-->
     <label>Prima Weapons: Integral Design</label>
     <description>Learn how to grow biotic weapon patterns of simply-formed weapons. This covers weapons that don't rely on advanced internal movement, notably melee weapons and weapons that utilize simple growth for offense.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_PrimaTerraweaponSeeds</li>
+      <li>EC_PrimaTerraweaponSeeds</li>
     </prerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_ConduitSeeds</defName>
+    <defName>EC_ConduitSeeds</defName>
     <label>Elderwood Conduit Seeds</label>
     <description>Not everything is hands-on; while you take care of the planet, the planet will take care of you back. This research enables you to create "Conduit" seeds, which - when planted - grow powerful trees that protect and supply your colony.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>TS_TerraseedEssentials</li>
+      <li>EC_TerraseedEssentials</li>
     </hiddenPrerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>3.00</researchViewX>
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_BasicFirearms</defName>
+    <defName>EC_BasicFirearms</defName>
     <label>Prima Weapons: Basic Patterns</label>
     <description>Learn how to grow Prima weapon patterns of small arms, such SMGs and pistols.</description>
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_FundamentalArms</li>
+      <li>EC_FundamentalArms</li>
     </prerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
-      <li>TS_GlowsapBasinResearch</li>
+      <li>EC_GlowsapBasinResearch</li>
     </requiredResearchFacilities>
     <researchViewX>3.00</researchViewX>
     <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
-    <defName>TS_StandardFirearms</defName>
+    <defName>EC_StandardFirearms</defName>
     <label>Prima Weapons: Standard Patterns</label>
     <description>Learn how to grow biotic weapon patterns of standard arms, such as marksman rifles, carbines, and shotguns.</description>
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_BasicFirearms</li>
+      <li>EC_BasicFirearms</li>
     </prerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
-      <li>TS_GlowsapBasinResearch</li>
+      <li>EC_GlowsapBasinResearch</li>
     </requiredResearchFacilities>
   <researchViewX>4.00</researchViewX>
   <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_HeavyFirearms</defName>
+    <defName>EC_HeavyFirearms</defName>
     <label>Prima Weapons: Heavy Patterns</label>
     <description>Learn how to grow biotic weapon patterns that require especially tough parts, such as chemical launchers, and high-capacity weapons.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_StandardFirearms</li>
+      <li>EC_StandardFirearms</li>
     </prerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
-      <li>TS_GlowsapBasinResearch</li>
-      <li>TS_TerravatBasic</li>
+      <li>EC_GlowsapBasinResearch</li>
+      <li>EC_TerravatBasic</li>
     </requiredResearchFacilities>
   <researchViewX>5.00</researchViewX>
   <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_PrimaTurretSeeds</defName>
+    <defName>EC_PrimaTurretSeeds</defName>
     <label>Prima Sentry Seeds</label>
     <description>Learn how to properly grow and plant specialized seeds which will instantly sprout into biotic plant patterns akin to small turrets. The nature of these plants - labelled as "Sentries" - requires them to be placed in soil that can grow plants.
 Instead of using electricity or requiring fuel, these sentries have a limited lifepspan, which drains over time and whenever they generate projectiles. The seeds these sentries come from are acquired directly from Prima Terraweapons.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_StandardFirearms</li>
+      <li>EC_StandardFirearms</li>
     </prerequisites>
     <!--<hiddenPrerequisites>
-      <li>TS_SurgeSeeds</li>
+      <li>EC_SurgeSeeds</li>
     </hiddenPrerequisites>-->
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
-      <li>TS_GlowsapBasinResearch</li>
-      <li>TS_TerravatBasic</li>
+      <li>EC_GlowsapBasinResearch</li>
+      <li>EC_TerravatBasic</li>
     </requiredResearchFacilities>
   <researchViewX>5.00</researchViewX>
   <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_RoyalSeeds</defName>
+    <defName>EC_RoyalSeeds</defName>
     <label>Lore Entry: Psychic Weaponry</label>
     <description>Records tell of a special, exclusive breed of Terraweapons that only the highest of societies and engineers know of. This research will provide additional information about this unique breed....
 \n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
     <baseCost>4000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <tab>EC_EcotechTab</tab>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>0.00</researchViewX>
   <researchViewY>2.00</researchViewY>
-    <discoveredLetterTitle>Secrets of Terratech: Royal Seeds</discoveredLetterTitle>
+    <discoveredLetterTitle>Secrets of Ecotech: Royal Seeds</discoveredLetterTitle>
     <discoveredLetterText>You have discovered that Prima Terraweapons are just one of several known types of Terraseeds. This particular research has unveiled that one of the most powerful types are known as "Royal" Terraseeds, and are carefully engineered with the mysterious - and massive - power of Anima. Products of these seeds are documented to take up to years to grow, and properly growing them requires skill that only prodigies can achieve; however, any given Royal Terraweapon contains power that rivals - or even completely overshadows - Spacer tech that's widely believed to be superior. The secrets behind producing the weapons are currently lost and not known to any; however, records rumor that *very* few surviving Anima weapons may still be out there, perhaps within relative reach....</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_SapBasics</defName> <!--Unlocks Glowsap plants, -->
+    <defName>EC_SapBasics</defName> <!--Unlocks Glowsap plants, -->
     <label>Glowsap Cultivation</label>
     <description>Learn how to cultivate plants and trees that produce Glowsap, a crucial item that fuels many structures and processes.
 Dark mode included!</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>TS_TerraseedEssentials</li>
+      <li>EC_TerraseedEssentials</li>
     </hiddenPrerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_GlowsapRefinement</defName> <!--for Sap Transposer-->
+    <defName>EC_GlowsapRefinement</defName> <!--for Sap Transposer-->
     <label>Glowsap Refinement</label>
     <description>Learn how to refine Glowsap into valuable terrasaps that can modify and strengthen Terraweapons.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_SapBasics</li>
+      <li>EC_SapBasics</li>
     </prerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
     <ResearchProjectDef>
-    <defName>TS_GlowsapBays</defName>
+    <defName>EC_GlowsapBays</defName>
     <label>Glowsap Bays</label>
-    <description>Learn how to construct simple - but not very space-friendly - basins that utilize glowsap to sustain Terratech plants. Ideal for locations where fertile soil is scarce or entirely absent.</description>
+    <description>Learn how to construct simple - but not very space-friendly - basins that utilize glowsap to sustain Ecotech plants. Ideal for locations where fertile soil is scarce or entirely absent.</description>
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_SapBasics</li>
+      <li>EC_SapBasics</li>
     </prerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
     <researchViewY>2.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>TS_Terravats</defName>
+    <defName>EC_Terravats</defName>
     <label>Terravats</label>
-    <description>Learn how to grow Terravats, which are crucial for delving deeper into Terratech as a whole. These ancient vats enable you to experiment, create, and modify Terratech creations of all types, including creations that are beyond the capabilities of the very planet.
+    <description>Learn how to grow Terravats, which are crucial for delving deeper into Ecotech as a whole. These ancient vats enable you to experiment, create, and modify Ecotech creations of all types, including creations that are beyond the capabilities of the very planet.
 \n\nTerravats utilize large amounts of glowsap, and refined terrasaps. You will need access to both to properly utilize Terravats.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_GlowsapRefinement</li>
+      <li>EC_GlowsapRefinement</li>
     </prerequisites>
-    <requiredResearchBuilding>TS_BasicResearchBench</requiredResearchBuilding>
+    <requiredResearchBuilding>EC_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
   <!--<ResearchProjectDef>
-    <defName>TS_TerraPlate</defName>
+    <defName>EC_TerraPlate</defName>
     <label>???</label>
     <description>... however, whispers tell of beings covered in organic, resilient shells that almost rivalled military protection. It is unclear if this was merely armor... or another creature entirely.</description>
     <baseCost>4000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>TS_TerrasecurityTab</tab>
+    <tab>EC_EcotechTab</tab>
     <prerequisites>
-      <li>TS_TerrashellSeeds</li>
+      <li>EC_TerrashellSeeds</li>
     </prerequisites>
   <researchViewX>0.00</researchViewX>
   <researchViewY>2.00</researchViewY>

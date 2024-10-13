@@ -8,7 +8,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingComp_InstallableInSlottedThingTransformer : ThingComp
     {
@@ -21,8 +21,8 @@ namespace Terrasecurity
                 {
                     _installGizmo = new Command_Action()
                     {
-                        defaultLabel = "Terrasecurity_Gizmo_InstallableInThingTransformer_Label".Translate(),
-                        defaultDesc = "Terrasecurity_Gizmo_InstallableInThingTransformer_Description".Translate(),
+                        defaultLabel = "Ecotech_Gizmo_InstallableInThingTransformer_Label".Translate(),
+                        defaultDesc = "Ecotech_Gizmo_InstallableInThingTransformer_Description".Translate(),
                         icon = Common.installableInSlottedThingTransformerGizmoTexture,
                         action = OpenInstallTargeter
                     };
@@ -51,7 +51,7 @@ namespace Terrasecurity
                 canTargetPawns = false,
                 validator = TargetAcceptsThing,
             };
-            Action<LocalTargetInfo> onGuiAction = (LocalTargetInfo target) => Widgets.MouseAttachedLabel("Terrasecurity_Gizmo_InstallableInThingTransformer_Description".Translate());
+            Action<LocalTargetInfo> onGuiAction = (LocalTargetInfo target) => Widgets.MouseAttachedLabel("Ecotech_Gizmo_InstallableInThingTransformer_Description".Translate());
             Find.Targeter.BeginTargeting(targetingParameters, GiveInstallJob, highlightAction: null, targetValidator: null, onGuiAction: onGuiAction);
         }
 

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <WorkGiverDef>
-    <defName>TS_FillThingConverter</defName>
+    <defName>EC_FillThingConverter</defName>
     <label>fill thing converter</label>
-    <giverClass>Terrasecurity.WorkGiver_FillThingConverter</giverClass>
+    <giverClass>Ecotech.WorkGiver_FillThingConverter</giverClass>
     <workType>Hauling</workType>
     <verb>fill</verb>
     <gerund>filling</gerund>
@@ -15,9 +15,9 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>TS_EmptyThingConverter</defName>
+    <defName>EC_EmptyThingConverter</defName>
     <label>empty thing converter</label>
-    <giverClass>Terrasecurity.WorkGiver_EmptyThingConverter</giverClass>
+    <giverClass>Ecotech.WorkGiver_EmptyThingConverter</giverClass>
     <workType>Hauling</workType>
     <verb>empty</verb>
     <gerund>emptying</gerund>
@@ -29,9 +29,9 @@
   </WorkGiverDef>
   
   <WorkGiverDef>
-    <defName>TS_FillAutoHaulThingContainer</defName>
+    <defName>EC_FillAutoHaulThingContainer</defName>
     <label>fill thing container</label>
-    <giverClass>Terrasecurity.WorkGiver_FillAutoHaulThingContainer</giverClass>
+    <giverClass>Ecotech.WorkGiver_FillAutoHaulThingContainer</giverClass>
     <workType>Hauling</workType>
     <verb>fill</verb>
     <gerund>filling</gerund>
@@ -43,9 +43,9 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>TS_EmptyAutoHaulThingContainer</defName>
+    <defName>EC_EmptyAutoHaulThingContainer</defName>
     <label>empty thing container</label>
-    <giverClass>Terrasecurity.WorkGiver_EmptyAutoHaulThingContainer</giverClass>
+    <giverClass>Ecotech.WorkGiver_EmptyAutoHaulThingContainer</giverClass>
     <workType>Hauling</workType>
     <verb>empty</verb>
     <gerund>emptying</gerund>
@@ -57,9 +57,9 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>TS_FillSlottedThingTransformer</defName>
+    <defName>EC_FillSlottedThingTransformer</defName>
     <label>fill transformer</label>
-    <giverClass>Terrasecurity.WorkGiver_FillSlottedThingTransformer</giverClass>
+    <giverClass>Ecotech.WorkGiver_FillSlottedThingTransformer</giverClass>
     <workType>Hauling</workType>
     <verb>fill</verb>
     <gerund>filling</gerund>

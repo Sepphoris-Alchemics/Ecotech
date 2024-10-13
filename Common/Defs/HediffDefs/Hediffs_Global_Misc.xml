@@ -2,7 +2,7 @@
 <Defs>
 
   <HediffDef>
-    <defName>TS_BriarHediff</defName>
+    <defName>EC_BriarHediff</defName>
     <description>Effects and consequences caused by being in direct contact with the thorny tendrils of briars. The higher the affliction, the more the briar is tangled around - and enlodged into - the entire body.
 \nBriars themselves aren't initially deadly, but the dozens - and in extreme cases, hundreds - of thorns can result in literal death by a thousand cuts. Briars will cover and grow into even the slightest indent or opening, putting sensitive areas - such as the eyes or the inside of the mouth - at extreme risk.</description>
     <descriptionShort>Effects of being in direct contact to briar tendrils and thorns.</descriptionShort>
@@ -135,7 +135,7 @@
   </HediffDef>
 
   <HediffDef>
-    <defName>TS_PsychicDamageBuildup</defName>
+    <defName>EC_PsychicDamageBuildup</defName>
     <description>Affected by psionic interference. Pawn is constantly bombarded by mental anguish and screams from nowhere, heavily affecting their mental capabilities.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <label>psychic interference</label>
@@ -256,8 +256,8 @@
 
 
   <HediffDef>
-    <defName>TS_NightshadeDamageBuildup</defName>    <!--based off RWoM nightshade, so it can easily be patched... and RWoM also matches IRL pretty well.-->
-    <description>A potent toxin in the bloodstream. This toxin comes from nightshade weaponry, which is found in specific Terrasecurity weapons (and also from Earth).</description>
+    <defName>EC_NightshadeDamageBuildup</defName>    <!--based off RWoM nightshade, so it can easily be patched... and RWoM also matches IRL pretty well.-->
+    <description>A potent toxin in the bloodstream. This toxin comes from nightshade weaponry, which is found in specific Ecotech weapons (and also from Earth).</description>
     <hediffClass>HediffWithComps</hediffClass>
     <label>nightshade buildup</label>
     <defaultLabelColor>(0.56,0.18,0.81)</defaultLabelColor>

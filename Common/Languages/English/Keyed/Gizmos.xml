@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <Terrasecurity_Gizmo_LifespanTicksRemaining>Weapon lifetime:</Terrasecurity_Gizmo_LifespanTicksRemaining>
-  <Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>The {ITEMNAME} is a living organism. And like all living organisms, it's time is limited. Once this runs out, it will wither away.</Terrasecurity_Gizmo_LifespanTicksRemaining_Desc>
+  <Ecotech_Gizmo_LifespanTicksRemaining>Weapon lifetime:</Ecotech_Gizmo_LifespanTicksRemaining>
+  <Ecotech_Gizmo_LifespanTicksRemaining_Desc>The {ITEMNAME} is a living organism. And like all living organisms, it's time is limited. Once this runs out, it will wither away.</Ecotech_Gizmo_LifespanTicksRemaining_Desc>
 
-  <Terrasecurity_Gizmo_MultiLifespanTicksRemaining>Terraweapon Lifespans</Terrasecurity_Gizmo_MultiLifespanTicksRemaining>
-  <Terrasecurity_Gizmo_MultiLifespanTicksRemaining_Desc>Open a view that shows the lifespan of Terraweapons on the selected pawns.</Terrasecurity_Gizmo_MultiLifespanTicksRemaining_Desc>
-  <Terrasecurity_Gizmo_SlottedThingConverter_PickFuel>Click to change fuel thing</Terrasecurity_Gizmo_SlottedThingConverter_PickFuel>
-  <Terrasecurity_Gizmo_SlottedThingConverter_CurrentFuel>Current fuel: {CURRENT} / Max: {MAX}</Terrasecurity_Gizmo_SlottedThingConverter_CurrentFuel>
-  <Terrasecurity_Gizmo_SlottedThingConverter_ConsumedFuel>Consumed on next transformation: {CONSUMED}</Terrasecurity_Gizmo_SlottedThingConverter_ConsumedFuel>
-  <Terrasecurity_Gizmo_SlottedThingConverter_Empty>Empty</Terrasecurity_Gizmo_SlottedThingConverter_Empty>
-  <Terrasecurity_Gizmo_SlottedThingConverter_Locked>Locked</Terrasecurity_Gizmo_SlottedThingConverter_Locked>
-  <Terrasecurity_Gizmo_SlottedThingConverter_SlotDescription>Slot {SLOTINDEX}\nClick to see options</Terrasecurity_Gizmo_SlottedThingConverter_SlotDescription>
-  <Terrasecurity_Gizmo_SlottedThingConverter_SelectTargetThing>Select thing to insert</Terrasecurity_Gizmo_SlottedThingConverter_SelectTargetThing>
-  <Terrasecurity_Gizmo_SlottedThingConverter_Eject>Eject</Terrasecurity_Gizmo_SlottedThingConverter_Eject>
-  <Terrasecurity_Gizmo_SlottedThingConverter_SelectPawnForJob>Select pawn to do job</Terrasecurity_Gizmo_SlottedThingConverter_SelectPawnForJob>
-  <Terrasecurity_Gizmo_SlottedThingConverter_SelectThingForSlot>Select thing to insert</Terrasecurity_Gizmo_SlottedThingConverter_SelectThingForSlot>
-  <Terrasecurity_Gizmo_SlottedThingConverter_DisabledDueToTransformationCycle>Currently transforming</Terrasecurity_Gizmo_SlottedThingConverter_DisabledDueToTransformationCycle>
-  <Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Relative>Transformation cycle starts in {FORMATTEDDURATION}</Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Relative>
-  <Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Relative>Transformation cycle ends in {FORMATTEDDURATION}</Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Relative>
-  <Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Absolute>Transformation cycle starts on {FORMATTEDDURATION}</Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Absolute>
-  <Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Absolute>Transformation cycle ends on {FORMATTEDDURATION}</Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Absolute>
-  <Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot>Swap slot {FROM} with slot {TO}</Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot>
-  <Terrasecurity_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation>Cannot change fuel (currently reserved)</Terrasecurity_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation>
+  <Ecotech_Gizmo_MultiLifespanTicksRemaining>Terraweapon Lifespans</Ecotech_Gizmo_MultiLifespanTicksRemaining>
+  <Ecotech_Gizmo_MultiLifespanTicksRemaining_Desc>Open a view that shows the lifespan of Terraweapons on the selected pawns.</Ecotech_Gizmo_MultiLifespanTicksRemaining_Desc>
+  <Ecotech_Gizmo_SlottedThingConverter_PickFuel>Click to change fuel thing</Ecotech_Gizmo_SlottedThingConverter_PickFuel>
+  <Ecotech_Gizmo_SlottedThingConverter_CurrentFuel>Current fuel: {CURRENT} / Max: {MAX}</Ecotech_Gizmo_SlottedThingConverter_CurrentFuel>
+  <Ecotech_Gizmo_SlottedThingConverter_ConsumedFuel>Consumed on next transformation: {CONSUMED}</Ecotech_Gizmo_SlottedThingConverter_ConsumedFuel>
+  <Ecotech_Gizmo_SlottedThingConverter_Empty>Empty</Ecotech_Gizmo_SlottedThingConverter_Empty>
+  <Ecotech_Gizmo_SlottedThingConverter_Locked>Locked</Ecotech_Gizmo_SlottedThingConverter_Locked>
+  <Ecotech_Gizmo_SlottedThingConverter_SlotDescription>Slot {SLOTINDEX}\nClick to see options</Ecotech_Gizmo_SlottedThingConverter_SlotDescription>
+  <Ecotech_Gizmo_SlottedThingConverter_SelectTargetThing>Select thing to insert</Ecotech_Gizmo_SlottedThingConverter_SelectTargetThing>
+  <Ecotech_Gizmo_SlottedThingConverter_Eject>Eject</Ecotech_Gizmo_SlottedThingConverter_Eject>
+  <Ecotech_Gizmo_SlottedThingConverter_SelectPawnForJob>Select pawn to do job</Ecotech_Gizmo_SlottedThingConverter_SelectPawnForJob>
+  <Ecotech_Gizmo_SlottedThingConverter_SelectThingForSlot>Select thing to insert</Ecotech_Gizmo_SlottedThingConverter_SelectThingForSlot>
+  <Ecotech_Gizmo_SlottedThingConverter_DisabledDueToTransformationCycle>Currently transforming</Ecotech_Gizmo_SlottedThingConverter_DisabledDueToTransformationCycle>
+  <Ecotech_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Relative>Transformation cycle starts in {FORMATTEDDURATION}</Ecotech_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Relative>
+  <Ecotech_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Relative>Transformation cycle ends in {FORMATTEDDURATION}</Ecotech_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Relative>
+  <Ecotech_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Absolute>Transformation cycle starts on {FORMATTEDDURATION}</Ecotech_Gizmo_SlottedThingConverter_TransformationCycleStartsIn_Absolute>
+  <Ecotech_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Absolute>Transformation cycle ends on {FORMATTEDDURATION}</Ecotech_Gizmo_SlottedThingConverter_TransformationCycleEndsIn_Absolute>
+  <Ecotech_Gizmo_SlottedThingConverter_SwapSlot>Swap slot {FROM} with slot {TO}</Ecotech_Gizmo_SlottedThingConverter_SwapSlot>
+  <Ecotech_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation>Cannot change fuel (currently reserved)</Ecotech_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation>
   
-  <Terrasecurity_Gizmo_InstallableInThingTransformer_Label>Install in Terravat</Terrasecurity_Gizmo_InstallableInThingTransformer_Label>
-  <Terrasecurity_Gizmo_InstallableInThingTransformer_Description>Select a valid transformer building with a fuel that accepts this thing.</Terrasecurity_Gizmo_InstallableInThingTransformer_Description>
+  <Ecotech_Gizmo_InstallableInThingTransformer_Label>Install in Terravat</Ecotech_Gizmo_InstallableInThingTransformer_Label>
+  <Ecotech_Gizmo_InstallableInThingTransformer_Description>Select a valid transformer building with a fuel that accepts this thing.</Ecotech_Gizmo_InstallableInThingTransformer_Description>
 </LanguageData>

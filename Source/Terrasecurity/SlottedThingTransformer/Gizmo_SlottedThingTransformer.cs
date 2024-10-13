@@ -7,7 +7,7 @@ using Verse;
 using Verse.AI;
 using static UnityEngine.GraphicsBuffer;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     [StaticConstructorOnStartup]
     public class Gizmo_SlottedThingTransformer : Gizmo
@@ -69,10 +69,10 @@ namespace Terrasecurity
                 currentIcon = FuelStorageComp.CurrentlyAcceptedThingDef.uiIcon;
                 fillableBarPercent = (float)transformerComp.CurrentFuelCount / FuelStorageComp.Props.stackLimit;
 
-                TaggedString currentFuelText = "Terrasecurity_Gizmo_SlottedThingConverter_CurrentFuel".Translate(transformerComp.CurrentFuelCount.Named("CURRENT"), FuelStorageComp.Props.stackLimit.Named("MAX"));
+                TaggedString currentFuelText = "Ecotech_Gizmo_SlottedThingConverter_CurrentFuel".Translate(transformerComp.CurrentFuelCount.Named("CURRENT"), FuelStorageComp.Props.stackLimit.Named("MAX"));
                 if(transformerComp.totalFuelCost > 0)
                 {
-                    currentFuelText += $"\n{"Terrasecurity_Gizmo_SlottedThingConverter_ConsumedFuel".Translate(transformerComp.totalFuelCost.Named("CONSUMED"))}";
+                    currentFuelText += $"\n{"Ecotech_Gizmo_SlottedThingConverter_ConsumedFuel".Translate(transformerComp.totalFuelCost.Named("CONSUMED"))}";
                 }
                 TooltipHandler.TipRegion(fillableBarRect, currentFuelText);
             }
@@ -93,7 +93,7 @@ namespace Terrasecurity
             UIUtility.VerticalFillableBar(fillableBarRect, fillableBarPercent, true, barTexture, false);
 
             Widgets.DrawTextureFitted(currentIconRect, currentIcon, 1);
-            TooltipHandler.TipRegion(currentIconRect, "Terrasecurity_Gizmo_SlottedThingConverter_PickFuel".Translate());
+            TooltipHandler.TipRegion(currentIconRect, "Ecotech_Gizmo_SlottedThingConverter_PickFuel".Translate());
             if (!transformerComp.AllowsInteractions)
             {
                 DrawDisabledOverlay(currentIconRect);
@@ -122,12 +122,12 @@ namespace Terrasecurity
             bool isTransformerReserved = FuelStorageComp.parent.Map.reservationManager.IsReservedByAnyoneOf(FuelStorageComp.parent, Faction.OfPlayer);
             if (isTransformerReserved)
             {
-                yield return new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation".Translate(), null);
+                yield return new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation".Translate(), null);
                 yield break;
             }
             if (!FuelStorageComp.Empty)
             {
-                yield return new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_Eject".Translate(), RemoveFuel);
+                yield return new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_Eject".Translate(), RemoveFuel);
             }
             foreach (FuelEntry fuelEntry in transformerComp.TransformerProps.validFuels)
             {
@@ -176,7 +176,7 @@ namespace Terrasecurity
             slotRect = slotRect.ContractedBy(slotPadding);
             Widgets.DrawBoxSolidWithOutline(slotRect, slotBackgroundColor, slotBorderColor);
             slotRect = slotRect.ContractedBy(slotPadding);
-            TooltipHandler.TipRegion(slotRect, "Terrasecurity_Gizmo_SlottedThingConverter_SlotDescription".Translate((index + 1).Named("SLOTINDEX")));
+            TooltipHandler.TipRegion(slotRect, "Ecotech_Gizmo_SlottedThingConverter_SlotDescription".Translate((index + 1).Named("SLOTINDEX")));
             Thing slottedThing = transformerComp.slottedThings[index];
 
             if (slottedThing == null)
@@ -188,11 +188,11 @@ namespace Terrasecurity
                 string emptySlotLabel;
                 if (transformerComp.AllowsInteractions)
                 {
-                    emptySlotLabel = "Terrasecurity_Gizmo_SlottedThingConverter_Empty".Translate();
+                    emptySlotLabel = "Ecotech_Gizmo_SlottedThingConverter_Empty".Translate();
                 }
                 else
                 {
-                    emptySlotLabel = "Terrasecurity_Gizmo_SlottedThingConverter_Locked".Translate();
+                    emptySlotLabel = "Ecotech_Gizmo_SlottedThingConverter_Locked".Translate();
                 }
                 UIUtility.Label(slotRect, emptySlotLabel, anchor: TextAnchor.MiddleCenter);
             }
@@ -220,7 +220,7 @@ namespace Terrasecurity
         {
             List<FloatMenuOption> options = new List<FloatMenuOption>()
             {
-                new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_SelectTargetThing".Translate(), BeginInsertTargeting)
+                new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_SelectTargetThing".Translate(), BeginInsertTargeting)
             };
             foreach (FloatMenuOption option in options)
             {
@@ -232,7 +232,7 @@ namespace Terrasecurity
         {
             List<FloatMenuOption> options = new List<FloatMenuOption>()
             {
-                new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_Eject".Translate(), () => transformerComp.TryRemove(thing))
+                new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_Eject".Translate(), () => transformerComp.TryRemove(thing))
             };
             for (int i = 0; i < transformerComp.TransformerProps.transformerSlots; i++)
             {
@@ -242,7 +242,7 @@ namespace Terrasecurity
                 }
                 int targetSlot = i;
                 Action swapAction = () => transformerComp.SwapSlots(slotIndex, targetSlot);
-                options.Add(new FloatMenuOption("Terrasecurity_Gizmo_SlottedThingConverter_SwapSlot".Translate((slotIndex+1).Named("FROM"), (targetSlot+1).Named("TO")), swapAction));
+                options.Add(new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_SwapSlot".Translate((slotIndex+1).Named("FROM"), (targetSlot+1).Named("TO")), swapAction));
             }
 
             foreach (FloatMenuOption option in options)
@@ -259,7 +259,7 @@ namespace Terrasecurity
                 return;
             }
             option.Disabled = true;
-            option.Label += $" ({"Terrasecurity_Gizmo_SlottedThingConverter_DisabledDueToTransformationCycle".Translate()})";
+            option.Label += $" ({"Ecotech_Gizmo_SlottedThingConverter_DisabledDueToTransformationCycle".Translate()})";
         }
 
         private void BeginInsertTargeting()
@@ -282,7 +282,7 @@ namespace Terrasecurity
                 //BeginPawnTargeting(job);
             };
 
-            Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Terrasecurity_Gizmo_SlottedThingConverter_SelectThingForSlot".Translate());
+            Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Ecotech_Gizmo_SlottedThingConverter_SelectThingForSlot".Translate());
             Find.Targeter.BeginTargeting(targetParameters, targetAction, null, null, onGuiAction: guiAction);
         }
 
@@ -320,7 +320,7 @@ namespace Terrasecurity
         //        target.Pawn.jobs.TryTakeOrderedJob(jobToGive);
         //        Find.Targeter.StopTargeting();
         //    };
-        //    Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Terrasecurity_Gizmo_SlottedThingConverter_SelectPawnForJob".Translate());
+        //    Action<LocalTargetInfo> guiAction = (_) => Widgets.MouseAttachedLabel("Ecotech_Gizmo_SlottedThingConverter_SelectPawnForJob".Translate());
 
         //    Find.Targeter.BeginTargeting(parameters, targetAction, null, null, onGuiAction: guiAction);
         //}

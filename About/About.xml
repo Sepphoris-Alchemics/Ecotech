@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Terrasecurity</name>
-	<author>Sepphoris</author>
+	<name>Ecotech</name>
+	<author>Sepphoris,NightmareCorporation</author>
 	<supportedVersions>
-		<li>1.4</li>
 		<li>1.5</li>
 	</supportedVersions>
 	<modDependencies>
 	</modDependencies>
 	<loadAfter>
 	</loadAfter>
-	<packageId>SA.Terrasecurity</packageId>
-	<description>Mod Version: 1.2.4 (last updated @ 2.19.2024, ~4:00PM PST)
+	<packageId>SA.Ecotech</packageId>
+	<description>Mod Version: 1.0 (last updated @ 2.19.2024, ~4:00PM PST)
 
 ====================
 

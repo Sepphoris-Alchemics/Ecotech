@@ -2,10 +2,10 @@
 <Defs>
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>TS_GlowsapBay</defName>
+		<defName>EC_GlowsapBay</defName>
 		<label>Glowsap Bay</label>
 		<description>A large container filled with glowsap, intended for indoor or emergency growth. Doesn't require electricity, but will frequently need to be refilled with healthy glowsap as it's nutrients are depleted.
-Since this basin was specifically designed to house glowsap, this basin cannot support anything else besides Terratech plants. However, it will give all supported plants a slight growth boost.</description>
+Since this basin was specifically designed to house glowsap, this basin cannot support anything else besides Ecotech plants. However, it will give all supported plants a slight growth boost.</description>
 		<thingClass>Building_PlantGrower</thingClass>
 		<!--<minifiedDef>MinifiedThing</minifiedDef>-->	
 		<graphicData>
@@ -27,7 +27,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<techLevel>Neolithic</techLevel>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>TS_GlowsapBays</li>
+      <li>EC_GlowsapBays</li>
     </researchPrerequisites>
 		<!--<constructEffect>ConstructWood</constructEffect>-->
 		<fillPercent>0.30</fillPercent>
@@ -45,13 +45,13 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		</statBases>
 		<size>(1,4)</size>
 		<costList>
-			<TS_Glowsap>30</TS_Glowsap>
+			<EC_Glowsap>30</EC_Glowsap>
 			<WoodLog>40</WoodLog>
 		</costList>
 		<fertility>1.2</fertility>
 		<building>
-			<defaultPlantToGrow>TS_GlowsapBloom</defaultPlantToGrow>
-			<sowTag>TS_GlowsapCompatible</sowTag>
+			<defaultPlantToGrow>EC_GlowsapBloom</defaultPlantToGrow>
+			<sowTag>EC_GlowsapCompatible</sowTag>
 			<buildingTags>
 				<li>Production</li>
 			</buildingTags>
@@ -76,7 +76,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
         <fuelCapacity>30.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>TS_Glowsap</li>
+            <li>EC_Glowsap</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>
@@ -89,7 +89,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
       </li>
     </comps>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<designationCategory>TerratechDesignation</designationCategory>
+		<designationCategory>EcotechDesignation</designationCategory>
 		<uiOrder>2620</uiOrder>
 	</ThingDef>
 </Defs>

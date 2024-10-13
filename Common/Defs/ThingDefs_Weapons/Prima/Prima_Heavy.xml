@@ -4,11 +4,11 @@
 <!--Prima Stakecaster downgraded to an entry weapon. Still quite powerful, but very limited on ammo and speed.-->
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
-		<defName>TS_Rifle</defName> <!--Counterpart: Bolt Action-->
+		<defName>EC_Rifle</defName> <!--Counterpart: Bolt Action-->
 		<label>prima OLR</label>
 		<description>The OLR (Organic Long Rifle) is a biotic weapon patterned off of a long-range rifle, and grown straight from a specialized pod. Due to its plant nature, no optics are present, giving it a lower range than most other longrifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/TS_Rifle</texPath>
+			<texPath>Things/WeaponRanged/EC_Rifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -42,7 +42,7 @@
         <defaultProjectile>Bullet_ThornRifle</defaultProjectile>
         <warmupTime>2.125</warmupTime>
         <range>29.9</range>
-        <soundCast>TS_Sound_Blowgun1</soundCast>
+        <soundCast>EC_Sound_Blowgun1</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
@@ -70,8 +70,8 @@
 			<li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
@@ -81,11 +81,11 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Incendiary Launcher-->
-		<defName>TS_Seedburster</defName>
+		<defName>EC_Seedburster</defName>
 		<label>prima seedburster</label>
 		<description>A biotic weapon, patterned off a basic grenade launcher. While nature can't easily replicate actual explosives, this weapon improvises by lobbing pressure-sensitive pods that will spew razor-sharp splinters in every direction.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/TS_SeedBurster</texPath>
+			<texPath>Things/WeaponRanged/EC_SeedBurster</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -113,7 +113,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>TS_SeedbursterShot</defaultProjectile>
+        <defaultProjectile>EC_SeedbursterShot</defaultProjectile>
         <warmupTime>4.375</warmupTime>
         <forcedMissRadius>1.9</forcedMissRadius>
 				<burstShotCount>1</burstShotCount>
@@ -150,8 +150,8 @@
 			<li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
@@ -161,11 +161,11 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: N/A-->
-		<defName>TS_Hailcannon</defName>
+		<defName>EC_Hailcannon</defName>
 		<label>prima hailcannon</label>
 		<description>A biotic weapon, patterned off an LMG but designed for it's own unique role. Rather than being an anti-personel weapon, the hailcannon has been designed to wear down structures, making it effective against destroying mechanoid and other unwanted structures.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/TS_PrimaHailcannonBasic</texPath>
+			<texPath>Things/WeaponPrima/Basic/EC_PrimaHailcannonBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -197,12 +197,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>TS_HailcannonShot</defaultProjectile>
+        <defaultProjectile>EC_HailcannonShot</defaultProjectile>
         <warmupTime>4.5</warmupTime>
 				<burstShotCount>10</burstShotCount>
 				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <range>15.9</range>
-        <soundCast>TS_Sound_Blowgun1</soundCast>
+        <soundCast>EC_Sound_Blowgun1</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
         <targetParams>
@@ -234,8 +234,8 @@
 			<li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
@@ -245,11 +245,11 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
-		<defName>TS_AcidLauncher</defName>
+		<defName>EC_AcidLauncher</defName>
 		<label>prima acid launcher</label>
 		<description>A biotic weapon, specially engineered to launch an acidic globule that covers a small area upon impact. This weapon was initially designed to help clear rocky terrain and old ruins; however, it is just as effective - if not moreso - at melting away flesh and armor.\n\nThankfully, this weapon is very slow to grow, and thus not quickly acquired.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/TS_AcidLauncher</texPath>
+			<texPath>Things/WeaponRanged/EC_AcidLauncher</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -277,7 +277,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>TS_AcidShot</defaultProjectile>
+        <defaultProjectile>EC_AcidShot</defaultProjectile>
         <warmupTime>4.375</warmupTime>
         <forcedMissRadius>1.9</forcedMissRadius>
         <range>15.9</range>
@@ -314,8 +314,8 @@
 			<li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
@@ -325,13 +325,13 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: LMG-->
-		<defName>TS_LMG</defName>
+		<defName>EC_LMG</defName>
 		<label>prima thorncaster</label>
 		<description>A biotic weapon, patterned off of a heavy assault rifle, and grown straight from a specialized pod. It is somewhat inaccurate, but it's ability to generate several projectiles at once makes it excellent at supression.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
 \nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as five, to as many as nine.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/TS_HeavyAR</texPath>
+			<texPath>Things/WeaponRanged/EC_HeavyAR</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -410,8 +410,8 @@
 			<li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
@@ -436,7 +436,7 @@
 <!--Briar Grenade-->
 
   <ThingDef ParentName="BaseMakeableGrenade">
-    <defName>TS_BriarGrenade</defName>
+    <defName>EC_BriarGrenade</defName>
     <label>briar grenades</label>
     <description>Small organic pods that oddly look like fruits. Covered with spines that are linked to one another, upon impact these explode into several large splinters, cutting - and possibly wrapping around - anything nearby.</description>
     <tickerType>Normal</tickerType>
@@ -478,21 +478,21 @@
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
-        <defaultProjectile>TS_BriarGrenadeProj</defaultProjectile>
+        <defaultProjectile>EC_BriarGrenadeProj</defaultProjectile>
         <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
       </li>
     </verbs>
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>2.66</explosiveRadius>
-        <explosiveDamageType>TS_SplinterDamage</explosiveDamageType>
-        <requiredDamageTypeToExplode>TS_BriarDamage</requiredDamageTypeToExplode>
+        <explosiveDamageType>EC_SplinterDamage</explosiveDamageType>
+        <requiredDamageTypeToExplode>EC_BriarDamage</requiredDamageTypeToExplode>
       </li>
     </comps>
   </ThingDef>
 
   <ThingDef ParentName="BaseFragGrenadeProjectile">
-    <defName>TS_BriarGrenadeProj</defName>
+    <defName>EC_BriarGrenadeProj</defName>
     <label>briar grenade</label>
   </ThingDef>
 

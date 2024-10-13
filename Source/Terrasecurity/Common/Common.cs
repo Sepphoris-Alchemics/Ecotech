@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     [StaticConstructorOnStartup]
     public static class Common
     {
-        public static JobDef fillThingConverterJobDef = DefDatabase<JobDef>.GetNamed("TS_FillThingConverter");
-        public static JobDef emptyThingConverterJobDef = DefDatabase<JobDef>.GetNamed("TS_EmptyThingConverter");
-        public static JobDef insertIntoSlottedTransformerJobDef = DefDatabase<JobDef>.GetNamed("TS_InsertIntoSlottedThingTransformer");
+        public static JobDef fillThingConverterJobDef = DefDatabase<JobDef>.GetNamed("EC_FillThingConverter");
+        public static JobDef emptyThingConverterJobDef = DefDatabase<JobDef>.GetNamed("EC_EmptyThingConverter");
+        public static JobDef insertIntoSlottedTransformerJobDef = DefDatabase<JobDef>.GetNamed("EC_InsertIntoSlottedThingTransformer");
         public static Texture2D installableInSlottedThingTransformerGizmoTexture = ContentFinder<Texture2D>.Get("UI/Gizmo/InstallableInSlottedThingTransformerGizmo");
-        public static DesignationDef installInSlottedThingTransformerDesignation = DefDatabase<DesignationDef>.GetNamed("TS_InstallInSlottedThingTransformer");
+        public static DesignationDef installInSlottedThingTransformerDesignation = DefDatabase<DesignationDef>.GetNamed("EC_InstallInSlottedThingTransformer");
 
         static List<TransformerRecipe> _allTransformerRecipes;
         public static List<TransformerRecipe> AllTransformerRecipes

@@ -2,7 +2,7 @@
 <Defs>
 
   <RecipeDef>
-    <defName>TS_GlowsapTreeSeedRecipe</defName>
+    <defName>EC_GlowsapTreeSeedRecipe</defName>
     <label>shape channeling seed (glowsap tree) </label>
     <description>Shape a seed that will quickly grow into a glowsap tree. Glowsap trees periodically produce large amounts of glowsap.</description>
     <jobString>shaping a sap transposer seed.</jobString>
@@ -11,20 +11,20 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
-    <researchPrerequisite>TS_SapBasics</researchPrerequisite>
+    <researchPrerequisite>EC_SapBasics</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>6400</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <TS_Seed_SapFilter>1</TS_Seed_SapFilter>
+      <EC_Seed_SapFilter>1</EC_Seed_SapFilter>
     </products>
     <displayPriority>4</displayPriority>
   </RecipeDef>
 
   <RecipeDef>
-    <defName>TS_BuildingTreeSeedRecipe</defName>
+    <defName>EC_BuildingTreeSeedRecipe</defName>
     <label>shape conduit seed (custodian)</label>
     <description>Shape a Custodian tree seed. Custodian trees provide crafting materials, and passively create growable structures.</description>
     <jobString>shaping a conduit tree.</jobString>
@@ -33,20 +33,20 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>TS_ConduitSeeds</researchPrerequisite>
+    <researchPrerequisite>EC_ConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>9600</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <TS_Seed_BuildingTree>1</TS_Seed_BuildingTree>
+      <EC_Seed_BuildingTree>1</EC_Seed_BuildingTree>
     </products>
     <displayPriority>0</displayPriority>
   </RecipeDef>
 
   <RecipeDef>
-    <defName>TS_SapTreeSeedRecipe</defName>
+    <defName>EC_SapTreeSeedRecipe</defName>
     <label>shape conduit seed (spectra) </label>
     <description>Shape a Spectra tree seed. Spectra trees periodically produce potent saps.</description>
     <jobString>shaping a conduit tree.</jobString>
@@ -55,20 +55,20 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>TS_ConduitSeeds</researchPrerequisite>
+    <researchPrerequisite>EC_ConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>9600</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <TS_Seed_SapTree>1</TS_Seed_SapTree>
+      <EC_Seed_SapTree>1</EC_Seed_SapTree>
     </products>
     <displayPriority>1</displayPriority>
   </RecipeDef>
 
   <RecipeDef>
-    <defName>TS_SentinelTreeSeedRecipe</defName>
+    <defName>EC_SentinelTreeSeedRecipe</defName>
     <label>shape conduit seed (sentinel) </label>
     <description>Shape a Sentinel tree seed. Sentinel trees produce various unique defenses.</description>
     <jobString>shaping a conduit tree.</jobString>
@@ -77,14 +77,14 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>TS_ConduitSeeds</researchPrerequisite>
+    <researchPrerequisite>EC_ConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>9600</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <TS_Seed_SentinelTree>1</TS_Seed_SentinelTree>
+      <EC_Seed_SentinelTree>1</EC_Seed_SentinelTree>
     </products>
     <displayPriority>2</displayPriority>
   </RecipeDef>

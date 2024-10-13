@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>TS_NightshadeRifle</defName>		<!--Counterpart: Prima OLR-->
+		<defName>EC_NightshadeRifle</defName>		<!--Counterpart: Prima OLR-->
 		<label>nightshade rifle</label>
 		<description>The Nightshade Rifle is a biotic weapon produced exclusively by a Sentinel Tree. It is patterned off of a long-range rifle, and is capable of firing poisonous thorns. Due to its plant nature, no optics are present, giving it a lower range than most other rifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire. Additionally, it's ancient design prevents it from accepting other saps.</description>
 		<graphicData>
@@ -42,7 +42,7 @@
 				<burstShotCount>2</burstShotCount>
 				<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
 				<range>29.9</range>
-				<soundCast>TS_Sound_Blowgun1</soundCast>
+				<soundCast>EC_Sound_Blowgun1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -70,19 +70,19 @@
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
-			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>960000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
       <!--<li Class="CompProperties_EquippableAbilityReloadable">
-        <abilityDef>TS_NightshadeExplosion</abilityDef>
+        <abilityDef>EC_NightshadeExplosion</abilityDef>
         <maxCharges>1</maxCharges>
         <soundReload>Standard_Reload</soundReload>
         <chargeNoun>pneumatic sac</chargeNoun>
-        <ammoDef>TS_Sunsap</ammoDef>
+        <ammoDef>EC_Sunsap</ammoDef>
         <ammoCountPerCharge>1</ammoCountPerCharge>
         <baseReloadTicks>90</baseReloadTicks>
       </li>-->
@@ -95,7 +95,7 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 
 <!--Perrenial Rifle-->
 	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>TS_PerrenialRifle</defName>		<!--Counterpart: Heavy SMG-->
+		<defName>EC_PerrenialRifle</defName>		<!--Counterpart: Heavy SMG-->
 		<label>Perrenial Needler</label>
 		<description>The Perrenial Needler is a biotic weapon produced exclusively by a Sentinel Tree. Designed for colonies that have trouble growing plants, The Perrenial Needler trades potent projectiles for a significanty longer lifespan, alongside the ability to be replanted, and revitialized. As the name implies, the lesser projectiles are small and weak, but have the single advantage of firing quite fast.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but the weapon itself can be planted and revitialized over time. Additionally, it's ancient design prevents it from accepting other saps.\n\nLegend has it that other Perrenial weapons exist, but whether or not that's true remains to be seen....</description>
 		<graphicData>
@@ -135,7 +135,7 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 				<burstShotCount>7</burstShotCount>
 				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
 				<range>19.9</range>
-				<soundCast>TS_Sound_Blowgun1</soundCast>
+				<soundCast>EC_Sound_Blowgun1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -163,8 +163,8 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
-			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1800000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
@@ -180,7 +180,7 @@ Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
 <!--Gau Shotgun-->
 
 	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>TS_GaubornShotgun</defName>		<!--Counterpart: Prima Briarburster-->
+		<defName>EC_GaubornShotgun</defName>		<!--Counterpart: Prima Briarburster-->
 		<label>gauborn shredder</label>
 		<description>An ancient design of an organic weapon, produced exclusively by a Sentinel Tree. Using the Gauranlen tree as a starting point for it's traits, this weapon posesses hardiness and high damage, but it's quite low range, and it's resistance to change - contrary to the tree itself - may explain why it's genome was never expanded into a larger family.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire. Additionally, it's ancient design prevents it from accepting other saps.</description>
 		<graphicData>
@@ -250,8 +250,8 @@ Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
-			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1200000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->

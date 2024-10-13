@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingCompProperties_CyclicThingSpawner : CompProperties
     {

@@ -22,7 +22,7 @@
 </Defs>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Greatbow-->
-		<defName>TS_StakeCaster</defName> <!--has the pod growth time and research level of light weapons, but the duration of heavy-->
+		<defName>EC_StakeCaster</defName> <!--has the pod growth time and research level of light weapons, but the duration of heavy-->
 		<label>stakecaster</label>
 		<description>A biotic weapon, patterned off of a heavy bolt caster, and grown straight from a specialized pod. Extremely powerful and capable of inflicting deadly wounds, but is slow to aim, with equally slow projectile speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
@@ -62,7 +62,7 @@
         <defaultProjectile>Bullet_StakeLight</defaultProjectile>
         <warmupTime>3</warmupTime>
         <range>31.9</range>
-        <soundCast>TS_Sound_LightStake</soundCast>
+        <soundCast>EC_Sound_LightStake</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
@@ -87,26 +87,26 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>TS_StakecasterUpgradePod</plantDefToSpawn>
+        	<plantDefToSpawn>EC_StakecasterUpgradePod</plantDefToSpawn>
       	</li>
-      <li Class="Terrasecurity.ThingCompProperties_InstallableInSlottedThingTransformer"/>
+      <li Class="Ecotech.ThingCompProperties_InstallableInSlottedThingTransformer"/>
 		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Revolver-->
-		<defName>TS_Pistol</defName>
+		<defName>EC_Pistol</defName>
 		<label>prima pistol</label>
 		<description>A biotic weapon, patterned off of an ornate pistol design, and grown straight from a specialized pod. While not very powerful, it is quite quick to fire, and relatively fast to grow.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/TS_Pistol</texPath>
+			<texPath>Things/WeaponRanged/EC_Pistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -167,8 +167,8 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 			<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>840000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
@@ -178,13 +178,13 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Machine Pistol-->
-		<defName>TS_SMG</defName>
+		<defName>EC_SMG</defName>
 		<label>prima pincaster</label>
 		<description>A biotic weapon, patterned off of a compact submachine gun, and grown straight from a specialized pod. They are quick and suppressive, but their sporadic bursts can cause their damage and accuracy to be inconsistent.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
 \n\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as three, to as many as six. When matured, this range will be much more narrow.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/TS_PrimaSMGBasic</texPath>
+			<texPath>Things/WeaponPrima/Basic/EC_PrimaSMGBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.75</drawSize>
 		</graphicData>
@@ -261,15 +261,15 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 			<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>840000</lifespanTicks> <!--10 days-->
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>TS_PrimaSMGUpgradePod</plantDefToSpawn>
+        	<plantDefToSpawn>EC_PrimaSMGUpgradePod</plantDefToSpawn>
       	</li>
 		</comps>
 		<modExtensions>
@@ -290,7 +290,7 @@
 <!--Medium Weapons-->
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Pump Shotgun-->
-		<defName>TS_Shotgun</defName>
+		<defName>EC_Shotgun</defName>
 		<label>prima scattershot</label>
 		<description>A biotic weapon, patterned off of a semi-automatic shotgun, and grown straight from a specialized pod. They are quite powerful, but have very limited range and speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
@@ -355,27 +355,27 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>960000</lifespanTicks> <!--16 days-->
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor> <!--old 47, 56, 35-->
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>TS_PrimaShotgunUpgradePod</plantDefToSpawn>
+        	<plantDefToSpawn>EC_PrimaShotgunUpgradePod</plantDefToSpawn>
       	</li>
 		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
-		<defName>TS_Carbine</defName>
+		<defName>EC_Carbine</defName>
 		<label>prima carbine</label>
 		<description>A biotic weapon, patterned off of an old rifle, and grown straight from a specialized pod. Their growth time, damage, and narrow projectile range make this a well-rounded Terraweapon.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
 \nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as two, to as many as five.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/TS_Carbine</texPath>
+			<texPath>Things/WeaponRanged/EC_Carbine</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -447,8 +447,8 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>960000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->

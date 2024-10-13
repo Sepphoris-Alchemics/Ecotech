@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingComp_CyclicThingSpawner : ThingComp
     {
@@ -54,7 +54,7 @@ namespace Terrasecurity
             }
             if (Props.showNotificationWhenSpawningThings)
             {
-                string messageText = "Terrasecurity_Message_SpawnedThingFromThingSpawner".Translate(parent.Label.Named("SOURCE"));
+                string messageText = "Ecotech_Message_SpawnedThingFromThingSpawner".Translate(parent.Label.Named("SOURCE"));
                 Messages.Message(messageText, parent, MessageTypeDefOf.NeutralEvent);
             }
         }
@@ -67,7 +67,7 @@ namespace Terrasecurity
             if(cachedIntervalText == null)
             {
                 string intervalText = ((int)Props.cycleDurationRangeTicks.Average).ToStringTicksToPeriodVague();
-                cachedIntervalText = "Terrasecurity_InspectString_ThingSpawner_AverageSpawnInterval".Translate(intervalText.Named("INTERVAL"));
+                cachedIntervalText = "Ecotech_InspectString_ThingSpawner_AverageSpawnInterval".Translate(intervalText.Named("INTERVAL"));
             }
             if(text.Length > 0)
             {

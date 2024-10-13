@@ -2,7 +2,7 @@
 using Verse;
 using Verse.AI;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     internal static class InteractionUtility
     {
@@ -10,23 +10,23 @@ namespace Terrasecurity
         {
             if (!(thing is Building building))
             {
-                return "Terrasecurity_FailureReason_NotABuilding".Translate();
+                return "Ecotech_FailureReason_NotABuilding".Translate();
             }
             if (pawn.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) != null)
             {
-                return "Terrasecurity_FailureReason_DesignatedForDeconstruct".Translate();
+                return "Ecotech_FailureReason_DesignatedForDeconstruct".Translate();
             }
             if (building.IsForbidden(pawn))
             {
-                return "Terrasecurity_FailureReason_IsForbidden".Translate();
+                return "Ecotech_FailureReason_IsForbidden".Translate();
             }
             if (!pawn.CanReserve(building))
             {
-                return "Terrasecurity_FailureReason_CannotReserve".Translate();
+                return "Ecotech_FailureReason_CannotReserve".Translate();
             }
             if (!pawn.CanReach(building, PathEndMode.ClosestTouch, Danger.Deadly))
             {
-                return "Terrasecurity_FailureReason_CannotReach".Translate();
+                return "Ecotech_FailureReason_CannotReach".Translate();
             }
             return true;
         }

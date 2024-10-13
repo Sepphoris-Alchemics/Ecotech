@@ -3,13 +3,13 @@
 
 <!--
 	Fundamentals are the parts that enable the mod to work. Without anything here, access to the mod would be limited or even not possible at all.
-  Anything here needs to make sure that the player can access Terratech from scratch, if they wanted to.
+  Anything here needs to make sure that the player can access Ecotech from scratch, if they wanted to.
 -->
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_Terraforge</defName>
+    <defName>EC_Seed_Terraforge</defName>
     <label>Terraforge Channeling Seed</label>
-    <description>A durable seed specifically patterned to immediately grow into a Terraforge, which is critical in Terratech usage. The Terraforge violently roots into the surface beneath it, making it unable to be moved once planted.
+    <description>A durable seed specifically patterned to immediately grow into a Terraforge, which is critical in Ecotech usage. The Terraforge violently roots into the surface beneath it, making it unable to be moved once planted.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
     <tickerType>Normal</tickerType>
@@ -43,7 +43,7 @@
     </recipeMaker>-->
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_TerraforgePlant</plantDefToSpawn>
+        <plantDefToSpawn>EC_TerraforgePlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -54,7 +54,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_SmallTerravat</defName>
+    <defName>EC_Seed_SmallTerravat</defName>
     <label>Small Terravat Channeling Seed</label>
     <description>A durable seed specifically patterned to quickly grow into a small Terravat, which modifies items with contained saps. The Terravat deeply roots into the surface beneath it, making it unable to be moved once planted.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
@@ -90,7 +90,7 @@
     </recipeMaker>-->
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_SmallTerravatPlant</plantDefToSpawn>
+        <plantDefToSpawn>EC_SmallTerravatPlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -101,7 +101,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_BuildingTree</defName>
+    <defName>EC_Seed_BuildingTree</defName>
     <label>Custodian Tree Seed</label>
     <description>A durable seed that can be planted to grow an Custodian Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
@@ -128,7 +128,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_BuildingTreeTierOne</plantDefToSpawn>
+        <plantDefToSpawn>EC_BuildingTreeTierOne</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -139,7 +139,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_SentinelTree</defName>
+    <defName>EC_Seed_SentinelTree</defName>
     <label>Sentinel Tree Seed</label>
     <description>A durable seed that can be planted to grow a Sentinel Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
@@ -166,7 +166,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_SentinelTreeTierOne</plantDefToSpawn>
+        <plantDefToSpawn>EC_SentinelTreeTierOne</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -177,7 +177,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>TS_Seed_SapTree</defName>
+    <defName>EC_Seed_SapTree</defName>
     <label>Spectra Tree Seed</label>
     <description>A durable seed that can be planted to grow a Spectra Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
@@ -204,7 +204,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>TS_SapTreeTierOne</plantDefToSpawn>
+        <plantDefToSpawn>EC_SapTreeTierOne</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>

@@ -7,7 +7,7 @@ using UnityEngine;
 using Verse;
 using Color = UnityEngine.Color;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingCompProperties_EquippedLifespan : CompProperties
     {

@@ -5,7 +5,7 @@
 
 -->
 
-  <ThingDef Name="TS_PrimaTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="EC_PrimaTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/PrimaTurret/ShotgunTurret</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -43,8 +43,8 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="TS_PrimaTurretPlantBase"> <!--Prima shotgun turret-->
-    <defName>TS_PrimaTurretPlant_Shotgun</defName>
+  <ThingDef ParentName="EC_PrimaTurretPlantBase"> <!--Prima shotgun turret-->
+    <defName>EC_PrimaTurretPlant_Shotgun</defName>
     <label>Scatter Sentry Sprout</label>
     <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
 \nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires short-range, packed splinters.</description>
@@ -56,9 +56,9 @@
       <growDays>0.5</growDays> 
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>TS_PrimaTurret_Shotgun</transformedThing>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>EC_PrimaTurret_Shotgun</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
@@ -67,8 +67,8 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="TS_PrimaTurretPlantBase"> <!--Prima spear turret-->
-    <defName>TS_PrimaTurretPlant_Spear</defName>
+  <ThingDef ParentName="EC_PrimaTurretPlantBase"> <!--Prima spear turret-->
+    <defName>EC_PrimaTurretPlant_Spear</defName>
     <label>Spear Sentry Sprout</label>
     <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
 \nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires large, armor-penetrating stakes.</description>
@@ -81,9 +81,9 @@
       <immatureGraphicPath>Things/Plant/PrimaTurret/SpearTurret_Immature</immatureGraphicPath>
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>TS_PrimaTurret_Spear</transformedThing>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>EC_PrimaTurret_Spear</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
@@ -92,8 +92,8 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="TS_PrimaTurretPlantBase"> <!--Prima thistle turret-->
-    <defName>TS_PrimaTurretPlant_SMG</defName>
+  <ThingDef ParentName="EC_PrimaTurretPlantBase"> <!--Prima thistle turret-->
+    <defName>EC_PrimaTurretPlant_SMG</defName>
     <label>Thistle Sentry Sprout</label>
     <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
 \nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires a volley of painful, needle-thin spines.</description>
@@ -106,9 +106,9 @@
       <immatureGraphicPath>Things/Plant/PrimaTurret/SpearTurret_Immature</immatureGraphicPath>
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Terrasecurity.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>TS_PrimaTurret_SMG</transformedThing>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>EC_PrimaTurret_SMG</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">

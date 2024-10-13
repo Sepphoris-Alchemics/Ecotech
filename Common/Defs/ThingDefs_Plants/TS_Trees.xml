@@ -2,7 +2,7 @@
 <Defs>
 
   <!--<ThingDef ParentName="PlantBaseNonEdible">
-    <defName>TS_GlowsapVine</defName>
+    <defName>EC_GlowsapVine</defName>
     <label>Glowsap Vine</label>
     <description>A vine engineered to produce Glowsap. Glowsap slowly leaks from the top of the vine when ready for harvesting. Relatively fast, but cannot produce much glowsap at once.</description>
     <graphicData>
@@ -23,7 +23,7 @@
       <fertilitySensitivity>0</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <harvestWork>900</harvestWork>
-      <harvestedThingDef>TS_Glowsap</harvestedThingDef>
+      <harvestedThingDef>EC_Glowsap</harvestedThingDef>
       <burnedThingDef IsNull="True" />
       <harvestYield>15</harvestYield>
       <harvestMinGrowth>0.95</harvestMinGrowth>
@@ -37,7 +37,7 @@
       </sowTags>
       <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>TS_SapBasics</li>
+        <li>EC_SapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
@@ -60,9 +60,9 @@
 
 
   <ThingDef ParentName="TreeBase"> <!--todo: add pod growth mechanic-->
-    <defName>TS_SentinelTreeTierOne</defName>
+    <defName>EC_SentinelTreeTierOne</defName>
     <label>Elderwood Sentinel</label>
-    <description>The Elderwood Sentinel is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Elderwood Sentinels provide various weapons and Prima seeds to their colony.
+    <description>The Elderwood Sentinel is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Elderwood Sentinels provide various weapons and Prima seeds to their colony.
  Some of the weapons that Sentinels create are ancient designs, which were either forgotten, or never could be manually formed/grown in the first place.
 
 While this tree is present, weapons and seeds will be created at the base of the tree roughly 3 times a year. Multiple Sentinels can exist together, but extensive spacing is required between each one.</description>
@@ -77,7 +77,7 @@ While this tree is present, weapons and seeds will be created at the base of the
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
-      <ThingDef>TS_Glowsap</ThingDef>
+      <ThingDef>EC_Glowsap</ThingDef>
       <!--<ThingDef>GlowsapTumor</ThingDef>-->
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
@@ -88,8 +88,8 @@ While this tree is present, weapons and seeds will be created at the base of the
       <MaxHitPoints>300</MaxHitPoints>
     </statBases>
     <killedLeavings>
-      <TS_Glowsap>60</TS_Glowsap>
-      <TS_ElderwoodMaterial>40</TS_ElderwoodMaterial>
+      <EC_Glowsap>60</EC_Glowsap>
+      <EC_ElderwoodMaterial>40</EC_ElderwoodMaterial>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
@@ -109,7 +109,7 @@ While this tree is present, weapons and seeds will be created at the base of the
       <sowWork>400</sowWork>
       <harvestTag>Standard</harvestTag>
       <harvestYield>30</harvestYield>
-			<harvestedThingDef>TS_Glowsap</harvestedThingDef>
+			<harvestedThingDef>EC_Glowsap</harvestedThingDef>
 			<harvestFailable>false</harvestFailable>
 			<harvestAfterGrowth>0.05</harvestAfterGrowth>
       <harvestMinGrowth>0.9</harvestMinGrowth>-->
@@ -119,7 +119,7 @@ While this tree is present, weapons and seeds will be created at the base of the
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>TS_SapBasics</li>
+        <li>EC_SapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
@@ -132,45 +132,45 @@ While this tree is present, weapons and seeds will be created at the base of the
       <purpose>Misc</purpose>
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
-        <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>900000~1200000</cycleDurationRangeTicks> <!--15 to 20 days-->
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
             <weight>1</weight>
             <things>
-              <TS_Seed_PrimaApexTurret>1~3</TS_Seed_PrimaApexTurret>
+              <EC_Seed_PrimaApexTurret>1~3</EC_Seed_PrimaApexTurret>
             </things>
           </li>
           <li>
             <weight>0.6</weight>
             <things>
-              <TS_NightshadeRifle>1</TS_NightshadeRifle>
+              <EC_NightshadeRifle>1</EC_NightshadeRifle>
             </things>
           </li>
           <li>
             <weight>0.6</weight>
             <things>
-              <TS_GaubornShotgun>1</TS_GaubornShotgun>
+              <EC_GaubornShotgun>1</EC_GaubornShotgun>
             </things>
           </li>
           <li>
             <weight>0.4</weight>
             <things>
-              <TS_PerrenialRifle>1</TS_PerrenialRifle>
+              <EC_PerrenialRifle>1</EC_PerrenialRifle>
             </things>
           </li>
           <li>
             <weight>0.01</weight>
             <things>
-              <TS_RoyalSword>1</TS_RoyalSword>
+              <EC_RoyalSword>1</EC_RoyalSword>
             </things>
           </li>
           <li>
             <weight>0.01</weight>
             <things>
-              <TS_RoyalRifle>1</TS_RoyalRifle>
+              <EC_RoyalRifle>1</EC_RoyalRifle>
             </things>
           </li>
         </potentialSpawnedThings>
@@ -188,9 +188,9 @@ While this tree is present, weapons and seeds will be created at the base of the
 
 
   <ThingDef ParentName="TreeBase"> <!--todo: add zone growth coding-->
-    <defName>TS_BuildingTreeTierOne</defName>
+    <defName>EC_BuildingTreeTierOne</defName>
     <label>Elderwood Custodian Tree</label>
-    <description>The Elderwood Custodian Tree is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Custodian trees produce malleable plates of wood that can be used as a crafting material.
+    <description>The Elderwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Custodian trees produce malleable plates of wood that can be used as a crafting material.
 This material is stronger and less flammable than normal wood, and is infinitely renewable.
 
 Legend has it this tree was once able to independently shelter entire colonies. Whether or not that is true remains to be seen....</description>
@@ -205,7 +205,7 @@ Legend has it this tree was once able to independently shelter entire colonies. 
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
-      <ThingDef>TS_ElderwoodMaterial</ThingDef>
+      <ThingDef>EC_ElderwoodMaterial</ThingDef>
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -215,8 +215,8 @@ Legend has it this tree was once able to independently shelter entire colonies. 
       <MaxHitPoints>300</MaxHitPoints>
     </statBases>
     <killedLeavings>
-      <TS_Glowsap>80</TS_Glowsap>
-      <TS_ElderwoodMaterial>20</TS_ElderwoodMaterial>
+      <EC_Glowsap>80</EC_Glowsap>
+      <EC_ElderwoodMaterial>20</EC_ElderwoodMaterial>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
@@ -236,7 +236,7 @@ Legend has it this tree was once able to independently shelter entire colonies. 
       <sowWork>400</sowWork>
       <harvestTag>Standard</harvestTag>
       <harvestYield>30</harvestYield>
-			<harvestedThingDef>TS_Glowsap</harvestedThingDef>
+			<harvestedThingDef>EC_Glowsap</harvestedThingDef>
 			<harvestFailable>false</harvestFailable>
 			<harvestAfterGrowth>0.05</harvestAfterGrowth>
       <harvestMinGrowth>0.9</harvestMinGrowth>-->
@@ -246,7 +246,7 @@ Legend has it this tree was once able to independently shelter entire colonies. 
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>TS_SapBasics</li>
+        <li>EC_SapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
@@ -259,33 +259,33 @@ Legend has it this tree was once able to independently shelter entire colonies. 
       <purpose>Misc</purpose>
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
-        <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>400000~600000</cycleDurationRangeTicks>
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
             <weight>4</weight>
             <things>
-              <TS_ElderwoodMaterial>150</TS_ElderwoodMaterial>
+              <EC_ElderwoodMaterial>150</EC_ElderwoodMaterial>
             </things>
           </li>
           <li>
             <weight>2</weight>
             <things>
-              <TS_ElderwoodMaterial>225</TS_ElderwoodMaterial>
+              <EC_ElderwoodMaterial>225</EC_ElderwoodMaterial>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-                <TS_ElderwoodMaterial>300</TS_ElderwoodMaterial>
+                <EC_ElderwoodMaterial>300</EC_ElderwoodMaterial>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-                <TS_ElderwoodMaterial>450</TS_ElderwoodMaterial>
+                <EC_ElderwoodMaterial>450</EC_ElderwoodMaterial>
             </things>
           </li>
         </potentialSpawnedThings>
@@ -304,9 +304,9 @@ Legend has it this tree was once able to independently shelter entire colonies. 
 
 
   <ThingDef ParentName="TreeBase">
-    <defName>TS_SapTreeTierOne</defName>
+    <defName>EC_SapTreeTierOne</defName>
     <label>Elderwood Spectra Tree</label>
-    <description>The Elderwood Spectra tree is one of the "Conduit" trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra trees provide a colony with various saps that enhance weapons and certain structures.
+    <description>The Elderwood Spectra tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra trees provide a colony with various saps that enhance weapons and certain structures.
 The saps provided are generally hard to get ahold of, and if not used, can fetch a pretty penny from collectors.
 
 While this tree is present, a random sap will occasionally appear at it's base. This tree does not produce glowsap.</description>
@@ -321,7 +321,7 @@ While this tree is present, a random sap will occasionally appear at it's base. 
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
-      <ThingDef>TS_Glowsap</ThingDef>
+      <ThingDef>EC_Glowsap</ThingDef>
       <!--<ThingDef>GlowsapTumor</ThingDef>-->
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
@@ -332,8 +332,8 @@ While this tree is present, a random sap will occasionally appear at it's base. 
       <MaxHitPoints>250</MaxHitPoints>
     </statBases>
     <killedLeavings>
-      <TS_Glowsap>90</TS_Glowsap>
-      <TS_ElderwoodMaterial>10</TS_ElderwoodMaterial>
+      <EC_Glowsap>90</EC_Glowsap>
+      <EC_ElderwoodMaterial>10</EC_ElderwoodMaterial>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
@@ -352,7 +352,7 @@ While this tree is present, a random sap will occasionally appear at it's base. 
       <!--<mustBeWildToSow>true</mustBeWildToSow>
       <sowWork>400</sowWork>
       <harvestTag>Standard</harvestTag>
-			<harvestedThingDef>TS_Glowsap</harvestedThingDef>
+			<harvestedThingDef>EC_Glowsap</harvestedThingDef>
 			<harvestFailable>false</harvestFailable>
 			<harvestAfterGrowth>0.05</harvestAfterGrowth>
       <harvestMinGrowth>0.9</harvestMinGrowth>-->
@@ -362,7 +362,7 @@ While this tree is present, a random sap will occasionally appear at it's base. 
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>TS_SapBasics</li>
+        <li>EC_SapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
@@ -375,45 +375,45 @@ While this tree is present, a random sap will occasionally appear at it's base. 
       <purpose>Misc</purpose>
     </plant>
     <comps>
-      <li Class="Terrasecurity.ThingCompProperties_CyclicThingSpawner">
-        <compClass>Terrasecurity.ThingComp_CyclicThingSpawner</compClass>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>400000~600000</cycleDurationRangeTicks>
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
             <weight>1.5</weight>
             <things>
-              <TS_Endosap>1</TS_Endosap>
+              <EC_Endosap>1</EC_Endosap>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-                <TS_Hypersap>1</TS_Hypersap>
+                <EC_Hypersap>1</EC_Hypersap>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-                <TS_Sunsap>1</TS_Sunsap>
+                <EC_Sunsap>1</EC_Sunsap>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-              <TS_Endosap>2~3</TS_Endosap>
+              <EC_Endosap>2~3</EC_Endosap>
             </things>
           </li>
           <li>
             <weight>0.2</weight>
             <things>
-              <TS_Hypersap>2~3</TS_Hypersap>
+              <EC_Hypersap>2~3</EC_Hypersap>
             </things>
           </li>
           <li>
             <weight>0.3</weight>
             <things>
-              <TS_Sunsap>2~3</TS_Sunsap>
+              <EC_Sunsap>2~3</EC_Sunsap>
             </things>
           </li>
         </potentialSpawnedThings>

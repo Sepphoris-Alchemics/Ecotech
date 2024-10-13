@@ -18,7 +18,7 @@ Complete all endoweapons
 HIGH PRIORITY:
 
 Wall-mounted glowvine
-Terratech Tab
+Ecotech Tab
 Shotgun Turret
 All 1x1 Prima turrets in the same designator
 
@@ -270,11 +270,11 @@ Archwood: 2000
 
 	<!--Test SMG; unfortunately this also means ammo can be unloaded, and that won't fly.-->
 	<ThingDef ParentName="BaseGun">
-		<defName>TS_SMGTest</defName>
+		<defName>EC_SMGTest</defName>
 		<label>prima thorncaster</label>
 		<description>You shouldn't have this.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/TS_SMG</texPath>
+			<texPath>Things/WeaponRanged/EC_SMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -347,8 +347,8 @@ Archwood: 2000
 			</li>
 		</tools>
       <comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>4000</lifespanTicks>
           <replacementToSpawn>ChunkSlagSteel</replacementToSpawn>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
@@ -368,7 +368,7 @@ Archwood: 2000
 							<MaxShots>120</MaxShots>
 							<AmmoFilter>
 								<thingDefs>
-									<li>TS_SunDrop</li>
+									<li>EC_SunDrop</li>
 								</thingDefs>
 							</AmmoFilter>
 							<ItemsPerShot>1</ItemsPerShot>

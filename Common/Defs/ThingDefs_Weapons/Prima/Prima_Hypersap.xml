@@ -5,7 +5,7 @@
 At their matured form, they are given their maturity increases-->
 
 	<ThingDef ParentName="UpgradedHypersapTerraweapon_Single">
-		<defName>TS_PrimaShotgunHypersap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
+		<defName>EC_PrimaShotgunHypersap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
 		<label>prima hyperburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with the Sap of Discorder. The presence of the sap has increased it's range, projectile speed, and fire rate.</description>
 		<graphicData>
@@ -71,8 +71,8 @@ At their matured form, they are given their maturity increases-->
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks>
           <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
         </li>
@@ -81,7 +81,7 @@ At their matured form, they are given their maturity increases-->
 
 
 	<ThingDef ParentName="UpgradedHypersapTerraweapon_Single">
-		<defName>TS_PrimaSMGHypersap</defName>
+		<defName>EC_PrimaSMGHypersap</defName>
 		<label>prima hypershredder</label>
 		<description>The Apex form of the Prima Pincaster, infused with the Sap of Disorder. The presence of the sap has enabled the pineshredder has increased the range, projectile speed, and fire rate.
 \nAdditionally, the sap has also altered the minimum and maximum projectiles. It now fires 3-7 projectiles per burst, instead of 4-5.</description>
@@ -149,8 +149,8 @@ At their matured form, they are given their maturity increases-->
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
           <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
         </li>
@@ -171,7 +171,7 @@ At their matured form, they are given their maturity increases-->
 	</ThingDef>
 
 	<ThingDef ParentName="UpgradedHypersapTerraweapon_Burst">
-		<defName>TS_HypercasterI</defName>
+		<defName>EC_HypercasterI</defName>
 		<label>Hypercaster I</label>
 		<description>A special iteration of the Stakecaster evolution line. The addition of Hypersap has improved the range, projectile speed, fire rate, and projectile potential.
 \nStronger variants of the Hypercaster exist, which can be achieved by replacing the sap of higher-evolved Stakecasters.</description>
@@ -214,7 +214,7 @@ At their matured form, they are given their maturity increases-->
         <range>34.9</range>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>TS_Sound_LightStake</soundCast>
+        <soundCast>EC_Sound_LightStake</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
@@ -227,7 +227,7 @@ At their matured form, they are given their maturity increases-->
         <range>34.9</range>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>TS_Sound_LightStake</soundCast>
+        <soundCast>EC_Sound_LightStake</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>-->
@@ -252,8 +252,8 @@ At their matured form, they are given their maturity increases-->
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
           <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
         </li>

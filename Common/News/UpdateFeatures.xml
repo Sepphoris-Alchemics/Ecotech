@@ -2,12 +2,12 @@
 <Defs>
 
 	<HugsLib.UpdateFeatureDef>
-		<modNameReadable>Terrasecurity</modNameReadable>
-		<modIdentifier>Terrasecurity</modIdentifier>
+		<modNameReadable>Ecotech</modNameReadable>
+		<modIdentifier>Ecotech</modIdentifier>
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2796137105</linkUrl>
-		<defName>Terrasecurity_1_2_2</defName>
+		<defName>Ecotech_1_2_2</defName>
 		<assemblyVersion>1.1</assemblyVersion>
-		<content>A content update has been added to Terrasecurity: | Removed method of discouraging industrial usage, as it was too extreme for existing tribal runs. This will be re-introduced later with in a 100% tribal-friendly way. | Please report balancing and bug issues on the workshop page!
+		<content>A content update has been added to Ecotech: | Removed method of discouraging industrial usage, as it was too extreme for existing tribal runs. This will be re-introduced later with in a 100% tribal-friendly way. | Please report balancing and bug issues on the workshop page!
 		</content>
 	</HugsLib.UpdateFeatureDef>
 

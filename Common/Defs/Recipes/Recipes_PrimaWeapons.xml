@@ -9,7 +9,7 @@
 
   <!--Apex Seed to Prima Stake Turret-->
   <RecipeDef>
-    <defName>TS_PrimaTurretSeedApexToStake</defName>
+    <defName>EC_PrimaTurretSeedApexToStake</defName>
     <label>awaken prima apex seed (spear)</label>
     <description>Awaken a prima apex seed, and coerce it to turn into a stake turret seed.</description>
     <jobString>awakening prima apex seed into spear turret seed.</jobString>
@@ -18,7 +18,7 @@
     <skillRequirements>
       <Plants>4</Plants>
     </skillRequirements>
-    <researchPrerequisite>TS_PrimaTerraweaponSeeds</researchPrerequisite>
+    <researchPrerequisite>EC_PrimaTerraweaponSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>1200</workAmount>
@@ -28,7 +28,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>TS_Seed_PrimaApexTurret</li>
+            <li>EC_Seed_PrimaApexTurret</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -36,18 +36,18 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>TS_Seed_PrimaApexTurret</li>
+        <li>EC_Seed_PrimaApexTurret</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <TS_Seed_PrimaStakeTurret>1</TS_Seed_PrimaStakeTurret>
+      <EC_Seed_PrimaStakeTurret>1</EC_Seed_PrimaStakeTurret>
     </products>
     <displayPriority>90</displayPriority>
   </RecipeDef>
 
   <!--Apex Seed to Prima Thistle Turret-->
   <RecipeDef>
-    <defName>TS_PrimaTurretSeedApexToSMG</defName>
+    <defName>EC_PrimaTurretSeedApexToSMG</defName>
     <label>awaken prima apex seed (thistle)</label>
     <description>Awaken a prima apex seed, and coerce it to turn into a thistle turret seed.</description>
     <jobString>awakening prima apex seed into a thistle turret seed.</jobString>
@@ -56,7 +56,7 @@
     <skillRequirements>
       <Plants>4</Plants>
     </skillRequirements>
-    <researchPrerequisite>TS_PrimaTerraweaponSeeds</researchPrerequisite>
+    <researchPrerequisite>EC_PrimaTerraweaponSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>1200</workAmount>
@@ -66,7 +66,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>TS_Seed_PrimaApexTurret</li>
+            <li>EC_Seed_PrimaApexTurret</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -74,18 +74,18 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>TS_Seed_PrimaApexTurret</li>
+        <li>EC_Seed_PrimaApexTurret</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <TS_Seed_PrimaSMGTurret>1</TS_Seed_PrimaSMGTurret>
+      <EC_Seed_PrimaSMGTurret>1</EC_Seed_PrimaSMGTurret>
     </products>
     <displayPriority>91</displayPriority>
   </RecipeDef>
 
   <!--Apex Seed to Prima Scatter Turret-->
   <RecipeDef>
-    <defName>TS_PrimaTurretSeedApexToShotgun</defName>
+    <defName>EC_PrimaTurretSeedApexToShotgun</defName>
     <label>awaken prima apex seed (scatter)</label>
     <description>Awaken a prima apex seed, and coerce it to turn into a scatter turret seed.</description>
     <jobString>awakening prima apex seed into a scatter turret seed.</jobString>
@@ -94,7 +94,7 @@
     <skillRequirements>
       <Plants>4</Plants>
     </skillRequirements>
-    <researchPrerequisite>TS_PrimaTerraweaponSeeds</researchPrerequisite>
+    <researchPrerequisite>EC_PrimaTerraweaponSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>1200</workAmount>
@@ -104,7 +104,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>TS_Seed_PrimaApexTurret</li>
+            <li>EC_Seed_PrimaApexTurret</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -112,18 +112,18 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>TS_Seed_PrimaApexTurret</li>
+        <li>EC_Seed_PrimaApexTurret</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <TS_Seed_PrimaShotgunTurret>1</TS_Seed_PrimaShotgunTurret>
+      <EC_Seed_PrimaShotgunTurret>1</EC_Seed_PrimaShotgunTurret>
     </products>
     <displayPriority>92</displayPriority>
   </RecipeDef>
 
   <!--Spear Turret from a matured weapon-->
   <RecipeDef>
-    <defName>TS_ExtractPrimaStakeTurretSeed</defName>
+    <defName>EC_ExtractPrimaStakeTurretSeed</defName>
     <label>extract prima turret seed (spear)</label>
     <description>Extract a spear turret seed from an appropriate prima weapon. This destroys the weapon in the process, and is quite lengthy.</description>
     <jobString>Extracting spear turret seed.</jobString>
@@ -137,8 +137,8 @@
       <li>
         <filter>
           <thingDefs>
-            <li>TS_StakeCaster</li>
-            <li>TS_PrimaTwincaster</li>
+            <li>EC_StakeCaster</li>
+            <li>EC_PrimaTwincaster</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -146,12 +146,12 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>TS_StakeCaster</li>
-        <li>TS_PrimaTwincaster</li>
+        <li>EC_StakeCaster</li>
+        <li>EC_PrimaTwincaster</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <TS_Seed_PrimaStakeTurret>1</TS_Seed_PrimaStakeTurret>
+      <EC_Seed_PrimaStakeTurret>1</EC_Seed_PrimaStakeTurret>
     </products>
     <workSkill>Plants</workSkill>
     <displayPriority>0</displayPriority>
@@ -159,7 +159,7 @@
 
   <!--Thistle Turret from an appropriate weapon.-->
   <RecipeDef>
-    <defName>TS_ExtractPrimaSMGTurretSeed</defName>
+    <defName>EC_ExtractPrimaSMGTurretSeed</defName>
     <label>extract prima turret seed (thistle)</label>
     <description>Extract a thistle turret seed from an appropriate prima weapon. This destroys the weapon in the process, and is quite lengthy.</description>
     <jobString>Extracting thistle turret seed.</jobString>
@@ -173,8 +173,8 @@
       <li>
         <filter>
           <thingDefs>
-            <li>TS_SMG</li>
-            <li>TS_SMGUpgraded</li>
+            <li>EC_SMG</li>
+            <li>EC_SMGUpgraded</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -182,12 +182,12 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>TS_SMG</li>
-        <li>TS_SMGUpgraded</li>
+        <li>EC_SMG</li>
+        <li>EC_SMGUpgraded</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <TS_Seed_PrimaSMGTurret>1</TS_Seed_PrimaSMGTurret>
+      <EC_Seed_PrimaSMGTurret>1</EC_Seed_PrimaSMGTurret>
     </products>
     <workSkill>Plants</workSkill>
     <displayPriority>0</displayPriority>
@@ -195,7 +195,7 @@
 
   <!--Scatter Turret from an appropriate weapon.-->
   <RecipeDef>
-    <defName>TS_ExtractPrimaShotgunTurretSeed</defName>
+    <defName>EC_ExtractPrimaShotgunTurretSeed</defName>
     <label>extract prima turret seed (scatter)</label>
     <description>Extract a scatter turret seed from an appropriate prima weapon. This destroys the weapon in the process, and is quite lengthy.</description>
     <jobString>Extracting thistle turret seed.</jobString>
@@ -209,8 +209,8 @@
       <li>
         <filter>
           <thingDefs>
-            <li>TS_Shotgun</li>
-            <li>TS_ShotgunUpgraded</li>
+            <li>EC_Shotgun</li>
+            <li>EC_ShotgunUpgraded</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -218,12 +218,12 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>TS_Shotgun</li>
-        <li>TS_ShotgunUpgraded</li>
+        <li>EC_Shotgun</li>
+        <li>EC_ShotgunUpgraded</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <TS_Seed_PrimaShotgunTurret>1</TS_Seed_PrimaShotgunTurret>
+      <EC_Seed_PrimaShotgunTurret>1</EC_Seed_PrimaShotgunTurret>
     </products>
     <workSkill>Plants</workSkill>
     <displayPriority>0</displayPriority>

@@ -3,7 +3,7 @@
 
   <!-- Base -->
 
-  <!--<AbilityDef Name="TS_AbilityBase" Abstract="True">
+  <!--<AbilityDef Name="EC_AbilityBase" Abstract="True">
     <label>Secondary shot.</label>
     <description>Fire a secondary shot.</description>
     <cooldownTicksRange>120</cooldownTicksRange>
@@ -18,18 +18,18 @@
 
 <!--Nightshade Sac-->
 
-  <!--<AbilityDef ParentName="TS_AbilityBase">
-    <defName>TS_NightshadeSacAbility</defName>
+  <!--<AbilityDef ParentName="EC_AbilityBase">
+    <defName>EC_NightshadeSacAbility</defName>
     <label>launch nightshade sac</label>
     <description>Launch a pnumatic sac that will cover an area with nightshade toxins.</description>
     <verbProperties>
       <range>7.9</range>
-      <defaultProjectile>TS_NightshadeSac</defaultProjectile>
+      <defaultProjectile>EC_NightshadeSac</defaultProjectile>
     </verbProperties>
   </AbilityDef>
 
   <ThingDef ParentName="BaseBullet">
-    <defName>TS_NightshadeSac</defName>
+    <defName>EC_NightshadeSac</defName>
     <label>nightshade globule</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
@@ -40,12 +40,12 @@
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
-      <damageDef>TS_NightshadeDamage</damageDef>
+      <damageDef>EC_NightshadeDamage</damageDef>
       <damageAmountBase>4</damageAmountBase>
       <armorPenetrationBase>0.2</armorPenetrationBase>
       <stoppingPower>1</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>TS_Filth_Nightshade</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>EC_Filth_Nightshade</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>

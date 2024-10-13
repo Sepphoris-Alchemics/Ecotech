@@ -4,8 +4,8 @@
     <xpath>Defs/ThingDef[defName="Bow_Great"]</xpath>
     <value>
       <comps>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>200</lifespanTicks>
           <replacementToSpawn>ChunkSlagSteel</replacementToSpawn>
           <lifespanBarColor>(52, 85, 235)</lifespanBarColor>

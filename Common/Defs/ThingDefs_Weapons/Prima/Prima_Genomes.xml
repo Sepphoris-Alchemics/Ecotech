@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--Terrasecurity.ThingCompProperties_EquippedLifespan will need to be local
+<!--Ecotech.ThingCompProperties_EquippedLifespan will need to be local
 
 	***SAP NOTES***
 		Sap is used to modify plant stats. This sap is extracted from the corresponding plant, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant. The effects are the following:
@@ -326,8 +326,8 @@ Increased range | Faster fire rate</inspectString>
 			<li Class="CompProperties_SelfhealHitpoints">
       	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     	</li>
-    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
       	<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -344,8 +344,8 @@ Increased range | Faster fire rate</inspectString>
 		<li Class="CompProperties_SelfhealHitpoints">
       <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     </li>
-    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
       <!--<expireEffect></expireEffect>-->
 			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -366,8 +366,8 @@ Increased range | Faster fire rate</inspectString>
 			<li Class="CompProperties_SelfhealHitpoints">
       	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     	</li>
-    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
       	<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -384,8 +384,8 @@ Increased range | Faster fire rate</inspectString>
 		<li Class="CompProperties_SelfhealHitpoints">
       <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     </li>
-    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
       <!--<expireEffect></expireEffect>-->
 			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -406,8 +406,8 @@ Increased range | Faster fire rate</inspectString>
 			<li Class="CompProperties_SelfhealHitpoints">
       	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     	</li>
-    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
       	<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -424,8 +424,8 @@ Increased range | Faster fire rate</inspectString>
 		<li Class="CompProperties_SelfhealHitpoints">
       <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     </li>
-    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
       <!--<expireEffect></expireEffect>-->
 			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -446,8 +446,8 @@ Increased range | Faster fire rate</inspectString>
 			<li Class="CompProperties_SelfhealHitpoints">
       	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     	</li>
-    	<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      	<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
       	<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -464,8 +464,8 @@ Increased range | Faster fire rate</inspectString>
 		<li Class="CompProperties_SelfhealHitpoints">
       <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
     </li>
-    <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-      <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
       <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
       <!--<expireEffect></expireEffect>-->
 			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->

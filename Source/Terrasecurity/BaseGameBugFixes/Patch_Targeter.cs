@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Terrasecurity.BaseGameBugFixes
+namespace Ecotech.BaseGameBugFixes
 {
     /// <summary>
     /// 1.4 does not reset the onGui action for targeter when targeting ends. That means the game keeps drawing the mouse attached label even if there is no active targeter

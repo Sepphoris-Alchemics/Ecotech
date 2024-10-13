@@ -10,12 +10,12 @@ Armor penetration should be .3-.4
 Accuracy follows charge rifles-->
 
 	<ThingDef ParentName="BaseWeapon">
-		<defName>TS_RoyalSword</defName>
+		<defName>EC_RoyalSword</defName>
 		<label>Royal Hyperblade</label>
 		<description>A beatuful half-plant sword, with a razor-sharp blade made of Terraquartz. Capable of competing with some of the most hi-tech melee weaponry out there, this weapon is as valuable and prestigous as it is rare. Like other royal weapons, it has a very high regeneration factor, and is semi-immortal.
 \n\nDespite it's hyper-regeneration abilities, this weapon can still be entirely destroyed if directly damaged enough, or if not given a brief time to address physical issues (the weapon will need to be unequipped and left alone in order to regenerate hitpoints).</description>
 		<graphicData>
-			<texPath>Things/WeaponRoyal/Basic/TS_RoyalSword</texPath>
+			<texPath>Things/WeaponRoyal/Basic/EC_RoyalSword</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -58,7 +58,7 @@ Accuracy follows charge rifles-->
 				<cooldownTime>2.3</cooldownTime>
         <extraMeleeDamages>
           <li>
-            <def>TS_PsychicShot</def>
+            <def>EC_PsychicShot</def>
             <amount>10</amount>
             <chance>0.5</chance>
           </li>
@@ -73,7 +73,7 @@ Accuracy follows charge rifles-->
         <cooldownTime>2.3</cooldownTime>
         <extraMeleeDamages>
           <li>
-            <def>TS_PsychicShot</def>
+            <def>EC_PsychicShot</def>
             <amount>10</amount>
             <chance>0.5</chance>
           </li>

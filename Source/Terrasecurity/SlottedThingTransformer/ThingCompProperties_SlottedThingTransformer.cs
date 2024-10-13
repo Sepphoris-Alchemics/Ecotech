@@ -10,7 +10,7 @@ using static Mono.Security.X509.X520;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class FuelEntry
     {

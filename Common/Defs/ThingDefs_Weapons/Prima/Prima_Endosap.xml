@@ -5,7 +5,7 @@
 At their matured form, they are given their maturity increases-->
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>TS_PrimaSMGEndosap</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
+		<defName>EC_PrimaSMGEndosap</defName> <!--rename to PrimaSMGUpgraded in Rimworld 1.5-->
 		<label>prima endoshredder</label>
 		<description>The Apex form of the Prima Pincaster, infused with the Sap of Permanence. The presence of the endosap has enabled the pincaster to create a more durable epidermis, and decreasing flammability.</description>
 		<graphicData>
@@ -89,12 +89,12 @@ At their matured form, they are given their maturity increases-->
 				<inspectString>Permanence Genome | Dormant
 +25 health | +8 lifetime days | +2.5 hp/day (unequipped)</inspectString>
 			</li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1440000</lifespanTicks> <!--Light weapon, 960000+480000-->
           <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+					<replacementToSpawn>EC_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 		<modExtensions>
@@ -113,7 +113,7 @@ At their matured form, they are given their maturity increases-->
 	</ThingDef>
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>TS_PrimaShotgunEndosap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
+		<defName>EC_PrimaShotgunEndosap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
 		<label>prima endoburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with the Sap of Permanence. The presence of the endosap has enabled the pincaster to create a more durable epidermis, and decreasing flammability.</description>
 		<graphicData>
@@ -183,18 +183,18 @@ At their matured form, they are given their maturity increases-->
       	<inspectString>Permanence Genome | Infused
 +28 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
       </li>
-        <li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-          <compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>1620000</lifespanTicks> <!--1080000+540000-->
           <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+					<replacementToSpawn>EC_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>TS_PrimaTwincasterEndosap</defName>
+		<defName>EC_PrimaTwincasterEndosap</defName>
 		<label>Twincaster</label>
 		<description>The second-generation form of the Prima Stakecaster, infused with the sap of Permanence. The presence of the sap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.
 \nUnfortunately the sap has also neutralized the Twincaster's growth potential, preventing it from being evolved further.</description>
@@ -237,7 +237,7 @@ At their matured form, they are given their maturity increases-->
 				<range>32.9</range>
 				<burstShotCount>2</burstShotCount>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-				<soundCast>TS_Sound_LightStake</soundCast>
+				<soundCast>EC_Sound_LightStake</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -266,11 +266,11 @@ At their matured form, they are given their maturity increases-->
       	<inspectString>Permanence Genome | Infused
 +30 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
       </li>
-			<li Class="Terrasecurity.ThingCompProperties_EquippedLifespan">
-				<compClass>Terrasecurity.ThingComp_EquippedLifespan</compClass>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
 				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
-					<replacementToSpawn>TS_Seed_PrimaApexTurret</replacementToSpawn>
+					<replacementToSpawn>EC_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>

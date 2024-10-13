@@ -13,7 +13,7 @@ using Verse;
 using static HarmonyLib.Code;
 using static UnityEngine.GraphicsBuffer;
 
-namespace Terrasecurity
+namespace Ecotech
 {
     public class ThingComp_SlottedThingTransformer : ThingComp_AutoHaulThingContainer
     {
@@ -97,7 +97,7 @@ namespace Terrasecurity
             }
             if (isTransforming)
             {
-                return "Terrasecurity_FailureReason_CurrentlyTransforming".Translate();
+                return "Ecotech_FailureReason_CurrentlyTransforming".Translate();
             }
             return true;
         }
@@ -133,14 +133,14 @@ namespace Terrasecurity
                     bool isThingAddedToContainer = base.innerContainer.TryAddOrTransfer(thing);
                     if (!isThingAddedToContainer)
                     {
-                        return "Terrasecurity_FailureReason_CouldNotAddToInnerContainer".Translate();
+                        return "Ecotech_FailureReason_CouldNotAddToInnerContainer".Translate();
                     }
                     slottedThings[i] = thing;
                     RecacheFuelCost();
                     return true;
                 }
             }
-            return "Terrasecurity_FailureReason_NoSlotAvailable".Translate();
+            return "Ecotech_FailureReason_NoSlotAvailable".Translate();
         }
         public AcceptanceReport TryRemove(Thing thing)
         {
@@ -148,12 +148,12 @@ namespace Terrasecurity
             Thing removedThing = base.ContainedThing.SplitOff(1);
             if(removedThing == null)
             {
-                return "Terrasecurity_FailureReason_CouldNotRemoveOrSplitFromInnerContainer".Translate();
+                return "Ecotech_FailureReason_CouldNotRemoveOrSplitFromInnerContainer".Translate();
             }
             int slotIndex = slottedThings.IndexOf(thing);
             if(slotIndex < 0)
             {
-                return "Terrasecurity_FailureReason_CouldNotDetermineSlotIndex".Translate();
+                return "Ecotech_FailureReason_CouldNotDetermineSlotIndex".Translate();
             }
             slottedThings[slotIndex] = null;
             GenPlace.TryPlaceThing(removedThing, parent.Position, parent.Map, ThingPlaceMode.Near);
@@ -253,7 +253,7 @@ namespace Terrasecurity
             }
             if (anyThingTransformed)
             {
-                Messages.Message("Terrasecurity_Message_ThingTransformerFinishedTransformation".Translate(parent.LabelCap.Named("TRANSFORMER")), new LookTargets(parent), MessageTypeDefOf.NeutralEvent);
+                Messages.Message("Ecotech_Message_ThingTransformerFinishedTransformation".Translate(parent.LabelCap.Named("TRANSFORMER")), new LookTargets(parent), MessageTypeDefOf.NeutralEvent);
             }
             RecacheFuelCost();
         }
@@ -332,7 +332,7 @@ namespace Terrasecurity
                 formattedDuration = GenDate.QuadrumDateStringAt(GenDate.TickGameToAbs(cycleEndTicksAbsolute), Find.WorldGrid.LongLatOf(parent.Map.Tile).x);
             }
 
-            string translationKey = isTransforming ? "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleEndsIn" : "Terrasecurity_Gizmo_SlottedThingConverter_TransformationCycleStartsIn";
+            string translationKey = isTransforming ? "Ecotech_Gizmo_SlottedThingConverter_TransformationCycleEndsIn" : "Ecotech_Gizmo_SlottedThingConverter_TransformationCycleStartsIn";
             translationKey += shouldDisplayTimeRelative ? "_Relative" : "_Absolute";
             
             return translationKey.Translate(formattedDuration.Named("FORMATTEDDURATION"));

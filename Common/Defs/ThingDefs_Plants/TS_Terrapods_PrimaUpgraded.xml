@@ -23,7 +23,7 @@ Tier 4 upgrades: 20
 Tier 4 surge seeds: 20
 -->
 
-  <ThingDef Name="TS_PrimaUpgradePodBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="EC_PrimaUpgradePodBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/WeaponPod_Fortified</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -61,8 +61,8 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
 
-  <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
-    <defName>TS_PrimaSMGUpgradePod</defName>
+  <ThingDef ParentName="EC_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
+    <defName>EC_PrimaSMGUpgradePod</defName>
     <label>Pineshredder Pod</label>
     <description>A fortified Terrapod that is further advancing a Prima Pincaster. Will produce a single, revitalized Briarcaster when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
@@ -71,7 +71,7 @@ Tier 4 surge seeds: 20
     </plant>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>TS_SMGUpgraded</thingToSpawn>
+        <thingToSpawn>EC_SMGUpgraded</thingToSpawn>
         <spawnCount>1</spawnCount>
         <spawnIntervalRange>780000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3 days (180,000)-->
         <spawnForbidden>false</spawnForbidden>
@@ -86,8 +86,8 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
 
-  <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Shotgun Upgrade-->
-    <defName>TS_PrimaShotgunUpgradePod</defName>
+  <ThingDef ParentName="EC_PrimaUpgradePodBase"> <!--Prima Shotgun Upgrade-->
+    <defName>EC_PrimaShotgunUpgradePod</defName>
     <label>Briarshredder Pod</label>
     <description>A fortified Terrapod that is further advancing a Prima Spreadshot. Will produce a single, revitalized Briarshredder when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
@@ -96,7 +96,7 @@ Tier 4 surge seeds: 20
     </plant>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>TS_SMGUpgraded</thingToSpawn>
+        <thingToSpawn>EC_SMGUpgraded</thingToSpawn>
         <spawnCount>1</spawnCount>
         <spawnIntervalRange>780000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3 days (180,000)-->
         <spawnForbidden>false</spawnForbidden>
@@ -111,8 +111,8 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
 
-  <ThingDef ParentName="TS_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
-    <defName>TS_StakecasterUpgradePod</defName>
+  <ThingDef ParentName="EC_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
+    <defName>EC_StakecasterUpgradePod</defName>
     <label>Twincaster Pod</label>
     <description>A fortified Terrapod that is further advancing a Prima Stakecaster. Will produce a single, revitalized Twincaster when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
@@ -121,7 +121,7 @@ Tier 4 surge seeds: 20
     </plant>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>TS_PrimaTwincaster</thingToSpawn>
+        <thingToSpawn>EC_PrimaTwincaster</thingToSpawn>
         <spawnCount>1</spawnCount>
         <spawnIntervalRange>810000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3.5 days (210,000)-->
         <spawnForbidden>false</spawnForbidden>
