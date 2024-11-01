@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7BkxHGTVo/p5ep2iNcAt8bGOIuWKk7ZT8ETC8hSLW6Nkkv/APJRF/yFRBz6qELPHqm79SHniThF0Xal2ca7P6Q==",
+  "success": true,
+  "projectFilePath": "e:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Ecotech\\Source\\Terrasecurity\\Terrasecurity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zerov\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512",
+    "C:\\Users\\zerov\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\zerov\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net481\\1.0.3\\microsoft.netframework.referenceassemblies.net481.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
