@@ -5,7 +5,7 @@
 
 -->
 
-  <ThingDef Name="EC_FundamentalPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="ET_FundamentalPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/Terraforge_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -43,8 +43,8 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="EC_FundamentalPlantBase">
-    <defName>EC_TerraforgePlant</defName>
+  <ThingDef ParentName="ET_FundamentalPlantBase">
+    <defName>ET_TerraforgePlant</defName>
     <label>Terraforge Sprout</label>
     <description>A quickly growing sprout that will shape itself into a Terraforge. Terraforges are critical in utilizing Ecotech.</description>
     <graphicData>
@@ -55,9 +55,13 @@
       <growDays>0.5</growDays> 
     </plant>
     <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>EC_Terraforge</transformedThing>
+        <transformedThing>ET_Terraforge</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
@@ -66,8 +70,8 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="EC_FundamentalPlantBase">
-    <defName>EC_SmallTerravatPlant</defName>
+  <ThingDef ParentName="ET_FundamentalPlantBase">
+    <defName>ET_SmallTerravatPlant</defName>
     <label>Small Terravat Sprout</label>
     <description>A quickly growing sprout that will shape itself into a small Terravat. Takes a fewdays to fully grow.</description>
     <graphicData>
@@ -78,13 +82,17 @@
       <growDays>1</growDays> 
     </plant>
     <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>EC_TerravatBasic</transformedThing>
+        <transformedThing>ET_TerravatBasic</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Growing into: Terraforge</inspectString>
+      <inspectString>Growing into: Small Terravat</inspectString>
       </li>
     </comps>
   </ThingDef>

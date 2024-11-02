@@ -3,7 +3,7 @@
   
 
   <ScenarioDef>
-    <defName>EC_EcotechKeepers</defName>
+    <defName>ET_EcotechKeepers</defName>
     <label>Sentries of the Ecotech</label>
 
     <scenario>
@@ -41,78 +41,78 @@
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_PrimaSword</thingDef>
+				<thingDef>ET_PrimaSword</thingDef>
         <count>1</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_PrimaKnife</thingDef>
+				<thingDef>ET_PrimaKnife</thingDef>
         <count>1</count>
 			</li>
 			<!--<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_StakeCaster</thingDef>
+				<thingDef>ET_PrimaStakecaster</thingDef>
         <count>2</count>
 			</li>-->
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_SMG</thingDef>
+				<thingDef>ET_PrimaSMG</thingDef>
         <count>1</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_Carbine</thingDef>
+				<thingDef>ET_PrimaCarbine</thingDef>
         <count>1</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_Seed_Terraforge</thingDef>
+				<thingDef>ET_Seed_Terraforge</thingDef>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_Seed_PrimaStakeTurret</thingDef>
+				<thingDef>ET_Seed_PrimaStakeTurret</thingDef>
 				<count>2</count>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_Seed_PrimaSMGTurret</thingDef>
+				<thingDef>ET_Seed_PrimaSMGTurret</thingDef>
 				<count>1</count>
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>ScatterThingsAnywhere</def>
-				<thingDef>EC_ElderwoodMaterial</thingDef>
+				<thingDef>ET_ElderwoodMaterial</thingDef>
 				<count>750</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>StartingThing_Defined</def>
-				<thingDef>EC_Glowsap</thingDef>
+				<thingDef>ET_Glowsap</thingDef>
 				<count>75</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>EC_FundamentalArms</project>
+				<project>ET_FundamentalArms</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>EC_BasicFirearms</project>
+				<project>ET_BasicFirearms</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>EC_StandardFirearms</project>
+				<project>ET_StandardFirearms</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>EC_ConduitSeeds</project>
+				<project>ET_ConduitSeeds</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>EC_PrimaTurretSeeds</project>
+				<project>ET_PrimaTurretSeeds</project>
 			</li>
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
-				<project>EC_SapBasics</project>
+				<project>ET_SapBasics</project>
 			</li>
 			<li Class="ScenPart_DisallowBuilding">
 				<def>Rule_DisallowBuilding</def>

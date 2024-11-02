@@ -3,7 +3,7 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>EC_DebugTransformer</defName>
+    <defName>ET_DebugTransformer</defName>
     <label>Sap Forge</label>
     <description>Your text here.</description>
     <graphicData>
@@ -75,7 +75,7 @@
         <transformationCycleIntervalTicks>2000</transformationCycleIntervalTicks>
         <validFuels>
           <li>
-            <fuelThingDef>EC_Glowsap</fuelThingDef>
+            <fuelThingDef>ET_Glowsap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Misc/DropBeacon</texPath>

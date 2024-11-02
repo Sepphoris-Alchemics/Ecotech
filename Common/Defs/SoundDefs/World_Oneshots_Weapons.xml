@@ -3,7 +3,7 @@
 <Defs>
   
   <SoundDef>
-    <defName>EC_Sound_LightStake</defName>  
+    <defName>ET_Sound_LightStake</defName>  
     <context>MapOnly</context>
     <eventNames />  
     <maxSimultaneous>1</maxSimultaneous>  
@@ -11,7 +11,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapons/StakeCaster</clipFolderPath>
+            <clipFolderPath>Weapons/Stakecaster</clipFolderPath>
           </li>
         </grains>      
         <pitchRange>
@@ -27,7 +27,7 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>EC_Sound_Blowgun1</defName>  
+    <defName>ET_Sound_Blowgun1</defName>  
     <context>MapOnly</context>
     <eventNames />  
     <maxSimultaneous>1</maxSimultaneous>  
@@ -51,7 +51,7 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>EC_Sound_AnimaShot1</defName>  
+    <defName>ET_Sound_AnimaShot1</defName>  
     <context>MapOnly</context>
     <eventNames />  
     <maxSimultaneous>1</maxSimultaneous>  
@@ -75,7 +75,7 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>EC_Sound_WoodExplosion1</defName>  
+    <defName>ET_Sound_WoodExplosion1</defName>  
     <context>MapOnly</context>
     <eventNames />  
     <maxSimultaneous>1</maxSimultaneous>  

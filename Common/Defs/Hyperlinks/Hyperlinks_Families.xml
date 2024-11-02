@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!--<HediffDef Name="EC_OverviewPlants" Abstract="True">
+	<!--<HediffDef Name="ET_OverviewPlants" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
     <isBad>false</isBad>
@@ -9,12 +9,12 @@
 	<makesSickThought>false</makesSickThought>
 	</HediffDef>
 
-	<HediffDef Name="EC_OverviewPlantWeapons" ParentName="EC_OverviewPlants" Abstract="True">
+	<HediffDef Name="ET_OverviewPlantWeapons" ParentName="ET_OverviewPlants" Abstract="True">
     <chronic>true</chronic>
   </HediffDef>-->
 
   <ThingDef ParentName="PlantBaseNonEdible">
-    <defName>EC_OverviewPrimaWeapons</defName>
+    <defName>ET_OverviewPrimaWeapons</defName>
     <label>Overview: Prima Family</label>
 		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Ecotech will learn to grow. They are the easiest to bioengineer, the fastest to research, and are (relatively) quickly grown.
 \nPrima Ecotech was the first gift from the Primordials, and could both provide both offense and defense... but it soon paled in comparison to every-pacing technology. Eventually, new Ecotech would be granted.
@@ -60,7 +60,7 @@ This also develops the weapon's protective traits, causing more wood to form, ex
       <fertilitySensitivity>0.1</fertilitySensitivity>
       <growMinGlow>0.3</growMinGlow>
       <harvestWork>900</harvestWork>
-      <harvestedThingDef>EC_StakeCaster</harvestedThingDef>
+      <harvestedThingDef>ET_PrimaStakecaster</harvestedThingDef>
       <burnedThingDef IsNull="True" />
       <harvestYield>1</harvestYield>
       <harvestMinGrowth>0.9</harvestMinGrowth>
@@ -68,7 +68,7 @@ This also develops the weapon's protective traits, causing more wood to form, ex
       <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
       <sowWork>1500</sowWork>
       <sowTags>
-        <li>EC_OverviewTagOnly</li>
+        <li>ET_OverviewTagOnly</li>
       </sowTags>
       <sowMinSkill>1</sowMinSkill>
       <blockAdjacentSow>true</blockAdjacentSow>

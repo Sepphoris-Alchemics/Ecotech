@@ -5,7 +5,7 @@
 
 -->
 
-  <ThingDef Name="EC_PrimaTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="ET_PrimaTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/PrimaTurret/ShotgunTurret</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -43,8 +43,8 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="EC_PrimaTurretPlantBase"> <!--Prima shotgun turret-->
-    <defName>EC_PrimaTurretPlant_Shotgun</defName>
+  <ThingDef ParentName="ET_PrimaTurretPlantBase"> <!--Prima shotgun turret-->
+    <defName>ET_PrimaTurretPlant_Shotgun</defName>
     <label>Scatter Sentry Sprout</label>
     <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
 \nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires short-range, packed splinters.</description>
@@ -58,7 +58,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>EC_PrimaTurret_Shotgun</transformedThing>
+        <transformedThing>ET_PrimaTurrET_PrimaShotgun</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
@@ -67,8 +67,8 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="EC_PrimaTurretPlantBase"> <!--Prima spear turret-->
-    <defName>EC_PrimaTurretPlant_Spear</defName>
+  <ThingDef ParentName="ET_PrimaTurretPlantBase"> <!--Prima spear turret-->
+    <defName>ET_PrimaTurretPlant_Spear</defName>
     <label>Spear Sentry Sprout</label>
     <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
 \nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires large, armor-penetrating stakes.</description>
@@ -83,7 +83,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>EC_PrimaTurret_Spear</transformedThing>
+        <transformedThing>ET_PrimaTurret_Spear</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
@@ -92,8 +92,8 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="EC_PrimaTurretPlantBase"> <!--Prima thistle turret-->
-    <defName>EC_PrimaTurretPlant_SMG</defName>
+  <ThingDef ParentName="ET_PrimaTurretPlantBase"> <!--Prima thistle turret-->
+    <defName>ET_PrimaTurretPlant_SMG</defName>
     <label>Thistle Sentry Sprout</label>
     <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
 \nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires a volley of painful, needle-thin spines.</description>
@@ -108,7 +108,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>EC_PrimaTurret_SMG</transformedThing>
+        <transformedThing>ET_PrimaTurrET_PrimaSMG</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">

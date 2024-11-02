@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>EC_Filth_Acid</defName>
+    <defName>ET_Filth_Acid</defName>
     <label>acid puddle</label>
 	<description>A puddle of acid</description>
     <statBases>
@@ -23,7 +23,7 @@
   </ThingDef>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>EC_Filth_Sap</defName>
+    <defName>ET_Filth_Sap</defName>
     <label>sap puddle</label>
     <description>A puddle of sap. Flammable.</description>
     <useHitPoints>true</useHitPoints>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DesignationDef>
-    <defName>EC_InstallInSlottedThingTransformer</defName>
+    <defName>ET_InstallInSlottedThingTransformer</defName>
     <texturePath>UI/Designations/InstallableInSlottedThingTransformer</texturePath>
     <targetType>Thing</targetType>
   </DesignationDef>

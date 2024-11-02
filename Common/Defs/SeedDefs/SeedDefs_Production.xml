@@ -6,7 +6,7 @@
 	-To-do: Later used in Perrenial Weapons.
 -->
   <ThingDef ParentName="ResourceBase">
-    <defName>EC_Seed_SapFilter</defName>
+    <defName>ET_Seed_SapFilter</defName>
     <label>Sap Transposer Seed</label>
     <description>A special seed that will grow into a sap transposer. The sap transposer will grow in roughly a day</description>
     <possessionCount>1</possessionCount>
@@ -17,7 +17,7 @@
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>0.3</drawSize>
     </graphicData>
-    <stackLimit>150</stackLimit>
+    <stackLimit>3</stackLimit>
     <healthAffectsPrice>true</healthAffectsPrice>
     <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
@@ -32,7 +32,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>EC_SapFilterPlant</plantDefToSpawn>
+        <plantDefToSpawn>ET_SapFilterPlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>
@@ -42,7 +42,7 @@
         <lifespanTicks>240000</lifespanTicks>
       </li>
     </comps>
-    <allowedArchonexusCount>2</allowedArchonexusCount>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
   </ThingDef>
 
 </Defs>

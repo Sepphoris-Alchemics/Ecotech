@@ -2,7 +2,7 @@
 <Defs>
 
   <DamageDef>
-	<defName>EC_AcidDamage</defName>
+	<defName>ET_AcidDamage</defName>
 	<label>acid burn</label>
 	<workerClass>DamageWorker_AddInjury</workerClass>
 	<externalViolence>true</externalViolence>
@@ -31,7 +31,7 @@
 
   <!--Hailcannon damage-->
     <DamageDef ParentName="CutBase">
-    <defName>EC_HailcannonDamage</defName>
+    <defName>ET_HailcannonDamage</defName>
     <label>cut</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <hediff>Cut</hediff>
@@ -42,7 +42,7 @@
 
   <!-- Briar Cutting damage-->
     <DamageDef ParentName="CutBase">
-    <defName>EC_BriarDamage</defName>
+    <defName>ET_BriarDamage</defName>
     <label>cut</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <hediff>Cut</hediff>
@@ -51,14 +51,14 @@
     <buildingDamageFactor>0.4</buildingDamageFactor>
     <additionalHediffs>
       <li>
-        <hediff>EC_BriarHediff</hediff>
+        <hediff>ET_BriarHediff</hediff>
         <severityPerDamageDealt>0.01</severityPerDamageDealt>
       </li>
     </additionalHediffs>
   </DamageDef>
 
   <DamageDef>
-    <defName>EC_BriarDamageStake</defName> <!--Briar Damage inflicted from Duocaster-->
+    <defName>ET_BriarDamageStake</defName> <!--Briar Damage inflicted from Duocaster-->
     <label>stab</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
@@ -72,7 +72,7 @@
     <makesAnimalsFlee>true</makesAnimalsFlee>
     <additionalHediffs>
       <li>
-        <hediff>EC_BriarHediff</hediff>
+        <hediff>ET_BriarHediff</hediff>
         <severityPerDamageDealt>0.02</severityPerDamageDealt>
       </li>
     </additionalHediffs>
@@ -81,7 +81,7 @@
 
 
   <DamageDef>
-	<defName>EC_SeedbursterDamage</defName>
+	<defName>ET_SeedbursterDamage</defName>
 	<label>pierce</label>
 	<workerClass>DamageWorker_AddInjury</workerClass>
 	<externalViolence>true</externalViolence>
@@ -101,7 +101,7 @@
   </DamageDef>
 
   <DamageDef>
-	  <defName>EC_SplinterDamage</defName>
+	  <defName>ET_SplinterDamage</defName>
 	  <label>pierce</label>
 	  <workerClass>DamageWorker_AddInjury</workerClass>
 	  <externalViolence>true</externalViolence>
@@ -118,7 +118,7 @@
     <explosionCellFleck>DustPuff</explosionCellFleck>
     <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
     <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
-    <soundExplosion>EC_Sound_WoodExplosion1</soundExplosion>
+    <soundExplosion>ET_Sound_WoodExplosion1</soundExplosion>
   </DamageDef>
 
 
@@ -126,7 +126,7 @@
 
 
   <DamageDef>
-	  <defName>EC_NightshadeThornDamage</defName>
+	  <defName>ET_NightshadeThornDamage</defName>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been stabbed to death.</deathMessage>
@@ -139,7 +139,7 @@
     <hediffSolid>Crack</hediffSolid>
     <additionalHediffs>
       <li>
-        <hediff>EC_NightshadeDamageBuildup</hediff>
+        <hediff>ET_NightshadeDamageBuildup</hediff>
         <severityPerDamageDealt>0.2</severityPerDamageDealt>
         <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
       </li>
@@ -148,7 +148,7 @@
 
 
   <!--<DamageDef>
-	<defName>EC_NightshadeDamage</defName>
+	<defName>ET_NightshadeDamage</defName>
 	<label>nightshade coating</label>
 	<workerClass>DamageWorker_AddInjury</workerClass>
 	<externalViolence>true</externalViolence>
@@ -156,7 +156,7 @@
 	<impactSoundType>Slice</impactSoundType>
     <additionalHediffs>
       <li>
-        <hediff>EC_NightshadeDamageBuildup</hediff>
+        <hediff>ET_NightshadeDamageBuildup</hediff>
         <severityPerDamageDealt>0.2</severityPerDamageDealt>
         <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
         <inverseStatScaling>true</inverseStatScaling>
@@ -178,7 +178,7 @@
 
 
   <DamageDef> <!--Basically a copy of RangedStab with Psychic hediff, since RangedStab can't be referenced as a parent.-->
-	  <defName>EC_PsychicShot</defName>
+	  <defName>ET_PsychicShot</defName>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been stabbed to death.</deathMessage>
@@ -191,7 +191,7 @@
     <hediffSolid>Crack</hediffSolid>
     <additionalHediffs>
       <li>
-        <hediff>EC_PsychicDamageBuildup</hediff>
+        <hediff>ET_PsychicDamageBuildup</hediff>
         <severityPerDamageDealt>0.01</severityPerDamageDealt>
         <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
       </li>

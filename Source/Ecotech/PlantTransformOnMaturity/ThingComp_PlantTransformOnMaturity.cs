@@ -32,7 +32,7 @@ namespace Ecotech
         private void Transform()
         {
             Map map = parent.Map;
-            Faction faction = parent.Faction;
+            Faction faction = Faction.OfPlayer;
             parent.Destroy(DestroyMode.WillReplace);
             Thing thingToSpawn = Props.MakeThing();
             thingToSpawn.SetFaction(faction);

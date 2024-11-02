@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>EC_GlowsapBay</defName>
+		<defName>ET_GlowsapBay</defName>
 		<label>Glowsap Bay</label>
 		<description>A large container filled with glowsap, intended for indoor or emergency growth. Doesn't require electricity, but will frequently need to be refilled with healthy glowsap as it's nutrients are depleted.
 Since this basin was specifically designed to house glowsap, this basin cannot support anything else besides Ecotech plants. However, it will give all supported plants a slight growth boost.</description>
@@ -27,7 +27,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<techLevel>Neolithic</techLevel>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>EC_GlowsapBays</li>
+      <li>ET_GlowsapBays</li>
     </researchPrerequisites>
 		<!--<constructEffect>ConstructWood</constructEffect>-->
 		<fillPercent>0.30</fillPercent>
@@ -45,13 +45,13 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		</statBases>
 		<size>(1,4)</size>
 		<costList>
-			<EC_Glowsap>30</EC_Glowsap>
+			<ET_Glowsap>30</ET_Glowsap>
 			<WoodLog>40</WoodLog>
 		</costList>
 		<fertility>1.2</fertility>
 		<building>
-			<defaultPlantToGrow>EC_GlowsapBloom</defaultPlantToGrow>
-			<sowTag>EC_GlowsapCompatible</sowTag>
+			<defaultPlantToGrow>ET_GlowsapBloom</defaultPlantToGrow>
+			<sowTag>ET_GlowsapCompatible</sowTag>
 			<buildingTags>
 				<li>Production</li>
 			</buildingTags>
@@ -76,7 +76,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
         <fuelCapacity>30.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>EC_Glowsap</li>
+            <li>ET_Glowsap</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>

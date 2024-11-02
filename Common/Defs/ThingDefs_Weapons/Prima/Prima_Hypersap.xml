@@ -5,7 +5,7 @@
 At their matured form, they are given their maturity increases-->
 
 	<ThingDef ParentName="UpgradedHypersapTerraweapon_Single">
-		<defName>EC_PrimaShotgunHypersap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
+		<defName>ET_PrimaShotgunHypersap</defName> <!--Rename to PrimaShotgunUpgraded in 1.5-->
 		<label>prima hyperburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with the Sap of Discorder. The presence of the sap has increased it's range, projectile speed, and fire rate.</description>
 		<graphicData>
@@ -81,9 +81,9 @@ At their matured form, they are given their maturity increases-->
 
 
 	<ThingDef ParentName="UpgradedHypersapTerraweapon_Single">
-		<defName>EC_PrimaSMGHypersap</defName>
+		<defName>ET_PrimaSMGHypersap</defName>
 		<label>prima hypershredder</label>
-		<description>The Apex form of the Prima Pincaster, infused with the Sap of Disorder. The presence of the sap has enabled the pineshredder has increased the range, projectile speed, and fire rate.
+		<description>The Apex form of the Prima Pincaster, infused with the Hypersap. The presence of the sap has enabled the pineshredder has increased the range, projectile speed, and fire rate.
 \nAdditionally, the sap has also altered the minimum and maximum projectiles. It now fires 3-7 projectiles per burst, instead of 4-5.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Hypersap/PrimaSMGUpgraded_HS</texPath>
@@ -171,7 +171,7 @@ At their matured form, they are given their maturity increases-->
 	</ThingDef>
 
 	<ThingDef ParentName="UpgradedHypersapTerraweapon_Burst">
-		<defName>EC_HypercasterI</defName>
+		<defName>ET_HypercasterI</defName>
 		<label>Hypercaster I</label>
 		<description>A special iteration of the Stakecaster evolution line. The addition of Hypersap has improved the range, projectile speed, fire rate, and projectile potential.
 \nStronger variants of the Hypercaster exist, which can be achieved by replacing the sap of higher-evolved Stakecasters.</description>
@@ -214,7 +214,7 @@ At their matured form, they are given their maturity increases-->
         <range>34.9</range>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>EC_Sound_LightStake</soundCast>
+        <soundCast>ET_Sound_LightStake</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
@@ -227,7 +227,7 @@ At their matured form, they are given their maturity increases-->
         <range>34.9</range>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>EC_Sound_LightStake</soundCast>
+        <soundCast>ET_Sound_LightStake</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>-->

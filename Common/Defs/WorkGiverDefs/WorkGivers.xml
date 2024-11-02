@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <WorkGiverDef>
-    <defName>EC_FillThingConverter</defName>
+    <defName>ET_FillThingConverter</defName>
     <label>fill thing converter</label>
     <giverClass>Ecotech.WorkGiver_FillThingConverter</giverClass>
     <workType>Hauling</workType>
@@ -15,7 +15,7 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>EC_EmptyThingConverter</defName>
+    <defName>ET_EmptyThingConverter</defName>
     <label>empty thing converter</label>
     <giverClass>Ecotech.WorkGiver_EmptyThingConverter</giverClass>
     <workType>Hauling</workType>
@@ -29,7 +29,7 @@
   </WorkGiverDef>
   
   <WorkGiverDef>
-    <defName>EC_FillAutoHaulThingContainer</defName>
+    <defName>ET_FillAutoHaulThingContainer</defName>
     <label>fill thing container</label>
     <giverClass>Ecotech.WorkGiver_FillAutoHaulThingContainer</giverClass>
     <workType>Hauling</workType>
@@ -43,7 +43,7 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>EC_EmptyAutoHaulThingContainer</defName>
+    <defName>ET_EmptyAutoHaulThingContainer</defName>
     <label>empty thing container</label>
     <giverClass>Ecotech.WorkGiver_EmptyAutoHaulThingContainer</giverClass>
     <workType>Hauling</workType>
@@ -57,7 +57,7 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>EC_FillSlottedThingTransformer</defName>
+    <defName>ET_FillSlottedThingTransformer</defName>
     <label>fill transformer</label>
     <giverClass>Ecotech.WorkGiver_FillSlottedThingTransformer</giverClass>
     <workType>Hauling</workType>

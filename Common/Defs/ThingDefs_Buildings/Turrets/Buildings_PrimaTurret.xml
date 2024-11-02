@@ -48,7 +48,7 @@
 <!--=====SPEAR/STAKE TURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>EC_PrimaTurret_Spear</defName>
+    <defName>ET_PrimaTurret_Spear</defName>
     <label>Prima Spear Sentry</label>
     <description>A small, organic sentry that fires two mid-range stakes. Does not require power or fuel.</description>
     <!--Old description: <description>A turret grown from a specialized seed. Fire two spear-like projectiles at targets within it's radius, which are slow to shoot, but can be devastating on impact.
@@ -68,7 +68,7 @@
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
-    <designatorDropdown>EC_PrimaTurretGroup</designatorDropdown>
+    <designatorDropdown>ET_PrimaTurretGroup</designatorDropdown>
     <minifiedDef IsNull="True" />
     <uiIconPath>Things/Security/PrimaTurret/PrimaTurret_MenuIcon</uiIconPath> <!--temp-->
     <altitudeLayer>Building</altitudeLayer>
@@ -96,7 +96,7 @@
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
           <thingDefs>
-            <li>EC_SunDrop</li>
+            <li>ET_SunDrop</li>
           </thingDefs>
         </fuelFilter>
       </li>
@@ -108,7 +108,7 @@
       <li>BuildingsSecurity</li>
     </thingCategories>-->
     <!--<costList>
-      <EC_Seed_PrimaStakeTurret>1</EC_Seed_PrimaStakeTurret>
+      <ET_Seed_PrimaStakeTurret>1</ET_Seed_PrimaStakeTurret>
     </costList>-->
     <!--<constructionSkillPrerequisite>5</constructionSkillPrerequisite>-->
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
@@ -121,9 +121,10 @@
       <WoodLog>4</WoodLog>
     </killedLeavings>
     <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <claimable>true</claimable>
       <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>EC_PrimaTurretSpearGun</turretGunDef>
+      <turretGunDef>ET_PrimaTurretSpearGun</turretGunDef>
       <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
@@ -134,7 +135,7 @@
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>EC_PrimaTurretSeeds</li>
+      <li>ET_PrimaTurretSeeds</li>
     </researchPrerequisites>
     <modExtensions>
 			<!--<li Class="HeavyWeapons.HeavyWeapon">
@@ -147,7 +148,7 @@
 <!--Prima Turret Gun-->
 
   <ThingDef ParentName="BaseWeaponTurret">
-    <defName>EC_PrimaTurretSpearGun</defName>
+    <defName>ET_PrimaTurretSpearGun</defName>
     <label>Prima Spear Sentry</label>
     <description>A sentry grown from specialized seeds. Despite being a plant, a network of sensitive roots allow the sentry to identify hostiles from a short distance, and a hardy wooden shell allows it to withstand a limited amount of damage.
 \n\nPrima Sentries are entirely organic, and do not require power. However due to it's biological nature, old or expired Prima Sentries will need to be replaced with fresh ones.</description>
@@ -176,12 +177,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>EC_PrimaTurretStake</defaultProjectile>
+        <defaultProjectile>ET_PrimaTurretStake</defaultProjectile>
         <warmupTime>8.0</warmupTime>
         <range>22.9</range>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <burstShotCount>2</burstShotCount>
-        <soundCast>EC_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_Blowgun1</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
@@ -193,7 +194,7 @@
 <!--=====THISTLE  MICROTURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>EC_PrimaTurret_SMG</defName>
+    <defName>ET_PrimaTurrET_PrimaSMG</defName>
     <label>Prima Thistle Sentry</label>
     <description>A small organic sentry that fires rapid volleys of tiny thorns. Does not require power or fuel.</description>
     <thingClass>Building_TurretGun</thingClass>
@@ -210,7 +211,7 @@
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
-    <designatorDropdown>EC_PrimaTurretGroup</designatorDropdown>
+    <designatorDropdown>ET_PrimaTurretGroup</designatorDropdown>
     <minifiedDef IsNull="True" />
     <uiIconPath>Things/Security/PrimaTurretSMG/PrimaTurretSMG_MenuIcon</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
@@ -238,7 +239,7 @@
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
           <thingDefs>
-            <li>EC_SunDrop</li>
+            <li>ET_SunDrop</li>
           </thingDefs>
         </fuelFilter>
       </li>
@@ -247,8 +248,8 @@
     <fillPercent>0</fillPercent>
     <hasTooltip>true</hasTooltip>
     <costList>
-      <!--<EC_SurgeSeed_PrimaMicroTurret>1</EC_SurgeSeed_PrimaMicroTurret>-->
-      <!--<EC_Seed_PrimaSMGTurret>1</EC_Seed_PrimaSMGTurret>-->
+      <!--<ET_SurgeSeed_PrimaMicroTurret>1</ET_SurgeSeed_PrimaMicroTurret>-->
+      <!--<ET_Seed_PrimaSMGTurret>1</ET_Seed_PrimaSMGTurret>-->
     </costList>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <!--<designationCategory>EcotechDesignation</designationCategory>-->
@@ -260,9 +261,10 @@
       <WoodLog>4</WoodLog>
     </killedLeavings>
     <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <claimable>true</claimable>
       <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>EC_PrimaTurretSMGGun</turretGunDef>
+      <turretGunDef>ET_PrimaTurretSMGGun</turretGunDef>
       <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
@@ -273,14 +275,14 @@
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>EC_PrimaTurretSeeds</li>
+      <li>ET_PrimaTurretSeeds</li>
     </researchPrerequisites>
   </ThingDef>
 
 <!--Thistle Microturret Gun-->
 
   <ThingDef ParentName="BaseWeaponTurret">
-    <defName>EC_PrimaTurretSMGGun</defName>
+    <defName>ET_PrimaTurretSMGGun</defName>
     <label>Prima Thistle Sentry</label>
     <description>A sentry grown from specialized seeds. This particular organic sentry is quite small and not very durable, but is capable of unleashing an impressive volley of sharn thorns.
 \n\nPrima Sentries are entirely organic, and do not require power. However due to it's biological nature, old or expired Prima Sentries will need to be replaced with fresh ones.</description>
@@ -309,12 +311,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>EC_PrimaTurretSMGShot</defaultProjectile>
+        <defaultProjectile>ET_PrimaTurretSMGShot</defaultProjectile>
         <warmupTime>4.0</warmupTime>
         <range>16.9</range>
         <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
         <burstShotCount>5</burstShotCount>
-        <soundCast>EC_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_Blowgun1</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
@@ -326,7 +328,7 @@
 <!--=====SCATTER MICROTURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>EC_PrimaTurret_Shotgun</defName>
+    <defName>ET_PrimaTurrET_PrimaShotgun</defName>
     <label>Prima Scatter Sentry</label>
     <description>A small organic sentry that fires a tight spread of pellets. Does not require power or fuel.</description>
     <thingClass>Building_TurretGun</thingClass>
@@ -343,7 +345,7 @@
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
-    <designatorDropdown>EC_PrimaTurretGroup</designatorDropdown>
+    <designatorDropdown>ET_PrimaTurretGroup</designatorDropdown>
     <minifiedDef IsNull="True" />
     <uiIconPath>Things/Security/PrimaTurretShotgun/PrimaTurretShotgun_MenuIcon</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
@@ -371,7 +373,7 @@
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
           <thingDefs>
-            <li>EC_SunDrop</li>
+            <li>ET_SunDrop</li>
           </thingDefs>
         </fuelFilter>
       </li>
@@ -380,8 +382,8 @@
     <fillPercent>0</fillPercent>
     <hasTooltip>true</hasTooltip>
     <costList>
-      <!--<EC_SurgeSeed_PrimaMicroTurret>1</EC_SurgeSeed_PrimaMicroTurret>-->
-      <!--<EC_Seed_PrimaShotgunTurret>1</EC_Seed_PrimaShotgunTurret>-->
+      <!--<ET_SurgeSeed_PrimaMicroTurret>1</ET_SurgeSeed_PrimaMicroTurret>-->
+      <!--<ET_Seed_PrimaShotgunTurret>1</ET_Seed_PrimaShotgunTurret>-->
     </costList>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <!--<designationCategory>EcotechDesignation</designationCategory>-->
@@ -393,9 +395,10 @@
       <WoodLog>4</WoodLog>
     </killedLeavings>
     <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <claimable>true</claimable>
       <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>EC_PrimaTurretShotgunGun</turretGunDef>
+      <turretGunDef>ET_PrimaTurretShotgunGun</turretGunDef>
       <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
@@ -406,13 +409,13 @@
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>EC_PrimaTurretSeeds</li>
+      <li>ET_PrimaTurretSeeds</li>
     </researchPrerequisites>
   </ThingDef>
 
 <!--Scatter Microturret Gun-->
   <ThingDef ParentName="BaseWeaponTurret">
-    <defName>EC_PrimaTurretShotgunGun</defName>
+    <defName>ET_PrimaTurretShotgunGun</defName>
     <label>Prima Scatter Sentry</label>
     <description>A sentry grown from specialized seeds. This particular organic sentry is quite small and not very durable, but is capable of unleashing a powerful spread of pellets.
 \n\nPrima Sentries are entirely organic, and do not require power. However due to it's biological nature, a new sentry needs to be planted once this one withers away.</description>
@@ -441,10 +444,10 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>EC_PrimaTurretShotgunShot</defaultProjectile>
+        <defaultProjectile>ET_PrimaTurretShotgunShot</defaultProjectile>
         <warmupTime>4.0</warmupTime>
         <range>12.9</range>
-        <soundCast>EC_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_Blowgun1</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
@@ -455,10 +458,10 @@
 <!--Prima Turret Stake shot-->
 
   <ThingDef ParentName="BaseBullet">
-    <defName>EC_PrimaTurretStake</defName>
+    <defName>ET_PrimaTurretStake</defName>
     <label>Prima Stake</label>
     <graphicData>
-      <texPath>Things/Projectile/EC_StakeSmall</texPath>
+      <texPath>Things/Projectile/ET_StakeSmall</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
@@ -472,11 +475,11 @@
   </ThingDef>
 
 <!--Prima Thistle Microturret Shot-->
-  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_SMG-->
-    <defName>EC_PrimaTurretSMGShot</defName>
+  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_PrimaSMG-->
+    <defName>ET_PrimaTurretSMGShot</defName>
     <label>smol terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/EC_Thorn</texPath>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.2</drawSize>
     </graphicData>
@@ -489,11 +492,11 @@
   </ThingDef>
 
 <!--Prima Scatter Microturret Shot-->
-  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_Shotgun-->
-    <defName>EC_PrimaTurretShotgunShot</defName>
+  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_PrimaShotgun-->
+    <defName>ET_PrimaTurretShotgunShot</defName>
     <label>smol terrathorn</label>
     <graphicData>
-      <texPath>Things/Projectile/EC_Thorn</texPath>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.2</drawSize>
     </graphicData>

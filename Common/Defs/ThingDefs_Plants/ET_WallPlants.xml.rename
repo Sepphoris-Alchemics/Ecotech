@@ -3,7 +3,7 @@
 
 
   <ThingDef ParentName="PlantBaseNonEdible">
-    <defName>EC_ElderwoodWallPlant</defName>
+    <defName>ET_ElderwoodWallPlant</defName>
     <label>elderwood wall growth</label>
     <description>An organic clump that will grow into an Elderwood Wall. Takes roughly a day to fully grow; however, the Custodian needs to "plant" the wall first.</description>
     <graphicData>
@@ -32,11 +32,11 @@
       <allowAutoCut>false</allowAutoCut>
       <sowWork>1000</sowWork>
       <sowTags>
-        <li>EC_ElderwoodGrowSpot</li>
+        <li>ET_ElderwoodGrowSpot</li>
       </sowTags>
       <sowMinSkill>2</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>EC_TerrastructureBasics</li>
+        <li>ET_TerrastructureBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.01</topWindExposure>
@@ -50,7 +50,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>EC_ElderwoodWall</transformedThing>
+        <transformedThing>ET_ElderwoodWall</transformedThing>
       </li>
     </comps>
   </ThingDef>

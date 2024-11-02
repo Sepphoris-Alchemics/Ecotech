@@ -7,7 +7,7 @@
 -->
 
   <ThingDef ParentName="ResourceBase">
-    <defName>EC_Seed_Terraforge</defName>
+    <defName>ET_Seed_Terraforge</defName>
     <label>Terraforge Channeling Seed</label>
     <description>A durable seed specifically patterned to immediately grow into a Terraforge, which is critical in Ecotech usage. The Terraforge violently roots into the surface beneath it, making it unable to be moved once planted.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
@@ -43,7 +43,7 @@
     </recipeMaker>-->
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>EC_TerraforgePlant</plantDefToSpawn>
+        <plantDefToSpawn>ET_TerraforgePlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -54,7 +54,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>EC_Seed_SmallTerravat</defName>
+    <defName>ET_Seed_SmallTerravat</defName>
     <label>Small Terravat Channeling Seed</label>
     <description>A durable seed specifically patterned to quickly grow into a small Terravat, which modifies items with contained saps. The Terravat deeply roots into the surface beneath it, making it unable to be moved once planted.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
@@ -90,7 +90,7 @@
     </recipeMaker>-->
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>EC_SmallTerravatPlant</plantDefToSpawn>
+        <plantDefToSpawn>ET_SmallTerravatPlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -101,8 +101,84 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>EC_Seed_BuildingTree</defName>
-    <label>Custodian Tree Seed</label>
+    <defName>ET_Seed_PrimaBrightsapLamp</defName>
+    <label>Prima Brightlamp Seed</label>
+    <description>A bright, warm seed that has been patterned to grow into a Brightlamp. The Brightlamp deeply roots into the surface beneath it, making it unable to be moved once planted.
+\n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>45</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_PrimaBrightsapLampPlant</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+    </comps>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_PrimaBrightsapColumn</defName>
+    <label>Prima Brightsap Column Seed</label>
+    <description>A bright, warm seed that has been patterned to grow into a Brightsap Column. The seed deeply roots into the surface beneath it, making it unable to be moved once planted.
+\n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>45</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_PrimaBrightsapColumnPlant</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+    </comps>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_BuildingTreeTierOne</defName>
+    <label>Elderwood Custodian Seed</label>
     <description>A durable seed that can be planted to grow an Custodian Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
@@ -128,7 +204,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>EC_BuildingTreeTierOne</plantDefToSpawn>
+        <plantDefToSpawn>ET_BuildingTreeTierOne</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -139,8 +215,8 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>EC_Seed_SentinelTree</defName>
-    <label>Sentinel Tree Seed</label>
+    <defName>ET_Seed_SentinelTreeTierOne</defName>
+    <label>Elderwood Sentinel Seed</label>
     <description>A durable seed that can be planted to grow a Sentinel Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
@@ -166,7 +242,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>EC_SentinelTreeTierOne</plantDefToSpawn>
+        <plantDefToSpawn>ET_SentinelTreeTierOne</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
@@ -177,8 +253,8 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>EC_Seed_SapTree</defName>
-    <label>Spectra Tree Seed</label>
+    <defName>ET_Seed_SapTreeTierOne</defName>
+    <label>Elderwood Spectra Seed</label>
     <description>A durable seed that can be planted to grow a Spectra Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
@@ -204,7 +280,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>EC_SapTreeTierOne</plantDefToSpawn>
+        <plantDefToSpawn>ET_SapTreeTierOne</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>

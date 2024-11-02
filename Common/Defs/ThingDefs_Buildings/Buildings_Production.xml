@@ -34,7 +34,7 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>EC_ChannelingSpot</defName>
+    <defName>ET_ChannelingSpot</defName>
     <label>seed channeling spot</label>
     <description>A place to focus and shape the most fundamental of Ecotech seeds. Not very fast, but serves as the entryway into using Ecotech.</description>
     <thingClass>Building_WorkTable</thingClass>
@@ -58,7 +58,7 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
     <recipes>
-      <li>EC_TerraforgeSeedRecipe</li>
+      <li>ET_TerraforgeSeedRecipe</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -86,14 +86,14 @@
   </ThingDef>
 
   <ThingDef ParentName="BenchBase">
-    <defName>EC_Terraforge</defName>
-    <label>Terraforge</label>
-    <description>A grown building that channels natural energies of the world, allowing you to shape existing Ecotech, or grow new Ecotech formations.
+    <defName>ET_Terraforge</defName>
+    <label>Prima Terraforge</label>
+    <description>A grown structure that channels natural energies of the world, allowing you to shape existing Ecotech, or grow new Ecotech formations.
 Some Ecotech creations may have features that simply make the product unusable, or even dangerous, to most races (generally to ward off undeserving colonies). The Terraforge exists to refine that Ecotech into a usable state - not by destruction, by rather by letting the creation know that it is in safe hands.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
     <!--<costList>
-      <EC_Seed_Terraforge>1</EC_Seed_Terraforge>
+      <ET_Seed_Terraforge>1</ET_Seed_Terraforge>
     </costList>-->
     <tickerType>Normal</tickerType>
     <graphicData>
@@ -112,7 +112,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>EC_TerraseedEssentials</li>
+      <li>ET_TerraseedEssentials</li>
     </researchPrerequisites>
     <castEdgeShadows>false</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
@@ -144,21 +144,21 @@ Some Ecotech creations may have features that simply make the product unusable, 
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
     <recipes>
-      <li>EC_BuildingTreeSeedRecipe</li>
-      <li>EC_SapTreeSeedRecipe</li>
-      <li>EC_SentinelTreeSeedRecipe</li>
-      <li>EC_SapFilterSeedRecipe</li>
-      <li>EC_TerraforgeSeedRecipe</li>
-      <li>EC_PrimaTurretSeedApexToStake</li>
-      <li>EC_PrimaTurretSeedApexToSMG</li>
-      <li>EC_PrimaTurretSeedApexToShotgun</li>
+      <li>ET_BuildingTreeSeedRecipe</li>
+      <li>ET_SapTreeSeedRecipe</li>
+      <li>ET_SentinelTreeSeedRecipe</li>
+      <li>ET_SapFilterSeedRecipe</li>
+      <li>ET_TerraforgeSeedRecipe</li>
+      <li>ET_PrimaTurretSeedApexToStake</li>
+      <li>ET_PrimaTurretSeedApexToSMG</li>
+      <li>ET_PrimaTurretSeedApexToShotgun</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>
     <surfaceType>Item</surfaceType>
     <killedLeavings>
-      <EC_Seed_Terraforge>1</EC_Seed_Terraforge>
+      <ET_Seed_Terraforge>1</ET_Seed_Terraforge>
     </killedLeavings>
     <building>
       <deconstructible>false</deconstructible>
@@ -186,7 +186,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
         <fuelCapacity>30</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>EC_Glowsap</li>
+            <li>ET_Glowsap</li>
           </thingDefs>
         </fuelFilter>
         <initialFuelPercent>1</initialFuelPercent>

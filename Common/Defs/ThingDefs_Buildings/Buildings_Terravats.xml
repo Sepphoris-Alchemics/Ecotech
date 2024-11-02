@@ -7,13 +7,13 @@
     Used for progressing most weapons quickly
     Used for refining other items
 
-  ENDOSAP/SAP OF PERMANENCE:
+  ENDOSAP/Endosap:
     Used for improving durability and lifespan
 
-  SUNSAP/SAP OF VIVICATION:
+  SUNSAP/Brightsap:
     Used for revitalizing any weapon
 
-  HYPERSAP/SAP OF DISORDER:
+  HYPERSAP/Hypersap:
     Used for improving shot capacity
 
   ARCHSAP:
@@ -21,7 +21,7 @@
   -->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>EC_TerravatBasic</defName>
+    <defName>ET_TerravatBasic</defName>
     <label>Small Terravat</label>
     <description>An organic wooden growth that sustains an accessible sap chamber, designed for Ecotech experimentation and evolution. Twice a season, this vat will utilize the glowsap within, and will "advance" the various items within into another form. This unlocks security measures that Ecotech might employ, or even advance it into a unique, more powerful variant.
 \n\nTo use a Terravat:
@@ -53,7 +53,7 @@
     </statBases>
     <!--<costList>
       <WoodLog>80</WoodLog>
-      <EC_Glowsap>30</EC_Glowsap>
+      <ET_Glowsap>30</ET_Glowsap>
     </costList>-->
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
@@ -67,7 +67,7 @@
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>EC_Terravats</li>
+      <li>ET_Terravats</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
@@ -135,7 +135,7 @@
         <transformationCycleIntervalTicks>900000</transformationCycleIntervalTicks>
         <validFuels>
           <li>
-            <fuelThingDef>EC_Glowsap</fuelThingDef>
+            <fuelThingDef>ET_Glowsap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Glowsap</texPath>
@@ -152,7 +152,7 @@
             </extraGraphicDataIfTransforming>
           </li>
           <li>
-            <fuelThingDef>EC_Sunsap</fuelThingDef>
+            <fuelThingDef>ET_Brightsap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Sunsap</texPath>
@@ -169,7 +169,7 @@
             </extraGraphicDataIfTransforming>
           </li>
           <li>
-            <fuelThingDef>EC_Endosap</fuelThingDef>
+            <fuelThingDef>ET_Endosap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Endosap</texPath>
@@ -186,7 +186,7 @@
             </extraGraphicDataIfTransforming>
           </li>
           <li>
-            <fuelThingDef>EC_Hypersap</fuelThingDef>
+            <fuelThingDef>ET_Hypersap</fuelThingDef>
             <!-- these graphics can be omitted without breaking anything. -->
             <extraGraphicDataIfNotTransforming>
               <texPath>Things/Building/Terravats/SmallVat/Hypersap</texPath>

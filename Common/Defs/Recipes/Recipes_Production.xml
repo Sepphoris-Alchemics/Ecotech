@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <RecipeDef>
-    <defName>EC_TerraforgeSeedRecipe</defName>
+    <defName>ET_TerraforgeSeedRecipe</defName>
     <label>shape channeling seed (terraforge) </label>
     <description>Shape a seed that will quickly grow into a Terraforge. The terraforge is crucial in utilizing and advancing Ecotech.</description>
     <jobString>shaping a sap terraforge seed.</jobString>
@@ -10,20 +10,20 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
-    <researchPrerequisite>EC_TerraseedEssentials</researchPrerequisite>
+    <researchPrerequisite>ET_TerraseedEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>6400</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <EC_Seed_Terraforge>1</EC_Seed_Terraforge>
+      <ET_Seed_Terraforge>1</ET_Seed_Terraforge>
     </products>
     <displayPriority>900</displayPriority>
   </RecipeDef>
 
   <RecipeDef>
-    <defName>EC_SapFilterSeedRecipe</defName>
+    <defName>ET_SapFilterSeedRecipe</defName>
     <label>shape channeling seed (sap transposer) </label>
     <description>Shape a seed that will quickly grow into a Sap Transposer. Sap Transposers take excess glowsap, and filter it into a random, more specialized sap.</description>
     <jobString>shaping a sap transposer seed.</jobString>
@@ -32,20 +32,20 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
-    <researchPrerequisite>EC_GlowsapRefinement</researchPrerequisite>
+    <researchPrerequisite>ET_GlowsapRefinement</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>3200</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <EC_Seed_SapFilter>1</EC_Seed_SapFilter>
+      <ET_Seed_SapFilter>1</ET_Seed_SapFilter>
     </products>
     <displayPriority>910</displayPriority>
   </RecipeDef>
 
   <RecipeDef>
-    <defName>EC_SmallTerravatSeedRecipe</defName>
+    <defName>ET_SmallTerravatSeedRecipe</defName>
     <label>shape channeling seed (small terravat) </label>
     <description>Shape a seed that will quickly grow into a small Terravat. This terravat is quite compact, but can only hold one item at a time.</description>
     <jobString>shaping a terrvat seed.</jobString>
@@ -54,14 +54,14 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>EC_Terravats</researchPrerequisite>
+    <researchPrerequisite>ET_Terravats</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>4800</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <EC_Seed_SmallTerravat>1</EC_Seed_SmallTerravat>
+      <ET_Seed_SmallTerravat>1</ET_Seed_SmallTerravat>
     </products>
     <displayPriority>920</displayPriority>
   </RecipeDef>

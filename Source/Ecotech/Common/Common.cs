@@ -12,11 +12,11 @@ namespace Ecotech
     [StaticConstructorOnStartup]
     public static class Common
     {
-        public static JobDef fillThingConverterJobDef = DefDatabase<JobDef>.GetNamed("EC_FillThingConverter");
-        public static JobDef emptyThingConverterJobDef = DefDatabase<JobDef>.GetNamed("EC_EmptyThingConverter");
-        public static JobDef insertIntoSlottedTransformerJobDef = DefDatabase<JobDef>.GetNamed("EC_InsertIntoSlottedThingTransformer");
+        public static JobDef fillThingConverterJobDef = DefDatabase<JobDef>.GetNamed("ET_FillThingConverter");
+        public static JobDef emptyThingConverterJobDef = DefDatabase<JobDef>.GetNamed("ET_EmptyThingConverter");
+        public static JobDef insertIntoSlottedTransformerJobDef = DefDatabase<JobDef>.GetNamed("ET_InsertIntoSlottedThingTransformer");
         public static Texture2D installableInSlottedThingTransformerGizmoTexture = ContentFinder<Texture2D>.Get("UI/Gizmo/InstallableInSlottedThingTransformerGizmo");
-        public static DesignationDef installInSlottedThingTransformerDesignation = DefDatabase<DesignationDef>.GetNamed("EC_InstallInSlottedThingTransformer");
+        public static DesignationDef installInSlottedThingTransformerDesignation = DefDatabase<DesignationDef>.GetNamed("ET_InstallInSlottedThingTransformer");
 
         static List<TransformerRecipe> _allTransformerRecipes;
         public static List<TransformerRecipe> AllTransformerRecipes

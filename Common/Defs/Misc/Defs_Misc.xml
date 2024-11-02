@@ -13,24 +13,24 @@
       <li>Designator_PlantsHarvest</li>
     </specialDesignatorClasses>
     <researchPrerequisites>
-      <li>EC_TerraseedEssentials</li>
+      <li>ET_TerraseedEssentials</li>
     </researchPrerequisites>
   </DesignationCategoryDef>
 
   <ThingCategoryDef>
-    <defName>EC_PrimaWeaponsMature</defName>
+    <defName>ET_PrimaWeaponsMature</defName>
     <label>prima weapons - matured</label>
     <parent>Root</parent>
   </ThingCategoryDef>
 
    <WorkGiverDef>
-    <defName>EC_ExtractPrimaTurretSeed</defName>
+    <defName>ET_ExtractPrimaTurretSeed</defName>
     <label>extract prima turret seed</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>EC_TerravatBasic</li>
+      <li>ET_TerravatBasic</li>
     </fixedBillGiverDefs>
     <verb>extract seed at</verb>
     <gerund>extracting seed at</gerund>
@@ -41,13 +41,13 @@
   </WorkGiverDef>
 
    <WorkGiverDef>
-    <defName>EC_DoBillsTerraforge</defName>
+    <defName>ET_DoBillsTerraforge</defName>
     <label>shape seeds</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>EC_Terraforge</li>
+      <li>ET_Terraforge</li>
     </fixedBillGiverDefs>
     <verb>shape seed at</verb>
     <gerund>shaping seed at</gerund>
@@ -57,7 +57,7 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
-  <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="EC_MuseumDisplayBase">
+  <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_MuseumDisplayBase">
     <label>Display Case</label>
     <thingClass>Building</thingClass>
     <description>A display case to display things in.</description>
@@ -88,8 +88,8 @@
     </building>
   </ThingDef>
 
-  <ThingDef ParentName="EC_MuseumDisplayBase">
-    <defName>EC_Museums_DisplayCase_Small</defName>
+  <ThingDef ParentName="ET_MuseumDisplayBase">
+    <defName>ET_Museums_DisplayCase_Small</defName>
     <rotatable>false</rotatable>
     <size>(1,1)</size>
     <statBases>
@@ -108,7 +108,7 @@
   </ThingDef>
 
     <ThingDef ParentName="Wall">
-    <defName>EC_LinkedDisplayBase</defName>
+    <defName>ET_LinkedDisplayBase</defName>
     <label>Museum Display</label>
     <description>Displays Items.</description>
     <graphicData>

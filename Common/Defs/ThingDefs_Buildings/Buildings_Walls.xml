@@ -33,21 +33,20 @@
 <Defs>
 
     <ThingDef ParentName="Wall">
-    <defName>EC_ElderwoodWall</defName>
-    <label>Elderwood Wall</label>
-    <description>A special wall grown from an Elderwood Sentinel. Infinitely renewable and more durable than normal wood, but extremely flammable, and vulnerable to cutting and explosives.</description>
-
+    <defName>ET_TerramassWall</defName>
+    <label>Terramass Wall</label>
+    <description>A special wall molded from Terramass. Infinitely renewable and one of the only Terratech walls that can be crafted by hand, but extremely flammable and weak. It also does not interfere with nature medication.</description>
     <graphicData>
-      <texPath>Things/Building/Linked/Walls/ElderwoodWall_Atlas</texPath>
+      <texPath>Things/Building/Walls/PlantWall/PlantWall_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>	
-      <color>(51,38,27)</color>
+      <color>(68,74,49)</color>
     </graphicData>
-    <uiIconPath>Things/Building/Linked/Walls/ElderwoodWall_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Walls/PlantWall/PlantWall_MenuIcon</uiIconPath>
     <statBases>
-      <MaxHitPoints>255</MaxHitPoints> <!--Between Silver and Steel-->
-      <WorkToBuild>0</WorkToBuild> <!--shouldn't be buildable-->
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
       <Flammability>3</Flammability>
-      <Beauty>2</Beauty>
+      <Beauty>0</Beauty>
     </statBases>
     <damageMultipliers>
       <li>
@@ -55,7 +54,9 @@
         <multiplier>2</multiplier>
       </li>
     </damageMultipliers>
-
+    <costList>
+	    <ET_TerramassMaterial>10</ET_TerramassMaterial>
+    </costList>
     <tickerType>Normal</tickerType>
     <costStuffCount>0</costStuffCount>
     <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
@@ -63,13 +64,7 @@
     <building>
       <repairable>false</repairable>
     </building>
-  
-    <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    </comps>
-	
-</ThingDef>
+    <designationCategory>EcotechDesignation</designationCategory>
+  </ThingDef>
 
 </Defs>

@@ -2,7 +2,7 @@
 <Defs>
 
 <!--<ThingDef ParentName="BuildingBase">
-    <defName>EC_ElderwoodGrowSpot</defName>
+    <defName>ET_ElderwoodGrowSpot</defName>
     <label>elderwood growing spot</label>
     <description>Inlay a little glowsap into terrain, and coerce Sentinels to grow walls here over time. Works on most terrains.
 This particular spot will grow elderwood walls, which are fast to grow, but have sub-par resilience.
@@ -23,7 +23,7 @@ You need an Elderwood Custodian present on the map in order for the walls to gro
       <WorkToBuild>30</WorkToBuild>
     </statBases>
     <costList>
-      <EC_Glowsap>2</EC_Glowsap>
+      <ET_Glowsap>2</ET_Glowsap>
     </costList>
     <uiOrder>2600</uiOrder>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>

@@ -3,7 +3,7 @@
 
   <!-- Example. Plop this in a planting pot and let the plant grow. Spawns a chair and refunds the pot materials. -->
   <!--<ThingDef ParentName="PlantBaseNonEdible">
-    <defName>EC_ChairSeed</defName>
+    <defName>ET_ChairSeed</defName>
     <label>chair seed</label>
     <description>Lmao, why not</description>
     <graphicData>
@@ -37,7 +37,7 @@
     </comps>
   </ThingDef>-->
 
-  <ThingDef Name="EC_BasicProductionPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="ET_BasicProductionPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/SapFilter/SapFilter</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -74,8 +74,8 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="EC_BasicProductionPlantBase">
-    <defName>EC_SapFilterPlant</defName>
+  <ThingDef ParentName="ET_BasicProductionPlantBase">
+    <defName>ET_SapFilterPlant</defName>
     <label>sap transposer sprout</label>
     <description>A lump of plant matter and soft wood that will sprout into a sap transposer. Takes roughly a day to fully grow. Proper nutrients are stored in the seed, allowing it to grow on most surfaces.</description>
     <graphicData>
@@ -98,7 +98,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>EC_GlowsapFilter</transformedThing>
+        <transformedThing>ET_GlowsapFilter</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
       <li Class="CompProperties_InspectString">

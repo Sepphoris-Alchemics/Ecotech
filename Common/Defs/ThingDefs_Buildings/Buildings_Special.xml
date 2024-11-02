@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!--<ThingDef ParentName="BuildingBase">
-    <defName>EC_GiftTreeTierOne</defName>
+    <defName>ET_GiftTreeTierOne</defName>
     <label>Elderwood Tidetree</label>
     <description>TBE.</description>
     <graphicData>
@@ -20,7 +20,7 @@
     </statBases>
     <costList>
       <WoodLog>50</WoodLog>
-      <EC_Glowsap>80</EC_Glowsap>
+      <ET_Glowsap>80</ET_Glowsap>
     </costList>
     <drawerType>MapMeshAndRealTime</drawerType>
     <minifiedDef>MinifiedThing</minifiedDef>
@@ -51,37 +51,37 @@
           <li>
             <weight>1.5</weight>
             <things>
-              <EC_Endosap>1</EC_Endosap>
+              <ET_Endosap>1</ET_Endosap>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-                <EC_Hypersap>1</EC_Hypersap>
+                <ET_Hypersap>1</ET_Hypersap>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-                <EC_Sunsap>1</EC_Sunsap>
+                <ET_Brightsap>1</ET_Brightsap>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-              <EC_Endosap>2~3</EC_Endosap>
+              <ET_Endosap>2~3</ET_Endosap>
             </things>
           </li>
           <li>
             <weight>0.2</weight>
             <things>
-              <EC_Hypersap>2</EC_Hypersap>
+              <ET_Hypersap>2</ET_Hypersap>
             </things>
           </li>
           <li>
             <weight>0.3</weight>
             <things>
-              <EC_Sunsap>2~3</EC_Sunsap>
+              <ET_Brightsap>2~3</ET_Brightsap>
             </things>
           </li>
         </potentialSpawnedThings>
