@@ -61,7 +61,7 @@
 
   <ThingDef ParentName="TreeBase"> <!--todo: add pod growth mechanic-->
     <defName>ET_SentinelTreeTierOne</defName>
-    <label>Elderwood Sentinel</label>
+    <label>Elderwood Sentinel Tree</label>
     <description>The Elderwood Sentinel is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Elderwood Sentinels provide various weapons and Prima seeds to their colony.
  Some of the weapons that Sentinels create are ancient designs, which were either forgotten, or never could be manually formed/grown in the first place.
 
@@ -78,7 +78,6 @@ While this tree is present, weapons and seeds will be created at the base of the
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
       <ThingDef>ET_Glowsap</ThingDef>
-      <!--<ThingDef>GlowsapTumor</ThingDef>-->
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -162,6 +161,12 @@ While this tree is present, weapons and seeds will be created at the base of the
             </things>
           </li>
           <li>
+            <weight>0.4</weight>
+            <things>
+              <ET_PerrenialSMG>1</ET_PerrenialSMG>
+            </things>
+          </li>
+          <li>
             <weight>0.01</weight>
             <things>
               <ET_RoyalSword>1</ET_RoyalSword>
@@ -190,8 +195,8 @@ While this tree is present, weapons and seeds will be created at the base of the
   <ThingDef ParentName="TreeBase"> <!--todo: add zone growth coding-->
     <defName>ET_BuildingTreeTierOne</defName>
     <label>Elderwood Custodian Tree</label>
-    <description>The Elderwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Custodian trees produce malleable plates of wood that can be used as a crafting material.
-This material is stronger and less flammable than normal wood, and is infinitely renewable.
+    <description>The Elderwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Elderwood custodian trees produce lumps of terramass that can be harvested from the ground.
+This tree will also periodically shed excess bark, creating malleable wooden plates that can be used for crafting and construction.
 
 Legend has it this tree was once able to independently shelter entire colonies. Whether or not that is true remains to be seen....</description>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -261,7 +266,7 @@ Legend has it this tree was once able to independently shelter entire colonies. 
     <comps>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>400000~600000</cycleDurationRangeTicks>
+        <cycleDurationRangeTicks>360000~540000</cycleDurationRangeTicks>
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
@@ -296,6 +301,20 @@ Legend has it this tree was once able to independently shelter entire colonies. 
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+      <li Class="CompProperties_SpawnSubplant">
+        <compClass>CompSpawnSubplantDuration</compClass>
+        <subplant>ET_TerramassPlantLarge</subplant>
+        <maxRadius>7.9</maxRadius>
+        <subplantSpawnDays>5</subplantSpawnDays>
+        <minGrowthForSpawn>0.6</minGrowthForSpawn>
+        <initialGrowthRange>0.5~0.8</initialGrowthRange>
+        <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+        <plantsToNotOverwrite>
+          <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+        </plantsToNotOverwrite>
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>
@@ -377,7 +396,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
     <comps>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>480000~600000</cycleDurationRangeTicks> <!--every 8-10 days-->
+        <cycleDurationRangeTicks>480000~660000</cycleDurationRangeTicks> <!--every 8-11 days-->
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
@@ -411,7 +430,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
             <weight>0.5</weight>
             <things>
               <ET_Glowsap>75</ET_Glowsap>
-              <ET_Endosap>2~3</ET_Endosap>
+              <ET_Endosap>1~3</ET_Endosap>
             </things>
           </li>
           <li>

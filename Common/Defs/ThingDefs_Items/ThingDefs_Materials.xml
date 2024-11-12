@@ -25,9 +25,9 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TerramassMaterial</defName>
         <label>Terramass</label>
-        <description>A moldable material made of thick plant matter, specked with bits of wood. A bit more durable and proective than normal wood, but much more flammable and heavy. It's best trait is it's extremely high renewability.</description>
+        <description>A moldable material made of thick plant matter, specked with bits of wood. A bit less durable and flammabible, but it's natural connection allows it to be manipulated faster. It's best trait is it's extremely high renewability.</description>
         <graphicData>
-            <drawSize>0.8</drawSize>
+            <drawSize>0.6</drawSize>
             <texPath>Things/Resource/Terramass</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
@@ -41,7 +41,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
             <MarketValue>0.9</MarketValue>
-            <MaxHitPoints>200</MaxHitPoints>
+            <MaxHitPoints>175</MaxHitPoints>
             <Mass>0.6</Mass>
             <Flammability>3</Flammability>
             <DeteriorationRate>1.5</DeteriorationRate>
@@ -59,6 +59,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
             <stuffAdjective>terramass</stuffAdjective>
             <categories>
                 <li>ET_Organic</li>
+                <li>Woody</li>
             </categories>
             <color>(68,74,49)</color>
             <commonality>0</commonality>
@@ -67,9 +68,9 @@ Weapons that use a type of wood come far before the wood source itself, since en
             <statFactors>
                 <MaxHitPoints>0.8</MaxHitPoints>
                 <Flammability>3</Flammability>
-                <WorkToMake>1.1</WorkToMake>
-                <WorkToBuild>1.1</WorkToBuild>
-                <DoorOpenSpeed>0.9</DoorOpenSpeed>
+                <WorkToMake>1.2</WorkToMake>
+                <WorkToBuild>1.2</WorkToBuild>
+                <DoorOpenSpeed>1.2</DoorOpenSpeed>
             </statFactors>
             <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
         </stuffProps>

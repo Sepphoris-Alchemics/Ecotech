@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Perrenial Rifle-->
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_PerrenialRifle</defName>		<!--Counterpart: Minigun-->
+		<label>Perrenial PSR</label>
+		<description>The Perrenial PSR (Plated Suppression Rifle) is a biotic weapon produced exclusively by a Sentinel Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
+\n\nAs the name implies, perrenial weapons have a very long lifespan, but they still do eventually expire. Hoever, they possess a unique ability that allows them to be replanted, and after about a quadrum they can be retrieved, with their lifespan revitalized.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/PerrenialRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>45</MaxHitPoints> <!--- mid/long range is increased by 0.15, touch/short decreased by 0.15-->
+			<AccuracyTouch>0.15</AccuracyTouch>
+			<AccuracyShort>0.15</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.32</AccuracyLong>
+			<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown> <!--half of the counterpart-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PerrenialNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>2.1</warmupTime> <!--0.4 faster than it's counterpart-->
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<range>25.9</range> <!--five less than it's counterpart-->
+				<soundCast>ET_Sound_Blowgun1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1800000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Perrenial Genome | Immutable
+Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_PerrenialSMG</defName>		<!--Counterpart: Minigun-->
+		<label>Perrenial Needler</label>
+		<description>The Perrenial Needler is a biotic weapon produced exclusively by a Sentinel Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to myth, it's projectiles do not explode.
+\n\nAs the name implies, perrenial weapons have a very long lifespan - roughly a year - but they still do eventually expire. Hoever, they possess a unique ability that allows them to be replanted, and after about a quadrum they can be retrieved, with their lifespan revitalized.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/PerrenialSMG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.20</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown> <!--half of the counterpart, rounded down-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PerrenialNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>2.1</warmupTime> <!--0.4 faster than it's counterpart-->
+				<burstShotCount>7</burstShotCount>
+				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+				<range>17.9</range> <!--five less than it's counterpart-->
+				<soundCast>ET_Sound_Blowgun1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1800000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Perrenial Genome | Immutable
+Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+</Defs>

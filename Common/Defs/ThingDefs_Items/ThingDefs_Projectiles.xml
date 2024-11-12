@@ -256,7 +256,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet">    <!--upgraded Stakecaster shot-->
+  <ThingDef ParentName="BaseBullet"> 
     <defName>Bullet_NightshadeRifle</defName>
     <label>poisonous terrathorn</label>
     <graphicData>

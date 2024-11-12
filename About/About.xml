@@ -6,47 +6,40 @@
 		<li>1.5</li>
 	</supportedVersions>
 	<modDependencies>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+    </li>
 	</modDependencies>
 	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
 	</loadAfter>
 	<packageId>SA.Ecotech</packageId>
-	<description>Mod Version: 1.0 (last updated @ 2.19.2024, ~4:00PM PST)
+	<description>Mod Version: 1.0 (last updated @ 11.11.2024, ~2:30AM PST)
 
 ====================
 
-A mod that introduces the ability to grow weapons and defenses in your garden, rather than machining them together.
+A high fantasy, tribal-oriented mod that introduces the ability to grow weapons and defenses in your garden, rather than machining them together.
 
-Currently introduces terraweapons, which only require a green thumb to plant, and patience to grow. They are just as effective as fabricated weapons, giving you a 100% all-natural, viable alternative to your colony defenses.
+Currently introduces several terraweapons, new materials, and new structures, all of which only require a green thumb to plant, and patience to grow. They are just as effective as fabricated weapons, giving you a 100% all-natural, viable alternative to your colony defenses.
 
-However, terraweapons require highly fertile soil, take a significant amount of time to grow, and will wither over time.
-
-This was originally is intended to provide decent weapons and equipment during a tech-limited, magic playthrough. No more relying on just bows!
-
-More additions, such as other weapons, turrets, traps, and even armor will come over time!
+No more need to be forced into higher tech levels to defend yourself! The goal of this mod is to provide a tribal-friendly way of upscaling your colony, while also being balanced.
 
 ====================
 
 Latest Minor Update:
--
+-None!
 
 Latest Major Features and Changes:
 
--Tribal Colonies gain access to Terraseed knowledge immediately, due to this mod being intended as a total alternative to mechanical weapons. Industrial+ colonies will needs to pour significant time into understanding this exclusive tribal power.
+-Release!
 
--New Terraweapon: Prima Turret, a short-range turret that requires fertile soil instead of electricity.
-
--New Terraweapon: Prima Seedburster, an organic ballistic launcher.
-
--New Terraweapon: Royal Hyperstem, which is the first in a new line of Terraweapons, and can only (currently) be bought (seeds will come later once more weapons are made; colonies using Ideology can aqcuire it via relic)
-
--Added Surge Seed research, which unlocks seeds for constructed/building-based equipment (like turrets and traps).
-
--Added a teaser research for future additions.
-
--Stake Caster is now an entry weapon.
-
--Simplified a couple researches; entry researches cost slightly more, but provides more weapons, and will provide more over time.
-Be aware these changes might impact early research progress. Any errors referencing them are one-time, and can be safely ignored.
+====================
 
 -Please report balancing and bug issues on the workshop page!
 

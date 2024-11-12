@@ -25,6 +25,8 @@
     <minifiedDef IsNull="True" />
     <thingCategories Inherit="False">
     </thingCategories>
+    <designationCategory Inherit="False">
+    </designationCategory>
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
       <WorkToBuild>5000</WorkToBuild>
@@ -104,6 +106,8 @@
     <minifiedDef IsNull="True" />
     <thingCategories Inherit="False">
     </thingCategories>
+    <designationCategory Inherit="False">
+    </designationCategory>
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
       <WorkToBuild>5000</WorkToBuild>
