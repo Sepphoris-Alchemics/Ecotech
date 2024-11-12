@@ -3,7 +3,7 @@
 
 <!--
 	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
-	-To-do: Later used in Perrenial Weapons.
+	-To-do: Later used in Perennial Weapons.
 -->
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_SapFilter</defName>

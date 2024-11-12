@@ -157,13 +157,13 @@ While this tree is present, weapons and seeds will be created at the base of the
           <li>
             <weight>0.4</weight>
             <things>
-              <ET_PerrenialRifle>1</ET_PerrenialRifle>
+              <ET_PerennialRifle>1</ET_PerennialRifle>
             </things>
           </li>
           <li>
             <weight>0.4</weight>
             <things>
-              <ET_PerrenialSMG>1</ET_PerrenialSMG>
+              <ET_PerennialSMG>1</ET_PerennialSMG>
             </things>
           </li>
           <li>

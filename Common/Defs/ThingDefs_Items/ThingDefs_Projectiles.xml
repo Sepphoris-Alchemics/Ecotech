@@ -4,7 +4,7 @@
   <!--Balancing should go by the following:
 Prima base damage should be +2 to their industrial counterpart
 Verdant base damage should be +3
-Perrenial should be +1
+Perennial should be +1
 Anima/Royal should be +4
 
 Light damage (SMGs, pistols, etc.) should be .12 penetration
@@ -274,10 +274,10 @@ Anima long range is brought down by 3
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet"> <!--heavy SMG -->
-    <defName>Bullet_PerrenialNeedle</defName>
-    <label>perrenial needle</label>
+    <defName>Bullet_PerennialNeedle</defName>
+    <label>perennial needle</label>
     <graphicData>
-      <texPath>Things/Projectile/ET_PerrenialNeedle</texPath>
+      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.4</drawSize>
     </graphicData>
@@ -290,10 +290,10 @@ Anima long range is brought down by 3
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet"> <!--Minigun -->
-    <defName>Bullet_PerrenialRifle</defName>
-    <label>perrenial needle</label>
+    <defName>Bullet_PerennialRifle</defName>
+    <label>perennial needle</label>
     <graphicData>
-      <texPath>Things/Projectile/ET_PerrenialNeedle</texPath>
+      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.4</drawSize>
     </graphicData>

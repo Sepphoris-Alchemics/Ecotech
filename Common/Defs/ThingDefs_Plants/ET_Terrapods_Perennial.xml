@@ -23,34 +23,34 @@ Tier 4 upgrades: 20
 Tier 4 surge seeds: 20
 -->
 
-  <ThingDef Name="ET_PrimaUpgradePodBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="ET_PerennialRegrowthPodBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
-      <texPath>Things/Plant/WeaponPod_Fortified</texPath>
+      <texPath>Things/Plant/PerennialPod</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <minifiedDef IsNull="True" />
     <statBases>
-      <MaxHitPoints>130</MaxHitPoints>
+      <MaxHitPoints>150</MaxHitPoints>
     </statBases>
     <selectable>true</selectable>
     <pathCost>14</pathCost>
-    <maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>
+    <!--<maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>-->
     <tickerType>Normal</tickerType>
     <plant>
       <growDays>1</growDays> 
-      <fertilityMin>0.5</fertilityMin>
+      <fertilityMin>0.3</fertilityMin>
       <fertilitySensitivity>0.1</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <burnedThingDef IsNull="True" />
-      <immatureGraphicPath>Things/Plant/WeaponPod_Fortified</immatureGraphicPath>
+      <immatureGraphicPath>Things/Plant/PerennialPod</immatureGraphicPath>
       <sowWork>200</sowWork>
       <sowTags>
         <li>Ground</li>
       </sowTags>
       <blockAdjacentSow>true</blockAdjacentSow>
-      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
-      <topWindExposure>0.25</topWindExposure>
-      <visualSizeRange>0.4~1</visualSizeRange>
+      <minSpacingBetweenSamePlant>3.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.66~1</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
       <sowResearchPrerequisites Inherit="False" />
       <mustBeWildToSow>true</mustBeWildToSow>
@@ -61,7 +61,7 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
 
-  <ThingDef ParentName="ET_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
+  <!--<ThingDef ParentName="ET_PrimaUpgradePodBase">
     <defName>ET_PrimaSMGUpgradePod</defName>
     <label>Pineshredder Pod</label>
     <description>A fortified Terrapod that is further advancing a Prima Pincaster. Will produce a single, revitalized Briarcaster when finished.
@@ -73,7 +73,7 @@ Tier 4 surge seeds: 20
       <li Class="CompProperties_Spawner">
         <thingToSpawn>ET_PrimaSMGUpgraded</thingToSpawn>
         <spawnCount>1</spawnCount>
-        <spawnIntervalRange>780000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3 days (180,000)-->
+        <spawnIntervalRange>780000</spawnIntervalRange>
         <spawnForbidden>false</spawnForbidden>
         <requiresPower>false</requiresPower>
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
@@ -83,56 +83,51 @@ Tier 4 surge seeds: 20
         <lifespanTicks>780030</lifespanTicks>
       </li>
     </comps>
-  </ThingDef>
+  </ThingDef>-->
 
 
-  <ThingDef ParentName="ET_PrimaUpgradePodBase"> <!--Prima Shotgun Upgrade-->
-    <defName>ET_PrimaShotgunUpgradePod</defName>
-    <label>Briarshredder Pod</label>
-    <description>A fortified Terrapod that is further advancing a Prima Spreadshot. Will produce a single, revitalized Briarshredder when finished.
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialSMGGrowthPod</defName>
+    <label>Perennial Needler Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial Needler when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
-    <plant>
-      <growDays>1</growDays> 
-    </plant>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>ET_PrimaSMGUpgraded</thingToSpawn>
+        <thingToSpawn>ET_PerennialSMG</thingToSpawn>
         <spawnCount>1</spawnCount>
-        <spawnIntervalRange>780000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3 days (180,000)-->
+        <spawnIntervalRange>900000</spawnIntervalRange> <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>
         <requiresPower>false</requiresPower>
-        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
         <showMessageIfOwned>true</showMessageIfOwned>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>780030</lifespanTicks>
+        <lifespanTicks>900030</lifespanTicks> <!--30 ticks longer to make sure the weapon spawns-->
       </li>
     </comps>
   </ThingDef>
 
 
-  <ThingDef ParentName="ET_PrimaUpgradePodBase"> <!--Prima Stakecaster Upgrade-->
-    <defName>ET_PrimaStakecasterUpgradePod</defName>
-    <label>Twincaster Pod</label>
-    <description>A fortified Terrapod that is further advancing a Prima Stakecaster. Will produce a single, revitalized Twincaster when finished.
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialRifleGrowthPod</defName>
+    <label>Perennial PSR Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial PSR when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
-    <plant>
-      <growDays>1</growDays> 
-    </plant>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>ET_PrimaTwincaster</thingToSpawn>
+        <thingToSpawn>ET_PerennialRifle</thingToSpawn>
         <spawnCount>1</spawnCount>
-        <spawnIntervalRange>810000</spawnIntervalRange> <!--needs to match 10 (600,000) + 3.5 days (210,000)-->
+        <spawnIntervalRange>900000</spawnIntervalRange> <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>
         <requiresPower>false</requiresPower>
-        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
         <showMessageIfOwned>true</showMessageIfOwned>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>810030</lifespanTicks>
+        <lifespanTicks>900030</lifespanTicks> <!--30 ticks longer to make sure the weapon spawns-->
       </li>
     </comps>
   </ThingDef>
+
 
 </Defs>

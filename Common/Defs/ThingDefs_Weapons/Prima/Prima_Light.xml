@@ -94,9 +94,6 @@
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
-				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PrimaStakecasterUpgradePod</plantDefToSpawn>
-      	</li>
       <li Class="Ecotech.ThingCompProperties_InstallableInSlottedThingTransformer"/>
 		</comps>
 	</ThingDef>
@@ -268,9 +265,6 @@
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
-				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PrimaSMGUpgradePod</plantDefToSpawn>
-      	</li>
 		</comps>
 		<modExtensions>
 			<li Class="VWEMakeshift.MoteProperties">
@@ -362,9 +356,6 @@
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
-				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PrimaShotgunUpgradePod</plantDefToSpawn>
-      	</li>
 		</comps>
 	</ThingDef>
 

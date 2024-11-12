@@ -90,7 +90,7 @@
 				<count>75</count>
 				<allowRoofed>True</allowRoofed>
 			</li>
-			<li Class="ScenPart_StartingResearch">
+			<!--<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
 				<project>ET_FundamentalArms</project>
 			</li>
@@ -101,7 +101,7 @@
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
 				<project>ET_StandardFirearms</project>
-			</li>
+			</li>-->
 			<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
 				<project>ET_ConduitSeeds</project>

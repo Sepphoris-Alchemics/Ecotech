@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Ecotech</name>
+	<name>Ecotech (Local)</name>
 	<author>Sepphoris,NightmareCorporation</author>
 	<supportedVersions>
 		<li>1.5</li>
@@ -19,7 +19,7 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Biotech</li>
 	</loadAfter>
-	<packageId>SA.Ecotech</packageId>
+	<packageId>SA.EcotechLocal</packageId>
 	<description>Mod Version: 1.0 (last updated @ 11.11.2024, ~2:30AM PST)
 
 ====================

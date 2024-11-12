@@ -38,12 +38,12 @@
     1: Prima Seeds: Learn how to make the basic weapons of terraweapons, which cover all weapons up to Pre-Microelectronics. Prima Weapons stike a balance between damage and durability, but cannot regenerate health. These are currently in the game.
     2: Verdant Seeds: Learn how to make verdant weapons, which cover all weapons up to Multi-Analyzer. Verdant Weapons have the highest durability, lower damage, but regenerate health over time when in direct sunlight.
     3: Royal/Anima Seeds: Learn how to make the most powerful weapons, which specifically cover weapons that are Spacer+. Royal weapons have extreme damage and the highest range, but the lowest durability. Their health can be regenerated within special buildings.
-    4: Perrenial: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
+    4: Perennial: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
 
   ***WEAPON DAMAGE VALUES***
-  1: Prima Weapons - will need to have stats knocked down once Perrenial Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
+  1: Prima Weapons - will need to have stats knocked down once Perennial Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
   2: Verdant Weapons: will have stats similar to original launch Prima Weapons. These will be the weapons that complete with industrial weapons. Slightly lower damage and range than normal weapons, but innate armor piercing, and health regen.
-  3: Perrenial Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
+  3: Perennial Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
   4: Anima Weapons: Powerful, weapons with a very small ammo reserve, but will recharge. Covers weapons that are long-range, such as snipers. Very high damage, lower reserves and warmup.
 
 ***WEAPON SUBGROUPS***
@@ -51,7 +51,7 @@
 
   1: Splinter Weapons: An upgrade of Prima weapons. These weapons create nasty splinters, causing quite a lot of bleeding and pain/mood debuffs.
   2: Blight/Miasma Weapons: An upgrade of Verdant weapons. The gene that prevent rotten growth is removed, allowing the weapon to inflict disease and capacitating hediffs.
-  3: Meld Weapons: An upgrade of Perrenial Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
+  3: Meld Weapons: An upgrade of Perennial Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
   4: Deeproot Weapons: An upgrade to Anima Weapons. Deeproot Weapons are able to communicate with one another, and work together. When a deeproot weapon kills a target, that target's innards may be removed, growing it into another Deeproot plant, such as sacs, turrets, or even a new weapon.
   
   6: Grenades: Learn how to make throwable grenades:
@@ -65,7 +65,7 @@
   6: Heavy Melee Patterns: Learn how to make melee weapons that consist of larger weapons. Includes warhammers, battleaxes, and greatswords.
 
   8: Potted Turrets: Learn how to make small turrets that are potted. Easily made, but extremely limited on ammo due to lack of space.
-  9: Prima/Verdant/Perrenial/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
+  9: Prima/Verdant/Perennial/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
   10: Biocannons: Large artillery plants that mimic mortars. Biocannons rely off specialize plants that are grown near them, using them as ammunition. Capable of firing spore shots, splinter shots, caustic shots, or sap shots.
 
     ?: Crystalline Infusion: Allows specialized plants that grow their own optics, allowing the creation of long-ranged weapons, such as sniper rifles and DMRs.

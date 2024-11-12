@@ -47,7 +47,7 @@ Verdant: 290
 Alkali Weapons: 240
 Blight: 280
 
-Perrenial: 750
+Perennial: 750
 Elder: 1400
 
 Royal: 600
@@ -71,7 +71,7 @@ Archwood: 2000
 
 			Spore: 45 days
 
-			Perrenial: 60 days
+			Perennial: 60 days
 			Deeproot (was Elder): 120 days (2 quadrums)
 
 			Anima: N/A
@@ -90,7 +90,7 @@ Archwood: 2000
 
 			Spore: Seed Spore Extraction
 
-			Perrenial: Can be planted to regrow back into a new perrenial weapon 50% faster
+			Perennial: Can be planted to regrow back into a new perennial weapon 50% faster
 			Deeproot: Sundrop Vat or Terraroot Vat
 
 			Anima: Sundrop Vat
@@ -113,8 +113,8 @@ Archwood: 2000
 
 			Spore: Harvested from tumors that are only produced by a specific mushroom tree. Must be planted in stone.
 
-			Perrenial: Selected from a special surge seed that's grown inside a special tree. This tree must be cut down to produce the weapon.
-			Deeproot: Grown from a Perrenial weapon that forms a new tree. This tree takes an entire year to grow.
+			Perennial: Selected from a special surge seed that's grown inside a special tree. This tree must be cut down to produce the weapon.
+			Deeproot: Grown from a Perennial weapon that forms a new tree. This tree takes an entire year to grow.
 
 			Anima/Royal: grown from a special pod that must be planted near an Anima tree. If Royalty is not installed, then it's simply grown from a special pod.
 			Linkroot: done via operation between a pawn and a special pod. The pawn will be in a coma while this operation is done.
@@ -224,7 +224,7 @@ Archwood: 2000
 
   ***PRIMA NOTES***
     Prima Weapons feature fast growth times.
-		Prima Weapons will need to have stats knocked down once Perrenial Weapons are introduced. 
+		Prima Weapons will need to have stats knocked down once Perennial Weapons are introduced. 
 		Prima Weapons should be fall within fast growth time (5-20 days).
 		Prima Weapons should reflect early-game sidearms that are above power in bows, but lower than normal guns. They should not mirror anything above Hi-Tech.
 		Verdant Weapons will require 10 days + half of the original growth time. This can bypass fast growth time.
