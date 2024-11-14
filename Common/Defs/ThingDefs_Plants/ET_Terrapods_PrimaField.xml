@@ -285,7 +285,7 @@ Tier 4 surge seeds: 20
     <comps>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>180000~270000</cycleDurationRangeTicks>        <!--6 to 9 days-->
+        <cycleDurationRangeTicks>360000~540000</cycleDurationRangeTicks>        <!--6 to 9 days-->
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <!--Melee weapons-->
@@ -402,7 +402,7 @@ Tier 4 surge seeds: 20
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>272000</lifespanTicks>        <!--2000 ticks after the latest spawning time, to ensure spawning happens.-->
+        <lifespanTicks>542000</lifespanTicks>        <!--2000 ticks after the latest spawning time, to ensure spawning happens.-->
       </li>
       <li Class="CompProperties_InspectString">
         <inspectString>Expires shortly after creating product</inspectString>

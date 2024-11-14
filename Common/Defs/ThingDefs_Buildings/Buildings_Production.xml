@@ -33,7 +33,7 @@
   -->
 
 <Defs>
-  <ThingDef ParentName="BuildingBase">
+  <!--<ThingDef ParentName="BuildingBase">
     <defName>ET_ChannelingSpot</defName>
     <label>seed channeling spot</label>
     <description>A place to focus and shape the most fundamental of Ecotech seeds. Not very fast, but serves as the entryway into using Ecotech.</description>
@@ -83,7 +83,7 @@
       <li>PlaceWorker_ReportWorkSpeedPenalties</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
-  </ThingDef>
+  </ThingDef>-->
 
   <ThingDef ParentName="BenchBase">
     <defName>ET_Terraforge</defName>

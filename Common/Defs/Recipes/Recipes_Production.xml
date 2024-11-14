@@ -10,6 +10,16 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
+    <!--<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>-->
     <researchPrerequisite>ET_TerraseedEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>

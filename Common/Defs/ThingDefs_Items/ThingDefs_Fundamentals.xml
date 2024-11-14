@@ -23,6 +23,7 @@
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
+      <WorkToMake>2400</WorkToMake>
       <MaxHitPoints>80</MaxHitPoints>
       <MarketValue>105</MarketValue>
       <Mass>0.015</Mass>
@@ -32,15 +33,16 @@
     <thingCategories>
       <li>PlantMatter</li>
     </thingCategories>
-    <!--<recipeMaker>
+    <recipeMaker>
       <recipeUsers>
         <li>CraftingSpot</li>
       </recipeUsers>
       <skillRequirements>
-        <Plants>6</Plants>
+        <Plants>2</Plants>
       </skillRequirements>
       <displayPriority>510</displayPriority>
-    </recipeMaker>-->
+    </recipeMaker>
+    <costList IsNull="True" />
     <comps>
       <li Class="CompProperties_Plantable">
         <plantDefToSpawn>ET_TerraforgePlant</plantDefToSpawn>

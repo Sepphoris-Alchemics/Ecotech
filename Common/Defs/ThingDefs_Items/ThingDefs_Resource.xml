@@ -283,6 +283,7 @@ Max lifespan decreased by 20% (rounded down)</description>
     <modExtensions>
       <li Class="Ecotech.ThingDefExtension_TransformerRecipe">        <!--recipes used by Terravats-->
         <recipes>
+          <!--Apex weapons-->
           <li>
             <fuelCount>1</fuelCount>            <!--how much fuel the Terravat uses for the process-->
             <inputThingDef>ET_PrimaSMGUpgraded</inputThingDef>            <!--the input item needed inside the Terravat-->
@@ -300,11 +301,74 @@ Max lifespan decreased by 20% (rounded down)</description>
             <inputThingDef>ET_PrimaShotgunUpgraded</inputThingDef>
             <outputThingDef>ET_PrimaShotgunUpgraded</outputThingDef>
           </li>
-          <!--<li>
+          <li>
             <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaSMGUpgraded</inputThingDef>
-            <outputThingDef>ET_PrimaSMGUpgraded</outputThingDef>
-          </li>-->
+            <inputThingDef>ET_PrimaStakecaster</inputThingDef>
+            <outputThingDef>ET_PrimaStakecaster</outputThingDef>
+          </li>
+          <!--Light weapons-->
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaPistol</inputThingDef>
+            <outputThingDef>ET_PrimaPistol</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaSMG</inputThingDef>
+            <outputThingDef>ET_PrimaSMG</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaShotgun</inputThingDef>
+            <outputThingDef>ET_PrimaShotgun</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaCarbine</inputThingDef>
+            <outputThingDef>ET_PrimaCarbine</outputThingDef>
+          </li>
+          <!--Heavy weapons-->
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaRifle</inputThingDef>
+            <outputThingDef>ET_PrimaRifle</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_Seedburster</inputThingDef>
+            <outputThingDef>ET_Seedburster</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_Hailcannon</inputThingDef>
+            <outputThingDef>ET_Hailcannon</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_AcidLauncher</inputThingDef>
+            <outputThingDef>ET_AcidLauncher</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaLMG</inputThingDef>
+            <outputThingDef>ET_PrimaLMG</outputThingDef>
+          </li>
+          <!--Melee weapons-->
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaKnife</inputThingDef>
+            <outputThingDef>ET_PrimaKnife</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaMace</inputThingDef>
+            <outputThingDef>ET_PrimaMace</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaSword</inputThingDef>
+            <outputThingDef>ET_PrimaSword</outputThingDef>
+          </li>
         </recipes>
       </li>
     </modExtensions>
