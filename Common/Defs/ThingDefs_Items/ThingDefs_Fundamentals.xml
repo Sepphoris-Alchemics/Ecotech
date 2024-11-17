@@ -42,7 +42,9 @@
       </skillRequirements>
       <displayPriority>510</displayPriority>
     </recipeMaker>
-    <costList IsNull="True" />
+    <costList>
+      <WoodLog>5</WoodLog>
+    </costList>
     <comps>
       <li Class="CompProperties_Plantable">
         <plantDefToSpawn>ET_TerraforgePlant</plantDefToSpawn>
