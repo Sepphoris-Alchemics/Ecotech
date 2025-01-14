@@ -36,7 +36,7 @@ Tier 4 surge seeds: 20
     </statBases>
     <selectable>true</selectable>
     <pathCost>14</pathCost>
-    <maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <plant>
       <fertilityMin>0.7</fertilityMin>
       <fertilitySensitivity>0.5</fertilitySensitivity>

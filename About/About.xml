@@ -20,7 +20,7 @@
 		<li>Ludeon.RimWorld.Biotech</li>
 	</loadAfter>
 	<packageId>SA.EcotechLocal</packageId>
-	<description>Mod Version: 1.0 (last updated @ 11.11.2024, ~2:30AM PST)
+	<description>Mod Version: 1.0.6 (last updated @ 1.14.2024, ~2:30PM PST)
 
 ====================
 
@@ -32,12 +32,16 @@ No more need to be forced into higher tech levels to defend yourself! The goal o
 
 ====================
 
-Latest Minor Update:
--None!
+Current Update:
+-(Major) Added messages that will appear after you research certain things, which will explain how to use the more unintuitive additions. This should help alleviate confusion!
 
-Latest Major Features and Changes:
+Last Minor Update:
+-Fixed two recipes missing in the Terravat.
 
--Release!
+Last Major Features and Changes:
+
+-Completely overhauled weapon sounds. They will now sound sharp and fast, opposed to their former 'Blowgun' sound. Note that the shotgun still doesn't have a dedicated sound; I will add it in as soon as I get a suitable one!
+-Due to popular request, removed maximum tech levels for plants and growable structures. You can now use EcoTech at any tech level. I will revisit tribal exclusivity later on.
 
 ====================
 

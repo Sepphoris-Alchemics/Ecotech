@@ -42,7 +42,7 @@
         <defaultProjectile>Bullet_ThornRifle</defaultProjectile>
         <warmupTime>2.125</warmupTime>
         <range>29.9</range>
-        <soundCast>ET_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
@@ -202,7 +202,7 @@
 				<burstShotCount>10</burstShotCount>
 				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <range>15.9</range>
-        <soundCast>ET_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
         <targetParams>
@@ -381,7 +381,7 @@
         <range>19.9</range>
         <burstShotCount>6</burstShotCount>
         <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-        <soundCast>Shot_Minigun</soundCast>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>

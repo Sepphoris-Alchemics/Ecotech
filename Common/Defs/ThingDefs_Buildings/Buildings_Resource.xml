@@ -25,7 +25,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<passability>PassThroughOnly</passability>
 		<pathCost>30</pathCost>
 		<techLevel>Neolithic</techLevel>
-    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
       <li>ET_GlowsapBays</li>
     </researchPrerequisites>

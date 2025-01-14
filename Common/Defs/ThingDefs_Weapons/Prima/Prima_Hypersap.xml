@@ -123,7 +123,7 @@ At their matured form, they are given their maturity increases-->
         <range>19.9</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCast>ET_Sound_BlowgunLight</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>

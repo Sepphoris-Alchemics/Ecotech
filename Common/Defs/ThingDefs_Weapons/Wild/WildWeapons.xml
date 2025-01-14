@@ -42,7 +42,7 @@
 				<burstShotCount>2</burstShotCount>
 				<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
 				<range>29.9</range>
-				<soundCast>ET_Sound_Blowgun1</soundCast>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>

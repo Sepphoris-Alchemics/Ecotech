@@ -16,7 +16,7 @@
     </statBases>
     <selectable>true</selectable>
     <pathCost>14</pathCost>
-    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <plant>
       <maxMeshCount>1</maxMeshCount>
       <growDays>0.5</growDays> 
@@ -58,7 +58,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_PrimaTurrET_PrimaShotgun</transformedThing>
+        <transformedThing>ET_PrimaTurret_PrimaShotgun</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">
@@ -108,7 +108,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_PrimaTurrET_PrimaSMG</transformedThing>
+        <transformedThing>ET_PrimaTurret_PrimaSMG</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">

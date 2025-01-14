@@ -138,7 +138,7 @@
         <defaultProjectile>Bullet_ThornPistol</defaultProjectile>
         <warmupTime>0.375</warmupTime>
         <range>22.9</range>
-        <soundCast>Shot_Revolver</soundCast>
+        <soundCast>ET_Sound_BlowgunLight</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
@@ -232,7 +232,7 @@
         <range>16.9</range>
         <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCast>ET_Sound_BlowgunLight</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
@@ -412,7 +412,7 @@
         <range>23.9</range>
 				<burstShotCount>2</burstShotCount>
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>

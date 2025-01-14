@@ -44,7 +44,7 @@
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
 				<range>25.9</range> <!--five less than it's counterpart-->
-				<soundCast>ET_Sound_Blowgun1</soundCast>
+				<soundCast>ET_Sound_Needle1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -131,7 +131,7 @@ Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
 				<burstShotCount>7</burstShotCount>
 				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
 				<range>17.9</range> <!--five less than it's counterpart-->
-				<soundCast>ET_Sound_Blowgun1</soundCast>
+				<soundCast>ET_Sound_Needle1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>

@@ -34,7 +34,7 @@ Tier 4 surge seeds: 20
     </statBases>
     <selectable>true</selectable>
     <pathCost>14</pathCost>
-    <!--<maxTechLevelToBuild>Neolithic</maxTechLevelToBuild>-->
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <tickerType>Normal</tickerType>
     <plant>
       <growDays>1</growDays> 

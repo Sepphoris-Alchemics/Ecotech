@@ -182,7 +182,7 @@
         <range>22.9</range>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <burstShotCount>2</burstShotCount>
-        <soundCast>ET_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
@@ -194,7 +194,7 @@
 <!--=====THISTLE  MICROTURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_PrimaTurrET_PrimaSMG</defName>
+    <defName>ET_PrimaTurret_PrimaSMG</defName>
     <label>Prima Thistle Sentry</label>
     <description>A small organic sentry that fires rapid volleys of tiny thorns. Does not require power or fuel.</description>
     <thingClass>Building_TurretGun</thingClass>
@@ -316,7 +316,7 @@
         <range>16.9</range>
         <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
         <burstShotCount>5</burstShotCount>
-        <soundCast>ET_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
@@ -328,7 +328,7 @@
 <!--=====SCATTER MICROTURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_PrimaTurrET_PrimaShotgun</defName>
+    <defName>ET_PrimaTurret_PrimaShotgun</defName>
     <label>Prima Scatter Sentry</label>
     <description>A small organic sentry that fires a tight spread of pellets. Does not require power or fuel.</description>
     <thingClass>Building_TurretGun</thingClass>
@@ -447,7 +447,7 @@
         <defaultProjectile>ET_PrimaTurretShotgunShot</defaultProjectile>
         <warmupTime>4.0</warmupTime>
         <range>12.9</range>
-        <soundCast>ET_Sound_Blowgun1</soundCast>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>

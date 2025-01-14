@@ -110,7 +110,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
       </damageData>
     </graphicData>
     <uiIconScale>0.5</uiIconScale>
-    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
       <li>ET_TerraseedEssentials</li>
     </researchPrerequisites>

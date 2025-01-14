@@ -65,7 +65,7 @@
     <hasInteractionCell>true</hasInteractionCell>
     <!--<designationCategory>EcotechDesignation</designationCategory>-->
     <uiIconScale>0.5</uiIconScale>
-    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
       <li>ET_Terravats</li>
     </researchPrerequisites>
