@@ -29,6 +29,7 @@ namespace Ecotech
             }
 
             bool anyLifespanEquipment = Find.Selector.SelectedPawns
+                .Where(p => p.equipment != null)
                 .Any(p => p.equipment.AllEquipmentListForReading
                     .Any(e => e.GetComp<ThingComp_EquippedLifespan>() != null)
                 );
