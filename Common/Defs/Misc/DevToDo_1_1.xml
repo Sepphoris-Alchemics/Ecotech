@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--==========1.5 Checklist==========
+
+
+====================
+CORE MECHANICS:
+	-Create basic neutral EcoTech faction (friendly to EcoTech start)
+		-Uses Wild, Sap-Infused, and alt-line weapons
+	-Create hostile EcoTech faction (neutral to EcoTech start)
+		-Uses Prima, Perennial, and other mainline weapons
+	-Add Terraforming Code
+	-Add Item/Structure Absorbing Code
+	-Add Plant Wall Growth Code
+	-Add Rotational Plant Code for Furniture
+	-Add dynamic graphics for weapons
+	-Add building that produces a resource tied to a research, whenever a research is done.
+	-Add Bloompox kill mechanic: pawn that dies to bloompox hediff becomes limited-time fertile growth spot.
+	-Add Soulbloom kill mechanic: pawn that dies to soulbloom hediff becomes unique statue.
+	
+	SECONDARY:
+	-Add genome crossing mechanic
+	-Add Potency weapon mechanic
+====================
+
+====================
+PRIMARY UPDATE FOCUS: CRYSTALS
+	The update will introduce crystals into the mod, and multiple ways to use them. They will be just as important as plants, will
+	cover much of the mid-game content, and pave the way into end-game. While plants represent change and growth, crystals represent
+	fortification and strength.
+
+====================
+PERRENIAL EXPANSION:
+	-Finish Perrenial Weapons Line:
+		-Add Needler (COMPLETE) | Evolves to Eldercaster
+		-Add Quadcaster | Evolves to Elderrifle
+		-Add Hypercannon (COMPLETE) | Evolves to Eldercannon
+		-Add PSR (Plated Supression Rifle) | COMPLETE
+		-Add Stormbow
+		-Add Stemglaive (COMPLETE) | Evolves to Elderglaive
+		-Add Pellet Grenades
+		-Add Pantheon Launcher
+
+	-Add Perennial Groveguard Turret
+	-Perrenial Weapons require Advanced Elderwood Methods before research
+	-Certain Perennial weapons can be fitted with a scope when Crystal Infusion is discovered.
+	-Perrenial is the last mainline wooden type you can get before needing to establish stronger facilities.
+	-Pantheon Launchers require heavy briar weaponry.
+
+	-Advanced Elderwood Methods allows the plating to seal itself without compromise, allowing formation of walls and tanks:
+		-Allows Elderwood Bays (1x3 Sap Bays)
+		-Allows Medium Terravats (1x3 Terravats)
+	
+	-After researching Elderwood Mastery, you can attempt to combine Perennial with Prima to form Briar weaponry.
+
+====================
+====================
+PRIMA WEAPONS:
+	-Add remaining upgraded variants
+	-Rework Acid Launcher to Sap Launcher:
+		-Basesap: Light acidic damage + light slowing
+		-Glowsap: Light acidic damage + lighting up area for a few days
+		-Brightsap: Medium acidic damage + lighting up area for a few days (later: enriches terrain)
+		-Endosap: Medium acidic damage + heavy slowing
+		-Hypersap: High acidic damage
+		(Following saps requires upgraded sap launcher)
+		-Toxsap: Medium acidic damage + poisoning
+		-Deepsap: Light acidic damage + entanglement
+		-Archsap: Very high acidic damage + slowing
+	-All sap launcher filth sticks around for 3-9 days.
+	-Upgraded variant allows infinite infusions, and is needed for more advanced launchers
+====================
+====================
+BRIAR WEAPONS:
+	-Finish Briar Weapons:
+		-Add Briar SMG
+		-Add Briar Sword
+		-Add Briar Stakecaster
+		-Add Brair Shotgun
+
+	-Add Briar Turret
+	-Requires Elderwood Mastery, and Deepsap Bay (a Sap Bay that allows two seeds to be planted at once in the same tile)
+	-Combining a Prima Apex Seed with a Perennial Seed results in a wooden, thorn-covered pod that produces a random Briar weapon.
+	-Briar Turret is made by combining an Apex Turret Seed with a Perennial Turret Seed.
+
+	-Briar weapons combine the growability of Prima weapons with the lifespan of Perennial weapons.
+	-Briar weapons inflict a briar debuff, which slows and cuts the pawn it hits.
+	-Briar Weapons have +3 range compared to their Prima counterparts.
+	-Briar weapons cannot have their sap replaced, do not drop anything upon expiry, and cannot be replanted, as they are
+	weapons that fully utilized their sap, and are too unstable to further modify.
+	-Briar weapons can still be replenished by brightsap, but requires a Deeproot Terravat.
+	-Briar weapons can also be soaked in Toxsap, but this too requires a Deeproot Terravat.
+	-Briar weapons grow 75% at the speed of Prima weapons, and have 75% of the Perennial lifespan.
+
+====================
+====================
+PLANTS:
+	- Add Convergence Conduit Tree
+		-This Conduit Tree takes two different seeds, and attempts to grow something out of them.
+		-Generally this will quickly produce an item matching the seed, and is a quick way to grow a limited amount of items.
+		-However, when two differing seeds that are compatible are thrown together, there is a small chance it produces
+		a new genome, such as Briar.
+	
+====================
+
+====================
+STRUCTURES:
+	- (Possible) Add Deepsap Bay
+		-Deepsap Bays allow the player to place two different seeds in the same bay, producing a special plant every so often.
+		-This is by far the fatest way to grow any weapon. Deepsap growth is 200% faster, and the output is 2, sometimes even 3, weapons.
+		-It's true power lies in fusing different seeds with others, which can produce brand new genomes.
+		-Deepsap Bays only lose Deepsap when seeds are present. Once the two seeds are chosen, the deepsap and seeds cannot be changed.
+		-Deepsap is extremely rare; it can only be bought from EcoTech traders, and one is given to the player starting scenario.
+		-Deepsap will also rarely be produced by tier 2 Conduit Trees (Deeproot).
+		-Each Deepsap Bay lasts a year before the sap needs to be replaced.
+		-Deepsap cannot grow normal plants, and may later be required for specific plant types.
+
+	-Add to Brightsap Lighting:
+		-Create Brightvines
+	-Create Glowsap Lighting:
+		-Glowsap Lamp
+		-Glowsap Pillar
+		-Glowvines
+	-Glowsap Lighting is a strain of Brightsap Lighting.
+====================
+
+====================
+SAPS:
+	-Add Meldsap
+		-A strange sap that takes multiple items, and fuses them together.
+		-Carried only by EcoTech factions, as it's beyond the understanding of outsiders.
+
+		-Used for creating Briarseeds
+		-Used for combining two saps to create higher potencies.
+====================
+	-->
+
+</Defs>

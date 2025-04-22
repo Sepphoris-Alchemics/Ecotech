@@ -3,24 +3,50 @@
 
 <!--==========1.5 DEV NOTES==========
 
+-10 PRIMARY weapon lines exist, 4 plant, 2 crystalline, 2 fungal, 2 hybrid.
+An additional 1 plant and 1 crystalline can exist based on a chosen growth method.
+Substrains are discovered after studying Rotvine and Soulbloom weaponry.
+	PLANT:
+		-Prima (substrain: Briar)
+		-Rotvine (depending on growth method)
+		-Perennial (substrain: Elder)
+		-Anima/Royal (substrain: Deeproot)
+		-Godwood/Archwood
 
-"Lifetime left" changed to "<Weapon> lifetime:"
+	HYBRID:
+		-Biolith
+		-???
+	
+	CRYSTALLINE:
+		-Soulbloom (depending on growth method)
+		-???
+		-???
 
-Change evolved weapon text from "Dormant" to "infused"
-Terrapod description stating the pod will be dormant if unable to grow
-Descriptions stating if a weapon will survive through winter.
-All matured and endosap weapons able to survive through winter (15+ days).
-Scenario starting with x2 Stakecaster, x1 OMR, and x1 Pinburster
-Glowsap Bay research time reduced to 1000
-Terravat time decreased to 800
-Complete all endoweapons
+	FUNGAL:
+		-Linkroot
+		-Symbiotic
 
-HIGH PRIORITY:
 
-Wall-mounted glowvine
-Ecotech Tab
-Shotgun Turret
-All 1x1 Prima turrets in the same designator
+Other genomes, such as Nightshade, only exist as Wild weapons.
+The types of wild weapons can be vast, but each type is generally very limited.
+
+
+"<Weapon> lifetime:" how long a weapon has until expiry.
+"<Weapon> potency:" how much power a weapon has until drained
+"<Weapon> core durability:" how many shots a weapon has until it needs to be regrown.
+
+====================
+WEAPON BASICS:
+====================
+ALL weapons should be able to survive through a standard winter (15+ days)
+	-Immature weapons can be exempt, but they MUST be able to accomplish this via infusion
+	or maturity.
+	-If a weapon can't survive the winter, their description should say so.
+
+Weapon evolutions have three states: "Dormant", "Infused", and "Immutable"
+	-Dormant means a weapon can accept an infusion
+	-Infused means the weapon has accepted an infusion
+	-Immutable means the weapon cannot be infused.
 
 -->
 
@@ -266,5 +292,134 @@ Archwood: 2000
 
 
 -->
+
+
+	<!--Test SMG; unfortunately this also means ammo can be unloaded, and that won't fly.-->
+	<ThingDef ParentName="BaseGun">
+		<defName>ET_PrimaSMGTest</defName>
+		<label>prima thorncaster</label>
+		<description>You shouldn't have this.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaSMGBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.25</AccuracyMedium>
+			<AccuracyLong>0.10</AccuracyLong>
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tickerType>Normal</tickerType>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+
+				<!--<verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>-->
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+      <comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>4000</lifespanTicks>
+          <replacementToSpawn>ChunkSlagSteel</replacementToSpawn>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+        </li>
+      </comps>
+		<!--<li Class="MVCF.Comps.CompProperties_VerbProps">
+			<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+			<verbProps>
+				<li>
+					<label>prima splintcaster</label>
+					<canBeToggled>false</canBeToggled>
+					<description>This weapon can be revitalized with special nutrients</description>
+					<comps>
+						<li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+							<compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+							<MaxShots>120</MaxShots>
+							<AmmoFilter>
+								<thingDefs>
+									<li>ET_SunDrop</li>
+								</thingDefs>
+							</AmmoFilter>
+							<ItemsPerShot>1</ItemsPerShot>
+							<ReloadTimePerShot>0.015</ReloadTimePerShot>
+		          <ReloadSound>Interact_Rifle</ReloadSound>
+              <StartLoaded>false</StartLoaded>
+						</li>
+					</comps>
+				</li>
+			</verbProps>
+		</li>
+		</comps>-->
+		<!--<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>4~8</shots>
+			</li>
+		</modExtensions>-->
+	</ThingDef>
 
 </Defs>

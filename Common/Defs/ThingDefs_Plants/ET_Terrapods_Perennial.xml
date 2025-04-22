@@ -129,5 +129,25 @@ Tier 4 surge seeds: 20
     </comps>
   </ThingDef>
 
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialCannonGrowthPod</defName>
+    <label>Perennial Cannon Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial Cannon when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>ET_PerennialCannon</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>900000</spawnIntervalRange> <!--15 days to respawn-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <showMessageIfOwned>true</showMessageIfOwned>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>900030</lifespanTicks> <!--30 ticks longer to make sure the weapon spawns-->
+      </li>
+    </comps>
+  </ThingDef>
 
 </Defs>

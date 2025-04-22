@@ -191,7 +191,7 @@ Anima long range is brought down by 3
     <projectile>
       <speed>32</speed>
       <damageDef>ET_SeedbursterDamage</damageDef>
-      <damageAmountBase>16</damageAmountBase>
+      <damageAmountBase>8</damageAmountBase>
       <explosionRadius>2.4</explosionRadius>
       <armorPenetrationBase>0.12</armorPenetrationBase>
       <arcHeightFactor>0.2</arcHeightFactor>
@@ -216,9 +216,13 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
+
+<!--Sap Launcher shots-->
+
+
   <ThingDef ParentName="BaseBullet">
-    <defName>ET_AcidShot</defName>
-    <label>acidic globule</label>
+    <defName>ET_SapShot_Hypersap</defName>
+    <label>hypersap globule</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -304,4 +308,29 @@ Anima long range is brought down by 3
       <speed>62</speed>
     </projectile>
   </ThingDef>
+
+  <ThingDef ParentName="BaseBullet"> <!--GL-->
+    <defName>Bullet_PerennialCannon</defName>
+    <label>pressure needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.4</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_SeedbursterDamage</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <explosionRadius>1.9</explosionRadius>
+      <armorPenetrationBase>0.16</armorPenetrationBase>
+      <speed>52</speed>
+      <postExplosionSpawnThingDef>ET_Filth_Sap</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+      <arcHeightFactor>0.01</arcHeightFactor>
+      <shadowSize>0.1</shadowSize>
+	  <explosionDelay>15</explosionDelay>
+    </projectile>
+  </ThingDef>
+
 </Defs>

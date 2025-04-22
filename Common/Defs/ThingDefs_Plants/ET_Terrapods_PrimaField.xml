@@ -242,7 +242,7 @@ Tier 4 surge seeds: 20
     <label>Terrapod: Acid Launcher</label>
     <description>A plant pod that will slowly grow a biotic launcher that sprays acid. Requires highly fertile terrain.</description>
     <plant>
-      <harvestedThingDef>ET_AcidLauncher</harvestedThingDef>
+      <harvestedThingDef>ET_PrimaSapLauncher_Basic</harvestedThingDef>
       <sowMinSkill>8</sowMinSkill>
       <growDays>10</growDays>
       <harvestWork>750</harvestWork>
@@ -361,7 +361,7 @@ Tier 4 surge seeds: 20
           <li>
             <weight>0.25</weight>
             <things>
-              <ET_AcidLauncher>1</ET_AcidLauncher>
+              <ET_PrimaSapLauncher_Basic>1</ET_PrimaSapLauncher_Basic>
             </things>
           </li>
           <li>

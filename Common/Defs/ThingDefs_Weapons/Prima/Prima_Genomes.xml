@@ -111,6 +111,20 @@ Transplants impossible | +3.75 hp/day (unequipped)</inspectString>
     </comps>
 	</ThingDef>
 
+<!--=====Perennial=====-->
+
+	<ThingDef Name="BasePerennialTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+      <MarketValue>40</MarketValue>
+    </statBases>
+		<tickerType>Normal</tickerType>
+  	<comps>
+		<li Class="CompProperties_SelfhealHitpoints">
+      <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+    </li>
+    </comps>
+	</ThingDef>
+	
 <!--=====Wild=====-->
 
 	<ThingDef Name="BaseWildTerraweapon" Abstract="True" ParentName="BaseGun">

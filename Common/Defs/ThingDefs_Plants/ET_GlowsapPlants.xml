@@ -159,7 +159,7 @@
     <label>chopped glowsap tree stump</label>
     <description>A stump left behind after a glowsap tree has been felled. Left outdoors, the stump will deteriorate in time.</description>
     <graphicData>
-      <texPath>Things/Plant/Stumps/AnimaChopped</texPath>
+      <texPath>Things/Plant/Stumps/Chopped</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
   </ThingDef>
@@ -169,7 +169,7 @@
     <label>smashed glowsap tree stump</label>
     <description>The remnants of a glowsap tree destroyed by damage. Left outdoors, the stump will deteriorate in time.</description>
     <graphicData>
-      <texPath>Things/Plant/Stumps/AnimaChopped</texPath>
+      <texPath>Things/Plant/Stumps/Chopped</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
   </ThingDef>

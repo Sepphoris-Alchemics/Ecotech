@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
+
 <!--Perennial Rifle-->
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BasePerennialTerraweapon">
 		<defName>ET_PerennialRifle</defName>		<!--Counterpart: Minigun-->
 		<label>Perennial PSR</label>
-		<description>The Perennial PSR (Plated Suppression Rifle) is a biotic weapon produced exclusively by a Sentinel Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
-\n\nAs the name implies, perennial weapons have a very long lifespan, but they still do eventually expire. Hoever, they possess a unique ability that allows them to be replanted, and after about a quadrum they can be retrieved, with their lifespan revitalized.</description>
+		<description>The Perennial PSR (Plated Suppression Rifle) is a biotic weapon, carved from the heart of an Epoch Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
+\n\nPerennial weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/Wild/PerennialRifle</texPath>
+			<texPath>Things/WeaponPerennial/Basic/ET_PerennialRifleBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -74,7 +76,7 @@
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>1800000</lifespanTicks>
+				<lifespanTicks>1200000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -83,19 +85,19 @@
         	<plantDefToSpawn>ET_PerennialRifleGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Perennial Genome | Immutable
-Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
+      <inspectString>Perennial Genome | Dormant
+Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
       </li>
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>ET_PerennialSMG</defName>		<!--Counterpart: Minigun-->
+	<ThingDef ParentName="BasePerennialTerraweapon">
+		<defName>ET_PerennialSMG</defName>		<!--Counterpart: Heavy SMG-->
 		<label>Perennial Needler</label>
-		<description>The Perennial Needler is a biotic weapon produced exclusively by a Sentinel Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to myth, it's projectiles do not explode.
-\n\nAs the name implies, perennial weapons have a very long lifespan - roughly a year - but they still do eventually expire. Hoever, they possess a unique ability that allows them to be replanted, and after about a quadrum they can be retrieved, with their lifespan revitalized.</description>
+		<description>The Perennial Needler is a biotic weapon, carved fom the heart of an Epoch Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to some myths, it's projectiles do not explode, nor are they pink.
+\n\nPerennial weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/Wild/PerennialSMG</texPath>
+			<texPath>Things/WeaponPerennial/Basic/ET_PerennialSMGBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -145,12 +147,11 @@ Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
-				<label>barrel</label>
+				<label>spear</label>
 				<capacities>
-					<li>Blunt</li>
 					<li>Poke</li>
 				</capacities>
-				<power>9</power>
+				<power>12</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
@@ -161,7 +162,7 @@ Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>1800000</lifespanTicks>
+				<lifespanTicks>1500000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -171,9 +172,98 @@ Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
       	</li>
     <li Class="CompProperties_InspectString">
       <inspectString>Perennial Genome | Immutable
-Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
+Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
       </li>
 		</comps>
 	</ThingDef>
 
+	<ThingDef ParentName="BasePerennialTerraweapon">
+		<defName>ET_PerennialCannon</defName>		<!--Counterpart: Grenade Launcher-->
+		<label>Perennial Spinecannon</label>
+		<description>The Perennial Spinecannon is a biotic weapon, carved from the heart of an Epoch Tree. This weapon fires a large stake at close range, which deal moderate damage on top of fragmenting into splinters that affect the immediate area. This makes the Cannon very capable against strong targets that are a bit too close for confort.
+\n\nPerennial weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+		<graphicData>
+			<texPath>Things/WeaponPerennial/Basic/ET_PerennialCannonBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.20</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown> <!--half of the counterpart, rounded down-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>3.2</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PerennialCannon</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>3.1</warmupTime> <!--0.4 faster than it's counterpart-->
+				<burstShotCount>1</burstShotCount>
+				<range>15.9</range> <!--eight less than it's counterpart-->
+				<forcedMissRadius>0.9</forcedMissRadius>
+				<soundCast>ET_Sound_Needle1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>spear</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>900000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+				<li Class="CompProperties_Plantable">
+        	<plantDefToSpawn>ET_PerennialCannonGrowthPod</plantDefToSpawn>
+      	</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Perennial Genome | Immutable
+Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
 </Defs>
