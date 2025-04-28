@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef>
+		<defName>ET_OrganicFaction</defName>
+		<label>Terratech Curators</label>
+    <description>Using the soil as their library, this faction has massive groves of hundreds - if not thousands - of plants constantly being grown and replanted, which has kept their tech alive for thousands of years. While they do not posess much metal, adn refuse to use alloys and fabricated tools, they are nontheless more than capable of defending themselves.\n\nThey generally keep to themselves, but are open to establishing relations to colonies that only embrace technolgies that don't exploit the earth (Medieval and lower).</description>
+    <pawnSingular>curator</pawnSingular>
+	<pawnsPlural>curator</pawnsPlural>
+    <settlementGenerationWeight>0.5</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Grovekeeper</leaderTitle>
+	<autoFlee>false</autoFlee>
+	<earliestRaidDays>7</earliestRaidDays>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath> <!--create custom icon-->
+    <colorSpectrum>
+      <li>(0.64, 0.05, 0.8)</li>
+      <li>(0.8, 0.05, 0.64)</li>
+    </colorSpectrum>
+	<factionNameMaker>ET_NamerOrganicFaction</factionNameMaker> <!--create custom def-->
+	<settlementNameMaker>ET_NamerOrganicSettlement</settlementNameMaker> <!--create custom def-->
+	<techLevel>Neolithic</techLevel>
+	<backstoryCategories>
+		<li>ET_OrganicFactionBackstories</li> <!--create custom def-->
+	</backstoryCategories>
+	<raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, .5)</li> 
+      </points>
+    </raidCommonalityFromPointsCurve>
+	<raidLootMaker>ET_OrganicRaidLootMaker</raidLootMaker> <!--create custom def-->
+    <caravanTraderKinds> <!--create defs-->
+      <li>ET_OrganicCaravan_Seeds</li>
+			<li>ET_OrganicCaravan_Saps</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds> <!--create defs-->
+      <li>ET_OrganicVisitor_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds> <!--create defs-->
+      <li>ET_FactionTrader_Base</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,40)</li>
+        <li>(70, 70)</li>
+        <li>(700, 150)</li>
+        <li>(1300, 250)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <pawnGroupMakers> <!--create defs-->
+			<!--
+			Perennial should be most common.
+			Prima should be second-most common, and should only be upgraded or sapped weaponry.
+			Both briar and wild wepaonry should be rare, and not upgraded.
+			"Random" means that weapons may or may not be infused
+			"Basic" means weapons won't be infused
+			"Infused" means weapons will be infused
+			-->
+      <li>
+        <kindDef>Combat</kindDef>
+    		<options>
+					<!--Perennial-->
+					<EC_PerennialGunner_RangeBased>2</EC_PerennialGunner_RangeBasic>
+					<EC_PerennialGunner_RangeInfused>2</EC_PerennialGunner_RangeInfused>
+					<EC_PerennialGunner_RangedRandom>6</EC_PerennialGunner_RangedRandom>
+					<EC_PerennialGunner_HeavyBasic>2</EC_PerennialGunner_HeavyBasic>
+					<EC_PerennialGunner_HeavyRandom>1</EC_PerennialGunner_HeavyRandom>
+					<EC_PerennialGunner_CQCRandom>5</EC_PerennialGunner_CQCRandom>
+					<EC_PerennialWarrior_MeleeRandom>4</EC_PerennialWarrior_MeleeRandom>
+					<EC_PerennialElite_RangedInfused>2</EC_PerennialElite_RangedInfused> <!--will have an advanced infusion-->
+					<EC_PerennialElite_MeleeInfused>2</EC_PerennialElite_MeleeInfused> <!--will have an advanced infusion-->
+					<!--Prima; these exclude base Prima weapons-->
+					<EC_PrimaGunner_AllInfused>5</EC_PrimaGunner_AllInfused>
+					<EC_PrimaGunner_HeavyRandom>3</EC_PrimaGunner_HeavyRandom>
+					<EC_PrimaWarrior_MeleeInfused>2</EC_PrimaWarrior_MeleeInfused>
+					<!--Briar-->
+					<EC_BriarGunner_SMG>4</EC_BriarGunner_SMG>
+					<EC_BriarGunner_Shotgun>3</EC_BriarGunner_Shotgun>
+					<EC_BriarGunner_Rifle>3<EC_BriarGunner_Rifle>
+					<!--Wild-->
+					<EC_NightshadeGunner>2</EC_NightshadeGunner>
+					<EC_GaubornGunner>2</EC_GaubornGunner>
+					<EC_BiolithGunner>1</EC_BiolithGunner>
+					<EC_RoyalGunner_Rifle>1</EC_RoyalGunner_Rifle>
+					<EC_RoyalWarrior_Sword>1</EC_RoyalWarrior_Sword>
+				</options>
+      </li>
+	  <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+			<SeerSpearman>10</SeerSpearman>
+			<Mercenary_Slasher>1</Mercenary_Slasher>
+			<SeerBowman>6</SeerBowman>
+			<SeerDefender>5</SeerDefender>
+			<SeerElite>2</SeerElite>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+          <Dromedary>4</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>6</Elephant>
+        </carriers>
+        <guards>
+			<SeerBowman>8</SeerBowman>
+			<Mercenary_Slasher>4</Mercenary_Slasher>
+			<SeerSpearman>10</SeerSpearman>
+			<SeerDefender>5</SeerDefender>
+		</guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+			<SeerBowman>10</SeerBowman>
+			<Mercenary_Slasher>12</Mercenary_Slasher>
+			<SeerElite>4</SeerElite>
+			<SeerSpearman>16</SeerSpearman>
+			<Mercenary_Elite>12</Mercenary_Elite>
+			<AncientSoldier>5</AncientSoldier>
+			<SeerDefender>10</SeerDefender>
+		</options>
+      </li>
+    </pawnGroupMakers>
+    <factionIconPath>World/ArcaneTown</factionIconPath>
+	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>77</configurationListOrderPriority>
+  </FactionDef>
+  
+    <ThingSetMakerDef>
+    <defName>TM_SeerRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>RawMagicyte</li>
+            <li>Jade</li>
+            <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+
+
+</Defs>

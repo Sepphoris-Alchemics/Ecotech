@@ -18,6 +18,7 @@ CORE MECHANICS:
 	-Add building that produces a resource tied to a research, whenever a research is done.
 	-Add Bloompox kill mechanic: pawn that dies to bloompox hediff becomes limited-time fertile growth spot.
 	-Add Soulbloom kill mechanic: pawn that dies to soulbloom hediff becomes unique statue.
+	-Deepsap -> Meldsap: Deepsap should be reserved for possible water-based stuff, which Meldsap is the sap that fuses multiple items together.
 	
 	SECONDARY:
 	-Add genome crossing mechanic
