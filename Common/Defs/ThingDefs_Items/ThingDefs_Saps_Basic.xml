@@ -31,7 +31,7 @@
       <DeteriorationRate>0.5</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>TerrasapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">
@@ -90,7 +90,7 @@
       <DeteriorationRate>0.5</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>TerrasapsAll</li>
     </thingCategories>
   </ThingDef>
 
@@ -120,7 +120,7 @@ Regenerates 2.5 HP/Day</description>
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>TerrasapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">
@@ -179,7 +179,7 @@ Max lifespan decreased by 20% (rounded down)</description>
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>TerrasapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">
@@ -234,7 +234,7 @@ Max lifespan decreased by 20% (rounded down)</description>
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>TerrasapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">

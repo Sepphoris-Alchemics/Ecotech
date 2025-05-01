@@ -82,6 +82,9 @@ Endosap: 70, 178, 83-->
       <MarketValue>40</MarketValue>
     </statBases>
 		<tickerType>Normal</tickerType>
+		<tradeTags>
+	  	<li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
   	<comps>
 		<li Class="CompProperties_SelfhealHitpoints">
       <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->

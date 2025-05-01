@@ -96,7 +96,7 @@
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
           <thingDefs>
-            <li>ET_SunDrop</li>
+            <li>ET_Sunsap</li>
           </thingDefs>
         </fuelFilter>
       </li>
@@ -239,7 +239,7 @@
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
           <thingDefs>
-            <li>ET_SunDrop</li>
+            <li>ET_Sunsap</li>
           </thingDefs>
         </fuelFilter>
       </li>
@@ -373,7 +373,7 @@
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
           <thingDefs>
-            <li>ET_SunDrop</li>
+            <li>ET_Sunsap</li>
           </thingDefs>
         </fuelFilter>
       </li>

@@ -76,39 +76,39 @@
         <kindDef>Combat</kindDef>
     		<options>
 					<!--Perennial-->
-					<EC_PerennialGunner_RangeBased>2</EC_PerennialGunner_RangeBasic>
-					<EC_PerennialGunner_RangeInfused>2</EC_PerennialGunner_RangeInfused>
-					<EC_PerennialGunner_RangedRandom>6</EC_PerennialGunner_RangedRandom>
-					<EC_PerennialGunner_HeavyBasic>2</EC_PerennialGunner_HeavyBasic>
-					<EC_PerennialGunner_HeavyRandom>1</EC_PerennialGunner_HeavyRandom>
-					<EC_PerennialGunner_CQCRandom>5</EC_PerennialGunner_CQCRandom>
-					<EC_PerennialWarrior_MeleeRandom>4</EC_PerennialWarrior_MeleeRandom>
-					<EC_PerennialElite_RangedInfused>2</EC_PerennialElite_RangedInfused> <!--will have an advanced infusion-->
-					<EC_PerennialElite_MeleeInfused>2</EC_PerennialElite_MeleeInfused> <!--will have an advanced infusion-->
+					<ET_PerennialGunner_RangedBasic>2</ET_PerennialGunner_RangedBasic>
+					<ET_PerennialGunner_RangedInfused>2</ET_PerennialGunner_RangedInfused>
+					<ET_PerennialGunner_RangedRandom>6</ET_PerennialGunner_RangedRandom>
+					<ET_PerennialGunner_HeavyBasic>2</ET_PerennialGunner_HeavyBasic>
+					<ET_PerennialGunner_HeavyRandom>1</ET_PerennialGunner_HeavyRandom>
+					<ET_PerennialGunner_CQCRandom>5</ET_PerennialGunner_CQCRandom>
+					<ET_PerennialWarrior_MeleeRandom>4</ET_PerennialWarrior_MeleeRandom>
+					<ET_PerennialElite_RangedInfused>2</ET_PerennialElite_RangedInfused> <!--will have an advanced infusion-->
+					<ET_PerennialElite_MeleeInfused>2</ET_PerennialElite_MeleeInfused> <!--will have an advanced infusion-->
 					<!--Prima; these exclude base Prima weapons-->
-					<EC_PrimaGunner_AllInfused>5</EC_PrimaGunner_AllInfused>
-					<EC_PrimaGunner_HeavyRandom>3</EC_PrimaGunner_HeavyRandom>
-					<EC_PrimaWarrior_MeleeInfused>2</EC_PrimaWarrior_MeleeInfused>
+					<ET_PrimaGunner_AllInfused>5</ET_PrimaGunner_AllInfused>
+					<ET_PrimaGunner_HeavyRandom>3</ET_PrimaGunner_HeavyRandom>
+					<ET_PrimaWarrior_MeleeInfused>2</ET_PrimaWarrior_MeleeInfused>
 					<!--Briar-->
-					<EC_BriarGunner_SMG>4</EC_BriarGunner_SMG>
-					<EC_BriarGunner_Shotgun>3</EC_BriarGunner_Shotgun>
-					<EC_BriarGunner_Rifle>3<EC_BriarGunner_Rifle>
+					<ET_BriarGunner_SMG>4</ET_BriarGunner_SMG>
+					<ET_BriarGunner_Shotgun>3</ET_BriarGunner_Shotgun>
+					<ET_BriarGunner_Rifle>3</ET_BriarGunner_Rifle>
 					<!--Wild-->
-					<EC_NightshadeGunner>2</EC_NightshadeGunner>
-					<EC_GaubornGunner>2</EC_GaubornGunner>
-					<EC_BiolithGunner>1</EC_BiolithGunner>
-					<EC_RoyalGunner_Rifle>1</EC_RoyalGunner_Rifle>
-					<EC_RoyalWarrior_Sword>1</EC_RoyalWarrior_Sword>
+					<ET_NightshadeGunner>2</ET_NightshadeGunner>
+					<ET_GaubornGunner>2</ET_GaubornGunner>
+					<ET_BiolithGunner>1</ET_BiolithGunner>
+					<ET_RoyalGunner_Rifle>1</ET_RoyalGunner_Rifle>
+					<ET_RoyalWarrior_Sword>1</ET_RoyalWarrior_Sword>
 				</options>
       </li>
 	  <li>
         <kindDef>Peaceful</kindDef>
         <options>
-			<SeerSpearman>10</SeerSpearman>
-			<Mercenary_Slasher>1</Mercenary_Slasher>
-			<SeerBowman>6</SeerBowman>
-			<SeerDefender>5</SeerDefender>
-			<SeerElite>2</SeerElite>
+			<ET_PerennialGunner_CQCRandom>10</ET_PerennialGunner_CQCRandom>
+			<ET_RoyalWarrior_Sword>1</ET_RoyalWarrior_Sword>
+			<ET_PerennialGunner_RangedBasic>6</ET_PerennialGunner_RangedBasic>
+			<ET_PerennialElite_RangedInfused>5</ET_PerennialElite_RangedInfused>
+			<ET_RoyalGunner_Rifle>2</ET_RoyalGunner_Rifle>
         </options>
       </li>
       <li>
@@ -123,40 +123,40 @@
           <Elephant>6</Elephant>
         </carriers>
         <guards>
-			<SeerBowman>8</SeerBowman>
-			<Mercenary_Slasher>4</Mercenary_Slasher>
-			<SeerSpearman>10</SeerSpearman>
-			<SeerDefender>5</SeerDefender>
+			<ET_PerennialGunner_RangedRandom>8</ET_PerennialGunner_RangedRandom>
+			<ET_BriarGunner_Random>4</ET_BriarGunner_Random>
+			<ET_PerennialElite_MeleeInfused>10</ET_PerennialElite_MeleeInfused>
+			<ET_WildElite>5</ET_WildElite>
 		</guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-			<SeerBowman>10</SeerBowman>
-			<Mercenary_Slasher>12</Mercenary_Slasher>
-			<SeerElite>4</SeerElite>
-			<SeerSpearman>16</SeerSpearman>
-			<Mercenary_Elite>12</Mercenary_Elite>
-			<AncientSoldier>5</AncientSoldier>
-			<SeerDefender>10</SeerDefender>
+			<ET_PerennialGunner_RangedInfused>10</ET_PerennialGunner_RangedInfused>
+			<ET_BriarGunner_Random>18</ET_BriarGunner_Random>
+			<ET_RoyalGunner_Sword>5</ET_RoyalGunner_Sword>
+			<ET_PerennialGunner_CQCRandom>16</ET_PerennialGunner_CQCRandom>
+			<ET_RoyalWarrior_Sword>4</ET_RoyalWarrior_Sword>
+			<ET_WildElite>5</ET_WildElite>
+			<ET_PerennialGunner_HeavyRandom>6</ET_PerennialGunner_HeavyRandom>
 		</options>
       </li>
     </pawnGroupMakers>
-    <factionIconPath>World/ArcaneTown</factionIconPath>
+    <factionIconPath>World/TerratechTown</factionIconPath>
 	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>77</configurationListOrderPriority>
   </FactionDef>
   
     <ThingSetMakerDef>
-    <defName>TM_SeerRaidLootMaker</defName>
+    <defName>ET_RaidLootMaker</defName>
     <root Class="ThingSetMaker_MarketValue">
       <fixedParams>
         <filter>
           <thingDefs>
             <li>Silver</li>
-            <li>RawMagicyte</li>
+            <li>MedicineHerbal</li>
             <li>Jade</li>
-            <li>Neutroamine</li>
+            <li>ET_SunDrop</li>
           </thingDefs>
         </filter>
       </fixedParams>

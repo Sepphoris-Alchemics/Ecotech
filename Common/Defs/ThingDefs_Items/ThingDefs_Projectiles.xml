@@ -217,8 +217,85 @@ Anima long range is brought down by 3
   </ThingDef>
 
 
-<!--Sap Launcher shots-->
+<!--Sap Launcher shots
+  -Glowsap: basically glue, slows down the target the most, but has next to no damage.
+  -Brightsap: applies a hediff that improves vision, then decreases it. Deals next to no damage.
+  -Endosap: hits the target like a rock and has a burst of slowness, but is quick to wear off.
+  -Hypersap: Acidic, and will cause burns over time.
+  -Toxsap: Poisons the target, causing standard toxic effects.
+  -Deepsap: Causes the target to gain Bloompox, rooting them and causing their body to release various seeds. Lethal if untreated.
+  -Sunsap: Burns the target, causes immediate burns. Very high damage.
+  -Starsap: Same as sunsap.
+  -Archsap: Todo. Likely a lethal, transformative effect.
+-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Glowsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
 
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Brightsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Endosap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
     <defName>ET_SapShot_Hypersap</defName>
@@ -242,6 +319,77 @@ Anima long range is brought down by 3
       <speed>17</speed>
     </projectile>
   </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Toxsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Deepsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Archsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+
 
   <!--Wild projectiles-->
   <ThingDef ParentName="BaseBullet">    <!--chain shotgun counterpart, medium weapon-->
@@ -330,6 +478,25 @@ Anima long range is brought down by 3
       <arcHeightFactor>0.01</arcHeightFactor>
       <shadowSize>0.1</shadowSize>
 	  <explosionDelay>15</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+<!--Lithoid Bullets-->
+
+  <ThingDef ParentName="BaseBullet">    <!--Bolt-Action Rifle counterpart; considered a heavy weapon-->
+    <defName>Bullet_CrystalRifle</defName>
+    <label>crystal shard</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_CrystalShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <stoppingPower>0.4</stoppingPower>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>45</speed>
     </projectile>
   </ThingDef>
 

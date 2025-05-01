@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>TerrasapsAll</defName>
+      <label>Terrasaps</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+	
+</Defs>

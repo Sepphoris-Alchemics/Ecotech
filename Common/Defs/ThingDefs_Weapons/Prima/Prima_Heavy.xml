@@ -897,7 +897,7 @@ SAP LAUNCHERS
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>ET_SapShot_Hypersap</defaultProjectile>
+        <defaultProjectile>ET_SapShot_Archsap</defaultProjectile>
         <warmupTime>4.375</warmupTime>
         <forcedMissRadius>1.9</forcedMissRadius>
         <range>15.9</range>

@@ -1,0 +1,8 @@
+Blade
+Sword
+Maul
+Thorn
+Dagger
+Spear
+Scythe
+Axe

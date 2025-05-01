@@ -96,6 +96,33 @@ BRIAR WEAPONS:
 
 ====================
 ====================
+TECH TIERS:
+	Terratech comes in tech tiers, which is how involved the player needs to be in order to get ahold if it.
+	While the tech tiers doesn't matter much at the moment, it very much will later on.
+	The higher the tech tiers, the stronger the tech is - and the more reactive an Ecotech faction will be when an Industrial faction gets ahold of it.
+
+	-1: COMMONPLACE: Anyone can get ahold of this, with little to no research. this goes up to Perennial Basics.
+	-2: SENSITIVE: This is where factions start guarding their tech, and players need to show dedication. The following is required:
+		-The player gets a debuff for having industrial+ structures on the map.
+		-Conduit Trees function slower if industrial+ structures are on the map (except Reclaimer tree)
+		-Terratech structures will start to wither away with too many industrial+ structures.
+		-Factions may ask for Terratech back if on good or bad terms, but may also be lenient.
+		-This starts at Elderwood applications (T2), and goes up to T3 tech.
+	-3: DEVOTED: Only those who have proven they are fully committed to Terratech can have Devoted tech.
+		-Devoted Tech and higher is explicity outlawed to anyone Industrial+. The tech being returned will be demanded, or seizure squads may be sent in.
+		-If a Neolithic-Medieval faction has this tech, lenience may be shown if they are on goodwill AND the faction agrees to embrace Terratech. Otherwise, the tech must be returned.
+		-Some devoted tech requires meditations.
+	-4: CRUX: The pinnacle and most applicable of Terratech. Only those that have fully embraced all Terratech havbe access to this tier.
+		-Gaining access to Crux Terratech as an Industrial+ faction results in a permanent -100 reputation with Ecotech factions.
+		-Additionally, they'll launch yearly purging raids; raids that include all three factions.
+		-Most Crux tech lines requires meditation to discover. This can be done faster if done cooperatively.
+		-The player gains a +100 bonues with one Ecotech faction, and +50 with the other two.
+	-5: OBSCURED: Tech that doesn't fall into any category, and is likely just arcotech.
+		-Seen as gifts or sacred relics. Generally follows the rules of Crux.
+		-Certain items from these techs can be aquired from quests, or other special methods.
+		-One rare item may also allow an Industrial colony to freely use Ecotech without worry.
+
+====================
 PLANTS:
 	- Add Convergence Conduit Tree
 		-This Conduit Tree takes two different seeds, and attempts to grow something out of them.
