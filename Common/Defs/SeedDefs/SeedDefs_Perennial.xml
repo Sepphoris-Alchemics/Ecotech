@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--
+  <!--
 	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
 	-To-do: Later used in Perennial Weapons.
+  360000 ticks = 6 days
+  420000 ticks = 7 days
 -->
+
+  <!--==========-->
+
   <ThingDef ParentName="ResourceBase">
-    <defName>ET_Seed_SapFilter</defName>
-    <label>Sap Transposer Seed</label>
-    <description>A special seed that will grow into a sap transposer. The sap transposer will grow in roughly a day.</description>
+    <defName>ET_Seed_PerennialTree</defName>
+    <label>Perennial tree seed</label>
+    <description>A special seed that will grow a Perennial Tree. Once grown, this tree will produce special pods that can be harvested for Perennial weaponry.</description>
     <possessionCount>1</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>
@@ -32,7 +37,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_SapFilterPlant</plantDefToSpawn>
+        <plantDefToSpawn>ET_PerennialTree</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>

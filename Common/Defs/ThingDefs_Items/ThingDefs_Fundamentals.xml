@@ -182,7 +182,7 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_BuildingTreeTierOne</defName>
-    <label>Elderwood Custodian Seed</label>
+    <label>Primwood Custodian Seed</label>
     <description>A durable seed that can be planted to grow an Custodian Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
@@ -220,7 +220,7 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_SentinelTreeTierOne</defName>
-    <label>Elderwood Sentinel Seed</label>
+    <label>Primwood Sentinel Seed</label>
     <description>A durable seed that can be planted to grow a Sentinel Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>
@@ -258,7 +258,7 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_SapTreeTierOne</defName>
-    <label>Elderwood Spectra Seed</label>
+    <label>Primwood Spectra Seed</label>
     <description>A durable seed that can be planted to grow a Spectra Tree.
 \n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
     <possessionCount>0</possessionCount>

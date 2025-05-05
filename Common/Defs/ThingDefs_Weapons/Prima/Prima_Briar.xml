@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--Upgraded Primas get +20 health and -1 flammability. Lifespan times below:
+	<!--Upgraded Primas get +20 health and -1 flammability. Lifespan times below:
 			-Immature light: 10 days (600000) | 40 health
 			-Immature normal: 12 days (720000) | 45 health
 			-Immature heavy: 14 days (840000) | 50 health
@@ -23,8 +23,9 @@
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_BriarShotgunBasic</defName>
 		<label>Briar Spreadshot</label>
-		<description>The Apex form of the Prima Spreadshot. The evolution has resulted in reserve sap being utilizes to create an armored, wooden epidermis, and has created the growth of many razor-sharp thorns and segments growing out of the weapon. These briars are utilized as high-speed projectiles that shatter upon contact. Fragments from the same briar are still often connected to each other via strong, sharp threads, resulting in fragments that are not only spread throughout the body, but are also connected - and often entangled - with one another.
-\nUnlike every other Prima weapon, Briar weapons have very little room for growth due to their immense evolution history. They cannot accept commonly available saps, and cannot be renewed with Brightsap. Stronger, more advanced sap variants are needed to modify Briar weapons. Briar weapons have no further stages, hence being classified as an "Apex" weapon.</description>
+		<description>The Apex weapon of the Prima Spreadshot, replacing it's Prima materials with the stronger Elderwood ones. The evolution has resulted in a well armored epidermis, and has created the growth of many razor-sharp thorns and segments growing out of the weapon. These briars are utilized as high-speed projectiles that shatter upon contact, creating painful fields of tiny framents, buried deep into the skin.
+Briar weapons also retain the random projectile output, though with higher accuracy, projectile minimum, and projectile maximum.
+\nUnlike every other Prima weapon, Briar weapons have very little room for growth due to the evolution they've gone under. They cannot accept most available saps, and cannot be renewed with Brightsap. Briar weapons have no further stages, hence being classified as an "Apex" weapon.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Briar/ET_BriarShotgun_Basic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -32,41 +33,42 @@
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
-			<li>PlantWeaponsUpgraded</li>
+			<li>PlantWeapons</li>
+			<li>ApexWeaponns</li>
+			<li>BriarWeapons</li>
 		</weaponTags>
-    <weaponClasses>
+		<weaponClasses>
 			<li>ShortShots</li>
-      <li>Ranged</li>
-    </weaponClasses>
-    <relicChance>0</relicChance>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>75</MaxHitPoints> <!--From 55 to 75: 20 health increase-->
-			<AccuracyTouch>0.9</AccuracyTouch> <!--.05 higher accuracy in all areas-->
+			<MaxHitPoints>75</MaxHitPoints>			<!--From 55 to 75: 20 health increase-->
+			<AccuracyTouch>0.9</AccuracyTouch>			<!--.05 higher accuracy in all areas-->
 			<AccuracyShort>0.9</AccuracyShort>
 			<AccuracyMedium>0.8</AccuracyMedium>
 			<AccuracyLong>0.4</AccuracyLong>
-			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown> <!--decrease by 0.15-->
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>			<!--decrease by 0.15-->
 			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.7</Mass> <!--Mass increased by .3 from upgraded variant-->
-			<Flammability>1</Flammability>
-      <WorkToMake>12000</WorkToMake>
+			<Mass>1.9</Mass>			<!--Mass increased by .5 from upgraded variant-->
+			<Flammability>1</Flammability> <!--Decreased by 1-->
+			<WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
-        <warmupTime>1.125</warmupTime>
-        <range>13.9</range> <!--Same as upgraded variant-->
-        <soundCast>Shot_Shotgun</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>0</muzzleFlashScale>
-      </li>
-    </verbs>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<range>13.9</range>				<!--Same as upgraded variant-->
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
 		<tools>
 			<li>
 				<label>grip</label>
@@ -88,22 +90,23 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
-          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
-          <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
-        </li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1080000</lifespanTicks> <!--Same as upgraded variant-->
+				<lifespanBarColor>(28, 31, 15)</lifespanBarColor> <!--to-do: figure out special color-->
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>-->
+			</li>
 		</comps>
 	</ThingDef>
 
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_BriarSMGBasic</defName>
-		<label>prima pineshredder</label>
-		<description>The Apex form of the Prima Pincaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
-\nAdditionally, the Apex form no longer has inconsistent output. It will now fire 4-5 projectiles per burst instead of a random range of 2-6 projectiles, resulting in a higher average DPS.</description>
+		<label>Briar pineshredder</label>
+		<description>The Apex weapon of the Prima Pineshredder, replacing it's Prima materials with the stronger Elderwood ones. The evolution has resulted in a well armored epidermis, and has created the growth of many razor-sharp thorns and segments growing out of the weapon. These briars are utilized as high-speed projectiles that shatter upon contact, creating painful fields of tiny framents, buried deep into the skin.
+Briar weapons also retain the random projectile output, though with higher accuracy, projectile minimum, and projectile maximum.
+\nUnlike every other Prima weapon, Briar weapons have very little room for growth due to the evolution they've gone under. They cannot accept commonly available saps, and cannot be renewed with Brightsap. Briar weapons have no further stages, hence being classified as an "Apex" weapon.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Briar/ET_BriarSMG_Basic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -111,30 +114,32 @@
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+			<li>PlantWeapons</li>
+			<li>ApexWeapons</li>
+			<li>BriarWeapons</li>
 		</weaponTags>
-    <weaponClasses>
-      <li>RangedLight</li>
+		<weaponClasses>
+			<li>RangedLight</li>
 			<li>ShortShots</li>
-    </weaponClasses>
-    <relicChance>0</relicChance>
+		</weaponClasses>
+		<relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-			<AccuracyTouch>0.90</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.30</AccuracyMedium>
-			<AccuracyLong>0.15</AccuracyLong>
-			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.95</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.2</Mass>
-			<Flammability>2</Flammability>
-      <WorkToMake>12000</WorkToMake>
+			<Mass>1.7</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <!--<li>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<!--<li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
@@ -147,19 +152,19 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>-->
 
-      <li>
-        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
-        <warmupTime>0.75</warmupTime>
-        <range>17.9</range>
-        <burstShotCount>4</burstShotCount>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <soundCast>ET_Sound_BlowgunLight</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
+			<li>
+				<verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+				<warmupTime>0.75</warmupTime>
+				<range>17.9</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<soundCast>ET_Sound_BlowgunLight</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
 		<tools>
 			<li>
 				<label>grip</label>
@@ -181,13 +186,13 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
-          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
-          <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
-        </li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960000</lifespanTicks>				<!--Light weapon-->
+				<lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+			</li>
 		</comps>
 		<modExtensions>
 			<li Class="VWEMakeshift.MoteProperties">

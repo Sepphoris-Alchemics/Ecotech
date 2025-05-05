@@ -10,8 +10,8 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     <possessionCount>4</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Resource/PrimaSeeds/ImmatureSeed</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Resource/PrimaSeeds/Turret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -52,8 +52,8 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     <possessionCount>4</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Resource/PrimaSeeds/ImmatureSeed</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Resource/PrimaSeeds/Turret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -94,8 +94,8 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     <possessionCount>4</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Resource/PrimaSeeds/ImmatureSeed</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Resource/PrimaSeeds/Turret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -136,8 +136,8 @@ This seed once could be awakened by hand, and at will; however, that knowledge i
     <possessionCount>4</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Resource/PrimaSeeds/ApexSeed</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Resource/PrimaSeeds/Turret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>0.3</drawSize>
     </graphicData>

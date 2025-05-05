@@ -256,7 +256,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires it's natural, standard sap, which will slow targets while also causing irritation to exposed skin. Nearly any other sap is more ideal for combat.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Basic</texPath>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaLauncherBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -343,7 +343,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires glowsap, which will light up the immediate area for a few days. It will also slow targets and cause minor skin irritation. Nearly any other sap is more ideal for combat.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Basic</texPath>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaLauncherBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -430,7 +430,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires brightsap, which will light up a decent area for several days. It will also slow targets, cause minor skin irritation, and provide substantial bonuses when working with plants. Nearly any other sap is more ideal for combat.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Basic</texPath>
+			<texPath>Things/WeaponPrima/Brightsap/PrimaLauncherUpgraded_BS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -518,7 +518,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires endosap, which will drastically slow anything it lands on, and anything that walks on it. quickly harden on anything it lands on. Very effective when pacifying specific targets or prisoners.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Basic</texPath>
+			<texPath>Things/WeaponPrima/Endosap/PrimaLauncherUpgraded_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -604,7 +604,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires hypersap, which will severely react with flesh and armor, burning and corroding it as if the sap were acid. Extremely effective in combat.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Hypersap</texPath>
+			<texPath>Things/WeaponPrima/Hypersap/PrimaLauncherUpgraded_HS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -691,7 +691,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires toxsap, which will leave flesh unharmed but soak into the body, causing internal complications that inch the body towards death until the poison is removed. Extremely effective in combat.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Toxsap</texPath>
+			<texPath>Things/WeaponPrima/Toxsap/PrimaLauncherUpgraded_TS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -778,7 +778,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires deepsap, which will drastically mutate whatever it lands on into a suitable spot that can grow more advanced Terraplants. It does not discriminate between terrain and pawn.
 \n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Deepsap</texPath>
+			<texPath>Things/WeaponPrima/Deepsap/PrimaLauncherUpgraded_DS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>
@@ -865,7 +865,7 @@ SAP LAUNCHERS
 \n\nThis sap launcher fires archsap, which will almost immediately fertilize terrain and flesh into a perfect growth spot for Terraplants.
 \n\nUnlike any other sap type, Archsap enables this Terraweapon to live indefinitely.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/ET_PrimaLauncher_Archsap</texPath>
+			<texPath>Things/WeaponPrima/Archsap/PrimaLauncherUpgraded_AS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.9</drawSize>
 		</graphicData>

@@ -2,7 +2,7 @@
 <Defs>
   <!--<ThingDef ParentName="BuildingBase">
     <defName>ET_GiftTreeTierOne</defName>
-    <label>Elderwood Tidetree</label>
+    <label>Primwood Tidetree</label>
     <description>TBE.</description>
     <graphicData>
       <texPath>Things/Plant/Custodians/ElderwoodCustodian</texPath>

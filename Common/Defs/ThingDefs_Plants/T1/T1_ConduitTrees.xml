@@ -61,14 +61,14 @@
 
   <ThingDef ParentName="TreeBase"> <!--todo: add pod growth mechanic-->
     <defName>ET_SentinelTreeTierOne</defName>
-    <label>Elderwood Sentinel Tree</label>
-    <description>The Elderwood Sentinel is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Elderwood Sentinels provide various weapons and Prima seeds to their colony.
+    <label>Primwood Sentinel Tree</label>
+    <description>The Primwood Sentinel is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Primwood Sentinels provide various weapons and Prima seeds to their colony.
  Some of the weapons that Sentinels create are ancient designs, which were either forgotten, or never could be manually formed/grown in the first place.
 
 While this tree is present, weapons and seeds will be created at the base of the tree roughly 3 times a year. Multiple Sentinels can exist together, but extensive spacing is required between each one.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Plant/ConduitTrees/ElderwoodSentinelTree</texPath>
+      <texPath>Things/Plant/ConduitTrees/PrimwoodSentinelTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
@@ -88,7 +88,7 @@ While this tree is present, weapons and seeds will be created at the base of the
     </statBases>
     <killedLeavings>
       <ET_Glowsap>60</ET_Glowsap>
-      <ET_ElderwoodMaterial>40</ET_ElderwoodMaterial>
+      <ET_TierOnePlating>40</ET_TierOnePlating>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
@@ -194,14 +194,14 @@ While this tree is present, weapons and seeds will be created at the base of the
 
   <ThingDef ParentName="TreeBase"> <!--todo: add zone growth coding-->
     <defName>ET_BuildingTreeTierOne</defName>
-    <label>Elderwood Custodian Tree</label>
-    <description>The Elderwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Elderwood custodian trees produce lumps of terramass that can be harvested from the ground.
+    <label>Primwood Custodian Tree</label>
+    <description>The Primwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Primwood custodian trees produce lumps of terramass that can be harvested from the ground.
 This tree will also periodically shed excess bark, creating malleable wooden plates that can be used for crafting and construction.
 
 Legend has it this tree was once able to independently shelter entire colonies. Whether or not that is true remains to be seen....</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Plant/ConduitTrees/ElderwoodCustodianTree</texPath>
+      <texPath>Things/Plant/ConduitTrees/PrimwoodCustodianTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
@@ -210,7 +210,7 @@ Legend has it this tree was once able to independently shelter entire colonies. 
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
-      <ThingDef>ET_ElderwoodMaterial</ThingDef>
+      <ThingDef>ET_TierOnePlating</ThingDef>
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -221,7 +221,7 @@ Legend has it this tree was once able to independently shelter entire colonies. 
     </statBases>
     <killedLeavings>
       <ET_Glowsap>80</ET_Glowsap>
-      <ET_ElderwoodMaterial>20</ET_ElderwoodMaterial>
+      <ET_TierOnePlating>20</ET_TierOnePlating>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
@@ -272,25 +272,25 @@ Legend has it this tree was once able to independently shelter entire colonies. 
           <li>
             <weight>4</weight>
             <things>
-              <ET_ElderwoodMaterial>150</ET_ElderwoodMaterial>
+              <ET_TierOnePlating>150</ET_TierOnePlating>
             </things>
           </li>
           <li>
             <weight>2</weight>
             <things>
-              <ET_ElderwoodMaterial>225</ET_ElderwoodMaterial>
+              <ET_TierOnePlating>225</ET_TierOnePlating>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-                <ET_ElderwoodMaterial>300</ET_ElderwoodMaterial>
+                <ET_TierOnePlating>300</ET_TierOnePlating>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-                <ET_ElderwoodMaterial>450</ET_ElderwoodMaterial>
+                <ET_TierOnePlating>450</ET_TierOnePlating>
             </things>
           </li>
         </potentialSpawnedThings>
@@ -324,14 +324,14 @@ Legend has it this tree was once able to independently shelter entire colonies. 
 
   <ThingDef ParentName="TreeBase">
     <defName>ET_SapTreeTierOne</defName>
-    <label>Elderwood Spectra Tree</label>
-    <description>The Elderwood Spectra tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra trees produce glowsap, alongside other specific saps that enhance weapons and certain structures.
+    <label>Primwood Spectra Tree</label>
+    <description>The Primwood Spectra tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra trees produce glowsap, alongside other specific saps that enhance weapons and certain structures.
 Each bounty will produce a large sum of glowsap, at minimum. The other, more specialized saps provided are generally hard to get ahold of, and can fetch a pretty penny from collectors.
 
 The saps will appear at the base of the tree, every 8-10 in-game days.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Plant/ConduitTrees/ElderwoodSapTree</texPath>
+      <texPath>Things/Plant/ConduitTrees/PrimwoodSapTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
@@ -352,7 +352,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
     </statBases>
     <killedLeavings>
       <ET_Glowsap>90</ET_Glowsap>
-      <ET_ElderwoodMaterial>10</ET_ElderwoodMaterial>
+      <ET_TierOnePlating>10</ET_TierOnePlating>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>

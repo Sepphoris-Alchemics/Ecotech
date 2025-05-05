@@ -67,6 +67,9 @@
         </recipes>
       </li>
     </modExtensions>
+    <tradeTags>
+      <li>ET_SapsBasicFuel</li>
+    </tradeTags>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -151,6 +154,9 @@ Regenerates 2.5 HP/Day</description>
         </recipes>
       </li>
     </modExtensions>
+    <tradeTags>
+      <li>ET_SapsBasic</li>
+    </tradeTags>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -210,6 +216,9 @@ Max lifespan decreased by 20% (rounded down)</description>
         </recipes>
       </li>
     </modExtensions>
+    <tradeTags>
+      <li>ET_SapsBasic</li>
+    </tradeTags>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
@@ -334,6 +343,9 @@ Max lifespan decreased by 20% (rounded down)</description>
         </recipes>
       </li>
     </modExtensions>
+    <tradeTags>
+      <li>ET_SapsBasicFuel</li>
+    </tradeTags>
   </ThingDef>
 
 </Defs>

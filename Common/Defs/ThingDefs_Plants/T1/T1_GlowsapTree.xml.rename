@@ -87,7 +87,7 @@
     </statBases>
     <killedLeavings>
       <ET_Glowsap>45</ET_Glowsap>
-      <ET_ElderwoodMaterial>10</ET_ElderwoodMaterial>
+      <ET_TierOnePlating>10</ET_TierOnePlating>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>

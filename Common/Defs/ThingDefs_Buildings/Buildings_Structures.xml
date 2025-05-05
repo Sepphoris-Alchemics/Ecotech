@@ -61,7 +61,7 @@
     <specialDisplayRadius>6.9</specialDisplayRadius>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <killedLeavings>
-      <ET_ElderwoodMaterial>12</ET_ElderwoodMaterial>
+      <ET_TierOnePlating>12</ET_TierOnePlating>
     </killedLeavings>
     <pathCost>25</pathCost>
     <passability>PassThroughOnly</passability>
@@ -141,7 +141,7 @@
     </comps>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <killedLeavings>
-      <ET_ElderwoodMaterial>6</ET_ElderwoodMaterial>
+      <ET_TierOnePlating>6</ET_TierOnePlating>
     </killedLeavings>
     <pathCost>25</pathCost>
     <passability>PassThroughOnly</passability>

@@ -27,7 +27,7 @@
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_PrimaShotgunUpgraded</defName>
-		<label>prima briarburster</label>
+		<label>prima sprigshot</label>
 		<description>The matured form of the Prima Spreadshot. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/ET_PrimaShotgunUpgraded</texPath>

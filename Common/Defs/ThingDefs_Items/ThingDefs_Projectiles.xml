@@ -218,6 +218,7 @@ Anima long range is brought down by 3
 
 
 <!--Sap Launcher shots
+  -Base: Halfways stats of glowsap. No damage. Basically normal sap.
   -Glowsap: basically glue, slows down the target the most, but has next to no damage.
   -Brightsap: applies a hediff that improves vision, then decreases it. Deals next to no damage.
   -Endosap: hits the target like a rock and has a burst of slowness, but is quick to wear off.
@@ -228,6 +229,29 @@ Anima long range is brought down by 3
   -Starsap: Same as sunsap.
   -Archsap: Todo. Likely a lethal, transformative effect.
 -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Base</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
   <ThingDef ParentName="BaseBullet">
     <defName>ET_SapShot_Glowsap</defName>
     <label>glowsap globule</label>
@@ -483,7 +507,7 @@ Anima long range is brought down by 3
 
 <!--Lithoid Bullets-->
 
-  <ThingDef ParentName="BaseBullet">    <!--Bolt-Action Rifle counterpart; considered a heavy weapon-->
+  <ThingDef ParentName="BaseBullet">    <!--To-do: balance later-->
     <defName>Bullet_CrystalRifle</defName>
     <label>crystal shard</label>
     <graphicData>

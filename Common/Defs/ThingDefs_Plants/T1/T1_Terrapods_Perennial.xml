@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--Pods should follow the following skill rules:
+  <!--Pods should follow the following skill rules:
 Tier 1 weapons: 1-4
 Tier 1 heavy: 5-7
 Tier 1 upgrades: 6-8
@@ -30,14 +30,14 @@ Tier 4 surge seeds: 20
     </graphicData>
     <minifiedDef IsNull="True" />
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>145</MaxHitPoints>
     </statBases>
     <selectable>true</selectable>
     <pathCost>14</pathCost>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <tickerType>Normal</tickerType>
     <plant>
-      <growDays>1</growDays> 
+      <growDays>1</growDays>
       <fertilityMin>0.3</fertilityMin>
       <fertilitySensitivity>0.1</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
@@ -85,6 +85,53 @@ Tier 4 surge seeds: 20
     </comps>
   </ThingDef>-->
 
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialWeaponPod</defName>
+    <label>Perennial Terraweapon Pod</label>
+    <description>A fortified Terrapod that will create a random Perennial Terraweapon. Quite durable, but takes a long time to produce a final product. Grown by proxy of a nearby Perennial tree, and cannot be sown by hand.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.
+\nDue to the way the pod grows, smaller weapons are more likely to form over bigger/longer ones.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_OverviewPerennialWeapons</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>840000</cycleDurationRangeTicks>        <!--14 days-->
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_PerennialRifle>1</ET_PerennialRifle>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PerennialSMG>1</ET_PerennialSMG>
+            </things>
+          </li>
+          <li>
+            <weight>0.25</weight>
+            <things>
+              <ET_PerennialCannon>1</ET_PerennialCannon>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_PerennialGlaive>1</ET_PerennialGlaive>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>840030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
+      </li>
+    </comps>
+  </ThingDef>
+
 
   <ThingDef ParentName="ET_PerennialRegrowthPodBase">
     <defName>ET_PerennialSMGGrowthPod</defName>
@@ -95,14 +142,14 @@ Tier 4 surge seeds: 20
       <li Class="CompProperties_Spawner">
         <thingToSpawn>ET_PerennialSMG</thingToSpawn>
         <spawnCount>1</spawnCount>
-        <spawnIntervalRange>900000</spawnIntervalRange> <!--15 days to respawn-->
+        <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>
         <requiresPower>false</requiresPower>
         <showMessageIfOwned>true</showMessageIfOwned>
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>900030</lifespanTicks> <!--30 ticks longer to make sure the weapon spawns-->
+        <lifespanTicks>900030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
       </li>
     </comps>
   </ThingDef>
@@ -117,14 +164,14 @@ Tier 4 surge seeds: 20
       <li Class="CompProperties_Spawner">
         <thingToSpawn>ET_PerennialRifle</thingToSpawn>
         <spawnCount>1</spawnCount>
-        <spawnIntervalRange>900000</spawnIntervalRange> <!--15 days to respawn-->
+        <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>
         <requiresPower>false</requiresPower>
         <showMessageIfOwned>true</showMessageIfOwned>
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>900030</lifespanTicks> <!--30 ticks longer to make sure the weapon spawns-->
+        <lifespanTicks>900030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
       </li>
     </comps>
   </ThingDef>
@@ -138,14 +185,14 @@ Tier 4 surge seeds: 20
       <li Class="CompProperties_Spawner">
         <thingToSpawn>ET_PerennialCannon</thingToSpawn>
         <spawnCount>1</spawnCount>
-        <spawnIntervalRange>900000</spawnIntervalRange> <!--15 days to respawn-->
+        <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>
         <requiresPower>false</requiresPower>
         <showMessageIfOwned>true</showMessageIfOwned>
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>900030</lifespanTicks> <!--30 ticks longer to make sure the weapon spawns-->
+        <lifespanTicks>900030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
       </li>
     </comps>
   </ThingDef>

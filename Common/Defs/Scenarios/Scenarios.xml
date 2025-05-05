@@ -80,7 +80,7 @@
 			</li>
 			<li Class="ScenPart_ScatterThingsNearPlayerStart">
 				<def>ScatterThingsAnywhere</def>
-				<thingDef>ET_ElderwoodMaterial</thingDef>
+				<thingDef>ET_TierOnePlating</thingDef>
 				<count>750</count>
 				<allowRoofed>True</allowRoofed>
 			</li>

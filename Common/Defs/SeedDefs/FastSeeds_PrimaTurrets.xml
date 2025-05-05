@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
+	-To-do: Later used in Perennial Weapons.
+  360000 ticks = 6 days
+  420000 ticks = 7 days
+-->
+
+  <!--==========-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_FastSeed_PrimaSMGTurret</defName>
+    <label>Prima Hyperseed: Thistle Turret</label>
+    <description>A masterfully crafted seed that will quickly grow into a Prima Thistle Turret within a day.
+Knowledge on how to make hyperseeds is highly guarded, and a secret only the most devoted possess. Not only do these bypass wait times and research requirements, but they also enable deployment of turrets offensively; a tactic that can be frighteningly effective.
+\nHyperseeds are meant to be used shortly after acquisition, and will expire rather quickly. Be sure to not hang onto them for too long!
+\n\nKey notes:
+Significantly lowered growth time when compared to normal method (from ~6 full days to ~1)
+No research or tech level requirement
+Quick growth time allows offensive or rapid response use</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/FastSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>750</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ET_PrimaTurretSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+
+  <!--==========-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_FastSeed_PrimaShotgunTurret</defName>
+    <label>Prima Hyperseed: Scatter Turret</label>
+    <description>A masterfully crafted seed that will quickly grow into a Prima Scatter Turret within a day.
+Knowledge on how to make hyperseeds is highly guarded, and a secret only the most devoted possess. Not only do these bypass wait times and research requirements, but they also enable deployment of turrets offensively; a tactic that can be frighteningly effective.
+\nHyperseeds are meant to be used shortly after acquisition, and will expire rather quickly. Be sure to not hang onto them for too long!
+\n\nKey notes:
+Significantly lowered growth time when compared to normal method (from ~6 full days to ~1)
+No research or tech level requirement
+Quick growth time allows offensive or rapid response use</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/FastSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>750</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ET_PrimaTurretSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

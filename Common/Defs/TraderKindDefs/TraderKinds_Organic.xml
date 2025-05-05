@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--=====Basic Organic Trader=====-->
+
+  <TraderKindDef>
+    <defName>ET_OrganicVisitor_Standard</defName>
+    <label>terratech trader</label>
+    <stockGenerators>
+
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>150~350</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Pemmican</thingDef>
+        <countRange>60~120</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MedicineHerbal</thingDef>
+        <countRange>2~8</countRange>
+      </li>
+      <li Class="StockGenerator_MultiDef">
+        <thingDefs>
+          <li>Cloth</li>
+          <li>Chocolate</li>
+        </thingDefs>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ET_Glowsap</thingDef>
+        <countRange>0~50</countRange>
+      </li>
+
+      <!-- Drugs -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>Drugs</categoryDef>
+        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+        <thingDefCountRange>-1~1</thingDefCountRange>
+        <totalPriceRange>200~400</totalPriceRange>
+      </li>
+
+
+      <!-- Books -->
+      <li MayRequire="Ludeon.RimWorld.Anomaly" Class="StockGenerator_Tomes">
+        <countRange>-3~1</countRange>        <!-- 20% chance of appearing -->
+      </li>
+
+      <!-- Weapons -->
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>WeaponRanged</tradeTag>
+        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+        <countRange>0~1</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+        <categoryDef>WeaponsMelee</categoryDef>
+        <countRange>0~1</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>ET_BasePrimaWeaponTag</tradeTag>
+        <countRange>0~1</countRange>
+      </li>
+
+      <!-- Apparel -->
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>Clothing</tradeTag>
+        <countRange>0~1</countRange>
+        <maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+      </li>
+
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>Art</tag>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>MusicalInstrument</tag>
+      </li>
+
+    </stockGenerators>
+  </TraderKindDef>
+
+  <!--=====Seed Caravan=====-->
+
+  <TraderKindDef>
+    <defName>ET_OrganicCaravan_Seeds</defName>
+    <label>Terraseeds trader</label>
+    <commonality>0.4</commonality>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>
+          <min>600</min>
+          <max>1200</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ET_Seed_PerennialTree</thingDef>
+        <countRange>
+          <min>-2</min>
+          <max>8</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_PrimaTurretSeed</tradeTag>
+        <thingDefCountRange>
+          <min>-1</min>
+          <max>2</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>1</min>
+          <max>2</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_PrimaWeaponSeed</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>3</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>1</min>
+          <max>6</max>
+        </countRange>
+      </li>
+      <!--<li Class="StockGenerator_Tag">
+        <tradeTag>ET_PrimaStructureSeed</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>3</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>1</min>
+          <max>2</max>
+        </countRange>
+      </li>-->
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_T1MaterialSeed</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>2</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>1</min>
+          <max>4</max>
+        </countRange>
+      </li>
+      <!--<li Class="StockGenerator_Tag">
+        <tradeTag>ET_BasicSapPoolSeed</tradeTag>
+        <thingDefCountRange>
+          <min>-1</min>
+          <max>1</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>1</min>
+          <max>1</max>
+        </countRange>
+      </li>-->
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_T1ConduitTreeSeed</tradeTag>
+        <thingDefCountRange>
+          <min>-2</min>
+          <max>1</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>1</min>
+          <max>1</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_Animals">
+        <minWildness>0.60</minWildness>
+        <checkTemperature>true</checkTemperature>
+        <tradeTagsSell>
+          <li>AnimalFarm</li>
+          <li>AnimalPet</li>
+        </tradeTagsSell>
+        <tradeTagsBuy>
+          <li>AnimalFarm</li>
+          <li>AnimalPet</li>
+        </tradeTagsBuy>
+        <kindCountRange>
+          <min>3</min>
+          <max>3</max>
+        </kindCountRange>
+        <countRange>
+          <min>1</min>
+          <max>3</max>
+        </countRange>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <!--=====Sap Caravan=====-->
+
+  <TraderKindDef>
+    <defName>ET_OrganicCaravan_Saps</defName>
+    <label>Terrasaps trader</label>
+    <commonality>0.4</commonality>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>
+          <min>600</min>
+          <max>1200</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ET_Glowsap</thingDef>
+        <countRange>
+          <min>15</min>
+          <max>60</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ET_Brightsap</thingDef>
+        <countRange>
+          <min>1</min>
+          <max>15</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ET_Sunsap</thingDef>
+        <countRange>
+          <min>-5</min>
+          <max>3</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_SapsBasicFuel</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>2</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>5</min>
+          <max>30</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_SapsBasic</tradeTag>
+        <thingDefCountRange>
+          <min>1</min>
+          <max>4</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>3</min>
+          <max>15</max>
+        </countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_SapsAdvanced</tradeTag>
+        <thingDefCountRange>
+          <min>-1</min>
+          <max>2</max>
+        </thingDefCountRange>
+        <countRange>
+          <min>1</min>
+          <max>6</max>
+        </countRange>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <!--==========-->
+
+</Defs>

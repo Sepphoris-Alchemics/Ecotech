@@ -3,7 +3,7 @@
 
   <PawnKindDef Name="ET_SentryBase" Abstract="True">
     <race>Human</race>
-    <defaultFactionType>Terratechists</defaultFactionType>
+    <defaultFactionType>ET_OrganicFaction</defaultFactionType>
     <backstoryCategories>
       <li>TerratechTribal</li>
     </backstoryCategories>

@@ -114,7 +114,67 @@ Creates Deeproot Terravats</description>
     </modExtensions>-->
   </ThingDef>
 
-<!--=====SUNSAP AND STARSAP=====-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Toxsap</defName>
+    <label>Toxsap</label>
+    <description>A jar of terrasap containing elements quite poisonous to most living beings. Despite the name, Toxsap does not share the same effect with synthetic tox creations, and instead is more akin to venoms and poisons you would find in animals and insects.
+\n\nToxsap is very effective against non-Terratech factions, as other factions generally have little to no knowledge of curing the toxin. Very few can survive even moderates doses of it unscathed, and larger doses are almost always a death sentence.
+\nHowever, due to their superior understanding of Terratech, any Terratech faction can develop extremely effective antidotes, though these themselves also require access to Toxsap. This makes Toxsap an "equalizer" of sorts, as attempting to wipe out Terratech tribes also means wiping out this valuable knowledge.
+\nToxsap is quite rare, and it's methods of growth is currently unknown, making it's primary source of acquisition either from a Terratech faction, or from a Custodian Tree. Due to it being "discovered" AFTER the Prima weapons were developed, Prima weapons are simply not strong enough to support this sap, and will not accept it.
+\nIt is also a favorite of the smaller, savage Terratech tribes, making civil leverage of antidote knowledge all the more impactful.
+\n\nUse cases:
+Allows matured ranged weapons to fire venomous projectiles, and melee weapons to have a venomous coating.
+Creation of a potent anti-toxin serum
+Can be diluted into multiple long-term salves and other medicinal items.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Toxsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>6</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>154</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerrasapsAll</li>
+    </thingCategories>
+    <!--<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>-->
+    <!--<modExtensions>
+      <li Class="Ecotech.ThingDefExtension_TransformerRecipe">
+        <recipes>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaSMG</inputThingDef>
+            <outputThingDef>ET_PrimaSMGHypersap</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaTwincaster</inputThingDef>
+            <outputThingDef>ET_HypercasterI</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaShotgun</inputThingDef>
+            <outputThingDef>ET_PrimaShotgunHypersap</outputThingDef>
+          </li>
+        </recipes>
+      </li>
+    </modExtensions>-->
+  </ThingDef>
+
+  <!--=====SUNSAP AND STARSAP=====-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Sunsap</defName>
@@ -178,7 +238,7 @@ Highly valuable trade commodity with all EcoTech factions
     </thingCategories>
   </ThingDef>
 
-<!--==========-->
+  <!--==========-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Archsap</defName>
@@ -216,47 +276,4 @@ Weapon HP increased by by 50%</description>
       </li>
     </comps>-->
   </ThingDef>
-
-
-
-  <ThingDef ParentName="ResourceBase">
-    <defName>ET_SurgeSeed_GlowsapTree</defName>
-    <label>Glowsap Tree Seed</label>
-    <description>A special seed containing vast amounts of energy and nutrients. Once planted on any soil that can support plants, the seed will immediately burst into vines and wood, taking root and forming into the biotic pattern of a Prima Turret.\n\nSurge Seeds expend their energy quite rapidly, deteriorating their condition. They will wither away if not planted within a few days after harvesting.</description>
-    <possessionCount>4</possessionCount>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Resource/SurgeSeed</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-      <drawSize>0.3</drawSize>
-    </graphicData>
-    <stackLimit>150</stackLimit>
-    <healthAffectsPrice>true</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
-    <statBases>
-      <MaxHitPoints>20</MaxHitPoints>
-      <MarketValue>5.5</MarketValue>
-      <Mass>0.015</Mass>
-      <Flammability>1</Flammability>
-      <DeteriorationRate>0</DeteriorationRate>
-    </statBases>
-    <thingCategories>
-      <li>PlantMatter</li>
-    </thingCategories>
-    <comps>
-      <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_GlowsapTree</plantDefToSpawn>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>1.9</glowRadius>
-        <glowColor>(370,370,370,0)</glowColor>
-      </li>
-      <li Class="CompProperties_Lifespan">
-        <lifespanTicks>240000</lifespanTicks>
-      </li>
-    </comps>
-    <allowedArchonexusCount>4</allowedArchonexusCount>
-  </ThingDef>
-
 </Defs>

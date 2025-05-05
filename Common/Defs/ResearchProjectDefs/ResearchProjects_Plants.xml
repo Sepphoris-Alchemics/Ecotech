@@ -230,7 +230,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <defName>ET_PrimaTurretSeeds</defName>
     <label>Prima Sentry Seeds</label>
     <description>Learn how to properly grow and plant specialized seeds which will instantly sprout into biotic plant patterns akin to small turrets. The nature of these plants - labelled as "Sentries" - requires them to be placed in soil that can grow plants.
-Instead of using electricity or requiring fuel, these sentries have a limited lifespan, which drains over time and whenever they generate projectiles. The seeds these sentries come from are acquired directly from Elderwood Sentinels, and matured, unmodified Terraweapons.</description>
+Instead of using electricity or requiring fuel, these sentries have a limited lifespan, which drains over time and whenever they generate projectiles. The seeds these sentries come from are acquired directly from Primwood Sentinels, and matured, unmodified Terraweapons.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -251,7 +251,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
 
   <ResearchProjectDef>
     <defName>ET_ConduitSeeds</defName>
-    <label>Elderwood Conduit Seeds</label>
+    <label>Primwood Conduit Seeds</label>
     <description>Not everything is hands-on; while you take care of the planet, the planet will take care of you back. This research enables you to create "Conduit" seeds, which - when planted - grow powerful trees that protect and supply your colony.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>2000</baseCost>

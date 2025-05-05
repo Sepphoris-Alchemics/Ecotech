@@ -25,7 +25,7 @@ Tier 4 surge seeds: 20
 
 <!--Melee Weapons-->
 
-  <ThingDef Name="ET_WeaponPodBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="ET_PrimaWeaponPodBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/WeaponPod_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -38,8 +38,8 @@ Tier 4 surge seeds: 20
     <pathCost>14</pathCost>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <plant>
-      <fertilityMin>0.7</fertilityMin>
-      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
       <growMinGlow>0.3</growMinGlow>
       <harvestWork>300</harvestWork>
       <harvestedThingDef>ET_PrimaKnife</harvestedThingDef>
@@ -64,7 +64,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Knife</defName>
     <label>Terrapod: Knife</label>
     <description>A plant pod that will slowly grow a biotic pistol. Requires highly fertile terrain.</description>
@@ -82,7 +82,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_PrimaSword</defName>
     <label>Terrapod: Briarsword</label>
     <description>A plant pod that will slowly grow a biotic sword. Requires highly fertile terrain.</description>
@@ -97,7 +97,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_PrimaMace</defName>
     <label>Terrapod: Briarmaul</label>
     <description>A plant pod that will slowly grow a biotic mace. Requires highly fertile terrain.</description>
@@ -112,7 +112,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Stakecaster</defName>
     <label>Terrapod: Stakecaster</label>
     <description>A plant pod that will slowly grow a biotic Stakecaster. Requires highly fertile terrain.</description>
@@ -128,7 +128,7 @@ Tier 4 surge seeds: 20
 
 <!--Light Weapons-->
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Pistol</defName>
     <label>Terrapod: Pistol</label>
     <description>A plant pod that will slowly grow a biotic pistol. Requires highly fertile terrain.</description>
@@ -143,7 +143,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_SMG</defName>
     <label>Terrapod: Pincaster</label>
     <description>A plant pod that will slowly grow a biotic SMG. Requires highly fertile terrain.</description>
@@ -160,9 +160,9 @@ Tier 4 surge seeds: 20
 
 <!--Standard arms-->
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Shotgun</defName>
-    <label>Terrapod: Spreadburster</label>
+    <label>Terrapod: Prima Scattershot</label>
     <description>A plant pod that will slowly grow a biotic shotgun. Requires highly fertile terrain.</description>
     <plant>
       <harvestedThingDef>ET_PrimaShotgun</harvestedThingDef>
@@ -175,7 +175,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Carbine</defName>
     <label>Terrapod: Carbine</label>
     <description>A plant pod that will slowly grow a biotic carbine. Requires highly fertile terrain.</description>
@@ -190,7 +190,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Rifle</defName>
     <label>Terrapod: Rifle</label>
     <description>A plant pod that will slowly grow a biotic rifle. Requires highly fertile terrain.</description>
@@ -207,7 +207,7 @@ Tier 4 surge seeds: 20
 
 <!--Heavy Weapons-->
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_LMG</defName>
     <label>Terrapod: Heavy Rifle</label>
     <description>A plant pod that will slowly grow a biotic, heavy assault rifle. Requires highly fertile terrain.</description>
@@ -222,7 +222,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Seedburster</defName>
     <label>Terrapod: Seedburster</label>
     <description>A plant pod that will slowly grow a biotic launcher that lobs explosive shells filled with sharp seeds. Requires highly fertile terrain.</description>
@@ -237,7 +237,7 @@ Tier 4 surge seeds: 20
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_AcidLauncher</defName>
     <label>Terrapod: Acid Launcher</label>
     <description>A plant pod that will slowly grow a biotic launcher that sprays acid. Requires highly fertile terrain.</description>
@@ -254,7 +254,7 @@ Tier 4 surge seeds: 20
 
 <!--Random weapons-->
 
-  <ThingDef ParentName="ET_WeaponPodBase">
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_PrimaPod_Random</defName>
     <graphicData>
       <texPath>Things/Plant/PrimaPodRandom</texPath>
@@ -270,7 +270,7 @@ Tier 4 surge seeds: 20
       <showGrowthInInspectPane>false</showGrowthInInspectPane>
       <harvestMinGrowth>1</harvestMinGrowth>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
-      <fertilityMin>0.7</fertilityMin>
+      <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
       <wildClusterWeight>0</wildClusterWeight>
       <harvestYield>0</harvestYield>
