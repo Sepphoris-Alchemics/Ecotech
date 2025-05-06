@@ -5,9 +5,6 @@
 
   <RulePackDef>
     <defName>ET_NamerOrganicUtility</defName>
-    <include>
-      <li>ET_NamerOrganicUtility</li>
-    </include>
     <rulePack>
       <rulesFiles>
         <li>FileET_Adjectives->Words/ET_Adjectives</li>
@@ -20,6 +17,10 @@
         <li>FileET_NaturalStructures->Words/ET_NaturalStructures</li>
         <li>FileET_Nouns->Words/ET_Nouns</li>
         <li>FileET_Weapons->Words/ET_Weapons</li>
+        <li>FileET_Prefixes->Names/ET_Prefixes</li>
+        <li>FileET_Affixes->Names/ET_Affixes</li>
+        <li>FileET_Suffixes->Names/ET_Suffixes</li>
+        <li>FileET_DedicatedNouns->Words/ET_DedicatedNouns</li>
       </rulesFiles>
       <rulesStrings>
         <li>ET_Adjectives->[FileET_Adjectives]</li>
@@ -32,6 +33,10 @@
         <li>ET_NaturalStructures->[FileET_NaturalStructures]</li>
         <li>ET_Nouns->[FileET_Nouns]</li>
         <li>ET_Weapons->[FileET_Weapons]</li>
+        <li>ET_Prefixes->[FileET_Prefixes]</li>
+        <li>ET_Affixes->[FileET_Affixes]</li>
+        <li>ET_Suffixes->[FileET_Suffixes]</li>
+        <li>ET_DedicatedNouns->[FileET_DedicatedNouns]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
