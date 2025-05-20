@@ -64,6 +64,16 @@
             <inputThingDef>ET_PrimaSMG</inputThingDef>
             <outputThingDef>ET_PrimaSMGUpgraded</outputThingDef>
           </li>
+          <li>
+            <fuelCount>30</fuelCount>
+            <inputThingDef>ET_PrimaCarbine</inputThingDef>
+            <outputThingDef>ET_PrimaCarbineUpgraded</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>30</fuelCount>
+            <inputThingDef>ET_PrimaSapLauncher_Basic</inputThingDef>
+            <outputThingDef>ET_PrimaSapLauncher_Upgraded</outputThingDef>
+          </li>
         </recipes>
       </li>
     </modExtensions>

@@ -91,27 +91,17 @@ Creates Deeproot Terravats</description>
         <glowColor>(370,370,370,0)</glowColor>
       </li>
     </comps>-->
-    <!--<modExtensions>
+    <modExtensions>
       <li Class="Ecotech.ThingDefExtension_TransformerRecipe">
         <recipes>
           <li>
             <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaSMG</inputThingDef>
-            <outputThingDef>ET_PrimaSMGHypersap</outputThingDef>
-          </li>
-          <li>
-            <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaTwincaster</inputThingDef>
-            <outputThingDef>ET_HypercasterI</outputThingDef>
-          </li>
-          <li>
-            <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaShotgun</inputThingDef>
-            <outputThingDef>ET_PrimaShotgunHypersap</outputThingDef>
+            <inputThingDef>ET_PrimaStakecaster</inputThingDef>
+            <outputThingDef>ET_PerennialTricaster</outputThingDef>
           </li>
         </recipes>
       </li>
-    </modExtensions>-->
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">

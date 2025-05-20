@@ -3,8 +3,14 @@ Orchard
 Copse
 Thicket
 Wildlands
+Woodlands
+Hinterlands
+Overgrowths
 Haven
 Refuge
 Cove
 Sanctum
 Veil
+Garden
+Sanctuary
+Morass

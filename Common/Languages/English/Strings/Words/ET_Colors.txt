@@ -1,4 +1,14 @@
 Green
-Silvered
-Rosen
+Silver
+Blood
 Red
+Gold
+Crimson
+Amber
+Pink
+Blue
+Yellow
+Azure
+Black
+White
+Pale

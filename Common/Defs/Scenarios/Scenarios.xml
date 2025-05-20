@@ -1,96 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  
 
-  <ScenarioDef>
-    <defName>ET_EcotechKeepers</defName>
-    <label>Sentries of the Ecotech</label>
 
-    <scenario>
-		  <summary>Four guardians of Ecotech build anew to preserve their culture.</summary>
-		  <description>Your near-extinct tribe was the last on the planet that knew the sacred secrets of the Terraseed. Half of you have been sent off to start a new home, in pursuit of keeping the knowledge alive.
-\nThis scenario starts you off with several Ecotech technologies and items, but prohibits you from progressing mechanical tech too far. Designed for low-tech-only playthroughs.</description>
-		<playerFaction>
-			<def>PlayerFaction</def>
-			<factionDef>PlayerTribe</factionDef>
-		</playerFaction>
-		<parts>
-			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
-				<def>ConfigPage_ConfigureStartingPawns</def>
-				<pawnChoiceCount>8</pawnChoiceCount>
-				<pawnCount>4</pawnCount>
-			</li>
-			<li Class="ScenPart_PlayerPawnsArriveMethod">
-				<def>PlayerPawnsArriveMethod</def>
-        <method>Standing</method>
-			</li>
-			<li Class="ScenPart_StatFactor">
-				<def>StatFactor</def>
-				<stat>PlantWorkSpeed</stat>
-				<factor>2</factor>
-			</li>
-			<!--<li Class="ScenPart_StatFactor">
+	<ScenarioDef>
+		<defName>ET_EcotechKeepers</defName>
+		<label>Sentries of the Ecotech</label>
+
+		<scenario>
+			<summary>Four guardians of Ecotech build anew to preserve their culture.</summary>
+			<description>Your near-extinct tribe was the last on the planet that knew the sacred secrets of the Terraseed. Half of you have been sent off to start a new home, in pursuit of keeping the knowledge alive.
+\nThis scenario starts you off with several Ecotech technologies and items, and in high relations with the present Terratech tribes, but prohibits you from progressing mechanical tech too far. Designed for low-tech-only playthroughs.</description>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>PlayerTribe</factionDef>
+			</playerFaction>
+			<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnChoiceCount>8</pawnChoiceCount>
+					<pawnCount>4</pawnCount>
+				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+				</li>
+				<li Class="ScenPart_StatFactor">
+					<def>StatFactor</def>
+					<stat>PlantWorkSpeed</stat>
+					<factor>2</factor>
+				</li>
+				<!--<li Class="ScenPart_StatFactor">
 				<def>StatFactor</def>
 				<stat>PlantHarvestYield</stat>
 				<factor>1.5</factor>
 			</li>-->
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>Pemmican</thingDef>
-				<count>600</count>
-			</li>
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_PrimaSword</thingDef>
-        <count>1</count>
-			</li>
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_PrimaKnife</thingDef>
-        <count>1</count>
-			</li>
-			<!--<li Class="ScenPart_StartingThing_Defined">
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Pemmican</thingDef>
+					<count>600</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_PrimaSword</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_PrimaKnife</thingDef>
+					<count>1</count>
+				</li>
+				<!--<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>ET_PrimaStakecaster</thingDef>
         <count>2</count>
 			</li>-->
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_PrimaSMG</thingDef>
-        <count>1</count>
-			</li>
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_PrimaCarbine</thingDef>
-        <count>1</count>
-			</li>
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_Seed_Terraforge</thingDef>
-			</li>
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_Seed_PrimaStakeTurret</thingDef>
-				<count>2</count>
-			</li>
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_Seed_PrimaSMGTurret</thingDef>
-				<count>1</count>
-			</li>
-			<li Class="ScenPart_ScatterThingsNearPlayerStart">
-				<def>ScatterThingsAnywhere</def>
-				<thingDef>ET_TierOnePlating</thingDef>
-				<count>750</count>
-				<allowRoofed>True</allowRoofed>
-			</li>
-			<li Class="ScenPart_ScatterThingsNearPlayerStart">
-				<def>StartingThing_Defined</def>
-				<thingDef>ET_Glowsap</thingDef>
-				<count>75</count>
-				<allowRoofed>True</allowRoofed>
-			</li>
-			<!--<li Class="ScenPart_StartingResearch">
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_PrimaSMG</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_PrimaCarbine</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_Terraforge</thingDef>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_PrimaStakeTurret</thingDef>
+					<count>2</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_PrimaSMGTurret</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ET_TierOnePlating</thingDef>
+					<count>750</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Glowsap</thingDef>
+					<count>75</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<!--<li Class="ScenPart_StartingResearch">
 				<def>StartingResearch</def>
 				<project>ET_FundamentalArms</project>
 			</li>
@@ -102,48 +102,57 @@
 				<def>StartingResearch</def>
 				<project>ET_StandardFirearms</project>
 			</li>-->
-			<li Class="ScenPart_StartingResearch">
-				<def>StartingResearch</def>
-				<project>ET_ConduitSeeds</project>
-			</li>
-			<li Class="ScenPart_StartingResearch">
-				<def>StartingResearch</def>
-				<project>ET_PrimaTurretSeeds</project>
-			</li>
-			<li Class="ScenPart_StartingResearch">
-				<def>StartingResearch</def>
-				<project>ET_SapBasics</project>
-			</li>
-			<li Class="ScenPart_DisallowBuilding">
-				<def>Rule_DisallowBuilding</def>
-				<building>HiTechResearchBench</building>
-			</li>
-			<li Class="ScenPart_DisallowBuilding">
-				<def>Rule_DisallowBuilding</def>
-				<building>MultiAnalyzer</building>
-			</li>
-			<li Class="ScenPart_ForcedTrait">
-				<def>ForcedTrait</def>
-				<chance>0.1</chance>
-				<context>PlayerStarter</context>
-				<trait>FastLearner</trait>
-			</li>
-			<!--<li Class="ScenPart_ForcedTrait">
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_ConduitSeeds</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_PrimaTurretSeeds</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_SapBasics</project>
+				</li>
+				<li Class="ScenPart_DisallowBuilding">
+					<def>Rule_DisallowBuilding</def>
+					<building>HiTechResearchBench</building>
+				</li>
+				<li Class="ScenPart_DisallowBuilding">
+					<def>Rule_DisallowBuilding</def>
+					<building>MultiAnalyzer</building>
+				</li>
+				<li Class="ScenPart_ForcedTrait">
+					<def>ForcedTrait</def>
+					<chance>0.1</chance>
+					<context>PlayerStarter</context>
+					<trait>FastLearner</trait>
+				</li>
+				<!--<li Class="ScenPart_ForcedTrait">
 				<def>ForcedTrait</def>
 				<chance>0.1</chance>
 				<context>PlayerStarter</context>
 				<trait>Nerves</trait>
 				<degree>2</degree>
 			</li>-->
-			<li Class="ScenPart_GameStartDialog">
-				<def>GameStartDialog</def>
-				<text>For generations, your last tribe was sworn to follow and guard the secrets of the sacred Ecotech. Your prior tribe decided the only way to ensure preservation of the secrets was to besgin establishing new tribes, dedicated to the rise of new keepers.
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>For generations, your last tribe was sworn to follow and guard the secrets of the sacred Ecotech. Your prior tribe decided the only way to ensure preservation of the secrets was to besgin establishing new tribes, dedicated to the rise of new keepers.
 
 Note: this scenario has been designed for runs that intend to have little-to-none electronic influence. Have fun!</text>
-				<closeSound>GameStartSting</closeSound>
-			</li>
-      </parts>
-    </scenario>
-  </ScenarioDef>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+				<li Class="VFECore.ScenPart_ForcedFactionGoodwill">
+					<factionDef>ET_OrganicFaction</factionDef>
+					<affectHiddenFactions>True</affectHiddenFactions>
+					<affectStartingGoodwill>True</affectStartingGoodwill>
+					<startingGoodwillRange>60~90</startingGoodwillRange>
+					<affectNaturalGoodwill>True</affectNaturalGoodwill>
+					<naturalGoodwillRange>30~50</naturalGoodwillRange>
+					<def>VFEC_ForcedFactionGoodwill</def>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
 
 </Defs>

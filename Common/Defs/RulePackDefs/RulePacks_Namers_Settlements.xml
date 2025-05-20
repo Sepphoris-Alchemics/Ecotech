@@ -9,9 +9,11 @@
     <rulePack>
       <rulesStrings>
         <!--<li>r_name->[ET_BuiltStructures] [ET_Genomes]</li>-->
-        <li>r_name->The [ET_Descriptors] [ET_NaturalStructures] of [ET_Prefixes][ET_Affixes][ET_Suffixes]</li>
+        <!--<li>r_name->The [ET_Descriptors] [ET_NaturalStructures] of [ET_Prefixes][ET_Affixes][ET_Suffixes]</li>-->
         <li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes]'s [ET_BuiltStructures]</li>
         <li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes]'s [ET_NaturalStructures]</li>
+        <li>r_name->[ET_Flowers][ET_NaturalNouns] [ET_BuiltStructures]</li>
+        <li>r_name->[ET_Colors][ET_NaturalNouns] [ET_NaturalStructures]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

@@ -1,0 +1,13 @@
+wood
+tree
+branch
+seed
+root
+bark
+leaf
+sap
+flower
+sprout
+thorn
+stem
+petal

@@ -5,7 +5,7 @@ dur
 al
 ali
 acel
-iz
+iza
 nil
 vur
 ec
@@ -14,4 +14,8 @@ tith
 ax
 an
 ia
-iel
+el
+ine
+lith
+los
+song

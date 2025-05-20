@@ -7,9 +7,7 @@ Terraquartz: in between gold and wood (185): late-game royal material. Prettiest
 Terramass: in between wood and silver (200): early-game building material
 Purewood: in between silver and steel (245): produced from breaking down industrial items.
 Livewood: in between steel and marble (330): mid-game material
-    -Replaces Elderwood Trees
-
-===Major upgrade needed for the following===
+    -Replaces Elderwood Trees ===Major upgrade needed for the following===
 
 Bloomwood: in between marble and slate (375): art material. Second prettiest.
 Ebonmass: in between slate and sandstone (405): upgrade to terramass.
@@ -91,17 +89,18 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <description>Organic plates of Primwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
 \n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. However, the wood present on Prima weapons is reminiscent of Primwood's own sapwood or heartwood, but softer and smoother.</description>
         <graphicData>
-			<texPath>Things/Resource/Primwood</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
+            <texPath>Things/Resource/Primwood</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <generateCommonality>0</generateCommonality>
-		<generateAllowChance>0</generateAllowChance>
+        <generateAllowChance>0</generateAllowChance>
         <tradeability>Sellable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <stackLimit>75</stackLimit>
+        <stackLimit>500</stackLimit>
+        <smallVolume>true</smallVolume>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
-		<soundDrop>Wood_Drop</soundDrop>
+        <soundDrop>Wood_Drop</soundDrop>
         <statBases>
             <MarketValue>1.2</MarketValue>
             <MaxHitPoints>225</MaxHitPoints>
@@ -115,27 +114,27 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <stuffProps>
             <stuffAdjective>primwood</stuffAdjective>
             <categories>
-				<li>Woody</li>
-			</categories>
+                <li>Woody</li>
+            </categories>
             <color>(85,74,49)</color>
             <commonality>0</commonality>
             <constructEffect>ConstructWood</constructEffect>
-			<appearance>Planks</appearance>
+            <appearance>Planks</appearance>
             <statFactors>
                 <MaxHitPoints>0.8</MaxHitPoints>
                 <Flammability>1</Flammability>
-				<WorkToMake>0.8</WorkToMake>
-				<WorkToBuild>0.8</WorkToBuild>
-				<DoorOpenSpeed>1.1</DoorOpenSpeed>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <DoorOpenSpeed>1.1</DoorOpenSpeed>
             </statFactors>
             <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
         </stuffProps>
         <thingCategories>
-			<li>ResourcesRaw</li>
-		</thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
         <techHediffsTags>
-			<li>Poor</li>
-		</techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 
@@ -147,17 +146,17 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <description>Organic plates of Elderwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
 \n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. However, the wood present on Prima weapons is reminiscent of Primwood's own sapwood or heartwood, but softer and smoother.</description>
         <graphicData>
-			<texPath>Things/Resource/Primwood</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
+            <texPath>Things/Resource/Primwood</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <generateCommonality>0</generateCommonality>
-		<generateAllowChance>0</generateAllowChance>
+        <generateAllowChance>0</generateAllowChance>
         <tradeability>Sellable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <stackLimit>75</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
-		<soundDrop>Wood_Drop</soundDrop>
+        <soundDrop>Wood_Drop</soundDrop>
         <statBases>
             <MarketValue>1.2</MarketValue>
             <MaxHitPoints>225</MaxHitPoints>
@@ -171,27 +170,27 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <stuffProps>
             <stuffAdjective>primwood</stuffAdjective>
             <categories>
-				<li>Woody</li>
-			</categories>
+                <li>Woody</li>
+            </categories>
             <color>(85,74,49)</color>
             <commonality>0</commonality>
             <constructEffect>ConstructWood</constructEffect>
-			<appearance>Planks</appearance>
+            <appearance>Planks</appearance>
             <statFactors>
                 <MaxHitPoints>0.8</MaxHitPoints>
                 <Flammability>1</Flammability>
-				<WorkToMake>0.8</WorkToMake>
-				<WorkToBuild>0.8</WorkToBuild>
-				<DoorOpenSpeed>1.1</DoorOpenSpeed>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <DoorOpenSpeed>1.1</DoorOpenSpeed>
             </statFactors>
             <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
         </stuffProps>
         <thingCategories>
-			<li>ResourcesRaw</li>
-		</thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
         <techHediffsTags>
-			<li>Poor</li>
-		</techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 

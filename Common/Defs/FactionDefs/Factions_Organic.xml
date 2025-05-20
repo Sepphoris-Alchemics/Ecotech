@@ -14,10 +14,9 @@
     <leaderTitle>Grovekeeper</leaderTitle>
     <autoFlee>false</autoFlee>
     <earliestRaidDays>7</earliestRaidDays>
-    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>    <!--create custom icon-->
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>    <!--create custom icon-->
     <colorSpectrum>
-      <li>(0.64, 0.05, 0.8)</li>
-      <li>(0.8, 0.05, 0.64)</li>
+      <li>(85, 170, 175)</li>
     </colorSpectrum>
     <factionNameMaker>ET_NamerOrganicFaction</factionNameMaker>    <!--create custom def-->
     <settlementNameMaker>ET_NamerOrganicSettlement</settlementNameMaker>    <!--create custom def-->
@@ -131,6 +130,18 @@
     <factionIconPath>UI/World/TerratechTown</factionIconPath>
     <maxConfigurableAtWorldCreation>9</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>10</configurationListOrderPriority>
+    <modExtensions>
+      <li Class="VFECore.FactionDefExtension">
+        <allowedBiomes>
+          <li>BorealForest</li>
+          <li>TemperateForest</li>
+          <li>TemperateSwamp</li>
+          <li>TropicalRainforest</li>
+          <li>TropicalSwamp</li>
+        </allowedBiomes>
+        <excludeFromCommConsole>true</excludeFromCommConsole>
+      </li>
+    </modExtensions>
   </FactionDef>
 
   <ThingSetMakerDef>

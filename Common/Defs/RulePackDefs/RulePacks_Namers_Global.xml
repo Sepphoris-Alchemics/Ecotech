@@ -21,6 +21,8 @@
         <li>FileET_Affixes->Names/ET_Affixes</li>
         <li>FileET_Suffixes->Names/ET_Suffixes</li>
         <li>FileET_DedicatedNouns->Words/ET_DedicatedNouns</li>
+        <li>FileET_Flowers->Words/ET_Flowers</li>
+        <li>FileET_NaturalNouns->Words/ET_NaturalNouns</li>
       </rulesFiles>
       <rulesStrings>
         <li>ET_Adjectives->[FileET_Adjectives]</li>
@@ -36,7 +38,7 @@
         <li>ET_Prefixes->[FileET_Prefixes]</li>
         <li>ET_Affixes->[FileET_Affixes]</li>
         <li>ET_Suffixes->[FileET_Suffixes]</li>
-        <li>ET_DedicatedNouns->[FileET_DedicatedNouns]</li>
+        <li>ET_NaturalNouns->[FileET_NaturalNouns]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

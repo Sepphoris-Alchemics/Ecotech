@@ -1,6 +1,7 @@
-Fort
-Castle
 Citadel
 Acropolis
-Preserve
 Bastion
+Fortress
+Estuary
+Conservatory
+Heartlands
