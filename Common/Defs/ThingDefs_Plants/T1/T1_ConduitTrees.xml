@@ -59,7 +59,7 @@
   </ThingDef>-->
 
 
-  <ThingDef ParentName="TreeBase"> <!--todo: add pod growth mechanic-->
+  <ThingDef ParentName="TreeBase">    <!--todo: add pod growth mechanic-->
     <defName>ET_SentinelTreeTierOne</defName>
     <label>Primwood Sentinel Tree</label>
     <description>The Primwood Sentinel is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Primwood Sentinels provide various weapons and Prima seeds to their colony.
@@ -93,7 +93,7 @@ While this tree is present, weapons and seeds will be created at the base of the
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <plant>
-      <growDays>1</growDays> 
+      <growDays>1</growDays>
       <visualSizeRange>1.8~2.4</visualSizeRange>
       <!--<sowMinSkill>6</sowMinSkill>
 			<sowTags>
@@ -125,15 +125,15 @@ While this tree is present, weapons and seeds will be created at the base of the
       <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
       <blockAdjacentSow>true</blockAdjacentSow>
       <warnIfMarkedForCut>true</warnIfMarkedForCut>
-			<burnedThingDef IsNull="True" />
-			<choppedThingDef IsNull="True" />
-			<smashedThingDef IsNull="True" />
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
       <purpose>Misc</purpose>
     </plant>
     <comps>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>900000~1200000</cycleDurationRangeTicks> <!--15 to 20 days-->
+        <cycleDurationRangeTicks>900000~1200000</cycleDurationRangeTicks>        <!--15 to 20 days-->
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
@@ -185,17 +185,19 @@ While this tree is present, weapons and seeds will be created at the base of the
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>
   </ThingDef>
 
 
-  <ThingDef ParentName="TreeBase"> <!--todo: add zone growth coding-->
+  <ThingDef ParentName="TreeBase">    <!--todo: add zone growth coding and add building coding-->
     <defName>ET_BuildingTreeTierOne</defName>
     <label>Primwood Custodian Tree</label>
-    <description>The Primwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Primwood custodian trees produce lumps of terramass that can be harvested from the ground.
+    <description>The Primwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live efficiently under natural resources. Custodian trees tend to the surrounding terrain, enriching it to a sap-infused terrain.
+This sap-infused terrain is required for more advanced terraplants, as normal terrains simply can't supply the nutrients. All nearby soil terrains become enriched. Note that this particular Custodian cannot affect wet, stony, or dry terrains.
+The terrain this tree makes can support normal plants as well. However, the terrain that stronger Custodians make is toxic to normal plants.
 This tree will also periodically shed excess bark, creating malleable wooden plates that can be used for crafting and construction.
 
 Legend has it this tree was once able to independently shelter entire colonies. Whether or not that is true remains to be seen....</description>
@@ -226,7 +228,7 @@ Legend has it this tree was once able to independently shelter entire colonies. 
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <plant>
-      <growDays>1</growDays> 
+      <growDays>1</growDays>
       <visualSizeRange>1.8~2.4</visualSizeRange>
       <!--<sowMinSkill>6</sowMinSkill>
 			<sowTags>
@@ -258,9 +260,9 @@ Legend has it this tree was once able to independently shelter entire colonies. 
       <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
       <blockAdjacentSow>true</blockAdjacentSow>
       <warnIfMarkedForCut>true</warnIfMarkedForCut>
-			<burnedThingDef IsNull="True" />
-			<choppedThingDef IsNull="True" />
-			<smashedThingDef IsNull="True" />
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
       <purpose>Misc</purpose>
     </plant>
     <comps>
@@ -284,13 +286,13 @@ Legend has it this tree was once able to independently shelter entire colonies. 
           <li>
             <weight>1</weight>
             <things>
-                <ET_TierOnePlating>300</ET_TierOnePlating>
+              <ET_TierOnePlating>300</ET_TierOnePlating>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-                <ET_TierOnePlating>450</ET_TierOnePlating>
+              <ET_TierOnePlating>450</ET_TierOnePlating>
             </things>
           </li>
         </potentialSpawnedThings>
@@ -300,9 +302,9 @@ Legend has it this tree was once able to independently shelter entire colonies. 
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
-      <li Class="CompProperties_SpawnSubplant">
+      <!--<li Class="CompProperties_SpawnSubplant">
         <compClass>CompSpawnSubplantDuration</compClass>
         <subplant>ET_TerramassPlantLarge</subplant>
         <maxRadius>7.9</maxRadius>
@@ -315,12 +317,29 @@ Legend has it this tree was once able to independently shelter entire colonies. 
           <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
           <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
         </plantsToNotOverwrite>
+      </li>-->
+      <li Class="CVNPlantFunctions.CompProperties_TerrainTerraforming">
+        <interval>32000</interval>
+        <radius>5</radius>        <!-- don't set it too big, otherwise might affect performance -->
+        <countPerTrigger>2</countPerTrigger>        <!-- if omited, it convert all at once -->
+        <Terraforms>
+          <li>
+            <validTerrain>
+              <li>Soil</li>
+              <li>SoilRich</li>
+              <li>Gravel</li>
+              <li>PackedDirt</li>
+              <li>MossyTerrain</li>
+            </validTerrain>
+            <changedInto>ET_SapTerrainTierOne</changedInto>
+          </li>
+        </Terraforms>
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>
   </ThingDef>
 
-
+  <!--Spectra tree: produces saps-->
 
   <ThingDef ParentName="TreeBase">
     <defName>ET_SapTreeTierOne</defName>
@@ -357,7 +376,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <plant>
-      <growDays>1</growDays> 
+      <growDays>1</growDays>
       <visualSizeRange>1.8~2.4</visualSizeRange>
       <!--<sowMinSkill>6</sowMinSkill>
 			<sowTags>
@@ -388,15 +407,15 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
       <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
       <blockAdjacentSow>true</blockAdjacentSow>
       <warnIfMarkedForCut>true</warnIfMarkedForCut>
-			<burnedThingDef IsNull="True" />
-			<choppedThingDef IsNull="True" />
-			<smashedThingDef IsNull="True" />
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
       <purpose>Misc</purpose>
     </plant>
     <comps>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>480000~660000</cycleDurationRangeTicks> <!--every 8-11 days-->
+        <cycleDurationRangeTicks>480000~660000</cycleDurationRangeTicks>        <!--every 8-11 days-->
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
@@ -415,15 +434,15 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
           <li>
             <weight>0.5</weight>
             <things>
-                <ET_Glowsap>75</ET_Glowsap>
-                <ET_Hypersap>1</ET_Hypersap>
+              <ET_Glowsap>75</ET_Glowsap>
+              <ET_Hypersap>1</ET_Hypersap>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
               <ET_Glowsap>75</ET_Glowsap>
-                <ET_Brightsap>2~3</ET_Brightsap>
+              <ET_Brightsap>2~3</ET_Brightsap>
             </things>
           </li>
           <li>
@@ -460,7 +479,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>

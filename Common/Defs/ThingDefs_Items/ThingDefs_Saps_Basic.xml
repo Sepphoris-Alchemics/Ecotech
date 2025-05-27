@@ -72,7 +72,7 @@
           <li>
             <fuelCount>30</fuelCount>
             <inputThingDef>ET_PrimaSapLauncher_Basic</inputThingDef>
-            <outputThingDef>ET_PrimaSapLauncher_Upgraded</outputThingDef>
+            <outputThingDef>ET_PrimaSapLauncher_Glowsap</outputThingDef>
           </li>
         </recipes>
       </li>

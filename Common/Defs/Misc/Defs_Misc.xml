@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<MVCF.ModDef>
+		<defName>ET_MCVFFeatures</defName>
+		<label>Base Terraweapon</label>
+		<description>VFE features</description>
+			<ActivateFeatures>
+				<li>RangedAnimals</li>
+				<li>HediffVerbs</li>
+				<li>IntegratedToggle</li>
+        <li>ExtraEquipmentVerbs</li>
+        <li>ApparelVerbs</li>
+        <li>Drawing</li>
+        <li>IndependentFire</li>
+        <li>InventoryVerbs</li>
+        <li>VerbComps</li>
+        <li>Reloading</li>
+			</ActivateFeatures>
+	</MVCF.ModDef>
+
   <DesignationCategoryDef>
     <defName>EcotechDesignation</defName>
     <label>Ecotech</label>

@@ -131,7 +131,7 @@ Anima long range is brought down by 3
 
   <ThingDef ParentName="BaseBullet">    <!--pump shotgun counterpart, medium weapon-->
     <defName>Bullet_ThornShotgun</defName>
-    <label>scatter blast</label>
+    <label>thorn cluster</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!--Endosap differences are applied to their dormant form.
-At their matured form, they are given their maturity increases-->
+	<!--Endosap differences:
+	50% higher item health
+	75% lower flammability-->
+
+<!--=====Prima SMG=====-->
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
 		<defName>ET_PrimaSMGEndosap</defName>
@@ -31,7 +34,7 @@ At their matured form, they are given their maturity increases-->
 			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.2</Mass>
-			<Flammability>0.5</Flammability> <!--75% lower flammability-->
+			<Flammability>0.75</Flammability> <!--75% lower flammability-->
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -112,49 +115,60 @@ At their matured form, they are given their maturity increases-->
 		</modExtensions>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>ET_PrimaShotgunEndosap</defName>
-		<label>prima endoburster</label>
-		<description>The matured form of the Prima Spreadshot, infused with the Endosap. The presence of the endosap has enabled the pincaster to create a more durable epidermis, and decreasing flammability.</description>
+<!--=====Prima Carbine=====-->
+
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+		<defName>ET_PrimaCarbineEndosap</defName>
+		<label>prima endocarbine</label>
+		<description>An infused variant of the Prima Carbine. It's baseline sap has been replaced with endosap, creating a more durable epidermis, and decreasing flammability.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Endosap/PrimaShotgunUpgraded_ES</texPath>
+			<texPath>Things/WeaponPrima/Endosap/PrimaCarbineUpgraded_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.9</drawSize>
+			<drawSize>1</drawSize>
 		</graphicData>
-		<soundInteract>Interact_Shotgun</soundInteract>
+		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
-			<li>PlantWeaponsUpgraded</li>
 		</weaponTags>
-    <weaponClasses>
-			<li>ShortShots</li>
-      <li>Ranged</li>
-    </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>85</MaxHitPoints> <!--50% of 55, rounded to next 5th-->
-			<AccuracyTouch>0.85</AccuracyTouch> <!--.05 higher accuracy in all areas-->
-			<AccuracyShort>0.85</AccuracyShort>
-			<AccuracyMedium>0.75</AccuracyMedium>
-			<AccuracyLong>0.35</AccuracyLong>
-			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+      <MaxHitPoints>55</MaxHitPoints> <!-- +20 health-->
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.4</Mass> <!--Mass increased by .2 from base-->
-			<Flammability>0.5</Flammability>
+			<Mass>1.6</Mass>
+			<Flammability>0.75</Flammability> <!--25% of 3-->
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <li>
+    <verbs> <!--First one is if VWE Makeshift becomes unavailable-->
+      <!--<li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
-        <warmupTime>1.125</warmupTime>
-        <range>13.9</range> <!--1 higher range than it's dormant form-->
-        <soundCast>Shot_Shotgun</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>23.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>-->
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>23.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
@@ -179,19 +193,39 @@ At their matured form, they are given their maturity increases-->
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-			<li Class="CompProperties_InspectString">
-      	<inspectString>Permanence Genome | Infused
-+28 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
-      </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1620000</lifespanTicks> <!--1080000+540000-->
+          <lifespanTicks>960000</lifespanTicks>
           <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
-          <!--<expireEffect></expireEffect>-->
+					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+        </li>
+			<li Class="CompProperties_InspectString">
+      	<inspectString>Prima Genome | Infused
++30 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>2~5</shots>
+			</li>
+		</modExtensions>
 	</ThingDef>
+
+<!--=====Prima Twincaster=====-->
 
 	<ThingDef ParentName="BaseEndosapTerraweapon">
 		<defName>ET_PrimaTwincasterEndosap</defName>

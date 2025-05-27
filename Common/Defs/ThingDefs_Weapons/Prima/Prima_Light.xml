@@ -1,26 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<Defs>
-	<MVCF.ModDef>
-		<defName>BaseTerraweapon</defName>
-		<label>Base Terraweapon</label>
-		<description>VEF features</description>
-			<ActivateFeatures>
-				<li>RangedAnimals</li>
-				<li>HediffVerbs</li>
-				<li>IntegratedToggle</li>
-        <li>ExtraEquipmentVerbs</li>
-        <li>ApparelVerbs</li>
-        <li>Drawing</li>
-        <li>IndependentFire</li>
-        <li>InventoryVerbs</li>
-        <li>VerbComps</li>
-        <li>Reloading</li>
-			</ActivateFeatures>
-	</MVCF.ModDef>
-</Defs>
-
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Greatbow-->
 		<defName>ET_PrimaStakecaster</defName> <!--has the pod growth time and research level of light weapons, but the duration of heavy-->
 		<label>Stakecaster</label>
@@ -377,7 +357,7 @@
     <relicChance>0</relicChance>
 		<statBases>
       <MaxHitPoints>35</MaxHitPoints>
-			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.70</AccuracyMedium>
 			<AccuracyLong>0.40</AccuracyLong>
@@ -403,7 +383,6 @@
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>0</muzzleFlashScale>
       </li>-->
-
       <li>
         <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>

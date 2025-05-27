@@ -135,4 +135,56 @@ This also develops the weapon's protective traits, causing more wood to form, ex
     </plant>
   </ThingDef>
 
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_OverviewSapTerrains</defName>
+    <label>Overview: Sap-infused terrains</label>
+		<description>Certain plants and trees alter the surrounding terrain, create new terrain that has been enriched by a specific sap. These terrains have high fertility, and are very desirable (or required) for crops and terraplants alike.
+\nPrima terraplants can be grown on any fertile terrain, but these sap terrains will be needed to grow more advanced plants. They are also your key to creating farms on terrains that generally can't grow anything, such as sand, stone, and even water.
+\nBelow shows all enriched terrains, the needed base terrain, and what plant is needed to do so:
+-Glowsap-enriched soil (80% fertility): created by planting a Primwood Custodian near any "soil" terrain.
+-Brightsap-enriched soil (120% fertility): created by planting an Elderwood Custodian near any "soil" terrain.
+-Deepsap-enriched soil (150% fertility): created by planting a Deeproot Custodian near any "soil" terrain.
+-Sap-cracked stone (80% fertility): created by planting a Custodian Node near any stone.
+-Sap-drenched sand (80% fertility): created by planting a Custodian Node near any stone.
+-Sap pools (80-120% fertility): created by planting a Deeproot Custodian Node near marsh or non-ocean, passable waters.
+\nGuideline notes:
+-Anything with 80% fertility can also grow normal crops. 100%+ fertility is too concentrated and toxic for normal plants.
+-Custodian Trees can change the terrains that other Custodians have made.
+-Once a sap terrain is made, it cannot be undone.
+-Sap pools don't overtake the entire water; rather, the sap volume collects at the bottom of the water due to it's weight. This means the bottom of the water MUST be reachable.
+-Ocean waters cannot be terraformed due to water constantly moving.</description>
+    <graphicData>
+      <texPath>Things/Plant/WeaponPod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+    </statBases>
+    <selectable>false</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.8</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>900</harvestWork>
+      <harvestedThingDef>ET_PrimaStakecaster</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>1</harvestYield>
+      <harvestMinGrowth>0.9</harvestMinGrowth>
+      <harvestTag>Standard</harvestTag>
+      <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
+      <sowWork>1500</sowWork>
+      <sowTags>
+        <li>ET_OverviewTagOnly</li>
+      </sowTags>
+      <sowMinSkill>1</sowMinSkill>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>2.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>14</growDays>
+      <visualSizeRange>0.4~0.95</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
 </Defs>

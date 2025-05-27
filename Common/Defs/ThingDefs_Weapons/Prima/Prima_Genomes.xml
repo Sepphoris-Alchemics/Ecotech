@@ -2,9 +2,88 @@
 <Defs>
 
 <!--Ecotech.ThingCompProperties_EquippedLifespan will need to be local
+	SAP NOTES REVISED BEFORE 1.1: CHECK .rename for old values.
+	
 
 	***SAP NOTES***
-		Sap is used to modify plant stats. This sap is extracted from the corresponding plant, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant. The effects are the following:
+		Sap is used to modify plant stats. This sap is extracted from the corresponding plant, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant.
+		Sap is used on immature weapons to turn them into matured forms that have the sap effect. You CANNOT get immature weapons with sap infusions.
+		The following saps currently exist:
+
+		-ENDOSAP:
+			-50% higher item health, rounded to highest 5th (17.5 would become 20)
+			-75% lower flammability
+			-Rarity value: Uncommon
+
+		-HYPERSAP:
+			-Increases shot potential by 2
+			-Decreases shot potential by 1
+			-Projectile speed is 50% faster
+			-Rarity value: Uncommon
+
+		-TOXSAP:
+			-Adds a poisonous effect to fires shots.
+			-Poison application depends on the weapon size.
+			-Rarity value: Rare
+		
+		-DEEPSAP:
+			-Allows the weapon to be replanted to grow it 90% faster.
+			-Weapon reverts to basic sap after regrowth.
+			-Rarity value: Ultra Rare
+
+		-SUNSAP:
+			- Adds 50% longer lifespan
+			-HP regenerates 15hp per day
+			-Rarity value: Ultra Rare
+
+		STARSAP:
+			-Adds 30 days to lifespan
+			-HP regenerates 15hp per day
+			-Rarity value: Ultra rare
+
+		-SURGESAP:
+			-Allows weapons to fire a massive burst of projectiles
+			-Decreases lifespan by 25%
+			-Rarity value: Rare
+
+		-SHOCKSAP:
+			-Projectiles inflict a powerful paralysis poison.
+			-Rarity value: Rare
+
+		-MELDSAP (was symbiosap):
+			-Weapon binds to the user.
+			-Weapon has highly increased accuracy and aiming times.
+			-Once the weapon expires, the user suffers withdrawal.
+			-Rarity value: Ultra Rare
+			-Must be acquired from special mushrooms.
+
+		-ROGUESAP:
+			-Weapon always lasts 30 days.
+			-After these 30 days the weapon will produce a special seed.
+			-Seed gets replanted and grows over 15 days.
+			-This seed will produce another weapon with roguesap: the weapon produced is random.
+			-Rarity value: Ultra Rare
+
+		-ELDERSAP:
+			-Weapon lifespan is removed, but now relies on an ammo system.
+			-Ammo is reloaded via brightsap
+			-Amount of ammo is determined by weapon type and genome.
+			-Rarity value: Ultra Rare
+		
+		-CHRONOSAP:
+			-50% shorter lifespan
+			-Regenerates health twice as fast
+			+50% faster weapon cooldown
+			+50% projectile speed
+			-Rarity value: Legendary
+
+		-ARCHSAP:
+			Removes lifespan function
+			50% more item health
+			Rarity value: Legendary
+
+
+		The effects are the following:
 		-Glowsap/Darksap: Doubles the lifetime growth increase a weapon would get. I.e. instead of +2 days for Prima, it gets +4. This persists across growth. This sap can be replaced on maturity - Common
 
 		-Sleepsap: 50% longer lifespan, but severly impacts damage and speed stats. Shooting the weapon with this sap will damage it, and the sap will need to be replaced. (pink)

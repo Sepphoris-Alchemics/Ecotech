@@ -6,7 +6,7 @@
 		<label>prima turrets</label>
 	</DesignatorDropdownGroupDef>
 
-<!--Upgraded Primas get +20 health and -1 flammability. Lifespan times below:
+<!--Upgraded Primas get +10 health and -1 flammability. Lifespan times below:
 			-Immature light: 10 days (600000) | 40 health
 			-Immature normal: 12 days (720000) | 45 health
 			-Immature heavy: 14 days (840000) | 50 health
@@ -21,9 +21,9 @@
 			Immature Normal: 16 days (960000) | 35 health
 			Immature Heavy: 18 days (1080000) | 40 health
 			
-			Mature Light: 16 days (960000) | 50 health
-			Mature Normal: 18 days (1080000) | 55 health
-			Mature Heavy: 20 days (1200000) | 60 health-->
+			Mature Light: 16 days (960000) | 40 health
+			Mature Normal: 18 days (1080000) | 45 health
+			Mature Heavy: 20 days (1200000) | 50 health-->
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_PrimaShotgunUpgraded</defName>
@@ -207,6 +207,97 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+
+<!--=====Prima Carbine=====-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+		<defName>ET_PrimaCarbineUpgraded</defName>
+		<label>prima carbine</label>
+		<description>A biotic weapon, patterned off of an old rifle, and grown straight from a specialized pod. Their growth time, damage, and narrow projectile range make this a well-rounded Terraweapon.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
+\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as two, to as many as five.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaCarbineBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>35</MaxHitPoints>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>23.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>960000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VWEMakeshift.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VWEMakeshift.MakeshiftProperties">
+				<shots>2~5</shots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_PrimaTwincaster</defName>
