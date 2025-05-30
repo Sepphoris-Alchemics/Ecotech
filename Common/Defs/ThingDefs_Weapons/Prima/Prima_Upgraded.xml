@@ -106,7 +106,7 @@
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_PrimaSMGUpgraded</defName>
 		<label>prima pineshredder</label>
-		<description>The Apex form of the Prima Pincaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
+		<description>The evolved version of the Prima Pincaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
 \nAdditionally, the Apex form no longer has inconsistent output. It will now fire 4-5 projectiles per burst instead of a random range of 2-6 projectiles, resulting in a higher average DPS.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/ET_PrimaSMGUpgraded</texPath>
@@ -138,19 +138,6 @@
 		<smeltable>false</smeltable>
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
-      <!--<li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
-        <warmupTime>0.75</warmupTime>
-        <range>17.9</range>
-        <burstShotCount>4</burstShotCount>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <soundCast>Shot_MachinePistol</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>-->
-
       <li>
         <verbClass>VWEMakeshift.Verb_MakeshiftShoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
@@ -209,14 +196,15 @@
 	</ThingDef>
 
 <!--=====Prima Carbine=====-->
+
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
 		<defName>ET_PrimaCarbineUpgraded</defName>
-		<label>prima carbine</label>
-		<description>A biotic weapon, patterned off of an old rifle, and grown straight from a specialized pod. Their growth time, damage, and narrow projectile range make this a well-rounded Terraweapon.
-\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
-\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as two, to as many as five.</description>
+		<label>prima evocarbine</label>
+		<description>The directly evolved version of the Prima Carbine. This evolution has made use of sap reserves, which has resulted in the loss of the multiple sacs on the weapon in order to create a better weapon. These changes have provided, higher health, better projectile output, and a stronger seed upon expiry.
+\nAdditionally, this evolved form no longer has inconsistent output. It will now fire 4 projectiles per burst instead of a random range of 2-5 projectiles, resulting in a higher damage output.
+While this weapon doesn't feature any notable features, uninfused weapons are required for briar weapons, and are the only ones that produce turret seeds.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/ET_PrimaCarbineBasic</texPath>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaCarbineUpgraded</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -226,15 +214,15 @@
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>35</MaxHitPoints>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.70</AccuracyMedium>
+      <MaxHitPoints>45</MaxHitPoints>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
 			<AccuracyLong>0.40</AccuracyLong>
 			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.6</Mass>
-			<Flammability>3</Flammability>
+			<Mass>1.8</Mass>
+			<Flammability>2</Flammability>
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -247,7 +235,7 @@
         <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>23.9</range>
-				<burstShotCount>2</burstShotCount>
+				<burstShotCount>4</burstShotCount>
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
         <soundCast>ET_Sound_BlowgunMedium</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
@@ -277,8 +265,8 @@
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks>
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
@@ -293,7 +281,7 @@
 				<numTimesThrown>1</numTimesThrown>
 			</li>
 			<li Class="VWEMakeshift.MakeshiftProperties">
-				<shots>2~5</shots>
+				<shots>4</shots>
 			</li>
 		</modExtensions>
 	</ThingDef>

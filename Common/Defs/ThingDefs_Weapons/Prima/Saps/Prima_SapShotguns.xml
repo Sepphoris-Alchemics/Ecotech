@@ -219,7 +219,7 @@ Can be replanted to be regrown | +2.5 hp/day (unequipped)</inspectString>
 		</comps>
 	</ThingDef>
 
-	<!--=====Sunsap=====-->
+	<!--=====Sunsap: NOT acquirable until post 1.1=====-->
 
 	<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunSunsap</defName>
@@ -249,16 +249,15 @@ Can be replanted to be regrown | +2.5 hp/day (unequipped)</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1620000</lifespanTicks>
 				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
-				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>3000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
 	</ThingDef>
 
-	<!--=====Starsap=====-->
+	<!--=====Starsap: NOT acquirable until post 1.1=====-->
 
 	<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunStarsap</defName>
@@ -288,11 +287,10 @@ Lifespan increased by 30 days (48 days total) | +15 hp/day (unequipped)</inspect
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>2880000</lifespanTicks>
 				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
-				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>3000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
 	</ThingDef>
@@ -379,4 +377,71 @@ Can burst fire at will | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
+
+<!--=====Meldsap: REMOVED until post 1.1=====-->
+
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
+		<defName>ET_PrimaShotgunMeldsap</defName>
+		<label>prima meldburster</label>
+		<description>The matured form of the Prima Spreadshot, infused with meldsap. Meldsap contains the animus of those who have returned to the earth, making a unique connection to the first pawn that equips it.
+This binding means the owner can use the weapon much more efficiently, and the weapon posesses notable traits of the present animus, but the weapon will not bind with anyone else once a connection is made.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Meldsap/PrimaShotgunUpgraded_MS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+			<li>PlantWeaponsAdvanced</li>
+			<li>PlantWeaponsMeldsap</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<statBases>
+			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.9</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.45</AccuracyLong>
+		</statBases>
+    <verbs Inherit="False">
+      <li>
+				<label>thorn clusters</label>
+				<commandIcon>UI/Icons/Projectiles/ThornCluster</commandIcon>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
+        <warmupTime>0.1875</warmupTime>
+        <range>13.9</range>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Prima Genome | Infused with Meldsap
+Bound weapon | +10% higher accuracy | +2.5 hp/day (unequipped)</inspectString>
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1080000</lifespanTicks>
+				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>18000</ticksPerHeal>
+			</li>
+      <li Class="CompProperties_BladelinkWeapon">
+        <biocodeOnEquip>true</biocodeOnEquip>
+      </li>
+      <li Class="CompProperties_GeneratedName">
+        <nameMaker>NamerMeldsapWeapons</nameMaker>
+      </li>
+		</comps>
+	</ThingDef>-->
+
+
 </Defs>

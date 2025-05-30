@@ -357,9 +357,9 @@
     <relicChance>0</relicChance>
 		<statBases>
       <MaxHitPoints>35</MaxHitPoints>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
 			<AccuracyLong>0.40</AccuracyLong>
 			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>

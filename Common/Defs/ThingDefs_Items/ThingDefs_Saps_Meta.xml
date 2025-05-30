@@ -1,18 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!--IMPORTANT: Most saps can only be applied to second-stage weapons.
-      This is done to avoid texture bloat and excessive XML.
-      Any immature weapons can only be given Glowsap, in order to change into their matured form.-->
+<!--
+Metasaps are saps that apply drastic changes to whatever they are applied to.
+Weapons have new features they weren't able to do before.
 
-  <!--TO-DO:
-	-Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
-	-Later used in Perennial Weapons.
-  -Create Starsap
-  -Create Sunsap
-  -Overhaul Darksap
-  -Implement Archsap
-  -Create Toxsap
+The metasaps are
+  -Deepsap
+  -Sunsap (including the sundrop)
+  -Starsap
+  -Meldsap
 -->
 
   <ThingDef ParentName="ResourceBase">
@@ -59,7 +56,7 @@
     <description>A jar of refined, potent terrasap, named due to only being found within roots miles underground. Deepsap is required for more advanced and complex procedures involving Terratech, and is a very valuable resource to colonies that know how to utilize it.
 \n\nLike glowsap and brightsap, deepsap is not directly infused into other Terratech. Instead, it is most often used as a catalyst, taking an older creation and retroactively applying a newer, stronger iteration to it.
 \nDeepsap also allows Terrastructures to root deeper into the ground, allowing it to pull more nutrients and grow into a stronger structure. This is commonplace is more advanced structures, but can be applied to earlier Terrastructures too. Structures that utilize Deepsap will generally have "Deeproot" in their name.
-\nDeepsap is quite rare and can't be grown, but it's unique composition allows it to avoid expiry. This generally makes it a crafting component, instead of than a sap that needs to be maintained occasionally.
+\nDeepsap is quite rare and can't be grown, but it's nutrient concentration makes it a long-lasting sap source, fit for even the biggest of terrastructures. Deepsap is considered a "Metasap", meaning it's potency can only be handled by stronger Terraweapons.
 \n\nUse cases:
 Allows matured weapons to be freely be replanted and regrown in 10% of original growth time (uses Deepsap).
 Creation of Deeproot Crucible
@@ -102,66 +99,6 @@ Creates Deeproot Terravats</description>
         </recipes>
       </li>
     </modExtensions>
-  </ThingDef>
-
-  <ThingDef ParentName="ResourceBase">
-    <defName>ET_Toxsap</defName>
-    <label>Toxsap</label>
-    <description>A jar of terrasap containing elements quite poisonous to most living beings. Despite the name, Toxsap does not share the same effect with synthetic tox creations, and instead is more akin to venoms and poisons you would find in animals and insects.
-\n\nToxsap is very effective against non-Terratech factions, as other factions generally have little to no knowledge of curing the toxin. Very few can survive even moderates doses of it unscathed, and larger doses are almost always a death sentence.
-\nHowever, due to their superior understanding of Terratech, any Terratech faction can develop extremely effective antidotes, though these themselves also require access to Toxsap. This makes Toxsap an "equalizer" of sorts, as attempting to wipe out Terratech tribes also means wiping out this valuable knowledge.
-\nToxsap is quite rare, and it's methods of growth is currently unknown, making it's primary source of acquisition either from a Terratech faction, or from a Custodian Tree. Due to it being "discovered" AFTER the Prima weapons were developed, Prima weapons are simply not strong enough to support this sap, and will not accept it.
-\nIt is also a favorite of the smaller, savage Terratech tribes, making civil leverage of antidote knowledge all the more impactful.
-\n\nUse cases:
-Allows matured ranged weapons to fire venomous projectiles, and melee weapons to have a venomous coating.
-Creation of a potent anti-toxin serum
-Can be diluted into multiple long-term salves and other medicinal items.</description>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Resource/Toxsap</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-      <drawSize>0.8</drawSize>
-    </graphicData>
-    <stackLimit>6</stackLimit>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
-    <statBases>
-      <MaxHitPoints>75</MaxHitPoints>
-      <MarketValue>154</MarketValue>
-      <Mass>0.05</Mass>
-      <Flammability>1</Flammability>
-      <DeteriorationRate>0.25</DeteriorationRate>
-    </statBases>
-    <thingCategories>
-      <li>TerrasapsAll</li>
-    </thingCategories>
-    <!--<comps>
-      <li Class="CompProperties_Glower">
-        <glowRadius>1.9</glowRadius>
-        <glowColor>(370,370,370,0)</glowColor>
-      </li>
-    </comps>-->
-    <!--<modExtensions>
-      <li Class="Ecotech.ThingDefExtension_TransformerRecipe">
-        <recipes>
-          <li>
-            <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaSMG</inputThingDef>
-            <outputThingDef>ET_PrimaSMGHypersap</outputThingDef>
-          </li>
-          <li>
-            <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaTwincaster</inputThingDef>
-            <outputThingDef>ET_HypercasterI</outputThingDef>
-          </li>
-          <li>
-            <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaShotgun</inputThingDef>
-            <outputThingDef>ET_PrimaShotgunHypersap</outputThingDef>
-          </li>
-        </recipes>
-      </li>
-    </modExtensions>-->
   </ThingDef>
 
   <!--=====SUNSAP AND STARSAP=====-->
@@ -228,42 +165,4 @@ Highly valuable trade commodity with all EcoTech factions
     </thingCategories>
   </ThingDef>
 
-  <!--==========-->
-
-  <ThingDef ParentName="ResourceBase">
-    <defName>ET_Archsap</defName>
-    <label>Archsap</label>
-    <description>A jar of archsap, originating from sources unknown. People and colonies skilled with Ecotech can use this to replace the mundane sap of immature Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
-\nArchsap requires a baseline weapon that has both sap and form at it's purest form; therefore, Archsap MUST be injected into unmodified matured weapons directly, making it's infusion method rather unique.
-Careful care, usage, and weapon selection is highly advised, due to it's extreme rarity, value, and effect of making it's host weapon semi-immortal.
-\n\nNew traits:
-Infinite lifespan
-Flammability lowered by 50%
-Weapon HP increased by by 50%</description>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Resource/Archsap</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-      <drawSize>0.8</drawSize>
-    </graphicData>
-    <stackLimit>3</stackLimit>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>804</MarketValue>
-      <Mass>0.05</Mass>
-      <Flammability>1</Flammability>
-      <DeteriorationRate>0.25</DeteriorationRate>
-    </statBases>
-    <thingCategories>
-      <li>TerrasapsAll</li>
-    </thingCategories>
-    <!--<comps>
-      <li Class="CompProperties_Glower">
-        <glowRadius>1.9</glowRadius>
-        <glowColor>(370,370,370,0)</glowColor>
-      </li>
-    </comps>-->
-  </ThingDef>
 </Defs>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+Royal saps are saps that have very powerful effects - generally like that of a metasap - but are extremely rare.
+These saps often change the weapon mechanics entirely, or entirely eliminate the lifespan mechanic.
+
+The royal saps are
+  -Roguesap
+  -Eldersap
+  -Chronosap
+  -Archsap
+-->
+
+  <!--=====Archsap=====-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Archsap</defName>
+    <label>Archsap</label>
+    <description>A jar of archsap, originating from sources unknown. People and colonies skilled with Ecotech can use this to replace the mundane sap of immature Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
+\nArchsap requires a baseline weapon that has both sap and form at it's purest form; therefore, Archsap MUST be injected into unmodified matured weapons directly, making it's infusion method rather unique.
+Careful care, usage, and weapon selection is highly advised, due to it's extreme rarity, value, and effect of making it's host weapon semi-immortal.
+\n\nNew traits:
+Infinite lifespan
+Flammability lowered by 50%
+Weapon HP increased by by 50%</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Archsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>3</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>804</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerrasapsAll</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--=====Roguesap=====-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Roguesap</defName>
+    <label>Roguesap</label>
+    <description>A jar of roguesap, originating from sources unknown. Very few exist, as it once was one of the "Royal" saps that are from time bygone.
+\nRoguesap completely alters the genetic makeup of a weapon; the sap allocates itself in exact amounts, resulting in a lifespan that is always identical aross a weapon genome.
+The rest of the sap is dedicated to a unique reproduction system. OVer time the roguesap will grow a special seed, which will grow another Roguesap weapon. However - whether by mistake or design - the resulting weapon is entirely random.
+These two functions enable Roguesaps weapons to have consistent lifespans, while also being infinitely renewable.
+\n\nNew traits:
+30 day lifespan (regardless of weapon)
+Roguesap weapon produces a rogue seed at the end of it's lifespan.
+This seed can be planted and harvested to produce a new roguesap weapon of the same genome, which will then repeat the process.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Archsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>3</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>804</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerrasapsAll</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--=====Eldersap=====-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Eldersap</defName>
+    <label>Eldersap</label>
+    <description>A jar of eldersap, originating from sources unknown. Very few exist, as it once was one of the "Royal" saps that are from time bygone.
+\nEldersap "devolves" terraweapons, disabling the genes that generate infinite ammo and are the cause for limited lifespans. In their place, it re-awakens a locked-away gene that enables the weapon to live infinitely, but makes it's ammo generation a manual process.
+Eldersap weapons live infinitely, but they now require sap that needs to be manually 'refilled' in order to generate ammo. Luckily these saps are generally commonplace 'nutrient-rich' saps, such as glowspa and brightsap.
+While these functions were very commonplace during the early days of Terraweapons, and were ultimately deemed a weakness, access to 'antique' methods such as this have their place and upsides, especially for dedicated Terratech colonies.
+\n\nNew traits:
+Infinite lifespan
+Weapons require direct refilling, which is done by using glowsap, brightsap, or deepsap, depending on the genome.
+Ammo generation per sap is largely dependent on the weapon's max projectiles; burst weapons will benefits much more.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Archsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>3</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>804</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerrasapsAll</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--=====Chronosap=====-->
+
+  <!--<ThingDef ParentName="ResourceBase">
+    <defName>ET_Chronosap</defName>
+    <label>Chronosap/label>
+    <description>A jar of roguesap, originating from sources unknown. Very few exist, as it once was one of the "Royal" saps that are from time bygone.
+\nRoguesap completely alters the genetic makeup of a weapon; the sap allocates itself in exact amounts, resulting in a lifespan that is always identical aross a weapon genome.
+The rest of the sap is dedicated to a unique reproduction system. OVer time the roguesap will grow a special seed, which will grow another Roguesap weapon. However - whether by mistake or design - the resulting weapon is entirely random.
+These two functions enable Roguesaps weapons to have consistent lifespans, while also being infinitely renewable.
+\n\nNew traits:
+30 day lifespan (regardless of weapon)
+Roguesap weapon produces a rogue seed at the end of it's lifespan.
+This seed can be planted and harvested to produce a new roguesap weapon of the same genome, which will then repeat the process.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Archsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>3</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>804</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerrasapsAll</li>
+    </thingCategories>
+  </ThingDef>-->
+</Defs>

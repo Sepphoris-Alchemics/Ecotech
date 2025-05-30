@@ -39,7 +39,7 @@
     </weaponClasses>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>55</MaxHitPoints> <!--From 35 to 55: 20 health increase-->
+      <MaxHitPoints>45</MaxHitPoints> <!--From 35 to 55: 20 health increase-->
 			<MarketValue>40</MarketValue>
 			<AccuracyTouch>0.85</AccuracyTouch> <!--.05 higher accuracy in all areas-->
 			<AccuracyShort>0.85</AccuracyShort>
@@ -57,6 +57,7 @@
     <verbs>
       <li>
 				<label>PrimaShotgunBasicAttack</label>
+				<visualLabel>thorn cluster</visualLabel>
 				<commandIcon>UI/Icons/Projectiles/ThornCluster</commandIcon>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
