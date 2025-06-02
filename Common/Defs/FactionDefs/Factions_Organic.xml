@@ -3,17 +3,18 @@
   <FactionDef>
     <defName>ET_OrganicFaction</defName>
     <label>Terratech Curators</label>
-    <description>Using the soil as their library, this faction has massive groves of hundreds - if not thousands - of plants constantly being grown and replanted, which has kept their tech alive for thousands of years. While they do not possess much metal, adn refuse to use alloys and fabricated tools, they are nontheless more than capable of defending themselves.\n\nThey generally keep to themselves, but are open to establishing relations to colonies that only embrace technolgies that don't exploit the earth (Medieval and lower).</description>
+    <description>Using the soil as their library, this faction has massive groves of hundreds - if not thousands - of plants constantly being grown and replanted, which has kept their tech alive for thousands of years. While they do not possess much metal, adn refuse to use alloys and fabricated tools, they are nontheless more than capable of defending themselves.
+\nThey generally keep to themselves, not socializing or trusting anyone besides their own. That said, they do not attack others either, and their trust can be gained over time, especially with tribes.</description>
     <pawnSingular>curator</pawnSingular>
     <pawnsPlural>curator</pawnsPlural>
     <settlementGenerationWeight>0.5</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
-    <canSiege>true</canSiege>
-    <canStageAttacks>true</canStageAttacks>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
     <leaderTitle>Grovekeeper</leaderTitle>
     <autoFlee>false</autoFlee>
-    <earliestRaidDays>7</earliestRaidDays>
+    <earliestRaidDays>120</earliestRaidDays>
     <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>    <!--create custom icon-->
     <colorSpectrum>
       <li>(85, 170, 175)</li>
@@ -140,6 +141,10 @@
           <li>TropicalSwamp</li>
         </allowedBiomes>
         <excludeFromCommConsole>true</excludeFromCommConsole>
+			<startingGoodwillByFactionDefs>
+				<PlayerColony>-60~-50</PlayerColony>
+				<PlayerTribe>-40~-20</PlayerTribe>
+			</startingGoodwillByFactionDefs>	
       </li>
     </modExtensions>
   </FactionDef>

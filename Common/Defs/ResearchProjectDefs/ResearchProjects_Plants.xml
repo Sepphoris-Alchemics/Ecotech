@@ -82,6 +82,8 @@
 
   <!--Cost of research projects should be the cost of the most expensive, vanilla similar rearch project, x1.5-->
 
+<!--=====ESSENTIALS: BENCHES AND STARTING RESOURCES=====-->
+
   <ResearchProjectDef>
     <defName>ET_TerraseedEssentials</defName>
     <label>Terraseed Essentials</label>
@@ -101,8 +103,32 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <researchViewX>0.00</researchViewX>
     <researchViewY>0.00</researchViewY>
     <discoveredLetterTitle>About: Terraforge</discoveredLetterTitle>
-    <discoveredLetterText>You can now grow a Terraforge, which is your primary method of acquiring and producing most EcoTech seeds. Shape the Terraforge seed at a normal crafting spot, then plant the seed in any desired spot. Once the Terraforge has grown, you can shape any new seeds at it.</discoveredLetterText>
+    <discoveredLetterText>You can now grow a Terraforge, which is your primary method of acquiring and producing most Terratech organic creations. Shape the Terraforge seed at a normal crafting spot, then plant the seed in any desired spot. Once the Terraforge has grown, you can shape any new seeds at it.</discoveredLetterText>
   </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_TerrathystEssentials</defName>
+    <label>Terrathyst Essentials</label>
+    <description>Learn how to properly create and grow Terrathyst; highly specialized seeds that grows crystals, which are then used for a variety of other purposes.
+Teaches you how to create Terrathyst growths, which are then used for a variety of processes. These processes 'consume' the crystals, meaning you'll need to regrow the crystals.
+Terrathyst is just one more outlet of tapping into nature, as nature is not only verdant plants and trees, but also the earth, elements, and even the cosmos. Therefore, it is just as useable as plants, and have it's own unique upsides and downsides, which tribes might prefer over organic matter.</description>
+    <baseCost>1750</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>TreeSowing</li>
+    </prerequisites>
+    <tags>
+      <li>TribalStart</li>
+    </tags>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+    <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
+    <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. Shape a Terrathyst seed at a normal crafting spot, then plant the seed in any desired spot. There are different 'sizes' of terrathyst seeds that you can craft; the larger the seed, the longer it takes to grow, but the more crystals it'll have for use.</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====PRIMA WEAPONS=====-->
 
   <ResearchProjectDef>
     <defName>ET_PrimaTerraweaponSeeds</defName>
@@ -249,8 +275,30 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
 
+<!--=====PERENNIAL WEAPONS=====-->
+
   <ResearchProjectDef>
-    <defName>ET_ConduitSeeds</defName>
+    <defName>ET_PerennialSeeds</defName>
+    <label>Perennial Terraseed Cultivation</label>
+    <description>Learn how to nuture and handle Perennial Terraseeds, alongside how to properly harvest their trees. Perennial weapons have very high potential, but take a long time to grow.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+    <discoveredLetterTitle>About: Perennial Weapons</discoveredLetterTitle>
+    <discoveredLetterText>Perennial Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Perennial Terratree in fertile soil, and then carving the weapon out when it's fully grown. Perennial weapons have a limited lifespan once they are harvested, but this base lifespan is significantly longer than nearly every other lifespan. Additionally, saps are much more effective in Perennial weapons than any other genome.
+\n\nUnlike Prima weapons, specific perennial weapons cannot be focused. However, the chance of getting any weapon is equal.</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====CONDUIT TREES=====-->
+
+  <ResearchProjectDef> <!--Tier 1 Conduit trees-->
+    <defName>ET_TierOneConduitSeeds</defName>
     <label>Primwood Conduit Seeds</label>
     <description>Not everything is hands-on; while you take care of the planet, the planet will take care of you back. This research enables you to create "Conduit" seeds, which - when planted - grow powerful trees that protect and supply your colony.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
@@ -258,7 +306,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>ET_PrimaTerraweaponSeeds</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>3.00</researchViewX>
@@ -267,23 +315,31 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <discoveredLetterText>Conduit Trees are special trees meant to assist and advance EcoTech tribes. Each tree provides a special, unique passive mechanic, such as providing special weapons, saps, and materials. Like any other seed, you can shape the seed of every tree at a Terraforge.\n\nYou can have multiples of the same tree available on the map, but be aware that each tree requires ample space from one of the same kind!</discoveredLetterText>
   </ResearchProjectDef>
 
-  <ResearchProjectDef>
-    <defName>ET_RoyalSeeds</defName>
-    <label>Lore Entry: Psychic Weaponry</label>
-    <description>Records tell of a special, exclusive breed of Terraweapons that only the highest of societies and engineers know of. This research will provide additional information about this unique breed....
-\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-    <baseCost>4000</baseCost>
+  <ResearchProjectDef> <!--Tier 2 Conduit Trees-->
+    <defName>ET_TierTwoConduitSeeds</defName>
+    <label>Elderwood Conduit Seeds</label>
+    <description>Discover how to shape more advanced conduit seeds consisting of Elderwood, allowing access to new, powerful conduit trees.
+\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
+    <baseCost>3000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TierOneConduitSeeds</li>
+    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>0.00</researchViewX>
-    <researchViewY>3.00</researchViewY>
-    <discoveredLetterTitle>Secrets of Terratech: Royal Seeds</discoveredLetterTitle>
-    <discoveredLetterText>You have discovered that Prima Terraweapons are just one of several known types of Terraseeds. This particular research has unveiled that one of the most powerful types are known as "Royal" Terraseeds, and are carefully engineered with the mysterious - and massive - power of Anima. Products of these seeds are documented to take up to years to grow, and properly growing them requires skill that only prodigies can achieve; however, any given Royal Terraweapon contains power that rivals - or even completely overshadows - Spacer tech that's widely believed to be superior. The secrets behind producing the weapons are currently lost and not known to any; however, records rumor that *very* few surviving Anima weapons may still be out there, perhaps within relative reach....</discoveredLetterText>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+    <discoveredLetterTitle>New Conduit Trees Discovered!</discoveredLetterTitle>
+    <discoveredLetterText>Your research into more advanced conduit trees has allowed you to learn the creation of an entirely unique tree:
+\nReclaimer Trees, which recycle fabricated and electronic items into more usable materials.
+\nAll Primwood trees now also have a more effective Elderwood variant (see seed descriptions).
+Additionally, you can now properly handle and plant more exclusive seeds that are carried by the Terratech Curators.</discoveredLetterText>
   </ResearchProjectDef>
 
+<!--=====GLOWSAP CONTENT=====-->
+
   <ResearchProjectDef>
-    <defName>ET_SapBasics</defName>    <!--Unlocks Glowsap plants, -->
+    <defName>ET_SapBasics</defName>    <!--Unlocks Glowsap plants-->
     <label>Glowsap Cultivation</label>
     <description>Learn how to cultivate plants and trees that produce Glowsap, a crucial item that fuels many structures and processes.
 Dark mode included!</description>
@@ -296,23 +352,6 @@ Dark mode included!</description>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>1.00</researchViewY>
-  </ResearchProjectDef>
-
-  <ResearchProjectDef>
-    <defName>ET_GlowsapRefinement</defName>    <!--for Sap Transposer-->
-    <label>Glowsap Refinement</label>
-    <description>Learn how to refine Glowsap into valuable terrasaps that can modify and strengthen Terraweapons.</description>
-    <baseCost>1200</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <prerequisites>
-      <li>ET_SapBasics</li>
-    </prerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>1.00</researchViewY>
-    <discoveredLetterTitle>About: Refining Glowsap</discoveredLetterTitle>
-    <discoveredLetterText>Glowsap may become abundant eventually, and refinement allows you to turn it into items that can be used to improve your weapons, or fuel various structures. After creating and planting the seed for a Sap Transposer, you can fill it with glowsap. A random refined sap will be produced a short time later.</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -332,6 +371,8 @@ Dark mode included!</description>
     <discoveredLetterText>Glowsap Bays are fillable structures that you can use to grow most EcoTech plants. While they cannot support normal plants, glowsap bays do enable you to make dedicated spaces for EcoTech plants, allowing normal soil to be used for everyday crops.</discoveredLetterText>
   </ResearchProjectDef>
 
+<!--=====BRIGHTSAP CONTENT=====-->
+
   <ResearchProjectDef>
     <defName>ET_BrightsapStructures</defName>
     <label>Brightsap Structures</label>
@@ -347,6 +388,27 @@ Dark mode included!</description>
     <researchViewX>2.00</researchViewX>
     <researchViewY>2.00</researchViewY>
   </ResearchProjectDef>
+
+<!--=====PROTOSAP (T1) CONTENT=====-->
+
+  <ResearchProjectDef>
+    <defName>ET_GlowsapRefinement</defName>
+    <label>Terrasap Refinement</label>
+    <description>Learn how to refine Glowsap into valuable terrasaps that can modify and strengthen Terraweapons, and learn how to break down more concentrated saps into usable ones.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_SapBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+    <discoveredLetterTitle>About: Refining Glowsap</discoveredLetterTitle>
+    <discoveredLetterText>Glowsap may become abundant eventually, and refinement allows you to turn it into items that can be used to improve your weapons, or fuel various structures. After creating and planting the seed for a Sap Transposer, you can fill it with glowsap. A random refined sap will be produced a short time later.</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====TERRAVATS=====-->
 
   <ResearchProjectDef>
     <defName>ET_Terravats</defName>
@@ -366,10 +428,52 @@ Dark mode included!</description>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
   </ResearchProjectDef>
 
+<!--=====MASTERY TECH=====-->
+
+  <ResearchProjectDef>
+    <defName>ET_TierOneOrganicMastery</defName>
+    <label>Organic Mastery I</label>
+    <description>Learn how Prima and Primwood genomes function. This research shows you not only know how to handle these genomes, but also a deep understanding of their very composition.
+\n\nPrima Mastery shows other Terratech colonies your dedication to the Terratech lifestyle, and also allows you to manually alter and manipulate the genome.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_GlowsapRefinement</li>
+    </prerequisites>
+    <requiredAnalyzed>
+      <li>ET_SunDrop</li>
+    </requiredAnalyzed>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.50</researchViewY>
+    <discoveredLetterTitle>About: Terravats</discoveredLetterTitle>
+    <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====ROYAL/WILD CONTENT=====-->
+
+  <ResearchProjectDef>
+    <defName>ET_RoyalSeeds</defName>
+    <label>Lore Entry: Psychic Weaponry</label>
+    <description>Records tell of a special, exclusive breed of Terraweapons that only the highest of societies and engineers know of. This research will provide additional information about this unique breed....
+\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+    <discoveredLetterTitle>Secrets of Terratech: Royal Seeds</discoveredLetterTitle>
+    <discoveredLetterText>You have discovered that Prima Terraweapons are just one of several known types of Terraseeds. This particular research has unveiled that one of the most powerful types are known as "Royal" Terraseeds, and are carefully engineered with the mysterious - and massive - power of Anima. Products of these seeds are documented to take up to years to grow, and properly growing them requires skill that only prodigies can achieve; however, any given Royal Terraweapon contains power that rivals - or even completely overshadows - Spacer tech that's widely believed to be superior. The secrets behind producing the weapons are currently lost and not known to any; however, records rumor that *very* few surviving Anima weapons may still be out there, perhaps within relative reach....</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====TERRATHYST T1 CONTENT=====-->
+
   <!--<ResearchProjectDef>
-    <defName>ET_TerraPlate</defName>
-    <label>???</label>
-    <description>... however, whispers tell of beings covered in organic, resilient shells that almost rivalled military protection. It is unclear if this was merely armor... or another creature entirely.</description>
+    <defName>ET_MaterialCompression</defName>
+    <label>Terraplate</label>
+    <description>.</description>
     <baseCost>4000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>

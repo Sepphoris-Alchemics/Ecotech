@@ -75,6 +75,23 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
+   <WorkGiverDef>
+    <defName>ET_DoBillsTerrathyst</defName>
+    <label>create item</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_TerrathystSmall</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
   <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_MuseumDisplayBase">
     <label>Display Case</label>
     <thingClass>Building</thingClass>

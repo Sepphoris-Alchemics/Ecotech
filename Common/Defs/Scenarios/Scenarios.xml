@@ -104,7 +104,7 @@
 			</li>-->
 				<li Class="ScenPart_StartingResearch">
 					<def>StartingResearch</def>
-					<project>ET_ConduitSeeds</project>
+					<project>ET_TierOneConduitSeeds</project>
 				</li>
 				<li Class="ScenPart_StartingResearch">
 					<def>StartingResearch</def>

@@ -196,11 +196,8 @@ While this tree is present, weapons and seeds will be created at the base of the
     <defName>ET_BuildingTreeTierOne</defName>
     <label>Primwood Custodian Tree</label>
     <description>The Primwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live efficiently under natural resources. Custodian trees tend to the surrounding terrain, enriching it to a sap-infused terrain.
-This sap-infused terrain is required for more advanced terraplants, as normal terrains simply can't supply the nutrients. All nearby soil terrains become enriched. Note that this particular Custodian cannot affect wet, stony, or dry terrains.
-The terrain this tree makes can support normal plants as well. However, the terrain that stronger Custodians make is toxic to normal plants.
-This tree will also periodically shed excess bark, creating malleable wooden plates that can be used for crafting and construction.
-
-Legend has it this tree was once able to independently shelter entire colonies. Whether or not that is true remains to be seen....</description>
+This sap-infused terrain is required for more advanced terraplants, as normal terrains simply can't supply the nutrients. All nearby soil terrains become enriched. Note that the Custodian cannot affect wet, stony, or dry terrains.
+The terrain this tree makes can support normal plants as well. However, this feature is specific to the Custodian Tree; evolutions of it - such as the Fieldkeeper - produce terrain that is toxic to normal plants.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Plant/ConduitTrees/PrimwoodCustodianTree</texPath>
@@ -266,37 +263,6 @@ Legend has it this tree was once able to independently shelter entire colonies. 
       <purpose>Misc</purpose>
     </plant>
     <comps>
-      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
-        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>360000~540000</cycleDurationRangeTicks>
-        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
-        <potentialSpawnedThings>
-          <li>
-            <weight>4</weight>
-            <things>
-              <ET_TierOnePlating>150</ET_TierOnePlating>
-            </things>
-          </li>
-          <li>
-            <weight>2</weight>
-            <things>
-              <ET_TierOnePlating>225</ET_TierOnePlating>
-            </things>
-          </li>
-          <li>
-            <weight>1</weight>
-            <things>
-              <ET_TierOnePlating>300</ET_TierOnePlating>
-            </things>
-          </li>
-          <li>
-            <weight>0.5</weight>
-            <things>
-              <ET_TierOnePlating>450</ET_TierOnePlating>
-            </things>
-          </li>
-        </potentialSpawnedThings>
-      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>
@@ -581,21 +547,21 @@ The process always breaks materials down to their most fundamental components, a
         <effectWorking>ConstructMetal</effectWorking>
         <recipeSet>
           <li>
-            <label>test A</label>
+            <label>steel</label>
             <duration>100</duration>
-            <resultKindDef>Steel</resultKindDef>
-            <amount>1</amount>
+            <resultDef>Steel</resultDef>
+            <amount>8</amount>
             <ingredientSets>
               <li>
                 <thingDef>ComponentIndustrial</thingDef>
-                <amount>1</amount>
+                <amount>2</amount>
               </li>
             </ingredientSets>
           </li>
           <li>
             <label>test B</label>
             <duration>100</duration>
-            <resultKindDef>Plasteel</resultKindDef>
+            <resultDef>Plasteel</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>

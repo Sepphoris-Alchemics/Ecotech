@@ -33,7 +33,7 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>ET_ConduitSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>9600</workAmount>
@@ -55,7 +55,7 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>ET_ConduitSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>9600</workAmount>
@@ -77,7 +77,7 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>ET_ConduitSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>9600</workAmount>

@@ -6,6 +6,42 @@
   Matured weapon death: creates an Apex Turret seed, which can be freely turned into any turret. Does not expire.
     -Also enables special Apex turrets: Briar Sentry, and Briar Watcher-->
 
+  <!--Debug recipe-->
+  <RecipeDef>
+    <defName>ET_TestRecipe</defName>
+    <label>test recipe</label>
+    <description>test recipe.</description>
+    <jobString>doing testing stuff.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>300</workAmount>
+    <skillRequirements>
+      <Plants>1</Plants>
+    </skillRequirements>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_Seed_PrimaApexTurret</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ET_Seed_PrimaStakeTurret>1</ET_Seed_PrimaStakeTurret>
+    </products>
+    <displayPriority>90</displayPriority>
+  </RecipeDef>
 
   <!--Apex Seed to Prima Stake Turret-->
   <RecipeDef>

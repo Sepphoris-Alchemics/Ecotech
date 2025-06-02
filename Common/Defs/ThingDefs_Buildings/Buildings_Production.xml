@@ -33,57 +33,6 @@
   -->
 
 <Defs>
-  <!--<ThingDef ParentName="BuildingBase">
-    <defName>ET_ChannelingSpot</defName>
-    <label>seed channeling spot</label>
-    <description>A place to focus and shape the most fundamental of Ecotech seeds. Not very fast, but serves as the entryway into using Ecotech.</description>
-    <thingClass>Building_WorkTable</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Production/CraftingSpot</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1,1)</drawSize>
-    </graphicData>
-    <altitudeLayer>FloorEmplacement</altitudeLayer>
-    <statBases>
-      <WorkToBuild>0</WorkToBuild>
-      <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
-    </statBases>
-    <scatterableOnMapGen>false</scatterableOnMapGen>
-    <useHitPoints>false</useHitPoints>
-    <size>(1,1)</size>
-    <designationCategory>EcotechDesignation</designationCategory>
-    <uiOrder>2000</uiOrder>
-    <passability>Standable</passability>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
-    <recipes>
-      <li>ET_TerraforgeSeedRecipe</li>
-    </recipes>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
-    <building>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <sowTag>SupportPlantsOnly</sowTag>
-      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
-      <ai_chillDestination>false</ai_chillDestination>
-      <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
-      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-      <buildingTags>
-        <li>Production</li>
-      </buildingTags>
-    </building>
-    <comps>
-      <li Class="CompProperties_ReportWorkSpeed">
-        <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-    </placeWorkers>
-  </ThingDef>-->
 
   <ThingDef ParentName="BenchBase">
     <defName>ET_Terraforge</defName>
@@ -153,6 +102,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
       <li>ET_PrimaTurretSeedApexToStake</li>
       <li>ET_PrimaTurretSeedApexToSMG</li>
       <li>ET_PrimaTurretSeedApexToShotgun</li>
+      <li>ET_TestRecipe</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -199,4 +149,110 @@ Some Ecotech creations may have features that simply make the product unusable, 
       </li>
     </comps>
   </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>ET_TerrathystSmall</defName>
+    <label>Terrathyst cluster</label>
+    <description>A grown structure that channels natural energies of the world, allowing you to shape existing Ecotech, or grow new Ecotech formations.
+Some Ecotech creations may have features that simply make the product unusable, or even dangerous, to most races (generally to ward off undeserving colonies). The Terraforge exists to refine that Ecotech into a usable state - not by destruction, by rather by letting the creation know that it is in safe hands.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <size>(1,1)</size>
+    <!--<costList>
+      <ET_Seed_Terraforge>1</ET_Seed_Terraforge>
+    </costList>-->
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Terraforge</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.6,1.6)</drawSize>
+      <drawOffset>(0,0,0.25)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_TerraseedEssentials</li>
+    </researchPrerequisites>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <!--<WorkToBuild>3400</WorkToBuild>-->
+      <Mass>60</Mass>
+      <Flammability>3</Flammability>
+      <Beauty>1.5</Beauty>
+      <Cleanliness>1</Cleanliness>
+    </statBases>
+    <interactionCellIcon IsNull="True"/>
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True"/>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <!--<defaultPlacingRot>South</defaultPlacingRot>-->
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiOrder>2630</uiOrder>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
+    <recipes>
+      <li>ET_TestRecipe</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <ET_Seed_Terraforge>1</ET_Seed_Terraforge>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>18</maxDistance>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
+        <fuelMultiplier>1500</fuelMultiplier>
+        <fuelCapacity>15</fuelCapacity>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Glowsap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelLabel>Terrathyst</fuelLabel>
+        <fuelGizmoLabel>Terrathyst remaining</fuelGizmoLabel>
+        <outOfFuelMessage>Out of terrathyst!</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>false</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>
