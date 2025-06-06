@@ -41,7 +41,7 @@ Weapon HP increased by by 50%</description>
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>RoyalSapsAll</li>
     </thingCategories>
   </ThingDef>
 
@@ -75,7 +75,7 @@ This seed can be planted and harvested to produce a new roguesap weapon of the s
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>RoyalSapsAll</li>
     </thingCategories>
   </ThingDef>
 
@@ -109,7 +109,7 @@ Ammo generation per sap is largely dependent on the weapon's max projectiles; bu
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>RoyalSapsAll</li>
     </thingCategories>
   </ThingDef>
 

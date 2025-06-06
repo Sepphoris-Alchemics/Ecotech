@@ -34,7 +34,7 @@ The metasaps are
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>MetasapsAll</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Glower">
@@ -80,7 +80,7 @@ Creates Deeproot Terravats</description>
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>MetasapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">
@@ -131,7 +131,7 @@ Highly valuable trade commodity with all EcoTech factions
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>MetasapsAll</li>
     </thingCategories>
   </ThingDef>
 
@@ -161,7 +161,7 @@ Highly valuable trade commodity with all EcoTech factions
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>MetasapsAll</li>
     </thingCategories>
   </ThingDef>
 

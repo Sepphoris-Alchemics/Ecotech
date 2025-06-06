@@ -35,7 +35,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsHyperseeds</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Glower">
@@ -46,7 +46,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
         <lifespanTicks>420000</lifespanTicks>
       </li>
     </comps>
-    <tradeTags>
+    <tradeTags Inherit='false'>
       <li>ET_PrimaWeaponSeed</li>
     </tradeTags>
     <allowedArchonexusCount>1</allowedArchonexusCount>
@@ -84,7 +84,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsHyperseeds</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Glower">
@@ -95,7 +95,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
         <lifespanTicks>420000</lifespanTicks>
       </li>
     </comps>
-    <tradeTags>
+    <tradeTags Inherit='false'>
       <li>ET_PrimaWeaponSeed</li>
     </tradeTags>
     <allowedArchonexusCount>1</allowedArchonexusCount>
@@ -133,7 +133,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsHyperseeds</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Glower">
@@ -144,7 +144,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
         <lifespanTicks>420000</lifespanTicks>
       </li>
     </comps>
-    <tradeTags>
+    <tradeTags Inherit='false'>
       <li>ET_PrimaWeaponSeed</li>
     </tradeTags>
     <allowedArchonexusCount>1</allowedArchonexusCount>

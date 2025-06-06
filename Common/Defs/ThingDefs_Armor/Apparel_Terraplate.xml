@@ -3,57 +3,55 @@
 	<ThingDef ParentName="ApparelBase" Name="PlantApparelBase" Abstract="True">
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
+		<tickerType>Normal</tickerType>
 		<tradeTags>
-			<li>PlateApparel</li>
+			<li>ET_PlantArmorTag</li>
 		</tradeTags>
-		<thingSetMakerTags>
-			<li>RewardStandardLowFreq</li>
-		</thingSetMakerTags>
-		<apparel>
-			<tags>
-				<li>PlantGear</li>
-			</tags>
-		</apparel>
 	</ThingDef>
 
 
 
 	<ThingDef ParentName="PlantApparelBase">
-		<defName>Apparel_PrimaHeavyArmor</defName>
+		<defName>ET_PrimaHeavyArmor</defName>
 		<label>terraplate armor</label>
 		<techLevel>Neolithic</techLevel>
-		<description>A set of organic armor, shaped in a specialized Terravat from specific materials. Despite being a plant that's been molded into a shell, Terraplate's carefull engineering allows it to almost rival traditional marine armor. Growing even one set takes significant resources, but completely circumvents the needs for high-tech fabrication in order to aquire armor that can withstand many threats.
-Terraplate armor requires several ingredients: primwood and terramass for primary and flexible materials, endosap to reinforce the armored areas, and finally, a fresh corpse to help 'shape' the armor. Thankfully this acommendates all body sizes, and the armor will adapt to anything of similar size... though getting into the armor might be a bit tedious for all.
-The armor is quite strong, but suffers from the same weaknesses as all prima creations: flammability, a limited lifespan, and piercing resistance. It cannot be infused.</description>
+		<description>A set of organic armor, shaped in a specialized Terravat from specific materials. Despite being a plant that's been molded into a shell, Terraplate's carefull engineering allows it to rival even flak armor. Growing even one set takes significant resources, but completely circumvents the needs for high-tech fabrication in order to aquire worthwhile armor.
+Terraplate armor requires several ingredients: primwood and terramass for primary and flexible materials, endosap to reinforce flexible areas, and finally, a fresh corpse to help 'shape' the armor. Thankfully this acommendates all body sizes, and the armor will adapt to anything of similar size... though getting into the armor might be a bit tedious for all.
+The armor organic state allows it to absorb and disperse damage, and filters toxic materials quite decently. However, it still suffers from the same weaknesses all prima creations have: flammability, a limited lifespan, and piercing resistance. It cannot be infused.</description>
 		<graphicData>
 			<texPath>Things/Apparel/Terraplate/TerraplateArmor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<generateCommonality>0</generateCommonality>
 		<statBases>
-			<Mass>10</Mass>
+			<Mass>4.8</Mass>
 			<MaxHitPoints>205</MaxHitPoints>			<!--Durability is 60% of base, rounded up to nearest 5th)-->
+			<MarketValue>200</MarketValue>
 			<Flammability>1.25</Flammability>
-			<ArmorRating_Sharp>1</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.1</ArmorRating_Heat>
-			<Insulation_Cold>34</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
-			<EquipDelay>40</EquipDelay>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>20</EquipDelay>
 		</statBases>
 		<thingCategories>
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.2</MoveSpeed>
+			<IncomingDamageFactor>-.1</IncomingDamageFactor>
+			<ToxicResistance>0.1</ToxicResistance>
+			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<tags>
-				<li>Armor</li>
 				<li>PlantArmor</li>
+				<li>HeavyPlantArmor</li>
 			</tags>
 			<wornGraphicPath>Things/Apparel/Terraplate/TerraplateArmor</wornGraphicPath>
 			<layers>
+				<li>OnSkin</li>
 				<li>Middle</li>
 				<li>Shell</li>
 			</layers>
@@ -63,18 +61,31 @@ The armor is quite strong, but suffers from the same weaknesses as all prima cre
 				<li>Shoulders</li>
 				<li>Arms</li>
 				<li>Legs</li>
+				<li>Feet</li>
+				<li>Waist</li>
 			</bodyPartGroups>
 			<defaultOutfitTags>
 				<li>Soldier</li>
 			</defaultOutfitTags>
 		</apparel>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Prima Genome | Immutable
+-10% damage taken | 10% Toxic Resistance | -15% move speed</inspectString>
+			</li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1620000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+        </li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="PlantApparelBase">
-		<defName>Apparel_PrimaHeavyHelmet</defName>
+		<defName>ET_PrimaHeavyHelmet</defName>
 		<label>terraplate helmet</label>
 		<techLevel>Neolithic</techLevel>
-		<description>A helmet that is intended to be grown (and worn) alongside Terraplate armor. Due to the armor being fully formed before being worn, the helmet has to be grown seperately, otherwise... well, how would you get in?</description>
+		<description>A helmet that is intended to be grown (and worn) alongside Terraplate armor. Due to the armor being fully formed before being worn, the helmet has to be grown seperately.</description>
 		<graphicData>
 			<texPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -82,35 +93,49 @@ The armor is quite strong, but suffers from the same weaknesses as all prima cre
 		<statBases>
 			<Mass>2.4</Mass>
 			<MaxHitPoints>60</MaxHitPoints>
+			<MarketValue>80</MarketValue>
 			<Flammability>0.8</Flammability>
-			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.7</ArmorRating_Heat>
-			<Insulation_Cold>5</Insulation_Cold>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
 			<Insulation_Heat>5</Insulation_Heat>
-			<EquipDelay>16</EquipDelay>
+			<EquipDelay>10</EquipDelay>
 		</statBases>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>-.05</IncomingDamageFactor>
+			<ToxicResistance>0.1</ToxicResistance>
+			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
 		<thingCategories>
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<generateCommonality>0</generateCommonality>
 		<apparel>
 			<tags>
-				<li>Armor</li>
 				<li>PlantArmor</li>
+				<li>HeavyPlantArmor</li>
 			</tags>
-
-			<defaultOutfitTags>
-				<li>Soldier</li>
-			</defaultOutfitTags>
 			<wornGraphicPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</wornGraphicPath>
 			<layers>
+				<li>OnSkin</li>
 				<li>Overhead</li>
 			</layers>
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>
 		</apparel>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Prima Genome | Immutable
+-5% damage taken | 10% Toxic Resistance</inspectString>
+			</li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1620000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+        </li>
+		</comps>
 	</ThingDef>
 
 </Defs>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
+	-To-do: Later used in Perennial Weapons.
+-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_PrimaBrightsapLamp</defName>
+    <label>Prima Brightlamp Seed</label>
+    <description>A bright, warm seed that has been patterned to grow into a Brightlamp. The Brightlamp deeply roots into the surface beneath it, making it unable to be moved once planted.
+\n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>45</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsPrimaStructures</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_PrimaBrightsapLampPlant</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaStructureSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_PrimaBrightsapColumn</defName>
+    <label>Prima Brightsap Column Seed</label>
+    <description>A bright, warm seed that has been patterned to grow into a Brightsap Column. The seed deeply roots into the surface beneath it, making it unable to be moved once planted.
+\n\nThis seed ignores fertility, allowing it to be planted on many surfaces.</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>45</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsPrimaStructures</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_PrimaBrightsapColumnPlant</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaStructureSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+</Defs>

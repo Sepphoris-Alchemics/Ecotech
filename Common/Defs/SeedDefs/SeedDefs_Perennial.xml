@@ -33,7 +33,7 @@
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsAll</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">

@@ -17,7 +17,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     </graphicData>
     <stackLimit>8</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>20</MaxHitPoints>
       <MarketValue>250</MarketValue>
@@ -26,7 +26,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsPrimaWeapons</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
@@ -37,9 +37,12 @@ Proper knowledge on the seed is required to plant it safely and effectively.
         <glowColor>(370,370,370,0)</glowColor>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>360000</lifespanTicks> <!--1.5x longer than surge seeds-->
+        <lifespanTicks>360000</lifespanTicks>        <!--1.5x longer than surge seeds-->
       </li>
     </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaTurretSeedTag</li>
+    </tradeTags>
     <allowedArchonexusCount>8</allowedArchonexusCount>
   </ThingDef>
 
@@ -59,7 +62,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     </graphicData>
     <stackLimit>8</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>20</MaxHitPoints>
       <MarketValue>250</MarketValue>
@@ -68,7 +71,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsPrimaWeapons</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
@@ -79,9 +82,12 @@ Proper knowledge on the seed is required to plant it safely and effectively.
         <glowColor>(370,370,370,0)</glowColor>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>360000</lifespanTicks> <!--1.5x longer than surge seeds-->
+        <lifespanTicks>360000</lifespanTicks>        <!--1.5x longer than surge seeds-->
       </li>
     </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaTurretSeedTag</li>
+    </tradeTags>
     <allowedArchonexusCount>8</allowedArchonexusCount>
   </ThingDef>
 
@@ -101,7 +107,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     </graphicData>
     <stackLimit>8</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>20</MaxHitPoints>
       <MarketValue>250</MarketValue>
@@ -110,7 +116,7 @@ Proper knowledge on the seed is required to plant it safely and effectively.
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsPrimaWeapons</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
@@ -121,9 +127,12 @@ Proper knowledge on the seed is required to plant it safely and effectively.
         <glowColor>(370,370,370,0)</glowColor>
       </li>
       <li Class="CompProperties_Lifespan">
-        <lifespanTicks>360000</lifespanTicks> <!--1.5x longer than surge seeds-->
+        <lifespanTicks>360000</lifespanTicks>        <!--1.5x longer than surge seeds-->
       </li>
     </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaTurretSeedTag</li>
+    </tradeTags>
     <allowedArchonexusCount>8</allowedArchonexusCount>
   </ThingDef>
 
@@ -143,7 +152,7 @@ This seed once could be awakened by hand, and at will; however, that knowledge i
     </graphicData>
     <stackLimit>8</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
       <MarketValue>550</MarketValue>
@@ -152,7 +161,7 @@ This seed once could be awakened by hand, and at will; however, that knowledge i
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsPrimaWeapons</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Glower">
@@ -160,6 +169,9 @@ This seed once could be awakened by hand, and at will; however, that knowledge i
         <glowColor>(370,370,370,0)</glowColor>
       </li>
     </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaTurretSeedTag</li>
+    </tradeTags>
     <allowedArchonexusCount>4</allowedArchonexusCount>
   </ThingDef>
 

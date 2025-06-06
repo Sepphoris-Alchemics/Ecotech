@@ -88,6 +88,9 @@
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
+    <tradeTags Inherit ='False'>
+      <li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeapon">
@@ -149,6 +152,9 @@
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
+		<tradeTags Inherit ='False'>
+      <li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeapon">
@@ -215,6 +221,9 @@
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
 		</comps>
+		<tradeTags Inherit ='False'>
+      <li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
 	</ThingDef>
 
 </Defs>

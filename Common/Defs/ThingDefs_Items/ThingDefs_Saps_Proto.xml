@@ -32,7 +32,7 @@ The Protosaps are:
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>ProtosapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">
@@ -168,7 +168,7 @@ Can be diluted into multiple long-term salves and other medicinal items.</descri
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>ProtosapsAll</li>
     </thingCategories>
   </ThingDef>
 
@@ -200,7 +200,7 @@ Infusing a weapon with this sap comes at a cost; the high focus on ammo generati
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>MetasapsAll</li>
     </thingCategories>
   </ThingDef>
 </Defs>

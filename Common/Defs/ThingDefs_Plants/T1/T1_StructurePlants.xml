@@ -29,6 +29,9 @@
         <inspectString>Growing into: Prima Brightlamp</inspectString>
       </li>
     </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaStructureSeed</li>
+    </tradeTags>
   </ThingDef>
 
   <ThingDef ParentName="ET_FundamentalPlantBase">
@@ -59,6 +62,9 @@
         <inspectString>Growing into: Prima Brightsap Column</inspectString>
       </li>
     </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaStructureSeed</li>
+    </tradeTags>
   </ThingDef>
 
 </Defs>

@@ -41,7 +41,7 @@ The effects these apply to weapons are generally just stat changes, and are gene
       <DeteriorationRate>0.5</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>BasicSapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">
@@ -92,7 +92,7 @@ The effects these apply to weapons are generally just stat changes, and are gene
     </tradeTags>
   </ThingDef>
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Darksap</defName>
     <label>Darksap</label>
     <description>A jar of harvested darksap. Used as an equal alternative to glowsap in many colonies and regions.</description>
@@ -115,7 +115,7 @@ The effects these apply to weapons are generally just stat changes, and are gene
     <thingCategories>
       <li>TerrasapsAll</li>
     </thingCategories>
-  </ThingDef>
+  </ThingDef>-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Endosap</defName>
@@ -143,7 +143,7 @@ Regenerates 2.5 HP/Day</description>
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>BasicSapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">
@@ -205,7 +205,7 @@ Max lifespan decreased by 20% (rounded down)</description>
       <DeteriorationRate>0.25</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerrasapsAll</li>
+      <li>BasicSapsAll</li>
     </thingCategories>
     <!--<comps>
       <li Class="CompProperties_Glower">

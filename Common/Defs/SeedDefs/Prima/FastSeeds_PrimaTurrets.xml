@@ -39,7 +39,7 @@ Quick growth time allows offensive or rapid response use</description>
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsHyperseeds</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Glower">
@@ -87,7 +87,7 @@ Quick growth time allows offensive or rapid response use</description>
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>PlantMatter</li>
+      <li>TerraseedsHyperseeds</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Glower">
