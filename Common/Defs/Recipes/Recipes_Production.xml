@@ -64,7 +64,7 @@
       <skillRequirements>
         <Plants>6</Plants>
       </skillRequirements>
-    <researchPrerequisite>ET_Terravats</researchPrerequisite>
+    <researchPrerequisite>ET_SmallTerravats</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>4800</workAmount>

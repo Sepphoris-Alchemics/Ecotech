@@ -2,9 +2,9 @@
 <Defs>
   <ThingDef ParentName="BenchBase">
     <defName>ET_BasicResearchBench</defName>
-    <label>Terraseed Research Bench</label>
-    <description>A research bench designed to develop and discover the secrets of Terraseeds. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terraseed biotechnology. All research pertaining to them can only be done here.
-\n\nContains compartments for highly fertile soil, and flasks for water and nutrients.</description>
+    <label>Terratech Research Bench</label>
+    <description>A research bench designed to develop and discover the secrets of Terratech. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terratech biotechnology. All research pertaining to them can only be done here.
+\n\nContains compartments for highly fertile soil, and flasks for water and nutrients. Requires different structures or growths nearby, depending on what is being studied or developed.</description>
     <thingClass>Building_ResearchBench</thingClass>
     <minifiedDef>MinifiedThing</minifiedDef>
     <size>(3,1)</size>

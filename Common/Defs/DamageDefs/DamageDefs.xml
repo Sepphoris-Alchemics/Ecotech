@@ -38,7 +38,18 @@
     <impactSoundType />
     <armorCategory />
     <buildingDamageFactor>4</buildingDamageFactor>
-  </DamageDef> 
+  </DamageDef>
+
+  <!--Hailcannon damage-->
+    <DamageDef ParentName="CutBase">
+    <defName>ET_ShatterDamage</defName>
+    <label>cut</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <hediff>Cut</hediff>
+    <impactSoundType />
+    <armorCategory />
+    <buildingDamageFactor>0.5</buildingDamageFactor>
+  </DamageDef>
 
   <!-- Briar Cutting damage-->
     <DamageDef ParentName="CutBase">
@@ -146,6 +157,7 @@
     </additionalHediffs>
   </DamageDef>
 
+<!--PerennialDamage-->
 
   <!--<DamageDef>
 	<defName>ET_NightshadeDamage</defName>

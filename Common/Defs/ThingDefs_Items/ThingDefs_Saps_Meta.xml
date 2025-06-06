@@ -46,35 +46,6 @@ The metasaps are
         <heatPerSecond>0.5</heatPerSecond>
         <heatPushMaxTemperature>12</heatPushMaxTemperature>
       </li>
-      <li Class="CompProperties_CompAnalyzableUnlockResearch">
-        <analysisID>919121404</analysisID>
-        <requiresMechanitor>false</requiresMechanitor>
-
-        <!-- Analyzable -->
-
-        <analysisDurationHours>3</analysisDurationHours>
-        <destroyedOnAnalyzed>true</destroyedOnAnalyzed>
-        <completedLetterLabel>Sundrop researched: {RESEARCH} unlocked</completedLetterLabel>
-        <completedLetter>By studying the sundrop, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYour researchers can now use research benches to begin researching how to actually use the technology.</completedLetter>
-        <completedLetterDef>PositiveEvent</completedLetterDef>
-
-        <!-- Interactable -->
-
-        <activateTexPath>UI/Icons/Study</activateTexPath>
-
-        <activateLabelString>Experiment...</activateLabelString>
-        <activateDescString>Experiment with the sundrop.</activateDescString>
-        <jobString>Test the sundrop potential</jobString>
-        <guiLabelString>Choose who should perform tests with this</guiLabelString>
-        <inspectString>Can be tested by a colonist.</inspectString>
-
-        <targetingParameters>
-          <canTargetBuildings>false</canTargetBuildings>
-          <canTargetAnimals>false</canTargetAnimals>
-          <canTargetMechs>false</canTargetMechs>
-          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
-        </targetingParameters>
-      </li>
     </comps>
     <allowedArchonexusCount>100</allowedArchonexusCount>
   </ThingDef>

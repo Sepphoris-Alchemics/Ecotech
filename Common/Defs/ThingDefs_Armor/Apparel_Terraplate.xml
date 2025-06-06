@@ -1,88 +1,86 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!--
-  <ThingDef ParentName="ApparelBase" Name="PlantApparelBase" Abstract="True">
-    <techLevel>Neolithic</techLevel>
-		<smeltable>false</smeltable>
-    <tradeTags>
-      <li>PlateApparel</li>
-    </tradeTags>
-    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
-    <apparel>
-      <tags>
-        <li>PlantGear</li>
-      </tags>
-    </apparel>
-  </ThingDef>
-	-->
-
-<!--
-	<ThingDef ParentName="PlantApparelBase">
-		<defName>Apparel_Terraplate</defName>
-		<label>terraplate Armor</label>
+	<ThingDef ParentName="ApparelBase" Name="PlantApparelBase" Abstract="True">
 		<techLevel>Neolithic</techLevel>
-		<description>A set of organic armor, grown from highly engineered seeds over a significant amount of time. Despite being a plant that's been molded into a shell, Terraplate's carefull engineering allows it to almost rival traditional marine armor. Growing even one set is highly laborous, but completely circumvents the needs for high-tech fabrication in order to aquire armor that can withstand significant threats./n/n
-Due to the genetic specifications of the seeds they are grown from, terraplate armor will always grow to the same shape and size. Thankfully this acommendates all body sizes... though getting into the armor might be a bit tedious.</description>
+		<smeltable>false</smeltable>
+		<tradeTags>
+			<li>PlateApparel</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<apparel>
+			<tags>
+				<li>PlantGear</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
+
+
+	<ThingDef ParentName="PlantApparelBase">
+		<defName>Apparel_PrimaHeavyArmor</defName>
+		<label>terraplate armor</label>
+		<techLevel>Neolithic</techLevel>
+		<description>A set of organic armor, shaped in a specialized Terravat from specific materials. Despite being a plant that's been molded into a shell, Terraplate's carefull engineering allows it to almost rival traditional marine armor. Growing even one set takes significant resources, but completely circumvents the needs for high-tech fabrication in order to aquire armor that can withstand many threats.
+Terraplate armor requires several ingredients: primwood and terramass for primary and flexible materials, endosap to reinforce the armored areas, and finally, a fresh corpse to help 'shape' the armor. Thankfully this acommendates all body sizes, and the armor will adapt to anything of similar size... though getting into the armor might be a bit tedious for all.
+The armor is quite strong, but suffers from the same weaknesses as all prima creations: flammability, a limited lifespan, and piercing resistance. It cannot be infused.</description>
 		<graphicData>
-			<texPath>Things/Apparel/Terraplate/Terraplate</texPath>
-			<graphicClass>Graphic_Single</graphicClass> 
+			<texPath>Things/Apparel/Terraplate/TerraplateArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-    <generateCommonality>0.05</generateCommonality>
+		<generateCommonality>0</generateCommonality>
 		<statBases>
-      <Mass>10</Mass>
-			-->
-			<!--<MaxHitPoints>205</MaxHitPoints>--> <!--Durability is 60% of base, rounded up to nearest 5th)-->
-			<!--
-			<Flammability>0.8</Flammability>
+			<Mass>10</Mass>
+			<MaxHitPoints>205</MaxHitPoints>			<!--Durability is 60% of base, rounded up to nearest 5th)-->
+			<Flammability>1.25</Flammability>
 			<ArmorRating_Sharp>1</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.1</ArmorRating_Heat>
 			<Insulation_Cold>34</Insulation_Cold>
 			<Insulation_Heat>10</Insulation_Heat>
-			<EquipDelay>20</EquipDelay>
+			<EquipDelay>40</EquipDelay>
 		</statBases>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.4</MoveSpeed>
+			<MoveSpeed>-0.2</MoveSpeed>
 		</equippedStatOffsets>
 		<apparel>
-    		 <tags>
-   		  <li>Armor</li>
-        <li>PlantArmor</li>
-   		 </tags>
-			<wornGraphicPath>Things/Apparel/Terraplate/Terraplate</wornGraphicPath>
+			<tags>
+				<li>Armor</li>
+				<li>PlantArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/Terraplate/TerraplateArmor</wornGraphicPath>
 			<layers>
-			    <li>Middle</li>
-			    <li>Shell</li>
+				<li>Middle</li>
+				<li>Shell</li>
 			</layers>
 			<bodyPartGroups>
-        <li>Torso</li>
-        <li>Neck</li>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Legs</li>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
 			</bodyPartGroups>
-			-->
-      <!--<defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>-->
-			<!--
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
 		</apparel>
 	</ThingDef>
 
 	<ThingDef ParentName="PlantApparelBase">
-	<defName>Apparel_TerraplateH</defName>
-	<label>terraplate helmet</label>
-	<techLevel>Neolithic</techLevel>
-	<description>A helmet that is intended to be grown (and worn) alongside Terraplate armor. Due to the armor being fully formed before being worn, the helmet has to be grown seperately, otherwise... well, how would you get in?</description>
-	<graphicData> 
-		<texPath>Things/Apparel/Terraplate_helm/Terraplate_helm</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-	</graphicData>
-	<statBases>
-      <Mass>2.4</Mass>
+		<defName>Apparel_PrimaHeavyHelmet</defName>
+		<label>terraplate helmet</label>
+		<techLevel>Neolithic</techLevel>
+		<description>A helmet that is intended to be grown (and worn) alongside Terraplate armor. Due to the armor being fully formed before being worn, the helmet has to be grown seperately, otherwise... well, how would you get in?</description>
+		<graphicData>
+			<texPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>2.4</Mass>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Flammability>0.8</Flammability>
 			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
@@ -90,30 +88,29 @@ Due to the genetic specifications of the seeds they are grown from, terraplate a
 			<ArmorRating_Heat>0.7</ArmorRating_Heat>
 			<Insulation_Cold>5</Insulation_Cold>
 			<Insulation_Heat>5</Insulation_Heat>
-			<EquipDelay>4</EquipDelay>
-	</statBases>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
-    <generateCommonality>0.05</generateCommonality>
-	<apparel>
-    	<tags>
-   		  <li>Armor</li>
-        <li>PlantArmor</li>
-   		</tags>
-			-->
-	      <!--<defaultOutfitTags>
-        <li>Soldier</li>
-      </defaultOutfitTags>-->
-			<!--
-		<wornGraphicPath>Things/Apparel/Terraplate_helm/Terraplate_helm</wornGraphicPath>
-		<layers>
-			<li>Overhead</li>
-		</layers>	
-		<bodyPartGroups>
-			<li>FullHead</li>
-		</bodyPartGroups>
-	</apparel>
+			<EquipDelay>16</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<generateCommonality>0</generateCommonality>
+		<apparel>
+			<tags>
+				<li>Armor</li>
+				<li>PlantArmor</li>
+			</tags>
+
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<wornGraphicPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+		</apparel>
 	</ThingDef>
--->
+
 </Defs>

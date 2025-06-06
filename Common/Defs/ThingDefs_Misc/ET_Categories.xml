@@ -8,5 +8,13 @@
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>ET_TechKeys</defName>
+      <label>Terratech Tomes</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/Book/BookAcolyte</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
 	
 </Defs>

@@ -143,7 +143,7 @@
         <excludeFromCommConsole>true</excludeFromCommConsole>
 			<startingGoodwillByFactionDefs>
 				<PlayerColony>-60~-50</PlayerColony>
-				<PlayerTribe>-40~-20</PlayerTribe>
+				<PlayerTribe>-10~10</PlayerTribe>
 			</startingGoodwillByFactionDefs>	
       </li>
     </modExtensions>

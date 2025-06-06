@@ -67,7 +67,7 @@
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_Terravats</li>
+      <li>ET_SmallTerravats</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>

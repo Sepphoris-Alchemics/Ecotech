@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Prima Turrets/Traps -->
+
+  <!-- Prima Turrets are meant to be for early game. Fragile, flammable, and weak.
+  Multiple will be needed for strong defense.
+  
+  "Microturrets". are small turrets that can be quickly acquired, but weak on health and one major stat.
+  This stat may be damage, range, or firing speed. The advantage of microturrets is that the seed
+  that produces them produces two different turrets at once.
+  Microturrets are almost entirely plant matter, and have a max of 40 health.
+  Microturrets have an advantage of being able to slowly regenerate health, up to 5/day.
+  Microturrets have no armor penetration
+  Microturrets have a max range of 17.9, but this is usually lower (generally the same distance as the weapon it's similar to).
+  Microturrets have an accuracy of .70 across all ranges.
+
+  Prima Turrets have two "normal" turrets, two micro turrets, and two larger turrets. Evolved weapons will always drop a seed, but immarue weapons will need their seed extracted.
+
+  	Prima Turrets:
+		-Spear Turret: basic turret. Slow firing, medium damage, fires two stakes at medium range. Comparable to a greatbow firing two shots at once.
+		-Quill Turret: Microturret. Very fast firing, low range, low damage. Comparable to the SMG.
+		-Burst Turret: Microturret. Slow firing, low range, high damage. Comparable to the shotgun.
+		-Briar Turret: Extracted from evolved weapons. Medium fire rate, medium range, low damage. Close stats to a normal miniturret.
+    -Acid Turret: Extracted from the Acid Launcher. Fires globules of acid.
+    -Impact Turret: Extracted from Splintcannon. Fires a large mass of wood that causes little cut or pierce, but major impact damage.
+
+    Most turret seeds, except for heavy seeds, can be acquired from at least two weapons:
+    Spear Turret: Stakecaster, Twincaster, OLR
+		Thistle Turret: SMGs, LMGs
+		Scatter Turret: Pineburster, Carbine
+    Briar: Acquirable from all evolved weapons.
+    Acid: Acquired from Acid Launcher.
+    Impact: Acquired from Splintcannon.
+
+    Weapons that don't create a turret instead create a trap.
+    -Melee: Slicer trap (akin to normal trap, deals high cut damage)
+    -Pistol: Pellet trap (similar to a single shotgun blast in a small area)
+    -Hailcannon: Shredder trap (inflicts many low-damage, armor-piercing cut against a single target)
+    -Acid Launcher: Acid Trap (creates a burning acid cloud in a medium area)
+    -Evolved Weapons: Briar Tangle (inflicts cut damage and inflicts large amounts of the briar hediff)
+
+      -Like turrets, traps have a limited lifespan. However, they will not auto-destroy until then.
+
+    
+  Later turrets require dedicated planting, but live far longer.
+  -->
+
+<!--=====Turret Base=====-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_PerennialLargeTurret_Spear</defName>
+    <label>Perennial Groveguard</label>
+    <description>A large cannon that fires massive spears at a long distance. The giant spears are wildly inaccurate, but a direct impact can be lethal, and the spear shatters into splinters that damage anything nearby. Does not require power or fuel.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Security/PerennialCannon/PerennialCannon_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <designatorDropdown>ET_PrimaTurretGroup</designatorDropdown>
+    <minifiedDef IsNull="True" />
+    <uiIconPath>Things/Security/PerennialCannon/PerennialCannon_MenuIcon</uiIconPath> <!--temp-->
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>50</pathCost>
+    <constructEffect>ConstructWood</constructEffect>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>1</Flammability>
+      <WorkToBuild>1</WorkToBuild>
+      <Mass>160</Mass>
+      <Beauty>0</Beauty>
+      <ShootingAccuracyTurret>0.8</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps Inherit="False">
+      <li Class="CompProperties_Refuelable">
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>1</fuelConsumptionRate>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelLabel>Lifeforce left</fuelLabel>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelMultiplier>100</fuelMultiplier>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Sunsap</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <!--<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>-->
+    <!--<costList>
+      <ET_Seed_PrimaStakeTurret>1</ET_Seed_PrimaStakeTurret>
+    </costList>-->
+    <!--<constructionSkillPrerequisite>5</constructionSkillPrerequisite>-->
+    <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiOrder>2640</uiOrder>
+    <specialDisplayRadius>29</specialDisplayRadius>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <size>(2,2)</size>
+    <killedLeavings>
+      <ET_TierTwoPlating>24</ET_TierTwoPlating>
+    </killedLeavings>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <claimable>true</claimable>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>ET_PerennialLargeTurretSpearGun</turretGunDef>
+      <turretBurstCooldownTime>4.0</turretBurstCooldownTime>
+      <playTargetAcquiredSound>false</playTargetAcquiredSound>
+      <deconstructible>false</deconstructible>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>ET_PerennialTurretSeeds</li>
+    </researchPrerequisites>
+    <modExtensions>
+			<!--<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>2</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>-->
+		</modExtensions>
+  </ThingDef>
+
+<!--Prima Turret Gun-->
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>ET_PerennialLargeTurretSpearGun</defName>
+    <label>Perennial Groveguard</label>
+    <description>A sentry grown from a specialized seed. Despite being a plant, a network of sensitive roots allow the sentry to identify hostiles from a medium distance, and a hardy wooden shell allows it to withstand a limited amount of damage.
+The Groveguard has considerably higher range and durability than most smaller turrets. However, it was shaped with supression and multiple targets in mind, making it's projectiles cover a wide area - and thus, being far less accurate than many other grown turrets.
+\n\nGroveguard Sentries are entirely organic, and do not require power. However due to it's biological nature, old or expired Perrenial Groveguards will need to be replaced with fresh ones.</description>
+    <graphicData>
+      <texPath>Things/Security/PerennialCannon/PerennialCannon_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <Mass>20</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_PerennialCannonSpear</defaultProjectile>
+        <warmupTime>9.0</warmupTime>
+        <range>28.9</range>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>0.5</consumeFuelPerShot>
+        <forcedMissRadius>1.9</forcedMissRadius>
+      </li>
+    </verbs>
+  </ThingDef>
+
+<!--Perennial Spear Shot-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_PerennialCannonSpear</defName>
+    <label>perennial spear</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_StakeSmall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_ShatterDamage</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>8</stoppingPower>
+      <explosionRadius>1.9</explosionRadius>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <postExplosionSpawnThingDef>ET_Filth_Sap</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+</Defs>
