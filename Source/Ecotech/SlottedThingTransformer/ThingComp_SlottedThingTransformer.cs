@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using Mono.Security.Protocol.Tls;
 using RimWorld;
 using RimWorld.BaseGen;
 using System.Collections.Generic;
@@ -244,7 +243,7 @@ namespace Ecotech
                 }
                 if(recipeExtension.TryDoWork(this, slotThing, out Thing producedThing, out int consumedFuel))
                 {
-                    GenPlace.TryPlaceThing(producedThing, parent.Position, parent.Map, ThingPlaceMode.Near, nearPlaceValidator: CanPlaceRecipeProductOn);
+                    GenPlace.TryPlaceThing(producedThing, parent.Position, parent.Map, ThingPlaceMode.Near, null, CanPlaceRecipeProductOn);
                     slottedThings[i] = null;
                     //Log.Message($"Slot {i} consumed fuel: {consumedFuel}");
                     fuelStorageComp.ContainedThing.stackCount -= consumedFuel;

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net481</TargetFramework>
-    <OutputPath>..\$(Configuration)\Assemblies\</OutputPath>
+    <OutputPath>..\..\$(Configuration)\Assemblies\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <DisableImplicitFrameworkDefines>true</DisableImplicitFrameworkDefines>
     <Configurations>1.5;1.6</Configurations>
