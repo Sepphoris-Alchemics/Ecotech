@@ -2,29 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>net481</TargetFramework>
-    <OutputPath>..\..\Assemblies</OutputPath>
+    <OutputPath>..\$(Configuration)\Assemblies\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <Configurations>1.5</Configurations>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='1.5|AnyCPU'">
+    <DisableImplicitFrameworkDefines>true</DisableImplicitFrameworkDefines>
+    <Configurations>1.5;1.6</Configurations>
     <NoWarn>1701;1702;CS0649</NoWarn>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition="'$(Configuration)|$(Platform)' == '1.5|AnyCPU'">
-      <PropertyGroup>
-        <DefineConstants>$(DefineConstants);v1_5</DefineConstants>
-        <OutputPath>..\..\1.5\Assemblies\</OutputPath>
-      </PropertyGroup>
-      <ItemGroup>
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*-*">
-          <ExcludeAssets>runtime</ExcludeAssets>
-        </PackageReference>
-      </ItemGroup>
-    </When>
-  </Choose>
+  <PropertyGroup Condition="'$(Configuration)' == '1.5'">
+    <DefineConstants>v1_5</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == '1.6'">
+    <DefineConstants>v1_6</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="$(Configuration).*-*">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
     <PackageReference Include="Lib.Harmony" Version="*">
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
