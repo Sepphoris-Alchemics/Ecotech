@@ -13,13 +13,19 @@
 		-Ask NM if a mechanic handling this is possible.
 		-Scopes should be optional and done through a seperate process.
 		-The sound sound be a distinct "cracking" sound, which signals the shard seperating from the bore.
+
+
+Note that the initial ammo generation description was: \n\nDue to it's unique nature, this rifle has an exceptionally long lifespan, but it's ammo is tied directly to it's crystal core, and will eventually run out. However, it's organic side allows it to be replanted at any time, which will slowly regenerate the crystal core. Should the core completely deplete, it will be unable to grow back.
+... However, it was instead changed to allow shocksap to 'charge' the weapon at a vat. Alternatively the player can have shockshards, but that's a rare item.
+
+Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. As mentioned before, they are upgrade over time, rather than having a wide variety.
 		-->
 
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_BiolithRifle</defName>		<!--Counterpart: Prima OLR-->
 		<label>biolith rifle</label>
 		<description>A rifle that fuses both crystal and wood together, combining pros (and cons) of both. It's organic features have given it a strong wooden shell and the ability to be replanted, while it's crystalline features have granted it aceess to an optic pattern, and a dense bore that acts as an ammo source.
-\n\nDue to it's unique nature, the biolith rifle has an exceptionally long lifespan, but it's ammo is tied directly to it's bore, and will eventually run out. However, it's organic side allows it to be replanted at any time, which will slowly regenerate the crystal bore. Should the bore completely deplete, it will be unable to grow back.
+\n\nDue to it's hybrid nature, this weapon can be quickly rejuvinated with shocksap or shockshards, like any other lithoid weapon. Alternatively, it can also be planted in the ground to be rejuvinated as an organic weapon. One is a matter of resources, while the other is a matter of time.
 \nThe biolith rifle has no innate sap or other infusion ability, but it's optics do allow it to have a higher aim distance and ranged accuracy compared to other weapons. That said, these optics also impair it's close-combat potential.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/BiolithRifle</texPath>
@@ -35,7 +41,7 @@
 		</weaponClasses>
 		<relicChance>0</relicChance>
 		<statBases>
-			<MaxHitPoints>45</MaxHitPoints>
+			<MaxHitPoints>70</MaxHitPoints>
 			<AccuracyTouch>0.30</AccuracyTouch>
 			<AccuracyShort>0.40</AccuracyShort>
 			<AccuracyMedium>0.60</AccuracyMedium>
@@ -60,6 +66,7 @@
 				<range>34.9</range>
 				<soundCast>ET_Sound_BlowgunMedium</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
+				<!--<consumeFuelPerShot>1</consumeFuelPerShot>-->
 			</li>
 		</verbs>
 		<tools>
@@ -81,8 +88,15 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<tickerType>Normal</tickerType>
+		<tickerType>Rare</tickerType>
 		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+	  <!--<li Class="CompProperties_Reloadable">
+        <maxCharges>150</maxCharges>
+        <destroyOnEmpty>false</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>shots until regeneration</chargeNoun>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		</li>-->
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
 			</li>
@@ -90,23 +104,11 @@
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
-				<!--<expireEffect></expireEffect>-->
-				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
-      <!--<li Class="CompProperties_EquippableAbilityReloadable">
-        <abilityDef>ET_NightshadeExplosion</abilityDef>
-        <maxCharges>1</maxCharges>
-        <soundReload>Standard_Reload</soundReload>
-        <chargeNoun>pneumatic sac</chargeNoun>
-        <ammoDef>ET_Brightsap</ammoDef>
-        <ammoCountPerCharge>1</ammoCountPerCharge>
-        <baseReloadTicks>90</baseReloadTicks>
-      </li>-->
     <li Class="CompProperties_InspectString">
       <inspectString>Ancient Genome | Immutable
 Scoped Weapon | +1 hp/day (unequipped)</inspectString>
       </li>
 		</comps>
 	</ThingDef>
-
 </Defs>

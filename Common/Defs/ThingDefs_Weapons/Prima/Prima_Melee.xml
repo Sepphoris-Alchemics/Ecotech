@@ -36,7 +36,7 @@
       <WoodLog>30</WoodLog>
     </costList>-->
     <thingCategories>
-      <li>WeaponsMelee</li>
+      <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
@@ -107,7 +107,7 @@
       <WoodLog>50</WoodLog>
     </costList>-->
     <thingCategories>
-      <li>WeaponsMelee</li>
+      <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
@@ -171,7 +171,7 @@
       <WoodLog>50</WoodLog>
     </costList>-->
     <thingCategories>
-      <li>WeaponsMelee</li>
+      <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>

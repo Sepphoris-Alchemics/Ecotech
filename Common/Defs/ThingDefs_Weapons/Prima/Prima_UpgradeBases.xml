@@ -56,9 +56,9 @@
     <equippedAngleOffset>50</equippedAngleOffset>
     <verbs>
       <li>
-				<label>PrimaShotgunBasicAttack</label>
+				<!--<label>PrimaShotgunBasicAttack</label>
 				<visualLabel>thorn cluster</visualLabel>
-				<commandIcon>UI/Icons/Projectiles/ThornCluster</commandIcon>
+				<commandIcon>UI/Icons/Projectiles/ThornCluster</commandIcon>-->
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ThornShotgun</defaultProjectile>

@@ -221,7 +221,7 @@ Can be replanted to be regrown | +2.5 hp/day (unequipped)</inspectString>
 
 	<!--=====Sunsap: NOT acquirable until post 1.1=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunSunsap</defName>
 		<label>prima sunburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with sunsap. The presence of the sunsap has drastically increased the lifespan, and the rate at which it heals itself.</description>
@@ -255,11 +255,11 @@ Can be replanted to be regrown | +2.5 hp/day (unequipped)</inspectString>
 				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 	<!--=====Starsap: NOT acquirable until post 1.1=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunStarsap</defName>
 		<label>prima starburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with starsap. The potent influence of the starsap increases the lifespan by a flat amount, and increases health regeneration.</description>
@@ -293,7 +293,7 @@ Lifespan increased by 30 days (48 days total) | +15 hp/day (unequipped)</inspect
 				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 	<!--=====Surgesap=====-->
 
@@ -367,12 +367,12 @@ Can burst fire at will | +2.5 hp/day (unequipped)</inspectString>
 							</li>
 						</comps>
 					</li>
-					<li>
+					<!--<li>
 						<label>PrimaShotgunBasicAttack</label>
 						<visualLabel>thorn clusters</visualLabel>
 						<description>Fires clusters of tiny thorns.</description>
 						<canBeToggled>false</canBeToggled>
-					</li>
+					</li>-->
 				</verbProps>
 			</li>
 		</comps>

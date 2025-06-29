@@ -7,6 +7,7 @@
     <backstoryCategories>
       <li>TerratechTribal</li>
     </backstoryCategories>
+    <initialWillRange>4~6</initialWillRange>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <invNutrition>2.55</invNutrition>
     <itemQuality>Normal</itemQuality>
@@ -27,12 +28,13 @@
     <apparelTags>      <!--to-do: make sure medieval gear can also spawn-->
       <li>Neolithic</li>
       <li>Outlander</li>
+      <li>ET_PlantArmorTag</li>
     </apparelTags>
     <apparelMoney>
       <min>2500</min>
       <max>4200</max>
     </apparelMoney>
-    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
     <weaponMoney>
       <min>800</min>
       <max>1600</max>
@@ -65,7 +67,7 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
-    <initialWillRange>5~8</initialWillRange>
+    <initialWillRange>6~8</initialWillRange>
     <initialResistanceRange>15~30</initialResistanceRange>
   </PawnKindDef>
 

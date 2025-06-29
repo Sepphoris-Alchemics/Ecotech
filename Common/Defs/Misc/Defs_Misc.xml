@@ -4,7 +4,7 @@
 	<MVCF.ModDef>
 		<defName>ET_MCVFFeatures</defName>
 		<label>Base Terraweapon</label>
-		<description>VFE features</description>
+		<description>MCVF features</description>
 			<ActivateFeatures>
 				<li>RangedAnimals</li>
 				<li>HediffVerbs</li>

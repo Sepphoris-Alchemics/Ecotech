@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--Ecotech.ThingCompProperties_EquippedLifespan will need to be local
+	<!--Ecotech.ThingCompProperties_EquippedLifespan will need to be local
 	SAP NOTES REVISED BEFORE 1.1: CHECK .rename for old values.
 	
 
@@ -149,428 +149,449 @@
 		SAPS ARE NOT CUMMULATIVE: unless stated otherwise, modifications are all based off the basic stats-->
 
 
-<!--Lifespan colors:
+	<!--Lifespan colors:
 Base Dormant: 81, 89, 45
 Base Mature: 28, 31, 15
 Endosap: 70, 178, 83-->
 
-<!--=====Basic=====-->
+	<!--=====Basic=====-->
 
 	<ThingDef Name="BaseUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-      <MarketValue>40</MarketValue>
-    </statBases>
+			<MarketValue>30</MarketValue>
+		</statBases>
 		<tickerType>Normal</tickerType>
 		<tradeTags>
-	  	<li>ET_BasePrimaWeaponTag</li>
-    </tradeTags>
-  	<comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Standard Genome | Dormant
+			<li>ET_BasePrimaWeaponTag</li>
+		</tradeTags>
+		<thingCategories Inherit='false'>
+			<li>BasicTerraweapons</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Standard Genome | Dormant
 Accepts any sap transplant | +5 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
-
 
 
 	<ThingDef Name="UpgradedUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-      <MarketValue>30</MarketValue>
-    </statBases>
+			<MarketValue>45</MarketValue>
+		</statBases>
 		<tickerType>Normal</tickerType>
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>18000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Standard Genome | Matured
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Standard Genome | Matured
 Transplants impossible | +3.75 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
-<!--=====Perennial=====-->
+
+	<ThingDef Name="BaseUpgradedTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+			<MarketValue>60</MarketValue>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<tradeTags>
+			<li>ET_BasePrimaWeaponTag</li>
+		</tradeTags>
+		<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--=====Perennial=====-->
 
 	<ThingDef Name="BasePerennialTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-      <MarketValue>40</MarketValue>
-    </statBases>
+			<MarketValue>40</MarketValue>
+		</statBases>
 		<tickerType>Normal</tickerType>
-  	<comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    </comps>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+		</comps>
 	</ThingDef>
-	
-<!--=====Wild=====-->
+
+	<!--=====Wild=====-->
 
 	<ThingDef Name="BaseWildTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-      <MarketValue>40</MarketValue>
-    </statBases>
+			<MarketValue>40</MarketValue>
+		</statBases>
 		<tickerType>Normal</tickerType>
-  	<comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    </comps>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!--=====Archsap=====-->
+	<!--=====Archsap=====-->
 
 
 	<ThingDef Name="BaseArchsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-      </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Archsap Genome | Immutable
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Archsap Genome | Immutable
 Unlimited lifespan | Persistent regeneration | +5 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
 
 	<ThingDef Name="UpgradedArchsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Archsap Genome | Matured
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Archsap Genome | Matured
 Unlimited Lifespan | Persistent regeneration | +5 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!--=====Deepsap=====-->
+	<!--=====Deepsap=====-->
 
 
 	<ThingDef Name="BaseDeepsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-      </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Deepsap Genome | Immutable
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Deepsap Genome | Immutable
 Lifespan renewable via Vitapod | +2.5 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
 
 	<ThingDef Name="UpgradedDeepsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<!--No regeneration when matured-->
-    <li Class="CompProperties_InspectString">
-      <inspectString>Deepsap Genome | Matured
+		<comps>
+			<!--No regeneration when matured-->
+			<li Class="CompProperties_InspectString">
+				<inspectString>Deepsap Genome | Matured
 Lifespan renewable via Vitapod</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!--=====Endosap=====-->
+	<!--=====Endosap=====-->
 
 
 	<ThingDef Name="BaseEndosapTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-      <MarketValue>85</MarketValue>
-    </statBases>
+			<MarketValue>85</MarketValue>
+		</statBases>
 		<tickerType>Normal</tickerType>
-   <comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>24000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-      </li>
-    	<!--InspectString will have variable health, and needs to be done locally.
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
+			<!--InspectString will have variable health, and needs to be done locally.
 		However, it should look something like this:
 			<li Class="CompProperties_InspectString">
       	<inspectString>Endosap Genome
 +20 health | +2.5 lifetime days | +2.5 hp/day (unequipped)</inspectString>
       </li>
     </comps>-->
-    </comps>
+		</comps>
 	</ThingDef>
 
 
 
 	<ThingDef Name="UpgradedEndosapTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-      <MarketValue>105</MarketValue>
-    </statBases>
+			<MarketValue>105</MarketValue>
+		</statBases>
 		<tickerType>Normal</tickerType>
-   <comps>
-		<!--No healing over time-->
-    <!--InspectString will have variable health, and needs to be done locally-->
-    </comps>
+		<comps>
+			<!--No healing over time-->
+			<!--InspectString will have variable health, and needs to be done locally-->
+		</comps>
 	</ThingDef>
 
 
-<!--=====Hemsap=====-->
+	<!--=====Hemsap=====-->
 
 
 	<ThingDef Name="BaseHemsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>18000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-      </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Hemsap Genome | Immutable
+				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Hemsap Genome | Immutable
 +1 damage | Projectiles inject neurotoxin | +3.75 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
 
 	<ThingDef Name="UpgradedHemsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
+		<comps>
 			<!--No healing over time-->
-    <li Class="CompProperties_InspectString">
-      <inspectString>Hemsap Genome | Matured
+			<li Class="CompProperties_InspectString">
+				<inspectString>Hemsap Genome | Matured
 +1 damage | Projectiles inflict neurotoxin</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!--=====Hypersap=====-->
+	<!--=====Hypersap=====-->
 
 
 	<ThingDef Name="BaseHypersapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>18000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-      </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Disorder Genome | Immutable
+				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Disorder Genome | Immutable
 Increased projectiles | Increased range | +3.75 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
 
 	<ThingDef Name="UpgradedHypersapTerraweapon_Burst" Abstract="True" ParentName="BaseGun">
-   <comps>
+		<comps>
 			<!--No healing over time-->
-    <li Class="CompProperties_InspectString">
-      <inspectString>Disorder Genome | Matured
+			<li Class="CompProperties_InspectString">
+				<inspectString>Disorder Genome | Matured
 Increased projectiles | Increased range | Faster fire rate</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
 	<ThingDef Name="UpgradedHypersapTerraweapon_Single" Abstract="True" ParentName="BaseGun">
-   <comps>
+		<comps>
 			<!--No healing over time-->
-    <li Class="CompProperties_InspectString">
-      <inspectString>Disorder Genome | Matured
+			<li Class="CompProperties_InspectString">
+				<inspectString>Disorder Genome | Matured
 Increased range | Faster fire rate</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!--=====Sunsap=====-->
+	<!--=====Sunsap=====-->
 
 
 	<ThingDef Name="BaseSunsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>3000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Sunsap Genome | Immutable
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>3000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Sunsap Genome | Immutable
 +50% lifetime days | +15 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
 
 	<ThingDef Name="UpgradedSunsapTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>3000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Sunsap Genome | Matured
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>3000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Sunsap Genome | Matured
 +25% lifetime days| +15 hp/day (unequipped)</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
 
-<!--==========UNIQUE/RELIC SAPS==========-->
+	<!--==========UNIQUE/RELIC SAPS==========-->
 
 
 	<ThingDef Name="BaseSpringTerraweapon" Abstract="True" ParentName="BaseGun">
-  	<comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    	</li>
-    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-      	<!--<expireEffect></expireEffect>-->
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    	</li>
-    	<li Class="CompProperties_InspectString">
-      	<inspectString>Bathed in the Spirits of Springs | Immutable
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Spirits of Springs | Immutable
 5x health | +5 damage | Can be rebirthed | Passively heals wielder</inspectString>
-    	</li>
-  	</comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef Name="UpgradedSpringTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
-      <!--<expireEffect></expireEffect>-->
-			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Bathed in the Strength of Springs | Matured
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Strength of Springs | Matured
 5x health | +5 damage | Can be rebirthed | Passively heals wielder</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!---->
+	<!---->
 
 
 	<ThingDef Name="BaseSummerTerraweapon" Abstract="True" ParentName="BaseGun">
-  	<comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    	</li>
-    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-      	<!--<expireEffect></expireEffect>-->
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    	</li>
-    	<li Class="CompProperties_InspectString">
-      	<inspectString>Bathed in the Soul of Summers | Immutable
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Soul of Summers | Immutable
 10x health | +5 damage | Inflicts fire damage | Passively increases stats</inspectString>
-    	</li>
-  	</comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef Name="UpgradedSummerTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
-      <!--<expireEffect></expireEffect>-->
-			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    </li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Bathed in the Soul of Summers | Matured
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Soul of Summers | Matured
 5x health | +10 damage | Inflicts fire damage | Passively increases stats</inspectString>
-      </li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!---->
+	<!---->
 
 
 	<ThingDef Name="BaseAutumnTerraweapon" Abstract="True" ParentName="BaseGun">
-  	<comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    	</li>
-    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-      	<!--<expireEffect></expireEffect>-->
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    	</li>
-    	<li Class="CompProperties_InspectString">
-      	<inspectString>Bathed in the Abundance of Autumns | Immutable
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Abundance of Autumns | Immutable
 10x health | +5 damage | Pod doubles nearby harvest yield | Provides mood bonuses</inspectString>
-    	</li>
-  	</comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef Name="UpgradedAutumnTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
-      <!--<expireEffect></expireEffect>-->
-			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    </li>
-    	<li Class="CompProperties_InspectString">
-      	<inspectString>Bathed in the Abundance of Autumns | Matured
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Abundance of Autumns | Matured
 10x health | +5 damage | Pod doubles nearby harvest yield | Provides mood bonuses</inspectString>
-    	</li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 
-<!---->
+	<!---->
 
 
 	<ThingDef Name="BaseWinterTerraweapon" Abstract="True" ParentName="BaseGun">
-  	<comps>
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-      	<ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    	</li>
-    	<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      	<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      	<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-      	<!--<expireEffect></expireEffect>-->
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    	</li>
-    	<li Class="CompProperties_InspectString">
-      	<inspectString>Bathed in the Woe of Winters | Immutable
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Woe of Winters | Immutable
 5x health | +10 damage | Inflicts frost damage | Decreases various requirements</inspectString>
-    	</li>
-  	</comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef Name="UpgradedWinterTerraweapon" Abstract="True" ParentName="BaseGun">
-   <comps>
-		<li Class="CompProperties_SelfhealHitpoints">
-      <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-    </li>
-    <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-      <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-      <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
-      <!--<expireEffect></expireEffect>-->
-			<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-    </li>
-    	<li Class="CompProperties_InspectString">
-      	<inspectString>Bathed in the Woe of Winters | Matured
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Bathed in the Woe of Winters | Matured
 5x health | +10 damage | Inflicts frost damage | Decreases various requirements</inspectString>
-    	</li>
-    </comps>
+			</li>
+		</comps>
 	</ThingDef>
 
 </Defs>

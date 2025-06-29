@@ -127,6 +127,8 @@ The process for discovering and making Terrathyst seeds takes slightly longer th
     <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. Shape a Terrathyst seed at a normal crafting spot, then plant the seed in any desired spot. There are different 'sizes' of terrathyst seeds that you can craft; the larger the seed, the longer it takes to grow, but the more crystals it'll have for use.</discoveredLetterText>
   </ResearchProjectDef>
 
+<!--=====PRIMA ARMOR=====-->
+
 <!--=====PRIMA WEAPONS=====-->
 
   <ResearchProjectDef>
@@ -136,9 +138,9 @@ The process for discovering and making Terrathyst seeds takes slightly longer th
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <Prerequisites>
+    <prerequisites>
       <li>ET_TerraseedEssentials</li>
-    </Prerequisites>
+    </prerequisites>
     <tags>
       <li>TribalStart</li>
     </tags>
@@ -295,18 +297,16 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_PerennialLargeTurretSeeds</defName>
+    <defName>ET_PerennialTurretSeeds</defName>
     <label>Perennial Groveguard Seeds</label>
-    <description>Learn how to properly grow and plant specialized seeds which will shortly sprout into a medium-sized biotic turret that's highly effective at defense and supression.
-Like other biotic turrets, the Groveguard has a limited lifespan, which drains over time and whenever they generate projectiles. However, this loss is lower than most smaller turrets.
+    <description>Learn how to properly grow and plant specialized seeds which will shortly sprout into a biotic turret that's effective at defense and supression.
+Like other biotic turrets, the Groveguard has a limited lifespan, which drains over time and whenever they generate projectiles. However, this loss is slower than Prima turrets.
 Groveguard seeds require understanding of pressurized projectiles, which is protected knowledge. You will need to study the tome that gives this knowledge.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <Prerequisites>
-      <li>ET_PerennialSeeds</li>
-    </Prerequisites>
     <hiddenPrerequisites>
+      <li>ET_PerennialSeeds</li>
       <li>ET_PrimaTurretSeeds</li>
     </hiddenPrerequisites>
     <!--<hiddenPrerequisites>
@@ -318,7 +318,7 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
       <li>ET_TerravatBasic</li>
     </requiredResearchFacilities>
     <researchViewX>5.00</researchViewX>
-    <researchViewY>2.90</researchViewY>
+    <researchViewY>1.50</researchViewY>
   </ResearchProjectDef>
 
 <!--=====CONDUIT TREES=====-->
@@ -331,9 +331,9 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <Prerequisites>
+    <prerequisites>
       <li>ET_PrimaTerraweaponSeeds</li>
-    </Prerequisites>
+    </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>2.00</researchViewY>
@@ -372,9 +372,9 @@ Dark mode included!</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <Prerequisites>
+    <prerequisites>
       <li>ET_TerraseedEssentials</li>
-    </Prerequisites>
+    </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>0.80</researchViewY>
@@ -459,7 +459,7 @@ Dark mode included!</description>
     <label>Deeproot Terravats</label>
     <description>Learn how to grow Deeproot Terravats, which are larger, 3x1 terravats. These terravats can process more items at once, and support metasaps.
 \n\nTerravats utilize large amounts of glowsap, protosaps, and metasaps. You will need access to both to properly utilize Terravats.</description>
-    <baseCost>1500</baseCost>
+    <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
@@ -472,6 +472,26 @@ Dark mode included!</description>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
   </ResearchProjectDef>
 
+  <ResearchProjectDef>
+    <defName>ET_BiosynthVat</defName>
+    <label>Biosynthesis Chamber</label>
+    <description>Learn how to create a terravat that specializes in utilizing and transforming flesh, organs, and other bodily parts. Notably, this vat is used for armor.
+\nAdditionally, this immediately enables the creation of Terraplate armor.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_MediumTerravats</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>0.80</researchViewY>
+    <discoveredLetterTitle>About: Biosyth Chamber</discoveredLetterTitle>
+    <discoveredLetterText>Biosynthesis Chambers - often shortened to Biosynth Chambers - are special vats that serves as a direct, usable connection to the planet, allowing a faction to fully - and personally - embrace Terratech, often to a very permanent degree. Most armor sets will be created in these vats by using a fresh body, deepsap, and a bit of their respective material(s).
+\nThe potential of this chamber is vast - it was known to create the rarest of saps, transfer sentience to giant plants, and was even capable of transforming beings into an ascended state. However, at the moment, only one set of (powerful) armor has been made attainable knowledge.
+\nYou can check the description of the Biosynth Vat to see the current possible combinations.</discoveredLetterText>
+  </ResearchProjectDef>
+
 <!--=====MASTERY TECH=====-->
 
   <ResearchProjectDef>
@@ -482,9 +502,14 @@ Dark mode included!</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <prerequisites>
+    <hiddenPrerequisites>
       <li>ET_GlowsapRefinement</li>
-    </prerequisites>
+      <li>ET_MediumTerravats</li>
+      <li>ET_TierTwoConduitSeeds</li>
+      <li>ET_PrimaTurretSeeds</li>
+      <li>ET_PerennialTurretSeeds</li>
+      <li>ET_PrimaArmorHeavy</li>
+    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>6.00</researchViewX>
     <researchViewY>0</researchViewY>
@@ -642,9 +667,9 @@ Terrathyst is reactive to terrain it's grown in, which directly affects it's col
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <Prerequisites>
+    <prerequisites>
       <li>ET_TerrathystEssentials</li>
-    </Prerequisites>
+    </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>ET_TerrathystFacility</li>

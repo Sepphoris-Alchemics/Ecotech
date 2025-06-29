@@ -25,25 +25,24 @@
 
 	<ThingDef ParentName="BaseWeapon">
 		<defName>ET_PerennialGlaive</defName>
-		<label>PerennialGlaive</label>
-		<description>An organic sword with a blade that makes up it's blade dullness for the many thorny, needle-sharp growths alongside it. Ecotech scribes have stated the name "terrablade" was refused to be used for the sake of avoiding potential confusion.
-\nUnlike it's ranged counterparts, Prima melee weapons are simple enough to be fully grown upon first harvest. This allows them to be infused with a different sap as soon as desired.</description>
+		<label>Perennial Stemglaive</label>
+		<description>A large bladed weapon with exceptionally long reach. Quite slow, but it's design allows many different form of attack, with each one being able to deal high damage.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/ET_PrimaSwordBasic</texPath>
+			<texPath>Things/WeaponPerennial/Basic/ET_PerennialStemglaive</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
     <thingCategories>
-      <li>WeaponsMelee</li>
+      <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
       <li>PlantWeapons</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>35</MaxHitPoints>
-			<Mass>0.7</Mass>
-			<Flammability>3</Flammability>
+      <MaxHitPoints>60</MaxHitPoints>
+			<Mass>1.4</Mass>
+			<Flammability>1</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -51,35 +50,36 @@
     <equippedAngleOffset>50</equippedAngleOffset>
 		<tools>
 			<li>
-				<label>handle</label>
+				<label>shaft</label>
 				<capacities>
 					<li>Poke</li>
+					<li>Blunt</li>
 				</capacities>
-				<power>7</power>
-				<cooldownTime>1.5</cooldownTime>
+				<power>11</power>
+				<cooldownTime>1.8</cooldownTime>
 			</li>
 			<li>
 				<label>point</label>
 				<capacities>
 					<li>Stab</li>
 				</capacities>
-				<power>14</power>
-				<cooldownTime>1.5</cooldownTime>
+				<power>18</power>
+				<cooldownTime>1.8</cooldownTime>
 			</li>
       <li>
         <label>edge</label>
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>14</power>
-        <cooldownTime>1.5</cooldownTime>
+        <power>19</power>
+        <cooldownTime>1.8</cooldownTime>
       </li>
 		</tools>
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks>
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <lifespanTicks>1500000</lifespanTicks>
+          <lifespanBarColor>(91, 61, 48)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>

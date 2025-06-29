@@ -175,6 +175,9 @@ Archwood: 2000
 		-EXAMPLE: Nightshade Rifle (counterpart Prima OLR) 30 health. Since Prima OLR is a Matured Normal weapon, it's lifespan would be knocked down a tier, following the rules of a Mature Light.
 			-Nightshade Rifle: 16 days (960000) | 35 health
 
+		-Lithoid weapons will have 3x the amount of health the organic ones have.
+		-Hybrid weapons have 2x the amount of health the organic weapons have.
+
 
 
 

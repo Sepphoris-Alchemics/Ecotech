@@ -47,4 +47,30 @@
     </filth>
   </ThingDef>
 
+  <ThingDef ParentName="BaseFilth">
+    <defName>ET_Filth_Briars</defName>
+    <label>scattered briars</label>
+    <description>A collection of small - but painful - briars.</description>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <Beauty>-10</Beauty>
+      <Cleanliness>-5</Cleanliness>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>1.0</Flammability>  
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/Filth_Briar</texPath>
+      <drawSize>0.5</drawSize>
+    </graphicData>
+    <pathCost>45</pathCost>
+    <filth>
+      <rainWashes>false</rainWashes>
+      <disappearsInDays>5~15</disappearsInDays>
+      <cleaningWorkToReduceThickness>75</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+      <maxThickness>4</maxThickness>
+    </filth>
+  </ThingDef>
+
 </Defs>

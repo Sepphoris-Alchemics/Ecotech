@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <ThingCategoryDef>
+      <defName>TerraweaponsAll</defName>
+      <label>Terraweapons</label>
+      <parent>Weapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>BasicTerraweapons</defName>
+      <label>Base terraweapons</label>
+      <parent>TerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>InfusedTerraweapons</defName>
+      <label>Infused terraweapons</label>
+      <parent>TerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+
 <!--Saps-->
 
     <ThingCategoryDef>
@@ -14,7 +39,7 @@
     <ThingCategoryDef>
       <defName>BasicSapsAll</defName>
       <label>Basic saps</label>
-      <parent>Terrasaps</parent>
+      <parent>TerrasapsAll</parent>
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
@@ -22,7 +47,7 @@
     <ThingCategoryDef>
       <defName>ProtosapsAll</defName>
       <label>Protosaps</label>
-      <parent>Terrasaps</parent>
+      <parent>TerrasapsAll</parent>
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
@@ -30,7 +55,7 @@
     <ThingCategoryDef>
       <defName>MetasapsAll</defName>
       <label>Metasaps</label>
-      <parent>Terrasaps</parent>
+      <parent>TerrasapsAll</parent>
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
@@ -38,7 +63,7 @@
     <ThingCategoryDef>
       <defName>RoyalSapsAll</defName>
       <label>Royal saps</label>
-      <parent>Terrasaps</parent>
+      <parent>TerrasapsAll</parent>
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>

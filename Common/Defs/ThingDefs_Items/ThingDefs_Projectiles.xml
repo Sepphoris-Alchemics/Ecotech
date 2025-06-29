@@ -524,4 +524,20 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
+  <ThingDef ParentName="BaseBullet">    <!--To-do: balance later-->
+    <defName>Bullet_WeakCrystalRifle</defName>
+    <label>crystal shard</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_CrystalShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <stoppingPower>0.1</stoppingPower>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
 </Defs>

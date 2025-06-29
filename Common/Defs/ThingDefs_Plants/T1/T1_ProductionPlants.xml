@@ -38,10 +38,6 @@
   </ThingDef>-->
 
   <ThingDef Name="ET_BasicProductionPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
-    <graphicData>
-      <texPath>Things/Plant/SapFilter/SapFilter</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-    </graphicData>
     <minifiedDef IsNull="True" />
     <statBases>
       <MaxHitPoints>20</MaxHitPoints>
@@ -56,7 +52,6 @@
       <fertilitySensitivity>0.1</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <burnedThingDef IsNull="True" />
-      <immatureGraphicPath>Things/Plant/SapFilter/SapFilter_Immature</immatureGraphicPath>
       <sowWork>540</sowWork>
       <sowTags>
         <li>Ground</li>
@@ -79,7 +74,7 @@
     <label>sap transposer sprout</label>
     <description>A lump of plant matter and soft wood that will sprout into a sap transposer. Takes roughly a day to fully grow. Proper nutrients are stored in the seed, allowing it to grow on most surfaces.</description>
     <graphicData>
-      <texPath>Things/Plant/Rose</texPath>
+      <texPath>Things/Plant/SapFilter/SapFilter</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <statBases>
@@ -105,6 +100,50 @@
         <inspectString>Inactive until fully grown</inspectString>
       </li>
     </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>ET_Dreamflower</defName>
+    <label>dreamflower</label>
+    <description>A plant valued amongst Terratech tribes. While not doing much on it's own, Dreamflowers can be easily be burnt to ash upon harvest; the ash can then be inhaled, allowing a pawn to full more wakeful and alert.
+Many Terratech colonies have are accustomed to having this as a stimulant to keep activity and production high. It's effects are slightly addictive, though withdrawal is not as severe as most other drugs.
+Dreamflowers take a decent amount of time to fully harvest; burning them while they are still planted within soil is mandatory to get effective ash.</description>
+    <graphicData>
+      <texPath>Things/Plant/PsychoidPlant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>45</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+    </statBases>
+    <selectable>true</selectable>
+    <plant>
+    <immatureGraphicPath>Things/Plant/PsychoidPlant_Immature</immatureGraphicPath>
+      <soundHarvesting>FireBurning</soundHarvesting>
+      <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <fertilityMin>0.6</fertilityMin>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
+      <sowWork>180</sowWork>
+      <harvestWork>360</harvestWork>
+      <harvestedThingDef>ET_TerramassMaterial</harvestedThingDef>
+      <drugForHarvestPurposes>True</drugForHarvestPurposes>
+      <harvestYield>4</harvestYield>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <growMinGlow>0.3</growMinGlow>
+      <growDays>3</growDays>
+      <dieIfNoSunlight>true</dieIfNoSunlight>
+      <dieFromToxicFallout>true</dieFromToxicFallout>
+      <visualSizeRange>0.5~1.5</visualSizeRange>
+    </plant>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>RawBad</preferability>
+    </ingestible>
   </ThingDef>
 
 </Defs>
