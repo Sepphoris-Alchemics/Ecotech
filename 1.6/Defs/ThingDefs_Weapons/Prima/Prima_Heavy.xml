@@ -1,0 +1,1121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Prima Stakecaster downgraded to an entry weapon. Still quite powerful, but very limited on ammo and speed.-->
+
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+		<defName>ET_PrimaRifle</defName> <!--Counterpart: Bolt Action-->
+		<label>prima OLR</label>
+		<description>The OLR (Organic Long Rifle) is a biotic weapon patterned off of a long-range rifle, and grown straight from a specialized pod. Due to its plant nature, no optics are present, giving it a lower range than most other longrifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaRifleBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--80 shots-->
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornRifle</defaultProjectile>
+        <warmupTime>2.125</warmupTime>
+        <range>29.9</range>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Incendiary Launcher-->
+		<defName>ET_Seedburster</defName>
+		<label>prima seedburster</label>
+		<description>A biotic weapon, patterned off a basic grenade launcher. While nature can't easily replicate actual explosives, this weapon improvises by lobbing pressure-sensitive pods that will spew razor-sharp splinters in every direction.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/ET_SeedBurster</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--32 shots-->
+			<RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.4</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SeedbursterShot</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+        <range>20.9</range>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: N/A-->
+		<defName>ET_Hailcannon</defName>
+		<label>prima hailcannon</label>
+		<description>A biotic weapon, patterned off an LMG but designed for it's own unique role. Rather than being an anti-personel weapon, the hailcannon has been designed to wear down structures, making it effective against destroying mechanoid and other unwanted structures.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaHailcannonBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.8</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_HailcannonShot</defaultProjectile>
+        <warmupTime>4.5</warmupTime>
+				<burstShotCount>10</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <range>15.9</range>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+<!--====================
+SAP LAUNCHERS
+====================-->
+
+
+	<!--Basic Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Basic</defName>
+		<label>prima sap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires it's natural, standard sap, which will slow targets while also causing irritation to exposed skin. Nearly any other sap is more ideal for combat.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaLauncherBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets> <!--Base Sap allows increased planting and harvesting speed.-->
+      <PlantWorkSpeed>0.2</PlantWorkSpeed>
+	</equippedStatOffsets>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Base</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<!--Glowsap Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Glowsap</defName>
+		<label>prima glowsap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires glowsap, which will light up the immediate area for a few days. It will also slow targets and cause minor skin irritation. Nearly any other sap is more ideal for combat.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaLauncherBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets> <!--Glowsap allows increased planting and harvesting speed.-->
+      <PlantWorkSpeed>0.5</PlantWorkSpeed>
+	</equippedStatOffsets>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Glowsap</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<!--Brightsap Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Brightsap</defName>
+		<label>prima brightsap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires brightsap, which will light up a decent area for several days. It will also slow targets, cause minor skin irritation, and provide substantial bonuses when working with plants. Nearly any other sap is more ideal for combat.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Brightsap/PrimaLauncherUpgraded_BS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets> <!--Glowsap allows increased planting and harvesting speed.-->
+			<PlantHarvestYield>0.1</PlantHarvestYield>
+      <PlantWorkSpeed>0.75</PlantWorkSpeed>
+	</equippedStatOffsets>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Brightsap</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<!--Endosap Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Endosap</defName>
+		<label>prima endosap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires endosap, which will drastically slow anything it lands on, and anything that walks on it. quickly harden on anything it lands on. Very effective when pacifying specific targets or prisoners.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaLauncherUpgraded_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<!--<equippedStatOffsets>
+      <PlantWorkSpeed>0.5</PlantWorkSpeed>
+		</equippedStatOffsets>-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Endosap</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+	<!--Hypersap Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Hypersap</defName>
+		<label>prima hypersap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires hypersap, which will severely react with flesh and armor, burning and corroding it as if the sap were acid. Extremely effective in combat.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Hypersap/PrimaLauncherUpgraded_HS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<!--<equippedStatOffsets>
+      <PlantWorkSpeed>0.5</PlantWorkSpeed>
+		</equippedStatOffsets>-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Hypersap</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<!--Hypersap Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Toxsap</defName>
+		<label>prima toxsap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires toxsap, which will leave flesh unharmed but soak into the body, causing internal complications that inch the body towards death until the poison is removed. Extremely effective in combat.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Toxsap/PrimaLauncherUpgraded_TS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<!--<equippedStatOffsets>
+      <PlantWorkSpeed>0.5</PlantWorkSpeed>
+		</equippedStatOffsets>-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Toxsap</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<!--Hypersap Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Deepsap</defName>
+		<label>prima deepsap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires deepsap, which will drastically mutate whatever it lands on into a suitable spot that can grow more advanced Terraplants. It does not discriminate between terrain and pawn.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Deepsap/PrimaLauncherUpgraded_DS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+      <PlantWorkSpeed>1</PlantWorkSpeed>
+		</equippedStatOffsets>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Deepsap</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<!--Hypersap Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+		<defName>ET_PrimaSapLauncher_Archsap</defName>
+		<label>prima archsap launcher</label>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
+\n\nThis sap launcher fires archsap, which will almost immediately fertilize terrain and flesh into a perfect growth spot for Terraplants.
+\n\nUnlike any other sap type, Archsap enables this Terraweapon to live indefinitely.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Archsap/PrimaLauncherUpgraded_AS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
+			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<PlantHarvestYield>0.2</PlantHarvestYield>
+      <PlantWorkSpeed>1.5</PlantWorkSpeed>
+		</equippedStatOffsets>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_SapShot_Archsap</defaultProjectile>
+        <warmupTime>4.375</warmupTime>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <range>15.9</range>
+        <minRange>2.4</minRange>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+<!--====================-->
+
+
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: LMG-->
+		<defName>ET_PrimaLMG</defName>
+		<label>prima thorncaster</label>
+		<description>A biotic weapon, patterned off of a heavy assault rifle, and grown straight from a specialized pod. It is somewhat inaccurate, but it's ability to generate several projectiles at once makes it excellent at supression.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
+\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as five, to as many as nine.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/ET_HeavyAR</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+			<li>RangedHeavy</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>40</MaxHitPoints> <!--30 shots-->
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>3.8</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <!--<li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornLMG</defaultProjectile>
+        <warmupTime>2.25</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>-->
+
+      <li>
+        <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornLMG</defaultProjectile>
+        <warmupTime>2.25</warmupTime>
+        <range>19.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VEF.Weapons.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VEF.Weapons.MakeshiftProperties">
+				<shots>5~9</shots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+<!--Briar Grenade-->
+
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>ET_BriarGrenade</defName>
+    <label>briar grenades</label>
+    <description>Small organic pods that oddly look like fruits. Covered with spines that are linked to one another, upon impact these explode into several large splinters, cutting - and possibly wrapping around - anything nearby.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Grenades/BriarGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.7</drawSize>
+    </graphicData>
+    <uiIconScale>1.3</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.9</RangedWeapon_Cooldown>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <weaponTags>
+      <li>PlantGrenade</li>
+      <li>PlantWeapons</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <smeltable>false</smeltable>
+    <verbs>
+      <li>
+        <label>throw briar grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>10.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.7</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>ET_BriarGrenadeProj</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>ET_SplinterDamage</explosiveDamageType>
+        <requiredDamageTypeToExplode>ET_BriarDamage</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFragGrenadeProjectile">
+    <defName>ET_BriarGrenadeProj</defName>
+    <label>briar grenade</label>
+  </ThingDef>
+
+</Defs>

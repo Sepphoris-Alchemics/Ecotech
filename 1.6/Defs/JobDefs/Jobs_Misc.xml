@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>ET_FillThingConverter</defName>
+    <driverClass>Ecotech.JobDriver_FillThingConverter</driverClass>
+    <reportString>filling TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>ET_EmptyThingConverter</defName>
+    <driverClass>Ecotech.JobDriver_EmptyThingConverter</driverClass>
+    <reportString>emptying TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>ET_InsertIntoSlottedThingTransformer</defName>
+    <driverClass>Ecotech.JobDriver_InsertIntoSlottedThingTransformer</driverClass>
+    <reportString>inserting TargetA into TargetB.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Pods should follow the following skill rules:
+Tier 1 weapons: 1-4
+Tier 1 heavy: 5-7
+Tier 1 upgrades: 6-8
+Tier 1 surge seeds: 6-8
+
+Tier 2 weapons: 4-8
+Tier 2 heavy: 9-11
+Tier 2 upgrades: 10-12
+Tier 2 surge seeds: 10-12
+
+Tier 3 weapons: 8-12
+Tier 3 heavy: 13-15
+Tier 3 upgrades: 14-16
+Tier 3 surge seeds: 14-16
+
+Tier 4 weapons: 16-20
+Tier 4 heavy: 17-19
+Tier 4 upgrades: 20
+Tier 4 surge seeds: 20
+-->
+
+  <ThingDef Name="ET_PerennialRegrowthPodBase" ParentName="PlantBaseNonEdible" Abstract="True">
+    <graphicData>
+      <texPath>Things/Plant/PerennialPod</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>145</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <tickerType>Normal</tickerType>
+    <plant>
+      <growDays>1</growDays>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <burnedThingDef IsNull="True" />
+      <immatureGraphicPath>Things/Plant/PerennialPod</immatureGraphicPath>
+      <sowWork>200</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>3.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.66~1</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <sowResearchPrerequisites Inherit="False" />
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
+    </plant>
+  </ThingDef>
+
+
+  <!--<ThingDef ParentName="ET_PrimaUpgradePodBase">
+    <defName>ET_PrimaSMGUpgradePod</defName>
+    <label>Pineshredder Pod</label>
+    <description>A fortified Terrapod that is further advancing a Prima Pincaster. Will produce a single, revitalized Briarcaster when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <plant>
+      <growDays>1</growDays> 
+    </plant>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>ET_PrimaSMGUpgraded</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>780000</spawnIntervalRange>
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>780030</lifespanTicks>
+      </li>
+    </comps>
+  </ThingDef>-->
+
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialWeaponPod</defName>
+    <label>Perennial Terraweapon Pod</label>
+    <description>A fortified Terrapod that will create a random Perennial Terraweapon. Quite durable, but takes a long time to produce a final product. Grown by proxy of a nearby Perennial tree, and cannot be sown by hand.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.
+\nDue to the way the pod grows, smaller weapons are more likely to form over bigger/longer ones.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_OverviewPerennialWeapons</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>840000</cycleDurationRangeTicks>        <!--14 days-->
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_PerennialRifle>1</ET_PerennialRifle>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PerennialSMG>1</ET_PerennialSMG>
+            </things>
+          </li>
+          <li>
+            <weight>0.25</weight>
+            <things>
+              <ET_PerennialCannon>1</ET_PerennialCannon>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_PerennialGlaive>1</ET_PerennialGlaive>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>840030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialSMGGrowthPod</defName>
+    <label>Perennial Needler Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial Needler when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>ET_PerennialSMG</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <showMessageIfOwned>true</showMessageIfOwned>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>900030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialRifleGrowthPod</defName>
+    <label>Perennial PSR Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial PSR when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>ET_PerennialRifle</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <showMessageIfOwned>true</showMessageIfOwned>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>900030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
+    <defName>ET_PerennialCannonGrowthPod</defName>
+    <label>Perennial Cannon Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial Cannon when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>ET_PerennialCannon</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <showMessageIfOwned>true</showMessageIfOwned>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>900030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

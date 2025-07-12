@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Prima Turrets/Traps -->
+
+  <!-- Prima Turrets are meant to be for early game. Fragile, flammable, and weak.
+  Multiple will be needed for strong defense.
+  
+  "Microturrets". are small turrets that can be quickly acquired, but weak on health and one major stat.
+  This stat may be damage, range, or firing speed. The advantage of microturrets is that the seed
+  that produces them produces two different turrets at once.
+  Microturrets are almost entirely plant matter, and have a max of 40 health.
+  Microturrets have an advantage of being able to slowly regenerate health, up to 5/day.
+  Microturrets have no armor penetration
+  Microturrets have a max range of 17.9, but this is usually lower (generally the same distance as the weapon it's similar to).
+  Microturrets have an accuracy of .70 across all ranges.
+
+  Prima Turrets have two "normal" turrets, two micro turrets, and two larger turrets. Evolved weapons will always drop a seed, but immarue weapons will need their seed extracted.
+
+  	Prima Turrets:
+		-Spear Turret: basic turret. Slow firing, medium damage, fires two stakes at medium range. Comparable to a greatbow firing two shots at once.
+		-Quill Turret: Microturret. Very fast firing, low range, low damage. Comparable to the SMG.
+		-Burst Turret: Microturret. Slow firing, low range, high damage. Comparable to the shotgun.
+		-Briar Turret: Extracted from evolved weapons. Medium fire rate, medium range, low damage. Close stats to a normal miniturret.
+    -Acid Turret: Extracted from the Acid Launcher. Fires globules of acid.
+    -Impact Turret: Extracted from Splintcannon. Fires a large mass of wood that causes little cut or pierce, but major impact damage.
+
+    Most turret seeds, except for heavy seeds, can be acquired from at least two weapons:
+    Spear Turret: Stakecaster, Twincaster, OLR
+		Thistle Turret: SMGs, LMGs
+		Scatter Turret: Pineburster, Carbine
+    Briar: Acquirable from all evolved weapons.
+    Acid: Acquired from Acid Launcher.
+    Impact: Acquired from Splintcannon.
+
+    Weapons that don't create a turret instead create a trap.
+    -Melee: Slicer trap (akin to normal trap, deals high cut damage)
+    -Pistol: Pellet trap (similar to a single shotgun blast in a small area)
+    -Hailcannon: Shredder trap (inflicts many low-damage, armor-piercing cut against a single target)
+    -Acid Launcher: Acid Trap (creates a burning acid cloud in a medium area)
+    -Evolved Weapons: Briar Tangle (inflicts cut damage and inflicts large amounts of the briar hediff)
+
+      -Like turrets, traps have a limited lifespan. However, they will not auto-destroy until then.
+
+    
+  Later turrets require dedicated planting, but live far longer.
+  -->
+
+<!--=====SPEAR/STAKE TURRET=====-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_PrimaTurret_Spear</defName>
+    <label>Prima Spear Sentry</label>
+    <description>A small, organic sentry that fires two mid-range stakes. Does not require power or fuel.</description>
+    <!--Old description: <description>A turret grown from a specialized seed. Fire two spear-like projectiles at targets within it's radius, which are slow to shoot, but can be devastating on impact.
+\nDespite being a plant, a network of sensory roots allow the turret to detect anything passing over them, and a hardy wooden shell allows it to withstand a limited amount of damage.
+\n\nPrima Turrets are entirely organic, do not require power, and are grown instead of built. Due to it's biological nature, Prima Turrets rot away over time and whenever they shoot, and will utlimately become little more than dead wood and roots once their life force is expended.</description>-->
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Security/PrimaTurret/PrimaTurret_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <designatorDropdown>ET_PrimaTurretGroup</designatorDropdown>
+    <minifiedDef IsNull="True" />
+    <uiIconPath>Things/Security/PrimaTurret/PrimaTurret_MenuIcon</uiIconPath> <!--temp-->
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>50</pathCost>
+    <constructEffect>ConstructWood</constructEffect>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>1</Flammability>
+      <WorkToBuild>1</WorkToBuild>
+      <Mass>80</Mass>
+      <Beauty>0</Beauty>
+      <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps Inherit="False">
+      <li Class="CompProperties_Refuelable">
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>1.5</fuelConsumptionRate>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelLabel>Lifeforce left</fuelLabel>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelMultiplier>100</fuelMultiplier>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Sunsap</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <!--<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>-->
+    <!--<costList>
+      <ET_Seed_PrimaStakeTurret>1</ET_Seed_PrimaStakeTurret>
+    </costList>-->
+    <!--<constructionSkillPrerequisite>5</constructionSkillPrerequisite>-->
+    <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiOrder>2640</uiOrder>
+    <specialDisplayRadius>23</specialDisplayRadius>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <killedLeavings>
+      <WoodLog>4</WoodLog>
+    </killedLeavings>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <claimable>true</claimable>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>ET_PrimaTurretSpearGun</turretGunDef>
+      <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+      <playTargetAcquiredSound>false</playTargetAcquiredSound>
+      <deconstructible>false</deconstructible>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>ET_PrimaTurretSeeds</li>
+    </researchPrerequisites>
+    <modExtensions>
+			<!--<li Class="HeavyWeapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>2</weaponHitPointsDeductionOnShot>
+				<isHeavy>false</isHeavy>
+			</li>-->
+		</modExtensions>
+  </ThingDef>
+
+<!--Prima Turret Gun-->
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>ET_PrimaTurretSpearGun</defName>
+    <label>Prima Spear Sentry</label>
+    <description>A sentry grown from specialized seeds. Despite being a plant, a network of sensitive roots allow the sentry to identify hostiles from a short distance, and a hardy wooden shell allows it to withstand a limited amount of damage.
+\n\nPrima Sentries are entirely organic, and do not require power. However due to it's biological nature, old or expired Prima Sentries will need to be replaced with fresh ones.</description>
+    <graphicData>
+      <texPath>Things/Security/PrimaTurret/PrimaTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <Mass>8</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_PrimaTurretStake</defaultProjectile>
+        <warmupTime>8.0</warmupTime>
+        <range>22.9</range>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+
+<!--=====THISTLE  MICROTURRET=====-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_PrimaTurret_PrimaSMG</defName>
+    <label>Prima Thistle Sentry</label>
+    <description>A small organic sentry that fires rapid volleys of tiny thorns. Does not require power or fuel.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Security/PrimaTurretSMG/PrimaTurretSMG_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <designatorDropdown>ET_PrimaTurretGroup</designatorDropdown>
+    <minifiedDef IsNull="True" />
+    <uiIconPath>Things/Security/PrimaTurretSMG/PrimaTurretSMG_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>40</pathCost>
+    <constructEffect>ConstructWood</constructEffect>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints> <!--Half health due to small size and no wood-->
+      <Flammability>1</Flammability>
+      <WorkToBuild>1</WorkToBuild>
+      <Mass>40</Mass> <!--Half mass-->
+      <Beauty>0</Beauty>
+      <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps Inherit="False">
+      <li Class="CompProperties_Refuelable"> <!--Same life duration-->
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>3</fuelConsumptionRate>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelLabel>Life percentage left</fuelLabel>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelMultiplier>100</fuelMultiplier>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Sunsap</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <!--<ET_SurgeSeed_PrimaMicroTurret>1</ET_SurgeSeed_PrimaMicroTurret>-->
+      <!--<ET_Seed_PrimaSMGTurret>1</ET_Seed_PrimaSMGTurret>-->
+    </costList>
+    <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiOrder>2650</uiOrder>
+    <specialDisplayRadius>16.9</specialDisplayRadius>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <killedLeavings>
+      <WoodLog>4</WoodLog>
+    </killedLeavings>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <claimable>true</claimable>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>ET_PrimaTurretSMGGun</turretGunDef>
+      <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+      <playTargetAcquiredSound>false</playTargetAcquiredSound>
+      <deconstructible>false</deconstructible>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>ET_PrimaTurretSeeds</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+<!--Thistle Microturret Gun-->
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>ET_PrimaTurretSMGGun</defName>
+    <label>Prima Thistle Sentry</label>
+    <description>A sentry grown from specialized seeds. This particular organic sentry is quite small and not very durable, but is capable of unleashing an impressive volley of sharn thorns.
+\n\nPrima Sentries are entirely organic, and do not require power. However due to it's biological nature, old or expired Prima Sentries will need to be replaced with fresh ones.</description>
+    <graphicData>
+      <texPath>Things/Security/PrimaTurretSMG/PrimaTurretSMG_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <Mass>4</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_PrimaTurretSMGShot</defaultProjectile>
+        <warmupTime>4.0</warmupTime>
+        <range>16.9</range>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+
+<!--=====SCATTER MICROTURRET=====-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_PrimaTurret_PrimaShotgun</defName>
+    <label>Prima Scatter Sentry</label>
+    <description>A small organic sentry that fires a tight spread of pellets. Does not require power or fuel.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Security/PrimaTurretShotgun/PrimaTurretShotgun_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <designatorDropdown>ET_PrimaTurretGroup</designatorDropdown>
+    <minifiedDef IsNull="True" />
+    <uiIconPath>Things/Security/PrimaTurretShotgun/PrimaTurretShotgun_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>40</pathCost>
+    <constructEffect>ConstructWood</constructEffect>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints> <!--Half health due to small size and no wood-->
+      <Flammability>1</Flammability>
+      <WorkToBuild>1</WorkToBuild>
+      <Mass>40</Mass> <!--Half mass-->
+      <Beauty>0</Beauty>
+      <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps Inherit="False">
+      <li Class="CompProperties_Refuelable"> <!--Same life duration-->
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>3</fuelConsumptionRate>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelLabel>Life percentage left</fuelLabel>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelMultiplier>100</fuelMultiplier>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Sunsap</li>
+          </thingDefs>
+        </fuelFilter>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <!--<ET_SurgeSeed_PrimaMicroTurret>1</ET_SurgeSeed_PrimaMicroTurret>-->
+      <!--<ET_Seed_PrimaShotgunTurret>1</ET_Seed_PrimaShotgunTurret>-->
+    </costList>
+    <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiOrder>2650</uiOrder>
+    <specialDisplayRadius>12.9</specialDisplayRadius>
+    <stealable>false</stealable>
+    <rotatable>true</rotatable>
+    <killedLeavings>
+      <WoodLog>4</WoodLog>
+    </killedLeavings>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <claimable>true</claimable>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>ET_PrimaTurretShotgunGun</turretGunDef>
+      <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+      <playTargetAcquiredSound>false</playTargetAcquiredSound>
+      <deconstructible>false</deconstructible>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>ET_PrimaTurretSeeds</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+<!--Scatter Microturret Gun-->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>ET_PrimaTurretShotgunGun</defName>
+    <label>Prima Scatter Sentry</label>
+    <description>A sentry grown from specialized seeds. This particular organic sentry is quite small and not very durable, but is capable of unleashing a powerful spread of pellets.
+\n\nPrima Sentries are entirely organic, and do not require power. However due to it's biological nature, a new sentry needs to be planted once this one withers away.</description>
+    <graphicData>
+      <texPath>Things/Security/PrimaTurretShotgun/PrimaTurretShotgun_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <statBases>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <Mass>4</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ET_PrimaTurretShotgunShot</defaultProjectile>
+        <warmupTime>4.0</warmupTime>
+        <range>12.9</range>
+        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+<!--Prima Turret Stake shot-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_PrimaTurretStake</defName>
+    <label>Prima Stake</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_StakeSmall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>17</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+      <speed>49</speed>
+    </projectile>
+  </ThingDef>
+
+<!--Prima Thistle Microturret Shot-->
+  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_PrimaSMG-->
+    <defName>ET_PrimaTurretSMGShot</defName>
+    <label>smol terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <armorPenetrationBase>0</armorPenetrationBase>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+
+<!--Prima Scatter Microturret Shot-->
+  <ThingDef ParentName="BaseBullet"> <!--Base Def: Bullet_PrimaShotgun-->
+    <defName>ET_PrimaTurretShotgunShot</defName>
+    <label>smol terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <stoppingPower>0.75</stoppingPower>
+      <armorPenetrationBase>0.07</armorPenetrationBase>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>TerraweaponsAll</defName>
+      <label>Terraweapons</label>
+      <parent>Weapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>BasicTerraweapons</defName>
+      <label>Base terraweapons</label>
+      <parent>TerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>InfusedTerraweapons</defName>
+      <label>Infused terraweapons</label>
+      <parent>TerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+
+<!--Saps-->
+
+    <ThingCategoryDef>
+      <defName>TerrasapsAll</defName>
+      <label>Terrasaps</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>BasicSapsAll</defName>
+      <label>Basic saps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>ProtosapsAll</defName>
+      <label>Protosaps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>MetasapsAll</defName>
+      <label>Metasaps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RoyalSapsAll</defName>
+      <label>Royal saps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<!--Seeds-->
+
+    <ThingCategoryDef>
+      <defName>TerraseedsAll</defName>
+      <label>Terraseeds</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsConduitTrees</defName>
+      <label>Conduit trees</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsPrimaWeapons</defName>
+      <label>Prima weapons</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsPrimaStructures</defName>
+      <label>Prima structures</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsHyperseeds</defName>
+      <label>Prima hyperseeds</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>ET_TechKeys</defName>
+      <label>Terratech Tomes</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/Book/BookAcolyte</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+	
+</Defs>

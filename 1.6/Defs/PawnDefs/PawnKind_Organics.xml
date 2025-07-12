@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="ET_SentryBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>ET_OrganicFaction</defaultFactionType>
+    <backstoryCategories>
+      <li>TerratechTribal</li>
+    </backstoryCategories>
+    <initialWillRange>4~6</initialWillRange>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <maxGenerationAge>65</maxGenerationAge>
+  </PawnKindDef>
+
+
+  <PawnKindDef Abstract="True" Name="ET_EliteSentryBase" ParentName="ET_SentryBase">
+    <combatPower>50</combatPower>
+    <maxGenerationAge>45</maxGenerationAge>
+    <gearHealthRange>
+      <min>.6</min>
+      <max>3.5</max>
+    </gearHealthRange>
+    <canBeSapper>true</canBeSapper>
+    <itemQuality>Normal</itemQuality>
+    <apparelTags>      <!--to-do: make sure medieval gear can also spawn-->
+      <li>Neolithic</li>
+      <li>Outlander</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>2500</min>
+      <max>4200</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>800</min>
+      <max>1600</max>
+    </weaponMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+    <techHediffsChance>0.25</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.5</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>40</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <initialWillRange>6~8</initialWillRange>
+    <initialResistanceRange>15~30</initialResistanceRange>
+  </PawnKindDef>
+
+
+<!--Uses Briar weaponry; very dangerous-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_BriarSentry_Random</defName>
+    <combatPower>150</combatPower>
+    <label>Prima Zealot</label>
+    <labelPlural>Prima Zealot</labelPlural>
+    <minGenerationAge>40</minGenerationAge>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_BriarWeapon</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses wild weaponry-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_WildSentry_Random</defName>
+    <combatPower>120</combatPower>
+    <label>Wildroot Devotee</label>
+    <labelPlural>Wildroot Devotees</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateWildWeapon</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses heavy Prima and Perennial weaponry, such as sap launchers and hypercannons-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_InitiateSentry_HeavyAll</defName>
+    <combatPower>120</combatPower>
+    <label>Initiate Artillerist</label>
+    <labelPlural>Initiate Artillerist</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateHeavyWeapon</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses Perennial melee weapons-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_PerennialSentry_MeleeAll</defName>
+    <combatPower>60</combatPower>
+    <label>Initiate Guardian</label>
+    <labelPlural>Initiate Guardians</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PerennialMelee</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses basic and upgraded Prima ranged weapons-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_PrimaSentry_GunnerBasic</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling</label>
+    <labelPlural>Seedlings</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaRangedBasic</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses basic and upgraded Prima melee weapons-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_PrimaSentry_FighterBasic</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling Fighter</label>
+    <labelPlural>Seedling Fighters</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaMeleeBasic</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses infused Prima ranged weapons; excludes advanced saps-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_PrimaSentry_GunnerInfused</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling Alchemist</label>
+    <labelPlural>Seedling Alchemists</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaRangedInfused</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses infused Prima melee weapons; excludes advanced saps-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_PrimaSentry_FighterInfused</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling Battleheart</label>
+    <labelPlural>Seedling Battlehearts</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaMeleeInfused</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses Prima and Perennial weapons with range, such as Casters and rifles-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_Sentry_RangerAll</defName>
+    <combatPower>90</combatPower>
+    <label>Initiate Ranger</label>
+    <labelPlural>Initiate Rangers</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateRangerWeapon</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Uses Prima and Perennial CQC weapons, such as shotguns and SMGs-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_Sentry_SkirmisherAll</defName>
+    <combatPower>90</combatPower>
+    <label>Initiate Skirmisher</label>
+    <labelPlural>Initiate Skirmishers</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateSmirmisherWeapon</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!--Faction leader; only uses Royal weapons-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_SentryElite</defName>
+    <combatPower>180</combatPower>
+    <label>Grovetender</label>
+    <labelPlural>Grovetender</labelPlural>
+    <factionLeader>true</factionLeader>
+    <minGenerationAge>30</minGenerationAge>
+    <weaponTags>
+      <li>ET_RoyalWeapon</li>
+    </weaponTags>
+    <apparelTags>
+      <li>ET_SentryEliteApparel</li>
+    </apparelTags>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="ET_SoulbloomImplant" Abstract="True" >
+		<!--<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>-->
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+    <workAmount>800</workAmount>
+    <targetsBodyPart>false</targetsBodyPart>
+    <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+    <anesthetize>true</anesthetize>
+	</RecipeDef>
+
+</Defs>

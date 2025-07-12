@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerMeldsapWeapons</defName>
+    <rulePack>
+      <include>
+        <li>ET_NamerOrganicUtility</li>
+      </include>
+      <rulesStrings>
+        <li>r_weapon_name->The [ET_Colors][ET_Flowers]</li>
+        <li>r_weapon_name->[ET_Descriptors][ET_Flowers]</li>
+        <li>r_weapon_name->The [ET_WeaponNouns] of [ET_Prefixes][ET_Suffixes]</li>
+        <li>r_weapon_name->[ET_Colors][ET_NaturalNouns]'s [ET_WeaponNouns]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+	
+</Defs>

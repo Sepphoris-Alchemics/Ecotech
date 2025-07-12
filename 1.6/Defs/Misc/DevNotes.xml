@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--==========1.5 DEV NOTES==========
+
+
+"Lifetime left" changed to "<Weapon> lifetime:"
+
+Change evolved weapon text from "Dormant" to "infused"
+Terrapod description stating the pod will be dormant if unable to grow
+Descriptions stating if a weapon will survive through winter.
+All matured and endosap weapons able to survive through winter (15+ days).
+Scenario starting with x2 Stakecaster, x1 OMR, and x1 Pinburster
+Glowsap Bay research time reduced to 1000
+Terravat time decreased to 800
+Complete all endoweapons
+
+HIGH PRIORITY:
+
+Wall-mounted glowvine
+Ecotech Tab
+Shotgun Turret
+All 1x1 Prima turrets in the same designator
+
+-->
+
+<!--BASE BALANCE MODIFICATIONS:
+Range of touch is unaffected
+Range of shorter weapons is brought down by 3 (Short = 13-25, minimum 4)
+Range of medium weapons is brought down by 7 (Medium = 26-40)
+Range of long weapons is brought down by 11 (Long = 41+)
+BLOOMROT short weapons is brought down by 2, medium by 4, long by 6
+Anima medium range is brought down by 6, long by 9
+
+GROWTH TIMES:
+5-20 days = fast growth time
+21-40 days = normal growth
+41-60 days = medium growth
+61-80 days = slow growth
+81-120 (max) days = extremely slow
+These times do not account for soil acceleration.
+
+MAX HEALTH:
+Prima: 180
+Verdant: 290
+
+Alkali Weapons: 240
+Blight: 280
+
+Perennial: 750
+Elder: 1400
+
+Royal: 600
+Deeproot: 1000
+
+Spore: 200
+Archwood: 2000
+
+====================
+
+	***GENERAL NOTES***
+		Each family has two variants: the basic/dormant, and the evolved/matured/Apex
+		Basic weapons will be the fastest to aquire, but will run out of health as they are used. You can use Sundrops to revitalize these.
+		Evolved weapons will be fully matured weapons. They will not run out of health as they are used, but will wither away (expire) after some time. They cannot be rivitalized.
+		Expiry on weapons is generally the following:
+			Prima: 15 days (can also expire via usage)
+			Verdant: 30 days
+
+			Alkali: N/A
+			Blight: 30 days
+
+			Spore: 45 days
+
+			Perennial: 60 days
+			Deeproot (was Elder): 120 days (2 quadrums)
+
+			Anima: N/A
+			Linkroot: 90 days
+
+			Archwood: 300 days (5 quadrums)
+
+		Recharing weapons is the following:
+			ALL WEAPONS CAN BE RECHARGED WITH THE RARE HEARTWOOD TREE
+
+			Prima: Sundrop
+			Verdant: Sundrop
+
+			Alkali: Sundrop
+			Blight: Sundrop
+
+			Spore: Seed Spore Extraction
+
+			Perennial: Can be planted to regrow back into a new perennial weapon 50% faster
+			Deeproot: Sundrop Vat or Terraroot Vat
+
+			Anima: Sundrop Vat
+			Linkroot: Terraroot Vat
+
+====================
+
+	***GROWTH METHODS***
+		Each family has a different growth method. This is the way they are aqcuired.
+		Growth methods are the following:
+			Prima: pods planted at a growing zone
+			Verdant: Planted by using the wepaon as a seed.
+
+			Rotvine/Soulbloom: Grown via pods that are spawned by a special tree. The harvested item produces a random Rotvine or Soulbloom weapon. The pods produce a naseous gas.
+				Both of these weapons share designs: Soulbloom weapons have the base design, while rotvine weapons add vines and decay on top of them.
+				Rotvine are the basic and most common weapons. Rotvine weapons have improved poison and faster fire rate, but lower damage and AP.
+				Soulbloom are the stronger and rarer weapons. Soulbloom has high damage, AP, and range, but miniscule poison and fire rate.
+				The type of weapon that appears can be influenced by special buildings.
+			
+
+			Spore: Harvested from tumors that are only produced by a specific mushroom tree. Must be planted in stone.
+
+			Perennial: Selected from a special surge seed that's grown inside a special tree. This tree must be cut down to produce the weapon.
+			Deeproot: Grown from a Perennial weapon that forms a new tree. This tree takes an entire year to grow.
+
+			Anima/Royal: grown from a special pod that must be planted near an Anima tree. If Royalty is not installed, then it's simply grown from a special pod.
+			Linkroot: done via operation between a pawn and a special pod. The pawn will be in a coma while this operation is done.
+
+
+====================
+
+	***	BALANCING NOTES***
+		Immature weapons should follow the Makeshift random ammo feature.
+		Immature weapons should lose health as they are used.
+		Immature weapon health can be restored in special pools or vats.
+		Immature weapons can accept new saps. However, the evolved weapon will also contain the sap.
+		Multiple weapons shouldn't be acquirable from pods.
+
+		Mature weapons have higher health
+		Mature weapons can't accept saps
+
+
+		Balancing should get a rework in the Labs Update.
+	 	-Prima Weapons should last longer and have their ammo reserves increased by 50-100%. Health should still be low.
+		-Prima Weapons should have their growth time halved.
+		-Prima Weapons should be the only weapons that can grow on normal soil.
+		-Damage type should be cut for fast weapons, and stab for slow/accurate weapons.
+		-Damage should further lowered down by 25-33%.
+		-Prima weapons can only accept glowsap
+		-Cooldown should decrease by half of it's base
+		-Warmup increased by 25% of it's base
+
+
+	-Tick time that each weapon lives should be based on the weapon size and maturity.
+		-Prima Immature weapons should be below 15 days, while matured will increase the total days by 4.
+		-Prima health will be very low, with matured weapons increasing the health by 20
+			-1 day = 60,000 ticks
+			-18 days = 1080000 ticks
+			-Immature light: 10 days (600000) | 40 health
+			-Immature normal: 12 days (720000) | 45 health
+			-Immature heavy: 14 days (840000) | 50 health
+
+			-Mature light: 14 days (840000) | 60 health
+			-Mature normal: 16 days (960000) | 65 health
+			-Mature heavy: 18 days (1080000) | 70 health
+
+	
+		-POST-TESTING LIFESPANS: Prima weapons now generally last more than a quadrum. Their upgraded growth time is only +2 instead of +3 or +4, due to their ease of access.
+			-Immature Light: 14 days (840000) | 30 health
+			-Immature Normal: 16 days (960000) | 35 health
+			-Immature Heavy: 18 days (1080000) | 40 health
+			
+			-Mature Light: 16 days (960000) | 50 health
+			-Mature Normal: 18 days (1080000) | 55 health
+			-Mature Heavy: 20 days (1200000) | 60 health
+
+		-WILD WEAPON LIFESPANS:
+			-As wild weapons are matured when produced, they should follow mature times.
+			-Their health should be 25% lower than their counterpart (rounded down to the nearest 5th)
+			-Lifespan one tier lower than their counterpart.
+			-Health regen half of their counterpart.
+		-EXAMPLE: Nightshade Rifle (counterpart Prima OLR) 30 health. Since Prima OLR is a Matured Normal weapon, it's lifespan would be knocked down a tier, following the rules of a Mature Light.
+			-Nightshade Rifle: 16 days (960000) | 35 health
+
+		-Lithoid weapons will have 3x the amount of health the organic ones have.
+		-Hybrid weapons have 2x the amount of health the organic weapons have.
+
+
+
+
+
+====================
+
+	***SAP NOTES***
+		Sap is used to modify plant stats. This sap is extracted from the corresponding plant, then combined with a weapon inside a special vat. This adds new stats, and also revitalizes the plant. The effects are the following:
+		-Glowsap: Puts the weapon in hibernation for longer storage. Weapon will have 50% longer life, but heavily impacted speed and damage. This sap can be replaced on maturity - Common
+		-Darksap: Doubles the lifetime growth increase a weapon would get. (I.e. instead of +2 days for Prima, it gets +4. This persists across growth. This sap can be replaced on maturity) - Common
+
+		-Endosap: 50% higher item health and 75% lower flammability (green) - Uncommon
+		-Hypersap: more shots/higher bursts and faster projectile speed (violet) - Uncommon
+			-Burst Weapons will have their min and max projectiles increased by 1
+			-Most other weapons will be given a range of 1-2. Specific weapons like the Stakecasters will be given a new name entirely.
+				Stakecaster - Roguecaster (1-2 shots)
+				Twincaster - Hypercaster I (3-4 shots)
+				Tricaster - Hypercaster II (4-5 shots)
+				Quadcaster - Hypercaster III (5-6 shots)
+				Quincaster - Hypercaster IV (6-7 shots)
+				Hexcaster - Swarmcaster (8-10 shots)
+
+		-Deepsap: Can be planted on any growable terrain to quickly regrow the weapon (90% grow time decrease) (light blue) - Rare
+		-Hemsap/Toxsap: projectiles inflict slight poison (light purple) - Rare
+		-Sunsap/Brightsap: 50% longer lifespan and 15 HP/day persistent health regen (golden) - Rare
+
+		-Archsap: weapon will never expire (royal purple) - Ultra Rare
+
+		-(Not acquirable) Basesap: default, regenerates health when left alone. Not available as an item. (yellow)
+		
+		Rarities determine harvest time:
+			Common: Specifically glowsap and darksap | 1.25x market value
+			Uncommon: 1 every 30 days |2x + 5 market value
+			Rare: 1 every 60 days | 3x + 10 market value
+			Ultra Rare: Bought or found | 4x + 15 market value
+			Legendary: One-time quest, or relic | 5x + 20 market value
+			Unique: Specific details (usually harvest yield or time)
+			
+		Uncommon and Rare saps can also produced by filtering a large amount of glowsap. Which one is produced will be random. This will produce 1 sap at the cost of 80 glowsap
+
+
+====================
+
+	TERRAVAT NOTES (1.4-1.5)
+		Terravat either needs a more natural graphic, or it's operations need to be given toi the basin.
+			If given to basin, Terravat research needs to be temporarily removed.
+
+  ***PRIMA NOTES***
+    Prima Weapons feature fast growth times.
+		Prima Weapons will need to have stats knocked down once Perennial Weapons are introduced. 
+		Prima Weapons should be fall within fast growth time (5-20 days).
+		Prima Weapons should reflect early-game sidearms that are above power in bows, but lower than normal guns. They should not mirror anything above Hi-Tech.
+		Verdant Weapons will require 10 days + half of the original growth time. This can bypass fast growth time.
+		Verdant Weapons have 50-60% more health, inflict the briar condition, and does cut damage alongside pierce.
+
+		Stakecaster shares stats with light and heavy weapons, having the benefits of both. This is specific to the Stakecaster and it's variants.
+
+
+
+	Prima Turrets:
+		-Spear Turret: basic turret. Slow firing, medium damage, fires two stakes at medium range. Comparable to a greatbow firing two shots at once.
+		-Quill Turret: Miniturret. Very fast firing, low range, low damage. Comparable to the SMG.
+		-Burst Turret: Miniturret. Slow firing, low range, high damage. Comparable to the shotgun.
+		-Briar Turret: Extracted from evolved wepaons. Medium fire rate, medium range, low damage. Close stats to a normal miniturret.
+
+
+====================
+
+	***TRANSFORMATION RECIPES***
+		NATURALLY:
+			APEX TURRET (ANY): Created from Apex Seed
+			APEX TURRET (SPECIFIC): Created from planted Prima Mature Weapon
+			APEX TURRET (SPECIFIC): Extracted from Prima Immature Weapon
+			APEX SEED: Dropped OR extracted from Prima Mature
+			
+		CAULDRON/FILTER (RNG-BASED):
+			BLOOMROT WEAPON: Created from Bloomrot Mass
+			ENDOSAP: Created from x150 Glowsap
+			SUNSAP: Created from x150 Glowsap
+			HYPERSAP: Created from x150 Glowsap
+
+		TERRAVAT (TIME-BASED):
+			MATURED WEAPONS: Created from immature weapon + Glowsap
+			ENDOSAP WEAPONS: Created from immature weapon + Endosap
+			REVITALIZED WEAPONS: Created from any weapon + Sunsap
+			HYPERSAP WEAPONS: Created from immature weapon + Hypersap
+			ARCHSAP WEAPONS: Created from immature weapon + Archsap
+			SCOPED WEAPONS: Created from mid-range+ weapons + molten Terracrystals
+
+====================
+
+	***PSY MECHANICS***
+		Anima weapons are hybrid weapons, and their effects vary depending on the path that the  player has dedicated themselves to. Despite being hybrid weapons, they don't require the hybrid path to create.
+		These abilities are only present with Royalty.
+		ORGANIC PATH:
+		LITHOID PATH:
+			-Anima weapons attune with their wielders, granting psionic prowess that ties directly into manipulation of life. This creates a bond with the weapon, akin to persona weapons.
+			-Anima weapons provie a psychic boost, increasing the speed it generates.
+			-Anima weapons provide AP resistance and a potent regeneration factor. Regeneration halts psychic energy generation.
+			-When the anima weapon kills a pawn each day, it grants the pawn one year of life expectancy. Used daily, this can make the pawn effectively immortal. However, should the weapon be destroyed or unheld, this life expectancy
+			will rapidly deteriorate until it's back at it's original state.
+		HYBRID PATH:
+
+-->
+
+</Defs>

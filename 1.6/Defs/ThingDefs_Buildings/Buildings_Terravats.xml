@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--TERRAVAT RECIPES (most saps progress a weapon into their Apex state, if applicable)
+  GLOWSAP:
+    Used for opening seeds
+    Used for progressing most weapons quickly
+    Used for refining other items
+
+  ENDOSAP/Endosap:
+    Used for improving durability and lifespan
+
+  SUNSAP/Brightsap:
+    Used for revitalizing any weapon
+
+  HYPERSAP/Hypersap:
+    Used for improving shot capacity
+
+  ARCHSAP:
+    Removes any weapon's lifespan
+  -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_TerravatBasic</defName>
+    <label>Small Terravat</label>
+    <description>An organic wooden growth that sustains an accessible sap chamber, designed for Ecotech experimentation and evolution. Twice a season, this vat will utilize the glowsap within, and will "advance" the various items within into another form. This unlocks security measures that Ecotech might employ, or even advance it into a unique, more powerful variant.
+\n\nTo use a Terravat:
+\nInsert a sap. Every sap can apply a different trait; to see it's applications, check the sap's info.
+\nSelect and insert the item you wish to apply the sap's traits on. Generally these will be matured weapons.
+\nOnce every quadrum, the Terravat will "cycle" and apply the sap traits to the contained item(s) during this time.
+\nOnce the contained item(s) have been altered, they will automatically be ejected for hauling.
+\nItems incompatible with saps will not be altered, or use any of the provided sap.
+\nYou can generally remove the saps and inserted items if you change your mind. However, the Terravat will seal the sap and item(s) shortly before it cycles, so don't wait until the last second!</description>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Things/Building/Terravats/SmallVat/Empty</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <!--<costList>
+      <WoodLog>80</WoodLog>
+      <ET_Glowsap>30</ET_Glowsap>
+    </costList>-->
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SmallTerravats</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>12</WoodLog>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>9</maxDistance>
+      </li>
+      <li Class="CompProperties_Art">
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_MonoThingContainer">
+        <stackLimit>30</stackLimit>
+        <drawContainedThing>false</drawContainedThing>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_SlottedThingTransformer">
+        <drawContainedThing>false</drawContainedThing>
+        <!-- 
+          When the cycle is more than this many ticks away, the time is displayed in absolute format (on the xth), otherwise in relative (in x hours) 
+          Can be set to -1 or omitted to always display in relative format
+        -->
+        <cycleInspectStringRelativeToAbsoluteThreshold>60000</cycleInspectStringRelativeToAbsoluteThreshold>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
+        <baseFuelColor>(56,204,220)</baseFuelColor>
+        <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
+        <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
+        <!-- the ticks to wait for until a transformation cycle starts (does NOT include cycle duration! -->
+        <timeToInsertTicks>100</timeToInsertTicks>
+        <!-- 
+          Can be used to target exact days.
+          !!If this field is used, transformationCycleIntervalTicks must not be used. Set to -1 or omit from the Def to use cycle interval ticks!!
+          The current in-game ticks are modulo'd and added with this value, which allows targeting an exact tick in a cycle.
+          E.g: 
+          - Current game tick: 7,572,374
+          - modulo set to 900,000 (ticks in a season) 
+          The following math is executed:
+          7572374 + (900000 - (7572374 % 900000)) = 8100000
+          That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
+        -->
+        <transformationCycleIntervalTicks>900000</transformationCycleIntervalTicks>
+        <validFuels>
+          <li>
+            <fuelThingDef>ET_Glowsap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Glowsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Glowsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+          <li>
+            <fuelThingDef>ET_Brightsap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Sunsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Sunsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+          <li>
+            <fuelThingDef>ET_Endosap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Endosap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Endosap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+          <li>
+            <fuelThingDef>ET_Hypersap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Hypersap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Hypersap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+          <li>
+            <fuelThingDef>ET_Deepsap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Deepsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0,1,0.3)</drawOffset>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Terravats/SmallVat/Deepsap</texPath>
+              <graphicClass>Graphic_Random</graphicClass>
+              <drawSize>(1.8,1.8)</drawSize>
+              <drawOffset>(0, 1, 0.3)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+        </validFuels>
+        <transformerSlots>1</transformerSlots>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

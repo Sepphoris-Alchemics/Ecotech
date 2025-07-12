@@ -3,7 +3,7 @@
 	<name>Ecotech (Local)</name>
 	<author>Sepphoris,NightmareCorporation</author>
 	<supportedVersions>
-		<li>1.5</li>
+		<li>1.5,1.6</li>
 	</supportedVersions>
 	<modDependencies>
     <li>
@@ -20,7 +20,7 @@
 		<li>Ludeon.RimWorld.Biotech</li>
 	</loadAfter>
 	<packageId>SA.EcotechLocal</packageId>
-	<description>Mod Version: 1.0.6 (last updated @ 1.14.2025, ~2:30PM PST)
+	<description>Mod Version: 1.1.0 (last updated @ 7.11.2025, ~8:00PM PST)
 
 ====================
 

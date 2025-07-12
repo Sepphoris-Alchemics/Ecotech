@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--<HediffDef Name="ET_OverviewPlants" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+	<makesAlert>false</makesAlert>
+	<makesSickThought>false</makesSickThought>
+	</HediffDef>
+
+	<HediffDef Name="ET_OverviewPlantWeapons" ParentName="ET_OverviewPlants" Abstract="True">
+    <chronic>true</chronic>
+  </HediffDef>-->
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_OverviewPrimaWeapons</defName>
+    <label>Overview: Prima Family</label>
+		<description>Weapons of the Prima family are the first Terraweapons that any tribe with access to Ecotech will learn to grow. They are the easiest to bioengineer, the fastest to research, and are (relatively) quickly grown.
+\nPrima Ecotech was the first gift from the Primordials, and could both provide both offense and defense... but it soon paled in comparison to every-pacing technology. Eventually, new Ecotech would be granted.
+\nAfter growing to their mature form, the projectile of the weapon is capable of inflicting thick briar tangles upon impact. This enables each projectile to wrap and stick around live targets, and repeated projectiles will further increase this ensnarement.
+This also develops the weapon's protective traits, causing more wood to form, external fluid growths to be used, and hardened epidermis plates to form in their location. These changes improve the overall weapon health.
+\nGeneral Prima family guidelines:
+-Genetic Trait: Very quickly grown, burst weapons will have varied projectile counts
+-Growth Method: Terrapod
+-Minimum Soil Fertility: 50%
+-Minimum Growth Duration: 4 days
+-Maximum Growth Duration: 10 days
+-Maximum Lifespan (Dormant): 14 days
+-Weapon Hitpoints (Dormant): 35
+\n-How to mature: Insert into Terravat. Requires 30 Glowsap to be present.
+-Matured Trait: Burst weapons will have tighter/higher projectile counts
+-Matured Trait: +20 health
+-Matured Trait: Lower Flammability
+-Matured Growth Duration: 10 days + 50% of independent growth time
+-Maximum Lifespan (Matured): 18 days
+-Maximum Hitpoints (Matured): 55
+\n"Rebirth" trait: Prima Microturret seed
+-Dormant Prima weapons produce a microturret seed that matches it's parent weapon the best.
+-A matured Prima weapon produces a more vertasile seed, which can be shaped into any microturret at a Terraforge.
+\nGuideline notes:
+-Growth does not account for external factors, i.e. daylight cycles and map events.
+-All dormant weapons regenerate health, but only regenerate when unequipped and left alone.
+-Independent growth time refers to a Terrapod that ONLY grows the weapon in question.
+-"Rebirth traits" are special occurances that happen when the weapon dies.
+-Other minimum stats can be found in the accompanying description.</description>
+    <graphicData>
+      <texPath>Things/Plant/WeaponPod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>55</MaxHitPoints>
+    </statBases>
+    <selectable>false</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.9</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>900</harvestWork>
+      <harvestedThingDef>ET_PrimaStakecaster</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>1</harvestYield>
+      <harvestMinGrowth>0.9</harvestMinGrowth>
+      <harvestTag>Standard</harvestTag>
+      <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
+      <sowWork>1500</sowWork>
+      <sowTags>
+        <li>ET_OverviewTagOnly</li>
+      </sowTags>
+      <sowMinSkill>1</sowMinSkill>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>2.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>5</growDays>
+      <visualSizeRange>0.4~0.95</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_OverviewPerennialWeapons</defName>
+    <label>Overview: Perennial Family</label>
+		<description>Weapons of the Perennial family are generally the second Terraweapon type that tribes delving into Terratech will learn to grow. This line was designed to be durable in all factors, and is a strong technology that even non-Terratech tribes can utilize.
+\nPerennial Terratech was designed to repel and protect against more advanced factions, such as those that heavily utilize gunpower. Lifespans were improved to avoid drought shortages, platings were hardened to better slow bullets, and range potential was increased so threats could be deterred faster.
+\nIn exchange for all the above, Perennial plants require much more care to grow, meaning longer grow times and higher soil fertility requirements. This further ephasized the need for dedicated groves - and thus, defensive establishments.
+\nGeneral Perennial family guidelines:
+-Genetic Traits: Strong AP, sap infusions are 50% more effective.
+-Growth Method: Terrapod; Perennial Tree required, and will plant said Terrapod over time
+-Minimum Soil Fertility: 60%
+-Minimum Terrapod Growth Duration: 14 days
+-Maximum Terrapod Growth Duration: 14 days
+-Maximum Weapon Lifespan (Dormant): 14 days
+-Maximum Hitpoints (Dormant): 50
+\n-How to mature: Does not mature. Instead, all Perennial weapons can be replanted and regrown. To plant a Perennial weapon, right-click one while it's on the ground, and select a suitable terrain.
+\nGuideline notes:
+-Growth does not account for external factors, i.e. daylight cycles and map events.
+-All dormant weapons regenerate health, but only regenerate when unequipped and left alone.
+-Perennial Terrapods cannot be manually grown; ONLY a Perennial tree can grow them.
+-Regrown Perennial weapons lose any sap infusions.
+-Other minimum stats can be found in the accompanying description.</description>
+    <graphicData>
+      <texPath>Things/Plant/WeaponPod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+    </statBases>
+    <selectable>false</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.6</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>900</harvestWork>
+      <harvestedThingDef>ET_PrimaStakecaster</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>1</harvestYield>
+      <harvestMinGrowth>0.9</harvestMinGrowth>
+      <harvestTag>Standard</harvestTag>
+      <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
+      <sowWork>1500</sowWork>
+      <sowTags>
+        <li>ET_OverviewTagOnly</li>
+      </sowTags>
+      <sowMinSkill>1</sowMinSkill>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>2.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>14</growDays>
+      <visualSizeRange>0.4~0.95</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_OverviewSapTerrains</defName>
+    <label>Overview: Sap-infused terrains</label>
+		<description>Certain plants and trees alter the surrounding terrain, create new terrain that has been enriched by a specific sap. These terrains have high fertility, and are very desirable (or required) for crops and terraplants alike.
+\nPrima terraplants can be grown on any fertile terrain, but these sap terrains will be needed to grow more advanced plants. They are also your key to creating farms on terrains that generally can't grow anything, such as sand, stone, and even water.
+\nBelow shows all enriched terrains, the needed base terrain, and what plant is needed to do so:
+-Glowsap-enriched soil (80% fertility): created by planting a Primwood Custodian near any "soil" terrain.
+-Brightsap-enriched soil (120% fertility): created by planting an Elderwood Custodian near any "soil" terrain.
+-Deepsap-enriched soil (150% fertility): created by planting a Deeproot Custodian near any "soil" terrain.
+-Sap-cracked stone (80% fertility): created by planting a Custodian Node near any stone.
+-Sap-drenched sand (80% fertility): created by planting a Custodian Node near any stone.
+-Sap pools (80-120% fertility): created by planting a Deeproot Custodian Node near marsh or non-ocean, passable waters.
+\nGuideline notes:
+-Anything with 80% fertility can also grow normal crops. 100%+ fertility is too concentrated and toxic for normal plants.
+-Custodian Trees can change the terrains that other Custodians have made.
+-Once a sap terrain is made, it cannot be undone.
+-Sap pools don't overtake the entire water; rather, the sap volume collects at the bottom of the water due to it's weight. This means the bottom of the water MUST be reachable.
+-Ocean waters cannot be terraformed due to water constantly moving.</description>
+    <graphicData>
+      <texPath>Things/Plant/WeaponPod_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+    </statBases>
+    <selectable>false</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.8</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>900</harvestWork>
+      <harvestedThingDef>ET_PrimaStakecaster</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>1</harvestYield>
+      <harvestMinGrowth>0.9</harvestMinGrowth>
+      <harvestTag>Standard</harvestTag>
+      <immatureGraphicPath>Things/Plant/WeaponPod_Immature</immatureGraphicPath>
+      <sowWork>1500</sowWork>
+      <sowTags>
+        <li>ET_OverviewTagOnly</li>
+      </sowTags>
+      <sowMinSkill>1</sowMinSkill>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>2.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>14</growDays>
+      <visualSizeRange>0.4~0.95</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+    </plant>
+  </ThingDef>
+</Defs>

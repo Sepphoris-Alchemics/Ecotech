@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>ET_BasicResearchBench</defName>
+    <label>Terratech Research Bench</label>
+    <description>A research bench designed to develop and discover the secrets of Terratech. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terratech biotechnology. All research pertaining to them can only be done here.
+\n\nContains compartments for highly fertile soil, and flasks for water and nutrients. Requires different structures or growths nearby, depending on what is being studied or developed.</description>
+    <thingClass>Building_ResearchBench</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <size>(3,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <costList>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <graphicData>
+      <texPath>Things/Building/Production/ResearchBench/ResearchBench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0,0.09)</drawOffset>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>TreeSowing</li>
+    </researchPrerequisites>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>2200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <ResearchSpeedFactor>0.6</ResearchSpeedFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ET_TerravatBasic</li>
+          <li>ET_GlowsapBasinResearch</li>
+          <li>ET_Terraforge</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_ReportWorkSpeed">
+        <workSpeedStat>ResearchSpeedFactor</workSpeedStat>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>EcotechDesignation</designationCategory>
+    <uiOrder>2600</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <paintable>true</paintable>
+    </building>
+  </ThingDef>
+
+
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>ET_GlowsapBasinResearch</defName>
+		<label>Glowsap Testing Basin</label>
+		<description>A small tub filled with glowsap. Required to properly experiment on early-tier Terraplants. It's small size makes it unusable as a basin for growing fully matured and healthy Terraplants.
+\n\nAt least one of these basins is required for developing most Terraplants.</description>
+		<minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>		
+		<graphicData>
+			<texPath>Things/Building/Production/GlowsapBasin/GlowsapBasin</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.75,1)</drawSize>
+      <drawOffset>(0,0,0.15)</drawOffset>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<altitudeLayer>Building</altitudeLayer>
+		<defaultPlacingRot>East</defaultPlacingRot>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SapBasics</li>
+    </researchPrerequisites>
+		<!--<constructEffect>ConstructWood</constructEffect>-->
+		<fillPercent>0.30</fillPercent>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Flammability>2</Flammability>
+			<Cleanliness>-2</Cleanliness>
+			<Mass>3</Mass>
+		</statBases>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
+		<size>(1,1)</size>
+		<costList>
+			<ET_Glowsap>7</ET_Glowsap>
+			<WoodLog>20</WoodLog>
+		</costList>
+		<tickerType>Normal</tickerType>
+    <!--fertility>1</fertility>
+		<building>
+			<defaultPlantToGrow>ET_GlowsapVine</defaultPlantToGrow>
+			<sowTag>ET_GlowsapCompatible</sowTag>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>-->
+		<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+        <darklightToggle>true</darklightToggle>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.05</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>3</maxDistance>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.25</fuelConsumptionRate>
+        <fuelCapacity>7</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Glowsap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Glowsap</fuelLabel>
+        <fuelGizmoLabel>Healthy glowsap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires glowsap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <designationCategory>EcotechDesignation</designationCategory>
+    <uiOrder>2610</uiOrder>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>
+
+  <!--<ThingDef ParentName="BenchBase">
+    <defName>ET_BasicSeedBench</defName>
+    <label>Terraseed Bench</label>
+    <description>A workstation designed to shape Terraseeds from glowsap. Most seeds for specific plants can be developed here.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <size>(1,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <WoodLog>10</WoodLog>
+      <ET_Glowsap>10</ET_Glowsap>
+    </costList>
+    <graphicData>
+      <texPath>Things/Building/Production/SeedBench/SeedBench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0,0.09)</drawOffset>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>TreeSowing</li>
+    </researchPrerequisites>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>1100</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <WorkTableWorkSpeedFactor>0.7</WorkTableWorkSpeedFactor>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ET_GlowsapBasinResearch</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>EcotechDesignation</designationCategory>
+    <uiOrder>2600</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <building>
+      <paintable>true</paintable>
+    </building>
+  </ThingDef>-->
+
+	<!--<ThingDef ParentName="BuildingBase">
+		<defName>ET_DarksapBasinResearch</defName>
+		<label>Darksap Research Basin</label>
+		<description>A small container filled with darksap. Contributes to the discovery and development of Terraplants. It's small size makes it unusable as a basin for growing fully matured and healthy Terraplants.
+\n\nThe slight differences in the sap composition doesn't allow a darksap basin to entirely carry research projects, but they can still contribute to smaller experimentation.</description>
+		<minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>		
+		<graphicData>
+			<texPath>Things/Building/Production/DarksapBasin/DarksapBasin</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.75,1)</drawSize>
+      <drawOffset>(0,0,0.15)</drawOffset>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<altitudeLayer>Building</altitudeLayer>
+		<defaultPlacingRot>East</defaultPlacingRot>
+		<passability>PassThroughOnly</passability>
+		<pathCost>30</pathCost>
+    <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SapBasics</li>
+    </researchPrerequisites>
+		<fillPercent>0.30</fillPercent>
+		<statBases>
+			<WorkToBuild>600</WorkToBuild>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Flammability>2</Flammability>
+			<Cleanliness>-2</Cleanliness>
+			<Mass>3</Mass>
+		</statBases>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
+		<size>(1,1)</size>
+		<costList>
+			<ET_Darksap>7</ET_Darksap>
+			<WoodLog>20</WoodLog>
+		</costList>
+		<tickerType>Normal</tickerType>
+		<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(78,226,229,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <ResearchSpeedFactor>0.05</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>3</maxDistance>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.25</fuelConsumptionRate>
+        <fuelCapacity>7</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Darksap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Darksap</fuelLabel>
+        <fuelGizmoLabel>Healthy darksap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires darksap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <designationCategory>Production</designationCategory>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+	</ThingDef>-->
+</Defs>

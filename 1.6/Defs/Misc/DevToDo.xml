@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--==========1.5 Checklist==========
+
+
+INCOMPLETE:
+	-Rename Sunsap to Brightsap
+	-Create Brightsap Lamp
+	-Create Brightsap Pillar
+	-Create Brightsap Growth
+	-Create Prima Terramass.
+		-Prima Growth provides a random weapon upon expiring. 
+		-It can be harvested for raw terramass.
+		-Specific weapon types can still be planted, but now they are their own research and require Prima Growths first.
+	-Create Turret Architect recipe.
+		-Re-add Sentinel Seed production and starting seeds when finished.
+	-Fix Terravat plant.
+		-Add a single Terravat seed to scenario afterwards.
+	-Replace starting scenario Prima weapons with Prima Terramass seeds.
+	-Add a bow and a knife as starting weapons.
+
+
+
+COMPLETE:
+	-Create art for Terraforge
+	-Create Terraforge seed
+	-Elderwood Custodian:
+		-Create Art (unfinished)
+		-Create XML (finished)
+		-Tie to a research (finished)
+		-Tie recipe to Terraforge (finished)
+		-Create Elderwood item graphics (finished)
+		-Create passive growing wall feature (UNFINISHED)
+
+	-Create art for Sap Transposer (finished)
+	-Give Terraforge a base plant (finished)
+	-Make sure Terraforge seed is indestructable (finished)
+	-Implement Endosap on the following:
+
+	-Implement Endosap recipes:
+		-Briarblade (UNFINISHED)
+		-Briarburster (FINISHED)
+		-Pineshredder (FINISHED)
+		-Briarbolter (FINISHED)
+
+	-Implement Hypersap recipes:
+		-Briarburster (FINISHED)
+		-Pineshredder (FINISHED)
+		-Briarbolter (FINISHED)
+
+	-Implement Brightsap recipes:
+
+	-Implement Glowsap acceleration recipes:
+		-Pincaster (FINISHED)
+		-Scattershot (FINISHED)
+		-Stakecaster (FINISHED)
+	-->
+
+</Defs>

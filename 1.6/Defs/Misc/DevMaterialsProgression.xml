@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--==========Materials Progression==========
+
+
+====================
+MAIN MATERIALS: DURABILITY - Materials used for building, and growing building and structures.
+	
+	-TIER 1 MATERIALS: Materials used for general purposes.
+		-Primwood: Woody. In between sandstone and limestone. most common woody. First tier of conduit trees.
+		-Terramass: Organic. In between limestone and marble. Most common organic. Only grows walls and basic furnitures.
+		-Terrathyst: Crystal. In between jade and gold. Very fragile to blugeoning.
+
+	-TIER 2 MATERIALS: Materials used for advanced purposes. You need these to achieve mid-game goals.
+		-Ebonmass: Organic. in between slate and granite. Upgraded variant of Terramass.
+		-Elderwood: Woody. in between granite and plasteel.
+		-Bioquartz: Crystal. In between gold and silver. Very fragile to bludgeoning.
+
+	TIER 3 MATERIALS: Materials acquired from special means. End-game.
+		-Deeproot: Woody. 10% weaker than Uranium. Takes a very long time and a lot of space to grow.
+		-Godwood: Woody. 10% weaker than Plasteel.
+		-Archwood: ???
+
+====================
+====================
+ALT MATERIALS: Materials acquired outside of conventional purposes.
+
+	-TIER 1 MATERIALS:
+		-Briarwood: Woody. Only used for thin walls and defenses. Very durable and inflammable at the cost of being very cuttable.
+		-Bloomwood: Woody. In between marble and slate. Second prettiest material. Not very protective.
+	
+	TIER 2 MATERIALS:
+		-Sporewood: Woody. used for Fungal living. 25% less HP than wood, higher bludgeon and pierce resistance.
+
+====================
+====================
+POTENTIAL MATERIALS: Materials that could be used for filling in spots.
+
+	-WOODY:
+		-Emberwood: Wood that absorbs sunlight and dispserses heat, which is also slowly used to grow the tree. Can be used to warm
+		enclosed spaced up, but the tree needs to be properly managed in order to regulate temperature. Emberwood Trees on the
+		same map share the same "network" so the more there are, the less heat each one will produce. An emberwood network can
+		be used for solar weaponry, and to create bvasins that can infuse a weapon with the Soul of Summers.
+		The wood itself prevents spaces from getting too cold, and can be shaped into special furniture.
+	
+	TIER 2 MATERIALS:
+		-Sporewood: Woody. used for Fungal living. 25% less HP than wood, higher bludgeon and pierce resistance.
+
+====================
+====================
+MATERIALS: PROGRESSION - in order of liklihood of aquisition.
+
+	-EARLY-GAME MATERIALS: Materials that can pop up without focusing on them.
+		-Primwood: First woody material accessible. Used for first conduit trees. Raw resource acquired through Conduit Tree.
+		-Terramass: First organic material. Grown via plant, and dropped via expired Prima weaponry. Small material.
+		-Soulquartz: Acquired by special Conduit Tree, by special pillar, or enemy dying to Soulbloom hediff.
+		-Bloomwood: Acquired by a pawn dying to Bloompox, or by further researching Bloomwood cultivation.
+		-Elderwood: Researched after completing Primwood Mastery.
+
+	-MID-GAME MATERIALS: Materials used for advanced purposes. You need these to achieve mid-game goals.
+		-Ebonmass: N/A; researched naturally.
+		-Terraquartz: N/A: researched naturally.
+
+	-SUPLEMENTARY MATERIALS: Materials that aren't strictly necessary, but have massive benefits.
+		-Briarwood: Needs to be acquired by combining Prima Apex seeds + Meldsap in Elderwood Vat.
+		-Sporewood: Needs to be acquired by fusing Primwood logs + Raw Fungus.
+		-Linkroot: Needs to be acquired by fusing Prima Apex seeds + Raw Fungus in complete darkness.
+		-Deeproot: only gifted by an allied EcoTech faction.
+		-Godwood: harvested from a special event tree. Only a limited amount is harvested, but each piece can change into anything.
+
+====================
+====================
+MISC MATERIALS: Materials that player minor roles.
+		-Perennial Remnants: Treated as a small material.
+		-Terravat Usages:
+			40x Perennial Remnants + 1x Brightsap: random Perennial weapon. Refined in Terravat.
+			25x Perennial Remnants + 1x Deepsap: Perennial seed. Refined in Terravat.
+			Up to 100x Perennial Remnants + Up to 100x Toxsap: Up to 100x normal Terramass. Refined in Terravat.
+
+		-Advanced usage:
+			20x Perennial Remnants: Produces 10 elderwood. Refined in ???
+			20x Perennial Remnants: Produces 20 terramass. Refined in ???
+			20x Perennial Remnants: Produces both results. Refined in ???
+		
+		-Base Sap Extraction Chances:
+			1% Toxsap
+			1% Deepsap
+			4% Brightsap
+			4% Endosap
+			90% No result
+
+		-Most weapon types drop wood or fragments according to their type. These can be recycled into into Terramass, Ebonmass, or used
+			to very quickly grow a product relative to the material, skipping the growth time and requirements.
+
+====================
+====================
+PRIMARY UPDATE FOCUS: CRYSTALS
+
+	The update will introduce crystals into the mod, and multiple ways to use them. They will be just as important as plants, will
+	cover much of the mid-game content, and pave the way into end-game. While plants represent change and growth, crystals represent
+	fortification and strength.
+
+====================
+PERRENIAL EXPANSION:
+
+	-Finish Perrenial Weapons Line:
+		-Add Needler | Evolves to Eldercaster
+		-Add Quadcaster | Evolves to Elderrifle
+		-Add Hypercannon | Evolvers to Eldercannon
+		-Add PSR (Plated Supression Rifle)
+		-Add Stormbow
+		-Add Stemglaive | Evolves to Elderglaive
+		-Add Pellet Grenades
+		-Add Pantheon Launcher
+
+	-Add Perennial Groveguard Turret
+	-Perrenial Weapons require Advanced Elderwood Methods before research
+	-Certain Perennial weapons can be fitted with a scope when Crystal Infusion is discovered.
+	-Perrenial is the last mainline wooden type you can get before needing to establish stronger facilities.
+	-Pantheon Launchers require heavy briar weaponry.
+
+	-Advanced Elderwood Methods allows the plating to seal itself without compromise, allowing formation of walls and tanks:
+		-Allows Elderwood Bays (1x3 Sap Bays)
+		-Allows Medium Terravats (1x3 Terravats)
+	
+	-After researching Elderwood Mastery, you can attempt to combine Perennial with Prima to form Briar weaponry.
+
+====================
+
+====================
+STRUCTURES:
+
+	-Add to Brightsap Lighting:
+		-Create Brightvines
+
+	-Create Glowsap Lighting:
+		-Glowsap Lamp
+		-Glowsap Pillar
+		-Glowvines
+	-Glowsap Lighting is a strain of Brightsap Lighting.
+====================
+	-->
+
+</Defs>

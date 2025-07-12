@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Large Terramass Growth-->
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_TerramassPlantLarge</defName> <!--One of these should equal 3 of the smaller ones, with the growth time of 2-->
+    <label>Large Terramass Growth</label>
+    <description>A large growth of terramass, generally found only near Sentinel Trees. Produces more terramass than the smaller, field-grown variant.</description>
+    <graphicData>
+      <texPath>Things/Plant/TerramassPlant/Large</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>95</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <harvestWork>300</harvestWork>
+      <harvestedThingDef>ET_TerramassMaterial</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>45</harvestYield>
+      <harvestTag>Standard</harvestTag>
+      <topWindExposure>0.05</topWindExposure>
+      <growDays>4</growDays>
+      <visualSizeRange>0.5~1.0</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <immatureGraphicPath>Things/Plant/TerramassPlant/Large_Immature</immatureGraphicPath>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_TerramassPlantSmall</defName> <!--One of these should equal 3 of the smaller ones, with the growth time of 2-->
+    <label>Terramass Sprout</label>
+    <description>A plant that will produce a small amount of terramass. While the amount it produces is little, the plant itself grows fast, and doesn't need to be replanted when harvested.
+\n\nCan only be sown in the ground.</description>
+    <graphicData>
+      <texPath>Things/Plant/TerramassPlant/Small</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>45</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <plant>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0.3</growMinGlow>
+      <harvestWork>200</harvestWork>
+      <harvestedThingDef>ET_TerramassMaterial</harvestedThingDef>
+      <burnedThingDef IsNull="True" />
+      <harvestYield>15</harvestYield>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.30</harvestAfterGrowth>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>6</growDays>
+      <visualSizeRange>0.4~0.8</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowMinSkill>2</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>ET_TerraseedEssentials</li>
+      </sowResearchPrerequisites>
+      <blockAdjacentSow>false</blockAdjacentSow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <purpose>Misc</purpose>
+      <immatureGraphicPath>Things/Plant/TerramassPlant/Small_Immature</immatureGraphicPath>
+    </plant>
+  </ThingDef>
+
+</Defs>

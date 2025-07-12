@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Player initial namers - used initially -->
+
+  <RulePackDef>
+    <defName>ET_NamerOrganicFaction</defName>
+    <include>
+      <li>ET_NamerOrganicUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->The [ET_AncientDescriptors] [ET_AncientNouns]</li>
+        <li>r_name->The [ET_Descriptors] [ET_Nouns]s</li>
+        <li>r_name->The [ET_Nouns]s of [ET_Colors]</li>
+        <li>r_name->The [ET_Nouns]s of [ET_Genomes]'s [ET_Weapons]</li>
+        <li>r_name->House [ET_Prefixes][ET_Affixes][ET_Suffixes]</li>
+        <li>r_name->House [ET_Colors][ET_NaturalNouns]</li>
+        <li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes] [ET_DedicatedNouns]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

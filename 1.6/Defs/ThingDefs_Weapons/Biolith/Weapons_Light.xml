@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--To-do:
+		-Biolith weapons can only undergo a limited amount of changes. These changes are shown by the crystals on the side. Once all the crystals have faded, the weapon cannot be modified any more.
+		-These changes include regrowths, scope changes, infusions, etc.
+		-Make sure biolith rifle can only be regrown up to three times.
+		-Alternatively, instead of the bore losing ammo permanently until growth, the bore loses "charge". This charge regenerates relatively fast, but decreases potency until potency hits 0. If charge is at 0, the weapon won't fire.
+		-Planting the weapon restores potency and grows the weapon very fast, but permanently decreases max potency.
+			-This is opposed to lithoid weapons, which requires the weapon to be completely regenerated over a long period of time, but the potency isn't lost, and the weapon can be regenerated infinitely.
+		-Potency affects firing speed, AP, and damage by half the percentage of missing potency. However, damage is only impacted by 1/10th. So if potency is at 60%, firing speed and AP is decreased by 15%, and damage is decreased by 4%.
+			-When potency hits 0, the weapon is drained and the weapon won't fire. The player will have a gizmo they can set which will alert them if potency reaches that point.
+		-Ask NM if a mechanic handling this is possible.
+		-Scopes should be optional and done through a seperate process.
+		-The sound sound be a distinct "cracking" sound, which signals the shard seperating from the bore.
+
+
+Note that the initial ammo generation description was: \n\nDue to it's unique nature, this rifle has an exceptionally long lifespan, but it's ammo is tied directly to it's crystal core, and will eventually run out. However, it's organic side allows it to be replanted at any time, which will slowly regenerate the crystal core. Should the core completely deplete, it will be unable to grow back.
+... However, it was instead changed to allow shocksap to 'charge' the weapon at a vat. Alternatively the player can have shockshards, but that's a rare item.
+
+Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. As mentioned before, they are upgrade over time, rather than having a wide variety.
+		-->
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_BiolithRifle</defName>		<!--Counterpart: Prima OLR-->
+		<label>biolith rifle</label>
+		<description>A rifle that fuses both crystal and wood together, combining pros (and cons) of both. It's organic features have given it a strong wooden shell and the ability to be replanted, while it's crystalline features have granted it aceess to an optic pattern, and a dense bore that acts as an ammo source.
+\n\nDue to it's hybrid nature, this weapon can be quickly rejuvinated with shocksap or shockshards, like any other lithoid weapon. Alternatively, it can also be planted in the ground to be rejuvinated as an organic weapon. One is a matter of resources, while the other is a matter of time.
+\nThe biolith rifle has no innate sap or other infusion ability, but it's optics do allow it to have a higher aim distance and ranged accuracy compared to other weapons. That said, these optics also impair it's close-combat potential.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/BiolithRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
+				<warmupTime>2.125</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>21</ticksBetweenBurstShots>
+				<range>34.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<!--<consumeFuelPerShot>1</consumeFuelPerShot>-->
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+	  <!--<li Class="CompProperties_Reloadable">
+        <maxCharges>150</maxCharges>
+        <destroyOnEmpty>false</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>shots until regeneration</chargeNoun>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		</li>-->
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Immutable
+Scoped Weapon | +1 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+</Defs>

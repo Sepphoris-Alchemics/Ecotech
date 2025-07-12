@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
+	-To-do: Later used in Perennial Weapons.
+-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_FastSeed_PrimaMelee</defName>
+    <label>Prima Hyperseed: Warrior</label>
+    <description>A masterfully crafted seed that will quickly produce a specialized Terrapod. This special Terrapod is self-sustaining and designed to produce a random Prima melee weapon within a day.
+Knowledge on how to make hyperseeds is highly guarded, and a secret only the most devoted possess. Additionally, hyperseeds bypass normal wait times and research requirements, making them one of the only outlets of attaining Terraweapons as an Industrial+ colony.
+\nHyperseeds are meant to be used shortly after acquisition, and will expire rather quickly. Be sure to not hang onto them for too long!
+\n\nKey notes:
+Significantly lowered growth time when compared to normal method (from ~6 full days to ~1)
+No research or tech level requirement
+No fertility requirement
+Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or in water)</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/FastSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>750</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsHyperseeds</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>420000</lifespanTicks>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaWeaponSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+
+  <!--==========-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_FastSeed_PrimaShortRange</defName>
+    <label>Prima Hyperseed: Skirmisher</label>
+    <description>A masterfully crafted seed that will quickly produce a specialized Terrapod. This special Terrapod is self-sustaining and designed to produce a random, fully matured, close-range Prima firearm within a day.
+Knowledge on how to make hyperseeds is highly guarded, and a secret only the most devoted possess. Additionally, hyperseeds bypass normal wait times and research requirements, making them one of the only outlets of attaining Terraweapons as an Industrial+ colony.
+\nHyperseeds are meant to be used shortly after acquisition, and will expire rather quickly. Be sure to not hang onto them for too long!
+\n\nKey notes:
+Significantly lowered growth time when compared to normal method (from ~6 full days to ~1)
+No research or tech level requirement
+No fertility requirement
+Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or in water)</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/FastSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>750</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsHyperseeds</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>420000</lifespanTicks>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaWeaponSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+
+  <!--==========-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_FastSeed_PrimaLongRange</defName>
+    <label>Prima Hyperseed: Ranger</label>
+    <description>A masterfully crafted seed that will quickly produce a specialized Terrapod. This special Terrapod is self-sustaining and designed to produce a random, fully matured, mid-range Prima firearm within a day.
+Knowledge on how to make hyperseeds is highly guarded, and a secret only the most devoted possess. Additionally, surge seeds bypass normal wait times and research requirements, making them one of the only outlets of attaining Terraweapons as an Industrial+ colony.
+\nhyperseeds are meant to be used shortly after acquisition, and will expire rather quickly. Be sure to not hang onto them for too long!
+\n\nKey notes:
+Significantly lowered growth time when compared to normal method (from ~6 full days to ~1)
+No research or tech level requirement
+No fertility requirement
+Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or in water)</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/FastSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>750</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>3</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsHyperseeds</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>420000</lifespanTicks>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaWeaponSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
+	-To-do: Later used in Perennial Weapons.
+  360000 ticks = 6 days
+  420000 ticks = 7 days
+-->
+
+  <!--==========-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_PerennialTree</defName>
+    <label>Perennial tree seed</label>
+    <description>A special seed that will grow a Perennial Tree. Once grown, this tree will produce special pods that can be harvested for Perennial weaponry.</description>
+    <possessionCount>1</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SurgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>3</stackLimit>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>1</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsAll</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_PerennialTree</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>240000</lifespanTicks>
+      </li>
+    </comps>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

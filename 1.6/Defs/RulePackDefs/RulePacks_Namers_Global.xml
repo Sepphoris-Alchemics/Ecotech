@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Player initial namers - used initially -->
+
+  <RulePackDef>
+    <defName>ET_NamerOrganicUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>FileET_Adjectives->Words/ET_Adjectives</li>
+        <li>FileET_AncientDescriptors->Words/ET_AncientDescriptors</li>
+        <li>FileET_AncientNouns->Words/ET_AncientNouns</li>
+        <li>FileET_BuiltStructures->Words/ET_BuiltStructures</li>
+        <li>FileET_Colors->Words/ET_Colors</li>
+        <li>FileET_Descriptors->Words/ET_Descriptors</li>
+        <li>FileET_Genomes->Words/ET_Genomes</li>
+        <li>FileET_NaturalStructures->Words/ET_NaturalStructures</li>
+        <li>FileET_Nouns->Words/ET_Nouns</li>
+        <li>FileET_Weapons->Words/ET_Weapons</li>
+        <li>FileET_Prefixes->Names/ET_Prefixes</li>
+        <li>FileET_Affixes->Names/ET_Affixes</li>
+        <li>FileET_Suffixes->Names/ET_Suffixes</li>
+        <li>FileET_DedicatedNouns->Words/ET_DedicatedNouns</li>
+        <li>FileET_Flowers->Words/ET_Flowers</li>
+        <li>FileET_NaturalNouns->Words/ET_NaturalNouns</li>
+        <li>FileET_WeaponNouns->Words/ET_WeaponNouns</li>
+      </rulesFiles>
+      <rulesStrings>
+        <li>ET_Adjectives->[FileET_Adjectives]</li>
+        <li>ET_AncientDescriptors->[FileET_AncientDescriptors]</li>
+        <li>ET_AncientNouns->[FileET_AncientNouns]</li>
+        <li>ET_BuiltStructures->[FileET_BuiltStructures]</li>
+        <li>ET_Colors->[FileET_Colors]</li>
+        <li>ET_Descriptors->[FileET_Descriptors]</li>
+        <li>ET_Genomes->[FileET_Genomes]</li>
+        <li>ET_NaturalStructures->[FileET_NaturalStructures]</li>
+        <li>ET_Nouns->[FileET_Nouns]</li>
+        <li>ET_Weapons->[FileET_Weapons]</li>
+        <li>ET_Prefixes->[FileET_Prefixes]</li>
+        <li>ET_Affixes->[FileET_Affixes]</li>
+        <li>ET_Suffixes->[FileET_Suffixes]</li>
+        <li>ET_NaturalNouns->[FileET_NaturalNouns]</li>
+        <li>ET_WeaponNouns->[FileET_WeaponNouns]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

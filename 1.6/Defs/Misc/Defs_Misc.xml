@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MVCF.ModDef>
+		<defName>ET_MCVFFeatures</defName>
+		<label>Base Terraweapon</label>
+		<description>MCVF features</description>
+			<ActivateFeatures>
+				<li>RangedAnimals</li>
+				<li>HediffVerbs</li>
+				<li>IntegratedToggle</li>
+        <li>ExtraEquipmentVerbs</li>
+        <li>ApparelVerbs</li>
+        <li>Drawing</li>
+        <li>IndependentFire</li>
+        <li>InventoryVerbs</li>
+        <li>VerbComps</li>
+        <li>Reloading</li>
+			</ActivateFeatures>
+	</MVCF.ModDef>
+
+  <DesignationCategoryDef>
+    <defName>EcotechDesignation</defName>
+    <label>Ecotech</label>
+    <order>429</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_PlantsHarvestWood</li>
+      <li>Designator_PlantsCut</li>
+      <li>Designator_PlantsHarvest</li>
+    </specialDesignatorClasses>
+    <researchPrerequisites>
+      <li>ET_TerraseedEssentials</li>
+    </researchPrerequisites>
+  </DesignationCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>ET_PrimaWeaponsMature</defName>
+    <label>prima weapons - matured</label>
+    <parent>Root</parent>
+  </ThingCategoryDef>
+
+   <WorkGiverDef>
+    <defName>ET_ExtractPrimaTurretSeed</defName>
+    <label>extract prima turret seed</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_TerravatBasic</li>
+    </fixedBillGiverDefs>
+    <verb>extract seed at</verb>
+    <gerund>extracting seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+   <WorkGiverDef>
+    <defName>ET_DoBillsTerraforge</defName>
+    <label>shape seeds</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_Terraforge</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+   <WorkGiverDef>
+    <defName>ET_DoBillsTerrathyst</defName>
+    <label>create item</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_TerrathystSmall</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_MuseumDisplayBase">
+    <label>Display Case</label>
+    <thingClass>Building</thingClass>
+    <description>A display case to display things in.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Never</tickerType>
+    <category>Building</category>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>80</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <building>
+      <buildingSizeCategory>Medium</buildingSizeCategory>
+      <watchBuildingStandRectWidth>2</watchBuildingStandRectWidth>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_MuseumDisplayBase">
+    <defName>ET_Museums_DisplayCase_Small</defName>
+    <rotatable>false</rotatable>
+    <size>(1,1)</size>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+      <Mass>15</Mass>
+    </statBases>
+    <graphicData>
+      <shaderType>CutoutComplex</shaderType>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Temp/GlassCase/GlassCase1</texPath>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(1, 1, 0.5)</volume>
+      </shadowData>
+    </graphicData>
+  </ThingDef>
+
+    <ThingDef ParentName="Wall">
+    <defName>ET_LinkedDisplayBase</defName>
+    <label>Museum Display</label>
+    <description>Displays Items.</description>
+    <graphicData>
+      <texPath>Temp/Display/Display_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>	
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToBuild>350</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>	  
+    </statBases>
+    <costList>
+	    <WoodLog>5</WoodLog>
+    </costList>		
+    <linkFlags Inherit="False">
+        <li>Custom6</li>
+    </linkFlags>
+    <tickerType>Normal</tickerType>
+    <costStuffCount>0</costStuffCount>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <stuffCategories Inherit="false"/>
+    <building>
+      <repairable>true</repairable>
+    </building>
+	
+    <designationCategory>Furniture</designationCategory>
+</ThingDef>-->
+
+</Defs>

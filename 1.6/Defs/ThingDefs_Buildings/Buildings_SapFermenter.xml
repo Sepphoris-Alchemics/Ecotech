@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_SapFilter_Base">
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>42</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiOrder>2710</uiOrder>
+    <constructEffect>ConstructWood</constructEffect>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_SapFilter_Base">
+    <defName>ET_GlowsapFilter</defName>
+    <label>Sap Transposer</label>
+    <description>A deeply rooted basin that, when filled with glowsap, will slowly filter and absorb most of the elements and nutrients within. This process destroys the given glowsap, but the preserved contents produce a powerful, highly valuable sap. These new saps can then either be used, or sold.
+The outcome will always be one vial of refined sap, but which one it is will be entirely random. It's not an efficient use of glowsap, but is useful if glowsap reserves are plentiful.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/Transposer/Transposer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>3</Flammability>
+    </statBases>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <!--<costList>
+      <Steel>10</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>-->
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_ThingConverter">
+        <compClass>Ecotech.ThingComp_ThingConverter</compClass>
+        <!-- when a pawn carries items to the converter / takes them out, this is how long they stand in front of the building-->
+        <timeToFillTicks>600</timeToFillTicks>
+        <timeToEmptyTicks>100</timeToEmptyTicks>
+        <drawFillableBar>true</drawFillableBar>
+        <!-- x, y, z offset for the bar. centered by default -->
+        <fillableBarDrawOffset>(0, 0.00001, 0)</fillableBarDrawOffset>
+        <fillableBarSize>(0.55, 0.1)</fillableBarSize>
+        <fillableBarBackgroundColor>(21, 25, 29)</fillableBarBackgroundColor>
+        <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
+        <inputThings>
+          <!-- needs exactly one entry -->
+          <ET_Glowsap>300</ET_Glowsap>
+        </inputThings>
+        <conversionDurationTicks>72000</conversionDurationTicks>
+        <potentialResults>
+          <li>
+            <weight>2</weight>
+            <things>
+              <ET_Endosap>1</ET_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>2</weight>
+            <things>
+              <ET_Brightsap>1</ET_Brightsap>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_Hypersap>1</ET_Hypersap>
+            </things>
+          </li>
+        </potentialResults>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <!--<li>Brewing</li>-->
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

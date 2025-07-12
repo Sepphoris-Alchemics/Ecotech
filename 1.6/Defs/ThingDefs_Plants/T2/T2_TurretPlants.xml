@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+
+-->
+
+  <ThingDef Name="ET_PerennialTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+    <graphicData>
+      <texPath>Things/Plant/BriarTurret_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <plant>
+      <maxMeshCount>1</maxMeshCount>
+      <growDays>2</growDays> 
+      <fertilityMin>0.8</fertilityMin>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <burnedThingDef IsNull="True" />
+      <immatureGraphicPath>Things/Plant/BriarTurret_Immature</immatureGraphicPath>
+      <sowWork>540</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0</topWindExposure>
+      <visualSizeRange>0.7~1</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <sowResearchPrerequisites Inherit="False" />
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <purpose>Misc</purpose>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_PerennialTurretPlantBase">
+    <defName>ET_BriarLargeTurretPlant</defName>
+    <label>Pantheon Terracannon Growth</label>
+    <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.
+\nOnce fully grown, this particular sprout will turn into a fully organic sentry that fires short-range, packed splinters.</description>
+    <graphicData>
+      <texPath>Things/Plant/BriarTurret_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <growDays>0.5</growDays> 
+    </plant>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_BriarLargeTurret</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Inactive until fully grown</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

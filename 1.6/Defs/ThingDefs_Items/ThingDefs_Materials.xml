@@ -1,0 +1,197 @@
+<Defs>
+
+    <!--Planned materials (HP):
+Briarwood: in between jade and gold (165): only in briar plants
+Terraquartz: in between gold and wood (185): late-game royal material. Prettiest.
+    -Sporewood: ideology/lifestyle wood. Growable underground.
+Terramass: in between wood and silver (200): early-game building material
+Purewood: in between silver and steel (245): produced from breaking down industrial items.
+Livewood: in between steel and marble (330): mid-game material
+    -Replaces Elderwood Trees ===Major upgrade needed for the following===
+
+Bloomwood: in between marble and slate (375): art material. Second prettiest.
+Ebonmass: in between slate and sandstone (405): upgrade to terramass.
+Elderwood: in between limestone and granite (480): end-game growable wood.
+Archwood: in between granite and uranium (630): only produced through special crafting (Elderwood+Archsap).
+Godwood: in between uranium and plasteel (795): Quest and gifting only.
+
+Weapons that use a type of wood come far before the wood source itself, since engineering actual proper plants was a later goal.
+-->
+
+    <!-- ================ Terramass ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TerramassMaterial</defName>
+        <label>Terramass</label>
+        <description>A moldable material made of thick plant matter, specked with bits of wood. A bit less durable and flammabible, but it's natural connection allows it to be manipulated faster. It's best trait is it's extremely high renewability.</description>
+        <graphicData>
+            <drawSize>0.6</drawSize>
+            <texPath>Things/Resource/Terramass</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>0.9</MarketValue>
+            <MaxHitPoints>175</MaxHitPoints>
+            <Mass>0.6</Mass>
+            <Flammability>3</Flammability>
+            <DeteriorationRate>1.5</DeteriorationRate>
+            <StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.25</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>6</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+            <BluntDamageMultiplier>0.4</BluntDamageMultiplier>
+        </statBases>
+        <burnableByRecipe>true</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>terramass</stuffAdjective>
+            <categories>
+                <li>ET_Organic</li>
+                <li>Woody</li>
+            </categories>
+            <color>(68,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructWood</constructEffect>
+            <appearance>Planks</appearance>
+            <statFactors>
+                <MaxHitPoints>0.8</MaxHitPoints>
+                <Flammability>3</Flammability>
+                <WorkToMake>1.2</WorkToMake>
+                <WorkToBuild>1.2</WorkToBuild>
+                <DoorOpenSpeed>1.2</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+    <!-- ================ Primwood ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TierOnePlating</defName>
+        <label>Primwood Plating</label>
+        <description>Organic plates of Primwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
+\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. However, the wood present on Prima weapons is reminiscent of Primwood's own sapwood or heartwood, but softer and smoother.</description>
+        <graphicData>
+            <texPath>Things/Resource/Primwood</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>500</stackLimit>
+        <smallVolume>true</smallVolume>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <MaxHitPoints>225</MaxHitPoints>
+            <Mass>0.55</Mass>
+            <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>true</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>primwood</stuffAdjective>
+            <categories>
+                <li>Woody</li>
+            </categories>
+            <color>(85,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructWood</constructEffect>
+            <appearance>Planks</appearance>
+            <statFactors>
+                <MaxHitPoints>0.8</MaxHitPoints>
+                <Flammability>1</Flammability>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <DoorOpenSpeed>1.1</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+    <!-- ================ Elderwood ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TierTwoPlating</defName>
+        <label>Elderwood Plating</label>
+        <description>Organic plates of Elderwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
+\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. However, the wood present on Prima weapons is reminiscent of Primwood's own sapwood or heartwood, but softer and smoother.</description>
+        <graphicData>
+            <texPath>Things/Resource/Primwood</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <MaxHitPoints>225</MaxHitPoints>
+            <Mass>0.55</Mass>
+            <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>true</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>primwood</stuffAdjective>
+            <categories>
+                <li>Woody</li>
+            </categories>
+            <color>(85,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructWood</constructEffect>
+            <appearance>Planks</appearance>
+            <statFactors>
+                <MaxHitPoints>0.8</MaxHitPoints>
+                <Flammability>1</Flammability>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <DoorOpenSpeed>1.1</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DesignatorDropdownGroupDef>
+		<defName>ET_PrimaTurretGroup</defName>
+		<label>prima turrets</label>
+	</DesignatorDropdownGroupDef>
+
+<!--Upgraded Primas get +10 health and -1 flammability. Lifespan times below:
+			-Immature light: 10 days (600000) | 40 health
+			-Immature normal: 12 days (720000) | 45 health
+			-Immature heavy: 14 days (840000) | 50 health
+
+			-Mature light: 14 days (840000) | 60 health
+			-Mature normal: 16 days (960000) | 65 health
+			-Mature heavy: 18 days (1080000) | 70 health
+			
+			
+			POST-TESTING LIFESPANS: Prima weapons now generally last more than a quadrum. Their upgraded growth time is only +2 instead of +3 or +4, due to their ease of access.
+			Immature Light: 14 days (840000) | 30 health
+			Immature Normal: 16 days (960000) | 35 health
+			Immature Heavy: 18 days (1080000) | 40 health
+			
+			Mature Light: 16 days (960000) | 40 health
+			Mature Normal: 18 days (1080000) | 45 health
+			Mature Heavy: 20 days (1200000) | 50 health-->
+
+	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
+		<defName>ET_PrimaShotgunUpgraded</defName>
+		<label>prima sprigshot</label>
+		<description>The matured form of the Prima Spreadshot. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaShotgunUpgraded</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+			<li>PlantWeaponsUpgraded</li>
+		</weaponTags>
+    <weaponClasses>
+			<li>ShortShots</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>55</MaxHitPoints> <!--From 35 to 55: 20 health increase-->
+			<AccuracyTouch>0.85</AccuracyTouch> <!--.05 higher accuracy in all areas-->
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.4</Mass> <!--Mass increased by .2 from base-->
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
+        <warmupTime>1.125</warmupTime>
+        <range>13.9</range> <!--1 higher range than it's dormant form-->
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+        </li>
+		</comps>
+	</ThingDef>
+
+
+	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
+		<defName>ET_PrimaSMGUpgraded</defName>
+		<label>prima pineshredder</label>
+		<description>The evolved version of the Prima Pincaster. The evolution has fully developed all it's defensive features, resulting in briar-like thorns and segments being projected when the weapon is shot. All reserved sap has been consumed to create a stronger and durable epidermis, removing most of the multiple sacs that grew out of the weapon. All these changes have provided better slightlines for accuracy, higher health, and more usages.
+\nAdditionally, the Apex form no longer has inconsistent output. It will now fire 4-5 projectiles per burst instead of a random range of 2-6 projectiles, resulting in a higher average DPS.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaSMGUpgraded</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+			<li>ShortShots</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>17.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_BlowgunLight</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VEF.Weapons.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VEF.Weapons.MakeshiftProperties">
+				<shots>4~5</shots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+<!--=====Prima Carbine=====-->
+
+	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+		<defName>ET_PrimaCarbineUpgraded</defName>
+		<label>prima evocarbine</label>
+		<description>The directly evolved version of the Prima Carbine. This evolution has made use of sap reserves, which has resulted in the loss of the multiple sacs on the weapon in order to create a better weapon. These changes have provided, higher health, better projectile output, and a stronger seed upon expiry.
+\nAdditionally, this evolved form no longer has inconsistent output. It will now fire 4 projectiles per burst instead of a random range of 2-5 projectiles, resulting in a higher damage output.
+While this weapon doesn't feature any notable features, uninfused weapons are required for briar weapons, and are the only ones that produce turret seeds.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaCarbineUpgraded</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>45</MaxHitPoints>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.8</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>23.9</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VEF.Weapons.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VEF.Weapons.MakeshiftProperties">
+				<shots>4</shots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
+		<defName>ET_PrimaTwincaster</defName>
+		<label>Twincaster</label>
+		<description>The second-generation form of the Prima Stakecaster. The evolution has drastically impacted this weapon's projectiles, resulting in large masses of briar tangles that are wrapped around a small stake, as opposed to the larger stake that the dormant form fires. Much of the reserved sap has been consumed to create a stronger and durable epidermis. All these changes have provided better slightlines for accuracy, higher health, and a longer lifespan.
+\nUnlike every other Prima Apex weapon, the Stakecaster has the potential for much more evolution, making this only the second form of potentially several. This early growth still enables it to regenerate health when idle, but causes it to lack certain matured features, notably higher damage and speed.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaCrossbowUpgraded</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>PlantWeapons</li>
+		</weaponTags>
+    <weaponClasses>
+      <li>LongShots</li>
+      <li>Ranged</li>
+			<li>RangedHeavy</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+			<AccuracyTouch>0.70</AccuracyTouch> <!--.05 higher accuracies than dormant-->
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>1.125</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.8</Mass>
+			<Flammability>2</Flammability>
+      <WorkToMake>4000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_StakeBriar</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>32.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_LightStake</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+          <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+        </li>
+		</comps>
+	</ThingDef>
+
+</Defs>

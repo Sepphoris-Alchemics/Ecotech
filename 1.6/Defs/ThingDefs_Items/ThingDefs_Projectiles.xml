@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Balancing should go by the following:
+Prima base damage should be +2 to their industrial counterpart
+Verdant base damage should be +3
+Perennial should be +1
+Anima/Royal should be +4
+
+Light damage (SMGs, pistols, etc.) should be .12 penetration
+Medium should be .14 penetration
+Heavy gets .16 penetration
+VERDANT gets an additional +.2 penetration
+PRIMA has a max penetration of .08
+
+Light weapons should have a stopping power of 0.5
+Medium should have a stopping power of .75
+Heavy should have a stopping power of 1
+PERRENIAL gets an addition 1 stopping power
+Prima has half it's counterpart stopping power
+
+Light weapons should have a general speed of 40
+Medium weapons should have a general speed of 60
+Heavy weapons should have a general speed of 40
+ANIMA weapons get +20 to their bullet speed
+
+Range of shorter weapons is brought down by 2
+Range of long weapons is brought down by 6
+VERDANT short weapons is brought down by 1, medium by 3, long by 5
+Anima long range is brought down by 3
+-->
+
+  <ThingDef ParentName="BaseBullet">    <!--Base Def: Bullet_revolver-->
+    <defName>Bullet_ThornPistol</defName>
+    <label>light terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <stoppingPower>0.5</stoppingPower>
+      <!--<armorPenetrationBase>0.08</armorPenetrationBase>-->
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--Base Def: Bullet_PrimaSMG-->
+    <defName>Bullet_ThornSMG</defName>
+    <label>light terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--Assault Rifle counterpart-->
+    <defName>Bullet_ThornCarbine</defName>
+    <label>terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <armorPenetrationBase>0.04</armorPenetrationBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--Bolt-Action Rifle counterpart; considered a heavy weapon-->
+    <defName>Bullet_ThornRifle</defName>
+    <label>terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <stoppingPower>0.75</stoppingPower>
+      <armorPenetrationBase>0.08</armorPenetrationBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--Greatbow counterpart, but with some stats treated as heavyr-->
+    <defName>Bullet_StakeLight</defName>
+    <label>stake</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_StakeSmall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>19</damageAmountBase>
+      <stoppingPower>0.75</stoppingPower>
+      <armorPenetrationBase>0.08</armorPenetrationBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--upgraded Stakecaster shot-->
+    <defName>Bullet_StakeBriar</defName>
+    <label>large briar tangle</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_StakeBriar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>ET_BriarDamageStake</damageDef>
+      <damageAmountBase>11</damageAmountBase>      <!--40% damage removed, rounded from 11.4-->
+      <stoppingPower>0.75</stoppingPower>
+      <armorPenetrationBase>0.04</armorPenetrationBase>
+      <speed>35</speed>      <!--slightly slower speed-->
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--pump shotgun counterpart, medium weapon-->
+    <defName>Bullet_ThornShotgun</defName>
+    <label>thorn cluster</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <armorPenetrationBase>0.07</armorPenetrationBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--upgraded shotgun shot-->
+    <defName>Bullet_BriarShotgun</defName>
+    <label>briar tangles</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ET_BriarDamage</damageDef>
+      <damageAmountBase>12</damageAmountBase>      <!--40% damage removed-->
+      <stoppingPower>1.5</stoppingPower>      <!-- Same stopping power-->
+      <armorPenetrationBase>0.04</armorPenetrationBase>      <!--AP down by half-->
+      <speed>40</speed>      <!--Slower speed-->
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--LMG counterpart-->
+    <defName>Bullet_ThornLMG</defName>
+    <label>heavy terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <stoppingPower>0.5</stoppingPower>
+      <armorPenetrationBase>0.08</armorPenetrationBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SeedbursterShot</defName>
+    <label>seedburster shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100,152,100)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>32</speed>
+      <damageDef>ET_SeedbursterDamage</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <explosionRadius>2.4</explosionRadius>
+      <armorPenetrationBase>0.12</armorPenetrationBase>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <postExplosionSpawnThingDef>ET_Filth_Sap</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_HailcannonShot</defName>
+    <label>heavy terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.4</drawSize>
+    </graphicData>
+    <projectile>
+      <speed>32</speed>
+      <damageDef>ET_HailcannonDamage</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <armorPenetrationBase>0.12</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+
+<!--Sap Launcher shots
+  -Base: Halfways stats of glowsap. No damage. Basically normal sap.
+  -Glowsap: basically glue, slows down the target the most, but has next to no damage.
+  -Brightsap: applies a hediff that improves vision, then decreases it. Deals next to no damage.
+  -Endosap: hits the target like a rock and has a burst of slowness, but is quick to wear off.
+  -Hypersap: Acidic, and will cause burns over time.
+  -Toxsap: Poisons the target, causing standard toxic effects.
+  -Deepsap: Causes the target to gain Bloompox, rooting them and causing their body to release various seeds. Lethal if untreated.
+  -Sunsap: Burns the target, causes immediate burns. Very high damage.
+  -Starsap: Same as sunsap.
+  -Archsap: Todo. Likely a lethal, transformative effect.
+-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Base</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Glowsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Brightsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Endosap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Hypersap</defName>
+    <label>hypersap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <armorPenetrationBase>0.40</armorPenetrationBase>
+      <stoppingPower>3</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Toxsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Deepsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_SapShot_Archsap</defName>
+    <label>glowsap globule</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(100, 152, 100)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_AcidDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>6</stoppingPower>
+      <explosionRadius>3.4</explosionRadius>
+      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <speed>17</speed>
+    </projectile>
+  </ThingDef>
+
+
+
+  <!--Wild projectiles-->
+  <ThingDef ParentName="BaseBullet">    <!--chain shotgun counterpart, medium weapon-->
+    <defName>Bullet_GaubornShotgun</defName>
+    <label>scatter blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <stoppingPower>1.75</stoppingPower>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet"> 
+    <defName>Bullet_NightshadeRifle</defName>
+    <label>poisonous terrathorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_Thorn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>ET_NightshadeThornDamage</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <stoppingPower>0.25</stoppingPower>
+      <armorPenetrationBase>0.01</armorPenetrationBase>
+      <speed>40</speed>      <!--slightly higher speed-->
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet"> <!--heavy SMG -->
+    <defName>Bullet_PerennialNeedle</defName>
+    <label>perennial needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <armorPenetrationBase>0.22</armorPenetrationBase>
+      <speed>62</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet"> <!--Minigun -->
+    <defName>Bullet_PerennialRifle</defName>
+    <label>perennial needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.4</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <armorPenetrationBase>0.22</armorPenetrationBase>
+      <speed>62</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet"> <!--GL-->
+    <defName>Bullet_PerennialCannon</defName>
+    <label>pressure needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.4</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>ET_SeedbursterDamage</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <explosionRadius>1.9</explosionRadius>
+      <armorPenetrationBase>0.16</armorPenetrationBase>
+      <speed>52</speed>
+      <postExplosionSpawnThingDef>ET_Filth_Sap</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+      <arcHeightFactor>0.01</arcHeightFactor>
+      <shadowSize>0.1</shadowSize>
+	  <explosionDelay>15</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+<!--Lithoid Bullets-->
+
+  <ThingDef ParentName="BaseBullet">    <!--To-do: balance later-->
+    <defName>Bullet_CrystalRifle</defName>
+    <label>crystal shard</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_CrystalShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <stoppingPower>0.4</stoppingPower>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--To-do: balance later-->
+    <defName>Bullet_WeakCrystalRifle</defName>
+    <label>crystal shard</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_CrystalShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <stoppingPower>0.1</stoppingPower>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+</Defs>
