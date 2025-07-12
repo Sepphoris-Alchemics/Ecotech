@@ -594,7 +594,7 @@ You can now create:
 Various briar trap seeds, which are shaped at a Terraforge.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <ResearchProjectDef> <!--Material Compression-->
+  <!--<ResearchProjectDef>
     <defName>ET_MaterialCompression</defName>
     <label>Plating Compression</label>
     <description>Discover how to tap deep into the planet, allowing you to create extremely durable materials out of commonplace ones.
@@ -619,7 +619,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
     <discoveredLetterText>Your experiments with terrathyst, and the guidance of the tome, has resulting in you discovering how to make 'tunnels' that go miles below the surface.
 With a protective coating of deepsap, this allows you to transport materials to these depths, in which the extreme pressure will result in a new material almost entirely. This material is by far stronger than anything else available.
 You can now create Biothite, an incredibly strong material that can be used in most structures and creations. Biothite beacons also increase the growing speed, and harvest yield, of nearby plants.</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
 <!--=====LORE ENTRIES=====-->
 
@@ -660,7 +660,7 @@ Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but
 
 <!--=====TERRATHYST T1 CONTENT=====-->
 
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>ET_SoulbloomCultivation</defName>
     <label>Terrathyst Influence: Soulbloom</label>
     <description>Discover how to properly influence Terrathyst crystals to a highly applicable state, known as 'Soulbloom' crystals. 
@@ -680,6 +680,6 @@ Terrathyst is reactive to terrain it's grown in, which directly affects it's col
     <discoveredLetterTitle>Terrathyst Influence Revealed!</discoveredLetterTitle>
     <discoveredLetterText>You have discovered that Terrathyst reacts uniquely to fading life energies. By combining Terrathyst seeds with the ashes of the recently deceased, one can create a Soulbloom growth.
 After properly planting this ashen Terrathyst seed into shallow water, the seed will grow into a small, tree-like crystal cluster. The cluster can then be harvested to reveal the weapon within.</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
 </Defs>

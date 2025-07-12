@@ -7,7 +7,6 @@
     <defName>ET_NamerOrganicUtility</defName>
     <rulePack>
       <rulesFiles>
-        <li>FileET_Adjectives->Words/ET_Adjectives</li>
         <li>FileET_AncientDescriptors->Words/ET_AncientDescriptors</li>
         <li>FileET_AncientNouns->Words/ET_AncientNouns</li>
         <li>FileET_BuiltStructures->Words/ET_BuiltStructures</li>
@@ -26,7 +25,6 @@
         <li>FileET_WeaponNouns->Words/ET_WeaponNouns</li>
       </rulesFiles>
       <rulesStrings>
-        <li>ET_Adjectives->[FileET_Adjectives]</li>
         <li>ET_AncientDescriptors->[FileET_AncientDescriptors]</li>
         <li>ET_AncientNouns->[FileET_AncientNouns]</li>
         <li>ET_BuiltStructures->[FileET_BuiltStructures]</li>
