@@ -43,6 +43,7 @@ The armor organic state allows it to absorb and disperse damage, and filters tox
 			<IncomingDamageFactor>-.1</IncomingDamageFactor>
 			<ToxicResistance>0.1</ToxicResistance>
 			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<tags>
@@ -71,7 +72,7 @@ The armor organic state allows it to absorb and disperse damage, and filters tox
 		<comps>
 			<li Class="CompProperties_InspectString">
 				<inspectString>Prima Genome | Immutable
--10% damage taken | 10% Toxic Resistance | -15% move speed</inspectString>
+-10% damage taken | 10% Toxic Resistance | -15% speed</inspectString>
 			</li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
@@ -106,6 +107,7 @@ The armor organic state allows it to absorb and disperse damage, and filters tox
 			<IncomingDamageFactor>-.05</IncomingDamageFactor>
 			<ToxicResistance>0.1</ToxicResistance>
 			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
 		</equippedStatOffsets>
 		<thingCategories>
 			<li>ApparelArmor</li>

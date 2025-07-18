@@ -129,6 +129,17 @@ The Protosaps are:
             <inputThingDef>ET_PrimaSword</inputThingDef>
             <outputThingDef>ET_PrimaSword</outputThingDef>
           </li>
+        <!--New items-->
+          <li>
+            <fuelCount>30</fuelCount>
+            <inputThingDef>Heart</inputThingDef>
+            <outputThingDef>ET_PrimaHeavyArmor</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>15</fuelCount>
+            <inputThingDef>Skull</inputThingDef>
+            <outputThingDef>ET_PrimaHeavyHelmet</outputThingDef>
+          </li>
         </recipes>
       </li>
     </modExtensions>

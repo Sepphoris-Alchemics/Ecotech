@@ -1,13 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>ET_KeeperMember</defName>
+    <label>terratech keeper</label>
+    <defaultFactionDef>ET_TerratechKeepers</defaultFactionDef>
+    <chemicalAddictionChance>0.06</chemicalAddictionChance>
+    <apparelRequired>
+      <li>ET_PrimaHeavyHelmet</li>
+      <li>ET_PrimaHeavyArmor</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>400~800</apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>0</techHediffsChance>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsDisallowTags>
+      <li>PainCauser</li>
+    </techHediffsDisallowTags>
+    <initialResistanceRange>21~45</initialResistanceRange>
+  </PawnKindDef>
+
   <PawnKindDef Name="ET_SentryBase" Abstract="True">
     <race>Human</race>
     <defaultFactionType>ET_OrganicFaction</defaultFactionType>
     <backstoryCategories>
       <li>TerratechTribal</li>
     </backstoryCategories>
-    <initialWillRange>4~6</initialWillRange>
+    <initialWillRange>21~45</initialWillRange>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <invNutrition>2.55</invNutrition>
     <itemQuality>Normal</itemQuality>

@@ -1057,7 +1057,7 @@ SAP LAUNCHERS
 
 <!--Briar Grenade-->
 
-  <ThingDef ParentName="BaseMakeableGrenade">
+  <!--<ThingDef ParentName="BaseMakeableGrenade">
     <defName>ET_BriarGrenade</defName>
     <label>briar grenades</label>
     <description>Small organic pods that oddly look like fruits. Covered with spines that are linked to one another, upon impact these explode into several large splinters, cutting - and possibly wrapping around - anything nearby.</description>
@@ -1116,6 +1116,6 @@ SAP LAUNCHERS
   <ThingDef ParentName="BaseFragGrenadeProjectile">
     <defName>ET_BriarGrenadeProj</defName>
     <label>briar grenade</label>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>
