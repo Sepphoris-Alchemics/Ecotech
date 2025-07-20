@@ -116,7 +116,7 @@
     <stealable>false</stealable>
     <rotatable>true</rotatable>
     <killedLeavings>
-      <WoodLog>4</WoodLog>
+      <ET_TierTwoPlating>4</ET_TierTwoPlating>
     </killedLeavings>
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
@@ -133,7 +133,7 @@
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>ET_PrimaTurretSeeds</li>
+      <li>ET_PerennialTurretSeeds</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -168,109 +168,37 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>ET_PrimaTurretStake</defaultProjectile>
+        <defaultProjectile>ET_PerennialTurretNeedle</defaultProjectile>
         <warmupTime>8.0</warmupTime>
         <range>25.9</range>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
-        <soundCast>ET_Sound_BlowgunHeavy</soundCast>
+        <soundCast>ET_Sound_Needle1</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>0.5</consumeFuelPerShot>
       </li>
-      <!--<li>
-				<label>PerennialTurretMainShot</label>
-				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
-				<accuracyTouch>0.60</accuracyTouch>
-				<accuracyShort>0.60</accuracyShort>
-				<accuracyMedium>0.60</accuracyMedium>
-				<accuracyLong>0.60</accuracyLong>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
-				<warmupTime>3</warmupTime>
-				<minRange>0</minRange>
-				<range>28.9</range>
-				<soundCast>Shot_Shotgun</soundCast>
-				<muzzleFlashScale>0</muzzleFlashScale>
-				<commonality>.8</commonality>
-        <consumeFuelPerShot>0.5</consumeFuelPerShot>
-			</li>
-      <li>
-        <label>PerennialTurretAltShot</label>
-        <verbClass>Verb_Shoot</verbClass>
-        <commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
-        <accuracyTouch>0.75</accuracyTouch>
-        <accuracyShort>0.75</accuracyShort>
-        <accuracyMedium>0.75</accuracyMedium>
-        <accuracyLong>0.75</accuracyLong>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
-        <warmupTime>3</warmupTime>
-        <burstShotCount>6</burstShotCount>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <minRange>0</minRange>
-        <range>25.9</range>
-        <soundCast>Shot_Shotgun</soundCast>
-        <muzzleFlashScale>0</muzzleFlashScale>
-        <commonality>.2</commonality>
-        <consumeFuelPerShot>1</consumeFuelPerShot>
-      </li>-->
     </verbs>
     <tickerType>Normal</tickerType>
     <comps>
-      <!--<li Class="CompProperties_InspectString">
-        <inspectString>Can alternate projectiles</inspectString>
-      </li>
-      <li Class="MVCF.Comps.CompProperties_VerbProps">
-        <compClass>MVCF.Comps.Comp_VerbProps</compClass>
-        <verbProps>
-          <li>
-            <label>PerennialTurretMainShot</label>
-            <canBeToggled>true</canBeToggled>
-            <separateToggle>false</separateToggle>
-          </li>
-          <li>
-            <label>PerennialTurretAltShot</label>
-            <canBeToggled>true</canBeToggled>
-            <separateToggle>false</separateToggle>
-          </li>
-        </verbProps>
-      </li>
-      <li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li>
-						<label>PerennialTurretAltShot</label>						
-						<visualLabel>stake generation</visualLabel>
-						<description>generate stake projectiles</description>
-						<canBeToggled>true</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-							<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-						  </li>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
-								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-								<cooldownTime>15</cooldownTime>
-							</li>
-            </comps>
-          </li>
-					<li>
-						<label>PerennialTurretMainShot</label>						
-						<visualLabel>terrathorn generation</visualLabel>
-						<description>generate terrathorn projectiles</description>
-						<canBeToggled>true</canBeToggled>
-						<comps>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Turret">
-							<compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
-						  </li>
-							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
-								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-								<cooldownTime>15</cooldownTime>
-							</li>
-            </comps>
-          </li>
-        </verbProps>
-      </li>-->
     </comps>
+  </ThingDef>
+
+<!--Perennial Turret Groveguard shot-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>ET_PerennialTurretNeedle</defName>
+    <label>perennial needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>68</speed>
+    </projectile>
   </ThingDef>
 </Defs>

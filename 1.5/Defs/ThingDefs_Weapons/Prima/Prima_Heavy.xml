@@ -683,7 +683,7 @@ SAP LAUNCHERS
 	</ThingDef>
 
 
-	<!--Hypersap Launcher-->
+	<!--Toxsap Launcher-->
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Toxsap</defName>
 		<label>prima toxsap launcher</label>

@@ -106,7 +106,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <discoveredLetterText>You can now grow a Terraforge, which is your primary method of acquiring and producing most Terratech organic creations. Shape the Terraforge seed at a normal crafting spot, then plant the seed in any desired spot. Once the Terraforge has grown, you can shape any new seeds at it.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>ET_TerrathystEssentials</defName>
     <label>Terrathyst Essentials</label>
     <description>Learn how to properly create and grow Terrathyst; highly specialized seeds that grows crystals, which are then used for a variety of other purposes.
@@ -125,7 +125,7 @@ The process for discovering and making Terrathyst seeds takes slightly longer th
     <researchViewY>4.00</researchViewY>
     <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
     <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. Shape a Terrathyst seed at a normal crafting spot, then plant the seed in any desired spot. There are different 'sizes' of terrathyst seeds that you can craft; the larger the seed, the longer it takes to grow, but the more crystals it'll have for use.</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
 <!--=====PRIMA ARMOR=====-->
 
@@ -454,7 +454,7 @@ Dark mode included!</description>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>ET_MediumTerravats</defName>
     <label>Deeproot Terravats</label>
     <description>Learn how to grow Deeproot Terravats, which are larger, 3x1 terravats. These terravats can process more items at once, and support metasaps.
@@ -470,7 +470,7 @@ Dark mode included!</description>
     <researchViewY>0.80</researchViewY>
     <discoveredLetterTitle>About: Terravats</discoveredLetterTitle>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <!--<ResearchProjectDef>
     <defName>ET_BiosynthVat</defName>
@@ -505,7 +505,7 @@ Dark mode included!</description>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
       <li>ET_GlowsapRefinement</li>
-      <li>ET_MediumTerravats</li>
+      <!--<li>ET_MediumTerravats</li>-->
       <li>ET_TierTwoConduitSeeds</li>
       <li>ET_PrimaTurretSeeds</li>
       <li>ET_PerennialTurretSeeds</li>

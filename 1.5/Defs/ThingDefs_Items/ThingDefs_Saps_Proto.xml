@@ -150,7 +150,7 @@ The Protosaps are:
 
 <!--=====TOXSAP=====-->
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Toxsap</defName>
     <label>Toxsap</label>
     <description>A jar of terrasap containing elements quite poisonous to most living beings. Despite the name, Toxsap does not share the same effect with synthetic tox creations, and instead is more akin to venoms and poisons you would find in animals and insects.
@@ -181,7 +181,7 @@ Can be diluted into multiple long-term salves and other medicinal items.</descri
     <thingCategories>
       <li>ProtosapsAll</li>
     </thingCategories>
-  </ThingDef>
+  </ThingDef>-->
 
 <!--=====SURGESAP=====-->
 

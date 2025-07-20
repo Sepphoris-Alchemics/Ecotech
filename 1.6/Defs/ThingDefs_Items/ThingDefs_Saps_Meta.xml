@@ -69,7 +69,7 @@ Creates Deeproot Terravats</description>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>6</stackLimit>
+    <stackLimit>30</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
@@ -120,9 +120,9 @@ Highly valuable trade commodity with all EcoTech factions
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>6</stackLimit>
+    <stackLimit>30</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <MarketValue>225</MarketValue>
@@ -135,7 +135,7 @@ Highly valuable trade commodity with all EcoTech factions
     </thingCategories>
   </ThingDef>
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Starsap</defName>
     <label>Starsap</label>
     <description>A jar of terrasap that contains stellar energies which are millions of years old. It can only be captured during the night, when the local solar energy isn't overwelming it.
@@ -150,9 +150,9 @@ Highly valuable trade commodity with all EcoTech factions
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>6</stackLimit>
+    <stackLimit>30</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <MarketValue>225</MarketValue>
@@ -163,6 +163,6 @@ Highly valuable trade commodity with all EcoTech factions
     <thingCategories>
       <li>MetasapsAll</li>
     </thingCategories>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>

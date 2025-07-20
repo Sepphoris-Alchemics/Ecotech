@@ -3,14 +3,14 @@
 
   <RecipeDef>
     <defName>ET_GlowsapTreeSeedRecipe</defName>
-    <label>shape channeling seed (glowsap tree) </label>
+    <label>shape glowsap tree seed</label>
     <description>Shape a seed that will quickly grow into a glowsap tree. Glowsap trees periodically produce large amounts of glowsap.</description>
     <jobString>shaping a sap transposer seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
-      <skillRequirements>
-        <Plants>4</Plants>
-      </skillRequirements>
+    <skillRequirements>
+      <Plants>4</Plants>
+    </skillRequirements>
     <researchPrerequisite>ET_SapBasics</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -19,6 +19,28 @@
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
       <ET_Seed_SapFilter>1</ET_Seed_SapFilter>
+    </products>
+    <displayPriority>5</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ET_PerennialTreeSeedRecipe</defName>
+    <label>shape perigrove tree seed</label>
+    <description>Shape a seed that will quickly grow into perigrove tree. Perigrove trees slowly grow pods that produce Perennial weaponry.</description>
+    <jobString>shaping a perigrove tree seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>8</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_PerennialSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>6400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_PerennialTree>1</ET_Seed_PerennialTree>
     </products>
     <displayPriority>4</displayPriority>
   </RecipeDef>
@@ -30,9 +52,9 @@
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
-      <skillRequirements>
-        <Plants>6</Plants>
-      </skillRequirements>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
     <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -52,9 +74,9 @@
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
-      <skillRequirements>
-        <Plants>6</Plants>
-      </skillRequirements>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
     <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
@@ -74,9 +96,9 @@
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
-      <skillRequirements>
-        <Plants>6</Plants>
-      </skillRequirements>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
     <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>

@@ -47,7 +47,7 @@ Weapon HP increased by by 50%</description>
 
   <!--=====Roguesap=====-->
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Roguesap</defName>
     <label>Roguesap</label>
     <description>A jar of roguesap, originating from sources unknown. Very few exist, as it once was one of the "Royal" saps that are from time bygone.
@@ -77,11 +77,11 @@ This seed can be planted and harvested to produce a new roguesap weapon of the s
     <thingCategories>
       <li>RoyalSapsAll</li>
     </thingCategories>
-  </ThingDef>
+  </ThingDef>-->
 
   <!--=====Eldersap=====-->
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Eldersap</defName>
     <label>Eldersap</label>
     <description>A jar of eldersap, originating from sources unknown. Very few exist, as it once was one of the "Royal" saps that are from time bygone.
@@ -111,7 +111,7 @@ Ammo generation per sap is largely dependent on the weapon's max projectiles; bu
     <thingCategories>
       <li>RoyalSapsAll</li>
     </thingCategories>
-  </ThingDef>
+  </ThingDef>-->
 
   <!--=====Chronosap=====-->
 

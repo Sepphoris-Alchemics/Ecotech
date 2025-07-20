@@ -15,8 +15,6 @@ Wilderbark Trees can only grow bark platings.
 \n\nThe tree will produce 2-3 stacks's worth of wood of one of the following, roughly once a year:
 -Primwood Plating
 -Elderwood Plating
--Bloomwood Plating
--Briarwood Plating
 Multiple Wilderbark Trees can exist together, but extensive spacing is required between each one.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -117,10 +115,10 @@ Multiple Wilderbark Trees can exist together, but extensive spacing is required 
 
   <ThingDef ParentName="TreeBase">    <!--todo: add zone growth coding and add building coding-->
     <defName>ET_BuildingTreeTierTwo</defName>
-    <label>Fieldkeeper Tree</label>
-    <description>The Fieldkeeper Tree is the evolution of the Primwood Custodian Tree. It boasts a larger terraforming radius and higher resilience, but also takes longer to grow, and is highly sensitive to terrain. Proper terrain can be created by the Primwood Custodian, effectively enabling Elderwood-type trees in any colony.
+    <label>Grovetender Tree</label>
+    <description>The Grovetender Tree is the evolution of the Primwood Custodian Tree. It boasts a larger terraforming radius and higher resilience, but also takes longer to grow, and is highly sensitive to terrain. Proper terrain can be created by the Primwood Custodian, effectively enabling Elderwood-type trees in any colony.
 Like other Conduit trees, abundant space is required between each one of the same kind. However, it can be placed close to a Custodian tree, and both will work in tandem.
-\nFieldkeeper vs Custodian differences:
+\nGrovetender vs Custodian differences:
 Terraforming radius: 5 (Custodian: 3)
 Terraforming speed: 2 tiles/day (Custodian: 1)
 Fertility requirement: 80% (Custodian: 5%)
@@ -213,6 +211,90 @@ Growing time: 4 full days (Custodian: 2)</description>
             <changedInto>ET_SapTerrainTierOne</changedInto>
           </li>
         </Terraforms>
+      </li>
+    </comps>
+    <specialDisplayRadius>67.9</specialDisplayRadius>
+  </ThingDef>
+
+  <!--=====BIOSYNTH TREE=====-->
+
+  <ThingDef ParentName="TreeBase">    <!--todo: add zone growth coding and add building coding-->
+    <defName>ET_BiosynthTree</defName>
+    <label>Biosynth tree sprout</label>
+    <description>A giant tree meant to mimic and replicate the processes of Terravats to extremely precise degrees. The biosynth vat is required for the manipulation or editing of anything that posesses complex genetic makeup, such as body parts, creatures, and even humanoids.
+\n\nWhile a terravat's contents can be freely modified, a biosynth tree will only use the required resources when the operation is called, and the items are used immediately.
+\nA biosynth tree supplies itself with sap, and thus this does not need to be manually replenished, like terravats.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Plant/ConduitTrees/ElderwoodCustodianTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <canScatterOver>false</canScatterOver>
+    <descriptionHyperlinks>
+      <ThingDef>ET_TierTwoPlating</ThingDef>
+    </descriptionHyperlinks>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>21</Beauty>
+      <BeautyOutdoors>21</BeautyOutdoors>
+      <Flammability>2</Flammability>
+      <MaxHitPoints>450</MaxHitPoints>
+    </statBases>
+    <killedLeavings>
+      <ET_Brightsap>20</ET_Brightsap>
+      <ET_TierTwoPlating>30</ET_TierTwoPlating>
+    </killedLeavings>
+    <ingestible />
+    <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
+    <plant>
+      <growDays>2</growDays>
+      <visualSizeRange>2~2.6</visualSizeRange>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <sowWork>400</sowWork>
+      <!--<harvestTag>Standard</harvestTag>
+      <harvestYield>30</harvestYield>
+			<harvestedThingDef>ET_Glowsap</harvestedThingDef>
+			<harvestFailable>false</harvestFailable>
+			<harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestMinGrowth>0.9</harvestMinGrowth>-->
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <!--<sowResearchPrerequisites>
+        <li>ET_SapBasics</li>
+      </sowResearchPrerequisites>-->
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>

@@ -194,7 +194,7 @@ Max lifespan decreased by 20% (rounded down)</description>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>6</stackLimit>
+    <stackLimit>30</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>

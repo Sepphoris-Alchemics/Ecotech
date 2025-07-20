@@ -102,7 +102,7 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="PlantBase">
+  <!--<ThingDef ParentName="PlantBase">
     <defName>ET_Dreamflower</defName>
     <label>dreamflower</label>
     <description>A plant valued amongst Terratech tribes. While not doing much on it's own, Dreamflowers can be easily be burnt to ash upon harvest; the ash can then be inhaled, allowing a pawn to full more wakeful and alert.
@@ -144,6 +144,6 @@ Dreamflowers take a decent amount of time to fully harvest; burning them while t
       <foodType>Plant</foodType>
       <preferability>RawBad</preferability>
     </ingestible>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>

@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!--Vivicore-->
+
+<!--Stage 1: standard: royal weapon, very pretty, makes owner happy, low damage
+Stage 2: weapon has higher luster, making it sell for more, and having a higher social impact
+Stage 3: projectiles have a faster projectile speed, and they slow anything they hit
+Stage 4: grants new beam-like attack
+-->
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_HybridRoyalRifleOne</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
+		<label>vivicore rifle</label>
+		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
+\nThe damage potential of this weapon is relatively low, only on par with some prima weapons. It is best appreciated as a work of art, or a sign of status. It is comparable to a sword made of solid gold: quite valuable and technically functional, but vastly inferior to other swords for it's intended purpose.
+\n\nDue to it's hybrid nature, this weapon has both organic and lithoid traits. Specifically, this rifle will only react to specific saps - shocksap and starsap - and undergo dramatic alterations. It can also be rejuvinated with sunsap, though it requires a considerable amount more than other weapons.
+\nThese dramatic alterations also tap into it's lithoid traits, as they will also 'charge' the weapon to it's stronger states.
+\n\nThe vivicore rifle requires 15 shocksap to successfully charge into it's second state.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+			<li>HybridWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0.1</relicChance>
+		<statBases>
+			<Beauty>12</Beauty>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.50</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.4</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+			<MarketValue>2200</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WeakCrystalRifle</defaultProjectile>
+				<warmupTime>2.125</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>21</ticksBetweenBurstShots>
+				<range>21.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+      <!--<li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>ET_NightshadeExplosion</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>pneumatic sac</chargeNoun>
+        <ammoDef>ET_Brightsap</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>90</baseReloadTicks>
+      </li>-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Stage 1 of 4
+Royal Weapon | ??? | ??? | ???</inspectString>
+      </li>
+		</comps>
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+      <li>Artifact</li>
+    </tradeTags>
+	</ThingDef>
+
+<!--Tier 2: Utility improvement-->
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_HybridRoyalRifleTwo</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
+		<label>vivicore rifle</label>
+		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
+\nThe damage potential of this weapon is relatively low, only on par with some prima weapons. It is best appreciated as a work of art, or a sign of status. It is comparable to a sword made of solid gold: quite valuable and technically functional, but vastly inferior to other swords for it's intended purpose.
+\n\nDue to it's hybrid nature, this weapon has both organic and lithoid traits. Specifically, this rifle will only react to specific saps - shocksap and starsap - and undergo dramatic alterations. It can also be rejuvinated with sunsap, though it requires a considerable amount more than other weapons.
+\nThe latest charge has dramatically increased it's luster and desirability, making it an incredibly awe-inspiring and beautiful weapon to behold. The holder not only has a mood bonus, but can also easily impress anyone merely by association.
+\n\nThe vivicore rifle requires 30 shocksap to successfully charge into it's third state.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+			<li>HybridWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<statBases>
+			<Beauty>18</Beauty>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.50</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.4</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+			<MarketValue>2200</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WeakCrystalRifle</defaultProjectile>
+				<warmupTime>2.125</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>21</ticksBetweenBurstShots>
+				<range>21.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+      <!--<li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>ET_NightshadeExplosion</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>pneumatic sac</chargeNoun>
+        <ammoDef>ET_Brightsap</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>90</baseReloadTicks>
+      </li>-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Stage 2 of 4
+Royal Weapon | +20% social impact | ??? | ???</inspectString>
+      </li>
+		</comps>
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+      <li>Artifact</li>
+    </tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_HybridRoyalRifleThree</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
+		<label>vivicore rifle</label>
+		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
+\nThe damage potential of this weapon is relatively low, only on par with some prima weapons. It is best appreciated as a work of art, or a sign of status. It is comparable to a sword made of solid gold: quite valuable and technically functional, but vastly inferior to other swords for it's intended purpose.
+\n\nDue to it's hybrid nature, this weapon has both organic and lithoid traits. Specifically, this rifle will only react to specific saps - shocksap and starsap - and undergo dramatic alterations. It can also be rejuvinated with sunsap, though it requires a considerable amount more than other weapons.
+\nThe latest charge has enabled it's projectiles to be highly refractive, scattering light in every direction as they fly. This makes every shot a miniature flashbang, causing targets to be become disoriented - and potentially even stunned - as projectiles hit them, even if it bounces of shatters off armor.
+\n\nThe vivicore rifle requires 15 starsap to successfully charge into it's fourth - and final - state.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+			<li>HybridWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<statBases>
+			<Beauty>18</Beauty>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.55</AccuracyShort>
+			<AccuracyMedium>0.45</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.4</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+			<MarketValue>2200</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WeakCrystalRifle</defaultProjectile>
+				<warmupTime>2.125</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>21</ticksBetweenBurstShots>
+				<range>21.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+      <!--<li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>ET_NightshadeExplosion</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>pneumatic sac</chargeNoun>
+        <ammoDef>ET_Brightsap</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>90</baseReloadTicks>
+      </li>-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Stage 3 of 4
+Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
+      </li>
+		</comps>
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+      <li>Artifact</li>
+    </tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_HybridRoyalRifleFour</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
+		<label>vivicore prime</label>
+		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
+\nThe damage potential of this weapon is relatively low, only on par with some prima weapons. It is best appreciated as a work of art, or a sign of status. It is comparable to a sword made of solid gold: quite valuable and technically functional, but vastly inferior to other swords for it's intended purpose.
+\n\nDue to it's hybrid nature, this weapon has both organic and lithoid traits. Specifically, this rifle will only react to specific saps - shocksap and starsap - and undergo dramatic alterations. It can also be rejuvinated with sunsap, though it requires a considerable amount more than other weapons.
+\nThe latest charge has given it the powerful ability to flash an accurate, intense beam of light directly ahead of it, instantly blinding - or heavily visually impairing - anything caught in it. While this beam doesn't do any damage, the flash will generally down anything caught in the blast, allowing the wielder to make a quick escape.
+\n\nThis is the final state of the vivicore rifle. It can no longer be charged.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+			<li>HybridWeapons</li>
+			<li>FullyChargedWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<statBases>
+			<Beauty>18</Beauty>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.55</AccuracyShort>
+			<AccuracyMedium>0.45</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.4</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+			<MarketValue>2200</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WeakCrystalRifle</defaultProjectile>
+				<warmupTime>2.125</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>21</ticksBetweenBurstShots>
+				<range>21.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+			<li>
+				<label>VivicoreBeamShot</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.85</accuracyMedium>
+				<accuracyLong>0.75</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>29.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>VivicoreBeamShot</label>
+						<visualLabel>Radiance Beam</visualLabel>
+						<description>Fire a quick beam that generally blinds, or severaly impairs, the vision of anything caught in it.</description>
+						<canBeToggled>false</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+								<cooldownTime>360</cooldownTime>								<!--Time in seconds-->
+							</li>
+						</comps>
+					</li>
+					<!--<li>
+						<label>PrimaShotgunBasicAttack</label>
+						<visualLabel>thorn clusters</visualLabel>
+						<description>Fires clusters of tiny thorns.</description>
+						<canBeToggled>false</canBeToggled>
+					</li>-->
+				</verbProps>
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Fully charged
+Royal Weapon | +20% social impact | Slows/stuns targets | Secondary Beam Attack</inspectString>
+      </li>
+		</comps>
+		<tradeability>Sellable</tradeability>
+		<tradeTags>
+			<li>ExoticMisc</li>
+      <li>Artifact</li>
+    </tradeTags>
+	</ThingDef>
+</Defs>
