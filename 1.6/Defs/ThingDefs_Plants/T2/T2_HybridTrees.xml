@@ -21,7 +21,7 @@ The Vivicore tree can also produce a special weapon when enough time has passed,
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
-      <ThingDef>ET_HybridRoyalRifle</ThingDef>
+      <ThingDef>ET_HybridRoyalRifleOne</ThingDef>
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -46,18 +46,18 @@ The Vivicore tree can also produce a special weapon when enough time has passed,
       <fertilityMin>0.8</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
       <wildClusterWeight>0</wildClusterWeight>
-      <topWindExposure>0.1</topWindExposure>
-      <harvestYield>0</harvestYield>
+      <topWindExposure>0.05</topWindExposure>
       <mustBeWildToSow>true</mustBeWildToSow>
       <sowWork>400</sowWork>
       <harvestTag>Standard</harvestTag>
-      <harvestYield>1</harvestYield>
-			<harvestedThingDef>ET_HybridRoyalRifle</harvestedThingDef>
-			<harvestFailable>false</harvestFailable>
-			<harvestAfterGrowth>0</harvestAfterGrowth>
-      <harvestMinGrowth>1</harvestMinGrowth>
+      <harvestYield>0.5</harvestYield>
+      <harvestedThingDef>ET_HybridRoyalRifleOne</harvestedThingDef>
+      <harvestFailable>false</harvestFailable>
+      <harvestAfterGrowth>0</harvestAfterGrowth>
+      <harvestMinGrowth>0.99</harvestMinGrowth>
       <neverBlightable>true</neverBlightable>
       <treeCategory>Super</treeCategory>
+      <treeLoversCareIfChopped>true</treeLoversCareIfChopped>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
@@ -75,6 +75,14 @@ The Vivicore tree can also produce a special weapon when enough time has passed,
       <purpose>Misc</purpose>
     </plant>
     <comps>
+      <li Class="CompProperties_GiveThoughtToAllMapPawnsOnDestroy">
+        <thought>ET_VivicoreTreeDestroyed</thought>
+        <message>A vivicore tree has been destroyed.</message>
+      </li>
+      <li Class="CompProperties_PlaySoundOnDestroy">
+        <sound>ET_CrystalShatter</sound>
+      </li>
+      <li Class="CompProperties_ToggleDrawAffectedMeditationFoci" />
       <li Class="CompProperties_Glower">
         <glowRadius>7</glowRadius>
         <glowColor>(248,242,153,0)</glowColor>
@@ -82,6 +90,7 @@ The Vivicore tree can also produce a special weapon when enough time has passed,
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
+      <li Class="CompProperties_PlantPreventCutting"/>
     </comps>
     <specialDisplayRadius>11.9</specialDisplayRadius>
   </ThingDef>

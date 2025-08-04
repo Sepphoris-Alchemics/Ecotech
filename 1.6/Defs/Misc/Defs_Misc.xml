@@ -92,6 +92,41 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
+  <SoundDef>
+    <defName>ET_CrystalShatter</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Lithoid/Shatter</clipFolderPath>
+          </li>
+        </grains>
+        <onCamera>True</onCamera>
+        <volumeRange>50</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <canVacuumDampen>false</canVacuumDampen>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <ThoughtDef>
+    <defName>ET_VivicoreTreeDestroyed</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>shattered vivicore tree</label>
+        <description>A vivicore tree was destroyed. A terrible shame to lose such a unique specimen....</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
   <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_MuseumDisplayBase">
     <label>Display Case</label>
     <thingClass>Building</thingClass>
