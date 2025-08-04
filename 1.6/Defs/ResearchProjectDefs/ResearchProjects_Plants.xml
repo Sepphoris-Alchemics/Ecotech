@@ -475,7 +475,7 @@ Dark mode included!</description>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
   </ResearchProjectDef>-->
 
-  <!--<ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>ET_BiosynthVat</defName>
     <label>Biosynthesis Chamber</label>
     <description>Learn how to create a terravat that specializes in utilizing and transforming flesh, organs, and other bodily parts. Notably, this vat is used for armor.
@@ -494,7 +494,7 @@ Dark mode included!</description>
     <discoveredLetterText>Biosynthesis Chambers - often shortened to Biosynth Chambers - are special vats that serves as a direct, usable connection to the planet, allowing a faction to fully - and personally - embrace Terratech, often to a very permanent degree. Most armor sets will be created in these vats by using a fresh body, deepsap, and a bit of their respective material(s).
 \nThe potential of this chamber is vast - it was known to create the rarest of saps, transfer sentience to giant plants, and was even capable of transforming beings into an ascended state. However, at the moment, only one set of (powerful) armor has been made attainable knowledge.
 \nYou can check the description of the Biosynth Vat to see the current possible combinations.</discoveredLetterText>
-  </ResearchProjectDef>-->
+  </ResearchProjectDef>
 
 <!--=====MASTERY TECH=====-->
 

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>ET_RadianceWound</defName>
+    <label>flash burn</label>
+    <labelNoun>a burn caused by intense, sudden heat</labelNoun>
+    <description>A flash burn.</description>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>old flash burn</permanentLabel>
+        <instantlyPermanentLabel>deep flash burn</instantlyPermanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>flash burnt</destroyedLabel>
+      <destroyedOutLabel>flash-burned off</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ET_RadianceBuildup</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1, 1, 0.9)</defaultLabelColor>
+    <label>radiant flash</label>
+    <initialSeverity>0.3</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <tendable>false</tendable>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Blindness and disorientation caused by a source of sudden, intense light.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-5</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>dim vision</label>
+        <minSeverity>.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>disoriented</label>
+        <minSeverity>.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>blinded</label>
+        <minSeverity>.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.8</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>blinded</label>
+        <minSeverity>.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

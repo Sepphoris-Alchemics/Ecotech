@@ -89,7 +89,7 @@ Stage 4: grants new beam-like attack
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -137,6 +137,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 		<weaponClasses>
 			<li>Ranged</li>
 		</weaponClasses>
+		<relicChance>0</relicChance>
 		<statBases>
 			<Beauty>18</Beauty>
 			<MaxHitPoints>70</MaxHitPoints>
@@ -194,7 +195,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -240,6 +241,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 		<weaponClasses>
 			<li>Ranged</li>
 		</weaponClasses>
+		<relicChance>0</relicChance>
 		<statBases>
 			<Beauty>18</Beauty>
 			<MaxHitPoints>70</MaxHitPoints>
@@ -297,7 +299,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -344,6 +346,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 		<weaponClasses>
 			<li>Ranged</li>
 		</weaponClasses>
+		<relicChance>0</relicChance>
 		<statBases>
 			<Beauty>18</Beauty>
 			<MaxHitPoints>70</MaxHitPoints>
@@ -375,16 +378,40 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 			</li>
 			<li>
 				<label>VivicoreBeamShot</label>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>Verb_ShootBeam</verbClass>
 				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<hasStandardCommand>true</hasStandardCommand>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.85</accuracyMedium>
 				<accuracyLong>0.75</accuracyLong>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
+				<beamFullWidthRange>1.9</beamFullWidthRange>
+				<beamDamageDef>ET_VivicoreBeam</beamDamageDef>
+        <burstShotCount>30</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <beamWidth>0.1</beamWidth>
+				<soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>0</beamMaxDeviation> <!--the extra width the beam can have-->
+        <beamCurvature>0</beamCurvature>
+        <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+        <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+        <beamChanceToStartFire>0</beamChanceToStartFire>
+        <beamChanceToAttachFire>0</beamChanceToAttachFire>
+        <beamFireSizeRange>0</beamFireSizeRange>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamStartOffset>0.8</beamStartOffset>
+				<beamHitsNeighborCells>true</beamHitsNeighborCells>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+				<!--<defaultProjectile>Bullet_ThornShotgun</defaultProjectile>-->
 				<warmupTime>1.125</warmupTime>
-				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
 				<minRange>0</minRange>
 				<range>29.9</range>
@@ -420,7 +447,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>

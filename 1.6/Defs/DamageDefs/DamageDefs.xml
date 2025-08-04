@@ -208,5 +208,35 @@
         <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
       </li>
     </additionalHediffs>
-  </DamageDef>  
+  </DamageDef> 
+
+<!--Vivicore Beam-->
+
+  <DamageDef>
+    <defName>ET_VivicoreBeam</defName>
+    <label>radiance beam</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been flash fried.</deathMessage>
+    <hediff>ET_RadianceWound</hediff>
+		<additionalHediffs>
+			<li>
+				<hediff>ET_RadianceBuildup</hediff>
+				<severityPerDamageDealt>0.028</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <isRanged>true</isRanged>
+    <makesBlood>false</makesBlood>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <defaultDamage>2</defaultDamage>
+    <defaultArmorPenetration>0.7</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>0.2</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>0.1</buildingDamageFactorPassable>
+  </DamageDef>
+
+
 </Defs>
