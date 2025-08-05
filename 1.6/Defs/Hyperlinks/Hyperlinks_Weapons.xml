@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_HybridRoyalRifleRecipeHyperlink</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
+		<label>Recipe: vivicore rifle</label>
+		<description>The vivicore rifle is a hybrid-class weapon, created from the rare Vivicore tree. This weapon is inferior at combat, but is incredibly valuable and highly prestigious. To create it, you will need:
+\nx12 BRIGHTSAP to form and sustain the Bloomwood exterior.
+x6 SHOCKSAP to awaken it's offensive capabilities.
+x2 YEARS must pass for the weapon to fully form within the vivicore tree.
+x30 SHOCKSAP for the weapon to reach it's full potential after creation (if desired).
+
+\nThe items must be near the vivicore tree, but the process is manually started. Having the required saps on the ground, or in a storage medium, with both work.
+\nThe process takes two years, one of the longest for any terraweapon. The process does not require any sort of upkeep; however, if the tree is destroyed, then the vivicore rifle being awakened is also destroyed.
+\nThe vivicore rifle only requires x20 more shocksap to be evolved further. It is entirely usable in it's first stage.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>TerraweaponsNonObtainable</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<statBases>
+			<Beauty>12</Beauty>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.50</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.4</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+			<MarketValue>2200</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WeakCrystalRifle</defaultProjectile>
+				<warmupTime>2.125</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>21</ticksBetweenBurstShots>
+				<range>21.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+      <!--<li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>ET_NightshadeExplosion</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>pneumatic sac</chargeNoun>
+        <ammoDef>ET_Brightsap</ammoDef>
+        <ammoCountPerCharge>1</ammoCountPerCharge>
+        <baseReloadTicks>90</baseReloadTicks>
+      </li>-->
+    <li Class="CompProperties_InspectString">
+      <inspectString>This is a descriptor weapon.
+You shouldn't have this!</inspectString>
+      </li>
+		</comps>
+		<tradeability>None</tradeability>
+	</ThingDef>
+</Defs>

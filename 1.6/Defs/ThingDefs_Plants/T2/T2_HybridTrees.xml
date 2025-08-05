@@ -21,7 +21,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
-      <ThingDef>ET_HybridRoyalRifleOne</ThingDef>
+      <ThingDef>ET_HybridRoyalRifleRecipeHyperlink</ThingDef>
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -96,6 +96,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
         <recipeSet>
           <li>
             <label>awaken vivicore rifle</label>
+            <description>Requires x6 Brightsap | Duration: 2 years</description>
             <duration>7200000</duration>            <!--2 years-->
             <resultDef>ET_HybridRoyalRifleOne</resultDef>
             <amount>1</amount>
@@ -103,6 +104,23 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
               <li>
                 <thingDef>ET_Brightsap</thingDef>
                 <amount>12</amount>
+              </li>
+              <!--<li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>6</amount>
+              </li>-->
+            </ingredientSets>
+          </li>
+          <li>
+            <label>vivify terrathyst</label>
+            <description>Requires x2 Surgesap | Duration: 30 days</description>
+            <duration>1800000</duration>            <!--Two quadrums-->
+            <resultDef>ET_TierOneCrystal</resultDef>
+            <amount>60</amount> <!--2 terrathyst a day, should be inefficient-->
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Surgesap</thingDef>
+                <amount>2</amount>
               </li>
               <!--<li>
                 <thingDef>ET_Shocksap</thingDef>
@@ -139,7 +157,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
         </offsets>
       </li>
       <li Class="CompProperties_InspectString">
-        <inspectString>Check Information for all recipes</inspectString>
+        <inspectString>Check Information for detailed recipe info</inspectString>
       </li>
     </comps>
     <specialDisplayRadius>10.9</specialDisplayRadius>

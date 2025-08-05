@@ -187,4 +187,5 @@ This also develops the weapon's protective traits, causing more wood to form, ex
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
     </plant>
   </ThingDef>
+
 </Defs>

@@ -90,13 +90,14 @@
         <recipeSet>
           <li>
             <label>breed terraplate armor</label>
+            <description>Requires x10 Brightsap/x1 Meldsap/x20 Terramass | Duration: 15 days</description>
             <duration>3000</duration>
             <resultDef>ET_PrimaHeavyArmor</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
                 <thingDef>ET_Brightsap</thingDef>
-                <amount>3</amount>
+                <amount>20</amount>
               </li>
             </ingredientSets>
           </li>
