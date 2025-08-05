@@ -82,6 +82,9 @@
     <uiIconPathsStuff Inherit="False"/>
     <stuffCategories Inherit="False"/>
     <costStuffCount>0</costStuffCount>
+    <killedLeavings>
+      <ET_TerramassMaterial>6</ET_TerramassMaterial>
+    </killedLeavings>
     <building>
       <isStuffableAirtight>false</isStuffableAirtight>
       <blueprintGraphicData>

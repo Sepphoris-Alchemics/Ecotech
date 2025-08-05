@@ -9,6 +9,7 @@
     <graphicData>
       <texPath>Things/Plant/PlantWall</texPath>
       <graphicClass>Graphic_Random</graphicClass>
+      <color>(68,74,49)</color>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <minifiedDef IsNull="True" />
