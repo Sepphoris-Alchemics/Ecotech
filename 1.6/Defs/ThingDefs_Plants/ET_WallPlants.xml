@@ -3,9 +3,9 @@
 
 
   <ThingDef ParentName="PlantBaseNonEdible">
-    <defName>ET_PrimwoodWallPlant</defName>
-    <label>primwood wall growth</label>
-    <description>An organic clump that will grow into an Primwood Wall. Takes roughly a day to fully grow; however, the Custodian needs to "plant" the wall first.</description>
+    <defName>ET_TerramassWallPlant</defName>
+    <label>terramass wall growth</label>
+    <description>An organic clump that will grow into a Terramass Wall. It's quite weak, with it's only saving grace being it's infinite renewability and fast growth time.</description>
     <graphicData>
       <texPath>Things/Plant/PlantWall</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -30,9 +30,9 @@
       <harvestAfterGrowth>0.05</harvestAfterGrowth>
       <harvestTag>Standard</harvestTag>
       <allowAutoCut>false</allowAutoCut>
-      <sowWork>1000</sowWork>
+      <sowWork>200</sowWork>
       <sowTags>
-        <li>ET_PrimwoodGrowSpot</li>
+        <li>Ground</li>
       </sowTags>
       <sowMinSkill>2</sowMinSkill>
       <sowResearchPrerequisites>
@@ -50,7 +50,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_PrimwoodWall</transformedThing>
+        <transformedThing>ET_TerramassWall</transformedThing>
       </li>
     </comps>
   </ThingDef>

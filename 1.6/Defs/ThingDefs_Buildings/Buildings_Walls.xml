@@ -19,7 +19,7 @@
     There shouldn't be a case when the forge is truly lost, as the seed will be indestructable and not worth anything.
     -->
 
-  <!--Deepsap Vault
+<!--Deepsap Vault
     The Deepsap Vault is the player's "oh crap" structure when they royally make a mistake, or a structure essential for progression is lost (i.e. the terraforge).
     This vault allows the player to grow new seeds for these structures. However, the cost for doing so is extremely demanding.
     The Deepsap Vault doesn't just require sap. It may start destroying the land, angering creatures, and causing aftereffects that can span years.
@@ -32,39 +32,73 @@
 
 <Defs>
 
-    <ThingDef ParentName="Wall">
+  <!--<ThingDef Name="ET_TerramassWall" ParentName="Wall">
     <defName>ET_TerramassWall</defName>
-    <label>Terramass Wall</label>
-    <description>A special wall molded from Terramass. Infinitely renewable and one of the only Terratech walls that can be crafted by hand, but extremely flammable and weak. It also does not interfere with nature medication.</description>
+    <label>terramass wall</label>
+    <description>A special wall molded from Terramass. Infinitely renewable and one of the only Terratech walls that can be crafted by hand, but extremely flammable and weak.</description>
+    <uiIconPath>Things/Building/Walls/PlantWall/PlantWall_MenuIcon</uiIconPath>
+    <designationCategory IsNull="True"/>
     <graphicData>
       <texPath>Things/Building/Walls/PlantWall/PlantWall_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>	
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(68,74,49)</color>
+    </graphicData>
+    <building>
+      <paintable>false</paintable>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isAirtight>false</isAirtight>
+    </building>
+    <stuffCategories Inherit="False"/>
+    <costStuffCount>0</costStuffCount>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>3</Flammability>
+      <MeditationFocusStrength>0</MeditationFocusStrength>
+    </statBases>
+    <comps Inherit="False"/>
+  </ThingDef>-->
+
+  <ThingDef ParentName="Wall" Name="ET_TerramassWall">
+    <defName>ET_TerramassWall</defName>
+    <label>terramass wall</label>
+    <description>A special wall molded from Terramass. Infinitely renewable and one of the only Terratech walls that can be crafted by hand, but extremely flammable and weak.</description>
+    <designationCategory IsNull="True"/>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <statBases>
+      <MaxHitPoints>205</MaxHitPoints>
+      <Flammability>3</Flammability>
+      <MeditationFocusStrength>0</MeditationFocusStrength>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Walls/PlantWall/PlantWall_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <color>(68,74,49)</color>
     </graphicData>
     <uiIconPath>Things/Building/Walls/PlantWall/PlantWall_MenuIcon</uiIconPath>
-    <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>300</WorkToBuild>
-      <Flammability>3</Flammability>
-      <Beauty>0</Beauty>
-    </statBases>
-    <damageMultipliers>
-      <li>
-        <damageDef>Cut</damageDef>
-        <multiplier>2</multiplier>
-      </li>
-    </damageMultipliers>
-    <costList>
-	    <ET_TerramassMaterial>10</ET_TerramassMaterial>
-    </costList>
-    <tickerType>Normal</tickerType>
+    <uiIconPathsStuff Inherit="False"/>
+    <stuffCategories Inherit="False"/>
     <costStuffCount>0</costStuffCount>
-    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
-    <stuffCategories Inherit="false"/>
     <building>
-      <repairable>false</repairable>
+      <isStuffableAirtight>false</isStuffableAirtight>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Walls/PlantWall/PlantWall_Atlas</texPath>
+      </blueprintGraphicData>
+      <relatedBuildCommands Inherit="False">
+        <li>Door</li>
+        <li>OrnateDoor</li>
+      </relatedBuildCommands>
+      <paintable>false</paintable>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isAirtight>false</isAirtight>
     </building>
-    <designationCategory>EcotechDesignation</designationCategory>
+    <comps Inherit="False"/>
   </ThingDef>
 
 </Defs>
