@@ -21,7 +21,7 @@ Stage 4: grants new beam-like attack
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
@@ -127,7 +127,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
@@ -231,7 +231,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
@@ -335,7 +335,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/VivicoreRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>

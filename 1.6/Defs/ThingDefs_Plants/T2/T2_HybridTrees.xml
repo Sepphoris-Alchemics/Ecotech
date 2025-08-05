@@ -9,7 +9,7 @@
     <description>A spectacle to behold, the Vivicore Tree is a tree with an ashen wood on the outside, but with a pink-orange crystal core filling the inside. It is quite a rare site, but one of the only 'hybrid'-class Terraplants that can naturally grow; therefore, it is often one of the earliest spotted - and utilized - hybrid plants used.
 The Vivicore Tree is an incredible and rare sight. It can be cut down, but once this happens, it may be months - or years - until another one is spotted. Not to mention most will highly disapprove of the action.
 \nRather, it is recommended to use the Vivicore Tree as a centerpeice for a grove or a meditation spot, as it's unique and prstine appearance serve both of these purposes quite well.
-The Vivicore tree can also produce a special weapon when enough time has passed, but this process take a couple years; additionally, there is little way to tell if the weapon is fully formed....</description>
+The Vivicore tree can also produce a special weapon with proper care, but this process take a couple years; additionally, this weapon isn't exactly designed for battle....</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Plant/HybridTrees/VivicoreTree</texPath>
@@ -91,7 +91,38 @@ The Vivicore tree can also produce a special weapon when enough time has passed,
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
       <li Class="CompProperties_PlantPreventCutting"/>
+      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
+        <isAssemblingPawn>false</isAssemblingPawn>
+        <uiIconChooseRecipe>Things/Building/powernode_researchlink</uiIconChooseRecipe>
+        <uiIconStartProcess>Things/Building/powernode_researchlink</uiIconStartProcess>
+        <useConnectedFacility>false</useConnectedFacility>
+        <useZone>false</useZone>
+        <radius>11</radius>
+        <effectWorking>Smith</effectWorking>
+        <recipeSet>
+          <li>
+            <label>awaken vivicore rifle</label>
+            <duration>7200000</duration> <!--2 years-->
+            <resultDef>ET_HybridRoyalRifleOne</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Brightsap</thingDef>
+                <amount>12</amount>
+              </li>
+              <!--<li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>6</amount>
+              </li>-->
+            </ingredientSets>
+          </li>
+        </recipeSet>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Check Information for all recipes</inspectString>
+      </li>
     </comps>
-    <specialDisplayRadius>11.9</specialDisplayRadius>
+    <specialDisplayRadius>10.9</specialDisplayRadius>
   </ThingDef>
+
 </Defs>

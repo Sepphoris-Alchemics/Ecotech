@@ -194,4 +194,61 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 
+<!-- ================ Terrathyst ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TierOneCrystal</defName>
+        <label>Terrathyst Fragments</label>
+        <description>tiny, broken shards of crystal that was once part of a lithoid-class structure or item. While not very useful on it's own, these shards can be used in other, or reconstructed into, other lithoid items. It can be used as a building/crafting material, but terrathyst requires special techniques to properly use.
+\n\nTerrathyst has quite unique properties; it is a transparent material, but it's high refraction makes it appear multi-colored. Additionally it's hardness and durability is dictated by how concentrated it is; the more terrathyst that melds together, the stronger the formation. This makes terrathyst a universally viable material... as long as one can access it.</description>
+        <graphicData>
+            <texPath>Things/Resource/Terrathyst/Fragments</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.4</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>750</stackLimit>
+        <smallVolume>true</smallVolume>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>0.8</MarketValue>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>0.45</Mass>
+            <SharpDamageMultiplier>0.4</SharpDamageMultiplier>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>0.25</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>terrathyst</stuffAdjective>
+            <categories>
+                <li>Stony</li>
+            </categories>
+            <color>(85,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <appearance>Metal</appearance>
+            <statFactors>
+                <MaxHitPoints>0.6</MaxHitPoints>
+                <Flammability>0.25</Flammability>
+                <WorkToMake>1.6</WorkToMake>
+                <WorkToBuild>1.6</WorkToBuild>
+                <DoorOpenSpeed>1.4</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
 </Defs>
