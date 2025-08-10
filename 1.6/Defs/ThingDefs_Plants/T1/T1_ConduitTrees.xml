@@ -540,7 +540,7 @@ The process always breaks materials down to their most fundamental components, a
       <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
         <isAssemblingPawn>false</isAssemblingPawn>
         <uiIconChooseRecipe>Things/Building/powernode_researchlink</uiIconChooseRecipe>
-        <uiIconStartProcess>Things/Building/powernode_researchlink</uiIconStartProcess>
+        <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
         <useConnectedFacility>false</useConnectedFacility>
         <useZone>false</useZone>
         <radius>10</radius>

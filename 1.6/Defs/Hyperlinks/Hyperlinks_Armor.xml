@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="PlantApparelBase">
+		<defName>ET_PrimaHeavyArmorRecipeHyperlink</defName>
+		<label>terraplate armor recipe</label>
+		<techLevel>Neolithic</techLevel>
+		<description>Terraplate armor is an organic armor, able to easily form around any pawn. Due to the precision needed, it is created within a biosynth vat. The protection is quite decent, with a full comfortably competing with flak armor. It requires a terraplate helmet to be fully effective, which is it's own process.
+The armor (helmet excluded) requires the following materials to fully breed:
+\nx10 BRIGHTSAP, to provide enough nutrients for it to grow and live for a decent amount of time.
+x5 ENDOSAP, to reinforce the armor's resistance to damage source.
+x20 TERRAMASS, to form the armor itself.
+x10 DAYS for the armor to fully form.
+\nTerraplate's filtration system, alongside it being sealed, allows it to withstand environmental effects and temperature to a limited degree. This includes filtering toxins, rotlung, and even the vacuum of space. Not these resistances aren't only resistances, and not immunities.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Terraplate/TerraplateArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<Mass>4.8</Mass>
+			<MaxHitPoints>205</MaxHitPoints>			<!--Durability is 60% of base, rounded up to nearest 5th)-->
+			<MarketValue>200</MarketValue>
+			<Flammability>1.25</Flammability>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>20</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<IncomingDamageFactor>-.1</IncomingDamageFactor>
+			<ToxicResistance>0.1</ToxicResistance>
+			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+		</equippedStatOffsets>
+		<apparel>
+			<tags>
+				<li>HyperLinkOnly</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/Terraplate/TerraplateArmor</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Feet</li>
+				<li>Waist</li>
+			</bodyPartGroups>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>You shouldn't be seeing this</inspectString>
+			</li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>162</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+        </li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="PlantApparelBase">
+		<defName>ET_PrimaHeavyHelmetRecipeHyperlink</defName>
+		<label>terraplate helmet recipe</label>
+		<techLevel>Neolithic</techLevel>
+		<description>Terraplate helmets is an organic helmet, able to easily form around any pawn. Due to the precision needed, it is created within a biosynth vat. The protection is quite decent, with a full comfortably competing with a flak helmet. It requires terraplate armor to be fully effective, which is it's own process.
+The helmet (armor excluded) requires the following materials to fully breed:
+\nx5 BRIGHTSAP, to provide enough nutrients for it to grow and live for a decent amount of time.
+x1 ENDOSAP, to reinforce the helmet's resistance to damage source.
+x10 TERRAMASS, to form the helmet itself.
+x5 DAYS for the helmet to fully form.
+\nTerraplate's filtration system, alongside it being sealed, allows it to withstand environmental effects and temperature to a limited degree. This includes filtering toxins, rotlung, and even the vacuum of space. Not these resistances aren't only resistances, and not immunities.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>2.4</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<MarketValue>80</MarketValue>
+			<Flammability>0.8</Flammability>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>-.05</IncomingDamageFactor>
+			<ToxicResistance>0.1</ToxicResistance>
+			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<generateCommonality>0</generateCommonality>
+		<apparel>
+			<tags>
+				<li>HyperlinkOnly</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>You shouldn't be seeing this</inspectString>
+			</li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>162</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+        </li>
+		</comps>
+	</ThingDef>
+</Defs>

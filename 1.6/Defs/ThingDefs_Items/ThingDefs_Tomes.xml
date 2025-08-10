@@ -31,7 +31,7 @@ Currently, the tech are:
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_KeyTerratechBench</defName>
-        <label>Initiate's Tome: Terratech Fundamantals</label>
+        <label>Initiate's Tome: Terratech Fundamentals</label>
         <description>A thick book, make out of razor-thin bloomwood and guilded with elderwood. This book holds guarded Terratech knowledge, and is quite valuable.
 This tome teaches one how the very basics of *everything* that Terratech is formed upon. Without the knowledge in this book, it is forever locked away - and with it, a new world of potential is revealed.
 \nAny pawn can study thisin order to successfully experiment with, and understand, the knowledge held within.</description>

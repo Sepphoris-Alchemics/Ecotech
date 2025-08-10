@@ -11,6 +11,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<graphicData>
 			<texPath>Things/Building/Production/GlowsapBay/GlowsapBay</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(1,4)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
@@ -19,6 +20,13 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
+		<stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
 		<castEdgeShadows>true</castEdgeShadows>
 		<altitudeLayer>LowPlant</altitudeLayer>
 		<defaultPlacingRot>East</defaultPlacingRot>
@@ -46,7 +54,6 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<size>(1,4)</size>
 		<costList>
 			<ET_Glowsap>30</ET_Glowsap>
-			<WoodLog>40</WoodLog>
 		</costList>
 		<fertility>1.2</fertility>
 		<building>

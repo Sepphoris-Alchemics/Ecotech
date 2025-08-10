@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Biolith Cultivator (name WIP; may be Crucible as well)
+  The Cultivator takes saps and terrathyst cores, and creates crystals that are imbued with the aspects of saps.
+  These item crystals are then grown to create larger, permanent structure crystals that act as facilities to create new weapons, structures, and items.
+  It serves as a gateway to make sure terrathyst content cannot be spammed, due to terrathyst being a universal material.
+  Two cultivators exist, one that handles tier 1 and two saps and one that can handle tier three and four saps.
+  This station becomes the third and final main crafting station. The terraforge is used for seeds, the terravats are used for weapon progression, and the cultivator will be used for lithoid items.
+  The second tier handles most hybrid gear, as most hybrid gear requires advanced saps.
+  Generally the cultivator will only require one core, but will need A LOT of sap to create these special crystals. This amount of sap can range into the hundreds.
+  The more sap that's present in the cultivator, the stronger the crystal. By totally filling the cultivator, THEN providing the core, the crystal that's grown will have infinite lifespan.
+    -->
+
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_CrystalCompressor</defName>
+    <label>terrathyst compressor</label>
+    <description>A crystal chamber that drops deep into the planet. This structure compresses various items, creating stronger materials from materials that may otherwise be plentiful.
+Deepsap protects and escorts the inserted items far below the surface, where the pressure is massive. Terrathyst, and any type of wood, can be inserted, and some time later a brand new, ultra-durable material will return.</description>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Things\Building\TerrathystCompressor</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <!--<costList>
+      <WoodLog>80</WoodLog>
+      <ET_Glowsap>30</ET_Glowsap>
+    </costList>-->
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SmallTerravats</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>12</WoodLog>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
+        <isAssemblingPawn>false</isAssemblingPawn>
+        <uiIconChooseRecipe>UI/Gizmo/InstallableInSlottedThingTransformerGizmo</uiIconChooseRecipe>
+        <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
+        <useConnectedFacility>false</useConnectedFacility>
+        <useZone>false</useZone>
+        <radius>11</radius>
+        <effectWorking>Smith</effectWorking>
+        <recipeSet>
+          <li>            <!--terrathyst core-->
+            <label>compress terrathyst into core</label>
+            <description>Requirements:
+x2 Deepsap
+x250 terrathyst shards
+Duration: 12 days</description>
+            <duration>3000</duration>
+            <resultDef>ET_TierOneCrystalCore</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Deepsap</thingDef>
+                <amount>2</amount>
+              </li>
+              <li>
+                <thingDef>ET_TierOneCrystal</thingDef>
+                <amount>5</amount>
+              </li>
+            </ingredientSets>
+          </li>
+          <li>            <!--biothite-->
+            <label>compress terrathyst into plating</label>
+            <description>Requirements:
+x2 Deepsap
+x750 terrathyst shards
+Duration: 18 days</description>
+            <duration>3000</duration>
+            <resultDef>ET_TierTwoCrystal</resultDef>
+            <amount>250</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Deepsap</thingDef>
+                <amount>2</amount>
+              </li>
+              <li>
+                <thingDef>ET_TierOneCrystal</thingDef>
+                <amount>750</amount>
+              </li>
+            </ingredientSets>
+          </li>
+        </recipeSet>
+      </li>
+    </comps>
+    <specialDisplayRadius>11</specialDisplayRadius>
+  </ThingDef>
+</Defs>

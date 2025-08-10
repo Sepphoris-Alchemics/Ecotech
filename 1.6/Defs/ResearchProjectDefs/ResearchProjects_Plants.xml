@@ -86,10 +86,10 @@
 
   <ResearchProjectDef>
     <defName>ET_TerraseedEssentials</defName>
-    <label>Terraseed Essentials</label>
-    <description>Learn how to properly create and grow Terraseeds; specialized seeds that are used to grow biotic gear and equipment, instead of food or materials.
+    <label>Terratech Essentials</label>
+    <description>Learn how to properly create and grow the fundamentals of terratech, such as terramass - a growable building material - and Terraseeds, specialized seeds that are used to grow biotic gear and equipment.
 Teaches you how to nurture a Terraforge channeling seed, which can be shaped at a crafting spot.
-Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded. Replicating their secrets as outsiders is indeed possible, but requires excessive effort; you will need to steal or buy the tome first.</description>
+Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded by the local Terratech faction.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -109,26 +109,26 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <discoveredLetterText>You can now grow a Terraforge, which is your primary method of acquiring and producing most Terratech organic creations. Shape the Terraforge seed at a normal crafting spot, then plant the seed in any desired spot. Once the Terraforge has grown, you can shape any new seeds at it.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <!--<ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>ET_TerrathystEssentials</defName>
     <label>Terrathyst Essentials</label>
-    <description>Learn how to properly create and grow Terrathyst; highly specialized seeds that grows crystals, which are then used for a variety of other purposes.
-Teaches you how to create a Geoforge channeling seed, which can be shaped at a crafting spot. Terrathyst growths can then be made at the geoforge.
-Being half-roganic, the geoforge can be grown anywhere. However, most crystal growths requires shallow water, mud, or sap-enriched terrain.
+    <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability.
+Teaches you how to grow a terrathyst cultivator, which then grows numerous smaller crystals that can be harvested or shattered for terrathyst. The cultivator grows the smaller crystals year-round, and requires little interaction once grown.
+Being engineered like organic terratech, terrathyst doesn't require fertility or light. It does, however, require water, mud, or sap-enriched terrains to grow in.
 Terrathyst is just one more outlet of tapping into nature, as nature is not only verdant plants and trees, but also the earth, elements, and even the cosmos. Therefore, it is just as useable as plants, and have it's own unique upsides and downsides, which tribes might prefer over organic matter.
-The process for discovering and making Terrathyst seeds takes slightly longer than organic terraseeds, due to their sensitivity and being a liquid-grown product. However, their ease of understanding and shaping is just as simple as Prima creations.</description>
-    <baseCost>1250</baseCost>
+Terrathyst production takes lightly longer than organic production, due to their sensitivity, being a liquid-grown product, and the need for many shards. However, their ease of understanding and shaping is just as simple as Prima creations, and terrathyst serves as the dominant material.</description>
+    <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <prerequisites>
-      <li>TreeSowing</li>
-    </prerequisites>
+    <hiddenPrerequisites>
+      <li>ET_TerraseedEssentials</li>
+    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
     <researchViewY>4.00</researchViewY>
     <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
-    <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. Shape a Terrathyst seed at a normal crafting spot, then plant the seed in any desired spot. There are different 'sizes' of terrathyst seeds that you can craft; the larger the seed, the longer it takes to grow, but the more crystals it'll have for use.</discoveredLetterText>
-  </ResearchProjectDef>-->
+    <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. Shape a Terrathyst Cultivator seed at a normal crafting spot, then plant the seed in any desired spot. There are different 'sizes' of terrathyst seeds that you can craft; the larger the seed, the longer it takes to grow, but the more crystals it'll have for use.</discoveredLetterText>
+  </ResearchProjectDef>
 
 <!--=====PRIMA ARMOR=====-->
 
