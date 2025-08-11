@@ -518,7 +518,7 @@ The process always breaks materials down to their most fundamental components, a
         <radius>5.0</radius>
         <isAffectBuilding>true</isAffectBuilding>
         <isAffectItem>true</isAffectItem>
-        <exchangeOutputMethod>Directvalue</exchangeOutputMethod>
+        <exchangeOutputMethod>Fixed</exchangeOutputMethod>
         <effecterDef>ConstructWood</effecterDef>
         <exchangeList>
           <li>
@@ -537,7 +537,12 @@ The process always breaks materials down to their most fundamental components, a
             <outputThings>
               <li>ET_Brightsap</li>
             </outputThings>
-            <ratio>2</ratio>
+            <outputPair>
+              <li>
+                <output>ET_Brightsap</output>
+                <amount>5</amount>
+              </li>
+            </outputPair>
           </li>
         </exchangeList>
       </li>
