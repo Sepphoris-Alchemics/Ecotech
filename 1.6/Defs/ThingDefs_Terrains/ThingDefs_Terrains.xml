@@ -3,7 +3,7 @@
 	
 	<TerrainAffordanceDef>
 		<defName>ET_SapTerrainTierOne</defName>
-		<label>glowsap-infused soil</label>
+		<label>sap-infused soil</label>
 		<order>2500</order>
 	</TerrainAffordanceDef>
 
@@ -23,11 +23,11 @@
 			<li>Light</li>
 			<li>Medium</li>
 			<li>Heavy</li>
-			<li>GrowSoil</li>
+			<li>ET_SapTerrainTierOne</li>
 			<li>Diggable</li>
 		</affordances>
 		<generatedFilth>Filth_Dirt</generatedFilth>
-		<fertility>0.8</fertility>
+		<fertility>1.5</fertility>
 		<takeFootprints>True</takeFootprints> 
 		<avoidWander>true</avoidWander>
 		<tools>

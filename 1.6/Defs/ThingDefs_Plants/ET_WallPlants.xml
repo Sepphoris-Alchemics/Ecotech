@@ -37,7 +37,7 @@
       </sowTags>
       <sowMinSkill>2</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>ET_TerrastructureBasics</li>
+        <li>ET_TerrathystEssentials</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.01</topWindExposure>

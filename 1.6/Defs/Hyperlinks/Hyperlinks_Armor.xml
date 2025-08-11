@@ -8,7 +8,7 @@
 		<description>Terraplate armor is an organic armor, able to easily form around any pawn. Due to the precision needed, it is created within a biosynth vat. The protection is quite decent, with a full comfortably competing with flak armor. It requires a terraplate helmet to be fully effective, which is it's own process.
 The armor (helmet excluded) requires the following materials to fully breed:
 \nx10 BRIGHTSAP, to provide enough nutrients for it to grow and live for a decent amount of time.
-x5 ENDOSAP, to reinforce the armor's resistance to damage source.
+x5 ENDOSAP, to reinforce the armor's resistance to damage.
 x20 TERRAMASS, to form the armor itself.
 x10 DAYS for the armor to fully form.
 \nTerraplate's filtration system, alongside it being sealed, allows it to withstand environmental effects and temperature to a limited degree. This includes filtering toxins, rotlung, and even the vacuum of space. Not these resistances aren't only resistances, and not immunities.</description>
@@ -78,7 +78,7 @@ x10 DAYS for the armor to fully form.
 		<description>Terraplate helmets is an organic helmet, able to easily form around any pawn. Due to the precision needed, it is created within a biosynth vat. The protection is quite decent, with a full comfortably competing with a flak helmet. It requires terraplate armor to be fully effective, which is it's own process.
 The helmet (armor excluded) requires the following materials to fully breed:
 \nx5 BRIGHTSAP, to provide enough nutrients for it to grow and live for a decent amount of time.
-x1 ENDOSAP, to reinforce the helmet's resistance to damage source.
+x1 ENDOSAP, to reinforce the helmet's resistance to damage.
 x10 TERRAMASS, to form the helmet itself.
 x5 DAYS for the helmet to fully form.
 \nTerraplate's filtration system, alongside it being sealed, allows it to withstand environmental effects and temperature to a limited degree. This includes filtering toxins, rotlung, and even the vacuum of space. Not these resistances aren't only resistances, and not immunities.</description>

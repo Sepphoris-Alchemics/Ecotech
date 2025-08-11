@@ -66,7 +66,7 @@ The glowsap bloom can be harvested relatively fast, but it's harvesting yield is
   <ThingDef ParentName="PlantBaseNonEdible">
     <defName>ET_DarksapBloom</defName>
     <label>Darksap Bloom</label>
-    <description>A small plant that produces glowsap, but has a modified appearance. Glows a pale purple color, and compliments darklight ambience quite well.
+    <description>A small plant that produces glowsap, but has a modified appearance. Emits vibrant purple and blue colors, and compliments darklight ambience quite well.
 Like most other blooms, it can quickly produce sap, but provides a very small yield. A Glowsap Tree is recommended for a reliable source.</description>
     <!--<description>A small plant bioengineered to produce Darksap. Glows a pale purple color, and compliments darklight ambience quite well.
 Like most other blooms, it can quickly produce sap, but provides a very small yield. A Darksap Tree is recommended for a reliable source.</description>-->

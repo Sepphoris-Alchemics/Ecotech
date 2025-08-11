@@ -83,18 +83,7 @@ x30 SHOCKSAP for the weapon to reach it's full potential after creation (if desi
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
 				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
-				<!--<expireEffect></expireEffect>-->
-				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
-      <!--<li Class="CompProperties_EquippableAbilityReloadable">
-        <abilityDef>ET_NightshadeExplosion</abilityDef>
-        <maxCharges>1</maxCharges>
-        <soundReload>Standard_Reload</soundReload>
-        <chargeNoun>pneumatic sac</chargeNoun>
-        <ammoDef>ET_Brightsap</ammoDef>
-        <ammoCountPerCharge>1</ammoCountPerCharge>
-        <baseReloadTicks>90</baseReloadTicks>
-      </li>-->
     <li Class="CompProperties_InspectString">
       <inspectString>This is a descriptor weapon.
 You shouldn't have this!</inspectString>

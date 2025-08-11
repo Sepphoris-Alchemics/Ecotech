@@ -456,8 +456,8 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
   <ThingDef ParentName="TreeBase">
     <defName>ET_RecycleTreeTierOne</defName>
     <label>Primwood Reclaimer Tree</label>
-    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. The roots of a reclaimer tree 'capture nearby items within a certain radius, breaking them down into natural, usable materials that may be useful to Terratech colonies.
-Iterms with highly manufactured materials - such as plasteel - may instead be broken down into saps. For example, a normal component will yield steel, but an advanced component will be broken down into steel and endosap.
+    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. The roots of a reclaimer tree 'captures' nearby items within a certain radius, breaking them down into natural, usable materials that may be useful to Terratech colonies.
+Items with highly manufactured materials - such as plasteel - may instead be broken down into saps. For example, a normal component will yield steel, but an advanced component will be broken down into steel and endosap.
 
 The process always breaks materials down to their most fundamental components, and only 50-60% of the materials are returned to the player. This makes the tree only ideal for converting useless items.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -472,7 +472,6 @@ The process always breaks materials down to their most fundamental components, a
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
       <ThingDef>ET_Glowsap</ThingDef>
-      <!--<ThingDef>GlowsapTumor</ThingDef>-->
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -490,10 +489,6 @@ The process always breaks materials down to their most fundamental components, a
     <plant>
       <growDays>1</growDays>
       <visualSizeRange>1.8~2.4</visualSizeRange>
-      <!--<sowMinSkill>6</sowMinSkill>
-			<sowTags>
-				<li>Ground</li>
-			</sowTags>-->
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
       <fertilityMin>0.05</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
@@ -518,10 +513,10 @@ The process always breaks materials down to their most fundamental components, a
       <purpose>Misc</purpose>
     </plant>
     <comps>
-      <!--<li Class="CVNPlantFunctions.CompProperties_EaterExchanger">
+      <li Class="CVNPlantFunctions.CompProperties_EaterExchanger">
         <interval>2000</interval>
         <radius>5.0</radius>
-        <isAffectBuilding>false</isAffectBuilding>
+        <isAffectBuilding>true</isAffectBuilding>
         <isAffectItem>true</isAffectItem>
         <exchangeOutputMethod>Directvalue</exchangeOutputMethod>
         <effecterDef>ConstructWood</effecterDef>
@@ -535,42 +530,16 @@ The process always breaks materials down to their most fundamental components, a
             </outputThings>
             <ratio>1</ratio>
           </li>
+          <li>
+            <inputThings>
+              <li>ChunkMechanoidSlag</li>
+            </inputThings>
+            <outputThings>
+              <li>ET_Brightsap</li>
+            </outputThings>
+            <ratio>2</ratio>
+          </li>
         </exchangeList>
-      </li>-->
-      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
-        <isAssemblingPawn>false</isAssemblingPawn>
-        <uiIconChooseRecipe>Things/Building/powernode_researchlink</uiIconChooseRecipe>
-        <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
-        <useConnectedFacility>false</useConnectedFacility>
-        <useZone>false</useZone>
-        <radius>10</radius>
-        <effectWorking>ConstructMetal</effectWorking>
-        <recipeSet>
-          <li>
-            <label>steel</label>
-            <duration>100</duration>
-            <resultDef>Steel</resultDef>
-            <amount>8</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ComponentIndustrial</thingDef>
-                <amount>2</amount>
-              </li>
-            </ingredientSets>
-          </li>
-          <li>
-            <label>test B</label>
-            <duration>100</duration>
-            <resultDef>Plasteel</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>Gold</thingDef>
-                <amount>5</amount>
-              </li>
-            </ingredientSets>
-          </li>
-        </recipeSet>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>9</glowRadius>

@@ -40,6 +40,7 @@
       </damageData>
     </graphicData>
     <descriptionHyperlinks>
+    <ThingDef>ET_PrimaHeavyHelmetRecipeHyperlink</ThingDef>
       <ThingDef>ET_PrimaHeavyArmorRecipeHyperlink</ThingDef>
     </descriptionHyperlinks>
     <statBases>

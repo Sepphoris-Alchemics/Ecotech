@@ -21,7 +21,6 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 			</damageData>
 		</graphicData>
 		<stuffCategories>
-      <li>Metallic</li>
       <li>Woody</li>
       <li>Stony</li>
     </stuffCategories>
@@ -67,8 +66,8 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Glower">
-        <glowRadius>4</glowRadius>
-        <glowColor>(239,84,203,0)</glowColor>
+        <glowRadius>2.9</glowRadius>
+        <glowColor>(255,168,0,0)</glowColor>
 				<darklightToggle>true</darklightToggle>
       </li>
       <!--<li Class="CompProperties_Facility">
