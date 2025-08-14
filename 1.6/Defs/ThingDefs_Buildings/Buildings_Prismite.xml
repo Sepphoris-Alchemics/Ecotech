@@ -13,13 +13,14 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_CrystalCompressor</defName>
-    <label>terrathyst compressor</label>
-    <description>A crystal chamber that drops deep into the planet. This structure compresses various items, creating stronger materials from materials that may otherwise be plentiful.
-Deepsap protects and escorts the inserted items far below the surface, where the pressure is massive. Terrathyst, and any type of wood, can be inserted, and some time later a brand new, ultra-durable material will return.</description>
+    <defName>ET_CrystalCharger</defName>
+    <label>prismite geocharger</label>
+    <description>A crystal chamber that drops deep into the planet. This particular structure holds large amounts of shocksap, which is generally used for evolving lithoid weapons and items.
+This vessel will combine nearby shocksap, and a nearby lithoid weapon, and will evolve it to the next stage. The amount of shocksap this can hold is quite high, and can evolve most lithoid weapons.
+Stone and crystal weapons are durable and unmoving. They take a longer time to evolve more than organic or hybrid weapons.</description>
     <size>(1,1)</size>
     <graphicData>
-      <texPath>Things\Building\TerrathystCompressor</texPath>
+      <texPath>Things\Building\PrismiteCharger</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>(1.8,1.8)</drawSize>
@@ -35,20 +36,14 @@ Deepsap protects and escorts the inserted items far below the surface, where the
       <WorkToBuild>600</WorkToBuild>
       <Mass>10</Mass>
       <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>1.0</Flammability>
+      <Flammability>0</Flammability>
     </statBases>
     <!--<costList>
       <WoodLog>80</WoodLog>
       <ET_Glowsap>30</ET_Glowsap>
     </costList>-->
-    <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-    </placeWorkers>
     <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
     <fillPercent>0.5</fillPercent>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <hasInteractionCell>true</hasInteractionCell>
     <!--<designationCategory>EcotechDesignation</designationCategory>-->
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
@@ -88,23 +83,63 @@ Deepsap protects and escorts the inserted items far below the surface, where the
         <radius>11</radius>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
-          <li>            <!--biothite-->
-            <label>compress terrathyst into plating</label>
+          <li>            <!--vivicore rifle II-->
+            <label>evolve vivicore rifle (II)</label>
             <description>Requirements:
-x2 Deepsap
-x750 terrathyst shards
-Duration: 18 days</description>
-            <duration>3000</duration>
-            <resultDef>ET_TierTwoCrystal</resultDef>
-            <amount>250</amount>
+x1 stage I vivicore rifle
+x15 shocksap
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>ET_HybridRoyalRifleTwo</resultDef>
+            <amount>1</amount>
             <ingredientSets>
               <li>
-                <thingDef>ET_Deepsap</thingDef>
-                <amount>2</amount>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>15</amount>
               </li>
               <li>
-                <thingDef>ET_TierOneCrystal</thingDef>
-                <amount>750</amount>
+                <thingDef>ET_HybridRoyalRifleOne</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+          <li>            <!--vivicore rifle III-->
+            <label>evolve vivicore rifle (III)</label>
+            <description>Requirements:
+x1 stage II vivicore rifle
+x30 shocksap
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_HybridRoyalRifleThree</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>30</amount>
+              </li>
+              <li>
+                <thingDef>ET_HybridRoyalRifleTwo</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+          <li>            <!--vivicore rifle IV-->
+            <label>evolve vivicore rifle (IV)</label>
+            <description>Requirements:
+x1 stage III vivicore rifle
+x45 shocksap
+Duration: 8 days</description>
+            <duration>480000</duration>
+            <resultDef>ET_HybridRoyalRifleThree</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>45</amount>
+              </li>
+              <li>
+                <thingDef>ET_HybridRoyalRifleThree</thingDef>
+                <amount>1</amount>
               </li>
             </ingredientSets>
           </li>

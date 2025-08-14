@@ -214,4 +214,36 @@ Infusing a weapon with this sap comes at a cost; the high focus on ammo generati
       <li>MetasapsAll</li>
     </thingCategories>
   </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Shocksap</defName>
+    <label>Shocksap</label>
+    <description>A jar of terrasap containing a sap that is highly reactive to the world around it. It's makeup allows it to constantly carry a small electrical charge, which can be exploited by very specific weapons. 
+\n\nWeapons utilizing shocksap coat their projectiles in it, allowing the projectiles to electrocute anything they hit to wildly varying degrees. While it's innate charge allows infused weapons to deliver a small electrocution, it's usefully is greater when used in, or for, lithoid weaponry.
+\nShocksap is quite rare, and requires a Reclaimer Conduit Tree to attain. By placing parts or buildings that would store or generate electricity nearby - such as mechanoid chunks, beacons, batteries, etc. - the tree will eventually break the parts down, transforming the remaining energies into shocksap.
+\n\nUse cases:
+-Allows matured ranged weapons to fire electrically charged projectiles. While these projectiles aren't very strong, they have an innate ability to EMP anything they hit. The larger the base projectile, the stronger the shocksap will be.
+-Used as a catalyst for lithoid (crystal) weaponry. This sap is required for them to initially form, and to reach more powerful forms. Much usage for this case will require significant amounts of shocksap.
+-Can also be used for a special sap bay that grows terrathyst quite efficiently.
+Infusing an organic weapon with this sap comes at a cost; the projectiles being coated in shocksap results in it moving slower, and thus having lower damage, penetration, and effective range.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Shocksap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>6</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>154</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>MetasapsAll</li>
+    </thingCategories>
+  </ThingDef>
 </Defs>
