@@ -43,7 +43,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
     Terrameld: T2 material. Combines terrathyst and terramass. Is a growable material, and meant as an 'entry' hybrid material.
     Biolith: T4 material. Combines biothite and purewood. Grows offensive weapons meant to mimic modern weaponry.
     Stellite: T6 material. Combines genesite and godwood. Produces megastructures and weapons that rival ultratech creations.
-    Zenithite: T8 Material. Only obtainable three times. Rivals VOID creations.
+    Zenithite: T8 Material. Only obtainable three times. Rivals VOID creations. Exclusively carried by the Everveiled.
 -->
 
     <!-- ================ Terramass ================ -->
@@ -285,10 +285,10 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierTwoCrystal</defName>
         <label>prismite</label>
-        <description>tiny shards of crystal that's effectively stimulated terrathyst. these shards course with electrical charge, which gives the crystals a multicolored appearance.
-\n\nTerrathyst has quite unique properties; it is a transparent material, but it's high refraction makes it appear multi-colored. Additionally it's hardness and durability is dictated by how concentrated it is; the more terrathyst that melds together, the stronger the formation. This makes terrathyst a universally viable material... as long as one can access it.</description>
+        <description>tiny shards of crystal that's effectively stimulated terrathyst. These shards course with electrical charge, which alters the crystal's opacity and refraction, giving it a pleasing, multicolored appearance.
+\n\nPrismite cannot be used in the same ways as terrathyst due to the present charge. However, it's charge enables crafted weapons, structures, and items to have electrical properties. These creations are highly effective against not just mechanoids, but anything mechanical.</description>
         <graphicData>
-            <texPath>Things/Resource/Terrathyst/Fragments</texPath>
+            <texPath>Things/Resource/Prismite/Fragments</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
             <drawSize>0.4</drawSize>
         </graphicData>

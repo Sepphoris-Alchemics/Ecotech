@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--To-do:
+		-Biolith weapons can only undergo a limited amount of changes. These changes are shown by the crystals on the side. Once all the crystals have faded, the weapon cannot be modified any more.
+		-These changes include regrowths, scope changes, infusions, etc.
+		-Make sure biolith rifle can only be regrown up to three times.
+		-Alternatively, instead of the bore losing ammo permanently until growth, the bore loses "charge". This charge regenerates relatively fast, but decreases potency until potency hits 0. If charge is at 0, the weapon won't fire.
+		-Planting the weapon restores potency and grows the weapon very fast, but permanently decreases max potency.
+			-This is opposed to lithoid weapons, which requires the weapon to be completely regenerated over a long period of time, but the potency isn't lost, and the weapon can be regenerated infinitely.
+		-Potency affects firing speed, AP, and damage by half the percentage of missing potency. However, damage is only impacted by 1/10th. So if potency is at 60%, firing speed and AP is decreased by 15%, and damage is decreased by 4%.
+			-When potency hits 0, the weapon is drained and the weapon won't fire. The player will have a gizmo they can set which will alert them if potency reaches that point.
+		-Ask NM if a mechanic handling this is possible.
+		-Scopes should be optional and done through a seperate process.
+		-The sound sound be a distinct "cracking" sound, which signals the shard seperating from the bore.
+
+
+Note that the initial ammo generation description was: \n\nDue to it's unique nature, this rifle has an exceptionally long lifespan, but it's ammo is tied directly to it's crystal core, and will eventually run out. However, it's organic side allows it to be replanted at any time, which will slowly regenerate the crystal core. Should the core completely deplete, it will be unable to grow back.
+... However, it was instead changed to allow shocksap to 'charge' the weapon at a vat. Alternatively the player can have shockshards, but that's a rare item.
+
+Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. As mentioned before, they are upgrade over time, rather than having a wide variety.
+		-->
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_SoulsnareRifleOne</defName>		<!--Counterpart: Prima OLR-->
+		<label>soulsnare rifle (I)</label>
+		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe soulsnare rifle can be a sad sight to look at, which is reflected by the effect of it's crystals. Those hit by the low-damage projectiles of this weapon experience noticable psychic fatigue, as if being affected by a small psychic drone. The effect is non-lethal, but leaves behind negative, saddening feelings.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
+\n\nThe soulsnare rifle requires 10 shocksap to successfully charge into it's second state.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_a</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.8</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<range>26.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Lithoid-class | Stage 1 of 4
+Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+<!--Tier 2: mental debuffs-->
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_SoulsnareRifleTwo</defName>		<!--Counterpart: Prima OLR-->
+		<label>soulsnare rifle (II)</label>
+		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe latest charge has enabled it's projectiles to not only inflict psychic fatigue, but also now interferes with brain activity. Projectiles will multiplicatively lower consciousness, and can even cause a target to fall into a short daze.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
+\n\nThe soulsnare rifle requires 15 shocksap to successfully charge into it's third state.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_b</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<range>26.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Lithoid-class | Stage 2 of 4
+Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+<!--Tier 3: other debuffs-->
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_SoulsnareRifleThree</defName>		<!--Counterpart: Prima OLR-->
+		<label>soulsnare rifle (III)</label>
+		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe latest charge has enabled it's projectiles to affect the entire body, rather than only the mind. The now potent interference it causes will also affect movement and manipulation, causing targets to become slower and less accurate as they are hit.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
+\n\nThe soulsnare rifle requires 20 shocksap to successfully charge into it's fourth - and final - state.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_b</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.4</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<range>26.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Lithoid-class | Stage 3 of 4
+Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation | ???</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+<!--Tier 3: other debuffs-->
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_SoulsnareRifleFour</defName>		<!--Counterpart: Prima OLR-->
+		<label>apex soulsnare rifle</label>
+		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe latest charge has greatly amplified all it's previous effects. Psychic disturbance is nearly as strong as a high drone, emotions are greatly disturbed, and interference with conciousness, speed, and manipulation can reach a much higher degree.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
+\n\nThis is the final stage of the soulsnare rifle. Charging it will no longer evolve the weapon, but will rather replenish it's power.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_c</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>PlantWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.5</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<range>26.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
+				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Lithoid-class | Stage 4 of 4
+Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation | 1.5x effect bonus</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_SoulsnareRifleDrained</defName>
+    <label>Drained soulsnare rifle</label>
+    <description>A soulsnare rifle that is devoid of even the slightest charge. Due to how inert it is, the crystals it once posessed have completely deteriorated.
+You will need to bring this weapon to a geocharger to regrow the crystals, and make it usable again. The absence of crystals has regressed it to stage I.
+5 starsap is required to restore it to a usable condition, on top of the shocksap required to charge it.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_d</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>5.5</MarketValue>
+      <Mass>1.5</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerrasapsAll</li>
+    </thingCategories>
+		<comps>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Lithoid-class | Inert
+Can be restored at a geocharger</inspectString>
+      </li>
+		</comps>
+  </ThingDef>
+</Defs>
