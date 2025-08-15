@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--Biolith Cultivator (name WIP; may be Crucible as well)
-  The Cultivator takes saps and terrathyst cores, and creates crystals that are imbued with the aspects of saps.
-  These item crystals are then grown to create larger, permanent structure crystals that act as facilities to create new weapons, structures, and items.
-  It serves as a gateway to make sure terrathyst content cannot be spammed, due to terrathyst being a universal material.
-  Two cultivators exist, one that handles tier 1 and two saps and one that can handle tier three and four saps.
-  This station becomes the third and final main crafting station. The terraforge is used for seeds, the terravats are used for weapon progression, and the cultivator will be used for lithoid items.
-  The second tier handles most hybrid gear, as most hybrid gear requires advanced saps.
-  Generally the cultivator will only require one core, but will need A LOT of sap to create these special crystals. This amount of sap can range into the hundreds.
-  The more sap that's present in the cultivator, the stronger the crystal. By totally filling the cultivator, THEN providing the core, the crystal that's grown will have infinite lifespan.
-    -->
+<!--
+    Terrathyst: material used for building, stuffables, and some simple weapons
+    Prismite: material used for higher tier weapons, armor, and buildings. Can be aquired by charing terrathyst
+    Biothite: compressed prismite combined with sunsap. Used for high tier structures, armor, and weapons
+    Metajade: jade charged with large amounts of shocksap or starsap. Used as a capacitor for weapons and structures that require high charge.
+    Solarite: rare material only found in specific ways. Used to create highest-tier structures and weapons.
+    Gravitite: special material found in specific ways. Used to create weapons, structures, and implants that manipulate gravity.-->
 
 <Defs>
   <ThingDef ParentName="BuildingBase">

@@ -1,21 +1,49 @@
 <Defs>
 
-    <!--Planned materials (HP):
-Briarwood: in between jade and gold (165): only in briar plants
-Terraquartz: in between gold and wood (185): late-game royal material. Prettiest.
-    -Sporewood: ideology/lifestyle wood. Growable underground.
-Terramass: in between wood and silver (200): early-game building material
-Purewood: in between silver and steel (245): produced from breaking down industrial items.
-Livewood: in between steel and marble (330): mid-game material
-    -Replaces Elderwood Trees ===Major upgrade needed for the following===
+    <!--
+    =====ORGANIC MATERIALS (HP)=====
+    NOTE: health values need to be reworked.
+    Wood progression works by being able to grow older and older genomes. As they become more ancient the woods get stronger, but their health regen is decreased and the weapons take longer to produce.
 
-Bloomwood: in between marble and slate (375): art material. Second prettiest.
-Ebonmass: in between slate and sandstone (405): upgrade to terramass.
-Elderwood: in between limestone and granite (480): end-game growable wood.
-Archwood: in between granite and uranium (630): only produced through special crafting (Elderwood+Archsap).
-Godwood: in between uranium and plasteel (795): Quest and gifting only.
+    Primwood (105): T1 wood. Basic material that can easily be farmed. Conduit material.
+    Terramass: in between wood and silver (200): early-game building material. Structures are growable.
+    Elderwood (245): T2 wood. A durable material that has optimal farming efficiency. Conduit material.
+    Steelwood (245): in between silver and steel (245). Produced when a T2+ Reclaimer breaks down steel items.
+    Purewood: T3 wood. In between steel and marble (330): mid-game all-around material. Conduit material.
+    Bloomwood: in between marble and slate (375): art/royal material. Second prettiest.
+
+    ===Major upgrade needed for the following===
+
+    Ambric: T4 wood. mid-game defensive material. Lasts longer than Elderwood. Conduit material.
+    Ebonmass: in between slate and sandstone (405): upgrade to terramass. Structures are growable.
+    Godwood: T5 wood. in between limestone and granite (480): only appears in rewards and quests. Special quest will allow the player to grow it. Conduit material.
+    
+    
+    Archwood: in between granite and uranium (630): ???
 
 Weapons that use a type of wood come far before the wood source itself, since engineering actual proper plants was a later goal.
+
+    =====LITHOID MATERIALS (HP)=====
+    Note: health values need to be added.
+    Lithoid progress works by being able to condense the material more and more. As they become more condensed, the stronger they get, but the faster they use charge and the more material they cost.
+
+    Terrathyst: T1 crystal. Early-game material used for building, stuffables, and some simple weapons
+    Prismite: T2 crystal. Early-game material used for making advanced weapons, armor, and buildings. Can be aquired by charging terrathyst
+    Roseglass: royal material.
+    Biothite: T3 material. Compressed prismite combined with deepsap. Used for high tier structures, armor, and weapons
+    Metajade: jade charged with large amounts of shocksap. Used as a capacitor for weapons and structures that require high charge, and to give lithoid weapons higher charge.
+    Esperium: T4 material. Rare material only found in specific ways. Used to create mid-tier structures and weapons. Allows passive generation.
+    Genesite: T5 material. Compressed prismite combined with starsap. Used to create high-tier content.
+    Gravitite: special material found in specific ways. Used to create weapons, structures, and implants that manipulate gravity.
+
+    =====HYBRID MATERIALS (HP)=====
+    Note: health values to be added.
+    Hybrid progress works by progressing both lines at once. Hybrid tech is usually end-game, but few exceptions exist if friendly with the right faction.
+
+    Terrameld: T2 material. Combines terrathyst and terramass. Is a growable material, and meant as an 'entry' hybrid material.
+    Biolith: T4 material. Combines biothite and purewood. Grows offensive weapons meant to mimic modern weaponry.
+    Stellite: T6 material. Combines genesite and godwood. Produces megastructures and weapons that rival ultratech creations.
+    Zenithite: T8 Material. Only obtainable three times. Rivals VOID creations.
 -->
 
     <!-- ================ Terramass ================ -->
@@ -251,6 +279,8 @@ Weapons that use a type of wood come far before the wood source itself, since en
         </techHediffsTags>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
+
+<!--=====Prismite=====-->
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierTwoCrystal</defName>

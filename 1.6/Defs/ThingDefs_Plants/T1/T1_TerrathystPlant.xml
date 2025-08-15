@@ -184,12 +184,35 @@ Terrathyst must be grown in sap-enriched bays.</description>
               <ET_TierOneCrystal>20</ET_TierOneCrystal>
             </things>
           </li>
-          <!--<li>
+          <!--Prismite additions-->
+          <li>
+            <weight>0.6</weight>
+            <things>
+              <ET_TierOneCrystal>4</ET_TierOneCrystal>
+              <ET_TierTwoCrystal>2</ET_TierTwoCrystal>
+            </things>
+          </li>
+          <li>
+            <weight>0.4</weight>
+            <things>
+              <ET_TierOneCrystal>6</ET_TierOneCrystal>
+              <ET_TierTwoCrystal>4</ET_TierTwoCrystal>
+            </things>
+          </li>
+          <li>
             <weight>0.2</weight>
             <things>
-              <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+              <ET_TierOneCrystal>8</ET_TierOneCrystal>
+              <ET_TierTwoCrystal>6</ET_TierTwoCrystal>
             </things>
-          </li>-->
+          </li>
+          <li>
+            <weight>0.1</weight>
+            <things>
+              <ET_TierOneCrystal>10</ET_TierOneCrystal>
+              <ET_TierTwoCrystal>8</ET_TierTwoCrystal>
+            </things>
+          </li>
         </potentialSpawnedThings>
       </li>
       <li Class="CompProperties_Glower">
