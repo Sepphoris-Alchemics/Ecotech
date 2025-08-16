@@ -540,4 +540,58 @@ Anima long range is brought down by 3
       <speed>45</speed>
     </projectile>
   </ThingDef>
+
+<!--=====Soulsnare Bullets=====-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_PsyCrystalRifle</defName>
+    <label>crystal shard (psychic disruption)</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_CrystalShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <stoppingPower>0.2</stoppingPower>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MentalCrystalRifle</defName>
+    <label>crystal shard (mental disruption)</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_CrystalShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <stoppingPower>0.2</stoppingPower>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MuscleCrystalRifle</defName>
+    <label>crystal shard (muscle disruption)</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_CrystalShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <stoppingPower>0.2</stoppingPower>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+  
 </Defs>

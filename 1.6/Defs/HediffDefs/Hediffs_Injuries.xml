@@ -99,4 +99,128 @@
       </li>
     </stages>
   </HediffDef>
+
+  <HediffDef>
+    <defName>ET_PsychicWhispersBuildupMinor</defName>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <label>psychic voices</label>
+    <makesSickThought>false</makesSickThought>
+    <initialSeverity>0.1</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Unintelligible voices that constantly barrage the mind. While not lethal, the effect can linger for a good while and disrupt concentration.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>-0.2</severityPerDayRange>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>white noise</label>
+        <minSeverity>0.001</minSeverity>
+      </li>
+      <li>
+        <label>whispers</label>
+        <minSeverity>0.2</minSeverity>
+        <statOffsets>
+          <GlobalLearningFactor>-0.2</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>15</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>1.25</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+      </li>
+      <li>
+        <label>raised voices</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GlobalLearningFactor>-0.4</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>10</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>1.5</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+      </li>
+      <li>
+        <label>wailing</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GlobalLearningFactor>-0.6</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>5</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>1.75</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+      </li>
+      <li>
+        <label>wailing</label>
+        <minSeverity>0.9</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.6</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GlobalLearningFactor>-0.8</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>5</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>2</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>PsychicComa</hediff>
+            <mtbDays>14</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
 </Defs>

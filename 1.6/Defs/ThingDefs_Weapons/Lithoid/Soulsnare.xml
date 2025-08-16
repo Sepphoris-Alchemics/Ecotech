@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--To-do:
+	<!--To-do:
 		-Biolith weapons can only undergo a limited amount of changes. These changes are shown by the crystals on the side. Once all the crystals have faded, the weapon cannot be modified any more.
 		-These changes include regrowths, scope changes, infusions, etc.
 		-Make sure biolith rifle can only be regrown up to three times.
@@ -91,21 +91,21 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		<tickerType>Rare</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
-				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Lithoid-class | Stage 1 of 4
+			<li Class="CompProperties_InspectString">
+				<inspectString>Lithoid-class | Stage 1 of 4
 Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
-      </li>
+			</li>
 		</comps>
 	</ThingDef>
 
-<!--Tier 2: mental debuffs-->
+	<!--Tier 2: mental debuffs-->
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_SoulsnareRifleTwo</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (II)</label>
@@ -143,6 +143,44 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 		<equippedAngleOffset>50</equippedAngleOffset>
 		<verbs>
 			<li>
+				<label>SoulsnareRifleBlueCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PsyCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>.2</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRiflePurpleCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MentalCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0</commonality>
+			</li>
+			<!--<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
@@ -152,7 +190,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 				<range>26.9</range>
 				<soundCast>ET_Sound_BlowgunMedium</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
-			</li>
+			</li>-->
 		</verbs>
 		<tools>
 			<li>
@@ -176,21 +214,49 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 		<tickerType>Rare</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
-				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Lithoid-class | Stage 2 of 4
+			<li Class="CompProperties_InspectString">
+				<inspectString>Lithoid-class | Stage 2 of 4
 Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
-      </li>
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>SoulsnareRifleBlueCrystal</label>
+						<visualLabel>toggle psychic disruption</visualLabel>
+						<description>Fires crystals that cause miniature psychic disturbance.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRiflePurpleCrystal</label>
+						<visualLabel>toggle mental disruption</visualLabel>
+						<description>Fires crystal shards that disrupts and lowers conciousness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
 		</comps>
 	</ThingDef>
 
-<!--Tier 3: other debuffs-->
+	<!--Tier 3: muscle debuffs-->
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_SoulsnareRifleThree</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (III)</label>
@@ -199,7 +265,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 \nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
 \n\nThe soulsnare rifle requires 20 shocksap to successfully charge into it's fourth - and final - state.</description>
 		<graphicData>
-			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_b</texPath>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_c</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -228,15 +294,61 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 		<equippedAngleOffset>50</equippedAngleOffset>
 		<verbs>
 			<li>
+				<label>SoulsnareRifleBlueCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
-				<warmupTime>1.6</warmupTime>
+				<defaultProjectile>Bullet_PsyCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
 				<burstShotCount>4</burstShotCount>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
 				<range>26.9</range>
-				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<soundCast>Shot_Shotgun</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>.2</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRiflePurpleCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MentalCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRifleBlackCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MuscleCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
 			</li>
 		</verbs>
 		<tools>
@@ -261,21 +373,60 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 		<tickerType>Rare</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
-				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Lithoid-class | Stage 3 of 4
+			<li Class="CompProperties_InspectString">
+				<inspectString>Lithoid-class | Stage 3 of 4
 Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation | ???</inspectString>
-      </li>
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>SoulsnareRifleBlueCrystal</label>
+						<visualLabel>toggle psychic disruption</visualLabel>
+						<description>Fires crystals that cause miniature psychic disturbance.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRiflePurpleCrystal</label>
+						<visualLabel>toggle mental disruption</visualLabel>
+						<description>Fires crystal shards that disrupts and lowers conciousness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRifleBlackCrystal</label>
+						<visualLabel>toggle muscle disruption</visualLabel>
+						<description>Fires crystal shards that cause muscles to strain, reducing their effectiveness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
 		</comps>
 	</ThingDef>
 
-<!--Tier 3: other debuffs-->
+	<!--Tier 3: other debuffs-->
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_SoulsnareRifleFour</defName>		<!--Counterpart: Prima OLR-->
 		<label>apex soulsnare rifle</label>
@@ -290,7 +441,8 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>LithoidWeapons</li>
+			<li>FullyChargedWeapons</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -346,50 +498,52 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 		<tickerType>Rare</tickerType>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
-				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Lithoid-class | Stage 4 of 4
+			<li Class="CompProperties_InspectString">
+				<inspectString>Lithoid-class | Stage 4 of 4
 Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation | 1.5x effect bonus</inspectString>
-      </li>
+			</li>
 		</comps>
 	</ThingDef>
 
-  <ThingDef ParentName="ResourceBase">
-    <defName>ET_SoulsnareRifleDrained</defName>
-    <label>Drained soulsnare rifle</label>
-    <description>A soulsnare rifle that is devoid of even the slightest charge. Due to how inert it is, the crystals it once posessed have completely deteriorated.
+	<!--Drained variant-->
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ET_SoulsnareRifleDrained</defName>
+		<label>Drained soulsnare rifle</label>
+		<description>A soulsnare rifle that is devoid of even the slightest charge. Due to how inert it is, the crystals it once posessed have completely deteriorated.
 You will need to bring this weapon to a geocharger to regrow the crystals, and make it usable again. The absence of crystals has regressed it to stage I.
 5 starsap is required to restore it to a usable condition, on top of the shocksap required to charge it.</description>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_d</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.2</drawSize>
-    </graphicData>
-    <stackLimit>1</stackLimit>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <MarketValue>5.5</MarketValue>
-      <Mass>1.5</Mass>
-      <Flammability>0.5</Flammability>
-      <DeteriorationRate>0</DeteriorationRate>
-    </statBases>
-    <thingCategories>
-      <li>TerrasapsAll</li>
-    </thingCategories>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_d</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>1</MarketValue>
+			<Mass>1.5</Mass>
+			<Flammability>0.5</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>TerrasapsAll</li>
+		</thingCategories>
 		<comps>
-    <li Class="CompProperties_InspectString">
-      <inspectString>Lithoid-class | Inert
+			<li Class="CompProperties_InspectString">
+				<inspectString>Lithoid-class | Inert
 Can be restored at a geocharger</inspectString>
-      </li>
+			</li>
 		</comps>
-  </ThingDef>
+	</ThingDef>
 </Defs>

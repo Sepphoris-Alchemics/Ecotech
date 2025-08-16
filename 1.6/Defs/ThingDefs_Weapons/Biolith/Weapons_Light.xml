@@ -25,7 +25,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		<defName>ET_BiolithRifle</defName>		<!--Counterpart: Prima OLR-->
 		<label>biolith rifle</label>
 		<description>A rifle that fuses both crystal and wood together, combining pros (and cons) of both. It's organic features have given it a strong wooden shell and the ability to be replanted, while it's crystalline features have granted it aceess to an optic pattern, and a dense bore that acts as an ammo source.
-\n\nDue to it's hybrid nature, this weapon can be quickly rejuvinated with shocksap or shockshards, like any other lithoid weapon. Alternatively, it can also be planted in the ground to be rejuvinated as an organic weapon. One is a matter of resources, while the other is a matter of time.
+\n\nDue to it's hybrid nature, this weapon can be quickly rejuvinated with shocksap or prismite. Alternatively, it can also be planted in the ground to be rejuvinated as an organic weapon. One is a matter of resources, while the other is a matter of time. It cannot be recharged.
 \nThe biolith rifle has no innate sap or other infusion ability, but it's optics do allow it to have a higher aim distance and ranged accuracy compared to other weapons. That said, these optics also impair it's close-combat potential.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/BiolithRifle</texPath>
@@ -89,14 +89,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 			</li>
 		</tools>
 		<tickerType>Rare</tickerType>
-		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
-	  <!--<li Class="CompProperties_Reloadable">
-        <maxCharges>150</maxCharges>
-        <destroyOnEmpty>false</destroyOnEmpty>
-        <hotKey>Misc4</hotKey>
-        <chargeNoun>shots until regeneration</chargeNoun>
-        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-		</li>-->
+		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
 			</li>
