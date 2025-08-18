@@ -17,7 +17,7 @@ This vessel will combine nearby shocksap, and a nearby lithoid weapon, and will 
 Stone and crystal weapons are durable and unmoving. They take a longer time to evolve more than organic or hybrid weapons.</description>
     <size>(1,1)</size>
     <graphicData>
-      <texPath>Things\Building\PrismiteCharger</texPath>
+      <texPath>Things/Building/PrismiteCharger</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>(1.8,1.8)</drawSize>

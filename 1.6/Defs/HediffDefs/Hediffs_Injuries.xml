@@ -100,9 +100,12 @@
     </stages>
   </HediffDef>
 
+  <!--=====Psychic Whispers: Minor=====-->
+
   <HediffDef>
     <defName>ET_PsychicWhispersBuildupMinor</defName>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
     <label>psychic voices</label>
     <makesSickThought>false</makesSickThought>
     <initialSeverity>0.1</initialSeverity>
@@ -213,7 +216,7 @@
         <hediffGivers>
           <li Class="HediffGiver_Random">
             <hediff>PsychicComa</hediff>
-            <mtbDays>14</mtbDays>
+            <mtbDays>30</mtbDays>
             <partsToAffect>
               <li>Brain</li>
             </partsToAffect>
@@ -223,4 +226,147 @@
     </stages>
   </HediffDef>
 
+  <!--=====Mental Disruption: Minor=====-->
+
+  <HediffDef>
+    <defName>ET_MentalDisruptionBuildupMinor</defName>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>mental inhibitors</label>
+    <makesSickThought>false</makesSickThought>
+    <initialSeverity>0.1</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Nerve disruptions that cause distrurbance to conciousness, and may even cause short-term mental lapses.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>-0.2</severityPerDayRange>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.001</minSeverity>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic_Short</mentalState>
+            <mtbDays>45</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic_Short</mentalState>
+            <mtbDays>30</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>severe</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic_Short</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!--=====Muscle Disruption: Minor=====-->
+
+  <HediffDef>
+    <defName>ET_MuscleDisruptionBuildupMinor</defName>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>mental inhibitors</label>
+    <makesSickThought>false</makesSickThought>
+    <initialSeverity>0.1</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Nerve disruptions that cause distrurbance to conciousness, and may even cause short-term mental lapses.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>-0.2</severityPerDayRange>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.001</minSeverity>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>severe</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
 </Defs>

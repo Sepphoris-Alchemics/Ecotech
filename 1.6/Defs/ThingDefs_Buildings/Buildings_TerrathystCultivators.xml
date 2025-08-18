@@ -19,7 +19,7 @@
 Deepsap protects and escorts the inserted items far below the surface, where the pressure is massive. Terrathyst, and any type of wood, can be inserted, and some time later a brand new, ultra-durable material will return.</description>
     <size>(1,1)</size>
     <graphicData>
-      <texPath>Things\Building\TerrathystCompressor</texPath>
+      <texPath>Things/Building/TerrathystCompressor</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>(1.8,1.8)</drawSize>

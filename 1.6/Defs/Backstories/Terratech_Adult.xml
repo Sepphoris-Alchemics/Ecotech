@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BackstoryDef>
+    <defName>ET_Ambassador</defName>
+    <title>terratech ambassador</title>
+    <titleShort>ambassador</titleShort>
+    <description>[PAWN_nameDef] was an ambassador of their tribe, keeping relationships stable between their tribe and other factions. Their tribe's unique technology would often get the attention of others, and it was [PAWN_nameDef]'s job to make sure they didn't become belligerent or pry too much.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Social>6</Social>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+      <li>PlantWork</li>
+      <li>Social</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_ArmoryCaretaker</defName>
+    <title>terratech caretaker</title>
+    <titleShort>caretaker</titleShort>
+    <description>[PAWN_nameDef] was in charge of maintaining terratech productions. [PAWN_objective] job was to make sure armories were always stockpiled, revitializing assets when they were near expiry, and tending to the remains of whatever eventually withered away.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Plants>4</Plants>
+      <Melee>4</Melee>
+      <Shooting>4</Shooting>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_SleeperAgent</defName>
+    <title>terratech sleeper agent</title>
+    <titleShort>sleeper agent</titleShort>
+    <description>Terratech tribes need to make sure they are prepared for being attacked, and [PAWN_nameDef]'s job was instrumental in providing advantages. Alongside other sleeper agents, [PAWN_objective] had to always be ready to form rebel cells that would disrupt and weaken the colony [PAWN_nameDef] was infiltrating. This job was very sensitive and demanding, severely impacting any connections with others.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Intellectual>8</Intellectual>
+      <Social>-4</Social>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_Croptender</defName>
+    <title>terratech crop tender</title>
+    <titleShort>crop tender</titleShort>
+    <description>[PAWN_nameDef] managed giant, complex fields of various terratech creations, constantly harvesting weapons and materials, and rotating them on a strict schedule. Even during the least demanding times, [PAWN_possessive] job required her to manage dozens upon dozens of individual, unique crops.</description>
+    <slot>Adulthood</slot>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Plants>10</Plants>
+      <Crafting>-4</Crafting>
+      <Construction>-3</Construction>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_Geosmith</defName>
+    <title>terratech geosmith</title>
+    <titleShort>geosmith</titleShort>
+    <description>[PAWN_nameDef] spent most of their life around lithoid-class weapons. These weapons required constant upkeep, and [PAWN_nameDef] not only made sure each weapon reached it's highest evolution, but also made sure each one performed to their expectations.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>4</Melee>
+      <Crafting>6</Crafting>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_Confiscator</defName>
+    <title>terratech asset retriever</title>
+    <titleShort>retriever</titleShort>
+    <description>Regardless of safety protocols, terratech assets will eventually end up in the wrong hands. Whenever this happened, [PAWN_nameDef] was sent out to retrieve the contraband, and dispose of anyone that was in [PAWN_objective] way.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Caring</li>
+    </workDisables>
+    <skillGains>
+      <Shooting>6</Shooting>
+      <Melee>6</Melee>
+      <Social>4</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Shooting</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <possessions>
+      <ET_NightshadeRifle>1</ET_NightshadeRifle>
+    </possessions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_Scribe</defName>
+    <title>scribe</title>
+    <titleShort>scribe</titleShort>
+    <description>[PAWN_nameDef] is a terratech scribe, one of the most honored roles within the culture. [PAWN_objective] was in charge of keeping and passing down closely-guarded secrets, and defending them to their last breath.\n\n[PAWN_pronoun] was also trained in combat, as the threat of being captured for interrogation always loomed above their heads.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Crafting</li>
+      <li>Constructing</li>
+      <li>ManualDumb</li>
+    </workDisables>
+    <skillGains>
+      <Melee>6</Melee>
+      <Intellectual>8</Intellectual>
+      <Plants>6</Plants>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_Alchemist</defName>
+    <title>terratech alchemist</title>
+    <titleShort>alchemist</titleShort>
+    <description>[PAWN_nameDef] was an alchemist of [PAWN_pronoun] tribe, primarily in charge of medicines and poisons. [PAWN_pronoun] both tended to any that needed care, and produced poisons - and their antidotes - whenever necessary. [PAWN_nameDef] also acted as an infusion specialist, combining terrasaps with weapons.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Constructing</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Caring</li>
+      <li>PlantWork</li>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Plants>4</Plants>
+      <Medicine>6</Medicine>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <possessions>
+      <MedicineHerbal>4</MedicineHerbal>
+    </possessions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_CrystalMiner</defName>
+    <title>terrathyst miner</title>
+    <titleShort>miner</titleShort>
+    <description>[PAWN_nameDef] worked deep below the surface, seeking out and mining deposits of terrathyst. [PAWN_pronoun] spent far more time mining stone than terrathyst, as the job was more about asset denial than production. Still, [PAWN_pronoun] job was quite valued, and every deposit found resulted in praise and celebration.</description>
+    <slot>Adulthood</slot>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>Mining</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Mining>6</Mining>
+      <Construction>4</Construction>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+</Defs>

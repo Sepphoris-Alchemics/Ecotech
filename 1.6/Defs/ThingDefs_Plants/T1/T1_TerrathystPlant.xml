@@ -122,9 +122,9 @@ The growth can be placed anywhere, but will only grow harvestable crystals in wa
 The growth can be harvested for a decent amount of shards; however, at any point the growth may shatter and produced a random amount of shards. This can result in more - or less - shards than if it was manually harvested.
 If one does not wish to test their luck, it is recommended to harvest these crystals as soon as they are ready.
 Terrathyst must be grown in sap-enriched bays.</description>
-    <descriptionHyperlinks>
+    <!--<descriptionHyperlinks>
       <ThingDef>ET_OverviewTerrathyst</ThingDef>
-    </descriptionHyperlinks>
+    </descriptionHyperlinks>-->
     <plant>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
       <harvestMinGrowth>0.8</harvestMinGrowth>

@@ -180,17 +180,6 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 				<muzzleFlashScale>0</muzzleFlashScale>
 				<commonality>0</commonality>
 			</li>
-			<!--<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
-				<warmupTime>1.6</warmupTime>
-				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-				<range>26.9</range>
-				<soundCast>ET_Sound_BlowgunMedium</soundCast>
-				<muzzleFlashScale>0</muzzleFlashScale>
-			</li>-->
 		</verbs>
 		<tools>
 			<li>

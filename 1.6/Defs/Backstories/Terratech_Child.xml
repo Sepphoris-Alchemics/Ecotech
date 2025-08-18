@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BackstoryDef>
+    <defName>ET_Scribling</defName>
+    <title>terratech scribling</title>
+    <titleShort>scribling</titleShort>
+    <description>[PAWN_nameDef] was selected to be a scribe of their people, and had to start [PAWN_possessive] training early. With this came a high status, but also high expectations.</description>
+    <slot>Childhood</slot>
+    <workDisables>
+      <li>Crafting</li>
+      <li>Constructing</li>
+      <li>ManualDumb</li>
+    </workDisables>
+    <skillGains>
+      <Melee>2</Melee>
+      <Plants>4</Plants>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_Cropling</defName>
+    <title>terratech cropling</title>
+    <titleShort>cropling</titleShort>
+    <description>[PAWN_nameDef] began the life as most other terratech children do: mastering plant work early on in their life. [PAWN_pronoun] would work massive fields one day, then assist someone else amongst the tribe the next.\n\nThis life was boring and monotonous, but [PAWN_nameDef] become familiar with skills that would benefit any role they took in the future.</description>
+    <slot>Childhood</slot>
+    <spawnCategories><li>ET_TerratechBackstories</li></spawnCategories>
+    <skillGains>
+      <Social>4</Social>
+      <Medicine>2</Medicine>
+      <Mining>2</Mining>
+      <Plants>5</Plants>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_AdoptedChild</defName>
+    <title>terratech surrogate</title>
+    <titleShort>surrogate</titleShort>
+    <description>Once the child of another faction, [PAWN_nameDef] was adopted - or perhaps kidnapped - by the tribe when [PAWN_pronoun] was still a baby. Terratech culture dictates that the best fighters and operatives be of outside bloodlines, and for better of worse, [PAWN_nameDef] ended up being one of those chosen children.</description>
+    <slot>Childhood</slot>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <skillGains>
+      <Melee>5</Melee>
+      <Shooting>5</Shooting>
+      <Intellectual>3</Intellectual>
+      <Social>-2</Social>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+</Defs>
