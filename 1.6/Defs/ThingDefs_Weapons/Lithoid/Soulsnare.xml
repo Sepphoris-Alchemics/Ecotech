@@ -24,7 +24,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_SoulsnareRifleOne</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (I)</label>
-		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
 \n\nThe soulsnare rifle can be a sad sight to look at, which is reflected by the effect of it's crystals. Those hit by the low-damage projectiles of this weapon experience noticable psychic fatigue, as if being affected by a small psychic drone. The effect is non-lethal, but leaves behind negative, saddening feelings.
 \nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
 \n\nThe soulsnare rifle requires 10 shocksap to successfully charge into it's second state.</description>
@@ -90,9 +90,6 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		</tools>
 		<tickerType>Rare</tickerType>
 		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
-			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
@@ -109,7 +106,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_SoulsnareRifleTwo</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (II)</label>
-		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
 \n\nThe latest charge has enabled it's projectiles to not only inflict psychic fatigue, but also now interferes with brain activity. Projectiles will multiplicatively lower consciousness, and can even cause a target to fall into a short daze.
 \nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
 \n\nThe soulsnare rifle requires 15 shocksap to successfully charge into it's third state.</description>
@@ -202,9 +199,6 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 		</tools>
 		<tickerType>Rare</tickerType>
 		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
-			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
@@ -249,7 +243,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_SoulsnareRifleThree</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (III)</label>
-		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
 \n\nThe latest charge has enabled it's projectiles to affect the entire body, rather than only the mind. The now potent interference it causes will also affect movement and manipulation, causing targets to become slower and less accurate as they are hit.
 \nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
 \n\nThe soulsnare rifle requires 20 shocksap to successfully charge into it's fourth - and final - state.</description>
@@ -361,9 +355,6 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 		</tools>
 		<tickerType>Rare</tickerType>
 		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
-			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
@@ -415,11 +406,11 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 		</comps>
 	</ThingDef>
 
-	<!--Tier 3: other debuffs-->
+	<!--Tier 4: other increased stats-->
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_SoulsnareRifleFour</defName>		<!--Counterpart: Prima OLR-->
 		<label>apex soulsnare rifle</label>
-		<description>A rifle that is easily mistaken as rotting wood, but consists purely of stone and crystal. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
 \n\nThe latest charge has greatly amplified all it's previous effects. Psychic disturbance is nearly as strong as a high drone, emotions are greatly disturbed, and interference with conciousness, speed, and manipulation can reach a much higher degree.
 \nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
 \n\nThis is the final stage of the soulsnare rifle. Charging it will no longer evolve the weapon, but will rather replenish it's power.</description>
@@ -454,15 +445,61 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 		<equippedAngleOffset>30</equippedAngleOffset>
 		<verbs>
 			<li>
+				<label>SoulsnareRifleBlueCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
-				<warmupTime>1.6</warmupTime>
+				<defaultProjectile>Bullet_PsyCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
 				<burstShotCount>4</burstShotCount>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
 				<range>26.9</range>
-				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<soundCast>Shot_Shotgun</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>.2</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRiflePurpleCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MentalCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRifleBlackCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MuscleCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
 			</li>
 		</verbs>
 		<tools>
@@ -486,9 +523,6 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 		</tools>
 		<tickerType>Rare</tickerType>
 		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
-			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
@@ -497,6 +531,45 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 			<li Class="CompProperties_InspectString">
 				<inspectString>Lithoid-class | Stage 4 of 4
 Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation | 1.5x effect bonus</inspectString>
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>SoulsnareRifleBlueCrystal</label>
+						<visualLabel>toggle psychic disruption</visualLabel>
+						<description>Fires crystals that cause miniature psychic disturbance.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRiflePurpleCrystal</label>
+						<visualLabel>toggle mental disruption</visualLabel>
+						<description>Fires crystal shards that disrupts and lowers conciousness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRifleBlackCrystal</label>
+						<visualLabel>toggle muscle disruption</visualLabel>
+						<description>Fires crystal shards that cause muscles to strain, reducing their effectiveness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
 			</li>
 		</comps>
 	</ThingDef>
