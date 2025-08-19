@@ -56,6 +56,15 @@ Tier 4 surge seeds: 20
         <li>Ground</li>
         <li>ET_GlowsapCompatible</li>
       </sowTags>
+      <terrainBlacklist>
+        <li>WaterDeep</li>
+        <li>WaterOceanDeep</li>
+        <li>WaterMovingChestDeep</li>
+        <li>WaterShallow</li>
+        <li>WaterOceanShallow</li>
+        <li>WaterMovingShallow</li>
+        <li>Ice</li>
+      </terrainBlacklist>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>2.9</minSpacingBetweenSamePlant>
       <topWindExposure>0.1</topWindExposure>

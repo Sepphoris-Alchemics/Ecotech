@@ -77,6 +77,7 @@ The process always breaks materials down to their most fundamental components, r
       <purpose>Misc</purpose>
     </plant>
     <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
       <li Class="CVNPlantFunctions.CompProperties_EaterExchanger">
         <interval>2000</interval>
         <radius>11</radius>
@@ -608,8 +609,8 @@ The process always breaks materials down to their most fundamental components, r
         </exchangeList>
       </li>
       <li Class="CompProperties_InspectString">
-				<inspectString>Breaks down industrial-tier gear within range.</inspectString>
-			</li>
+        <inspectString>Breaks down industrial-tier gear within range.</inspectString>
+      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>

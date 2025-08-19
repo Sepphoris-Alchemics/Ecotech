@@ -55,7 +55,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
-		<equippedAngleOffset>50</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
@@ -140,7 +140,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
-		<equippedAngleOffset>50</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<verbs>
 			<li>
 				<label>SoulsnareRifleBlueCrystal</label>
@@ -280,7 +280,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
-		<equippedAngleOffset>50</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<verbs>
 			<li>
 				<label>SoulsnareRifleBlueCrystal</label>
@@ -451,7 +451,7 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
-		<equippedAngleOffset>50</equippedAngleOffset>
+		<equippedAngleOffset>30</equippedAngleOffset>
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>

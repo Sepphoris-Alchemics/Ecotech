@@ -17,7 +17,7 @@
     <earliestRaidDays>120</earliestRaidDays>
     <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>    <!--create custom icon-->
     <colorSpectrum>
-      <li>(85, 170, 175)</li>
+      <li>(85, 175, 95)</li>
     </colorSpectrum>
     <factionNameMaker>ET_NamerOrganicFaction</factionNameMaker>    <!--create custom def-->
     <settlementNameMaker>ET_NamerOrganicSettlement</settlementNameMaker>    <!--create custom def-->

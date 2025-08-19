@@ -131,6 +131,7 @@ While this tree is present, weapons and seeds will be created at the base of the
       <purpose>Misc</purpose>
     </plant>
     <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>900000~1200000</cycleDurationRangeTicks>        <!--15 to 20 days-->
@@ -263,6 +264,7 @@ The terrain this tree makes can support normal plants as well. However, this fea
       <purpose>Misc</purpose>
     </plant>
     <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
       <li Class="CompProperties_Glower">
         <glowRadius>9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>
@@ -379,6 +381,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
       <purpose>Misc</purpose>
     </plant>
     <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>480000~660000</cycleDurationRangeTicks>        <!--every 8-11 days-->

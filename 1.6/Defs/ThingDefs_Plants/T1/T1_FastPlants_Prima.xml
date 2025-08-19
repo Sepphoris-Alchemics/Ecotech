@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Pods should follow the following skill rules:
+Tier 1 weapons: 1-4
+Tier 1 heavy: 5-7
+Tier 1 upgrades: 6-8
+Tier 1 surge seeds: 6-8
+
+Tier 2 weapons: 4-8
+Tier 2 heavy: 9-11
+Tier 2 upgrades: 10-12
+Tier 2 surge seeds: 10-12
+
+Tier 3 weapons: 8-12
+Tier 3 heavy: 13-15
+Tier 3 upgrades: 14-16
+Tier 3 surge seeds: 14-16
+
+Tier 4 weapons: 16-20
+Tier 4 heavy: 17-19
+Tier 4 upgrades: 20
+Tier 4 surge seeds: 20
+-->
+
+<!--Melee Weapons-->
+
+<!--Hyperseed: Pure terrapod-->
+
+  <ThingDef ParentName="ET_PrimaWeaponPodBase">
+    <defName>ET_HyperPrimaPod_Random</defName>
+    <graphicData>
+      <texPath>Things/Plant/PrimaPodRandom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <label>prima hyperpod</label>
+    <description>A terrapod that produces Prima weapons. This particular terrapod has been delicately designed to grow on any terrain, and will produce weapons in roughly a day's time.
+\n\nThis terrapod grows multiple seeds, but these seeds fight over nutrients, resulting in the production of one - rarely two - random terraweapons. The rest of the seeds simply turn to mush.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_OverviewPrimaWeapons</ThingDef>
+    </descriptionHyperlinks>
+    <plant>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
+      <harvestMinGrowth>1</harvestMinGrowth>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
+      <sowMinSkill>1</sowMinSkill>
+      <growDays>1</growDays>
+      <harvestWork>300</harvestWork>
+      <sowResearchPrerequisites>
+        <li>ET_PrimaTerraweaponSeeds</li>
+      </sowResearchPrerequisites>
+      <immatureGraphicPath>Things/Plant/PrimaPodRandom</immatureGraphicPath>
+      <visualSizeRange>0.8~1</visualSizeRange>
+    </plant>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>58000~68000</cycleDurationRangeTicks>
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <!--Melee weapons-->
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PrimaKnife>1</ET_PrimaKnife>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PrimaMace>1</ET_PrimaMace>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PrimaSword>1</ET_PrimaSword>
+            </things>
+          </li>
+          <!--Light weapons-->
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PrimaStakecaster>1</ET_PrimaStakecaster>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PrimaPistol>1</ET_PrimaPistol>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_PrimaSMG>1</ET_PrimaSMG>
+            </things>
+          </li>
+          <!--Medium weapons-->
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_PrimaShotgun>1</ET_PrimaShotgun>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_PrimaCarbine>1</ET_PrimaCarbine>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_PrimaRifle>1</ET_PrimaRifle>
+            </things>
+          </li>
+          <!--Heavy weapons-->
+          <li>
+            <weight>0.25</weight>
+            <things>
+              <ET_Seedburster>1</ET_Seedburster>
+            </things>
+          </li>
+          <li>
+            <weight>0.25</weight>
+            <things>
+              <ET_Hailcannon>1</ET_Hailcannon>
+            </things>
+          </li>
+          <!--<li> Sap Launcher removed until all saps are sufficiently implemented.
+            <weight>0.25</weight>
+            <things>
+              <ET_PrimaSapLauncher_Basic>1</ET_PrimaSapLauncher_Basic>
+            </things>
+          </li>-->
+          <li>
+            <weight>0.25</weight>
+            <things>
+              <ET_PrimaLMG>1</ET_PrimaLMG>
+            </things>
+          </li>
+          <!--Double drops-->
+          <li>
+            <weight>0.2</weight>
+            <things>
+              <ET_PrimaStakecaster>1</ET_PrimaStakecaster>
+              <ET_PrimaMace>1</ET_PrimaMace>
+            </things>
+          </li>
+          <li>
+            <weight>0.2</weight>
+            <things>
+              <ET_PrimaSMG>1</ET_PrimaSMG>
+              <ET_PrimaKnife>1</ET_PrimaKnife>
+            </things>
+          </li>
+          <li>
+            <weight>0.2</weight>
+            <things>
+              <ET_PrimaPistol>1</ET_PrimaPistol>
+              <ET_PrimaSword>1</ET_PrimaSword>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>70000</lifespanTicks>        <!--2000 ticks after the latest spawning time, to ensure spawning happens.-->
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Expires shortly after creating product</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

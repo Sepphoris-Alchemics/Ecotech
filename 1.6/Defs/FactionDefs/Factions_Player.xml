@@ -22,7 +22,10 @@
         </categories>
       </li>
     </backstoryFilters>
-    <factionIconPath>World/TerratechTown</factionIconPath>
+    <colorSpectrum>
+      <li>(0, 119, 255)</li>
+    </colorSpectrum>
+    <factionIconPath>UI/World/TerratechTown</factionIconPath>
     <startingResearchTags>
       <li>TribalStart</li>
     </startingResearchTags>

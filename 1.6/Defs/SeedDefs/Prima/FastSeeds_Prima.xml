@@ -154,7 +154,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_FastSeed_PureTerrapod</defName>
-    <label>Prima Hyperseed: Pure Terrapod</label>
+    <label>Prima Hyperseed: Hyperpod</label>
     <description>A masterfully crafted seed that will quickly produce a specialized Terrapod. This Terrapod is self-sustaining and designed to produce a random, fully matured Prima weapon within a day. Often used by those on long journeys... and is also a very valuable black market item.
 Knowledge on how to make hyperseeds is highly guarded, and a secret only the most devoted possess. These seeds bypass normal wait times and research requirements, making them one of the only outlets of attaining Terraweapons as an Industrial+ colony.
 \nhyperseeds are meant to be used shortly after acquisition, and will expire rather quickly. Be sure to not hang onto them for too long!
@@ -162,7 +162,7 @@ Knowledge on how to make hyperseeds is highly guarded, and a secret only the mos
 Significantly lowered growth time when compared to normal method (from ~6 full days to ~1)
 No research or tech level requirement
 No fertility requirement
-Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or in water)</description>
+Will grow on any solid or earthly terrain.</description>
     <possessionCount>0</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>
@@ -191,6 +191,9 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
       </li>
       <li Class="CompProperties_Lifespan">
         <lifespanTicks>420000</lifespanTicks>
+      </li>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_HyperPrimaPod_Random</plantDefToSpawn>
       </li>
     </comps>
     <tradeTags Inherit='false'>
