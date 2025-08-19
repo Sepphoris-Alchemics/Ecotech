@@ -22,7 +22,7 @@
         </categories>
       </li>
     </backstoryFilters>
-    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+    <factionIconPath>World/TerratechTown</factionIconPath>
     <startingResearchTags>
       <li>TribalStart</li>
     </startingResearchTags>

@@ -9,6 +9,7 @@
     -Advanced components add 3 shocksap
     -Add +3 steel for every components used
     -Cannot convert structures
+    -Armor produces Endosap instead of shocksap
   
   -->
 
@@ -19,10 +20,10 @@
   <ThingDef ParentName="TreeBase">
     <defName>ET_RecycleTreeTierOne</defName>
     <label>Primwood Reclaimer Tree</label>
-    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. The roots of a reclaimer tree 'captures' nearby items within a certain radius, breaking them down into natural, usable materials that may be useful to Terratech colonies.
-Items with highly manufactured materials - such as plasteel - may instead be broken down into saps. For example, a normal component will yield steel, but an advanced component will be broken down into steel and endosap.
+    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. The roots of a reclaimer tree 'captures' any nearby items within a small radius, breaking them down into natural, usable materials that may be useful to Terratech colonies.
+This particular tree is capable of breaking down basic industrial items. As this is only the first generation tree, the amount of returned items is rather low, and it is incapable of breaking down steel. Still, it gives a use for any manufactured guns or mechanoid remains that may pop up. 
 
-The process always breaks materials down to their most fundamental components, and only 50-60% of the materials are returned to the player. This makes the tree only ideal for converting useless items.</description>
+The process always breaks materials down to their most fundamental components, resulting in a 25-30% yield. Further generations of this tree will be able to process more complex items, and output more useful resources.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Plant/ConduitTrees/PrimwoodReclaimerTree</texPath>
@@ -33,9 +34,9 @@ The process always breaks materials down to their most fundamental components, a
     </graphicData>
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
-    <descriptionHyperlinks>
+    <!--<descriptionHyperlinks>
       <ThingDef>ET_Glowsap</ThingDef>
-    </descriptionHyperlinks>
+    </descriptionHyperlinks>-->
     <minifiedDef IsNull="True" />
     <statBases>
       <Beauty>18</Beauty>
@@ -67,7 +68,7 @@ The process always breaks materials down to their most fundamental components, a
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
-      <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
+      <minSpacingBetweenSamePlant>31.9</minSpacingBetweenSamePlant>
       <blockAdjacentSow>true</blockAdjacentSow>
       <warnIfMarkedForCut>true</warnIfMarkedForCut>
       <burnedThingDef IsNull="True" />
@@ -78,7 +79,7 @@ The process always breaks materials down to their most fundamental components, a
     <comps>
       <li Class="CVNPlantFunctions.CompProperties_EaterExchanger">
         <interval>2000</interval>
-        <radius>5.0</radius>
+        <radius>11</radius>
         <isAffectBuilding>false</isAffectBuilding>
         <isAffectItem>true</isAffectItem>
         <exchangeOutputMethod>Fixed</exchangeOutputMethod>
@@ -451,7 +452,7 @@ The process always breaks materials down to their most fundamental components, a
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Shocksap</li>
+              <li>ET_Endosap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -459,7 +460,7 @@ The process always breaks materials down to their most fundamental components, a
                 <amount>3</amount>
               </li>
               <li>
-                <output>ET_Shocksap</output>
+                <output>ET_Endosap</output>
                 <amount>2</amount>
               </li>
             </outputPair>
@@ -471,7 +472,7 @@ The process always breaks materials down to their most fundamental components, a
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Shocksap</li>
+              <li>ET_Endosap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -479,7 +480,7 @@ The process always breaks materials down to their most fundamental components, a
                 <amount>21</amount>
               </li>
               <li>
-                <output>ET_Shocksap</output>
+                <output>ET_Endosap</output>
                 <amount>1</amount>
               </li>
             </outputPair>
@@ -491,7 +492,7 @@ The process always breaks materials down to their most fundamental components, a
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Shocksap</li>
+              <li>ET_Endosap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -499,7 +500,7 @@ The process always breaks materials down to their most fundamental components, a
                 <amount>18</amount>
               </li>
               <li>
-                <output>ET_Shocksap</output>
+                <output>ET_Endosap</output>
                 <amount>1</amount>
               </li>
             </outputPair>
@@ -511,7 +512,7 @@ The process always breaks materials down to their most fundamental components, a
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Shocksap</li>
+              <li>ET_Endosap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -519,7 +520,7 @@ The process always breaks materials down to their most fundamental components, a
                 <amount>18</amount>
               </li>
               <li>
-                <output>ET_Shocksap</output>
+                <output>ET_Endosap</output>
                 <amount>1</amount>
               </li>
             </outputPair>
@@ -567,7 +568,7 @@ The process always breaks materials down to their most fundamental components, a
           <!--Smokepop Pack-->
           <li>
             <inputThings>
-              <li>Apparel_ShieldBelt</li>
+              <li>Apparel_SmokepopBelt</li>
             </inputThings>
             <outputThings>
               <li>Steel</li>
@@ -606,6 +607,9 @@ The process always breaks materials down to their most fundamental components, a
           </li>
         </exchangeList>
       </li>
+      <li Class="CompProperties_InspectString">
+				<inspectString>Breaks down industrial-tier gear within range.</inspectString>
+			</li>
       <li Class="CompProperties_Glower">
         <glowRadius>9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>
@@ -614,7 +618,7 @@ The process always breaks materials down to their most fundamental components, a
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
     </comps>
-    <specialDisplayRadius>67.9</specialDisplayRadius>
+    <specialDisplayRadius>11</specialDisplayRadius>
   </ThingDef>
 
 </Defs>
