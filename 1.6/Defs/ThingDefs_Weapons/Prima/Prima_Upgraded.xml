@@ -197,7 +197,7 @@
 
 <!--=====Prima Carbine=====-->
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_PrimaCarbineUpgraded</defName>
 		<label>prima evocarbine</label>
 		<description>The directly evolved version of the Prima Carbine. This evolution has made use of sap reserves, which has resulted in the loss of the multiple sacs on the weapon in order to create a better weapon. These changes have provided, higher health, better projectile output, and a stronger seed upon expiry.

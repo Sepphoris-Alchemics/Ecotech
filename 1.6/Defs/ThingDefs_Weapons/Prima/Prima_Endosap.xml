@@ -7,114 +7,6 @@
 
 <!--=====Prima SMG=====-->
 
-	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>ET_PrimaSMGEndosap</defName>
-		<label>prima endoshredder</label>
-		<description>The Apex form of the Prima Pincaster, infused with the Endosap. The presence of the endosap has enabled the pincaster to create a more durable epidermis, and decreasing flammability.</description>
-		<graphicData>
-			<texPath>Things/WeaponPrima/Endosap/PrimaSMGUpgraded_ES</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.8</drawSize>
-		</graphicData>
-		<soundInteract>Interact_SMG</soundInteract>
-		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
-		</weaponTags>
-    <weaponClasses>
-      <li>RangedLight</li>
-			<li>ShortShots</li>
-    </weaponClasses>
-    <relicChance>0</relicChance>
-		<statBases>
-      <MaxHitPoints>75</MaxHitPoints> <!--50% more than 50-->
-			<AccuracyTouch>0.90</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.30</AccuracyMedium>
-			<AccuracyLong>0.15</AccuracyLong>
-			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
-			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.2</Mass>
-			<Flammability>0.75</Flammability> <!--75% lower flammability-->
-      <WorkToMake>12000</WorkToMake>
-		</statBases>
-		<techLevel>Neolithic</techLevel>
-		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <!--<li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
-        <warmupTime>0.75</warmupTime>
-        <range>17.9</range>
-        <burstShotCount>4</burstShotCount>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <soundCast>Shot_MachinePistol</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>-->
-
-      <li>
-        <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
-        <warmupTime>0.75</warmupTime>
-        <range>17.9</range>
-        <burstShotCount>4</burstShotCount>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <soundCast>ET_Sound_BlowgunLight</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-		<tools>
-			<li>
-				<label>grip</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tickerType>Normal</tickerType>
-		<comps>
-			<li Class="CompProperties_InspectString">
-				<inspectString>Permanence Genome | Dormant
-+25 health | +8 lifetime days | +2.5 hp/day (unequipped)</inspectString>
-			</li>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1440000</lifespanTicks> <!--Light weapon, 960000+480000-->
-          <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
-          <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
-        </li>
-		</comps>
-		<modExtensions>
-			<li Class="VEF.Weapons.MoteProperties">
-				<fleckDef>WoodBit</fleckDef>
-				<size>0.2</size>
-				<velocity>1</velocity>
-				<angleRange>-15~15</angleRange>
-				<rotationRange>-5~5</rotationRange>
-				<numTimesThrown>1</numTimesThrown>
-			</li>
-			<li Class="VEF.Weapons.MakeshiftProperties">
-				<shots>4~5</shots>
-			</li>
-		</modExtensions>
-	</ThingDef>
-
 <!--=====Prima Carbine=====-->
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
@@ -196,17 +88,18 @@
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>960000</lifespanTicks>
-          <lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+          <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 			<li Class="CompProperties_InspectString">
-      	<inspectString>Prima Genome | Infused
-+30 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
+      	<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
++30 health | +9 lifespan days | +2.5 hp/day (unequipped)
+Genome: Prima</inspectString>
       </li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
@@ -303,7 +196,7 @@
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>

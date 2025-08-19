@@ -46,13 +46,13 @@
 		</verbs>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Endosap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Endosap
 +30 health | 0.5 flammability | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1080000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -99,13 +99,13 @@
 		</verbs>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Hypersap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Hypersap
 +2 range | Fires 1-3 shots | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1080000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -164,13 +164,13 @@
 		<tickerType>Normal</tickerType>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Toxsap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Toxsap
 Projectiles inflict toxins | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1080000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -203,13 +203,13 @@ Projectiles inflict toxins | +2.5 hp/day (unequipped)</inspectString>
 		</weaponClasses>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Deepsap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Deepsap
 Can be replanted to be regrown | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1080000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -242,13 +242,13 @@ Can be replanted to be regrown | +2.5 hp/day (unequipped)</inspectString>
 		</weaponClasses>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Sunsap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Sunsap
 +50% lifespan duration (+9 days) | +15 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1620000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -280,13 +280,13 @@ Can be replanted to be regrown | +2.5 hp/day (unequipped)</inspectString>
 		</weaponClasses>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Starsap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Starsap
 Lifespan increased by 30 days (48 days total) | +15 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>2880000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -339,13 +339,13 @@ Lifespan increased by 30 days (48 days total) | +15 hp/day (unequipped)</inspect
 		</verbs>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Surgesap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Surgesap
 Can burst fire at will | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>720000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -422,13 +422,13 @@ This binding means the owner can use the weapon much more efficiently, and the w
     </verbs>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Infused with Meldsap
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Meldsap
 Bound weapon | +10% higher accuracy | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1080000</lifespanTicks>
-				<lifespanBarColor>(70, 178, 83)</lifespanBarColor>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">

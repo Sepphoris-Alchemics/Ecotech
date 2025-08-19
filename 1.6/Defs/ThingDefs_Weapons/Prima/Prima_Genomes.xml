@@ -172,8 +172,8 @@ Endosap: 70, 178, 83-->
 				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Standard Genome | Dormant
-Accepts any sap transplant | +5 hp/day (unequipped)</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Dormant&lt;/color&gt;
+&lt;color=#dae691&gt;Accepts any sap transplant&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -189,8 +189,8 @@ Accepts any sap transplant | +5 hp/day (unequipped)</inspectString>
 				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Standard Genome | Matured
-Transplants impossible | +3.75 hp/day (unequipped)</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Matured&lt;/color&gt;
+&lt;color=#e6784a&gt;Transplants impossible&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -245,29 +245,14 @@ Transplants impossible | +3.75 hp/day (unequipped)</inspectString>
 
 	<!--=====Archsap=====-->
 
-
-	<ThingDef Name="BaseArchsapTerraweapon" Abstract="True" ParentName="BaseGun">
-		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-			</li>
-			<li Class="CompProperties_InspectString">
-				<inspectString>Archsap Genome | Immutable
-Unlimited lifespan | Persistent regeneration | +5 hp/day (unequipped)</inspectString>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-
 	<ThingDef Name="UpgradedArchsapTerraweapon" Abstract="True" ParentName="BaseGun">
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Archsap Genome | Matured
-Unlimited Lifespan | Persistent regeneration | +5 hp/day (unequipped)</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#ABAF6E&gt;Infused with Archsap&lt;/color&gt;
+&lt;color=#ABAF6E&gt;Unlimited Lifespan&lt;/color&gt; | &lt;color=#ABAF6E&gt;x2 health&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -367,27 +352,12 @@ Lifespan renewable via Vitapod</inspectString>
 
 	<!--=====Hypersap=====-->
 
-
-	<ThingDef Name="BaseHypersapTerraweapon" Abstract="True" ParentName="BaseGun">
-		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-			</li>
-			<li Class="CompProperties_InspectString">
-				<inspectString>Disorder Genome | Immutable
-Increased projectiles | Increased range | +3.75 hp/day (unequipped)</inspectString>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-
 	<ThingDef Name="UpgradedHypersapTerraweapon_Burst" Abstract="True" ParentName="BaseGun">
 		<comps>
 			<!--No healing over time-->
 			<li Class="CompProperties_InspectString">
-				<inspectString>Disorder Genome | Matured
-Increased projectiles | Increased range | Faster fire rate</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#9f73ff&gt;Infused with Hypersap&lt;/color&gt;
+&lt;color=#9f73ff&gt;Increased projectiles&lt;/color&gt; | &lt;color=#9f73ff&gt;Increased range&lt;/color&gt; | &lt;color=#9f73ff&gt;Faster fire rate&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -397,8 +367,8 @@ Increased projectiles | Increased range | Faster fire rate</inspectString>
 		<comps>
 			<!--No healing over time-->
 			<li Class="CompProperties_InspectString">
-				<inspectString>Disorder Genome | Matured
-Increased range | Faster fire rate</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#9f73ff&gt;Infused with Hypersap&lt;/color&gt;
+&lt;color=#9f73ff&gt;Increased range&lt;/color&gt; | &lt;color=#9f73ff&gt;Faster fire rate&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>

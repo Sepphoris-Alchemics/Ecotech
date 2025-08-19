@@ -20,25 +20,26 @@
 \nPrima Ecotech was the first gift from the Primordials, and could both provide both offense and defense... but it soon paled in comparison to every-pacing technology. Eventually, new Ecotech would be granted.
 \nAfter growing to their mature form, the projectile of the weapon is capable of inflicting thick briar tangles upon impact. This enables each projectile to wrap and stick around live targets, and repeated projectiles will further increase this ensnarement.
 This also develops the weapon's protective traits, causing more wood to form, external fluid growths to be used, and hardened epidermis plates to form in their location. These changes improve the overall weapon health.
-\nGeneral Prima family guidelines:
+\n&lt;color=#68bd46&gt;General Prima family guidelines:&lt;/color&gt;
+-Classification: Organic
 -Genetic Trait: Very quickly grown, burst weapons will have varied projectile counts
 -Growth Method: Terrapod
--Minimum Soil Fertility: 50%
+-Average Minimum Soil Fertility: 50%
 -Minimum Growth Duration: 4 days
 -Maximum Growth Duration: 10 days
 -Maximum Lifespan (Dormant): 14 days
 -Weapon Hitpoints (Dormant): 35
-\n-How to mature: Insert into Terravat. Requires 30 Glowsap to be present.
+\n&lt;color=#68bd46&gt;-How to mature:&lt;/color&gt; Insert into Terravat. Requires 30 Glowsap to be present.
 -Matured Trait: Burst weapons will have tighter/higher projectile counts
 -Matured Trait: +20 health
 -Matured Trait: Lower Flammability
 -Matured Growth Duration: 10 days + 50% of independent growth time
 -Maximum Lifespan (Matured): 18 days
 -Maximum Hitpoints (Matured): 55
-\n"Rebirth" trait: Prima Microturret seed
+\n&lt;color=#68bd46&gt;"Rebirth" trait: Prima Microturret seed&lt;/color&gt;
 -Dormant Prima weapons produce a microturret seed that matches it's parent weapon the best.
 -A matured Prima weapon produces a more vertasile seed, which can be shaped into any microturret at a Terraforge.
-\nGuideline notes:
+\n&lt;color=#68bd46&gt;Guideline notes:&lt;/color&gt;
 -Growth does not account for external factors, i.e. daylight cycles and map events.
 -All dormant weapons regenerate health, but only regenerate when unequipped and left alone.
 -Independent growth time refers to a Terrapod that ONLY grows the weapon in question.

@@ -72,7 +72,7 @@ The armor organic state allows it to absorb and disperse damage, and filters tox
 		</apparel>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Immutable
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Immutable
 -10% damage taken | 10% Toxic Resistance | -15% speed</inspectString>
 			</li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
@@ -131,7 +131,7 @@ The armor organic state allows it to absorb and disperse damage, and filters tox
 		</apparel>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Prima Genome | Immutable
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Immutable
 -5% damage taken | 10% Toxic Resistance</inspectString>
 			</li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
