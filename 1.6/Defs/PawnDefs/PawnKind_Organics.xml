@@ -44,6 +44,7 @@
 
 
   <PawnKindDef Abstract="True" Name="ET_EliteSentryBase" ParentName="ET_SentryBase">
+    <defaultFactionDef>ET_TerratechKeepers</defaultFactionDef>
     <combatPower>50</combatPower>
     <maxGenerationAge>45</maxGenerationAge>
     <gearHealthRange>
@@ -54,7 +55,6 @@
     <itemQuality>Normal</itemQuality>
     <apparelTags>      <!--to-do: make sure medieval gear can also spawn-->
       <li>Neolithic</li>
-      <li>Outlander</li>
       <li>ET_PlantArmorTag</li>
     </apparelTags>
     <apparelMoney>

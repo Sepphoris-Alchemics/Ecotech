@@ -72,6 +72,7 @@
     <slot>Adulthood</slot>
     <requiredWorkTags>
       <li>PlantWork</li>
+      <li>Hauling</li>
     </requiredWorkTags>
     <skillGains>
       <Plants>10</Plants>
@@ -148,11 +149,12 @@
       <li>Crafting</li>
       <li>Constructing</li>
       <li>ManualDumb</li>
+      <li>Hauling</li>
     </workDisables>
     <skillGains>
       <Melee>6</Melee>
-      <Intellectual>8</Intellectual>
-      <Plants>6</Plants>
+      <Intellectual>10</Intellectual>
+      <Plants>8</Plants>
     </skillGains>
     <requiredWorkTags>
       <li>Intellectual</li>
@@ -168,7 +170,7 @@
     <defName>ET_Alchemist</defName>
     <title>terratech alchemist</title>
     <titleShort>alchemist</titleShort>
-    <description>[PAWN_nameDef] was an alchemist of [PAWN_pronoun] tribe, primarily in charge of medicines and poisons. [PAWN_pronoun] both tended to any that needed care, and produced poisons - and their antidotes - whenever necessary. [PAWN_nameDef] also acted as an infusion specialist, combining terrasaps with weapons.</description>
+    <description>[PAWN_nameDef] was an alchemist of [PAWN_pronoun] tribe, primarily in charge of medicines and foods. [PAWN_pronoun] both tended to any that needed care, and produced poisons - and their antidotes - whenever necessary. [PAWN_nameDef] also acted as an infusion specialist, combining terrasaps with weapons.</description>
     <slot>Adulthood</slot>
     <workDisables>
       <li>Constructing</li>
@@ -176,10 +178,11 @@
     <requiredWorkTags>
       <li>Caring</li>
       <li>PlantWork</li>
-      <li>Crafting</li>
+      <li>Cooking</li>
     </requiredWorkTags>
     <skillGains>
-      <Plants>4</Plants>
+      <Plants>5</Plants>
+      <Cooking>6</Cooking>
       <Medicine>6</Medicine>
     </skillGains>
     <spawnCategories>
@@ -202,6 +205,7 @@
       <li>ManualDumb</li>
       <li>Mining</li>
       <li>PlantWork</li>
+      <li>Hauling</li>
     </requiredWorkTags>
     <skillGains>
       <Mining>6</Mining>
@@ -214,4 +218,34 @@
     <bodyTypeFemale>Female</bodyTypeFemale>
   </BackstoryDef>
 
+
+<BackstoryDef>
+    <defName>ET_Grovetender</defName>
+    <identifier>Grovetender</identifier>
+    <slot>Adulthood</slot>
+    <title>grovetender</title>
+    <titleShort>grovetender</titleShort>
+    <description>Throughout immense trials, conflict, and ambition, [PAWN_nameDef] was voted to lead of the few Terratech factions on the planet. [PAWN_pronoun] serves as the leader for the entire tribe, spending much of their life going from village to village, making sure the integrity terratech factions have held throughout history remains strong. [PAWN_pronoun] serves the most vital role in the faction, though it is custom to make sure another is ready to take [PAWN_possessive] place in the case of capture, or untimely death.\n\nDespite their high position they still partake in everyday tasks, working alongside the workers of the tribe.</description>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+      <li>Social</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Intellectual>8</Intellectual>
+      <Melee>6</Melee>
+      <Shooting>6</Shooting>
+      <Social>10</Social>
+    </skillGains>
+    <workDisables>Cleaning</workDisables>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <disallowedTraits>
+      <Psychopath>0</Psychopath>
+    </disallowedTraits>
+    <shuffleable>False</shuffleable>
+  </BackstoryDef>
 </Defs>
