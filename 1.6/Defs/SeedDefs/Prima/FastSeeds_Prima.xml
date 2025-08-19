@@ -149,9 +149,8 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
     </tradeTags>
     <allowedArchonexusCount>1</allowedArchonexusCount>
   </ThingDef>
-</Defs>
 
-<!--==========-->
+  <!--==========-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_FastSeed_PureTerrapod</defName>
@@ -199,4 +198,5 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
     </tradeTags>
     <allowedArchonexusCount>1</allowedArchonexusCount>
   </ThingDef>
+
 </Defs>
