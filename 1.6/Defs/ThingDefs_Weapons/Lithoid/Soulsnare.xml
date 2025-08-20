@@ -96,7 +96,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Lithoid-class | Stage 1 of 4
+				<inspectString>&lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
 Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 			</li>
 		</comps>
@@ -205,7 +205,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Lithoid-class | Stage 2 of 4
+				<inspectString>&lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
 Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 			</li>
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
@@ -361,8 +361,8 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Lithoid-class | Stage 3 of 4
-Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation | ???</inspectString>
+				<inspectString>&lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
+Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</inspectString>
 			</li>
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
 				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
@@ -408,8 +408,8 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 
 	<!--Tier 4: other increased stats-->
 	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>ET_SoulsnareRifleFour</defName>		<!--Counterpart: Prima OLR-->
-		<label>apex soulsnare rifle</label>
+		<defName>ET_SoulsnareRifleFour</defName>
+		<label>soulsnare prime</label>
 		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
 \n\nThe latest charge has greatly amplified all it's previous effects. Psychic disturbance is nearly as strong as a high drone, emotions are greatly disturbed, and interference with conciousness, speed, and manipulation can reach a much higher degree.
 \nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
@@ -529,8 +529,8 @@ Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation |
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Lithoid-class | Stage 4 of 4
-Inflicts psychic fatigue | Lowers conciousness | Lowers speed and manipulation | 1.5x effect bonus</inspectString>
+				<inspectString>&lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; | &lt;color=#FFC800&gt;Stage IV&lt;/color&gt;
+Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | 1.5x effect bonus</inspectString>
 			</li>
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
 				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
@@ -603,9 +603,10 @@ You will need to bring this weapon to a geocharger to regrow the crystals, and m
 		</thingCategories>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>Lithoid-class | Inert
+				<inspectString>&lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; | Inert
 Can be restored at a geocharger</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
+	
 </Defs>

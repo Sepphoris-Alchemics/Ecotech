@@ -22,11 +22,11 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		-->
 
 	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>ET_BiolithRifle</defName>		<!--Counterpart: Prima OLR-->
+		<defName>ET_BiolithRifle</defName>
 		<label>biolith rifle</label>
-		<description>A rifle that fuses both crystal and wood together, combining pros (and cons) of both. It's organic features have given it a strong wooden shell and the ability to be replanted, while it's crystalline features have granted it aceess to an optic pattern, and a dense bore that acts as an ammo source.
-\n\nDue to it's hybrid nature, this weapon can be quickly rejuvinated with shocksap or prismite. Alternatively, it can also be planted in the ground to be rejuvinated as an organic weapon. One is a matter of resources, while the other is a matter of time. It cannot be recharged.
-\nThe biolith rifle has no innate sap or other infusion ability, but it's optics do allow it to have a higher aim distance and ranged accuracy compared to other weapons. That said, these optics also impair it's close-combat potential.</description>
+		<description>A rifle that fuses both crystal and wood together, combining pros (and cons) of both. It's organic features have given it a strong wooden shell and the ability to be replanted, while it's crystalline features have granted it aceess to optics, and the ability to fire entire sections of it's bore at once.
+\n\nDespite being a hybrid weapon, it functions nearly identical to an organic weapon. It has a relatively short lifespan compared to other hybrid weapons, but it can regenerate it's crystal properties constantly, as opposed to the crystals requiring charge to regenerate. It can also be revitalized with both sunsap and starsap.
+\nThe biolith rifle has no innate sap or other infusion ability, but it can fire a massive, high-speed crystal spear thanks to it's large bore. It's optics allow for high accuracy at ranges, but this impacts it's effectiveness against closer targets.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/BiolithRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -96,11 +96,11 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(91, 61, 48)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(67, 102, 111)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
 			</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Ancient Genome | Immutable
-Scoped Weapon | +1 hp/day (unequipped)</inspectString>
+      <inspectString>&lt;color=#A4D6B5&gt;Hybrid-class&lt;/color&gt; | &lt;color=#A4D6B5&gt;Immutable&lt;/color&gt;
+&lt;color=#A4D6B5&gt;Replantable&lt;/color&gt; | &lt;color=#A4D6B5&gt;Fires a powerful anti-armor shot&lt;/color&gt;</inspectString>
       </li>
 		</comps>
 	</ThingDef>

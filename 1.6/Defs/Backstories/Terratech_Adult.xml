@@ -90,7 +90,7 @@
     <defName>ET_Geosmith</defName>
     <title>terratech geosmith</title>
     <titleShort>geosmith</titleShort>
-    <description>[PAWN_nameDef] spent most of their life around lithoid-class weapons. These weapons required constant upkeep, and [PAWN_nameDef] not only made sure each weapon reached it's highest evolution, but also made sure each one performed to their expectations.</description>
+    <description>[PAWN_nameDef] spent most of their life around &lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; weapons. These weapons required constant upkeep, and [PAWN_nameDef] not only made sure each weapon reached it's highest evolution, but also made sure each one performed to their expectations.</description>
     <slot>Adulthood</slot>
     <workDisables>
       <li>Intellectual</li>

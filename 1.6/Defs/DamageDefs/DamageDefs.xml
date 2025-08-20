@@ -222,7 +222,7 @@
 		<additionalHediffs>
 			<li>
 				<hediff>ET_RadianceBuildup</hediff>
-				<severityPerDamageDealt>0.028</severityPerDamageDealt>
+				<severityPerDamageDealt>0.05</severityPerDamageDealt>
 			</li>
 		</additionalHediffs>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>

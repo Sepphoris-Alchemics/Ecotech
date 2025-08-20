@@ -322,33 +322,17 @@ Lifespan renewable via Vitapod</inspectString>
 	</ThingDef>
 
 
-	<!--=====Hemsap=====-->
+	<!--=====Toxsap=====-->
 
-
-	<ThingDef Name="BaseHemsapTerraweapon" Abstract="True" ParentName="BaseGun">
-		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-			</li>
-			<li Class="CompProperties_InspectString">
-				<inspectString>Hemsap Genome | Immutable
-+1 damage | Projectiles inject neurotoxin | +3.75 hp/day (unequipped)</inspectString>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-
-	<ThingDef Name="UpgradedHemsapTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="UpgradedToxsapTerraweapon" Abstract="True" ParentName="BaseGun">
 		<comps>
 			<!--No healing over time-->
 			<li Class="CompProperties_InspectString">
-				<inspectString>Hemsap Genome | Matured
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Toxsap
 +1 damage | Projectiles inflict neurotoxin</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
-
 
 	<!--=====Hypersap=====-->
 

@@ -103,7 +103,7 @@ Stage 4: grants new beam-like attack
         <baseReloadTicks>90</baseReloadTicks>
       </li>-->
     <li Class="CompProperties_InspectString">
-      <inspectString>Ancient Genome | Stage 1 of 4
+      <inspectString>&lt;color=#D16195&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D16195&gt;Stage I&lt;/color&gt;
 Royal Weapon | ??? | ??? | ???</inspectString>
       </li>
 		</comps>
@@ -209,7 +209,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
         <baseReloadTicks>90</baseReloadTicks>
       </li>-->
     <li Class="CompProperties_InspectString">
-      <inspectString>Ancient Genome | Stage 2 of 4
+      <inspectString>&lt;color=#D16195&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D16195&gt;Stage II&lt;/color&gt;
 Royal Weapon | +20% social impact | ??? | ???</inspectString>
       </li>
 		</comps>
@@ -313,7 +313,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
         <baseReloadTicks>90</baseReloadTicks>
       </li>-->
     <li Class="CompProperties_InspectString">
-      <inspectString>Ancient Genome | Stage 3 of 4
+      <inspectString>&lt;color=#D16195&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D16195&gt;Stage III&lt;/color&gt;
 Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
       </li>
 		</comps>
@@ -415,7 +415,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
 				<minRange>0</minRange>
 				<range>29.9</range>
-				<soundCast>Shot_Shotgun</soundCast>
+				<soundCast>Explosion_EMP</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 				<commonality>0.1</commonality>
 			</li>
@@ -475,7 +475,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 				</verbProps>
 			</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Ancient Genome | Fully charged
+      <inspectString>&lt;color=#D16195&gt;Hybrid-class&lt;/color&gt; | &lt;color=#FFC800&gt;Stage IV&lt;/color&gt;
 Royal Weapon | +20% social impact | Slows/stuns targets | Secondary Beam Attack</inspectString>
       </li>
 		</comps>
