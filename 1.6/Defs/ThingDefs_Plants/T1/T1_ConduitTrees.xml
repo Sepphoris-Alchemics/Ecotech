@@ -198,7 +198,7 @@ While this tree is present, weapons and seeds will be created at the base of the
     <label>Primwood Custodian Tree</label>
     <description>The Primwood Custodian Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live efficiently under natural resources. Custodian trees tend to the surrounding terrain, enriching it to a sap-infused terrain.
 This sap-infused terrain is required for more advanced terraplants, as normal terrains simply can't supply the nutrients. All nearby soil terrains become enriched. Note that the Custodian cannot affect wet, stony, or dry terrains.
-The terrain this tree makes can support normal plants as well. However, this feature is specific to the Custodian Tree; evolutions of it - such as the Fieldkeeper - produce terrain that is toxic to normal plants.</description>
+The terrain this tree makes can support normal plants as well. However, this feature is specific to the Custodian Tree; evolutions of it - such as the Groveseer - produce terrain that is toxic to normal plants.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Plant/ConduitTrees/PrimwoodCustodianTree</texPath>
