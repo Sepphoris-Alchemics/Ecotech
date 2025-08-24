@@ -379,7 +379,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 			<li>
 				<label>VivicoreBeamShot</label>
 				<verbClass>Verb_ShootBeam</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/RadianceFlash</commandIcon>
 				<hasStandardCommand>true</hasStandardCommand>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
