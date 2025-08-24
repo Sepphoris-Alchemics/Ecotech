@@ -2,7 +2,7 @@
 <Defs>
 
 	<HediffDef>
-		<defName>ET_NutrientRoots</defName>
+		<defName>ET_NutrientRootsHediff</defName>
 		<hediffClass>Hediff</hediffClass>
 		<label>nutrient roots</label>
 		<labelNoun>nutrient roots</labelNoun>

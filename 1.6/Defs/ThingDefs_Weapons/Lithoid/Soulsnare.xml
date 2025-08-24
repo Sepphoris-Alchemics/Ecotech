@@ -142,7 +142,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 			<li>
 				<label>SoulsnareRifleBlueCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlue</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -161,7 +161,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 			<li>
 				<label>SoulsnareRiflePurpleCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnarePurple</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -218,7 +218,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlue</switchIcon>
 								<startEnabled>true</startEnabled>
 							</li>
 						</comps>
@@ -230,7 +230,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnarePurple</switchIcon>
 							</li>
 						</comps>
 					</li>
@@ -279,7 +279,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 			<li>
 				<label>SoulsnareRifleBlueCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlue</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -298,7 +298,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 			<li>
 				<label>SoulsnareRiflePurpleCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnarePurple</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -317,7 +317,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 			<li>
 				<label>SoulsnareRifleBlackCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlack</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -374,7 +374,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlue</switchIcon>
 								<startEnabled>true</startEnabled>
 							</li>
 						</comps>
@@ -386,7 +386,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnarePurple</switchIcon>
 							</li>
 						</comps>
 					</li>
@@ -397,7 +397,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlack</switchIcon>
 							</li>
 						</comps>
 					</li>
@@ -447,7 +447,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 			<li>
 				<label>SoulsnareRifleBlueCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlue</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -466,7 +466,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 			<li>
 				<label>SoulsnareRiflePurpleCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnarePurple</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -485,7 +485,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 			<li>
 				<label>SoulsnareRifleBlackCrystal</label>
 				<verbClass>Verb_Shoot</verbClass>
-				<commandIcon>UI/Icons/Projectiles/ThornClusterLarge</commandIcon>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlack</commandIcon>
 				<accuracyTouch>0.85</accuracyTouch>
 				<accuracyShort>0.85</accuracyShort>
 				<accuracyMedium>0.75</accuracyMedium>
@@ -542,7 +542,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | 1.5x e
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlue</switchIcon>
 								<startEnabled>true</startEnabled>
 							</li>
 						</comps>
@@ -554,7 +554,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | 1.5x e
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnarePurple</switchIcon>
 							</li>
 						</comps>
 					</li>
@@ -565,7 +565,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | 1.5x e
 						<canBeToggled>true</canBeToggled>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
-								<switchIcon>UI/Icons/Projectiles/ThornClusterLarge</switchIcon>
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlack</switchIcon>
 							</li>
 						</comps>
 					</li>
@@ -580,7 +580,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | 1.5x e
 		<defName>ET_SoulsnareRifleDrained</defName>
 		<label>Drained soulsnare rifle</label>
 		<description>A soulsnare rifle that is devoid of even the slightest charge. Due to how inert it is, the crystals it once posessed have completely deteriorated.
-You will need to bring this weapon to a geocharger to regrow the crystals, and make it usable again. The absence of crystals has regressed it to stage I.
+You will need to bring this weapon to a prismite crucible to regrow the crystals, and make it usable again. The absence of crystals has regressed it to stage I.
 5 starsap is required to restore it to a usable condition, on top of the shocksap required to charge it.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
@@ -604,9 +604,9 @@ You will need to bring this weapon to a geocharger to regrow the crystals, and m
 		<comps>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; | Inert
-Can be restored at a geocharger</inspectString>
+Can be restored at a prismite crucible</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
-	
+
 </Defs>

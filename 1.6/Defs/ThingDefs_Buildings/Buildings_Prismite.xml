@@ -10,9 +10,9 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_CrystalCharger</defName>
-    <label>prismite geocharger</label>
-    <description>A crystal chamber that drops deep into the planet. This particular structure holds large amounts of shocksap, which is generally used for evolving lithoid weapons and items.
+    <defName>ET_CrystalCrucible</defName>
+    <label>prismite crucible</label>
+    <description>A crystal chamber that snakes deep into the planet. This particular structure holds large amounts of shocksap, which is generally used for creating and evolving lithoid weapons and items.
 This vessel will combine nearby shocksap, and a nearby lithoid weapon, and will evolve it to the next stage. The amount of shocksap this can hold is quite high, and can evolve most lithoid weapons.
 Stone and crystal weapons are durable and unmoving. They take a longer time to evolve more than organic or hybrid weapons.</description>
     <size>(1,1)</size>
@@ -53,7 +53,7 @@ Stone and crystal weapons are durable and unmoving. They take a longer time to e
     <pathCost>42</pathCost>
     <surfaceType>Item</surfaceType>
     <killedLeavings>
-      <WoodLog>12</WoodLog>
+      <ET_TierTwoCrystal>20</ET_TierTwoCrystal>
     </killedLeavings>
     <building>
       <deconstructible>false</deconstructible>
@@ -64,12 +64,53 @@ Stone and crystal weapons are durable and unmoving. They take a longer time to e
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
     <tickerType>Rare</tickerType>
-    <rotatable>true</rotatable>
+    <rotatable>false</rotatable>
     <uiOrder>2710</uiOrder>
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>3.9</glowRadius>
         <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Right-click to insert heart
+Place materials nearby to charge items</inspectString>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_ThingConverter">
+        <compClass>Ecotech.ThingComp_ThingConverter</compClass>
+        <!-- when a pawn carries items to the converter / takes them out, this is how long they stand in front of the building-->
+        <timeToFillTicks>600</timeToFillTicks>
+        <timeToEmptyTicks>600</timeToEmptyTicks>
+        <drawFillableBar>true</drawFillableBar>
+        <!-- x, y, z offset for the bar. centered by default -->
+        <fillableBarDrawOffset>(0, 0.00001, 0)</fillableBarDrawOffset>
+        <fillableBarSize>(0.55, 0.1)</fillableBarSize>
+        <fillableBarBackgroundColor>(21, 25, 29)</fillableBarBackgroundColor>
+        <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
+        <inputThings>
+          <!-- needs exactly one entry -->
+          <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+        </inputThings>
+        <conversionDurationTicks>480000</conversionDurationTicks>
+        <potentialResults>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_SoulsnareRifleOne>1</ET_SoulsnareRifleOne>
+            </things>
+          </li>
+          <!--<li>
+            <weight>1</weight>
+            <things>
+              <ET_Brightsap>1</ET_Brightsap>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_Hypersap>1</ET_Hypersap>
+            </things>
+          </li>-->
+        </potentialResults>
       </li>
       <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
         <isAssemblingPawn>false</isAssemblingPawn>

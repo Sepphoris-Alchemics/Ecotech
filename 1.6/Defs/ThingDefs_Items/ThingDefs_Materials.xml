@@ -280,6 +280,43 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 
+<!-- ================ Terrathyst Heart ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TierOneCrystalHeart</defName>
+        <label>terrathyst heart</label>
+        <description>A clump of terrathyst that has melded together, forming a sharp, sealed vessel that contained shocksap. Critical to creating most &lt;color=#D46F44&gt;Lithoid-class&lt;/color&gt; items or structures that require charge.
+\n\nPlacing this in a prismite crucible will cause it to start creating a random lithoid-class weapon or growth. this process takes a while, and once the item emerges, it generally requires more attention to reach it's full potential. As it contains shocksap already, only the heart is needed for this process.</description>
+        <graphicData>
+            <texPath>Things/Resource/TerrathystHeart</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.4</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>750</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>1.4</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.25</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
 <!--=====Prismite=====-->
 
     <ThingDef ParentName="ResourceBase">

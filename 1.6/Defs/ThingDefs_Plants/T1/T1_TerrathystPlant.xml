@@ -213,6 +213,41 @@ Terrathyst must be grown in sap-enriched bays.</description>
               <ET_TierTwoCrystal>8</ET_TierTwoCrystal>
             </things>
           </li>
+          <!--Terrathyst heart additions-->
+          <li>
+            <weight>0.2</weight>
+            <things>
+              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+            </things>
+          </li>
+          <li>
+            <weight>0.1</weight>
+            <things>
+              <ET_TierOneCrystal>4</ET_TierOneCrystal>
+              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+            </things>
+          </li>
+          <li>
+            <weight>0.1</weight>
+            <things>
+              <ET_TierOneCrystal>6</ET_TierOneCrystal>
+              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+            </things>
+          </li>
+          <li>
+            <weight>0.1</weight>
+            <things>
+              <ET_TierOneCrystal>8</ET_TierOneCrystal>
+              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+            </things>
+          </li>
+          <li>
+            <weight>0.1</weight>
+            <things>
+              <ET_TierOneCrystal>10</ET_TierOneCrystal>
+              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+            </things>
+          </li>
         </potentialSpawnedThings>
       </li>
       <li Class="CompProperties_Glower">
@@ -227,4 +262,5 @@ Terrathyst must be grown in sap-enriched bays.</description>
       </li>
     </comps>
   </ThingDef>
+  
 </Defs>
