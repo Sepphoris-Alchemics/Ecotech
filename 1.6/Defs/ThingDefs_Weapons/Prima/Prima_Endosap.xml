@@ -20,7 +20,7 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
@@ -132,7 +132,7 @@ Genome: Prima</inspectString>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>LongShots</li>

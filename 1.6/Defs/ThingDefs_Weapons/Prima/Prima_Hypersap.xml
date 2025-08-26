@@ -16,7 +16,7 @@ At their matured form, they are given their maturity increases-->
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
 		</weaponTags>
     <weaponClasses>
       <li>LongShots</li>

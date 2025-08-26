@@ -12,7 +12,8 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ET_InitiateWildWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -106,7 +107,8 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ET_InitiateWildWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>ShortShots</li>

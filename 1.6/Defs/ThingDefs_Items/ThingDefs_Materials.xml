@@ -125,7 +125,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <tradeability>Sellable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <stackLimit>500</stackLimit>
-        <smallVolume>true</smallVolume>
+        <smallVolume>false</smallVolume>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
@@ -174,7 +174,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <description>Organic plates of Elderwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
 \n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. However, the wood present on Prima weapons is reminiscent of Primwood's own sapwood or heartwood, but softer and smoother.</description>
         <graphicData>
-            <texPath>Things/Resource/Primwood</texPath>
+            <texPath>Things/Resource/Elderwood</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <generateCommonality>0</generateCommonality>
@@ -196,7 +196,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <burnableByRecipe>true</burnableByRecipe>
         <healthAffectsPrice>false</healthAffectsPrice>
         <stuffProps>
-            <stuffAdjective>primwood</stuffAdjective>
+            <stuffAdjective>elderwood</stuffAdjective>
             <categories>
                 <li>Woody</li>
             </categories>

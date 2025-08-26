@@ -32,7 +32,11 @@
     </backstoryFilters>
     <!--<backstoryCategories>
       <li>ET_OrganicFactionBackstories</li>
-    </backstoryCategories>-->
+    </backstoryCategories>
+<apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>-->
     <raidCommonalityFromPointsCurve>
       <points>
         <li>(0, .5)</li>
@@ -107,7 +111,7 @@
       <li>
         <kindDef>Trader</kindDef>
         <traders>
-          <Town_Trader>1</Town_Trader>
+          <ET_BriarTrader>1</ET_BriarTrader>
         </traders>
         <carriers>
           <Muffalo>1</Muffalo>

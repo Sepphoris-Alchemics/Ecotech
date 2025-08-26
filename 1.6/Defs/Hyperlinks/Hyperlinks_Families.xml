@@ -9,7 +9,7 @@
 	<makesSickThought>false</makesSickThought>
 	</HediffDef>
 
-	<HediffDef Name="ET_OverviewPlantWeapons" ParentName="ET_OverviewPlants" Abstract="True">
+	<HediffDef Name="ET_OverviewET_PlantWeapon" ParentName="ET_OverviewPlants" Abstract="True">
     <chronic>true</chronic>
   </HediffDef>-->
 

@@ -28,13 +28,23 @@
     <initialResistanceRange>21~45</initialResistanceRange>
   </PawnKindDef>
 
-  <PawnKindDef Name="ET_SentryBase" Abstract="True">
+  <PawnKindDef ParentName="TribalBase" Name="ET_SentryBase" Abstract="True">
     <race>Human</race>
     <defaultFactionType>ET_OrganicFaction</defaultFactionType>
     <backstoryCategories>
-      <li>TerratechTribal</li>
+      <li>ET_TerratechBackstories</li>
     </backstoryCategories>
-    <initialWillRange>21~45</initialWillRange>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+    <weaponTags>
+      <li>ET_PrimaMeleeBasic</li>
+      <li>ET_BriarWeapon</li>
+      <li>ET_InitiateHeavyWeapon</li>
+    </weaponTags>
+    <weaponMoney>10~300</weaponMoney>
+    <initialWillRange>21~60</initialWillRange>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <invNutrition>2.55</invNutrition>
     <itemQuality>Normal</itemQuality>
@@ -53,19 +63,17 @@
     </gearHealthRange>
     <canBeSapper>true</canBeSapper>
     <itemQuality>Normal</itemQuality>
-    <apparelTags>      <!--to-do: make sure medieval gear can also spawn-->
+    <apparelTags>
       <li>Neolithic</li>
       <li>ET_PlantArmorTag</li>
+      <li>ET_InitiateHeavyWeapon</li>
     </apparelTags>
     <apparelMoney>
       <min>2500</min>
       <max>4200</max>
     </apparelMoney>
     <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
-    <weaponMoney>
-      <min>800</min>
-      <max>1600</max>
-    </weaponMoney>
+    <weaponMoney Inherit="false">800~1600</weaponMoney>
     <combatEnhancingDrugsCount>
       <min>0</min>
       <max>2</max>
@@ -98,8 +106,29 @@
     <initialResistanceRange>15~30</initialResistanceRange>
   </PawnKindDef>
 
+  <!--Trader-->
+  <PawnKindDef ParentName="ET_EliteSentryBase">
+    <defName>ET_BriarTrader</defName>
+    <combatPower>150</combatPower>
+    <label>terratech trader</label>
+    <labelPlural>terratech trader</labelPlural>
+    <minGenerationAge>40</minGenerationAge>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <weaponTags>
+      <li>ET_BriarWeapon</li>
+      <li>ET_PrimaRangedUpgraded</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+  </PawnKindDef>
 
-<!--Uses Briar weaponry; very dangerous-->
+  <!--Uses Briar weaponry; very dangerous-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_BriarSentry_Random</defName>
     <combatPower>150</combatPower>
@@ -110,9 +139,16 @@
     <weaponTags>
       <li>ET_BriarWeapon</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses wild weaponry-->
+  <!--Uses wild weaponry-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_WildSentry_Random</defName>
     <combatPower>120</combatPower>
@@ -122,9 +158,16 @@
     <weaponTags>
       <li>ET_InitiateWildWeapon</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses heavy Prima and Perennial weaponry, such as sap launchers and hypercannons-->
+  <!--Uses heavy Prima and Perennial weaponry, such as sap launchers and hypercannons-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_InitiateSentry_HeavyAll</defName>
     <combatPower>120</combatPower>
@@ -134,9 +177,16 @@
     <weaponTags>
       <li>ET_InitiateHeavyWeapon</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses Perennial melee weapons-->
+  <!--Uses Perennial melee weapons-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_PerennialSentry_MeleeAll</defName>
     <combatPower>60</combatPower>
@@ -146,9 +196,16 @@
     <weaponTags>
       <li>ET_PerennialMelee</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses basic and upgraded Prima ranged weapons-->
+  <!--Uses basic and upgraded Prima ranged weapons-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_PrimaSentry_GunnerBasic</defName>
     <combatPower>60</combatPower>
@@ -158,9 +215,16 @@
     <weaponTags>
       <li>ET_PrimaRangedBasic</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses basic and upgraded Prima melee weapons-->
+  <!--Uses basic and upgraded Prima melee weapons-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_PrimaSentry_FighterBasic</defName>
     <combatPower>60</combatPower>
@@ -172,7 +236,7 @@
     </weaponTags>
   </PawnKindDef>
 
-<!--Uses infused Prima ranged weapons; excludes advanced saps-->
+  <!--Uses infused Prima ranged weapons; excludes advanced saps-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_PrimaSentry_GunnerInfused</defName>
     <combatPower>60</combatPower>
@@ -182,9 +246,16 @@
     <weaponTags>
       <li>ET_PrimaRangedInfused</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses infused Prima melee weapons; excludes advanced saps-->
+  <!--Uses infused Prima melee weapons; excludes advanced saps-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_PrimaSentry_FighterInfused</defName>
     <combatPower>60</combatPower>
@@ -194,9 +265,16 @@
     <weaponTags>
       <li>ET_PrimaMeleeInfused</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses Prima and Perennial weapons with range, such as Casters and rifles-->
+  <!--Uses Prima and Perennial weapons with range, such as Casters and rifles-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_Sentry_RangerAll</defName>
     <combatPower>90</combatPower>
@@ -206,9 +284,16 @@
     <weaponTags>
       <li>ET_InitiateRangerWeapon</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Uses Prima and Perennial CQC weapons, such as shotguns and SMGs-->
+  <!--Uses Prima and Perennial CQC weapons, such as shotguns and SMGs-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_Sentry_SkirmisherAll</defName>
     <combatPower>90</combatPower>
@@ -218,9 +303,16 @@
     <weaponTags>
       <li>ET_InitiateSmirmisherWeapon</li>
     </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
   </PawnKindDef>
 
-<!--Faction leader; only uses Royal weapons-->
+  <!--Faction leader; only uses Royal weapons-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_SentryElite</defName>
     <combatPower>180</combatPower>
@@ -233,6 +325,13 @@
     </weaponTags>
     <apparelTags>
       <li>ET_SentryEliteApparel</li>
+    </apparelTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
     </apparelTags>
   </PawnKindDef>
 

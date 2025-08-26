@@ -21,7 +21,7 @@ Accuracy follows charge rifles-->
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
 		</weaponTags>
 		<!--<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>

@@ -25,7 +25,7 @@ Stage 4: grants new beam-like attack
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
 			<li>HybridWeapons</li>
 		</weaponTags>
 		<weaponClasses>
@@ -131,7 +131,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
 			<li>HybridWeapons</li>
 		</weaponTags>
 		<weaponClasses>
@@ -235,7 +235,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
 			<li>HybridWeapons</li>
 		</weaponTags>
 		<weaponClasses>
@@ -339,7 +339,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
 			<li>HybridWeapons</li>
 			<li>FullyChargedWeapons</li>
 		</weaponTags>

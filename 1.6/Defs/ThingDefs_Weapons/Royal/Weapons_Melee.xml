@@ -23,7 +23,7 @@ Accuracy follows charge rifles-->
       <li>WeaponsMelee</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
 		</weaponTags>
 		<!--<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>

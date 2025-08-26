@@ -34,7 +34,8 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ET_InitiateWildWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>

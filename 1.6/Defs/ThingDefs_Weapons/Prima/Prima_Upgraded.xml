@@ -36,8 +36,8 @@
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
-			<li>PlantWeaponsUpgraded</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedUpgraded</li>
 		</weaponTags>
     <weaponClasses>
 			<li>ShortShots</li>
@@ -115,7 +115,8 @@
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedUpgraded</li>
 		</weaponTags>
     <weaponClasses>
       <li>RangedLight</li>
@@ -210,7 +211,8 @@ While this weapon doesn't feature any notable features, uninfused weapons are re
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedUpgraded</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
@@ -299,7 +301,8 @@ While this weapon doesn't feature any notable features, uninfused weapons are re
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedUpgraded</li>
 		</weaponTags>
     <weaponClasses>
       <li>LongShots</li>

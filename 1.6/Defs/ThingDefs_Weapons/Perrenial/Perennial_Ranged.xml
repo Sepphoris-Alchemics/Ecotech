@@ -16,7 +16,8 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PerennialWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -103,7 +104,8 @@ Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PerennialWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -200,7 +202,8 @@ The Tricaster features the following bonuses and penalties:
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PerennialWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -289,7 +292,8 @@ Stage 2: Perennial Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspect
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PerennialWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>

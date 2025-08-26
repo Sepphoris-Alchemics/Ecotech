@@ -306,7 +306,7 @@ Archwood: 2000
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
 		</weaponTags>
     <weaponClasses>
       <li>Ranged</li>

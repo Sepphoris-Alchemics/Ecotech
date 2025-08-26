@@ -16,7 +16,7 @@
       <li>WeaponsMelee</li>
     </thingCategories>
     <weaponTags>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Melee</li>
@@ -36,7 +36,8 @@
       <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PerennialMelee</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>

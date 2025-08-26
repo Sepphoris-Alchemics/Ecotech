@@ -12,7 +12,7 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
 		</weaponTags>
     <weaponClasses>
 			<li>LongShots</li>
@@ -89,7 +89,8 @@
 		</graphicData>
 		<soundInteract>Interact_Revolver</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedBasic</li>
 		</weaponTags>
     <weaponClasses>
 			<li>RangedLight</li>
@@ -167,7 +168,8 @@
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedBasic</li>
 		</weaponTags>
     <weaponClasses>
 			<li>ShortShots</li>
@@ -274,7 +276,8 @@
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedBasic</li>
 		</weaponTags>
     <weaponClasses>
 			<li>ShortShots</li>
@@ -352,7 +355,8 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedBasic</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>

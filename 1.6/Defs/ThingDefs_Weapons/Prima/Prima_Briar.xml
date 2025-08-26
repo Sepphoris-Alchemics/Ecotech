@@ -33,9 +33,9 @@ Briar weapons also retain the random projectile output, though with higher accur
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
-			<li>ApexWeaponns</li>
-			<li>BriarWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ApexWeapon</li>
+			<li>BriarWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>ShortShots</li>
@@ -114,9 +114,9 @@ Briar weapons also retain the random projectile output, though with higher accur
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>PlantWeapons</li>
-			<li>ApexWeapons</li>
-			<li>BriarWeapons</li>
+			<li>ET_PlantWeapon</li>
+			<li>ApexWeapon</li>
+			<li>BriarWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>RangedLight</li>

@@ -84,7 +84,7 @@
 
   <TraderKindDef>
     <defName>ET_OrganicCaravan_Seeds</defName>
-    <label>Terraseeds trader</label>
+    <label>terraseeds trader</label>
     <commonality>0.4</commonality>
     <stockGenerators>
       <li Class="StockGenerator_SingleDef">
@@ -194,7 +194,7 @@
 
   <TraderKindDef>
     <defName>ET_OrganicCaravan_Saps</defName>
-    <label>Terrasaps trader</label>
+    <label>terrasaps trader</label>
     <commonality>0.4</commonality>
     <stockGenerators>
       <li Class="StockGenerator_SingleDef">

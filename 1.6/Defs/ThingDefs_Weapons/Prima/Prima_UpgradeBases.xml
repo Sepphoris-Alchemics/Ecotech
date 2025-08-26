@@ -30,8 +30,8 @@
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
-			<li>PlantWeaponsUpgraded</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedUpgraded</li>
 		</weaponTags>
     <weaponClasses>
 			<li>ShortShots</li>

@@ -16,7 +16,7 @@
       <li>WeaponsMelee</li>
     </thingCategories>
     <weaponTags>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Melee</li>
@@ -39,7 +39,8 @@
       <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaMeleeBasic</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
@@ -95,7 +96,7 @@
 
 	<ThingDef ParentName="BaseWeapon">
 		<defName>ET_PrimaMace</defName>
-		<label>prima briarmaul</label>
+		<label>prima maul</label>
 		<description>A hefy organic mace, lined with both massive spikes, and tiny thistles. The uniquely formed head inflicts both crushing and cutting damage.
 \nUnlike it's ranged counterparts, Prima melee weapons are simple enough to be fully grown upon first harvest. This allows them to be infused with a different sap as soon as desired.</description>
 		<graphicData>
@@ -110,7 +111,8 @@
       <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaMeleeBasic</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
@@ -174,7 +176,8 @@
       <li>BasicTerraweapons</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
-      <li>PlantWeapons</li>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaMeleeBasic</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
