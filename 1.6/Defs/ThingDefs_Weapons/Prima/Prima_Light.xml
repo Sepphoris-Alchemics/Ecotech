@@ -80,8 +80,8 @@
 
 	<ThingDef ParentName="BaseUnupgradableTerraweapon"> <!--Counterpart: Revolver-->
 		<defName>ET_PrimaPistol</defName>
-		<label>prima pistol</label>
-		<description>A biotic weapon, patterned off of an ornate pistol design, and grown straight from a specialized pod. While not very powerful, it is quite quick to fire, and relatively fast to grow.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<label>prima minishot</label>
+		<description>A biotic weapon, patterned off of a pistol design, and grown straight from a specialized pod. While not very powerful, it is quite quick to fire, and relatively fast to grow.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/ET_PrimaPistolBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

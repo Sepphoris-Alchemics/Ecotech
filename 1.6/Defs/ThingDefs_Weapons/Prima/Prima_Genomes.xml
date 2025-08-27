@@ -197,11 +197,12 @@ Endosap: 70, 178, 83-->
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
-&lt;color=#dae691&gt;Unable to be evolved or infused&lt;/color&gt;</inspectString>
+&lt;color=#e6784a&gt;Unable to be evolved or infused&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
 
+	<!--=====Basic upgraded terraweapon=====-->
 
 	<ThingDef Name="UpgradedUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>

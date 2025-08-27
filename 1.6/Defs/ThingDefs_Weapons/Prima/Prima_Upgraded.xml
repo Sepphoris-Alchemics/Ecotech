@@ -25,6 +25,83 @@
 			Mature Normal: 18 days (1080000) | 45 health
 			Mature Heavy: 20 days (1200000) | 50 health-->
 
+	<ThingDef ParentName="BaseUnupgradableTerraweapon"> <!--Counterpart: Revolver-->
+		<defName>ET_PrimaPistolUpgraded</defName>
+		<label>prima biopistol</label>
+		<description>The matured form of the prima minishot. While still not very powerful, it's easily carried, has decent lifepspan length, and the damage is strong enough to fend against predators and raiders. It's still vastly inferior to other weapons, however.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaPistolBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.7</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedBasic</li>
+		</weaponTags>
+    <weaponClasses>
+			<li>RangedLight</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.45</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>4000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornPistol</defaultProjectile>
+        <warmupTime>0.375</warmupTime>
+        <range>22.9</range>
+        <soundCast>ET_Sound_BlowgunLight</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+			<comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>840000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon">
 		<defName>ET_PrimaShotgunUpgraded</defName>
 		<label>prima sprigshot</label>
