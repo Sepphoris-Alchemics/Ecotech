@@ -1,10 +1,6 @@
-﻿using HarmonyLib;
-using NAudio.Utils;
-using RimWorld;
+﻿using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -21,7 +17,7 @@ namespace Ecotech
         {
             get
             {
-                if (!isCurrentlyConverting)
+                if(!isCurrentlyConverting)
                 {
                     return 0;
                 }
@@ -36,7 +32,7 @@ namespace Ecotech
         {
             get
             {
-                if (outputContents.NullOrEmpty())
+                if(outputContents.NullOrEmpty())
                 {
                     return "";
                 }
@@ -50,23 +46,23 @@ namespace Ecotech
 
         public AcceptanceReport CanBeFilledOrEmtpiedBy(Pawn pawn)
         {
-            if (isCurrentlyConverting)
+            if(isCurrentlyConverting)
             {
                 return "Ecotech_FailureReason_CurrentlyConverting".Translate();
             }
-            if (!(parent is Building building))
+            if(!(parent is Building building))
             {
                 return "Ecotech_FailureReason_NotABuilding".Translate();
             }
-            if (pawn.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) != null)
+            if(pawn.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) != null)
             {
                 return "Ecotech_FailureReason_DesignatedForDeconstruct".Translate();
             }
-            if (building.IsForbidden(pawn))
+            if(building.IsForbidden(pawn))
             {
                 return "Ecotech_FailureReason_IsForbidden".Translate();
             }
-            if (!pawn.CanReserve(building))
+            if(!pawn.CanReserve(building))
             {
                 return "Ecotech_FailureReason_CannotReserve".Translate();
             }
@@ -79,20 +75,20 @@ namespace Ecotech
             thingToFillWith = null;
             thingCount = 0;
             AcceptanceReport filledOrEmptiedReport = CanBeFilledOrEmtpiedBy(pawn);
-            if (!filledOrEmptiedReport)
+            if(!filledOrEmptiedReport)
             {
                 return filledOrEmptiedReport;
             }
-            if (!outputContents.NullOrEmpty())
+            if(!outputContents.NullOrEmpty())
             {
                 return "Ecotech_FailureReason_NeedsToBeEmptied".Translate();
             }
-            if (inputCount >= Props.InputThing.count)
+            if(inputCount >= Props.InputThing.count)
             {
                 return "Ecotech_FailureReason_AlreadyFull".Translate();
             }
             thingToFillWith = FindInputFor(pawn, out thingCount);
-            if (thingToFillWith == null)
+            if(thingToFillWith == null)
             {
                 return "Ecotech_FailureReason_NoFillThing".Translate();
             }
@@ -101,11 +97,11 @@ namespace Ecotech
 
         public bool CanBeEmptiedBy(Pawn pawn)
         {
-            if (!CanBeFilledOrEmtpiedBy(pawn))
+            if(!CanBeFilledOrEmtpiedBy(pawn))
             {
                 return false;
             }
-            if (outputContents.NullOrEmpty())
+            if(outputContents.NullOrEmpty())
             {
                 return false;
             }
@@ -128,11 +124,11 @@ namespace Ecotech
         }
         private bool IsValidInput(Pawn seeker, Thing thing)
         {
-            if (thing.IsForbidden(seeker))
+            if(thing.IsForbidden(seeker))
             {
                 return false;
             }
-            if (!seeker.CanReserve(thing))
+            if(!seeker.CanReserve(thing))
             {
                 return false;
             }
@@ -144,11 +140,11 @@ namespace Ecotech
         public override void CompTickRare()
         {
             base.CompTickRare();
-            if (!isCurrentlyConverting)
+            if(!isCurrentlyConverting)
             {
                 return;
             }
-            if (GenTicks.TicksGame > converstionStartTick + Props.conversionDurationTicks)
+            if(GenTicks.TicksGame > converstionStartTick + Props.conversionDurationTicks)
             {
                 FinishConversion();
             }
@@ -156,11 +152,11 @@ namespace Ecotech
 
         public AcceptanceReport TryStartConversion()
         {
-            if (isCurrentlyConverting)
+            if(isCurrentlyConverting)
             {
                 return "Ecotech_FailureReason_AlreadyConverting".Translate();
             }
-            if (!ContainsAllThingsRequiredForConversion)
+            if(!ContainsAllThingsRequiredForConversion)
             {
                 return "Ecotech_FailureReason_NotContainingRequiredThings".Translate();
             }
@@ -171,14 +167,14 @@ namespace Ecotech
 
         public AcceptanceReport TryTake(Thing thing)
         {
-            if (thing.def != Props.InputThing.thingDef)
+            if(thing.def != Props.InputThing.thingDef)
             {
                 return "Ecotech_FailureReason_InvalidThingDef".Translate();
             }
             int requiredCount = Props.InputThing.count - inputCount;
             int countToTake = Math.Min(requiredCount, thing.stackCount);
             inputCount += countToTake;
-            if (countToTake >= thing.stackCount)
+            if(countToTake >= thing.stackCount)
             {
                 thing.Destroy();
             }
@@ -199,7 +195,7 @@ namespace Ecotech
         {
             ThingDef thingDef = Props.InputThing.thingDef;
             int stackCountPerThing = thingDef.stackLimit;
-            while (inputCount > 0)
+            while(inputCount > 0)
             {
                 int countToRemove = Math.Min(inputCount, stackCountPerThing);
                 Thing thingToSpawn = ThingMaker.MakeThing(thingDef);
@@ -207,7 +203,7 @@ namespace Ecotech
                 GenSpawn.Spawn(thingToSpawn, position, map);
                 inputCount -= countToRemove;
             }
-            foreach (Thing item in outputContents)
+            foreach(Thing item in outputContents)
             {
                 GenSpawn.Spawn(item, position, map);
             }
@@ -226,17 +222,17 @@ namespace Ecotech
             StringBuilder text = new StringBuilder();
             text.Append(base.CompInspectStringExtra());
 
-            if (text.Length != 0)
+            if(text.Length != 0)
             {
                 text.AppendLine();
             }
 
-            if (!outputContents.NullOrEmpty())
+            if(!outputContents.NullOrEmpty())
             {
                 text.AppendLine("Ecotech_InspectString_ConverterFinished".Translate());
                 text.Append("Ecotech_InspectString_ConverterContents".Translate(FormattedOutputContents.Named("CONTENTS")));
             }
-            else if (isCurrentlyConverting)
+            else if(isCurrentlyConverting)
             {
                 text.AppendLine("Ecotech_InspectString_ConverterTimeRemaining".Translate(RemainingConversionTicks.ToStringTicksToPeriod().Named("TIME")));
                 text.Append("Ecotech_InspectString_ConverterContents".Translate(FormattedInputContents.Named("CONTENTS")));
@@ -251,12 +247,12 @@ namespace Ecotech
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            foreach (Gizmo gizmo in base.CompGetGizmosExtra())
+            foreach(Gizmo gizmo in base.CompGetGizmosExtra())
             {
                 yield return gizmo;
             }
 
-            if (!DebugSettings.ShowDevGizmos)
+            if(!DebugSettings.ShowDevGizmos)
             {
                 yield break;
             }
@@ -268,7 +264,7 @@ namespace Ecotech
                 {
                     inputCount = Props.InputThing.count;
                     AcceptanceReport report = TryStartConversion();
-                    if (!report)
+                    if(!report)
                     {
                         Log.Warning($"could not start conversion: {report.Reason}");
                     }
@@ -279,7 +275,7 @@ namespace Ecotech
                 defaultLabel = "Dev: Finish",
                 action = () =>
                 {
-                    if (!isCurrentlyConverting)
+                    if(!isCurrentlyConverting)
                     {
                         Log.Warning($"Coult not finish conversion");
                     }
@@ -299,7 +295,7 @@ namespace Ecotech
         public override void PostDraw()
         {
             base.PostDraw();
-            if (Props.drawFillableBar)
+            if(Props.drawFillableBar)
             {
                 DrawFillableBar();
             }
@@ -307,7 +303,7 @@ namespace Ecotech
 
         private void DrawFillableBar()
         {
-            if (!isCurrentlyConverting)
+            if(!isCurrentlyConverting)
             {
                 return;
             }

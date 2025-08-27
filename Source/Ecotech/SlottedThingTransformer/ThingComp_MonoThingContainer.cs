@@ -1,12 +1,5 @@
-﻿using HarmonyLib;
-using RimWorld;
-using RimWorld.BaseGen;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using RimWorld;
 using Verse;
-using Verse.AI;
 
 namespace Ecotech
 {
@@ -26,7 +19,7 @@ namespace Ecotech
             {
                 return false;
             }
-            if (!base.Accepts(thing))
+            if(!base.Accepts(thing))
             {
                 return false;
             }
@@ -54,7 +47,7 @@ namespace Ecotech
         public override string CompInspectStringExtra()
         {
             string contentsString = "Nothing".Translate();
-            if (!base.Empty)
+            if(!base.Empty)
             {
                 contentsString = base.LabelCapWithTotalCount;
             }
@@ -64,7 +57,7 @@ namespace Ecotech
         public override AcceptanceReport ShouldFill(Pawn pawn)
         {
             AcceptanceReport baseReport = base.ShouldFill(pawn);
-            if (!baseReport)
+            if(!baseReport)
             {
                 return baseReport.Reason;
             }

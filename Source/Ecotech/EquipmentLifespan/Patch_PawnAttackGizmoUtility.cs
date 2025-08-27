@@ -1,9 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
@@ -19,7 +17,7 @@ namespace Ecotech
         [HarmonyPostfix]
         public static IEnumerable<Gizmo> AddLifespanGizmoForPawnGroup(IEnumerable<Gizmo> __result)
         {
-            foreach (Gizmo gizmo in __result)
+            foreach(Gizmo gizmo in __result)
             {
                 yield return gizmo;
             }
@@ -33,7 +31,7 @@ namespace Ecotech
                 .Any(p => p.equipment.AllEquipmentListForReading
                     .Any(e => e.GetComp<ThingComp_EquippedLifespan>() != null)
                 );
-            if (!anyLifespanEquipment)
+            if(!anyLifespanEquipment)
             {
                 yield break;
             }

@@ -1,14 +1,7 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using static Mono.Security.X509.X520;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 namespace Ecotech
 {
@@ -58,7 +51,7 @@ namespace Ecotech
         {
             get
             {
-                if (_baseFuelTexture == null)
+                if(_baseFuelTexture == null)
                     _baseFuelTexture = SolidColorMaterials.NewSolidColorTexture(baseFuelColor);
                 return _baseFuelTexture;
             }
@@ -68,7 +61,7 @@ namespace Ecotech
         {
             get
             {
-                if (_insufficientFuelTextureissingFuelTexture == null)
+                if(_insufficientFuelTextureissingFuelTexture == null)
                     _insufficientFuelTextureissingFuelTexture = SolidColorMaterials.NewSolidColorTexture(insufficientFuelColor);
                 return _insufficientFuelTextureissingFuelTexture;
             }
@@ -78,7 +71,7 @@ namespace Ecotech
         {
             get
             {
-                if (_sufficientFuelTexture == null)
+                if(_sufficientFuelTexture == null)
                     _sufficientFuelTexture = SolidColorMaterials.NewSolidColorTexture(sufficientFuelColor);
                 return _sufficientFuelTexture;
             }
@@ -93,7 +86,7 @@ namespace Ecotech
 
         public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
         {
-            foreach (string error in base.ConfigErrors(parentDef))
+            foreach(string error in base.ConfigErrors(parentDef))
             {
                 yield return error;
             }
@@ -101,16 +94,16 @@ namespace Ecotech
             {
                 yield return $"Cannot use {nameof(transformationCycleIntervalTicks)} and {nameof(transformationCycleIntervalModulo)} at the same time. Either of these values must be set to -1.";
             }
-            if (validFuels.NullOrEmpty())
+            if(validFuels.NullOrEmpty())
             {
                 yield return $"List \"{nameof(validFuels)}\" is null or empty";
             }
             else
             {
-                foreach (FuelEntry fuelEntry in validFuels)
+                foreach(FuelEntry fuelEntry in validFuels)
                 {
                     ThingDef fuelThingDef = fuelEntry.fuelThingDef;
-                    if (!fuelThingDef.HasModExtension<ThingDefExtension_TransformerRecipe>())
+                    if(!fuelThingDef.HasModExtension<ThingDefExtension_TransformerRecipe>())
                     {
                         yield return $"Fuel def {fuelThingDef.defName} has no {nameof(ThingDefExtension_TransformerRecipe)}";
                     }

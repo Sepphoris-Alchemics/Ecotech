@@ -1,9 +1,6 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
@@ -29,12 +26,12 @@ namespace Ecotech
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (!(t is ThingWithComps thingWithComps))
+            if(!(t is ThingWithComps thingWithComps))
             {
                 return null;
             }
             ThingComp_ThingConverter converterComp = thingWithComps.GetComp<ThingComp_ThingConverter>();
-            if (!converterComp.CanBeEmptiedBy(pawn))
+            if(!converterComp.CanBeEmptiedBy(pawn))
             {
                 return null;
             }

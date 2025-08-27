@@ -1,9 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 using Color = UnityEngine.Color;
 
@@ -22,7 +17,7 @@ namespace Ecotech
         {
             get
             {
-                if (_lifespanBarTexture == null)
+                if(_lifespanBarTexture == null)
                 {
                     _lifespanBarTexture = SolidColorMaterials.NewSolidColorTexture(lifespanBarColor);
                 }

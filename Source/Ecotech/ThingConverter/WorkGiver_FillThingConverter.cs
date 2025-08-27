@@ -1,9 +1,6 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
@@ -25,7 +22,7 @@ namespace Ecotech
             }
             ThingComp_ThingConverter converterComp = thingWithComps.GetComp<ThingComp_ThingConverter>();
             AcceptanceReport hasJobReport = converterComp.CanBeFilledBy(pawn, out _, out _);
-            if (!hasJobReport)
+            if(!hasJobReport)
             {
                 JobFailReason.Is(hasJobReport.Reason);
             }
@@ -34,12 +31,12 @@ namespace Ecotech
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (!(t is ThingWithComps thingWithComps))
+            if(!(t is ThingWithComps thingWithComps))
             {
                 return null;
             }
             ThingComp_ThingConverter converterComp = thingWithComps.GetComp<ThingComp_ThingConverter>();
-            if (!converterComp.CanBeFilledBy(pawn, out Thing thingToFillWith, out int thingCount))
+            if(!converterComp.CanBeFilledBy(pawn, out Thing thingToFillWith, out int thingCount))
             {
                 return null;
             }

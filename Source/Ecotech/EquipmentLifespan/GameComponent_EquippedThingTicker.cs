@@ -1,9 +1,5 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Verse;
 
 namespace Ecotech
@@ -16,7 +12,7 @@ namespace Ecotech
 
         public void AddTickingComp(ThingComp_EquippedTick thingComp)
         {
-            if (currentlyTrackedComps.Contains(thingComp))
+            if(currentlyTrackedComps.Contains(thingComp))
             {
                 return;
             }
@@ -33,14 +29,14 @@ namespace Ecotech
             base.GameComponentTick();
 
             // reverse for loop iteration to prevent CollectionModifiedException
-            for (int i = currentlyTrackedComps.Count - 1; i >= 0; i--)
+            for(int i = currentlyTrackedComps.Count - 1; i >= 0; i--)
             {
                 ThingComp_EquippedTick thingComp = currentlyTrackedComps[i];
                 try
                 {
                     thingComp.EquippedTick();
                 }
-                catch (Exception e)
+                catch(Exception e)
                 {
                     Log.Error($"Exception ticking {thingComp.GetType().Name} for {thingComp.parent}: {e.Message}");
                 }

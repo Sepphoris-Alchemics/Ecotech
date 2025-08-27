@@ -1,9 +1,5 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Verse;
 
 namespace Ecotech
@@ -14,7 +10,7 @@ namespace Ecotech
 
         public static void RunPostLoadConfigErrorChecks()
         {
-            foreach (string error in PostStartupConfigErrors())
+            foreach(string error in PostStartupConfigErrors())
             {
                 Log.Error(error);
             }
@@ -27,9 +23,9 @@ namespace Ecotech
 
         private static IEnumerable<string> PostStartupConfigErrors()
         {
-            foreach (ThingDef thingDef in thingsToCheckForRecipes)
+            foreach(ThingDef thingDef in thingsToCheckForRecipes)
             {
-                if (!Common.AllTransformerRecipes.Any(r => r.AppliesTo(thingDef)))
+                if(!Common.AllTransformerRecipes.Any(r => r.AppliesTo(thingDef)))
                 {
                     yield return $"No recipe exists to transform {thingDef.defName}. At least one fuel with {nameof(ThingDefExtension_TransformerRecipe)} must exist that accepts this ThingDef as an input thing.";
                 }

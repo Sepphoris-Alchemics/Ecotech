@@ -1,10 +1,5 @@
-﻿using HarmonyLib;
-using RimWorld;
+﻿using RimWorld;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -36,7 +31,7 @@ namespace Ecotech
             get
             {
                 Pawn_EquipmentTracker pawn_EquipmentTracker = parent?.ParentHolder as Pawn_EquipmentTracker;
-                if (pawn_EquipmentTracker == null)
+                if(pawn_EquipmentTracker == null)
                 {
                     return null;
                 }
@@ -57,7 +52,7 @@ namespace Ecotech
 
         private bool TargetAcceptsThing(TargetInfo target)
         {
-            if (!target.HasThing)
+            if(!target.HasThing)
             {
                 return false;
             }
@@ -66,7 +61,7 @@ namespace Ecotech
             {
                 return false;
             }
-            if (!comp.Accepts(parent))
+            if(!comp.Accepts(parent))
             {
                 return false;
             }

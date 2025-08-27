@@ -1,9 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -23,13 +18,13 @@ namespace Ecotech
         {
             get
             {
-                if (_allTransformerRecipes == null)
+                if(_allTransformerRecipes == null)
                 {
                     _allTransformerRecipes = new List<TransformerRecipe>();
-                    foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
+                    foreach(ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
                     {
                         ThingDefExtension_TransformerRecipe extension = thingDef.GetModExtension<ThingDefExtension_TransformerRecipe>();
-                        if (extension == null)
+                        if(extension == null)
                         {
                             continue;
                         }

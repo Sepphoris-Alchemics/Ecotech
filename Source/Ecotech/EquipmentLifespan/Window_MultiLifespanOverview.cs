@@ -1,9 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -26,7 +21,7 @@ namespace Ecotech
             RecacheForSelectedPawns();
             UIUtility.MakeAndBeginScrollView(inRect, scrollHeight, ref scrollPos, out Listing_Standard list);
 
-            foreach ((Pawn pawn, ThingComp_EquippedLifespan comp) in cachedPawnsWithLifespanComp)
+            foreach((Pawn pawn, ThingComp_EquippedLifespan comp) in cachedPawnsWithLifespanComp)
             {
                 DrawLifespanCompEntry(list, pawn, comp);
             }
@@ -52,7 +47,7 @@ namespace Ecotech
         private void RecacheForSelectedPawns()
         {
             List<Pawn> selectedPawns = Find.Selector.SelectedPawns;
-            if (cachedPawnsListHash == selectedPawns.GetHashCode())
+            if(cachedPawnsListHash == selectedPawns.GetHashCode())
             {
                 return;
             }
@@ -61,12 +56,12 @@ namespace Ecotech
             cachedPawnsWithLifespanComp.Clear();
             cachedPawnsListHash = selectedPawns.GetHashCode();
 
-            foreach (Pawn pawn in Find.Selector.SelectedPawns)
+            foreach(Pawn pawn in Find.Selector.SelectedPawns)
             {
-                foreach (ThingWithComps equippedThing in pawn.equipment.AllEquipmentListForReading)
+                foreach(ThingWithComps equippedThing in pawn.equipment.AllEquipmentListForReading)
                 {
                     ThingComp_EquippedLifespan comp = equippedThing.GetComp<ThingComp_EquippedLifespan>();
-                    if (comp != null)
+                    if(comp != null)
                     {
                         cachedPawnsWithLifespanComp.Add((pawn, comp));
                     }

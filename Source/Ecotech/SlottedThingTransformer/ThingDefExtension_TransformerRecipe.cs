@@ -1,9 +1,6 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Verse;
 
 namespace Ecotech
@@ -15,19 +12,19 @@ namespace Ecotech
 
         public override IEnumerable<string> ConfigErrors()
         {
-            foreach (string error in base.ConfigErrors())
+            foreach(string error in base.ConfigErrors())
             {
                 yield return error;
             }
-            if (recipes.NullOrEmpty())
+            if(recipes.NullOrEmpty())
             {
                 yield return $"List \"{nameof(recipes)}\" is null or empty";
             }
             else
             {
-                foreach (TransformerRecipe recipe in recipes)
+                foreach(TransformerRecipe recipe in recipes)
                 {
-                    foreach (string error in recipe.ConfigErrors())
+                    foreach(string error in recipe.ConfigErrors())
                     {
                         yield return error;
                     }
@@ -53,11 +50,11 @@ namespace Ecotech
 
         public bool TryDoWork(ThingComp_SlottedThingTransformer transformerComp, Thing inputThing, out Thing producedThing, out int consumedFuel)
         {
-            for (int i = 0; i < recipes.Count; i++)
+            for(int i = 0; i < recipes.Count; i++)
             {
                 TransformerRecipe recipe = recipes[i];
                 AcceptanceReport report = recipe.TryDoWork(transformerComp, inputThing, out producedThing, out consumedFuel);
-                if (report)
+                if(report)
                 {
                     //Log.Message($"Successfully applied recipe at index {i} and transformed {inputThing.def.defName} with {consumedFuel} fuel into {producedThing.def.defName}");
                     return true;
@@ -94,15 +91,15 @@ namespace Ecotech
         {
             producedThing = null;
             consumedFuel = 0;
-            if (transformerComp.CurrentFuelCount < fuelCount)
+            if(transformerComp.CurrentFuelCount < fuelCount)
             {
                 return "Ecotech_FailureReason_NotEnoughFuel".Translate();
             }
-            if (!AppliesTo(inputThing))
+            if(!AppliesTo(inputThing))
             {
                 return $"Not Correct Input {inputThing?.def?.defName} vs required {this.inputThingDef}";
             }
-            if (!transformerComp.innerContainer.Remove(inputThing))
+            if(!transformerComp.innerContainer.Remove(inputThing))
             {
                 return "Ecotech_FailureReason_CouldNotRemoveThingFromContainer".Translate();
             }
@@ -128,11 +125,11 @@ namespace Ecotech
             {
                 yield return $"{nameof(fuelCount)} must be larger than 0";
             }
-            if (inputThingDef == null)
+            if(inputThingDef == null)
             {
                 yield return $"Required field \"{nameof(inputThingDef)}\" is not set";
             }
-            if (outputThingDef == null)
+            if(outputThingDef == null)
             {
                 yield return $"Required field \"{nameof(outputThingDef)}\" is not set";
             }

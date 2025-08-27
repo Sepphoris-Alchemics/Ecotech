@@ -1,9 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Verse;
 
 namespace Ecotech
@@ -21,11 +16,11 @@ namespace Ecotech
 
         public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
         {
-            foreach (string error in base.ConfigErrors(parentDef))
+            foreach(string error in base.ConfigErrors(parentDef))
             {
                 yield return error;
             }
-            if (potentialSpawnedThings.NullOrEmpty())
+            if(potentialSpawnedThings.NullOrEmpty())
             {
                 yield return $"List \"{nameof(potentialSpawnedThings)}\" is null or empty";
             }

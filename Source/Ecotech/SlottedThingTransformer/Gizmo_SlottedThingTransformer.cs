@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
-using Verse.AI;
-using static UnityEngine.GraphicsBuffer;
 
 namespace Ecotech
 {
@@ -60,7 +58,7 @@ namespace Ecotech
             float fillableBarPercent = 0;
             Texture2D currentIcon;
 
-            if (FuelStorageComp.CurrentlyAcceptedThingDef == null)
+            if(FuelStorageComp.CurrentlyAcceptedThingDef == null)
             {
                 currentIcon = noFuelIcon;
             }
@@ -79,7 +77,7 @@ namespace Ecotech
 
             Texture2D barTexture = transformerComp.TransformerProps.BaseFuelTexture;
             // if fuel exists and any slot is filled, change the bar color to visualize whether or not the fuel is sufficient for a full transformation
-            if (transformerComp.HasFuel && !transformerComp.Empty)
+            if(transformerComp.HasFuel && !transformerComp.Empty)
             {
                 if(transformerComp.totalFuelCost < transformerComp.CurrentFuelCount)
                 {
@@ -94,11 +92,11 @@ namespace Ecotech
 
             Widgets.DrawTextureFitted(currentIconRect, currentIcon, 1);
             TooltipHandler.TipRegion(currentIconRect, "Ecotech_Gizmo_SlottedThingConverter_PickFuel".Translate());
-            if (!transformerComp.AllowsInteractions)
+            if(!transformerComp.AllowsInteractions)
             {
                 DrawDisabledOverlay(currentIconRect);
             }
-            if (Widgets.ButtonInvisible(currentIconRect))
+            if(Widgets.ButtonInvisible(currentIconRect))
             {
                 MakeFuelPickerFloatMenu();
             }
@@ -109,7 +107,7 @@ namespace Ecotech
         {
             List<FloatMenuOption> options = GetFuelPickerOptions().ToList();
 
-            foreach (FloatMenuOption option in options)
+            foreach(FloatMenuOption option in options)
             {
                 DisableOptionDuringTransformation(option);
             }
@@ -120,16 +118,16 @@ namespace Ecotech
         {
             // checking reserved state prevents emptying fuel whilst a pawn is installing an item or anything that might break if fuel suddenly disappears
             bool isTransformerReserved = FuelStorageComp.parent.Map.reservationManager.IsReservedByAnyoneOf(FuelStorageComp.parent, Faction.OfPlayer);
-            if (isTransformerReserved)
+            if(isTransformerReserved)
             {
                 yield return new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_FuelChangeNotPossibleDueToReservation".Translate(), null);
                 yield break;
             }
-            if (!FuelStorageComp.Empty)
+            if(!FuelStorageComp.Empty)
             {
                 yield return new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_Eject".Translate(), RemoveFuel);
             }
-            foreach (FuelEntry fuelEntry in transformerComp.TransformerProps.validFuels)
+            foreach(FuelEntry fuelEntry in transformerComp.TransformerProps.validFuels)
             {
                 ThingDef fuelThingDef = fuelEntry.fuelThingDef;
                 yield return new FloatMenuOption(fuelThingDef.LabelCap, () => FuelStorageComp.SetAcceptedThingDef(fuelThingDef), shownItemForIcon: fuelThingDef);
@@ -141,7 +139,7 @@ namespace Ecotech
             IntVec3 position = transformerComp.parent.Position;
             Map map = transformerComp.parent.Map;
             Predicate<Thing> removeAction = (Thing thing) => GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
-            for (int i = 0; i < transformerComp.slottedThings.Capacity; i++)
+            for(int i = 0; i < transformerComp.slottedThings.Capacity; i++)
             {
                 transformerComp.slottedThings[i] = null;
             }
@@ -154,12 +152,12 @@ namespace Ecotech
         private void DrawSlots(Rect inRect)
         {
             Rect[] columns = new Rect[SlotColumnCount];
-            for (int i = 0; i < SlotColumnCount; i++)
+            for(int i = 0; i < SlotColumnCount; i++)
             {
                 columns[i] = new Rect(inRect.xMin + i * slotColumnWidth, inRect.yMin, slotColumnWidth, inRect.height);
                 //columns[i] = columns[i].ContractedBy(slotPadding);
             }
-            for (int slotIndex = 0; slotIndex < transformerComp.TransformerProps.transformerSlots; slotIndex++)
+            for(int slotIndex = 0; slotIndex < transformerComp.TransformerProps.transformerSlots; slotIndex++)
             {
                 int columnIndex = Mathf.FloorToInt((float)slotIndex / slotsPerColumn);
                 DrawSlotAtIndex(columns[columnIndex], slotIndex);
@@ -179,14 +177,14 @@ namespace Ecotech
             TooltipHandler.TipRegion(slotRect, "Ecotech_Gizmo_SlottedThingConverter_SlotDescription".Translate((index + 1).Named("SLOTINDEX")));
             Thing slottedThing = transformerComp.slottedThings[index];
 
-            if (slottedThing == null)
+            if(slottedThing == null)
             {
-                if (Widgets.ButtonInvisible(slotRect))
+                if(Widgets.ButtonInvisible(slotRect))
                 {
                     OpenEmptySlotMenu();
                 }
                 string emptySlotLabel;
-                if (transformerComp.AllowsInteractions)
+                if(transformerComp.AllowsInteractions)
                 {
                     emptySlotLabel = "Ecotech_Gizmo_SlottedThingConverter_Empty".Translate();
                 }
@@ -198,13 +196,13 @@ namespace Ecotech
             }
             else
             {
-                if (Widgets.ButtonInvisible(slotRect))
+                if(Widgets.ButtonInvisible(slotRect))
                 {
                     OpenFilledSlotMenu(slottedThing, index);
                 }
                 Widgets.DrawTextureFitted(slotRect, slottedThing.def.uiIcon, 1);
             }
-            if (!transformerComp.AllowsInteractions)
+            if(!transformerComp.AllowsInteractions)
             {
                 DrawDisabledOverlay(slotRect);
             }
@@ -222,7 +220,7 @@ namespace Ecotech
             {
                 new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_SelectTargetThing".Translate(), BeginInsertTargeting)
             };
-            foreach (FloatMenuOption option in options)
+            foreach(FloatMenuOption option in options)
             {
                 DisableOptionDuringTransformation(option);
             }
@@ -234,7 +232,7 @@ namespace Ecotech
             {
                 new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_Eject".Translate(), () => transformerComp.TryRemove(thing))
             };
-            for (int i = 0; i < transformerComp.TransformerProps.transformerSlots; i++)
+            for(int i = 0; i < transformerComp.TransformerProps.transformerSlots; i++)
             {
                 if(slotIndex == i)
                 {
@@ -242,10 +240,10 @@ namespace Ecotech
                 }
                 int targetSlot = i;
                 Action swapAction = () => transformerComp.SwapSlots(slotIndex, targetSlot);
-                options.Add(new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_SwapSlot".Translate((slotIndex+1).Named("FROM"), (targetSlot+1).Named("TO")), swapAction));
+                options.Add(new FloatMenuOption("Ecotech_Gizmo_SlottedThingConverter_SwapSlot".Translate((slotIndex + 1).Named("FROM"), (targetSlot + 1).Named("TO")), swapAction));
             }
 
-            foreach (FloatMenuOption option in options)
+            foreach(FloatMenuOption option in options)
             {
                 DisableOptionDuringTransformation(option);
             }
@@ -254,7 +252,7 @@ namespace Ecotech
 
         private void DisableOptionDuringTransformation(FloatMenuOption option)
         {
-            if (transformerComp.AllowsInteractions)
+            if(transformerComp.AllowsInteractions)
             {
                 return;
             }
@@ -296,11 +294,11 @@ namespace Ecotech
             {
                 return false;
             }
-            if (!transformerComp.HasFuel)
+            if(!transformerComp.HasFuel)
             {
                 return false;
             }
-            if (!transformerComp.FuelRecipes.AnyRecipeAppliesTo(target.Thing))
+            if(!transformerComp.FuelRecipes.AnyRecipeAppliesTo(target.Thing))
             {
                 return false;
             }

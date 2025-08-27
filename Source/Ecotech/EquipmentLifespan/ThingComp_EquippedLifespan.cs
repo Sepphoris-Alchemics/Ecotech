@@ -1,9 +1,6 @@
-﻿using HarmonyLib;
-using RimWorld;
+﻿using RimWorld;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
@@ -27,7 +24,7 @@ namespace Ecotech
         public override void CompTick()
         {
             base.CompTick();
-            if (parent.Destroyed)
+            if(parent.Destroyed)
             {
                 return;
             }
@@ -39,7 +36,7 @@ namespace Ecotech
         /// </summary>
         public override void EquippedTick()
         {
-            if (parent.Destroyed)
+            if(parent.Destroyed)
             {
                 return;
             }
@@ -50,7 +47,7 @@ namespace Ecotech
         private void ProgressLifespan()
         {
             ageTicks++;
-            if (ageTicks > Props.lifespanTicks)
+            if(ageTicks > Props.lifespanTicks)
             {
                 Expire();
             }
@@ -60,15 +57,15 @@ namespace Ecotech
         {
             if(parent.MapHeld != null)
             {
-                if (Props.expireEffect != null)
+                if(Props.expireEffect != null)
                 {
                     Props.expireEffect.Spawn(parent.Position, parent.MapHeld, 1f).Cleanup();
                 }
-                if (Props.replacementToSpawn != null)
+                if(Props.replacementToSpawn != null)
                 {
                     GenSpawn.Spawn(Props.replacementToSpawn, parent.PositionHeld, parent.MapHeld, WipeMode.Vanish);
                 }
-                if (wieldingPawn != null)
+                if(wieldingPawn != null)
                 {
                     wieldingPawn.jobs.StopAll();
                 }
@@ -86,11 +83,11 @@ namespace Ecotech
 
         private void ShowAlertOnLowLifespan()
         {
-            if (Props.showExpirationAlertOnRemainingTicks == -1)
+            if(Props.showExpirationAlertOnRemainingTicks == -1)
             {
                 return;
             }
-            if (hasShownAlert)
+            if(hasShownAlert)
             {
                 return;
             }
@@ -108,7 +105,7 @@ namespace Ecotech
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            foreach (Gizmo gizmo in base.CompGetGizmosExtra())
+            foreach(Gizmo gizmo in base.CompGetGizmosExtra())
             {
                 yield return gizmo;
             }

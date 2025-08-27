@@ -1,9 +1,5 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Verse;
 
 namespace Ecotech
@@ -17,7 +13,7 @@ namespace Ecotech
         public Thing MakeThing()
         {
             ThingDef stuffDef = null;
-            if (transformedThing.MadeFromStuff)
+            if(transformedThing.MadeFromStuff)
             {
                 stuffDef = transformedThingStuff;
                 if(stuffDef == null)
@@ -30,24 +26,24 @@ namespace Ecotech
 
         public override IEnumerable<string> ConfigErrors(ThingDef parentDef)
         {
-            foreach (string error in base.ConfigErrors(parentDef))
+            foreach(string error in base.ConfigErrors(parentDef))
             {
                 yield return error;
             }
-            if (transformedThing == null)
+            if(transformedThing == null)
             {
                 yield return $"Required field \"{nameof(transformedThing)}\" is not set";
             }
             else
             {
-                if (transformedThing.MadeFromStuff)
+                if(transformedThing.MadeFromStuff)
                 {
                     if(transformedThingStuff == null && !randomTransformedThingStuff)
                     {
                         yield return $"Must provide \"{nameof(transformedThingStuff)}\" or set \"{nameof(randomTransformedThingStuff)}\" to \"true\" if \"{nameof(transformedThing)}\" is stuffable";
                     }
                 }
-                if (!transformedThing.MadeFromStuff && randomTransformedThingStuff)
+                if(!transformedThing.MadeFromStuff && randomTransformedThingStuff)
                 {
                     yield return $"Cannot use \"{nameof(randomTransformedThingStuff)}\" if \"{nameof(transformedThing)}\" is not stuffable";
                 }

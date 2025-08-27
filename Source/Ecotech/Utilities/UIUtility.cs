@@ -1,10 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
 namespace Ecotech
@@ -90,12 +84,12 @@ namespace Ecotech
             {
                 bgTex = BaseContent.BlackTex;
             }
-            if (doBorder)
+            if(doBorder)
             {
                 GUI.DrawTexture(inRect, BaseContent.BlackTex);
                 inRect = inRect.ContractedBy(3f);
             }
-            if (drawBackground)
+            if(drawBackground)
             {
                 GUI.DrawTexture(inRect, bgTex);
             }

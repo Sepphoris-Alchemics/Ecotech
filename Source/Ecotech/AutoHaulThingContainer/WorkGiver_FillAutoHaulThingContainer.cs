@@ -1,9 +1,6 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
@@ -21,7 +18,7 @@ namespace Ecotech
 
         protected virtual bool IsValidWorkBuilding(Building building, Pawn pawn)
         {
-            if (!building.def.HasAssignableCompFrom(typeof(ThingComp_AutoHaulThingContainer)))
+            if(!building.def.HasAssignableCompFrom(typeof(ThingComp_AutoHaulThingContainer)))
             {
                 return false;
             }
@@ -30,7 +27,7 @@ namespace Ecotech
             {
                 return false;
             }
-            if (!containerComp.ShouldFill(pawn))
+            if(!containerComp.ShouldFill(pawn))
             {
                 return false;
             }
@@ -45,12 +42,12 @@ namespace Ecotech
             }
             ThingComp_AutoHaulThingContainer autoHaulComp = thingWithComps.GetComp<ThingComp_AutoHaulThingContainer>();
             AcceptanceReport fillReport = autoHaulComp.ShouldFill(pawn);
-            if (!fillReport)
+            if(!fillReport)
             {
                 JobFailReason.Is(fillReport.Reason);
                 return fillReport;
             }
-            if (autoHaulComp.FindHaulThingFor(pawn) == null)
+            if(autoHaulComp.FindHaulThingFor(pawn) == null)
             {
                 return false;
             }
@@ -59,12 +56,12 @@ namespace Ecotech
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (!(t is ThingWithComps thingWithComps))
+            if(!(t is ThingWithComps thingWithComps))
             {
                 return null;
             }
             ThingComp_AutoHaulThingContainer autoHaulThingContainerComp = thingWithComps.GetComp<ThingComp_AutoHaulThingContainer>();
-            if (!autoHaulThingContainerComp.ShouldFill(pawn))
+            if(!autoHaulThingContainerComp.ShouldFill(pawn))
             {
                 return null;
             }

@@ -1,10 +1,6 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
+﻿using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace Ecotech
@@ -48,11 +44,11 @@ namespace Ecotech
         private void SpawnThings()
         {
             List<Thing> things = Props.ProduceRandomItems();
-            foreach (Thing thing in things)
+            foreach(Thing thing in things)
             {
                 GenPlace.TryPlaceThing(thing, parent.Position, parent.Map, ThingPlaceMode.Near);
             }
-            if (Props.showNotificationWhenSpawningThings)
+            if(Props.showNotificationWhenSpawningThings)
             {
                 string messageText = "Ecotech_Message_SpawnedThingFromThingSpawner".Translate(parent.Label.Named("SOURCE"));
                 Messages.Message(messageText, parent, MessageTypeDefOf.NeutralEvent);
