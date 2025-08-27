@@ -8,7 +8,7 @@
     <label>Vivicore Tree</label>
     <description>A spectacle to behold, the Vivicore Tree is a tree with an ashen wood on the outside, but with a pink-orange crystal core filling the inside. It is quite a rare site, but one of the only 'hybrid'-class Terraplants that can naturally grow; therefore, it is often one of the earliest spotted - and utilized - hybrid plants used.
 The Vivicore Tree is an incredible and rare sight. It can be cut down, but once this happens, it may be months - or years - until another one is spotted. Not to mention most will highly disapprove of the action.
-\nRather, it is recommended to use the Vivicore Tree as a centerpeice for a grove or a meditation spot, as it's unique and prstine appearance serve both of these purposes quite well.
+\nRather, it is recommended to use the Vivicore Tree as a centerpiece for a grove or a meditation spot, as it's unique and prstine appearance serve both of these purposes quite well.
 The Vivicore tree can also produce a special weapon with proper care, but this process take a couple years; additionally, this weapon isn't exactly designed for battle....</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -20,7 +20,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
     </graphicData>
     <tickerType>Normal</tickerType>
     <canScatterOver>false</canScatterOver>
-    <descriptionHyperlinks>
+    <descriptionHyperlinks MayRequire="Ludeon.RimWorld.Biotech">
       <ThingDef>ET_HybridRoyalRifleRecipeHyperlink</ThingDef>
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
@@ -85,7 +85,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
       <li Class="CompProperties_PlantPreventCutting"/>
-      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
+      <li Class="CVNPlantUtils.CompProperties_AssemblingItem" MayRequire="Ludeon.RimWorld.Biotech">
         <isAssemblingPawn>false</isAssemblingPawn>
         <uiIconChooseRecipe>UI/Gizmo/InstallableInSlottedThingTransformerGizmo</uiIconChooseRecipe>
         <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
@@ -147,7 +147,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
               </points>
             </curve>
           </li>
-          <li Class="FocusStrengthOffset_BuildingDefs">
+          <li Class="FocusStrengthOffset_BuildingDefs" MayRequire="Ludeon.RimWorld.Royalty">
             <defs><AnimusStone>0.02</AnimusStone></defs>
             <radius>10.9</radius>
             <maxBuildings>4</maxBuildings>

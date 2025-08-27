@@ -121,7 +121,7 @@ Place materials nearby to charge items</inspectString>
         <radius>11</radius>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
-          <li>            <!--vivicore rifle II-->
+          <li MayRequire="Ludeon.RimWorld.Biotech">            <!--vivicore rifle II-->
             <label>evolve vivicore rifle (II)</label>
             <description>Requirements:
 x1 stage I vivicore rifle
@@ -141,7 +141,7 @@ Duration: 4 days</description>
               </li>
             </ingredientSets>
           </li>
-          <li>            <!--vivicore rifle III-->
+          <li MayRequire="Ludeon.RimWorld.Biotech">            <!--vivicore rifle III-->
             <label>evolve vivicore rifle (III)</label>
             <description>Requirements:
 x1 stage II vivicore rifle
@@ -161,14 +161,14 @@ Duration: 6 days</description>
               </li>
             </ingredientSets>
           </li>
-          <li>            <!--vivicore rifle IV-->
+          <li MayRequire="Ludeon.RimWorld.Biotech">            <!--vivicore rifle IV-->
             <label>evolve vivicore rifle (IV)</label>
             <description>Requirements:
 x1 stage III vivicore rifle
 x45 shocksap
 Duration: 8 days</description>
             <duration>480000</duration>
-            <resultDef>ET_HybridRoyalRifleThree</resultDef>
+            <resultDef>ET_HybridRoyalRifleFour</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>

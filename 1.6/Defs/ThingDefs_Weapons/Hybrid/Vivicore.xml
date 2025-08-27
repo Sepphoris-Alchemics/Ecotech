@@ -10,7 +10,7 @@ Stage 3: projectiles have a faster projectile speed, and they slow anything they
 Stage 4: grants new beam-like attack
 -->
 
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseWildTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ET_HybridRoyalRifleOne</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
 		<label>vivicore rifle</label>
 		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
@@ -116,7 +116,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 
 <!--Tier 2: Utility improvement-->
 
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseWildTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ET_HybridRoyalRifleTwo</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
 		<label>vivicore rifle</label>
 		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
@@ -220,7 +220,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
     </tradeTags>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseWildTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ET_HybridRoyalRifleThree</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
 		<label>vivicore rifle</label>
 		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
@@ -324,7 +324,7 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
     </tradeTags>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseWildTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ET_HybridRoyalRifleFour</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
 		<label>vivicore prime</label>
 		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
