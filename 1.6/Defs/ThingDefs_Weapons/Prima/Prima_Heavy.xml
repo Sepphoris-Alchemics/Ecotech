@@ -3,7 +3,7 @@
 
 <!--Prima Stakecaster downgraded to an entry weapon. Still quite powerful, but very limited on ammo and speed.-->
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+	<ThingDef ParentName="BaseUnupgradableTerraweapon">
 		<defName>ET_PrimaRifle</defName> <!--Counterpart: Bolt Action-->
 		<label>prima OLR</label>
 		<description>The OLR (Organic Long Rifle) is a biotic weapon patterned off of a long-range rifle, and grown straight from a specialized pod. Due to its plant nature, no optics are present, giving it a lower range than most other longrifles.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -81,7 +81,7 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Incendiary Launcher-->
+	<ThingDef ParentName="BaseUnupgradableTerraweapon"> <!--Counterpart: Incendiary Launcher-->
 		<defName>ET_Seedburster</defName>
 		<label>prima seedburster</label>
 		<description>A biotic weapon, patterned off a basic grenade launcher. While nature can't easily replicate actual explosives, this weapon improvises by lobbing pressure-sensitive pods that will spew razor-sharp splinters in every direction.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -161,7 +161,7 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: N/A-->
+	<ThingDef ParentName="BaseUnupgradableTerraweapon"> <!--Counterpart: N/A-->
 		<defName>ET_Hailcannon</defName>
 		<label>prima hailcannon</label>
 		<description>A biotic weapon, patterned off an LMG but designed for it's own unique role. Rather than being an anti-personel weapon, the hailcannon has been designed to wear down structures, making it effective against destroying mechanoid and other unwanted structures.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -947,7 +947,7 @@ SAP LAUNCHERS
 <!--====================-->
 
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: LMG-->
+	<ThingDef ParentName="BaseUnupgradableTerraweapon"> <!--Counterpart: LMG-->
 		<defName>ET_PrimaLMG</defName>
 		<label>prima thorncaster</label>
 		<description>A biotic weapon, patterned off of a heavy assault rifle, and grown straight from a specialized pod. It is somewhat inaccurate, but it's ability to generate several projectiles at once makes it excellent at supression.

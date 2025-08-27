@@ -178,6 +178,30 @@ Endosap: 70, 178, 83-->
 		</comps>
 	</ThingDef>
 
+	<!--=====Weapons that can't be upgraded yet=====-->
+
+	<ThingDef Name="BaseUnupgradableTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+			<MarketValue>30</MarketValue>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<tradeTags>
+			<li>ET_BasePrimaWeaponTag</li>
+		</tradeTags>
+		<thingCategories Inherit='false'>
+			<li>BasicTerraweapons</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+&lt;color=#dae691&gt;Unable to be evolved or infused&lt;/color&gt;</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
 
 	<ThingDef Name="UpgradedUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
