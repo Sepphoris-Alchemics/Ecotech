@@ -10,13 +10,23 @@ namespace Ecotech
 {
     /// <summary>
     /// Before:
-    /// else if (plantDef.plant.terrainBlacklist != null && plantDef.plant.terrainBlacklist.Contains(terrain))
+    /// if (plantDef.plant.WildTerrainTags.Count > 0 && !plantDef.plant.WildTerrainTags.Overlaps(terrain.tags.OrElseEmptyEnumerable<string>()))
+    /// {
+    ///   if (!writeNoReason)
+    ///     ...
     /// After:
-    /// else if (plantDef.plant.terrainBlacklist != null && !HELPER_PassesTerrainWhitelistChecks(plantDef, terrain) && plantDef.plant.terrainBlacklist.Contains(terrain))
+    /// if(!Helper_PassesTerrainWhitelistChecks(plantDef, terrain)
+    /// {
+    ///   return HELPER_CreateAcceptanceReport(writeNoReason, plantDef, terrain);
+    /// }
+    /// if (plantDef.plant.WildTerrainTags.Count > 0 && !plantDef.plant.WildTerrainTags.Overlaps(terrain.tags.OrElseEmptyEnumerable<string>()))
+    /// {
+    ///   if (!writeNoReason)
+    ///     ...
     /// </summary>
     [HarmonyDebug]
-    [HarmonyPatch(typeof(PlantUtility), nameof(PlantUtility.CanEverPlantAt),
 #pragma warning disable format
+    [HarmonyPatch(typeof(PlantUtility), nameof(PlantUtility.CanEverPlantAt),
         new Type[] {         typeof(ThingDef),    typeof(IntVec3),     typeof(Map),         typeof(Thing),    typeof(bool),        typeof(bool),        typeof(bool) },
         new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Ref, ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Normal, })]
 #pragma warning restore format
@@ -56,6 +66,10 @@ namespace Ecotech
 
         private static AcceptanceReport HELPER_CreateAcceptanceReport(bool writeNoReason, ThingDef def, TerrainDef terrain)
         {
+            if(writeNoReason)
+            {
+                return AcceptanceReport.WasRejected;
+            }
             return "EcoTech_InspectString_PlantTerrainWhitelist_TerrainNotWhitelisted".Translate(
                 terrain.LabelCap.Named("ACTUAL"),
                 String.Join(", ", def.GetModExtension<ThingDefExtension_PlantTerrainWhitelist>().TerrainWhitelist.Select(t => t.LabelCap)).Named("EXPECTED")
