@@ -21,6 +21,7 @@
       <sowTags>
         <li>Ground</li>
       </sowTags>
+      <fertilityMin>0.1</fertilityMin>
       <topWindExposure>0.1</topWindExposure>
       <growDays>0.05</growDays>
       <visualSizeRange>0.5~1.05</visualSizeRange>
@@ -32,6 +33,13 @@
         <isTransformedThingRotatable>true</isTransformedThingRotatable>
       </li>
     </comps>
+    <modExtensions>
+      <li Class ="Ecotech.ThingDefExtension_PlantTerrainWhitelist">
+        <terrainWhitelist>
+          <li>WoodPlankFloor</li>
+        </terrainWhitelist>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="PlantBase">
@@ -55,16 +63,23 @@
     <ingestible />
     <plant>
       <immatureGraphicPath>Things/Plant/PotatoPlant_Immature</immatureGraphicPath>
-      <fertilitySensitivity>0.1</fertilitySensitivity>
       <dieIfLeafless>true</dieIfLeafless>
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>RawPotatoes</harvestedThingDef>
       <harvestYield>50</harvestYield>
       <topWindExposure>0.1</topWindExposure>
+      <completelyIgnoreFertility>true</completelyIgnoreFertility>
       <growDays>0.2</growDays>
       <visualSizeRange>0.5~1.05</visualSizeRange>
       <purpose>Food</purpose>
       <humanFoodPlant>true</humanFoodPlant>
     </plant>
+    <modExtensions>
+      <li Class ="Ecotech.ThingDefExtension_PlantTerrainWhitelist">
+        <terrainWhitelist>
+          <li>WoodPlankFloor</li>
+        </terrainWhitelist>
+      </li>
+    </modExtensions>
   </ThingDef>
 </Defs>
