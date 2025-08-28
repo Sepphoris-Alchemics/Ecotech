@@ -9,6 +9,10 @@ namespace Ecotech
         private ThingDef transformedThing;
         private ThingDef transformedThingStuff;
         private bool randomTransformedThingStuff = false;
+        private bool isTransformedThingRotatable = false;
+
+        public ThingDef TransformedThingDef => transformedThing;
+        public bool IsTransformedThingRotatable => isTransformedThingRotatable;
 
         public Thing MakeThing()
         {

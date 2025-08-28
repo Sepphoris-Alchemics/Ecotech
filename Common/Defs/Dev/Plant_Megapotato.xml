@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="PlantBase">
+    <defName>Plant_MegaPotatoSeed</defName>
+    <label>mega potato seed</label>
+    <description>-</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.01</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/PotatoPlant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/PotatoPlant_Immature</immatureGraphicPath>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>0.05</growDays>
+      <visualSizeRange>0.5~1.05</visualSizeRange>
+    </plant>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>Plant_MegaPotato</transformedThing>
+        <isTransformedThingRotatable>true</isTransformedThingRotatable>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>Plant_MegaPotato</defName>
+    <label>mega potato</label>
+    <description>-</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.5</Nutrition>
+    </statBases>
+    <rotatable>false</rotatable>
+    <!--<category>Building</category>-->
+    <size>(2,2)</size>
+    <graphicData>
+      <texPath>Things/Plant/PotatoPlant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>30</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/PotatoPlant_Immature</immatureGraphicPath>
+      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RawPotatoes</harvestedThingDef>
+      <harvestYield>50</harvestYield>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>0.2</growDays>
+      <visualSizeRange>0.5~1.05</visualSizeRange>
+      <purpose>Food</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+    </plant>
+  </ThingDef>
+</Defs>

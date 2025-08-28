@@ -25,4 +25,7 @@
   
   <Ecotech_Gizmo_InstallableInThingTransformer_Label>Install in Terravat</Ecotech_Gizmo_InstallableInThingTransformer_Label>
   <Ecotech_Gizmo_InstallableInThingTransformer_Description>Select a valid transformer building with a fuel that accepts this thing.</Ecotech_Gizmo_InstallableInThingTransformer_Description>
+
+  <Ecotech_Gizmo_PlantTransformOnMaturity_HideGhost>Hide</Ecotech_Gizmo_PlantTransformOnMaturity_HideGhost>
+  <Ecotech_Gizmo_PlantTransformOnMaturity_ShowGhost>Show</Ecotech_Gizmo_PlantTransformOnMaturity_ShowGhost>
 </LanguageData>

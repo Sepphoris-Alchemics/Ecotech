@@ -8,4 +8,7 @@
   
   <Ecotech_InspectString_ThingTransformerFuelContents>Fuel: {CONTENTS}</Ecotech_InspectString_ThingTransformerFuelContents>
   <Ecotech_InspectString_ThingTransformerSlotContents>Slot contents: {CONTENTS}</Ecotech_InspectString_ThingTransformerSlotContents>
+
+  <Ecotech_InspectString_PlantTransformOnMaturity_CanTransform>Can transform</Ecotech_InspectString_PlantTransformOnMaturity_CanTransform>
+  <Ecotech_InspectString_PlantTransformOnMaturity_CannotTransform>Cannot transform: {REASON}</Ecotech_InspectString_PlantTransformOnMaturity_CannotTransform>
 </LanguageData>
