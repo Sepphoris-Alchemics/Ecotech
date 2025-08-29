@@ -48,9 +48,9 @@ Multiple Wildbark Trees can exist together, but extensive spacing is required be
       <growDays>1</growDays>
       <visualSizeRange>1~3</visualSizeRange>      <!--Both attributes .3 higher than T1 trees-->
       <sowMinSkill>6</sowMinSkill>
-			<sowTags>
-				<li>Ground</li>
-			</sowTags>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
       <fertilityMin>0.05</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
@@ -72,7 +72,8 @@ Multiple Wildbark Trees can exist together, but extensive spacing is required be
       <purpose>Misc</purpose>
     </plant>
     <comps>
-     <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+      <li Class="CompProperties_PlantPreventCutting"/>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>ET_WildbarkTreeTierTwo_Mature</transformedThing>
         <isTransformedThingRotatable>false</isTransformedThingRotatable>
@@ -102,7 +103,7 @@ Multiple Wildbark Trees can exist together, but they must be fully grown before 
     <graphicData>
       <texPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-       <drawSize>(2.4,2.4)</drawSize>
+      <drawSize>(2.4,2.4)</drawSize>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
       </shadowData>
@@ -129,11 +130,11 @@ Multiple Wildbark Trees can exist together, but they must be fully grown before 
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <plant>
       <growDays>1</growDays>
-      <visualSizeRange>1.9~3.2</visualSizeRange>
+      <visualSizeRange>1.7~1.7</visualSizeRange>
       <sowMinSkill>6</sowMinSkill>
-			<sowTags>
-				<li>Ground</li>
-			</sowTags>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
       <fertilityMin>0.05</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
@@ -155,6 +156,7 @@ Multiple Wildbark Trees can exist together, but they must be fully grown before 
       <purpose>Misc</purpose>
     </plant>
     <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
         <cycleDurationRangeTicks>3300000~3900000</cycleDurationRangeTicks>
@@ -182,7 +184,7 @@ Multiple Wildbark Trees can exist together, but they must be fully grown before 
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
     </comps>
-    <specialDisplayRadius>67.9</specialDisplayRadius>
+    <!--<specialDisplayRadius>67.9</specialDisplayRadius>-->
   </ThingDef>
 
   <!--=====T2 CUSTODIAN=====-->
