@@ -57,7 +57,7 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
     <graphicData>
       <texPath>Things/Security/BriarCannon/BriarCannon_Base</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.6,1.6)</drawSize>
+      <drawSize>(1.9,1.9)</drawSize>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
@@ -115,7 +115,7 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
     <specialDisplayRadius>29</specialDisplayRadius>
     <stealable>false</stealable>
     <rotatable>true</rotatable>
-    <size>(2,2)</size>
+    <size>(3,3)</size>
     <killedLeavings>
       <ET_TierTwoPlating>24</ET_TierTwoPlating>
     </killedLeavings>
@@ -156,11 +156,13 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
     <graphicData>
       <texPath>Things/Security/BriarCannon/BriarCannon_Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4.9,4.9)</drawSize>
     </graphicData>
     <altitudeLayer>Item</altitudeLayer>
     <soundInteract>Interact_Rifle</soundInteract>
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
+    <size>(3,3)</size>
     <statBases>
       <AccuracyTouch>0.55</AccuracyTouch>
       <AccuracyShort>0.55</AccuracyShort>

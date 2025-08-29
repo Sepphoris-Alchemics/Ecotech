@@ -504,8 +504,8 @@ Dark mode included!</description>
   <defName>ET_TierOneOrganicMastery</defName>
   <label>Organic Aptitude</label>
   <description>You've studied the behavior of Prima and Primwood plants to an exact science. This research shows you not only know how to handle these genomes, but also a deep understanding of their very composition.
-\n\nPrima Mastery shows other Terratech colonies your dedication to the Terratech lifestyle. Terratech tribes will look more favorably on you, though another Mastery is required to show true devotion.</description>
-  <baseCost>1500</baseCost>
+\n\nOrganic Aptitude shows other Terratech colonies your dedication to the Terratech lifestyle. Terratech tribes will look more favorably on you, though another Mastery is required to show true devotion.</description>
+  <baseCost>1000</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_EcotechTab</tab>
   <hiddenPrerequisites>
@@ -523,19 +523,39 @@ Dark mode included!</description>
   <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
 </ResearchProjectDef>
 
+<ResearchProjectDef>
+    <defName>ET_MultiSpacePlants1</defName>
+    <label>Megaflora Bioengineering</label>
+    <description>Terraplants have incredibly complex biology, and this biology can only go so far in a small space.
+This advancement allows you to shape seeds capable of growing into plants aren't restricted to a 1x1 size, and can instead go up to a 3x3 size. Bigger plants are theoretically possible, but require further research.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>0.80</researchViewY>
+    <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
+    <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
+\nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
+  </ResearchProjectDef>
+
+
 <!--=====GUARDED KNOWLEDGE=====-->
 
 <ResearchProjectDef>  <!--Tier 2 Conduit Bounty Trees-->
   <defName>ET_TierTwoSpecialConduitTrees</defName>
-  <label>Bountiful Conduit Trees</label>
-  <description>Discover how to shape conduit tree seeds which specialize in provides large and valuable resources.
+  <label>Conduit Megatrees</label>
+  <description>Discover how to shape conduit tree seeds which specialize in providing large and valuable resources. These are the first tress capable of utilizing megaflora tech, and can continuously be grown as plant size possibilities are discovered.
 This advancement is closely guarded by Terratech tribes. You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
   <baseCost>1500</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_EcotechTab</tab>
   <hiddenPrerequisites>
-    <li>ET_TierTwoConduitSeeds</li>
+    <li>ET_MultiSpacePlants1</li>
   </hiddenPrerequisites>
   <requiredAnalyzed>
     <li>ET_KeyT2ResourceTrees</li>
@@ -544,9 +564,9 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
   <researchViewX>6.00</researchViewX>
   <researchViewY>1.50</researchViewY>
   <discoveredLetterTitle>New Conduit Trees Discovered!</discoveredLetterTitle>
-  <discoveredLetterText>Your study of protected conduit trees has allowed you to learn the creation of two unique trees:
+  <discoveredLetterText>Your study of conduit megatrees has allowed you to learn the creation of two unique trees:
 \nWildbark Trees, which produce massive amount of platings yearly.
-Terravein Trees, which are capable of producing protosaps, and rarely metasaps, bi-yearly.</discoveredLetterText>
+Terravein Trees, which are capable of producing massive amount of protosaps, and sometimes metasaps.</discoveredLetterText>
 </ResearchProjectDef>
 
 <!--<ResearchProjectDef>
@@ -596,7 +616,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
 The Briar Genome combines the growth speed and adaptability of the Prima genome with the flexability and resilience of the Perennial Genome. Additionally, creations of the Briar genome - true to it's name - posess thorny growths that are highly effective in offense and defense.
 You can now create:
 \nBriar Growths, which produce various briar weapons.
-Various briar trap seeds, which are shaped at a Terraforge.</discoveredLetterText>
+The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLetterText>
 </ResearchProjectDef>
 
 <!--<ResearchProjectDef>

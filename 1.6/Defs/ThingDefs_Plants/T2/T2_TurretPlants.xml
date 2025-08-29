@@ -12,7 +12,7 @@
       <drawSize>(2,2)</drawSize>
     </graphicData>
     <minifiedDef IsNull="True" />
-    <size>(2,2)</size>
+    <size>(1,1)</size>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
     </statBases>
@@ -55,16 +55,16 @@
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <plant>
-      <growDays>0.5</growDays> 
+      <growDays>1</growDays> 
     </plant>
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>ET_BriarLargeTurret</transformedThing>
-        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+        <isTransformedThingRotatable>true</isTransformedThingRotatable>
       </li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Inactive until fully grown</inspectString>
+      <inspectString>Needs a 3x3 space to fully grow</inspectString>
       </li>
     </comps>
   </ThingDef>
