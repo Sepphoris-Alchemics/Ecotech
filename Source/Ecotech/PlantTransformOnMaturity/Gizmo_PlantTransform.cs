@@ -25,19 +25,22 @@ namespace Ecotech
             fullRect = fullRect.ContractedBy(margin);
 
             Rect topRow = fullRect.TopHalf();
-            Rect rotateLeftRect = topRow.LeftHalf()
-                .ContractedBy(margin);
-            Rect rotateRightRect = topRow.RightHalf()
-                .ContractedBy(margin);
-            if(Widgets.ButtonImage(rotateLeftRect, TexUI.RotLeftTex))
+            if(comp.Props.TransformedThingDef.rotatable)
             {
-                comp.Rotate(RotationDirection.Counterclockwise);
-                return new GizmoResult(GizmoState.Interacted);
-            }
-            if(Widgets.ButtonImage(rotateRightRect, TexUI.RotRightTex))
-            {
-                comp.Rotate(RotationDirection.Clockwise);
-                return new GizmoResult(GizmoState.Interacted);
+                Rect rotateLeftRect = topRow.LeftHalf()
+                .ContractedBy(margin);
+                Rect rotateRightRect = topRow.RightHalf()
+                    .ContractedBy(margin);
+                if(Widgets.ButtonImage(rotateLeftRect, TexUI.RotLeftTex))
+                {
+                    comp.Rotate(RotationDirection.Counterclockwise);
+                    return new GizmoResult(GizmoState.Interacted);
+                }
+                if(Widgets.ButtonImage(rotateRightRect, TexUI.RotRightTex))
+                {
+                    comp.Rotate(RotationDirection.Clockwise);
+                    return new GizmoResult(GizmoState.Interacted);
+                }
             }
 
             Rect bottomRow = fullRect.BottomHalf()

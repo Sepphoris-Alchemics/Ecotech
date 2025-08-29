@@ -1,16 +1,21 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace Ecotech
 {
     public class ThingComp_PlantTransformOnMaturity : ThingComp
     {
-        ThingCompProperties_PlantTransformOnMaturity Props => base.props as ThingCompProperties_PlantTransformOnMaturity;
+        public static bool ShowTransformGhost = true;
 
         Rot4 transformedRotation = Rot4.North;
-        public static bool ShowTransformGhost = true;
+
+        public ThingCompProperties_PlantTransformOnMaturity Props => base.props as ThingCompProperties_PlantTransformOnMaturity;
+        IntVec3 TransformedOffset => Props.TransformedPositionOffset.RotatedBy(transformedRotation);
+        IntVec3 TransformedPosition => parent.Position + TransformedOffset;
 
         public override void PostExposeData()
         {
@@ -43,7 +48,7 @@ namespace Ecotech
                 if(Props.TransformedThingDef.IsPlant)
                 {
                     // buildings check the occupiedRect, plants do not. As such we must iterate the occupied cells of the transformed thing one at a time
-                    foreach(IntVec3 occupiedCell in GenAdj.OccupiedRect(parent.Position, transformedRotation, Props.TransformedThingDef.Size))
+                    foreach(IntVec3 occupiedCell in GenAdj.OccupiedRect(TransformedPosition, transformedRotation, Props.TransformedThingDef.Size))
                     {
                         AcceptanceReport canPlantAtCell = PlantUtility.CanEverPlantAt(Props.TransformedThingDef, occupiedCell, parent.Map, out _, true);
                         if(!canPlantAtCell)
@@ -55,7 +60,7 @@ namespace Ecotech
                 }
                 else
                 {
-                    return GenConstruct.CanPlaceBlueprintAt(Props.TransformedThingDef, parent.Position, transformedRotation, parent.Map, false, parent);
+                    return GenConstruct.CanPlaceBlueprintAt(Props.TransformedThingDef, TransformedPosition, transformedRotation, parent.Map, false, parent);
                 }
             }
         }
@@ -117,16 +122,17 @@ namespace Ecotech
             Rot4 rotation;
             if(Props.TransformedThingDef.rotatable)
             {
-                position = parent.Position;
+                position = TransformedPosition;
                 rotation = transformedRotation;
             }
             else
             {
-                position = parent.Position;
+                position = TransformedPosition;
                 GenAdj.AdjustForRotation(ref position, ref Props.TransformedThingDef.size, transformedRotation);
                 rotation = Rot4.North;
             }
             GhostDrawer.DrawGhostThing(position, rotation, Props.TransformedThingDef, Props.TransformedThingDef.graphic, ghostColor, AltitudeLayer.Blueprint);
+            GenDraw.DrawFieldEdges(GenAdj.CellsOccupiedBy(position, rotation, Props.TransformedThingDef.Size).ToList(), Color.white);
         }
 
         private void Transform()
@@ -139,7 +145,7 @@ namespace Ecotech
             {
                 thingToSpawn.SetFaction(faction);
             }
-            GenSpawn.Spawn(thingToSpawn, parent.Position, map, transformedRotation, WipeMode.FullRefund);
+            GenSpawn.Spawn(thingToSpawn, TransformedPosition, map, transformedRotation, WipeMode.FullRefund);
         }
     }
 }
