@@ -6,64 +6,66 @@ add a way for the tree to recognize techs; the tree can then grow the bark.
 Alternatively, add a meditation method or some sort of gizmo operation that unlocks with other techs. This is how the player "guides" the tree.
 -->
 
-	<ThingDef ParentName="BuildingBase">
-		<defName>ET_BrightsapBay</defName>
-		<label>Brightsap Bay</label>
-		<description>A large, grown bay filled with ever-recyling brightsap. Capable of accelerating the growth of most growths that don't require a specific sap type, which is (generally) all basic organic weaponry.
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_BrightsapBay</defName>
+    <label>Brightsap Bay</label>
+    <description>A large, grown bay filled with ever-recyling brightsap. Capable of accelerating the growth of most growths that don't require a specific sap type, which is (generally) all basic organic weaponry.
 Since this basin was specifically designed to channel brightsap (and by proxy, glowsap plants as well), this basin cannot support anything else besides Ecotech plants. However, other bays are cpable of channeling other saps.</description>
-		<thingClass>Building_PlantGrower</thingClass>
-		<!--<minifiedDef>MinifiedThing</minifiedDef>-->	
-		<graphicData>
-			<texPath>Things/Building/Production/BrightsapBay/BrightsapBay</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(1,3)</drawSize>
-			<damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-		</graphicData>
-		<castEdgeShadows>true</castEdgeShadows>
-		<altitudeLayer>LowPlant</altitudeLayer>
-		<defaultPlacingRot>East</defaultPlacingRot>
-		<passability>PassThroughOnly</passability>
-		<pathCost>30</pathCost>
-		<techLevel>Neolithic</techLevel>
+    <thingClass>Building_PlantGrower</thingClass>
+    <!--<minifiedDef>MinifiedThing</minifiedDef>-->
+    <graphicData>
+      <texPath>Things/Building/Production/BrightsapBay/BrightsapBay</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <techLevel>Neolithic</techLevel>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
       <li>ET_GrownProtosapBays</li>
     </researchPrerequisites>
-		<!--<constructEffect>ConstructWood</constructEffect>-->
-		<fillPercent>0.30</fillPercent>
-		<canOverlapZones>false</canOverlapZones>
-		<statBases>
-			<MaxHitPoints>80</MaxHitPoints>
-			<Flammability>3</Flammability>
-			<Cleanliness>-2</Cleanliness>
-			<Mass>7.5</Mass>
-		</statBases>
-		<size>(1,3)</size>
-		<fertility>1.2</fertility>
-		<building>
-			<defaultPlantToGrow>ET_GlowsapBloom</defaultPlantToGrow>
-			<sowTag>ET_BrightsapCompatible</sowTag>
+    <!--<constructEffect>ConstructWood</constructEffect>-->
+    <fillPercent>0.30</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Flammability>3</Flammability>
+      <Cleanliness>-2</Cleanliness>
+      <Mass>7.5</Mass>
+    </statBases>
+    <size>(1,3)</size>
+    <fertility>1.2</fertility>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <defaultPlantToGrow>ET_GlowsapBloom</defaultPlantToGrow>
+      <sowTag>ET_BrightsapCompatible</sowTag>
       <sowTag>ET_GlowsapCompatible</sowTag>
-			<buildingTags>
-				<li>Production</li>
-			</buildingTags>
-		</building>
-		<tickerType>Rare</tickerType>
-		<comps>
-			<li Class="CompProperties_Forbiddable"/>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Glower">
         <glowRadius>2.9</glowRadius>
         <glowColor>(255,168,0,0)</glowColor>
       </li>
     </comps>
-		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<uiOrder>2620</uiOrder>
-	</ThingDef>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <uiOrder>2620</uiOrder>
+  </ThingDef>
 
 </Defs>

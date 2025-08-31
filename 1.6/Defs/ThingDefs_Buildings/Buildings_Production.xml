@@ -104,6 +104,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
       <li>ET_PrimaTurretSeedApexToStake</li>
       <li>ET_PrimaTurretSeedApexToSMG</li>
       <li>ET_PrimaTurretSeedApexToShotgun</li>
+      <li>ET_ProtosapBaySeedRecipe</li>
       <!--<li>ET_TestRecipe</li>-->
     </recipes>
     <inspectorTabs>

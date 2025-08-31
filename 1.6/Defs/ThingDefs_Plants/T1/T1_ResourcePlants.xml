@@ -19,7 +19,7 @@
     <pathCost>14</pathCost>
     <plant>
       <fertilityMin>0</fertilityMin>
-      <fertilitySensitivity>0</fertilitySensitivity>
+      <fertilitySensitivity>0.2</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <harvestWork>300</harvestWork>
       <harvestedThingDef>ET_TerramassMaterial</harvestedThingDef>
@@ -52,7 +52,7 @@
     <pathCost>14</pathCost>
     <plant>
       <fertilityMin>0.1</fertilityMin>
-      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <fertilitySensitivity>0.2</fertilitySensitivity>
       <growMinGlow>0.3</growMinGlow>
       <harvestWork>200</harvestWork>
       <harvestedThingDef>ET_TerramassMaterial</harvestedThingDef>

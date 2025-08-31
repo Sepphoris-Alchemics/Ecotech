@@ -39,7 +39,7 @@ Tier 4 surge seeds: 20
     <plant>
       <growDays>1</growDays>
       <fertilityMin>0.3</fertilityMin>
-      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <burnedThingDef IsNull="True" />
       <immatureGraphicPath>Things/Plant/PerennialPod</immatureGraphicPath>

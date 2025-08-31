@@ -280,7 +280,7 @@ Tier 4 surge seeds: 20
       <harvestMinGrowth>1</harvestMinGrowth>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
       <fertilityMin>0.5</fertilityMin>
-      <fertilitySensitivity>0</fertilitySensitivity>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
       <wildClusterWeight>0</wildClusterWeight>
       <harvestYield>0</harvestYield>
       <sowMinSkill>4</sowMinSkill>

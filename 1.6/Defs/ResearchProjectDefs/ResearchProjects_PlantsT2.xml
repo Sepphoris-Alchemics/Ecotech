@@ -97,18 +97,20 @@
     <description>Learn how to plant seeds that grow into rooted sap bays, consisting entirely of Elderwood. These sap bays are capable of recycling the contained protosap, eliminating manual care.
 Various lithic and organic growths can be grown faster within certain saps, and these bays also serve as a way to make sure every terratech product is available in any environment.
 The sap it recycles will not be replenished after growth, making sap farming not ideal. But if needed, destroying the structure will yield a few usable jars.</description>
-    <baseCost>750</baseCost>
+    <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_GlowsapBays</li>
       <li>ET_MultiSpacePlants1</li>
     </prerequisites>
+    <hiddenPrerequisites>
+      <li>ET_GlowsapBays</li>
+    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>7.00</researchViewX>
     <researchViewY>0.80</researchViewY>
-    <discoveredLetterTitle>About: Glowsap Bays</discoveredLetterTitle>
-    <discoveredLetterText>Glowsap Bays are fillable structures that you can use to grow most EcoTech plants. While they cannot support normal plants, glowsap bays do enable you to make dedicated spaces for EcoTech plants, allowing normal soil to be used for everyday crops.</discoveredLetterText>
+    <discoveredLetterTitle>About: Protosap Bays</discoveredLetterTitle>
+    <discoveredLetterText>Protosap Bays are grown structures that you can use to grow many smaller EcoTech plants. As designated by the name, these bays specifically hold protosaps, those being brightsap and shocksap. Surgesap does not have a dedicated bay, as it's not required for growing any plants.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!--=====BRIGHTSAP CONTENT=====-->

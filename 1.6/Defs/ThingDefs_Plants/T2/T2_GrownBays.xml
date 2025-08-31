@@ -5,12 +5,12 @@
     <defName>ET_BrightsapBay_Immature</defName>
     <label>Brightsap Bay Sprout</label>
     <description>A small, organic growth that will eventually grow into a self-sustaining brightsap bay.
-While it grows slow, these brightsap bays are far more potent that glowsap bays, capable of handling many growths that don't have any special properties. This makes it a staple amonst terratech tribes.
+While it grows slow, these brightsap bays are far more potent that glowsap bays, capable of handling many growths that don't have any special properties. This makes it a staple amongst terratech tribes.
 These bays can be rotated once planted and before they fully mature. However, they will lose the ability to be rotated once fully mature, and will need to be fully destroyed if their rotation is wrong or wanted to be changed.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Building/Production/BrightsapBay</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Plant/SapBays/BrightsapBay_Immature</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
       </shadowData>
@@ -29,7 +29,7 @@ These bays can be rotated once planted and before they fully mature. However, th
       <MaxHitPoints>200</MaxHitPoints>      <!--T1=300-->
     </statBases>
     <killedLeavings>
-      <ET_Brightsap>6</ET_Brightsap>
+      <ET_Brightsap>2</ET_Brightsap>
       <!--Perhaps a comp that also leaves behind the wood of which is was growing? Might be overkill-->
     </killedLeavings>
     <ingestible />

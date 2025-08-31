@@ -75,4 +75,27 @@
     </products>
     <displayPriority>909</displayPriority>
   </RecipeDef>
+
+ <RecipeDef>
+    <defName>ET_ProtosapBaySeedRecipe</defName>
+    <label>shape protosap bay seed (brightsap)</label>
+    <description>Shape a seed that will grow into a brightsap bay. Protosap bays take time to grow, but allow a way to grow terraplants in environments with little to no suitable terrains.
+\n\nThe roots grow deep enough to allow the seed to be growable on any solid surface. When planted, the way the plant grows can be manually determined, allowing you to define the space it'll grow into.</description>
+    <jobString>shaping a brightsap bay seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_GrownProtosapBays</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>3200</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_BrightsapBay>1</ET_Seed_BrightsapBay>
+    </products>
+    <displayPriority>910</displayPriority>
+  </RecipeDef>
 </Defs>

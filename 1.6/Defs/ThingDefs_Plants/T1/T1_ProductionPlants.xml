@@ -49,7 +49,7 @@
       <maxMeshCount>1</maxMeshCount>
       <growDays>0.25</growDays>
       <fertilityMin>0.1</fertilityMin>
-      <fertilitySensitivity>0.1</fertilitySensitivity>
+      <fertilitySensitivity>0.2</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <burnedThingDef IsNull="True" />
       <sowWork>540</sowWork>
