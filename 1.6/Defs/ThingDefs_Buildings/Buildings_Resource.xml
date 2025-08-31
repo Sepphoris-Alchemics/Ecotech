@@ -54,7 +54,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<costList>
 			<ET_Glowsap>30</ET_Glowsap>
 		</costList>
-		<fertility>1.2</fertility>
+		<fertility>0.8</fertility>
 		<building>
 			<defaultPlantToGrow>ET_GlowsapBloom</defaultPlantToGrow>
 			<sowTag>ET_GlowsapCompatible</sowTag>
@@ -70,15 +70,8 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
         <glowColor>(255,168,0,0)</glowColor>
 				<darklightToggle>true</darklightToggle>
       </li>
-      <!--<li Class="CompProperties_Facility">
-        <statOffsets>
-          <ResearchSpeedFactor>0.10</ResearchSpeedFactor>
-        </statOffsets>
-        <maxSimultaneous>1</maxSimultaneous>
-        <maxDistance>12</maxDistance>
-      </li>-->
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>1.5</fuelConsumptionRate>
+        <fuelConsumptionRate>3</fuelConsumptionRate>
         <fuelCapacity>30.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>

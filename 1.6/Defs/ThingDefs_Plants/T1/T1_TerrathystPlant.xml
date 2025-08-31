@@ -121,7 +121,7 @@ The growth can be placed anywhere, but will only grow harvestable crystals in wa
     <description>A pure crystal of terrathyst, which can be carefully shattered into usable terrathyst shards. These shards are unremarkable by themselves, but can be melded together to create incredibly strong materials.
 The growth can be harvested for a decent amount of shards; however, at any point the growth may shatter and produced a random amount of shards. This can result in more - or less - shards than if it was manually harvested.
 If one does not wish to test their luck, it is recommended to harvest these crystals as soon as they are ready.
-Terrathyst must be grown in sap-enriched bays.</description>
+These smaller growths must be planted in sap bays, though larger growths can be manually planted in water.</description>
     <!--<descriptionHyperlinks>
       <ThingDef>ET_OverviewTerrathyst</ThingDef>
     </descriptionHyperlinks>-->

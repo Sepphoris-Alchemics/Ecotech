@@ -154,35 +154,6 @@ Terrathyst production takes lightly longer than organic production, due to their
     <discoveredLetterText>Prima Weapons are quick and simple to grow compared to other Terraweapons. You can grow the pods in any normal field or Glowsap Bay, and once ready they will produce a random weapon. Like nearly every other Terraweapons, Prima weapons have a limited lifespan once they are harvested. After this lifespan runs out, they wither away and will need to be replaced!\n\nYou can learn to grow specific Prima weapons via the "Weapon Focusing" researches.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <!--<ResearchProjectDef>
-    <defName>ET_TerrashellSeeds</defName>
-    <label>???</label>
-    <description>The technology for growing something on this scope is still being discovered...\n\nThis research node serves no purpose (yet) beyond teasing upcoming content. It can be safely disregarded.</description>
-    <baseCost>2200</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <prerequisites>
-      <li>TreeSowing</li>
-    </prerequisites>
-  <researchViewX>0.00</researchViewX>
-  <researchViewY>1.00</researchViewY>
-  </ResearchProjectDef>-->
-
-  <!--<ResearchProjectDef>
-    <defName>ET_TerrastructureBasics</defName>
-    <label>Basic Terrastructures</label>
-    <description>Learn how to grow structures crucial to manipulating or utilizing core Terratech applications.\n\nWays these structures can be used will require further insight.</description>
-    <baseCost>1000</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TerraseedEssentials</li>
-    </hiddenPrerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>0.00</researchViewX>
-    <researchViewY>1.00</researchViewY>
-  </ResearchProjectDef>-->
-
   <ResearchProjectDef>
     <defName>ET_FundamentalArms</defName>    <!--Outdated name-->
     <label>Prima Focusing: Melee Weapons</label>
@@ -385,8 +356,9 @@ Dark mode included!</description>
 
   <ResearchProjectDef>
     <defName>ET_GlowsapBays</defName>
-    <label>Glowsap Bays</label>
-    <description>Learn how to construct simple - but not very space-friendly - basins that utilize glowsap to sustain Terratech plants. Ideal for locations where fertile soil is scarce or entirely absent.</description>
+    <label>Simple Glowsap Bays</label>
+    <description>Learn how to construct simple basins that utilize glowsap to sustain Terratech plants. Ideal for locations where fertile soil is scarce or entirely absent.
+Glowsap has enough nutrients to sustain many growths that have relatively simple patterns, but more complex ones require stronger or specific saps.</description>
     <baseCost>750</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -457,167 +429,7 @@ Dark mode included!</description>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <!--<ResearchProjectDef>
-    <defName>ET_MediumTerravats</defName>
-    <label>Deeproot Terravats</label>
-    <description>Learn how to grow Deeproot Terravats, which are larger, 3x1 terravats. These terravats can process more items at once, and support metasaps.
-\n\nTerravats utilize large amounts of glowsap, protosaps, and metasaps. You will need access to both to properly utilize Terravats.</description>
-    <baseCost>1500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <prerequisites>
-      <li>ET_SmallTerravats</li>
-    </prerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
-    <discoveredLetterTitle>About: Terravats</discoveredLetterTitle>
-    <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
-  </ResearchProjectDef>-->
-
-  <ResearchProjectDef>
-    <defName>ET_BiosynthVat</defName>
-    <label>Biosynthesis Chamber</label>
-    <description>Learn how to create a terravat that specializes in utilizing and transforming flesh, organs, and other bodily parts. Notably, this vat is used for armor.
-\nAdditionally, this immediately enables the creation of Terraplate armor.</description>
-    <baseCost>2500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <prerequisites>
-      <li>ET_SmallTerravats</li>
-    </prerequisites>
-    <hiddenPrerequisites>
-      <li>ET_TierTwoConduitSeeds</li>
-    </hiddenPrerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>4.00</researchViewX>
-  <researchViewY>0.80</researchViewY>
-  <discoveredLetterTitle>About: Biosythesis Chambers</discoveredLetterTitle>
-  <discoveredLetterText>Biosynthesis Chambers - often shortened to Biosynth Chambers - are special vats that serves as a direct, usable connection to the planet, allowing a faction to fully - and personally - embrace Terratech, often to a very permanent degree. Most armor sets will be created in these vats by using a large amount of their respective material(s), combined with one or more saps.
-\nThe potential of this chamber is vast - it was known to create the rarest of saps, transfer sentience to giant plants, and was even capable of transforming beings into an ascended state. However, at the moment, only one set of (powerful) armor has been made attainable knowledge.
-\nYou can check the description of the Biosynth Vat to see the current possible combinations.</discoveredLetterText>
-</ResearchProjectDef>
-
 <!--=====MASTERY TECH=====-->
-
-<ResearchProjectDef>
-  <defName>ET_TierOneOrganicMastery</defName>
-  <label>Organic Aptitude</label>
-  <description>You've studied the behavior of Prima and Primwood plants to an exact science. This research shows you not only know how to handle these genomes, but also a deep understanding of their very composition.
-\n\nOrganic Aptitude shows other Terratech colonies your dedication to the Terratech lifestyle. Terratech tribes will look more favorably on you, though another Mastery is required to show true devotion.</description>
-  <baseCost>1000</baseCost>
-  <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
-  <hiddenPrerequisites>
-    <li>ET_GlowsapRefinement</li>
-    <!--<li>ET_MediumTerravats</li>-->
-    <li>ET_TierTwoConduitSeeds</li>
-    <li>ET_PrimaTurretSeeds</li>
-    <li>ET_PerennialTurretSeeds</li>
-    <!--<li>ET_PrimaArmorHeavy</li>-->
-  </hiddenPrerequisites>
-  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>6.00</researchViewX>
-  <researchViewY>0</researchViewY>
-  <discoveredLetterTitle>About: Terravats</discoveredLetterTitle>
-  <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
-</ResearchProjectDef>
-
-<ResearchProjectDef>
-    <defName>ET_MultiSpacePlants1</defName>
-    <label>Megaflora Bioengineering</label>
-    <description>Terraplants have incredibly complex biology, and this biology can only go so far in a small space.
-This advancement allows you to shape seeds capable of growing into plants aren't restricted to a 1x1 size, and can instead go up to a 3x3 size. Bigger plants are theoretically possible, but require further research.</description>
-    <baseCost>1500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TierOneOrganicMastery</li>
-    </hiddenPrerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>6.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
-    <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
-    <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
-\nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
-  </ResearchProjectDef>
-
-
-<!--=====GUARDED KNOWLEDGE=====-->
-
-<ResearchProjectDef>  <!--Tier 2 Conduit Bounty Trees-->
-  <defName>ET_TierTwoSpecialConduitTrees</defName>
-  <label>Conduit Megatrees</label>
-  <description>Discover how to shape conduit tree seeds which specialize in providing large and valuable resources. These are the first tress capable of utilizing megaflora tech, and can continuously be grown as plant size possibilities are discovered.
-This advancement is closely guarded by Terratech tribes. You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
-\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-  <baseCost>1500</baseCost>
-  <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
-  <hiddenPrerequisites>
-    <li>ET_MultiSpacePlants1</li>
-  </hiddenPrerequisites>
-  <requiredAnalyzed>
-    <li>ET_KeyT2ResourceTrees</li>
-  </requiredAnalyzed>
-  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>6.00</researchViewX>
-  <researchViewY>1.50</researchViewY>
-  <discoveredLetterTitle>New Conduit Trees Discovered!</discoveredLetterTitle>
-  <discoveredLetterText>Your study of conduit megatrees has allowed you to learn the creation of two unique trees:
-\nWildbark Trees, which produce massive amount of platings yearly.
-Terravein Trees, which are capable of producing massive amount of protosaps, and sometimes metasaps.</discoveredLetterText>
-</ResearchProjectDef>
-
-<!--<ResearchProjectDef>
-    <defName>ET_TemperaturePlants</defName>
-    <label>Thermo-reactive Flora</label>
-    <description>Discover how to shape seeds of plants that behave differently based on the ambient temperature.
-This advancement is closely guarded by Terratech tribes.  You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
-\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-    <baseCost>1500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TierOneConduitSeeds</li>
-    </hiddenPrerequisites>
-    <requiredAnalyzed>
-      <li>ET_KeyThermalPlants</li>
-    </requiredAnalyzed>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>6.00</researchViewX>
-    <researchViewY>0.70</researchViewY>
-    <discoveredLetterTitle>New Plants Unlocked!</discoveredLetterTitle>
-    <discoveredLetterText>Your study of temperature-sensitive plants has allowed you to learn the creation of two unique plants:
-\nThermoleaf Fern, which regulates temperature in smaller rooms.
-Thermoleaf Tree, which regulates temperature in larger rooms.</discoveredLetterText>
-  </ResearchProjectDef>-->
-
-<ResearchProjectDef>  <!--Briar weapons and structures-->
-  <defName>ET_BriarGenome</defName>
-  <label>Prima-Perennial Crossbreeding</label>
-  <description>Discover how to combine the Prima and Perennial genomes to creature a specialized genome that utilizes the best traits of both.
-This advancement is closely guarded by Terratech tribes. You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
-\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-  <baseCost>1500</baseCost>
-  <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
-  <hiddenPrerequisites>
-    <li>ET_TierOneOrganicMastery</li>
-  </hiddenPrerequisites>
-  <requiredAnalyzed>
-    <li>ET_KeyBriarGenome</li>
-  </requiredAnalyzed>
-  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>6.00</researchViewX>
-  <researchViewY>2.30</researchViewY>
-  <discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
-  <discoveredLetterText>Your experiments of crossbreeding the Prima and Perennial genome has resulting in discovered a 'protected', secret genome: the Briar Genome.
-The Briar Genome combines the growth speed and adaptability of the Prima genome with the flexability and resilience of the Perennial Genome. Additionally, creations of the Briar genome - true to it's name - posess thorny growths that are highly effective in offense and defense.
-You can now create:
-\nBriar Growths, which produce various briar weapons.
-The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLetterText>
-</ResearchProjectDef>
 
 <!--<ResearchProjectDef>
     <defName>ET_MaterialCompression</defName>
