@@ -12,15 +12,24 @@ namespace Ecotech
         public static bool ShowTransformGhost = true;
 
         Rot4 transformedRotation = Rot4.North;
+        /// <summary>
+        /// Plants cannot have factions. But buildings created by transforming plants may have factions.
+        /// </summary>
+        Faction potentialTransformedFaction;
 
         public ThingCompProperties_PlantTransformOnMaturity Props => base.props as ThingCompProperties_PlantTransformOnMaturity;
         IntVec3 TransformedOffset => Props.TransformedPositionOffset.RotatedBy(transformedRotation);
         IntVec3 TransformedPosition => parent.Position + TransformedOffset;
+        public Faction PotentialTransformedFaction
+        {
+            set => potentialTransformedFaction = value;
+        }
 
         public override void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref transformedRotation, nameof(transformedRotation));
+            Scribe_References.Look(ref potentialTransformedFaction, nameof(potentialTransformedFaction));
         }
 
         /// <summary>
@@ -138,12 +147,17 @@ namespace Ecotech
         private void Transform()
         {
             Map map = parent.Map;
-            Faction faction = parent.Faction;
             parent.Destroy(DestroyMode.WillReplace);
             Thing thingToSpawn = Props.MakeThing();
             if(thingToSpawn.def.CanHaveFaction)
             {
-                thingToSpawn.SetFaction(faction);
+                thingToSpawn.SetFaction(potentialTransformedFaction);
+            }
+            // if the produced thing is also a plant that transforms, pass the faction onto that plant
+            ThingComp_PlantTransformOnMaturity spawnedComp = thingToSpawn.TryGetComp<ThingComp_PlantTransformOnMaturity>();
+            if(spawnedComp != null)
+            {
+                spawnedComp.PotentialTransformedFaction = potentialTransformedFaction;
             }
             GenSpawn.Spawn(thingToSpawn, TransformedPosition, map, transformedRotation, WipeMode.FullRefund);
         }
