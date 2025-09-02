@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <RecipeDef>
+  <!--<RecipeDef>
     <defName>ET_PerennialRandomWeaponRecipe</defName>
     <label>carve random perennial weapon</label>
     <description>Create a random perennial weapon from a periwood core.</description>
@@ -38,6 +38,51 @@
     <recipeUsers>
 			<li>ET_Terraforge</li>
 		</recipeUsers>
-  </RecipeDef>
+  </RecipeDef>-->
 
+<RecipeDef>
+    <defName>ET_PerennialRandomWeaponRecipe</defName>
+    <label>salvage laser weapon</label>
+    <description>Salvage a random laser weapon from advanced components.</description>
+    <jobString>Salvaging laser weapon.</jobString>
+    <workSpeedStat>ResearchSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>10000</workAmount>
+    <unfinishedThingDef>ET_UnfinishedTier2Heart</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentSpacer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ET_RandomTier2Weapon>1</ET_RandomTier2Weapon>
+    </products>
+	<researchPrerequisite>ET_PerennialSeeds</researchPrerequisite>
+		<skillRequirements>
+			<Intellectual>2</Intellectual>
+		</skillRequirements>
+    <workSkill>Intellectual</workSkill>
+    <recipeUsers>
+			<li>ET_Terraforge</li>
+		</recipeUsers>
+  </RecipeDef>
 </Defs>

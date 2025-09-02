@@ -6,7 +6,7 @@ add a way for the tree to recognize techs; the tree can then grow the bark.
 Alternatively, add a meditation method or some sort of gizmo operation that unlocks with other techs. This is how the player "guides" the tree.
 -->
 
-  <ThingDef ParentName="PlantBase">
+  <ThingDef ParentName="PlantBaseNonEdible">
     <defName>ET_WildbarkTreeTierTwo_Immature</defName>
     <label>Wildbark Megatree</label>
     <description>The Wildbark Tree is a special Conduit tree that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources.
@@ -41,7 +41,6 @@ Multiple Wildbark Trees can exist together, but extensive spacing is required be
       <ET_Glowsap>30</ET_Glowsap>
       <!--Perhaps a comp that also leaves behind the wood of which is was growing? Might be overkill-->
     </killedLeavings>
-    <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <selectable>true</selectable>
     <plant>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<RecipeDef Name="ET_PrimaImplantBase" Abstract="True" >
+	<RecipeDef Name="ET_PrimaImplantBaseRecipe" Abstract="True" >
 		<!--<effectWorking>Surgery</effectWorking>
 		<soundWorking>Recipe_Surgery</soundWorking>-->
 		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>

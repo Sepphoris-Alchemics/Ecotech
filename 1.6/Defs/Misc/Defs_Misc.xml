@@ -82,7 +82,7 @@
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>ET_TerrathystSmall</li>
+      <li>ET_Terraforge</li>
     </fixedBillGiverDefs>
     <verb>shape seed at</verb>
     <gerund>shaping seed at</gerund>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="PlantBase">
+  <ThingDef ParentName="PlantBaseNonEdible">
     <defName>ET_BrightsapBay_Immature</defName>
     <label>Brightsap Bay Sprout</label>
     <description>A small, organic growth that will eventually grow into a self-sustaining brightsap bay.
@@ -32,7 +32,6 @@ These bays can be rotated once planted and before they fully mature. However, th
       <ET_Brightsap>2</ET_Brightsap>
       <!--Perhaps a comp that also leaves behind the wood of which is was growing? Might be overkill-->
     </killedLeavings>
-    <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <selectable>true</selectable>
     <plant>
