@@ -153,16 +153,13 @@ Some Ecotech creations may have features that simply make the product unusable, 
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="BenchBase">
+  <!--<ThingDef ParentName="BenchBase">
     <defName>ET_TerrathystSmall</defName>
     <label>Terrathyst cluster</label>
     <description>A grown structure that channels natural energies of the world, allowing you to shape existing Ecotech, or grow new Ecotech formations.
 Some Ecotech creations may have features that simply make the product unusable, or even dangerous, to most races (generally to ward off undeserving colonies). The Terraforge exists to refine that Ecotech into a usable state - not by destruction, by rather by letting the creation know that it is in safe hands.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
-    <!--<costList>
-      <ET_Seed_Terraforge>1</ET_Seed_Terraforge>
-    </costList>-->
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Building/Terraforge</texPath>
@@ -189,7 +186,6 @@ Some Ecotech creations may have features that simply make the product unusable, 
     <pathCost>50</pathCost>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <!--<WorkToBuild>3400</WorkToBuild>-->
       <Mass>60</Mass>
       <Flammability>3</Flammability>
       <Beauty>1.5</Beauty>
@@ -202,17 +198,14 @@ Some Ecotech creations may have features that simply make the product unusable, 
       <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
-    <!--<defaultPlacingRot>South</defaultPlacingRot>-->
     <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <!--<designationCategory>EcotechDesignation</designationCategory>-->
     <uiOrder>2630</uiOrder>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.1</resourcesFractionWhenDeconstructed>
     <recipes>
-      <!--<li>ET_TestRecipe</li>-->
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -256,6 +249,6 @@ Some Ecotech creations may have features that simply make the product unusable, 
         <showAllowAutoRefuelToggle>false</showAllowAutoRefuelToggle>
       </li>
     </comps>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>

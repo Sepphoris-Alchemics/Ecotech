@@ -52,7 +52,7 @@ Tier 4 surge seeds: 20
       <sowWork>300</sowWork>
       <sowTags>
         <li>ET_SapTerrainTierOne</li>
-        <li>ET_GlowsapCompatible</li>
+        <li>ET_ShocksapCompatible</li>
       </sowTags>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0</topWindExposure>
@@ -121,7 +121,7 @@ The growth can be placed anywhere, but will only grow harvestable crystals in wa
     <description>A pure crystal of terrathyst, which can be carefully shattered into usable terrathyst shards. These shards are unremarkable by themselves, but can be melded together to create incredibly strong materials.
 The growth can be harvested for a decent amount of shards; however, at any point the growth may shatter and produced a random amount of shards. This can result in more - or less - shards than if it was manually harvested.
 If one does not wish to test their luck, it is recommended to harvest these crystals as soon as they are ready.
-These smaller growths must be planted in sap bays, though larger growths can be manually planted in water.</description>
+These smaller growths can grow on any fertile terrain, though larger growths require specialized bays, or sap-infused terrains. It is also highly sensitive to fertility, as building it's innate charge requires much nutrition.</description>
     <!--<descriptionHyperlinks>
       <ThingDef>ET_OverviewTerrathyst</ThingDef>
     </descriptionHyperlinks>-->
@@ -129,8 +129,8 @@ These smaller growths must be planted in sap bays, though larger growths can be 
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
       <harvestMinGrowth>0.8</harvestMinGrowth>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
-      <fertilityMin>0</fertilityMin>
-      <fertilitySensitivity>0</fertilitySensitivity>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0.8</fertilitySensitivity>
       <wildClusterWeight>0</wildClusterWeight>
       <harvestYield>8</harvestYield>
       <sowMinSkill>4</sowMinSkill>

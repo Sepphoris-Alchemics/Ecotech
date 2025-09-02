@@ -255,7 +255,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
   <ResearchProjectDef>
     <defName>ET_PerennialSeeds</defName>
     <label>Perennial Terraseed Cultivation</label>
-    <description>Learn how to nuture and handle Perennial Terraseeds, alongside how to properly harvest their trees. Perennial weapons have very high potential, but take a long time to grow.</description>
+    <description>Learn how to nuture and handle Perennial Terraseeds, which grow into Pericore Trees. The core of these trees can be harvested, which are then carefully carved into perennial weapons.</description>
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -264,7 +264,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>2.90</researchViewY>
+    <researchViewY>3.00</researchViewY>
     <discoveredLetterTitle>About: Perennial Weapons</discoveredLetterTitle>
     <discoveredLetterText>Perennial Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Perennial Terratree in fertile soil, and then carving the weapon out when it's fully grown. Perennial weapons have a limited lifespan once they are harvested, but this base lifespan is significantly longer than nearly every other lifespan. Additionally, saps are much more effective in Perennial weapons than any other genome.
 \n\nUnlike Prima weapons, specific perennial weapons cannot be focused. However, the chance of getting any weapon is equal.</discoveredLetterText>
@@ -336,6 +336,24 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
 Additionally, you can now properly handle and plant more exclusive seeds that are carried by the Terratech Curators.</discoveredLetterText>
   </ResearchProjectDef>
 
+  <ResearchProjectDef>    <!--Tier 2 (Elderwood) Terraforge-->
+    <defName>ET_Tier2Terraforge</defName>
+    <label>Pattern 52R8898111-E</label>
+    <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
+\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1500 when fully implemented).</description>
+    <baseCost>150</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_TierOneConduitSeeds</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.30</researchViewY>
+    <discoveredLetterTitle>Mysery study complete!</discoveredLetterTitle>
+    <discoveredLetterText>Your research into this tech has has gone as far as it can. One day, your colonists will put two and two together... but for now, it remains a mystery.</discoveredLetterText>
+  </ResearchProjectDef>
+
   <!--=====GLOWSAP CONTENT=====-->
 
   <ResearchProjectDef>
@@ -367,7 +385,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>1.30</researchViewY>
+    <researchViewY>1.50</researchViewY>
     <discoveredLetterTitle>About: Glowsap Bays</discoveredLetterTitle>
     <discoveredLetterText>Glowsap Bays are fillable structures that you can use to grow most EcoTech plants. While they cannot support normal plants, glowsap bays do enable you to make dedicated spaces for EcoTech plants, allowing normal soil to be used for everyday crops.</discoveredLetterText>
   </ResearchProjectDef>
@@ -387,7 +405,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>1.30</researchViewY>
+    <researchViewY>1.50</researchViewY>
   </ResearchProjectDef>
 
   <!--=====PROTOSAP (T1) CONTENT=====-->

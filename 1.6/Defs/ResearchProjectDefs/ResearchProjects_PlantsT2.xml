@@ -108,7 +108,7 @@ The sap it recycles will not be replenished after growth, making sap farming not
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>7.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
+    <researchViewY>1.50</researchViewY>
     <discoveredLetterTitle>About: Protosap Bays</discoveredLetterTitle>
     <discoveredLetterText>Protosap Bays are grown structures that you can use to grow many smaller EcoTech plants. As designated by the name, these bays specifically hold protosaps, those being brightsap and shocksap. Surgesap does not have a dedicated bay, as it's not required for growing any plants.</discoveredLetterText>
   </ResearchProjectDef>

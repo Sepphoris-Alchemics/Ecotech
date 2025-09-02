@@ -38,6 +38,7 @@
 		<weaponTags Inherit='False'>
       <li>ET_PlantWeapon</li>
 			<li>ET_PerennialMelee</li>
+			<li>ET_PerennialWeapon</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>

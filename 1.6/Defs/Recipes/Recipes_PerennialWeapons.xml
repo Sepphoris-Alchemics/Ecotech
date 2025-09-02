@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>ET_PerennialRandomWeaponRecipe</defName>
+    <label>carve random perennial weapon</label>
+    <description>Create a random perennial weapon from a periwood core.</description>
+    <jobString>Carving perennial weapon.</jobString>
+    <workSpeedStat>ResearchSpeed</workSpeedStat>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Sculpt</soundWorking>
+    <workAmount>6000</workAmount>
+    <unfinishedThingDef>ET_UnfinishedTier2Heart</unfinishedThingDef>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Tier2WeaponHeart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_Tier2WeaponHeart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ET_RandomTier2Weapon>1</ET_RandomTier2Weapon>
+    </products>
+	<researchPrerequisite>ET_PerennialSeeds</researchPrerequisite>
+		<skillRequirements>
+			<Intellectual>4</Intellectual>
+      <Plants>6</Plants>
+		</skillRequirements>
+    <workSkill>Plants</workSkill>
+    <recipeUsers>
+			<li>ET_Terraforge</li>
+		</recipeUsers>
+  </RecipeDef>
+
+</Defs>

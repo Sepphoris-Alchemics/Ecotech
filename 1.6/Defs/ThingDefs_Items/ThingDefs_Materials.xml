@@ -222,6 +222,65 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 
+<!-- ================ Periwood Heart ================ -->
+
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>ET_Tier2WeaponHeart</defName>
+        <label>periwood core</label>
+        <description>A large, strong wooden core, acquired from a periwood tree. While it does nothing on it's own, one can take it to a terraforge to shape a perennial weapon. The weapon produced is random.</description>
+        <graphicData>
+            <texPath>Things/Resource/PeriwoodHeart</texPath> <!--make this graphic bigger-->
+            <graphicClass>Graphic_Random</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>8</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <MaxHitPoints>75</MaxHitPoints>
+            <Mass>1.8</Mass>
+            <Flammability>2</Flammability>
+            <DeteriorationRate>0.25</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <comps>
+      <li Class="VEF.Things.CompProperties_RandomOutcomeComp">
+        <canProvideTags>
+          <li>ET_PerennialWeapon</li>
+        </canProvideTags>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    </ThingDef>
+
+<ThingDef ParentName="UnfinishedBase">
+    <defName>ET_UnfinishedTier2Heart</defName>
+    <label>unfinished perennial weapon</label>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Resource/PeriwoodHeart</texPath> <!--Add an unfinished heart-->
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+
 <!-- ================ Terrathyst ================ -->
 
     <ThingDef ParentName="ResourceBase">
