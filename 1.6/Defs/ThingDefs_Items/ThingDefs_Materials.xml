@@ -268,21 +268,21 @@ Weapons that use a type of wood come far before the wood source itself, since en
 
   <ThingDef ParentName="UnfinishedBase">
     <defName>ET_RandomTier2Weapon</defName>    
-    <label>salvaged laser weapon</label> 
-    <description>A bunch of components that when assembled can create a salvaged laser weapon.</description>
+    <label>carved periwood heart</label> 
+    <description>The heart of a periwood tree, in the middle of being carved into a perennial weapon.</description>
     <graphicData>
-      <texPath>Things/Items/UnfinishedSalvageLaser</texPath>
+      <texPath>Things/Resource/PeriwoodHeart/PeriwoodHeart</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <stackLimit>1</stackLimit>
     <statBases>
-      <MaxHitPoints>70</MaxHitPoints>
+      <MaxHitPoints>75</MaxHitPoints>
       <MarketValue>1</MarketValue>
-      <Mass>0.6</Mass>
-      <Flammability>0.6</Flammability>
-      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>1.4</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
     </statBases>
     <intricate>true</intricate>
     <tickerType>Normal</tickerType>
@@ -300,12 +300,12 @@ Weapons that use a type of wood come far before the wood source itself, since en
 
 <ThingDef ParentName="UnfinishedBase">
     <defName>ET_UnfinishedTier2Heart</defName>
-    <label>unfinished laser gun</label>
+    <label>partially carved periwood heart</label>
     <statBases>
-      <Flammability>0.5</Flammability>
+      <Flammability>1</Flammability>
     </statBases>
     <graphicData>
-      <texPath>Things/Items/UnfinishedSalvageLaser</texPath>
+      <texPath>Things/Resource/PeriwoodHeart/PeriwoodHeart</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stuffCategories Inherit="false" />
@@ -333,7 +333,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <statBases>
             <MarketValue>15</MarketValue>
             <MaxHitPoints>50</MaxHitPoints>
-            <Mass>1.4</Mass>
+            <Mass>0.8</Mass>
             <Flammability>0</Flammability>
             <DeteriorationRate>0.25</DeteriorationRate>
         </statBases>
@@ -346,6 +346,36 @@ Weapons that use a type of wood come far before the wood source itself, since en
             <li>Poor</li>
         </techHediffsTags>
     </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+    <defName>ComponentSpacerEco</defName>
+    <label>advanced component</label>
+    <description>Advanced computing and energy-directing machinery, miniaturized and hardened for the most demanding applications.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ComponentSpacer</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+    <allowedArchonexusCount>5</allowedArchonexusCount>
+  </ThingDef>
 
 <!-- ================ Terrathyst ================ -->
 

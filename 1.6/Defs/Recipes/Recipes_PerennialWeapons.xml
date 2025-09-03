@@ -43,8 +43,8 @@
 <RecipeDef>
     <defName>ET_PerennialRandomWeaponRecipe</defName>
     <label>salvage laser weapon</label>
-    <description>Salvage a random laser weapon from advanced components.</description>
-    <jobString>Salvaging laser weapon.</jobString>
+    <description>Create a random perennial weapon from a periwood core.</description>
+    <jobString>Carving perennial weapon.</jobString>
     <workSpeedStat>ResearchSpeed</workSpeedStat>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
@@ -54,23 +54,15 @@
       <li>
         <filter>
           <thingDefs>
-            <li>ComponentSpacer</li>
+            <li>ComponentSpacerEco</li>
           </thingDefs>
         </filter>
-        <count>6</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Plasteel</li>
-          </thingDefs>
-        </filter>
-        <count>30</count>
+        <count>1</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>ComponentSpacer</li>
+        <li>ComponentSpacerEco</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
