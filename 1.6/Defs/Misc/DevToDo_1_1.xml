@@ -3,6 +3,7 @@
 
 <!--==========1.5 Checklist==========
 
+-Mechanics still left to do (as of 9.2.25) are in a second area at the bottom of the doc.
 
 ====================
 CORE MECHANICS:
@@ -162,6 +163,116 @@ SAPS:
 		-Used for creating Briarseeds
 		-Used for combining two saps to create higher potencies.
 ====================
+
+=====AS OF 9.2.25 (FINAL ADDITIONS BEFORE MAIN PUSH)=====
+
+
+====================
+CORE MECHANICS:
+	-Add Plant Wall Growth Code
+	-Add dynamic graphics for weapons
+	-Add building that produces a resource tied to a research, whenever a research is done.
+	-(Optional) Add Bloompox kill mechanic: pawn that dies to bloompox hediff becomes limited-time fertile growth spot.
+	-(Optional) Add Soulbloom kill mechanic: pawn that dies to soulbloom hediff becomes unique statue.
+	-Deepsap Changes: used for water-based plants. However, only a couple water-based plants exist.
+	-Add Potency weapon mechanic
+====================
+
+====================
+PERRENIAL EXPANSION:
+	-Finish Perrenial Weapons Line:
+		-Add Needler (COMPLETE) | Evolves to Eldercaster
+		-Add Quadcaster | Evolves to Elderrifle
+		-Add Hypercannon (COMPLETE) | Evolves to Eldercannon
+		-Add PSR (Plated Supression Rifle) | COMPLETE
+		-Add Stormbow
+		-Add Stemglaive (COMPLETE) | Evolves to Elderglaive
+		-Add Pellet Grenades
+		-Add Pantheon Launcher
+
+	-Certain Perennial weapons can be fitted with a scope when Crystal Infusion is discovered.
+	-Perrenial is the last mainline wooden type you can get before needing to establish stronger facilities.
+
+	
+	-Add Medium Terravats (1x3 Terravats)
+	
+	-After researching Organic Aptitude, you can combine Perennial with Prima to form Briar weaponry.
+	-(Optional) Add 1x1 Briar Turret
+
+====================
+====================
+PRIMA WEAPONS:
+	-Add remaining upgraded variants
+	-Rework Acid Launcher to Sap Launcher:
+		-Basesap: Light acidic damage + light slowing
+		-Glowsap: Light acidic damage + lighting up area for a few days
+		-Brightsap: Medium acidic damage + lighting up area for a few days (later: enriches terrain)
+		-Endosap: Medium acidic damage + heavy slowing
+		-Hypersap: High acidic damage
+		(Following saps requires upgraded sap launcher)
+		-Toxsap: Medium acidic damage + poisoning
+		-Deepsap: Light acidic damage + entanglement
+		-Archsap: Very high acidic damage + slowing
+	-All sap launcher filth sticks around for 3-9 days.
+	-Upgraded variant allows infinite infusions, and is needed for more advanced launchers
+	-Like the stakecaster, the sap launcher has multiple phases. Phase 1 - Prima - only supports basic saps, which phase 2 supports protosaps.
+====================
+====================
+BRIAR WEAPONS:
+	-Finish Briar Weapons:
+		-Add Briar Sword
+		-Add Briar Stakecaster
+		-Add Brair Shotgun
+
+	-Add Briar Turret recipe (Prima Apex Seed + Periwood Heart)
+	-Requires Organic Aptitude
+	-Once these two items are combined, it results in a single turret seed.
+	-This seed can be planted to make one turret, but once analyzed it can be easily replicated.
+	-Requires a larger, grown research bench to fully analyze.
+
+	-Briar weapons combine the growability of Prima weapons with the lifespan of Perennial weapons.
+	-Briar weapons inflict a briar debuff, which slows and cuts the pawn it hits.
+	-Briar Weapons have +3 range compared to their Prima counterparts.
+	-Briar weapons cannot have their sap replaced, do not drop anything upon expiry, and cannot be replanted, as they are
+	weapons that fully utilized their sap, and are too unstable to further modify.
+	-Briar weapons can still be replenished by brightsap, but requires a Deeproot Terravat.
+	-Briar weapons can also be soaked in Toxsap, but this too requires a Deeproot Terravat.
+	-Briar weapons grow 75% at the speed of Prima weapons, and have 75% of the Perennial lifespan.
+
+====================
+====================
+PLANTS:
+	- Completely work owt Periwood Tree
+		-The Periwood Tree should take time to grow, but produce a periwood heart. This heart is used to grow Perennial weapons
+		-This tree is also used to acquire Briar weapons early on, before the seed can be easily shaped.
+	
+====================
+
+====================
+STRUCTURES:
+
+	-Add to Brightsap Lighting:
+		-Create Brightvines
+	-Create Glowsap Lighting:
+		-Glowsap Lamp
+		-Glowsap Pillar
+		-Glowvines
+	-Glowsap Lighting comes before Brightsap Lighting.
+	
+====================
+
+====================
+SAPS:
+	-Add a use for Deepsap
+		-This sap grows aquatic terraplants, which can be lithic or organic.
+		-Should have it's own independent research, despite being technically hybrid.
+		
+	-Seperate shocksap into early-game lithic weapons
+		-Shocksap's main use will be for lithic weapons. Therefore it should be acquired early on.
+		-This will probably be down through a Lithic Crucible, a Lithic Spring, and a Lithic Well. However, only the Lithic Crucible needs to exist on launch.
+====================
+	
+	
 	-->
 
 </Defs>
