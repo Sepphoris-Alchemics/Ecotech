@@ -94,7 +94,7 @@ Creates Deeproot Terravats</description>
           <li>
             <fuelCount>1</fuelCount>
             <inputThingDef>ET_PrimaStakecaster</inputThingDef>
-            <outputThingDef>ET_PerennialTricaster</outputThingDef>
+            <outputThingDef>ET_PeriwoodTricaster</outputThingDef>
           </li>
         </recipes>
       </li>

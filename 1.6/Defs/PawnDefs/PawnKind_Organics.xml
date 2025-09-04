@@ -167,7 +167,7 @@
     </apparelTags>
   </PawnKindDef>
 
-  <!--Uses heavy Prima and Perennial weaponry, such as sap launchers and hypercannons-->
+  <!--Uses heavy Prima and Periwood weaponry, such as sap launchers and hypercannons-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_InitiateSentry_HeavyAll</defName>
     <combatPower>120</combatPower>
@@ -186,15 +186,15 @@
     </apparelTags>
   </PawnKindDef>
 
-  <!--Uses Perennial melee weapons-->
+  <!--Uses Periwood melee weapons-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
-    <defName>ET_PerennialSentry_MeleeAll</defName>
+    <defName>ET_PeriwoodSentry_MeleeAll</defName>
     <combatPower>60</combatPower>
     <label>Initiate Guardian</label>
     <labelPlural>Initiate Guardians</labelPlural>
     <isFighter>true</isFighter>
     <weaponTags>
-      <li>ET_PerennialMelee</li>
+      <li>ET_PeriwoodMelee</li>
     </weaponTags>
     <backstoryCategories>
       <li>ET_TerratechBackstories</li>
@@ -274,7 +274,7 @@
     </apparelTags>
   </PawnKindDef>
 
-  <!--Uses Prima and Perennial weapons with range, such as Casters and rifles-->
+  <!--Uses Prima and Periwood weapons with range, such as Casters and rifles-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_Sentry_RangerAll</defName>
     <combatPower>90</combatPower>
@@ -293,7 +293,7 @@
     </apparelTags>
   </PawnKindDef>
 
-  <!--Uses Prima and Perennial CQC weapons, such as shotguns and SMGs-->
+  <!--Uses Prima and Periwood CQC weapons, such as shotguns and SMGs-->
   <PawnKindDef ParentName="ET_EliteSentryBase">
     <defName>ET_Sentry_SkirmisherAll</defName>
     <combatPower>90</combatPower>

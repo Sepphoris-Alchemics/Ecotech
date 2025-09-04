@@ -157,7 +157,7 @@
     </additionalHediffs>
   </DamageDef>
 
-<!--PerennialDamage-->
+<!--PeriwoodDamage-->
 
   <!--<DamageDef>
 	<defName>ET_NightshadeDamage</defName>

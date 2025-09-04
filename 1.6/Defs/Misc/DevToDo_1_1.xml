@@ -10,7 +10,7 @@ CORE MECHANICS:
 	-Create basic neutral EcoTech faction (friendly to EcoTech start)
 		-Uses Wild, Sap-Infused, and alt-line weapons
 	-Create hostile EcoTech faction (neutral to EcoTech start)
-		-Uses Prima, Perennial, and other mainline weapons
+		-Uses Prima, Periwood, and other mainline weapons
 	-Add Terraforming Code
 	-Add Item/Structure Absorbing Code
 	-Add Plant Wall Growth Code
@@ -44,9 +44,9 @@ PERRENIAL EXPANSION:
 		-Add Pellet Grenades
 		-Add Pantheon Launcher
 
-	-Add Perennial Groveguard Turret
+	-Add Periwood Groveguard Turret
 	-Perrenial Weapons require Advanced Elderwood Methods before research
-	-Certain Perennial weapons can be fitted with a scope when Crystal Infusion is discovered.
+	-Certain Periwood weapons can be fitted with a scope when Crystal Infusion is discovered.
 	-Perrenial is the last mainline wooden type you can get before needing to establish stronger facilities.
 	-Pantheon Launchers require heavy briar weaponry.
 
@@ -54,7 +54,7 @@ PERRENIAL EXPANSION:
 		-Allows Elderwood Bays (1x3 Sap Bays)
 		-Allows Medium Terravats (1x3 Terravats)
 	
-	-After researching Elderwood Mastery, you can attempt to combine Perennial with Prima to form Briar weaponry.
+	-After researching Elderwood Mastery, you can attempt to combine Periwood with Prima to form Briar weaponry.
 
 ====================
 ====================
@@ -83,17 +83,17 @@ BRIAR WEAPONS:
 
 	-Add Briar Turret
 	-Requires Elderwood Mastery, and Deepsap Bay (a Sap Bay that allows two seeds to be planted at once in the same tile)
-	-Combining a Prima Apex Seed with a Perennial Seed results in a wooden, thorn-covered pod that produces a random Briar weapon.
-	-Briar Turret is made by combining an Apex Turret Seed with a Perennial Turret Seed.
+	-Combining a Prima Apex Seed with a Periwood Seed results in a wooden, thorn-covered pod that produces a random Briar weapon.
+	-Briar Turret is made by combining an Apex Turret Seed with a Periwood Turret Seed.
 
-	-Briar weapons combine the growability of Prima weapons with the lifespan of Perennial weapons.
+	-Briar weapons combine the growability of Prima weapons with the lifespan of Periwood weapons.
 	-Briar weapons inflict a briar debuff, which slows and cuts the pawn it hits.
 	-Briar Weapons have +3 range compared to their Prima counterparts.
 	-Briar weapons cannot have their sap replaced, do not drop anything upon expiry, and cannot be replanted, as they are
 	weapons that fully utilized their sap, and are too unstable to further modify.
 	-Briar weapons can still be replenished by brightsap, but requires a Deeproot Terravat.
 	-Briar weapons can also be soaked in Toxsap, but this too requires a Deeproot Terravat.
-	-Briar weapons grow 75% at the speed of Prima weapons, and have 75% of the Perennial lifespan.
+	-Briar weapons grow 75% at the speed of Prima weapons, and have 75% of the Periwood lifespan.
 
 ====================
 ====================
@@ -102,7 +102,7 @@ TECH TIERS:
 	While the tech tiers doesn't matter much at the moment, it very much will later on.
 	The higher the tech tiers, the stronger the tech is - and the more reactive an Ecotech faction will be when an Industrial faction gets ahold of it.
 
-	-1: COMMONPLACE: Anyone can get ahold of this, with little to no research. this goes up to Perennial Basics.
+	-1: COMMONPLACE: Anyone can get ahold of this, with little to no research. this goes up to Periwood Basics.
 	-2: SENSITIVE: This is where factions start guarding their tech, and players need to show dedication. The following is required:
 		-The player gets a debuff for having industrial+ structures on the map.
 		-Conduit Trees function slower if industrial+ structures are on the map (except Reclaimer tree)
@@ -190,13 +190,13 @@ PERRENIAL EXPANSION:
 		-Add Pellet Grenades
 		-Add Pantheon Launcher
 
-	-Certain Perennial weapons can be fitted with a scope when Crystal Infusion is discovered.
+	-Certain Periwood weapons can be fitted with a scope when Crystal Infusion is discovered.
 	-Perrenial is the last mainline wooden type you can get before needing to establish stronger facilities.
 
 	
 	-Add Medium Terravats (1x3 Terravats)
 	
-	-After researching Organic Aptitude, you can combine Perennial with Prima to form Briar weaponry.
+	-After researching Organic Aptitude, you can combine Periwood with Prima to form Briar weaponry.
 	-(Optional) Add 1x1 Briar Turret
 
 ====================
@@ -230,20 +230,20 @@ BRIAR WEAPONS:
 	-This seed can be planted to make one turret, but once analyzed it can be easily replicated.
 	-Requires a larger, grown research bench to fully analyze.
 
-	-Briar weapons combine the growability of Prima weapons with the lifespan of Perennial weapons.
+	-Briar weapons combine the growability of Prima weapons with the lifespan of Periwood weapons.
 	-Briar weapons inflict a briar debuff, which slows and cuts the pawn it hits.
 	-Briar Weapons have +3 range compared to their Prima counterparts.
 	-Briar weapons cannot have their sap replaced, do not drop anything upon expiry, and cannot be replanted, as they are
 	weapons that fully utilized their sap, and are too unstable to further modify.
 	-Briar weapons can still be replenished by brightsap, but requires a Deeproot Terravat.
 	-Briar weapons can also be soaked in Toxsap, but this too requires a Deeproot Terravat.
-	-Briar weapons grow 75% at the speed of Prima weapons, and have 75% of the Perennial lifespan.
+	-Briar weapons grow 75% at the speed of Prima weapons, and have 75% of the Periwood lifespan.
 
 ====================
 ====================
 PLANTS:
 	- Completely work owt Periwood Tree
-		-The Periwood Tree should take time to grow, but produce a periwood heart. This heart is used to grow Perennial weapons
+		-The Periwood Tree should take time to grow, but produce a periwood heart. This heart is used to grow Periwood weapons
 		-This tree is also used to acquire Briar weapons early on, before the seed can be easily shaped.
 	
 ====================

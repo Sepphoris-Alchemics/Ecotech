@@ -72,16 +72,16 @@ MATERIALS: PROGRESSION - in order of liklihood of aquisition.
 ====================
 ====================
 MISC MATERIALS: Materials that player minor roles.
-		-Perennial Remnants: Treated as a small material.
+		-Periwood Remnants: Treated as a small material.
 		-Terravat Usages:
-			40x Perennial Remnants + 1x Brightsap: random Perennial weapon. Refined in Terravat.
-			25x Perennial Remnants + 1x Deepsap: Perennial seed. Refined in Terravat.
-			Up to 100x Perennial Remnants + Up to 100x Toxsap: Up to 100x normal Terramass. Refined in Terravat.
+			40x Periwood Remnants + 1x Brightsap: random Periwood weapon. Refined in Terravat.
+			25x Periwood Remnants + 1x Deepsap: Periwood seed. Refined in Terravat.
+			Up to 100x Periwood Remnants + Up to 100x Toxsap: Up to 100x normal Terramass. Refined in Terravat.
 
 		-Advanced usage:
-			20x Perennial Remnants: Produces 10 elderwood. Refined in ???
-			20x Perennial Remnants: Produces 20 terramass. Refined in ???
-			20x Perennial Remnants: Produces both results. Refined in ???
+			20x Periwood Remnants: Produces 10 elderwood. Refined in ???
+			20x Periwood Remnants: Produces 20 terramass. Refined in ???
+			20x Periwood Remnants: Produces both results. Refined in ???
 		
 		-Base Sap Extraction Chances:
 			1% Toxsap
@@ -114,9 +114,9 @@ PERRENIAL EXPANSION:
 		-Add Pellet Grenades
 		-Add Pantheon Launcher
 
-	-Add Perennial Groveguard Turret
+	-Add Periwood Groveguard Turret
 	-Perrenial Weapons require Advanced Elderwood Methods before research
-	-Certain Perennial weapons can be fitted with a scope when Crystal Infusion is discovered.
+	-Certain Periwood weapons can be fitted with a scope when Crystal Infusion is discovered.
 	-Perrenial is the last mainline wooden type you can get before needing to establish stronger facilities.
 	-Pantheon Launchers require heavy briar weaponry.
 
@@ -124,7 +124,7 @@ PERRENIAL EXPANSION:
 		-Allows Elderwood Bays (1x3 Sap Bays)
 		-Allows Medium Terravats (1x3 Terravats)
 	
-	-After researching Elderwood Mastery, you can attempt to combine Perennial with Prima to form Briar weaponry.
+	-After researching Elderwood Mastery, you can attempt to combine Periwood with Prima to form Briar weaponry.
 
 ====================
 

@@ -33,12 +33,12 @@
     1: Prima Seeds: Learn how to make the basic weapons of terraweapons, which cover all weapons up to Pre-Microelectronics. Prima Weapons stike a balance between damage and durability, but cannot regenerate health. These are currently in the game.
     2: Verdant Seeds: Learn how to make verdant weapons, which cover all weapons up to Multi-Analyzer. Verdant Weapons have the highest durability, lower damage, but regenerate health over time when in direct sunlight.
     3: Royal/Anima Seeds: Learn how to make the most powerful weapons, which specifically cover weapons that are Spacer+. Royal weapons have extreme damage and the highest range, but the lowest durability. Their health can be regenerated within special buildings.
-    4: Perennial: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
+    4: Periwood: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
 
   ***WEAPON DAMAGE VALUES***
-  1: Prima Weapons - will need to have stats knocked down once Perennial Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
+  1: Prima Weapons - will need to have stats knocked down once Periwood Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
   2: Verdant Weapons: will have stats similar to original launch Prima Weapons. These will be the weapons that complete with industrial weapons. Slightly lower damage and range than normal weapons, but innate armor piercing, and health regen.
-  3: Perennial Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
+  3: Periwood Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
   4: Anima Weapons: Powerful, weapons with a very small ammo reserve, but will recharge. Covers weapons that are long-range, such as snipers. Very high damage, lower reserves and warmup.
 
 ***WEAPON SUBGROUPS***
@@ -46,7 +46,7 @@
 
   1: Splinter Weapons: An upgrade of Prima weapons. These weapons create nasty splinters, causing quite a lot of bleeding and pain/mood debuffs.
   2: Blight/Miasma Weapons: An upgrade of Verdant weapons. The gene that prevent rotten growth is removed, allowing the weapon to inflict disease and capacitating hediffs.
-  3: Symbiotic Weapons: An upgrade of Perennial Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
+  3: Symbiotic Weapons: An upgrade of Periwood Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
   4: Linkroot Weapons: An upgrade to Anima Weapons. Linkroot Weapons are able to communicate with one another, and work together. When a deeproot weapon kills a target, that target's innards may be removed, growing it into another Linkroot plant, such as sacs, turrets, or even a new weapon.
   5: Aquatic Weapons: A unique branch of wild weapons that saw further development. Aquatic weapons are generally fast, beam-based, or explosive, firing scalding hot waters, or icy projectiles, at targets. These are very effect-based, taking down targets due to hediffs instead of direct damage. They have extremely high range due to being pressurized, but they are very innacurate. Later variants can support specific saps - generally protosaps and higher. They are classified as hybrid weapons, and they require stone and plants to operate. Upon expiry they turn into dried husks, but if planted early on, they turn into special trees that create coral reefs, that of which can be used to create new aquatic weapons.
   
@@ -61,7 +61,7 @@
   6: Heavy Melee Patterns: Learn how to make melee weapons that consist of larger weapons. Includes warhammers, battleaxes, and greatswords.
 
   8: Potted Turrets: Learn how to make small turrets that are potted. Easily made, but extremely limited on ammo due to lack of space.
-  9: Prima/Verdant/Perennial/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
+  9: Prima/Verdant/Periwood/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
   10: Biocannons: Large artillery plants that mimic mortars. Biocannons rely off specialize plants that are grown near them, using them as ammunition. Capable of firing spore shots, splinter shots, caustic shots, or sap shots.
 
     ?: Crystalline Infusion: Allows specialized plants that grow their own optics, allowing the creation of long-ranged weapons, such as sniper rifles and DMRs.
@@ -86,7 +86,7 @@
   <!--===== =====-->
 
 
-  <!--=====PERENNIAL WEAPONS=====-->
+  <!--=====PERIWOOD WEAPONS=====-->
 
   <!--=====CONDUIT TREES=====-->
 
@@ -176,7 +176,7 @@ The sap it recycles will not be replenished after growth, making sap farming not
     <!--<li>ET_MediumTerravats</li>-->
     <li>ET_TierTwoConduitSeeds</li>
     <li>ET_PrimaTurretSeeds</li>
-    <li>ET_PerennialTurretSeeds</li>
+    <li>ET_PeriwoodTurretSeeds</li>
     <!--<li>ET_PrimaArmorHeavy</li>-->
   </hiddenPrerequisites>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
@@ -258,8 +258,8 @@ Thermoleaf Tree, which regulates temperature in larger rooms.</discoveredLetterT
 
 <ResearchProjectDef>  <!--Briar weapons and structures-->
   <defName>ET_BriarGenome</defName>
-  <label>Prima-Perennial Crossbreeding</label>
-  <description>Discover how to combine the Prima and Perennial genomes to creature a specialized genome that utilizes the best traits of both.
+  <label>Prima-Periwood Crossbreeding</label>
+  <description>Discover how to combine the Prima and Periwood genomes to creature a specialized genome that utilizes the best traits of both.
 This advancement is closely guarded by Terratech tribes. You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
   <baseCost>1500</baseCost>
@@ -275,8 +275,8 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
   <researchViewX>6.00</researchViewX>
   <researchViewY>2.30</researchViewY>
   <discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
-  <discoveredLetterText>Your experiments of crossbreeding the Prima and Perennial genome has resulting in discovered a 'protected', secret genome: the Briar Genome.
-The Briar Genome combines the growth speed and adaptability of the Prima genome with the flexability and resilience of the Perennial Genome. Additionally, creations of the Briar genome - true to it's name - posess thorny growths that are highly effective in offense and defense.
+  <discoveredLetterText>Your experiments of crossbreeding the Prima and Periwood genome has resulting in discovered a 'protected', secret genome: the Briar Genome.
+The Briar Genome combines the growth speed and adaptability of the Prima genome with the flexability and resilience of the Periwood Genome. Additionally, creations of the Briar genome - true to it's name - posess thorny growths that are highly effective in offense and defense.
 You can now create:
 \nBriar Growths, which produce various briar weapons.
 The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLetterText>

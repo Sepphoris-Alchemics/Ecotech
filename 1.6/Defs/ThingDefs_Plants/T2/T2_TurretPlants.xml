@@ -5,7 +5,7 @@
 
 -->
 
-  <ThingDef Name="ET_PerennialTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="ET_PeriwoodTurretPlantBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
       <texPath>Things/Plant/BriarTurret_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -45,7 +45,7 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="ET_PerennialTurretPlantBase">
+  <ThingDef ParentName="ET_PeriwoodTurretPlantBase">
     <defName>ET_BriarLargeTurretPlant</defName>
     <label>Pantheon Terracannon Growth</label>
     <description>A sprout planted from a surge seed. Quick to mature, but requires ample room during it's growth period.

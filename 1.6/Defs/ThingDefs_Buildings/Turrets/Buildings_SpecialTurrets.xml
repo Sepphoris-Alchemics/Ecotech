@@ -135,7 +135,7 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>ET_PerennialTurretSeeds</li>
+      <li>ET_PeriwoodTurretSeeds</li>
     </researchPrerequisites>
     <modExtensions>
       <!--<li Class="HeavyWeapons.HeavyWeapon">
@@ -197,7 +197,7 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
     </verbs>
   </ThingDef>
 
-  <!--Perennial Spear Shot-->
+  <!--Periwood Spear Shot-->
   <ThingDef ParentName="BaseBullet">
     <defName>ET_BriarCannonSpear</defName>
     <label>pantheon briar spear</label>

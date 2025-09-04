@@ -23,9 +23,9 @@ Tier 4 upgrades: 20
 Tier 4 surge seeds: 20
 -->
 
-  <ThingDef Name="ET_PerennialRegrowthPodBase" ParentName="PlantBaseNonEdible" Abstract="True">
+  <ThingDef Name="ET_PeriwoodRegrowthPodBase" ParentName="PlantBaseNonEdible" Abstract="True">
     <graphicData>
-      <texPath>Things/Plant/PerennialPod</texPath>
+      <texPath>Things/Plant/PeriwoodPod</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <minifiedDef IsNull="True" />
@@ -42,7 +42,7 @@ Tier 4 surge seeds: 20
       <fertilitySensitivity>0.3</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <burnedThingDef IsNull="True" />
-      <immatureGraphicPath>Things/Plant/PerennialPod</immatureGraphicPath>
+      <immatureGraphicPath>Things/Plant/PeriwoodPod</immatureGraphicPath>
       <sowWork>200</sowWork>
       <sowTags>
         <li>Ground</li>
@@ -85,14 +85,14 @@ Tier 4 surge seeds: 20
     </comps>
   </ThingDef>-->
 
-  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
-    <defName>ET_PerennialWeaponPod</defName>
-    <label>Perennial Terraweapon Pod</label>
-    <description>A fortified Terrapod that will create a random Perennial Terraweapon. Quite durable, but takes a long time to produce a final product. Grown by proxy of a nearby Perennial tree, and cannot be sown by hand.
+  <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
+    <defName>ET_PeriwoodWeaponPod</defName>
+    <label>Periwood Terraweapon Pod</label>
+    <description>A fortified Terrapod that will create a random Periwood Terraweapon. Quite durable, but takes a long time to produce a final product. Grown by proxy of a nearby Periwood tree, and cannot be sown by hand.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.
 \nDue to the way the pod grows, smaller weapons are more likely to form over bigger/longer ones.</description>
     <descriptionHyperlinks>
-      <ThingDef>ET_OverviewPerennialWeapons</ThingDef>
+      <ThingDef>ET_OverviewPeriwoodWeapons</ThingDef>
     </descriptionHyperlinks>
     <comps>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
@@ -103,25 +103,25 @@ Tier 4 surge seeds: 20
           <li>
             <weight>0.5</weight>
             <things>
-              <ET_PerennialRifle>1</ET_PerennialRifle>
+              <ET_PeriwoodRifle>1</ET_PeriwoodRifle>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-              <ET_PerennialSMG>1</ET_PerennialSMG>
+              <ET_PeriwoodSMG>1</ET_PeriwoodSMG>
             </things>
           </li>
           <li>
             <weight>0.25</weight>
             <things>
-              <ET_PerennialCannon>1</ET_PerennialCannon>
+              <ET_PeriwoodCannon>1</ET_PeriwoodCannon>
             </things>
           </li>
           <li>
             <weight>0.5</weight>
             <things>
-              <ET_PerennialGlaive>1</ET_PerennialGlaive>
+              <ET_PeriwoodGlaive>1</ET_PeriwoodGlaive>
             </things>
           </li>
         </potentialSpawnedThings>
@@ -133,14 +133,14 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
 
-  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
-    <defName>ET_PerennialSMGGrowthPod</defName>
-    <label>Perennial Needler Pod</label>
-    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial Needler when finished.
+  <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
+    <defName>ET_PeriwoodSMGGrowthPod</defName>
+    <label>Periwood Needler Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Periwood Needler when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>ET_PerennialSMG</thingToSpawn>
+        <thingToSpawn>ET_PeriwoodSMG</thingToSpawn>
         <spawnCount>1</spawnCount>
         <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>
@@ -155,14 +155,14 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
 
-  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
-    <defName>ET_PerennialRifleGrowthPod</defName>
-    <label>Perennial PSR Pod</label>
-    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial PSR when finished.
+  <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
+    <defName>ET_PeriwoodRifleGrowthPod</defName>
+    <label>Periwood PSR Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Periwood PSR when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>ET_PerennialRifle</thingToSpawn>
+        <thingToSpawn>ET_PeriwoodRifle</thingToSpawn>
         <spawnCount>1</spawnCount>
         <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>
@@ -176,14 +176,14 @@ Tier 4 surge seeds: 20
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="ET_PerennialRegrowthPodBase">
-    <defName>ET_PerennialCannonGrowthPod</defName>
-    <label>Perennial Cannon Pod</label>
-    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Perennial Cannon when finished.
+  <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
+    <defName>ET_PeriwoodCannonGrowthPod</defName>
+    <label>Periwood Cannon Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Periwood Cannon when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <comps>
       <li Class="CompProperties_Spawner">
-        <thingToSpawn>ET_PerennialCannon</thingToSpawn>
+        <thingToSpawn>ET_PeriwoodCannon</thingToSpawn>
         <spawnCount>1</spawnCount>
         <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
         <spawnForbidden>false</spawnForbidden>

@@ -222,54 +222,13 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 
-<!-- ================ Perennial Bases ================ -->
+    <!-- ================ Periwood Bases ================ -->
 
-    <!--<ThingDef ParentName="UnfinishedBase">
-    <defName>ET_RandomTier2Weapon</defName>    
-    <label>partially carved periwood heart</label> 
-    <description>The heart of a periwood tree, in the middle of being carved into a perennial weapon.</description>
-    <graphicData>
-      <texPath>Things/Resource/PeriwoodHeart/PeriwoodHeart</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Metal_Drop</soundInteract>
-    <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>1</stackLimit>
-    <statBases>
-      <MaxHitPoints>75</MaxHitPoints>
-      <MarketValue>1</MarketValue>
-      <Mass>1.2</Mass>
-      <Flammability>1</Flammability>
-      <DeteriorationRate>2.0</DeteriorationRate>
-    </statBases>
-    <intricate>true</intricate>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="VEF.Things.CompProperties_RandomOutcomeComp">
-        <canProvideTags>
-          <li>ET_PerennialWeapon</li>
-        </canProvideTags>
-      </li>
-    </comps>
-  </ThingDef>-->
-
-<!--<ThingDef ParentName="UnfinishedBase">
-    <defName>ET_UnfinishedTier2Heart</defName>
-    <label>unfinished perennial weapon</label>
-    <statBases>
-      <Flammability>0.5</Flammability>
-    </statBases>
-    <graphicData>
-      <texPath>Things/Resource/PeriwoodHeart/PeriwoodHeart</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-    </graphicData>
-    <stuffCategories Inherit="false" />
-  </ThingDef>-->
-
+    <!--VEF defs
   <ThingDef ParentName="UnfinishedBase">
     <defName>ET_RandomTier2Weapon</defName>    
     <label>carved periwood heart</label> 
-    <description>The heart of a periwood tree, in the middle of being carved into a perennial weapon.</description>
+    <description>The heart of a periwood tree, in the middle of being carved into a periwood weapon.</description>
     <graphicData>
       <texPath>Things/Resource/PeriwoodHeart/PeriwoodHeart</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -289,7 +248,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <comps>
       <li Class="VEF.Things.CompProperties_RandomOutcomeComp">
         <canProvideTags>
-          <li>ET_PerennialWeapon</li>
+          <li>ET_PeriwoodWeapon</li>
         </canProvideTags>
       </li>
       <li>
@@ -309,16 +268,42 @@ Weapons that use a type of wood come far before the wood source itself, since en
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stuffCategories Inherit="false" />
-  </ThingDef>
+  </ThingDef>-->
 
-<!-- ================ Periwood Heart ================ -->
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>ET_UnfinishedTier2Heart</defName>
+        <label>partially carved periwood heart</label>
+        <description>The heart of a periwood tree, in the middle of being carved into a periwood weapon.</description>
+        <graphicData>
+            <texPath>Things/Resource/PeriwoodHeart/ET_PeriwoodHeart</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>1</stackLimit>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <MarketValue>1</MarketValue>
+            <Mass>1.2</Mass>
+            <Flammability>1</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <tickerType>Normal</tickerType>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+    <!-- ================ Periwood Heart ================ -->
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_Tier2WeaponHeart</defName>
         <label>periwood heart</label>
-        <description>The core of a periwood tree, ever so faintly pulsing, as if it was alive. Used at a terraforge to carve a random perennial weapon.</description>
+        <description>The heart of a periwood tree, ever so faintly pulsing, as if it was alive. Used at a terraforge to carve a random periwood weapon.</description>
         <graphicData>
-            <texPath>Things/Resource/TerrathystHeart</texPath>
+            <texPath>Things/Resource/PeriwoodHeart/ET_PeriwoodHeart</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.4</drawSize>
         </graphicData>
@@ -326,14 +311,14 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <generateAllowChance>0</generateAllowChance>
         <tradeability>Sellable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <stackLimit>750</stackLimit>
+        <stackLimit>1</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
             <MarketValue>15</MarketValue>
             <MaxHitPoints>50</MaxHitPoints>
-            <Mass>0.8</Mass>
+            <Mass>1.4</Mass>
             <Flammability>0</Flammability>
             <DeteriorationRate>0.25</DeteriorationRate>
         </statBases>
@@ -347,37 +332,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         </techHediffsTags>
     </ThingDef>
 
-<ThingDef ParentName="ResourceBase">
-    <defName>ComponentSpacerEco</defName>
-    <label>advanced component</label>
-    <description>Advanced computing and energy-directing machinery, miniaturized and hardened for the most demanding applications.</description>
-    <graphicData>
-      <texPath>Things/Item/Resource/ComponentSpacer</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-    </graphicData>
-    <soundInteract>Metal_Drop</soundInteract>
-    <soundDrop>Standard_Drop</soundDrop>
-    <stackLimit>50</stackLimit>
-    <healthAffectsPrice>false</healthAffectsPrice>
-    <statBases>
-      <MaxHitPoints>70</MaxHitPoints>
-      <MarketValue>200</MarketValue>
-      <Mass>0.6</Mass>
-      <Flammability>0.6</Flammability>
-      <DeteriorationRate>2.0</DeteriorationRate>
-    </statBases>
-    <intricate>true</intricate>
-    <thingCategories>
-      <li>Manufactured</li>
-    </thingCategories>
-    <tradeTags>
-      <li>ExoticMisc</li>
-    </tradeTags>
-    <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
-    <allowedArchonexusCount>5</allowedArchonexusCount>
-  </ThingDef>
-
-<!-- ================ Terrathyst ================ -->
+    <!-- ================ Terrathyst ================ -->
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierOneCrystal</defName>
@@ -435,7 +390,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 
-<!-- ================ Terrathyst Heart ================ -->
+    <!-- ================ Terrathyst Heart ================ -->
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierOneCrystalHeart</defName>
@@ -472,7 +427,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         </techHediffsTags>
     </ThingDef>
 
-<!--=====Prismite=====-->
+    <!--=====Prismite=====-->
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierTwoCrystal</defName>

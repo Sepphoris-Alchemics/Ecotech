@@ -14,7 +14,7 @@ Currently, the tech are:
     -Elemental Saps (produces Embersap, Hydrosap, and Aerosap)
     -Stellar Sap Usage (allows further use of stellar saps)
 
-    -Briar Tech (fusion of Perennial and Prima)
+    -Briar Tech (fusion of Periwood and Prima)
     -Rotvine Tech (the precise corruption of Bloomwood)
     -Wildheart Tech (easier growth of wild weapons)
 
@@ -90,9 +90,9 @@ This tome teaches one how the very basics of *everything* that Terratech is form
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_KeyBriarGenome</defName>
-        <label>Acolyte's Tome: Prima-Perennial Crossbreeding</label>
+        <label>Acolyte's Tome: Prima-Periwood Crossbreeding</label>
         <description>A thick book, make out of razor-thin bloomwood and guilded with elderwood. This book holds guarded Terratech knowledge, and is quite valuable.
-This tome teaches one how to crossbreed Prima and Perennial seeds, creating a new genome with aspects of both lines.
+This tome teaches one how to crossbreed Prima and Periwood seeds, creating a new genome with aspects of both lines.
 \nA Terratech devotee can study this at a Terratech research bench in order to successfully experiment with, and understand, the knowledge held within.</description>
         <graphicData>
             <drawSize>0.6</drawSize>

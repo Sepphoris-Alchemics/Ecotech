@@ -4,7 +4,7 @@
   <!--Balancing should go by the following:
 Prima base damage should be +2 to their industrial counterpart
 Verdant base damage should be +3
-Perennial should be +1
+Periwood should be +1
 Anima/Royal should be +4
 
 Light damage (SMGs, pistols, etc.) should be .12 penetration
@@ -450,10 +450,10 @@ Anima long range is brought down by 3
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet"> <!--heavy SMG -->
-    <defName>Bullet_PerennialNeedle</defName>
-    <label>perennial needle</label>
+    <defName>Bullet_PeriwoodNeedle</defName>
+    <label>periwood needle</label>
     <graphicData>
-      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <texPath>Things/Projectile/ET_PeriwoodNeedle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.4</drawSize>
     </graphicData>
@@ -466,10 +466,10 @@ Anima long range is brought down by 3
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet"> <!--Minigun -->
-    <defName>Bullet_PerennialRifle</defName>
-    <label>perennial needle</label>
+    <defName>Bullet_PeriwoodRifle</defName>
+    <label>periwood needle</label>
     <graphicData>
-      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <texPath>Things/Projectile/ET_PeriwoodNeedle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.4</drawSize>
     </graphicData>
@@ -482,10 +482,10 @@ Anima long range is brought down by 3
   </ThingDef>
 
   <ThingDef ParentName="BaseBullet"> <!--GL-->
-    <defName>Bullet_PerennialCannon</defName>
+    <defName>Bullet_PeriwoodCannon</defName>
     <label>pressure needle</label>
     <graphicData>
-      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <texPath>Things/Projectile/ET_PeriwoodNeedle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.4</drawSize>
     </graphicData>

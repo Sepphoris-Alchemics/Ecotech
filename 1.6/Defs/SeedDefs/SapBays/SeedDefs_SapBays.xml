@@ -3,7 +3,7 @@
 
 <!--
 	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
-	-To-do: Later used in Perennial Weapons.
+	-To-do: Later used in Periwood Weapons.
 -->
 
   <ThingDef ParentName="ResourceBase">
@@ -46,5 +46,5 @@
     </tradeTags>
     <allowedArchonexusCount>4</allowedArchonexusCount>
   </ThingDef>
-  
+
 </Defs>

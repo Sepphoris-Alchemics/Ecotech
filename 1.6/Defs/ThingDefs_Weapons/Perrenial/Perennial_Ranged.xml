@@ -3,21 +3,21 @@
 
 
 
-<!--Perennial Rifle-->
-	<ThingDef ParentName="BasePerennialTerraweapon">
-		<defName>ET_PerennialRifle</defName>		<!--Counterpart: Minigun-->
-		<label>Perennial PSR</label>
-		<description>The Perennial PSR (Plated Suppression Rifle) is a biotic weapon, carved from the heart of an Epoch Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
-\n\nPerennial weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+<!--Periwood Rifle-->
+	<ThingDef ParentName="BasePeriwoodTerraweapon">
+		<defName>ET_PeriwoodRifle</defName>		<!--Counterpart: Minigun-->
+		<label>Periwood PSR</label>
+		<description>The Periwood PSR (Plated Suppression Rifle) is a biotic weapon, carved from the heart of an Epoch Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
+\n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
-			<texPath>Things/WeaponPerennial/Basic/ET_PerennialRifleBasic</texPath>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodRifleBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
-			<li>ET_PerennialWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -42,7 +42,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_PerennialNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
 				<warmupTime>2.1</warmupTime> <!--0.4 faster than it's counterpart-->
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
@@ -83,29 +83,29 @@
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PerennialRifleGrowthPod</plantDefToSpawn>
+        	<plantDefToSpawn>ET_PeriwoodRifleGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Perennial Genome | Dormant
+      <inspectString>Periwood Genome | Dormant
 Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
       </li>
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BasePerennialTerraweapon">
-		<defName>ET_PerennialSMG</defName>		<!--Counterpart: Heavy SMG-->
-		<label>Perennial Needler</label>
-		<description>The Perennial Needler is a biotic weapon, carved fom the heart of an Epoch Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to some myths, it's projectiles do not explode, nor are they pink.
-\n\nPerennial weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+	<ThingDef ParentName="BasePeriwoodTerraweapon">
+		<defName>ET_PeriwoodSMG</defName>		<!--Counterpart: Heavy SMG-->
+		<label>Periwood Needler</label>
+		<description>The Periwood Needler is a biotic weapon, carved fom the heart of an Epoch Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to some myths, it's projectiles do not explode, nor are they pink.
+\n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
-			<texPath>Things/WeaponPerennial/Basic/ET_PerennialSMGBasic</texPath>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodSMGBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
-			<li>ET_PerennialWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -130,7 +130,7 @@ Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_PerennialNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
 				<warmupTime>2.1</warmupTime> <!--0.4 faster than it's counterpart-->
 				<burstShotCount>7</burstShotCount>
 				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
@@ -170,21 +170,21 @@ Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PerennialSMGGrowthPod</plantDefToSpawn>
+        	<plantDefToSpawn>ET_PeriwoodSMGGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Perennial Genome | Immutable
+      <inspectString>Periwood Genome | Immutable
 Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
       </li>
 		</comps>
 	</ThingDef>
 
-<!--Perennial Tricaster-->
+<!--Periwood Tricaster-->
 
 	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>ET_PerennialTricaster</defName>
+		<defName>ET_PeriwoodTricaster</defName>
 		<label>Terratech Tricaster</label>
-		<description>The Tricaster is the second iteration of the experimental "caster" weapon type, which was meant as a heirarchy of "staple" weapons that Terratech tribes could always rely on. This specific iteration introduces multiple traits of the Perennial line, though there are some notable differences due to it's method of acquisition.
+		<description>The Tricaster is the second iteration of the experimental "caster" weapon type, which was meant as a heirarchy of "staple" weapons that Terratech tribes could always rely on. This specific iteration introduces multiple traits of the Periwood line, though there are some notable differences due to it's method of acquisition.
 Created by placing a Stakecaster in a Terraforge filled with deepsap.
 \n\nThe "Caster" line is a special weapon that does not belong to one genome; rather, it is evolved directly into other ones to take on new traits, while maintaining previous ones. These weapons often outperform other weapons in their same tier, but creating them take significant time and investment.
 The Tricaster features the following bonuses and penalties:
@@ -192,18 +192,18 @@ The Tricaster features the following bonuses and penalties:
 -"Pure" Form: The Tricaster can be further evolved
 -Prima Bonus: The Tricaster can accept advanced saps
 -Prima Bonus: The Tricaster produces a special seed upon expiry
--Perennial Bonus (NEW): The Tricaster has a drastically extended lifespan
--Perennial Bonus (NEW): The Tricaster can be replanted to be regrown
--Perennial Handicap (NEW): Sap infusion requires special means due to sap inaccesibility</description>
+-Periwood Bonus (NEW): The Tricaster has a drastically extended lifespan
+-Periwood Bonus (NEW): The Tricaster can be replanted to be regrown
+-Periwood Handicap (NEW): Sap infusion requires special means due to sap inaccesibility</description>
 		<graphicData>
-			<texPath>Things/WeaponPerennial/Basic/ET_PerennialTricaster</texPath>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodTricaster</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
-			<li>ET_PerennialWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -228,7 +228,7 @@ The Tricaster features the following bonuses and penalties:
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_PerennialNeedle</defaultProjectile>
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile>
 				<warmupTime>3</warmupTime>
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
@@ -269,31 +269,31 @@ The Tricaster features the following bonuses and penalties:
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PerennialSMGGrowthPod</plantDefToSpawn>
+        	<plantDefToSpawn>ET_PeriwoodSMGGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
       <inspectString>Unique Weapon Line | Dormant
-Stage 2: Perennial Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspectString>
+Stage 2: Periwood Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspectString>
       </li>
 		</comps>
 	</ThingDef>
 
 <!--==========-->
 
-	<ThingDef ParentName="BasePerennialTerraweapon">
-		<defName>ET_PerennialCannon</defName>		<!--Counterpart: Grenade Launcher-->
-		<label>Perennial Spinecannon</label>
-		<description>The Perennial Spinecannon is a biotic weapon, carved from the heart of an Epoch Tree. This weapon fires a large stake at close range, which deal moderate damage on top of fragmenting into splinters that affect the immediate area. This makes the Cannon very capable against strong targets that are a bit too close for confort.
-\n\nPerennial weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+	<ThingDef ParentName="BasePeriwoodTerraweapon">
+		<defName>ET_PeriwoodCannon</defName>		<!--Counterpart: Grenade Launcher-->
+		<label>Periwood Spinecannon</label>
+		<description>The Periwood Spinecannon is a biotic weapon, carved from the heart of an Epoch Tree. This weapon fires a large stake at close range, which deal moderate damage on top of fragmenting into splinters that affect the immediate area. This makes the Cannon very capable against strong targets that are a bit too close for confort.
+\n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
-			<texPath>Things/WeaponPerennial/Basic/ET_PerennialCannonBasic</texPath>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodCannonBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
-			<li>ET_PerennialWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -319,7 +319,7 @@ Stage 2: Perennial Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspect
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_PerennialCannon</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<defaultProjectile>Bullet_PeriwoodCannon</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
 				<warmupTime>3.1</warmupTime> <!--0.4 faster than it's counterpart-->
 				<burstShotCount>1</burstShotCount>
 				<range>15.9</range> <!--eight less than it's counterpart-->
@@ -362,10 +362,10 @@ Stage 2: Perennial Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspect
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PerennialCannonGrowthPod</plantDefToSpawn>
+        	<plantDefToSpawn>ET_PeriwoodCannonGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Perennial Genome | Immutable
+      <inspectString>Periwood Genome | Immutable
 Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
       </li>
 		</comps>

@@ -48,14 +48,14 @@
   <!--=====GROVEGUARD (1X1)-->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_PerennialTurret_Basic</defName>
-    <label>Perennial Groveguard</label>
+    <defName>ET_PeriwoodTurret_Basic</defName>
+    <label>Periwood Groveguard</label>
     <description>A small turret grown from a specialized seed, protected by Elderwood plating. Capable of firing either quick thorns, or a large stake. The projectiles are quite inaccurate, but the three synchronous barrels allow excellent supression potential. It's Elderwood origins also allow it to live and shoot longer before expiring. Does not require power or fuel, but does require fertile terrain.
 \nLike other grown turrets, it can be revitilized with Sundrops (as long as it doesn't expire), which are a rare resource carried by Terratech factions.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Security/PerennialTurret/PerennialTurret_Base</texPath>
+      <texPath>Things/Security/PeriwoodTurret/PeriwoodTurret_Base</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1.6,1.6)</drawSize>
       <damageData>
@@ -122,7 +122,7 @@
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <claimable>true</claimable>
       <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>ET_PerennialTurret_BasicGun</turretGunDef>
+      <turretGunDef>ET_PeriwoodTurret_BasicGun</turretGunDef>
       <turretBurstCooldownTime>2.2</turretBurstCooldownTime>
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
@@ -133,17 +133,17 @@
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>ET_PerennialTurretSeeds</li>
+      <li>ET_PeriwoodTurretSeeds</li>
     </researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BaseWeaponTurret">
-    <defName>ET_PerennialTurret_BasicGun</defName>
-    <label>Perennial Groveguard</label>
+    <defName>ET_PeriwoodTurret_BasicGun</defName>
+    <label>Periwood Groveguard</label>
     <description>A small turret grown from a specialized seed, protected by Elderwood plating. Fires a synchronous volley of two smaller thorns and one larger stake projectile. The projectiles are quite inaccurate, but the three synchronous barrels allow excellent supression potential. It's Elderwood origins also allow it to live and shoot longer before expiring. Does not require power or fuel, but does require fertile terrain.
 \nLike other grown turrets, it can be revitilized with Sundrops (as long as it doesn't expire), which are a rare resource carried by Terratech factions.</description>
     <graphicData>
-      <texPath>Things/Security/PerennialTurret/PerennialTurret_Top</texPath>
+      <texPath>Things/Security/PeriwoodTurret/PeriwoodTurret_Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
@@ -168,7 +168,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>ET_PerennialTurretNeedle</defaultProjectile>
+        <defaultProjectile>ET_PeriwoodTurretNeedle</defaultProjectile>
         <warmupTime>8.0</warmupTime>
         <range>25.9</range>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
@@ -183,13 +183,13 @@
     </comps>
   </ThingDef>
 
-<!--Perennial Turret Groveguard shot-->
+<!--Periwood Turret Groveguard shot-->
 
   <ThingDef ParentName="BaseBullet">
-    <defName>ET_PerennialTurretNeedle</defName>
-    <label>perennial needle</label>
+    <defName>ET_PeriwoodTurretNeedle</defName>
+    <label>periwood needle</label>
     <graphicData>
-      <texPath>Things/Projectile/ET_PerennialNeedle</texPath>
+      <texPath>Things/Projectile/ET_PeriwoodNeedle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.6</drawSize>
     </graphicData>

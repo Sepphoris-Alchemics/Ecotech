@@ -81,25 +81,25 @@ This also develops the weapon's protective traits, causing more wood to form, ex
   </ThingDef>
 
   <ThingDef ParentName="PlantBaseNonEdible">
-    <defName>ET_OverviewPerennialWeapons</defName>
-    <label>Overview: Perennial Family</label>
-		<description>Weapons of the Perennial family are generally the second Terraweapon type that tribes delving into Terratech will learn to grow. This line was designed to be durable in all factors, and is a strong technology that even non-Terratech tribes can utilize.
-\nPerennial Terratech was designed to repel and protect against more advanced factions, such as those that heavily utilize gunpower. Lifespans were improved to avoid drought shortages, platings were hardened to better slow bullets, and range potential was increased so threats could be deterred faster.
-\nIn exchange for all the above, Perennial plants require much more care to grow, meaning longer grow times and higher soil fertility requirements. This further ephasized the need for dedicated groves - and thus, defensive establishments.
-\nGeneral Perennial family guidelines:
+    <defName>ET_OverviewPeriwoodWeapons</defName>
+    <label>Overview: Periwood Family</label>
+		<description>Weapons of the Periwood family are generally the second Terraweapon type that tribes delving into Terratech will learn to grow. This line was designed to be durable in all factors, and is a strong technology that even non-Terratech tribes can utilize.
+\nPeriwood Terratech was designed to repel and protect against more advanced factions, such as those that heavily utilize gunpower. Lifespans were improved to avoid drought shortages, platings were hardened to better slow bullets, and range potential was increased so threats could be deterred faster.
+\nIn exchange for all the above, Periwood plants require much more care to grow, meaning longer grow times and higher soil fertility requirements. This further ephasized the need for dedicated groves - and thus, defensive establishments.
+\nGeneral Periwood family guidelines:
 -Genetic Traits: Strong AP, sap infusions are 50% more effective.
--Growth Method: Terrapod; Perennial Tree required, and will plant said Terrapod over time
+-Growth Method: Terrapod; Periwood Tree required, and will plant said Terrapod over time
 -Minimum Soil Fertility: 60%
 -Minimum Terrapod Growth Duration: 14 days
 -Maximum Terrapod Growth Duration: 14 days
 -Maximum Weapon Lifespan (Dormant): 14 days
 -Maximum Hitpoints (Dormant): 50
-\n-How to mature: Does not mature. Instead, all Perennial weapons can be replanted and regrown. To plant a Perennial weapon, right-click one while it's on the ground, and select a suitable terrain.
+\n-How to mature: Does not mature. Instead, all Periwood weapons can be replanted and regrown. To plant a Periwood weapon, right-click one while it's on the ground, and select a suitable terrain.
 \nGuideline notes:
 -Growth does not account for external factors, i.e. daylight cycles and map events.
 -All dormant weapons regenerate health, but only regenerate when unequipped and left alone.
--Perennial Terrapods cannot be manually grown; ONLY a Perennial tree can grow them.
--Regrown Perennial weapons lose any sap infusions.
+-Periwood Terrapods cannot be manually grown; ONLY a Periwood tree can grow them.
+-Regrown Periwood weapons lose any sap infusions.
 -Other minimum stats can be found in the accompanying description.</description>
     <graphicData>
       <texPath>Things/Plant/WeaponPod_Mature</texPath>

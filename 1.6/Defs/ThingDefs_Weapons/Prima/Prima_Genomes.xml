@@ -239,9 +239,9 @@ Endosap: 70, 178, 83-->
 		</comps>
 	</ThingDef>
 
-	<!--=====Perennial=====-->
+	<!--=====Periwood=====-->
 
-	<ThingDef Name="BasePerennialTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BasePeriwoodTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
 			<MarketValue>40</MarketValue>
 		</statBases>

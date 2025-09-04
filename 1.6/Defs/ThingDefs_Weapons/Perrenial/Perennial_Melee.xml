@@ -24,11 +24,11 @@
   </ThingDef>-->
 
 	<ThingDef ParentName="BaseWeapon">
-		<defName>ET_PerennialGlaive</defName>
-		<label>Perennial Stemglaive</label>
+		<defName>ET_PeriwoodGlaive</defName>
+		<label>Periwood Stemglaive</label>
 		<description>A large bladed weapon with exceptionally long reach. Quite slow, but it's design allows many different form of attack, with each one being able to deal high damage.</description>
 		<graphicData>
-			<texPath>Things/WeaponPerennial/Basic/ET_PerennialStemglaive</texPath>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodStemglaive</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -37,8 +37,8 @@
     </thingCategories>
 		<weaponTags Inherit='False'>
       <li>ET_PlantWeapon</li>
-			<li>ET_PerennialMelee</li>
-			<li>ET_PerennialWeapon</li>
+			<li>ET_PeriwoodMelee</li>
+			<li>ET_PeriwoodWeapon</li>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>

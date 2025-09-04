@@ -38,12 +38,12 @@
     1: Prima Seeds: Learn how to make the basic weapons of terraweapons, which cover all weapons up to Pre-Microelectronics. Prima Weapons stike a balance between damage and durability, but cannot regenerate health. These are currently in the game.
     2: Verdant Seeds: Learn how to make verdant weapons, which cover all weapons up to Multi-Analyzer. Verdant Weapons have the highest durability, lower damage, but regenerate health over time when in direct sunlight.
     3: Royal/Anima Seeds: Learn how to make the most powerful weapons, which specifically cover weapons that are Spacer+. Royal weapons have extreme damage and the highest range, but the lowest durability. Their health can be regenerated within special buildings.
-    4: Perennial: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
+    4: Periwood: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
 
   ***WEAPON DAMAGE VALUES***
-  1: Prima Weapons - will need to have stats knocked down once Perennial Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
+  1: Prima Weapons - will need to have stats knocked down once Periwood Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
   2: Verdant Weapons: will have stats similar to original launch Prima Weapons. These will be the weapons that complete with industrial weapons. Slightly lower damage and range than normal weapons, but innate armor piercing, and health regen.
-  3: Perennial Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
+  3: Periwood Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
   4: Anima Weapons: Powerful, weapons with a very small ammo reserve, but will recharge. Covers weapons that are long-range, such as snipers. Very high damage, lower reserves and warmup.
 
 ***WEAPON SUBGROUPS***
@@ -51,7 +51,7 @@
 
   1: Splinter Weapons: An upgrade of Prima weapons. These weapons create nasty splinters, causing quite a lot of bleeding and pain/mood debuffs.
   2: Blight/Miasma Weapons: An upgrade of Verdant weapons. The gene that prevent rotten growth is removed, allowing the weapon to inflict disease and capacitating hediffs.
-  3: Meld Weapons: An upgrade of Perennial Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
+  3: Meld Weapons: An upgrade of Periwood Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
   4: Deeproot Weapons: An upgrade to Anima Weapons. Deeproot Weapons are able to communicate with one another, and work together. When a deeproot weapon kills a target, that target's innards may be removed, growing it into another Deeproot plant, such as sacs, turrets, or even a new weapon.
   
   6: Grenades: Learn how to make throwable grenades:
@@ -65,7 +65,7 @@
   6: Heavy Melee Patterns: Learn how to make melee weapons that consist of larger weapons. Includes warhammers, battleaxes, and greatswords.
 
   8: Potted Turrets: Learn how to make small turrets that are potted. Easily made, but extremely limited on ammo due to lack of space.
-  9: Prima/Verdant/Perennial/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
+  9: Prima/Verdant/Periwood/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
   10: Biocannons: Large artillery plants that mimic mortars. Biocannons rely off specialize plants that are grown near them, using them as ammunition. Capable of firing spore shots, splinter shots, caustic shots, or sap shots.
 
     ?: Crystalline Infusion: Allows specialized plants that grow their own optics, allowing the creation of long-ranged weapons, such as sniper rifles and DMRs.
@@ -250,12 +250,12 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <researchViewY>0.80</researchViewY>
   </ResearchProjectDef>
 
-  <!--=====PERENNIAL WEAPONS=====-->
+  <!--=====PERIWOOD WEAPONS=====-->
 
   <ResearchProjectDef>
-    <defName>ET_PerennialSeeds</defName>
-    <label>Perennial Terraseed Cultivation</label>
-    <description>Learn how to nuture and handle Perennial Terraseeds, which grow into Pericore Trees. The core of these trees can be harvested, which are then carefully carved into perennial weapons.</description>
+    <defName>ET_PeriwoodSeeds</defName>
+    <label>Periwood Terraseed Cultivation</label>
+    <description>Learn how to nuture and handle Periwood Terraseeds, which grow into Pericore Trees. The core of these trees can be harvested, which are then carefully carved into periwood weapons.</description>
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -265,14 +265,29 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
     <researchViewY>3.00</researchViewY>
-    <discoveredLetterTitle>About: Perennial Weapons</discoveredLetterTitle>
-    <discoveredLetterText>Perennial Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Perennial Terratree in fertile soil, and then carving the weapon out when it's fully grown. Perennial weapons have a limited lifespan once they are harvested, but this base lifespan is significantly longer than nearly every other lifespan. Additionally, saps are much more effective in Perennial weapons than any other genome.
-\n\nUnlike Prima weapons, specific perennial weapons cannot be focused. However, the chance of getting any weapon is equal.</discoveredLetterText>
+    <discoveredLetterTitle>About: Periwood Weapons</discoveredLetterTitle>
+    <discoveredLetterText>Periwood Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Periwood Terratree in fertile soil, and then carving the weapon out when it's fully grown. Periwood weapons have a limited lifespan once they are harvested, but this base lifespan is significantly longer than nearly every other lifespan. Additionally, saps are much more effective in Periwood weapons than any other genome.
+\n\nUnlike Prima weapons, specific periwood weapons cannot be focused. However, the chance of getting any weapon is equal.</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_PerennialTurretSeeds</defName>
-    <label>Perennial Groveguard Seeds</label>
+    <defName>ET_PeriwoodCarving</defName>
+    <label>Periwood Carving</label>
+    <description>Learn how to carve periwood hearts into various weapons. Due to the smaller amount of periwood weapons, all the carving techniques can be learned at once.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_PeriwoodSeeds</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_PeriwoodTurretSeeds</defName>
+    <label>Periwood Groveguard Seeds</label>
     <description>Learn how to properly grow and plant specialized seeds which will shortly sprout into a biotic turret that's effective at defense and supression.
 Like other biotic turrets, the Groveguard has a limited lifespan, which drains over time and whenever they generate projectiles. However, this loss is slower than Prima turrets.
 Groveguard seeds require understanding of pressurized projectiles, which is protected knowledge. You will need to study the tome that gives this knowledge.</description>
@@ -280,7 +295,7 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_PerennialSeeds</li>
+      <li>ET_PeriwoodSeeds</li>
       <li>ET_PrimaTurretSeeds</li>
     </hiddenPrerequisites>
     <!--<hiddenPrerequisites>
@@ -349,7 +364,7 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>2.30</researchViewY>
+    <researchViewY>2.00</researchViewY>
     <discoveredLetterTitle>Mysery study complete!</discoveredLetterTitle>
     <discoveredLetterText>Your research into this tech has has gone as far as it can. One day, your colonists will put two and two together... but for now, it remains a mystery.</discoveredLetterText>
   </ResearchProjectDef>
@@ -405,7 +420,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>1.50</researchViewY>
+    <researchViewY>1.40</researchViewY>
   </ResearchProjectDef>
 
   <!--=====PROTOSAP (T1) CONTENT=====-->

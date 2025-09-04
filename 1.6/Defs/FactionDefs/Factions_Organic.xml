@@ -77,7 +77,7 @@
     </raidLootValueFromPointsCurve>
     <pawnGroupMakers>      <!--create defs-->
       <!--
-			Perennial should be most common.
+			Periwood should be most common.
 			Prima should be second-most common, and should only be upgraded or sapped weaponry.
 			Both briar and wild wepaonry should be rare, and not upgraded.
 			"Random" means that weapons may or may not be infused
@@ -93,7 +93,7 @@
           <ET_InitiateSentry_HeavyAll>3</ET_InitiateSentry_HeavyAll>
           <ET_Sentry_SkirmisherAll>8</ET_Sentry_SkirmisherAll>
           <ET_Sentry_RangerAll>6</ET_Sentry_RangerAll>
-          <ET_PerennialSentry_MeleeAll>5</ET_PerennialSentry_MeleeAll>
+          <ET_PeriwoodSentry_MeleeAll>5</ET_PeriwoodSentry_MeleeAll>
           <ET_PrimaSentry_GunnerInfused>8</ET_PrimaSentry_GunnerInfused>
           <ET_PrimaSentry_FighterInfused>3</ET_PrimaSentry_FighterInfused>
           <ET_SentryElite>1</ET_SentryElite>
@@ -122,7 +122,7 @@
         <guards>
           <ET_Sentry_RangerAll>8</ET_Sentry_RangerAll>
           <ET_BriarSentry_Random>4</ET_BriarSentry_Random>
-          <ET_PerennialSentry_MeleeAll>6</ET_PerennialSentry_MeleeAll>
+          <ET_PeriwoodSentry_MeleeAll>6</ET_PeriwoodSentry_MeleeAll>
           <ET_PrimaSentry_GunnerBasic>5</ET_PrimaSentry_GunnerBasic>
         </guards>
       </li>

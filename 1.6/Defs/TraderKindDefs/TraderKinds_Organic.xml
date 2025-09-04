@@ -95,7 +95,7 @@
         </countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>ET_Seed_PerennialTree</thingDef>
+        <thingDef>ET_Seed_PeriwoodTree</thingDef>
         <countRange>
           <min>-2</min>
           <max>8</max>

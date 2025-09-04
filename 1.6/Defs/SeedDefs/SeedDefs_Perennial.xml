@@ -3,7 +3,7 @@
 
   <!--
 	-To-do: Glowsap can also be used to create pots that can act as a makeshift growing location. Akin to hyroponics, but with standard fertility and a limited lifespan. An ideal way to grow Terraplants in regions with low soil quality.
-	-To-do: Later used in Perennial Weapons.
+	-To-do: Later used in Periwood Weapons.
   360000 ticks = 6 days
   420000 ticks = 7 days
 -->
@@ -11,9 +11,9 @@
   <!--==========-->
 
   <ThingDef ParentName="ResourceBase">
-    <defName>ET_Seed_PerennialTree</defName>
-    <label>Perennial tree seed</label>
-    <description>A special seed that will grow a Perennial Tree. Once grown, this tree will produce special pods that can be harvested for Perennial weaponry.</description>
+    <defName>ET_Seed_PeriwoodTree</defName>
+    <label>Periwood tree seed</label>
+    <description>A special seed that will grow a Periwood Tree. Once grown, this tree will produce special pods that can be harvested for Periwood weaponry.</description>
     <possessionCount>1</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>
@@ -37,7 +37,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_PerennialTree</plantDefToSpawn>
+        <plantDefToSpawn>ET_PeriwoodTree</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>
