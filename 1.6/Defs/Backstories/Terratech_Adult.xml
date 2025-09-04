@@ -48,7 +48,7 @@
     <defName>ET_SleeperAgent</defName>
     <title>terratech sleeper agent</title>
     <titleShort>sleeper agent</titleShort>
-    <description>Terratech tribes need to make sure they are prepared for being attacked, and [PAWN_nameDef]'s job was instrumental in providing advantages. Alongside other sleeper agents, [PAWN_objective] had to always be ready to form rebel cells that would disrupt and weaken the colony [PAWN_nameDef] was infiltrating. This job was very sensitive and demanding, severely impacting any connections with others.</description>
+    <description>Terratech tribes need to make sure they are prepared for being attacked, and [PAWN_nameDef]'s job was instrumental in providing advantages. Alongside other sleeper agents, [PAWN_objective] had to always be ready to form rebel cells that would disrupt and weaken the colony [PAWN_nameDef] was infiltrating. This job was very sensitive and demanding, severely impacting any connections with others, and forcing them to work within the shadows.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Intellectual>8</Intellectual>
@@ -77,7 +77,7 @@
     <skillGains>
       <Plants>10</Plants>
       <Crafting>-4</Crafting>
-      <Construction>-3</Construction>
+      <Construction>-4</Construction>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -90,7 +90,7 @@
     <defName>ET_Geosmith</defName>
     <title>terratech geosmith</title>
     <titleShort>geosmith</titleShort>
-    <description>[PAWN_nameDef] spent most of their life around &lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; weapons. These weapons required constant upkeep, and [PAWN_nameDef] not only made sure each weapon reached it's highest evolution, but also made sure each one performed to their expectations.</description>
+    <description>[PAWN_nameDef] spent most of their life around &lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; materials and items. Many of these items required constant upkeep, and [PAWN_nameDef] not only made sure each weapon reached it's highest evolution, but also made sure each one performed to their expectations.</description>
     <slot>Adulthood</slot>
     <workDisables>
       <li>Intellectual</li>
@@ -113,9 +113,9 @@
   </BackstoryDef>
 
   <BackstoryDef>
-    <defName>ET_Confiscator</defName>
-    <title>terratech asset retriever</title>
-    <titleShort>retriever</titleShort>
+    <defName>ET_Inquisitor</defName>
+    <title>terratech inquisitor</title>
+    <titleShort>inquisitor</titleShort>
     <description>Regardless of safety protocols, terratech assets will eventually end up in the wrong hands. Whenever this happened, [PAWN_nameDef] was sent out to retrieve the contraband, and dispose of anyone that was in [PAWN_objective] way.</description>
     <slot>Adulthood</slot>
     <workDisables>
@@ -141,7 +141,7 @@
 
   <BackstoryDef>
     <defName>ET_Scribe</defName>
-    <title>scribe</title>
+    <title>terratech scribe</title>
     <titleShort>scribe</titleShort>
     <description>[PAWN_nameDef] is a terratech scribe, one of the most honored roles within the culture. [PAWN_objective] was in charge of keeping and passing down closely-guarded secrets, and defending them to their last breath.\n\n[PAWN_pronoun] was also trained in combat, as the threat of being captured for interrogation always loomed above their heads.</description>
     <slot>Adulthood</slot>
@@ -181,9 +181,9 @@
       <li>Cooking</li>
     </requiredWorkTags>
     <skillGains>
-      <Plants>5</Plants>
-      <Cooking>6</Cooking>
-      <Medicine>6</Medicine>
+      <Plants>4</Plants>
+      <Cooking>4</Cooking>
+      <Medicine>8</Medicine>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -218,6 +218,123 @@
     <bodyTypeFemale>Female</bodyTypeFemale>
   </BackstoryDef>
 
+<BackstoryDef>
+    <defName>ET_Evolutionist</defName>
+    <title>terratech evolutionist</title>
+    <titleShort>evolutionist</titleShort>
+    <description>Being products of nature, every Terratech weapon has infinite potential, and [PAWN_nameDef] was in charge of pushing this science. Their knowledge of Terratech bioengineering, particularly in weapons, is unmatched.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Intellectual>8</Intellectual>
+      <Plants>6</Plants>
+      <Shooting>4</Shooting>
+      <Melee>4</Melee>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+      <li>ManualSkilled</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <possessions>
+      <ET_PrimaSMGHypersap>1</ET_PrimaSMGHypersap>
+    </possessions>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>ET_EliteWarrior</defName>
+    <title>terratech battleheart</title>
+    <titleShort>battleheart</titleShort>
+    <description>Terratech tribes are often targets of raiders - and even high-tech colonies - due to their powerful items, secretive technology, and the assumption that rejection of standard technology made them easy targets. [PAWN_nameDef]'s job was to fight off anyone who dared attacking - and [PAWN_pronoun] become very good at their job due to how often this happened.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Melee>8</Melee>
+      <Shooting>10</Shooting>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>ET_Sculptor</defName>
+    <title>terratech bloomcarver</title>
+    <titleShort>bloomcarver</titleShort>
+    <description>[PAWN_nameDef] grew up working around woods that were almost exclusively used to create furniture and decor. Thus,  [PAWN_pronoun] mastered manual artistic and crafting skills, both of which were generally handled by specialized seeds.\n\nThis skill allowed them to become the go-to artist of multiple nobles and royals across the tribes, as their creations were unique symbols of status that seeds could never replicate.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Artistic</li>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Crafting>8</Crafting>
+      <Artistic>10</Artistic>
+    </skillGains>
+    <spawnCategories>
+    <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_Chef</defName>
+    <title>terratech chef</title>
+    <titleShort>chef</titleShort>
+    <description>[PAWN_nameDef] managed the cooking of their tribe, an underappreciated - and vital - role. As the beliefs on eating fruits and vegetables from the earth varied between tribes, [PAWN_possessive] job also included handling livestock.</description>
+    <slot>Adulthood</slot>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+      <li>Cooking</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Animals>6</Animals>
+      <Cooking>8</Cooking>
+      <Plants>4</Plants>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>ET_WaterWorker</defName>
+    <title>terratech seaworker</title>
+    <titleShort>seaworker</titleShort>
+    <description>[PAWN_nameDef] mostly worked away from their tribe, diving deep into the oceans to seek out the lost aquatic terratech that are documented to once exist. They were rarely successful, almost always finding decayed remains and destroyed ruins buried in the ocean floor.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Mining>6</Mining>
+      <Construction>8</Construction>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
 
 <BackstoryDef>
     <defName>ET_Grovetender</defName>

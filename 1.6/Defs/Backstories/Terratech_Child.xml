@@ -30,7 +30,7 @@
     <defName>ET_Cropling</defName>
     <title>terratech cropling</title>
     <titleShort>cropling</titleShort>
-    <description>[PAWN_nameDef] began [PAWN_posessive] life as most other terratech children do; mastering plant work early on in their life. [PAWN_pronoun] would work massive fields one day, then assist someone else amongst the tribe the next.\n\nThis life was boring and monotonous, but [PAWN_nameDef] become familiar with skills that would benefit any role they took in the future.</description>
+    <description>[PAWN_nameDef] began [PAWN_possessive] life as most other terratech children do; learning a bit of every role before their role was chosen for them. [PAWN_pronoun] would work massive fields one day, then assist someone else amongst the tribe the next.\n\nThis life was boring and monotonous, but [PAWN_nameDef] become familiar with skills that would benefit any role they took in the future.</description>
     <slot>Childhood</slot>
     <spawnCategories><li>ET_TerratechBackstories</li></spawnCategories>
     <skillGains>
