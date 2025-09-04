@@ -319,7 +319,7 @@
     <defName>ET_WaterWorker</defName>
     <title>terratech seaworker</title>
     <titleShort>seaworker</titleShort>
-    <description>[PAWN_nameDef] mostly worked away from their tribe, diving deep into the oceans to seek out the lost aquatic terratech that are documented to once exist. They were rarely successful, almost always finding decayed remains and destroyed ruins buried in the ocean floor.</description>
+    <description>[PAWN_nameDef] mostly worked away from their tribe, diving deep into the oceans to seek out the lost aquatic terratech that are documented to once exist. They were rarely successful, almost always finding decayed remains and destroyed ruins buried in the ocean floor.\n\nDue to their extensive travelling, they picked up many tricks regarding building structures wherever they went, whether that was on the surface, within caves, or even within the ocean.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Mining>6</Mining>
@@ -335,6 +335,119 @@
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
   </BackstoryDef>
+
+
+
+<BackstoryDef>
+    <defName>ET_OutsiderConstruction</defName>
+    <title>terratech outsider</title>
+    <titleShort>outsider</titleShort>
+    <description>[PAWN_nameDef] was not born into the tribe, or brought in via cultural beliefs. Rather, [PAWN_pronoun] was allowed into the tribe as an adult, and proved [PAWN_possessive] worth through extreme trial. In particular, their construction skills was seen as valuable, as the tribe's reliance on grown structures can sometimes backfire.\n\nDespite their effort and willingness, [PAWN_pronoun] was treated more like a slave than an equal; they were untrusted, untrained in weapon handling, was forbidden from forming intimate relationships, and access to tribe technology was far out of [PAWN_nameDef]'s reach.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Plants>4</Plants>
+      <Construction>10</Construction>
+      <Shooting>-4</Shooting>
+      <Melee>-4</Shooting>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+
+
+<BackstoryDef>
+    <defName>ET_OutsiderMedical</defName>
+    <title>terratech outsider</title>
+    <titleShort>outsider</titleShort>
+    <description>[PAWN_nameDef] was not born into the tribe, or brought in via cultural beliefs. Rather, [PAWN_pronoun] was allowed into the tribe as an adult, and proved [PAWN_possessive] worth through extreme trial. In particular, their medical skills was seen as valuable, as the tribe can generally hold off threats, but larger raids can result in relatively overwelming injuries.\n\nDespite their effort and willingness, [PAWN_pronoun] was treated more like a slave than an equal; they were untrusted, untrained in weapon handling, was forbidden from forming intimate relationships, and access to tribe technology was far out of [PAWN_nameDef]'s reach.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>PlantWork</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Plants>4</Plants>
+      <Medicine>10</Medicine>
+      <Shooting>-4</Shooting>
+      <Melee>-4</Shooting>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+
+
+<BackstoryDef>
+    <defName>ET_OutsiderCrafting</defName>
+    <title>terratech outsider</title>
+    <titleShort>outsider</titleShort>
+    <description>[PAWN_nameDef] was not born into the tribe, or brought in via cultural beliefs. Rather, [PAWN_pronoun] was allowed into the tribe as an adult, and proved [PAWN_possessive] worth through extreme trial. In particular, their crafting skills was seen as valuable, as the tribe's reliance on grown weapons and tools can backfire during droughts or in unfertile regions.\n\nDespite their effort and willingness, [PAWN_pronoun] was treated more like a slave than an equal; they were untrusted, untrained in weapon handling, was forbidden from forming intimate relationships, and access to tribe technology was far out of [PAWN_nameDef]'s reach.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Plants>4</Plants>
+      <Crafting>10</Crafting>
+      <Shooting>-4</Shooting>
+      <Melee>-4</Shooting>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+
+
+<BackstoryDef>
+    <defName>ET_SpaceWorker</defName>
+    <title>terratech spaceworker</title>
+    <titleShort>spaceworker</titleShort>
+    <description>[PAWN_nameDef] was a part of a secretive tribe that lived in space, maintaining and guarding the remnants of terratechnologies that utilized the sun and stars. These assets were incredibly desired by pirates and others who would discover their existence, and demanded [PAWN_nameDef] to be highly skilled in combat and negotiation.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Melee>8</Melee>
+      <Shooting>8</Shooting>
+      <Social>6</Social>
+    </skillGains>
+    <spawnCategories>
+    <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+
 
 <BackstoryDef>
     <defName>ET_Grovetender</defName>
