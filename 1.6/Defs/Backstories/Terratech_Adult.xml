@@ -264,9 +264,47 @@
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
     </spawnCategories>
+    <forcedTraits>
+      <tough>0</tough>
+    </forcedTraits>
     <bodyTypeMale>Hulk</bodyTypeMale>
     <bodyTypeFemale>Hulk</bodyTypeFemale>
   </BackstoryDef>
+
+
+
+<BackstoryDef>
+    <defName>ET_SpecOps</defName>
+    <title>terratech special operative</title>
+    <titleShort>spec. operative</titleShort>
+    <description>Special Operatives are used for high risk - sometimes suicidal - missions, generally ones that will require casualties or war crimes. Most of [PAWN_nameDef]'s life involved training in espionage, assassination, and deep knowledge of (normally forbidden) industrial+ technology. [PAWN_pronoun] kill count is redacted, and undoubtedly high.\n\nDue to this role, [PAWN_nameDef] was always equipped with stealth armor, and meldtech capsules that allowed them to infect and take over fabricated structures and items.\n\nTheir deployment was quite rare, only used when their tribe was given no other choice.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Melee>8</Melee>
+      <Shooting>12</Shooting>
+      <Intellectual>8</Intellectual>
+      <Plants>6</Plants>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <forcedTraits>
+      <steadfast>1</steadfast>
+      <jogger>2</jogger>
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+
 
 <BackstoryDef>
     <defName>ET_Sculptor</defName>
