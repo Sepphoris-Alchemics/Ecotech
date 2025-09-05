@@ -88,7 +88,7 @@ Tier 4 surge seeds: 20
   <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
     <defName>ET_PeriwoodWeaponPod</defName>
     <label>Periwood Terraweapon Pod</label>
-    <description>A fortified Terrapod that will create a random Periwood Terraweapon. Quite durable, but takes a long time to produce a final product. Grown by proxy of a nearby Periwood tree, and cannot be sown by hand.
+    <description>A fortified Terrapod that will create a random Periwood Terraweapon. Quite durable, but takes a long time to produce a final product. Seed can only be acquired from an expiring Periwood weapon.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.
 \nDue to the way the pod grows, smaller weapons are more likely to form over bigger/longer ones.</description>
     <descriptionHyperlinks>
@@ -154,6 +154,26 @@ Tier 4 surge seeds: 20
     </comps>
   </ThingDef>
 
+<ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
+    <defName>ET_PeriwoodTricasterGrowthPod</defName>
+    <label>Periwood Needler Pod</label>
+    <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Periwood Tricaster when finished.
+\nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>ET_PeriwoodTricaster</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>900000</spawnIntervalRange>        <!--15 days to respawn-->
+        <spawnForbidden>false</spawnForbidden>
+        <requiresPower>false</requiresPower>
+        <showMessageIfOwned>true</showMessageIfOwned>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+      </li>
+      <li Class="CompProperties_Lifespan">
+        <lifespanTicks>900030</lifespanTicks>        <!--30 ticks longer to make sure the weapon spawns-->
+      </li>
+    </comps>
+  </ThingDef>
 
   <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
     <defName>ET_PeriwoodRifleGrowthPod</defName>

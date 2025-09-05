@@ -264,9 +264,9 @@
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
     </spawnCategories>
-    <forcedTraits>
+    <!--<forcedTraits>
       <steadfast>1</steadfast>
-    </forcedTraits>
+    </forcedTraits>-->
     <bodyTypeMale>Hulk</bodyTypeMale>
     <bodyTypeFemale>Hulk</bodyTypeFemale>
   </BackstoryDef>
@@ -296,10 +296,10 @@
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
     </spawnCategories>
-    <forcedTraits>
+    <!--<forcedTraits>
       <nimble>0</nimble>
       <jogger>2</jogger>
-    </forcedTraits>
+    </forcedTraits>-->
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
   </BackstoryDef>
@@ -365,10 +365,10 @@
     <requiredWorkTags>
       <li>PlantWork</li>
       <li>Cooking</li>
-      <li>Medicine</li>
+      <li>Caring</li>
     </requiredWorkTags>
     <skillGains>
-      <Medicine>6</Animals>
+      <Medicine>6</Medicine>
       <Cooking>4</Cooking>
       <Plants>8</Plants>
     </skillGains>
@@ -420,7 +420,7 @@
       <Plants>4</Plants>
       <Construction>10</Construction>
       <Shooting>-4</Shooting>
-      <Melee>-4</Shooting>
+      <Melee>-4</Melee>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -450,7 +450,7 @@
       <Plants>4</Plants>
       <Medicine>10</Medicine>
       <Shooting>-4</Shooting>
-      <Melee>-4</Shooting>
+      <Melee>-4</Melee>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -479,7 +479,7 @@
       <Plants>4</Plants>
       <Crafting>10</Crafting>
       <Shooting>-4</Shooting>
-      <Melee>-4</Shooting>
+      <Melee>-4</Melee>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>

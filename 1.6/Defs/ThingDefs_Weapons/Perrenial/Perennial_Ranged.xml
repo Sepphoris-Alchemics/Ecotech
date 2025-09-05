@@ -7,7 +7,7 @@
 	<ThingDef ParentName="BasePeriwoodTerraweapon">
 		<defName>ET_PeriwoodRifle</defName>		<!--Counterpart: Minigun-->
 		<label>Periwood PSR</label>
-		<description>The Periwood PSR (Plated Suppression Rifle) is a biotic weapon, carved from the heart of an Epoch Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
+		<description>The Periwood PSR (Plated Suppression Rifle) is a biotic weapon, carved from the heart of an Periwood Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
 \n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
 			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodRifleBasic</texPath>
@@ -86,8 +86,8 @@
         	<plantDefToSpawn>ET_PeriwoodRifleGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Periwood Genome | Dormant
-Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
+      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+Renewable | Unable to be evolved or infused</inspectString>
       </li>
 		</comps>
 	</ThingDef>
@@ -95,7 +95,7 @@ Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
 	<ThingDef ParentName="BasePeriwoodTerraweapon">
 		<defName>ET_PeriwoodSMG</defName>		<!--Counterpart: Heavy SMG-->
 		<label>Periwood Needler</label>
-		<description>The Periwood Needler is a biotic weapon, carved fom the heart of an Epoch Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to some myths, it's projectiles do not explode, nor are they pink.
+		<description>The Periwood Needler is a biotic weapon, carved fom the heart of an Periwood Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to some myths, it's projectiles do not explode, nor are they pink.
 \n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
 			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodSMGBasic</texPath>
@@ -173,8 +173,8 @@ Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
         	<plantDefToSpawn>ET_PeriwoodSMGGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Periwood Genome | Immutable
-Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
+      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+Renewable | Unable to be evolved or infused</inspectString>
       </li>
 		</comps>
 	</ThingDef>
@@ -183,9 +183,9 @@ Accepts most terrasaps | Renewable | +5 hp/day (unequipped)</inspectString>
 
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_PeriwoodTricaster</defName>
-		<label>Terratech Tricaster</label>
+		<label>Periwood Tricaster</label>
 		<description>The Tricaster is the second iteration of the experimental "caster" weapon type, which was meant as a heirarchy of "staple" weapons that Terratech tribes could always rely on. This specific iteration introduces multiple traits of the Periwood line, though there are some notable differences due to it's method of acquisition.
-Created by placing a Stakecaster in a Terraforge filled with deepsap.
+Created by combining a Primcaster with a Periwood Heart at a Biosynth Vat.
 \n\nThe "Caster" line is a special weapon that does not belong to one genome; rather, it is evolved directly into other ones to take on new traits, while maintaining previous ones. These weapons often outperform other weapons in their same tier, but creating them take significant time and investment.
 The Tricaster features the following bonuses and penalties:
 -Stage 2 out of ?
@@ -198,7 +198,7 @@ The Tricaster features the following bonuses and penalties:
 		<graphicData>
 			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodTricaster</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1</drawSize>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
@@ -269,11 +269,11 @@ The Tricaster features the following bonuses and penalties:
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
 				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PeriwoodSMGGrowthPod</plantDefToSpawn>
+        	<plantDefToSpawn>ET_PeriwoodTricasterGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Unique Weapon Line | Dormant
-Stage 2: Periwood Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspectString>
+      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Stage III&lt;/color&gt;
+Upgradable | Renewable | ??? | ???</inspectString>
       </li>
 		</comps>
 	</ThingDef>
@@ -283,7 +283,7 @@ Stage 2: Periwood Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspectS
 	<ThingDef ParentName="BasePeriwoodTerraweapon">
 		<defName>ET_PeriwoodCannon</defName>		<!--Counterpart: Grenade Launcher-->
 		<label>Periwood Spinecannon</label>
-		<description>The Periwood Spinecannon is a biotic weapon, carved from the heart of an Epoch Tree. This weapon fires a large stake at close range, which deal moderate damage on top of fragmenting into splinters that affect the immediate area. This makes the Cannon very capable against strong targets that are a bit too close for confort.
+		<description>The Periwood Spinecannon is a biotic weapon, carved from the heart of an Periwood Tree. This weapon fires a large stake at close range, which deal moderate damage on top of fragmenting into splinters that affect the immediate area. This makes the Cannon very capable against strong targets that are a bit too close for confort.
 \n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
 		<graphicData>
 			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodCannonBasic</texPath>
@@ -365,8 +365,8 @@ Stage 2: Periwood Reinforcement | Renewable | +2.5 hp/day (unequipped)</inspectS
         	<plantDefToSpawn>ET_PeriwoodCannonGrowthPod</plantDefToSpawn>
       	</li>
     <li Class="CompProperties_InspectString">
-      <inspectString>Periwood Genome | Immutable
-Heavily Extended Lifespan | Renewable | +2.5 hp/day (unequipped)</inspectString>
+      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+Renewable | Unable to be evolved or infused</inspectString>
       </li>
 		</comps>
 	</ThingDef>

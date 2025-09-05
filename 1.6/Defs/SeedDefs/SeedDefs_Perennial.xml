@@ -12,8 +12,8 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_PeriwoodTree</defName>
-    <label>Periwood tree seed</label>
-    <description>A special seed that will grow a Periwood Tree. Once grown, this tree will produce special pods that can be harvested for Periwood weaponry.</description>
+    <label>Periheart tree seed</label>
+    <description>A special seed that will grow into a Periheart Tree. Once grown, this tree will produce special pods that can be harvested for Periwood weaponry.</description>
     <possessionCount>1</possessionCount>
     <tickerType>Normal</tickerType>
     <graphicData>

@@ -109,7 +109,7 @@ The sap it recycles will not be replenished after growth, making sap farming not
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>7.00</researchViewX>
-    <researchViewY>1.50</researchViewY>
+    <researchViewY>1.40</researchViewY>
     <discoveredLetterTitle>About: Protosap Bays</discoveredLetterTitle>
     <discoveredLetterText>Protosap Bays are grown structures that you can use to grow many smaller EcoTech plants. As designated by the name, these bays specifically hold protosaps, those being brightsap and shocksap. Surgesap does not have a dedicated bay, as it's not required for growing any plants.</discoveredLetterText>
   </ResearchProjectDef>
@@ -199,6 +199,25 @@ This advancement allows you to shape seeds capable of growing into plants aren't
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>6.00</researchViewX>
+    <researchViewY>7.00</researchViewY>
+    <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
+    <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
+\nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
+  </ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>ET_AdeptFacilities</defName>
+    <label>Pattern ADE781557711-7</label>
+    <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
+\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 500 when fully implemented.)</description>
+    <baseCost>50</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>6.00</researchViewX>
     <researchViewY>0.80</researchViewY>
     <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
     <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
@@ -210,7 +229,7 @@ This advancement allows you to shape seeds capable of growing into plants aren't
 
 <ResearchProjectDef>  <!--Tier 2 Conduit Bounty Trees-->
   <defName>ET_TierTwoSpecialConduitTrees</defName>
-  <label>Conduit Megatrees</label>
+  <label>Adaptable Conduit Megatrees</label>
   <description>Discover how to shape conduit tree seeds which specialize in providing large and valuable resources. These are the first tress capable of utilizing megaflora tech, and can continuously be grown as plant size possibilities are discovered.
 This advancement is closely guarded by Terratech tribes. You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>

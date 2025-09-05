@@ -123,8 +123,8 @@ Tier 4 surge seeds: 20
 
   <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_WeaponPod_Stakecaster</defName>
-    <label>Terrapod: Stakecaster</label>
-    <description>A plant pod that will slowly grow a biotic Stakecaster. Requires highly fertile terrain.</description>
+    <label>Terrapod: Primcaster</label>
+    <description>A plant pod that will slowly grow a biotic Primcaster. Requires highly fertile terrain.</description>
     <plant>
       <harvestedThingDef>ET_PrimaStakecaster</harvestedThingDef>
       <sowMinSkill>4</sowMinSkill>

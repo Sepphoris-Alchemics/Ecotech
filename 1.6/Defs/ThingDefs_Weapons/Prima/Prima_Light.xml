@@ -3,7 +3,7 @@
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Greatbow-->
 		<defName>ET_PrimaStakecaster</defName> <!--has the pod growth time and research level of light weapons, but the duration of heavy-->
-		<label>Stakecaster</label>
+		<label>Primcaster</label>
 		<description>A biotic weapon, patterned off of a heavy bolt caster, and grown straight from a specialized pod. Extremely powerful and capable of inflicting deadly wounds, but is slow to aim, with equally slow projectile speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/ET_PrimaCrossbowBasic</texPath>

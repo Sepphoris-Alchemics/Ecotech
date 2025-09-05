@@ -22,8 +22,8 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>ET_BiosynthVat</defName>
-    <label>Biosynth tree</label>
-    <description>A giant tree meant to mimic and replicate the processes of Terravats to extremely precise degrees. The biosynth vat is required for the manipulation or editing of anything that posesses complex genetic makeup, such as body parts, creatures, and even humanoids.
+    <label>Biosynth vat</label>
+    <description>A tree meant to mimic and replicate the processes of Terravats to extremely precise degrees. The biosynth vat is required for the manipulation or fusion of anything that posesses complex genetic makeup, such as body parts, creatures, and even humanoids.
 \n\nWhile a terravat's contents can be freely modified, a biosynth tree will only use the required resources when the operation is called, and the items are used immediately.</description>
     <size>(1,1)</size>
     <graphicData>
@@ -40,7 +40,7 @@
       </damageData>
     </graphicData>
     <descriptionHyperlinks>
-    <ThingDef>ET_PrimaHeavyHelmetRecipeHyperlink</ThingDef>
+      <ThingDef>ET_PrimaHeavyHelmetRecipeHyperlink</ThingDef>
       <ThingDef>ET_PrimaHeavyArmorRecipeHyperlink</ThingDef>
     </descriptionHyperlinks>
     <statBases>
@@ -138,6 +138,31 @@ Duration: 5 days</description>
               <li>
                 <thingDef>ET_TerramassMaterial</thingDef>
                 <amount>10</amount>
+              </li>
+            </ingredientSets>
+          </li>
+          <li>            <!--tricaster-->
+            <label>breed tricaster</label>
+            <description>Requirements:
+x5 Brightsap
+x1 Primcaster
+x1 Periwood Heart
+Duration: 2 days</description>
+            <duration>3000</duration>
+            <resultDef>ET_PeriwoodTricaster</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Brightsap</thingDef>
+                <amount>5</amount>
+              </li>
+              <li>
+                <thingDef>ET_PrimaStakecaster</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_Tier2WeaponHeart</thingDef>
+                <amount>1</amount>
               </li>
             </ingredientSets>
           </li>

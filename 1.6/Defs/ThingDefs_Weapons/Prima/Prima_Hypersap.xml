@@ -7,8 +7,8 @@ At their matured form, they are given their maturity increases-->
 	<ThingDef ParentName="UpgradedHypersapTerraweapon_Burst">
 		<defName>ET_HypercasterI</defName>
 		<label>Hypercaster I</label>
-		<description>A special iteration of the Stakecaster evolution line. The addition of Hypersap has improved the range, projectile speed, fire rate, and projectile potential.
-\nStronger variants of the Hypercaster exist, which can be achieved by replacing the sap of higher-evolved Stakecasters.</description>
+		<description>A special iteration of the Primcaster evolution line. The addition of Hypersap has improved the range, projectile speed, fire rate, and projectile potential.
+\nStronger variants of the Hypercaster exist, which can be achieved by replacing the sap of other caster-type weapons.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Hypersap/PrimaCrossbowUpgraded_HS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

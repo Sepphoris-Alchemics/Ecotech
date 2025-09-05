@@ -113,9 +113,9 @@ Weapons that use a type of wood come far before the wood source itself, since en
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierOnePlating</defName>
-        <label>Primwood Plating</label>
-        <description>Organic plates of Primwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
-\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. However, the wood present on Prima weapons is reminiscent of Primwood's own sapwood or heartwood, but softer and smoother.</description>
+        <label>primwood plating</label>
+        <description>Organic plates of primwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
+\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. That said, the wood present on prima weapons is reminiscent of primwood's own sapwood or heartwood, but softer and smoother. This implies the bark of terratrees was designed for defense in mind, while inner layers were designed for offense.</description>
         <graphicData>
             <texPath>Things/Resource/Primwood</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -170,9 +170,10 @@ Weapons that use a type of wood come far before the wood source itself, since en
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierTwoPlating</defName>
-        <label>Elderwood Plating</label>
-        <description>Organic plates of Elderwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
-\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. However, the wood present on Prima weapons is reminiscent of Primwood's own sapwood or heartwood, but softer and smoother.</description>
+        <label>elderwood plating</label>
+        <description>Hardly, organic plates that grow as the bark on elderwood trees. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resource-efficient.
+        Sections of elderwood tend to harden faster than others, giving a mix of darker and lighter coloring. Generally the smaller the tree, the harder - and darker - the wood will be. This unique trait is where elderwood gets it's name, as this discoloration is generally only seen in long-lived trees.
+\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way.</description>
         <graphicData>
             <texPath>Things/Resource/Elderwood</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -200,7 +201,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
             <categories>
                 <li>Woody</li>
             </categories>
-            <color>(85,74,49)</color>
+            <color>(86,52,42)</color>
             <commonality>0</commonality>
             <constructEffect>ConstructWood</constructEffect>
             <appearance>Planks</appearance>
@@ -330,6 +331,11 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <techHediffsTags>
             <li>Poor</li>
         </techHediffsTags>
+        <comps>
+            <li Class="CompProperties_Lifespan">
+                <lifespanTicks>240000</lifespanTicks>
+            </li>
+        </comps>
     </ThingDef>
 
     <!-- ================ Terrathyst ================ -->

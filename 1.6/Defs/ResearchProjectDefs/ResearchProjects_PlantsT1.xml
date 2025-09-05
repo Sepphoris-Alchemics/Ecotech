@@ -264,7 +264,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>3.00</researchViewY>
+    <researchViewY>2.80</researchViewY>
     <discoveredLetterTitle>About: Periwood Weapons</discoveredLetterTitle>
     <discoveredLetterText>Periwood Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Periwood Terratree in fertile soil, and then carving the weapon out when it's fully grown. Periwood weapons have a limited lifespan once they are harvested, but this base lifespan is significantly longer than nearly every other lifespan. Additionally, saps are much more effective in Periwood weapons than any other genome.
 \n\nUnlike Prima weapons, specific periwood weapons cannot be focused. However, the chance of getting any weapon is equal.</discoveredLetterText>
@@ -282,7 +282,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>3.00</researchViewY>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -355,7 +355,7 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
     <defName>ET_Tier2Terraforge</defName>
     <label>Pattern 52R8898111-E</label>
     <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
-\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1500 when fully implemented).</description>
+\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1500 when fully implemented.)</description>
     <baseCost>150</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -407,12 +407,12 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
 
   <!--=====BRIGHTSAP CONTENT=====-->
 
-  <ResearchProjectDef>
-    <defName>ET_BrightsapStructures</defName>
-    <label>Brightsap Structures</label>
-    <description>Learn how to further utilize Brightsap, and create various strutures that can compliment your base, while also providing decent amounts of light.
-\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-    <baseCost>1000</baseCost>
+<ResearchProjectDef>
+    <defName>ET_GlowsapStructures</defName>
+    <label>Pattern GL87416A1-5</label>
+    <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
+\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1000 when fully implemented.)</description>
+    <baseCost>100</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
@@ -420,6 +420,22 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_BrightsapStructures</defName>
+    <label>Brightsap Structures</label>
+    <description>Learn how to further utilize Brightsap, and create various strutures that can compliment your base, while also providing decent amounts of light.
+\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_GlowsapRefinement</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>3.00</researchViewX>
     <researchViewY>1.40</researchViewY>
   </ResearchProjectDef>
 

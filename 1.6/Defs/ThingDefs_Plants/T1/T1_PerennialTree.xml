@@ -5,11 +5,11 @@
 
   <ThingDef ParentName="TreeBase">
     <defName>ET_PeriwoodTree</defName>
-    <label>periwood tree</label>
-    <description>A tree that is quite important to Terratech tribes, almost as important as many conduit trees. Periwood trees were carefully designed to be a staple plant of any Terratech tribe providing effective weaponry to it's tribe, while also requiring minimal effort in return.
-\nPeriwood Trees grow relatively fast and last a very long time, and over their lifespan they produce various plant pods. Upon maturity these plant pods will produce a random Periwood weapon, and expire shortly after. This process requires nearby fertile soil.
-Unlike Prima weapons, what a Periwood pod produces cannot be influenced. Furthermore, the pods are not created very often, so it is advised you plant - and protect - Periwood trees wherever possible.
-\n\nLike most Terratech trees, they require ample growing space from others of their kind. Periwood trees are grown via seeds.</description>
+    <label>periheart tree</label>
+    <description>A tree that is quite important to Terratech tribes, almost as important as many conduit trees. Periheart trees were carefully designed to be a staple plant of any Terratech tribe providing effective weaponry to it's tribe, while also requiring minimal effort in return.
+\nPeriheart Trees grow relatively fast and last a very long time, and once fully grown they produce various pods that create perwidood weapons. Specific periwood weapons can be cxreated, but this requires the cutting of a tree - which those in tune with nature will not like.
+All weapons come from this periwood heart, requiring no other ingredients. However, the carving process is very delicate; if the carving is paused, the heart with VERY quickly expire.
+\n\nLike most Terratech trees, they require ample growing space from others of their kind. Periheart trees are grown via seeds.</description>
     <graphicData>
       <graphicClass>Graphic_Random</graphicClass>
       <texPath>Things/Plant/PeriwoodTree</texPath>
@@ -28,6 +28,9 @@ Unlike Prima weapons, what a Periwood pod produces cannot be influenced. Further
     <ingestible />
     <neverMultiSelect>false</neverMultiSelect>
     <canScatterOver>false</canScatterOver>
+    <killedLeavings>
+      <ET_Tier2WeaponHeart>1</ET_Tier2WeaponHeart>
+    </killedLeavings>
     <plant>
       <pollution>Any</pollution>
       <growDays>5</growDays>
@@ -62,7 +65,7 @@ Unlike Prima weapons, what a Periwood pod produces cannot be influenced. Further
         <maxRadius>11.9</maxRadius>
         <subplantSpawnDays>6</subplantSpawnDays>
         <minGrowthForSpawn>0.6</minGrowthForSpawn>
-        <initialGrowthRange>0.5~0.8</initialGrowthRange>
+        <initialGrowthRange>0.2~0.4</initialGrowthRange>
         <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
         <plantsToNotOverwrite>
           <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
