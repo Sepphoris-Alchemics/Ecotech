@@ -68,7 +68,7 @@
     <defName>ET_Croptender</defName>
     <title>terratech crop tender</title>
     <titleShort>crop tender</titleShort>
-    <description>[PAWN_nameDef] managed giant, complex fields of various terratech creations, constantly harvesting weapons and materials, and rotating them on a strict schedule. Even during the least demanding times, [PAWN_possessive] job required her to manage dozens upon dozens of individual, unique crops.</description>
+    <description>[PAWN_nameDef] managed giant, complex fields of various terratech creations, constantly harvesting weapons and materials, and rotating them on a strict schedule. Even during the least demanding times, [PAWN_pronoun] job required [PAWN_pronoun] to manage dozens upon dozens of individual, unique crops.</description>
     <slot>Adulthood</slot>
     <requiredWorkTags>
       <li>PlantWork</li>
@@ -265,7 +265,7 @@
       <li>ET_TerratechBackstories</li>
     </spawnCategories>
     <forcedTraits>
-      <tough>0</tough>
+      <steadfast>1</steadfast>
     </forcedTraits>
     <bodyTypeMale>Hulk</bodyTypeMale>
     <bodyTypeFemale>Hulk</bodyTypeFemale>
@@ -277,7 +277,7 @@
     <defName>ET_SpecOps</defName>
     <title>terratech special operative</title>
     <titleShort>spec. operative</titleShort>
-    <description>Special Operatives are used for high risk - sometimes suicidal - missions, generally ones that will require casualties or war crimes. Most of [PAWN_nameDef]'s life involved training in espionage, assassination, and deep knowledge of (normally forbidden) industrial+ technology. [PAWN_pronoun] kill count is redacted, and undoubtedly high.\n\nDue to this role, [PAWN_nameDef] was always equipped with stealth armor, and meldtech capsules that allowed them to infect and take over fabricated structures and items.\n\nTheir deployment was quite rare, only used when their tribe was given no other choice.</description>
+    <description>Special Operatives are used for high risk - sometimes suicidal - missions, generally ones that will require casualties or war crimes. Most of [PAWN_nameDef]'s life involved training in espionage, assassination, and deep knowledge of (normally forbidden) industrial+ technology. [PAWN_pronoun] kill count is redacted, and undoubtedly high.\n\nDue to this role, [PAWN_nameDef] was always equipped with stealth bioarmor, and meldtech capsules that allowed them to infect and take over fabricated structures and items.\n\nTheir deployment was quite rare, only used when their tribe was given no other choice.</description>
     <slot>Adulthood</slot>
     <workDisables>
       <li>ManualDumb</li>
@@ -297,7 +297,7 @@
       <li>ET_TerratechBackstories</li>
     </spawnCategories>
     <forcedTraits>
-      <steadfast>1</steadfast>
+      <nimble>0</nimble>
       <jogger>2</jogger>
     </forcedTraits>
     <bodyTypeMale>Male</bodyTypeMale>
@@ -345,6 +345,32 @@
       <Animals>6</Animals>
       <Cooking>8</Cooking>
       <Plants>4</Plants>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>ET_FoodCaregiver</defName>
+    <title>terratech cropgiver</title>
+    <titleShort>cropgiver</titleShort>
+    <description>Instead of staying within a tribe, [PAWN_nameDef] went their own way, following the terratech beliefs but sharing their ability to quickly grow plants. [PAWN_possessive] traveled across the world, using their knowledge to grow foods and medicines for any travellers or colonies that needed it.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+      <li>Cooking</li>
+      <li>Medicine</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Medicine>6</Animals>
+      <Cooking>4</Cooking>
+      <Plants>8</Plants>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
