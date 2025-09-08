@@ -109,27 +109,6 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <discoveredLetterText>You can now grow a Terraforge, which is your primary method of acquiring and producing most Terratech organic creations. Shape the Terraforge seed at a normal crafting spot, then plant the seed in any desired spot. Once the Terraforge has grown, you can shape any new seeds at it.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <ResearchProjectDef>
-    <defName>ET_TerrathystEssentials</defName>
-    <label>Terrathyst Essentials</label>
-    <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability.
-Teaches you how to grow a terrathyst cultivator, which then grows numerous smaller crystals that can be harvested or shattered for terrathyst. The cultivator grows the smaller crystals year-round, and requires little interaction once grown.
-Being engineered like organic terratech, terrathyst doesn't require fertility or light. It does, however, require water, mud, or sap-enriched terrains to grow in.
-Terrathyst is just one more outlet of tapping into nature, as nature is not only verdant plants and trees, but also the earth, elements, and even the cosmos. Therefore, it is just as useable as plants, and have it's own unique upsides and downsides, which tribes might prefer over organic matter.
-Terrathyst production takes lightly longer than organic production, due to their sensitivity, being a liquid-grown product, and the need for many shards. However, their ease of understanding and shaping is just as simple as Prima creations, and terrathyst serves as the dominant material.</description>
-    <baseCost>1000</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TerraseedEssentials</li>
-    </hiddenPrerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>0.00</researchViewX>
-    <researchViewY>4.00</researchViewY>
-    <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
-    <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. These are easy to grow, but can only be grown at a sap bay. Shocksap bays are recommended, but glowsap bays can grow these as well.</discoveredLetterText>
-  </ResearchProjectDef>
-
   <!--=====PRIMA ARMOR=====-->
 
   <!--=====PRIMA WEAPONS=====-->
@@ -522,26 +501,6 @@ You can now create Biothite, an incredibly strong material that can be used in m
   <researchViewY>5.00</researchViewY>
   <discoveredLetterTitle>Secrets of Terratech: Royal Seeds</discoveredLetterTitle>
   <discoveredLetterText>You have discovered that Prima Terraweapons are just one of several known types of Terraseeds. This particular research has unveiled that one of the most powerful types are known as "Royal" Terraseeds, and are carefully engineered with the mysterious - and massive - power of Anima. Products of these seeds are documented to take up to years to grow, and properly growing them requires skill that only prodigies can achieve; however, any given Royal Terraweapon contains power that rivals - or even completely overshadows - Spacer tech that's widely believed to be superior. The secrets behind producing the weapons are currently lost and not known to any; however, records rumor that *very* few surviving Anima weapons may still be out there, perhaps within relative reach....</discoveredLetterText>
-</ResearchProjectDef>
-
-<ResearchProjectDef>
-  <defName>ET_PressuredMaterials</defName>
-  <label>Lore Entry: Hyperdense Materials</label>
-  <description>Records tell of various materials that are entirely natural, but seem to have no presence on the planet. Even growth methods are undocumented, meaning this knowledge is either highly protected, or lost.
-\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>3000</baseCost>
-  <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
-  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>1.00</researchViewX>
-  <researchViewY>5.00</researchViewY>
-  <discoveredLetterTitle>Secrets of Terratech: Pressurized Materials</discoveredLetterTitle>
-  <discoveredLetterText>You have discovered that original Terratech tribe somehow were able to subject various materials to immense pressure, creating powerful, brand new materials with special traits. The history you pieced together tells of three:
-\nBiothite, an organic material that had both durability and utility. Research indicated it posessed some sort of regenerative factor, and was widely used to nuture or improve plant production.
-Stellite, which was said to harness the power of stars in a solid form. While this too was used to enhance plant growths, records mostly indicate it was essential for creating specialized weapons and structures that exploited the incredible speed of light. How light was compressed is another mystery entirely.
-Esperium, which was said to both defend again, and utilize, psychic energy. Research indicates esperium was most commonly used in defensive practices, but also had quality-of-life utility.
-Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but no information regarding them could be pieced together.
-  </discoveredLetterText>
 </ResearchProjectDef>
 
 <!--=====TERRATHYST T1 CONTENT=====-->

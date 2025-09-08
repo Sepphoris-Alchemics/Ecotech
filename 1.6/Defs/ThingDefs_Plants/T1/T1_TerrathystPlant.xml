@@ -127,7 +127,7 @@ These smaller growths can grow on any fertile terrain, though larger growths req
     </descriptionHyperlinks>-->
     <plant>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
-      <harvestMinGrowth>0.8</harvestMinGrowth>
+      <harvestMinGrowth>1</harvestMinGrowth>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
       <fertilityMin>0.1</fertilityMin>
       <fertilitySensitivity>0.8</fertilitySensitivity>
@@ -217,35 +217,35 @@ These smaller growths can grow on any fertile terrain, though larger growths req
           <li>
             <weight>0.2</weight>
             <things>
-              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+              <ET_Tieronecrystalcore>1</ET_Tieronecrystalcore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
               <ET_TierOneCrystal>4</ET_TierOneCrystal>
-              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+              <ET_Tieronecrystalcore>1</ET_Tieronecrystalcore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
               <ET_TierOneCrystal>6</ET_TierOneCrystal>
-              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+              <ET_Tieronecrystalcore>1</ET_Tieronecrystalcore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
               <ET_TierOneCrystal>8</ET_TierOneCrystal>
-              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+              <ET_Tieronecrystalcore>1</ET_Tieronecrystalcore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
               <ET_TierOneCrystal>10</ET_TierOneCrystal>
-              <ET_TierOneCrystalHeart>1</ET_TierOneCrystalHeart>
+              <ET_Tieronecrystalcore>1</ET_Tieronecrystalcore>
             </things>
           </li>
         </potentialSpawnedThings>

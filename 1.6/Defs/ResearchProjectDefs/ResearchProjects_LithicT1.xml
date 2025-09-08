@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>ET_EcotechTab</defName>
+    <label>EcoTech</label>
+  </ResearchTabDef>
+
+  <!--Ultimate Research Options:
+    1: Seed Cultivation: Learn how to properly identify and plant Terrasecurity seeds. This allows the player to know use the plants.
+      -The first reseach will teach how to plant Prima Terraseeds as well, which are the most basic.
+    2: Basic Firearms (Small): Learn how to make smaller firearms, such as pistols, pocket shotguns, and PDWs
+    3: Standard Melee Patterns: Learn how to grow standard melee weapons, ranging from daggers, swords, and hammers.
+    4: Basic Firearms (Medium): Learn how to make larger firearms, such as shotguns, assault rifles, magnums, and Stakecasters.
+    5: Basic Firearms (Heavy): Learn how to make heavier firearms, such as LMGs, heavy bowguns, and cluster launchers.
+    6: Fluid Sacs: Learn how to make various weapons that utilize liquid materials, such as sap and acids.
+        -Acid Launcher: fires globules of acid, which cover a small area.
+        -Sap Launcher: fires globues of sap, which slow anything caught in it and lowers manipulation.
+    7: Spore weapons: Learn how to make weapons that leave behind spore clouds, which remain active for days.
+        -Spore Launcher: Grenade Launcher variant.
+        -Spore Mortar: A long-ranged mortar that is quite inaccurate, but leaves lingering spores.
+    8: Splinter weapons: learn how to make weapons that fire shots which break off into lethal splinters, such as pine grenades and specailized LMGs. Basically "explosive" weapons.
+    9: Grenades: Learn how to make throwable grenades:
+        -Pellet Grenade: Default. Damages nearby targets, with a chance to stun.
+        -Pine Grenade: Requires Splinter Rsearch
+        -Caustic Grenade: Requires Fluid Sacs
+        -Sap Grenade: Requires Fluid Sacs
+        -Spore Grenade: Requires Spore Weapons
+    10: Venom Arms: make melee weapons that will poison anyone hit.
+
+  ***NAMING***
+    Melee weapons follow loose naming
+    Caster = Stakecaster or SMG
+    Burster = Shotgun
+    Cannon = grenade launcher
+
+  ***WEAPON SEED TYPES (OUTDATED)***
+    1: Prima Seeds: Learn how to make the basic weapons of terraweapons, which cover all weapons up to Pre-Microelectronics. Prima Weapons stike a balance between damage and durability, but cannot regenerate health. These are currently in the game.
+    2: Verdant Seeds: Learn how to make verdant weapons, which cover all weapons up to Multi-Analyzer. Verdant Weapons have the highest durability, lower damage, but regenerate health over time when in direct sunlight.
+    3: Royal/Anima Seeds: Learn how to make the most powerful weapons, which specifically cover weapons that are Spacer+. Royal weapons have extreme damage and the highest range, but the lowest durability. Their health can be regenerated within special buildings.
+    4: Periwood: Exclusive weapons that take a significantly long time to grow, but have ammo reserves of up to 10x any other weapon. These weapons requires special seeds.
+
+  ***WEAPON DAMAGE VALUES***
+  1: Prima Weapons - will need to have stats knocked down once Periwood Weapons are introduced. Prima weapons should instead reflect fast grown, early-game sidearms that are above power in bows, but lower than normal guns.
+  2: Verdant Weapons: will have stats similar to original launch Prima Weapons. These will be the weapons that complete with industrial weapons. Slightly lower damage and range than normal weapons, but innate armor piercing, and health regen.
+  3: Periwood Weapons: will cover the heavy weapons of the mod. Similar to all heavy weapons, except with limited ammo that will not regenerate. Armor penetration and higher higher accuracy, but long bursts and warmup.
+  4: Anima Weapons: Powerful, weapons with a very small ammo reserve, but will recharge. Covers weapons that are long-range, such as snipers. Very high damage, lower reserves and warmup.
+
+***WEAPON SUBGROUPS***
+  -Subgroups are a desired feature that will allow players to "upgrade" weapons by putting it within a fluid sac, which will then split out the weapon 1-3 days later, giving them new properties. The properties are as follows:
+
+  1: Splinter Weapons: An upgrade of Prima weapons. These weapons create nasty splinters, causing quite a lot of bleeding and pain/mood debuffs.
+  2: Blight/Miasma Weapons: An upgrade of Verdant weapons. The gene that prevent rotten growth is removed, allowing the weapon to inflict disease and capacitating hediffs.
+  3: Meld Weapons: An upgrade of Periwood Weapons. These weapons no longer deteriorate, and may apply sap within explosives, or upon bullet impact. Sap left alone may harden, and increase soil fertility if on the ground, or cause a target that died with sap on them to create a field of budding flowers or various plants. Only limbs are needed.
+  4: Deeproot Weapons: An upgrade to Anima Weapons. Deeproot Weapons are able to communicate with one another, and work together. When a deeproot weapon kills a target, that target's innards may be removed, growing it into another Deeproot plant, such as sacs, turrets, or even a new weapon.
+  
+  6: Grenades: Learn how to make throwable grenades:
+      -Pellet Grenade: Default. Damages nearby targets, with a chance to stun.
+      -Pine Grenade: Grenades that brewak off into sharpnel that causes extreme injury.
+      -Caustic Grenade: Grenades that explode into acidic clouds.
+      -Sap Grenade: Grenades that stun those in it's radius, alongside leaving behind a resin that slows down anything in it.
+      -Spore Grenade: Grenades that leave a long-lasting mist that poisons anything within it, causing a hediff to slowly build up. Target dies once this hediff builds up to 100%.
+
+  5: Basic Melee Patterns: Learn how to make various melee weapons that are generally one piece. Includes daggers, swords, and maces.
+  6: Heavy Melee Patterns: Learn how to make melee weapons that consist of larger weapons. Includes warhammers, battleaxes, and greatswords.
+
+  8: Potted Turrets: Learn how to make small turrets that are potted. Easily made, but extremely limited on ammo due to lack of space.
+  9: Prima/Verdant/Periwood/Anima Turrets: Turrets that are planted via specialized seeds. Their damage, range, and ammunition is dertermined by what kind of turret they are.
+  10: Biocannons: Large artillery plants that mimic mortars. Biocannons rely off specialize plants that are grown near them, using them as ammunition. Capable of firing spore shots, splinter shots, caustic shots, or sap shots.
+
+    ?: Crystalline Infusion: Allows specialized plants that grow their own optics, allowing the creation of long-ranged weapons, such as sniper rifles and DMRs.
+    ?: Regenerative Weapons: Allows the creation of specialized weapons which have lower ammo, but regenerate said ammo over time.
+
+    ... turrets and other automated sucurity to be added later.
+    
+  ***ARMOR TYPES***
+    1: Periderm Armor: Steel-tier armor that is flexible enough to be formed around the body. More like a protective jumpsuit
+    2: ???: Flak-level armor.
+    3: Terraplate: Marine-level armor. Requires a method similar to techprints to learn about.
+    4: Prima Armor: Cataphract-level armor. Requires a method similar to techprints to learn about
+    -->
+
+  <!--Cost of research projects should be the cost of the most expensive, vanilla similar rearch project, x1.5-->
+
+  <!--=====ESSENTIALS: BENCHES AND STARTING RESOURCES=====-->
+
+  
+  <ResearchProjectDef>
+    <defName>ET_TerrathystEssentials</defName>
+    <label>Terrathyst Essentials</label>
+    <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability.
+Teaches you how to grow a terrathyst cultivator, which then grows numerous smaller crystals that can be harvested or shattered for terrathyst. The cultivator grows the smaller crystals year-round, and requires little interaction once grown.
+Nature is not only verdant plants and trees, but also the earth, primal elements, and even the cosmos. Terrathyst is just another terratech technique, and has it's own unique upsides and downsides, which tribes might prefer over organic matter.
+Terrathyst production takes slightly longer than organic production, due to their terrain sensitivity, and the need for many shards. However, their ease of understanding and shaping is just as simple as Prima creations, and terrathyst serves as the dominant material.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
+    <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. These are easy to grow, and don't require high fertility. They will grow in glowsap and shocksap bays.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!--=====CRAFTING 1=====-->
+
+<ResearchProjectDef>
+    <defName>ET_TerrathystCrafting1</defName>
+    <label>Terrathyst Crucible</label>
+    <description>Learn how to shape a unique seed at a crafting spot that will create a terrathyst crucible. This crucible has a shallow pool of recycling shocksap, and is ideal for manipulating terrathyst shards.
+Unlike organic tech, which has many variants and genomes due to DNA, lithic creations are inanimate, and are far more striaghtforward. Most everything lithic simply requires adequate charge, and the right environment to influence crystal growth.
+While the terrathyst crucible can deliver on both, it's unrealized potential makes it very slow, and the shallow pool can only handle creations of small size.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <discoveredLetterTitle>About: Terrathyst Crucible</discoveredLetterTitle>
+    <discoveredLetterText>You now have access to the terrathyst crucible. This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
+It's usability is quite limited, however, and stronger, deeper structures are needed for larger items, and more demanding recipes.</discoveredLetterText>
+  </ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>ET_TerrathystCrafting2</defName>
+    <label>Prismite Well</label>
+    <description>Learn how to shape a unique seed that will grow into a prismite well. This well has a decently deep pool of shocksap, provind more room and sap than a crucible.
+The prismite well is a terrastructure that is quite common, as it allows tribes to access most things they'll ever need to do with terrathyst.
+That said, there are other creations that simply require more space, more sap, or even a different type of sap entirely to make. These kind of creations are utilized by tribes that have fully dedicated to a lithic lifestyle.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TerraseedEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <discoveredLetterTitle>About: Terrathyst Crucible</discoveredLetterTitle>
+    <discoveredLetterText>You now have access to the terrathyst crucible. This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
+It's usability is quite limited, however, and stronger, deeper structures are needed for larger items, and more demanding recipes.</discoveredLetterText>
+  </ResearchProjectDef>
+
+
+  <!--=====Further research=====-->
+
+<ResearchProjectDef>
+  <defName>ET_PressuredMaterials</defName>
+  <label>Lore Entry: Hyperdense Materials</label>
+  <description>Records tell of various materials that are entirely natural, but seem to have no presence on the planet. Even though some methods of dense terrathyst is common terratechnology, far denser materials - some not even lithic - once existed.
+\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
+  <baseCost>3000</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_EcotechTab</tab>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>5.00</researchViewY>
+  <discoveredLetterTitle>Secrets of Terratech: Pressurized Materials</discoveredLetterTitle>
+  <discoveredLetterText>You have discovered that original Terratech tribe somehow were able to subject various materials - organic and lithic alike - to immense pressure, creating powerful, brand new materials with special traits. The history you pieced together tells of three:
+\nBiothite, a formless material that had both durability and utility. Research indicates it was a lithic material, but had features that were supposed to be exclusive to organic terratech. This made it a highly desirable amongst lithic tribes.
+Stellite, which is documented as the 'ultimate achievement'. Multiple people were required to move even a handful of it, while anything of a larger size was nearly indestructable. While this was used to enhance plant growths, records mostly indicate it was essential for creating specialized weapons and structures that exploited pure light. How light was compressed - and even captured - is another mystery entirely.
+Esperium, which was said to both defend against, and utilize, mental energies. Research indicates esperium was most commonly used in defensive practices, but also had quality-of-life utility. Not much is documented about Esperium, however, suggesting it was an underdeveloped or rare material.
+Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but no information regarding them could be pieced together.
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+</Defs>
