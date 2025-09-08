@@ -1,11 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ResearchTabDef>
-    <defName>ET_EcotechTab</defName>
-    <label>EcoTech</label>
-  </ResearchTabDef>
-
   <!--Ultimate Research Options:
     1: Seed Cultivation: Learn how to properly identify and plant Terrasecurity seeds. This allows the player to know use the plants.
       -The first reseach will teach how to plant Prima Terraseeds as well, which are the most basic.
@@ -87,7 +82,7 @@
   
   <ResearchProjectDef>
     <defName>ET_TerrathystEssentials</defName>
-    <label>Terrathyst Essentials</label>
+    <label>Lithic Essentials</label>
     <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability.
 Teaches you how to grow a terrathyst cultivator, which then grows numerous smaller crystals that can be harvested or shattered for terrathyst. The cultivator grows the smaller crystals year-round, and requires little interaction once grown.
 Nature is not only verdant plants and trees, but also the earth, primal elements, and even the cosmos. Terrathyst is just another terratech technique, and has it's own unique upsides and downsides, which tribes might prefer over organic matter.
@@ -111,7 +106,7 @@ Terrathyst production takes slightly longer than organic production, due to thei
     <defName>ET_TerrathystCrafting1</defName>
     <label>Terrathyst Crucible</label>
     <description>Learn how to shape a unique seed at a crafting spot that will create a terrathyst crucible. This crucible has a shallow pool of recycling shocksap, and is ideal for manipulating terrathyst shards.
-Unlike organic tech, which has many variants and genomes due to DNA, lithic creations are inanimate, and are far more striaghtforward. Most everything lithic simply requires adequate charge, and the right environment to influence crystal growth.
+Unlike organic tech, which has many variants and genomes due to bioengineering, lithic creations are inanimate, and are far more striaghtforward. Most everything lithic simply requires adequate charge, and the right environment to influence crystal growth.
 While the terrathyst crucible can deliver on both, it's unrealized potential makes it very slow, and the shallow pool can only handle creations of small size.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
@@ -140,11 +135,11 @@ That said, there are other creations that simply require more space, more sap, o
       <li>ET_TerraseedEssentials</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
+    <researchViewX>2.00</researchViewX>
     <researchViewY>4.00</researchViewY>
-    <discoveredLetterTitle>About: Terrathyst Crucible</discoveredLetterTitle>
-    <discoveredLetterText>You now have access to the terrathyst crucible. This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
-It's usability is quite limited, however, and stronger, deeper structures are needed for larger items, and more demanding recipes.</discoveredLetterText>
+    <discoveredLetterTitle>About: Prismite Well</discoveredLetterTitle>
+    <discoveredLetterText>You now have access to the prismite well. True to the name, this structure channels quite deep into the planet, carrying up shocksap that's pulled from lower resevoirs and pools.
+It's usability is more than adequate for any tribe that wishes to use general lithic terratech. However, specialized and more advanced creations will require a pool of a larger and deeper size.</discoveredLetterText>
   </ResearchProjectDef>
 
 

@@ -86,8 +86,8 @@
 
   <ResearchProjectDef>
     <defName>ET_TerraseedEssentials</defName>
-    <label>Terratech Essentials</label>
-    <description>Learn how to properly create and grow the fundamentals of terratech, such as terramass - a growable building material - and Terraseeds, specialized seeds that are used to grow biotic gear and equipment.
+    <label>Organic Essentials</label>
+    <description>Learn how to properly create and grow the fundamentals of organic terratech, such as terramass - a growable building material - and various terraseeds, which are specialized seeds that are used to grow biotic gear and equipment.
 Teaches you how to nurture a Terraforge channeling seed, which can be shaped at a crafting spot.
 Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded by the local Terratech faction.</description>
     <baseCost>1500</baseCost>
@@ -97,7 +97,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
       <li>TreeSowing</li>
     </prerequisites>
     <requiredAnalyzed>
-      <li>ET_KeyTerratechBench</li>
+      <li>ET_KeyOrganicTech</li>
     </requiredAnalyzed>
     <tags>
       <li>TribalStart</li>

@@ -30,10 +30,10 @@ Currently, the tech are:
 -->
 
     <ThingDef ParentName="ResourceBase">
-        <defName>ET_KeyTerratechBench</defName>
-        <label>Initiate's Tome: Terratech Fundamentals</label>
+        <defName>ET_KeyOrganicTech</defName>
+        <label>Initiate's Tome: Organic Fundamentals</label>
         <description>A thick book, make out of razor-thin bloomwood and guilded with elderwood. This book holds guarded Terratech knowledge, and is quite valuable.
-This tome teaches one how the very basics of *everything* that Terratech is formed upon. Without the knowledge in this book, it is forever locked away - and with it, a new world of potential is revealed.
+This tome teaches one how the very basics of *everything* that organic Terratech is formed upon. Without the knowledge in this book, it is forever locked away - alongside a deep lifestyle that uses and commands the plants, trees, and roots within the planet.
 \nAny pawn can study this in order to successfully experiment with, and understand, the knowledge held within.</description>
         <graphicData>
             <drawSize>0.6</drawSize>
@@ -84,6 +84,67 @@ This tome teaches one how the very basics of *everything* that Terratech is form
                 </targetingParameters>
             </li>
         </comps>
+    </ThingDef>
+
+<!-- ================ Terrathyst ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_KeyLithicTech</defName>
+        <label>Initiates's Tome: Lithic Fundamentals</label>
+        <description>A very thick book, consisting of several crystal tablets and held together with biothite. This book holds guarded Terratech knowledge, and is quite valuable.
+This tome teaches one how the very basics of *everything* that lithic Terratech is formed upon. Without the knowledge in this book, lithic technology is forever locked away - alongside a lifestyle that commands rock, stone, and crystal.
+\nAny pawn can study this in order to successfully experiment with, and understand, the knowledge held within.</description>
+        <graphicData>
+            <drawSize>0.6</drawSize>
+            <texPath>Things/Resource/Book/Book_Acolyte</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>5</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>125</MarketValue>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <Flammability>3</Flammability>
+            <DeteriorationRate>1.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ET_TechKeys</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_CompAnalyzableUnlockResearch">
+                <analysisID>129208205</analysisID>
+                <requiresMechanitor>false</requiresMechanitor>
+                <analysisDurationHours>1</analysisDurationHours>
+                <destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+                <completedLetterLabel>Tome studied: {RESEARCH} unlocked</completedLetterLabel>
+                <completedLetter>By studying this tome, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYou can now complete this research at a Terratech research bench.</completedLetter>
+                <completedLetterDef>PositiveEvent</completedLetterDef>
+                <activateTexPath>UI/Icons/Study</activateTexPath>
+                <activateLabelString>Study...</activateLabelString>
+                <activateDescString>Study the tome.</activateDescString>
+                <jobString>Study the tome</jobString>
+                <guiLabelString>Choose who should study the tome</guiLabelString>
+                <inspectString>Can be studied for exclusive knowledge.</inspectString>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>false</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+                </targetingParameters>
+            </li>
+        </comps>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
     </ThingDef>
 
     <!-- ================ Fused genomes ================ -->
