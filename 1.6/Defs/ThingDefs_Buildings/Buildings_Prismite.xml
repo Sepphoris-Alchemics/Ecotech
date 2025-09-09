@@ -10,14 +10,14 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_CrystalCrucible</defName>
-    <label>prismite crucible</label>
+    <defName>ET_LithicCraftingStationTierTwo</defName>
+    <label>prismite well</label>
     <description>A crystal chamber that snakes deep into the planet. This particular structure holds large amounts of shocksap, which is generally used for creating and evolving lithoid weapons and items.
 This vessel can take a terrathyst core and use it as a catalyst to form a new, random lithic weapon. Adittionally, it can evolve most lithoid weapons as long as the desired weapon, and the required items, are near the crucible.
-Lithic weapons are durable and unmoving. They take a longer time to evolve when compared to organic or hybrid weapons, and some weapons can take multiple quadrums to even acquire.</description>
+This well is a staple amongst tribes that take interest in lithic terratech, as it can support many structures and items that allow a comfortable life.</description>
     <size>(1,1)</size>
     <graphicData>
-      <texPath>Things/Building/PrismiteCharger</texPath>
+      <texPath>Things/Building/PrismiteWell</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>(1.8,1.8)</drawSize>
@@ -36,10 +36,12 @@ Lithic weapons are durable and unmoving. They take a longer time to evolve when 
       <Flammability>0</Flammability>
     </statBases>
     <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_SmallTerravats</li>
+      <li>ET_TerrathystCrafting2</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
@@ -115,195 +117,194 @@ Place materials nearby to charge/evolve items</inspectString>
         <radius>11</radius>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
-
-<!--=====SOULSNARE RIFLE=====-->
-
-          <!--<li MayRequire="Ludeon.RimWorld.Biotech">
-            <label>grow soulsnare rifle</label>
+        <!--=====PRISMITE=====-->
+          <li>            
+            <label>form prismite (x250)</label>
             <description>Requirements:
-x1 terrathyst core
-Duration: 8 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_SoulsnareRifleOne</resultDef>
-            <amount>1</amount>
+x750 terrathyst shards
+Duration: 18 days</description>
+            <duration>1080000</duration>
+            <resultDef>ET_TierTwoCrystal</resultDef>
+            <amount>250</amount>
             <ingredientSets>
               <li>
-                <thingDef>ET_Tieronecrystalcore</thingDef>
-                <amount>1</amount>
+                <thingDef>ET_TierOneCrystal</thingDef>
+                <amount>750</amount>
               </li>
             </ingredientSets>
-          </li>-->
-          <!--restore drained rifle-->
-          <li>
-            <label>restore drained soulsnare rifle</label>
-            <description>Requirements:
+          </li>
+      <!--=====SOULSNARE RIFLE=====-->
+      <!--restore drained rifle-->
+      <li>
+        <label>restore drained soulsnare rifle</label>
+        <description>Requirements:
 x1 drained soulsnare rifle
 x60 shocksap
 Duration: 12 days</description>
-            <duration>720000</duration>
-            <resultDef>ET_SoulsnareRifleTwo</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>15</amount>
-              </li>
-              <li>
-                <thingDef>ET_SoulsnareRifleDrained</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-          <!--soulsnare rifle II-->
+        <duration>720000</duration>
+        <resultDef>ET_SoulsnareRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
           <li>
-            <label>evolve soulsnare rifle (II)</label>
-            <description>Requirements:
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleDrained</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle II-->
+      <li>
+        <label>evolve soulsnare rifle (II)</label>
+        <description>Requirements:
 x1 stage I soulsnare rifle
 x15 shocksap
 Duration: 4 days</description>
-            <duration>240000</duration>
-            <resultDef>ET_SoulsnareRifleTwo</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>15</amount>
-              </li>
-              <li>
-                <thingDef>ET_SoulsnareRifleThree</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-          <!--soulsnare rifle III-->
+        <duration>240000</duration>
+        <resultDef>ET_SoulsnareRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
           <li>
-            <label>evolve soulsnare rifle (III)</label>
-            <description>Requirements:
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleThree</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle III-->
+      <li>
+        <label>evolve soulsnare rifle (III)</label>
+        <description>Requirements:
 x1 stage I Isoulsnare rifle
 x20 shocksap
 Duration: 6 days</description>
-            <duration>360000</duration>
-            <resultDef>ET_SoulsnareRifleTwo</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>15</amount>
-              </li>
-              <li>
-                <thingDef>ET_SoulsnareRifleOne</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-          <!--soulsnare rifle IV-->
+        <duration>360000</duration>
+        <resultDef>ET_SoulsnareRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
           <li>
-            <label>evolve soulsnare rifle (IV)</label>
-            <description>Requirements:
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleOne</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle IV-->
+      <li>
+        <label>evolve soulsnare rifle (IV)</label>
+        <description>Requirements:
 x1 stage III soulsnare rifle
 x25 shocksap
 Duration: 8 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_SoulsnareRifleThree</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>15</amount>
-              </li>
-              <li>
-                <thingDef>ET_SoulsnareRifleFour</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-          <!--soulsnare rifle restoration-->
+        <duration>480000</duration>
+        <resultDef>ET_SoulsnareRifleThree</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
           <li>
-            <label>recharge soulsnare rifle (IV)</label>
-            <description>Requirements:
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleFour</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle restoration-->
+      <li>
+        <label>recharge soulsnare rifle (IV)</label>
+        <description>Requirements:
 x1 stage IV soulsnare rifle
 x10 shocksap
 Duration: 2 days</description>
-            <duration>120000</duration>
-            <resultDef>ET_SoulsnareRifleFour</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>15</amount>
-              </li>
-              <li>
-                <thingDef>ET_SoulsnareRifleFour</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
+        <duration>120000</duration>
+        <resultDef>ET_SoulsnareRifleFour</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
           </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleFour</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
 
-<!--=====VIVICORE RIFLE=====-->
+      <!--=====VIVICORE RIFLE=====-->
 
-          <li MayRequire="Ludeon.RimWorld.Biotech">            <!--vivicore rifle II-->
-            <label>evolve vivicore rifle (II)</label>
-            <description>Requirements:
+      <li MayRequire="Ludeon.RimWorld.Biotech">        <!--vivicore rifle II-->
+        <label>evolve vivicore rifle (II)</label>
+        <description>Requirements:
 x1 stage I vivicore rifle
 x15 shocksap
 Duration: 6 days</description>
-            <duration>360000</duration>
-            <resultDef>ET_HybridRoyalRifleTwo</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>15</amount>
-              </li>
-              <li>
-                <thingDef>ET_HybridRoyalRifleOne</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
+        <duration>360000</duration>
+        <resultDef>ET_HybridRoyalRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
           </li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">            <!--vivicore rifle III-->
-            <label>evolve vivicore rifle (III)</label>
-            <description>Requirements:
+          <li>
+            <thingDef>ET_HybridRoyalRifleOne</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">        <!--vivicore rifle III-->
+        <label>evolve vivicore rifle (III)</label>
+        <description>Requirements:
 x1 stage II vivicore rifle
 x30 shocksap
 Duration: 8 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_HybridRoyalRifleThree</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>30</amount>
-              </li>
-              <li>
-                <thingDef>ET_HybridRoyalRifleTwo</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
+        <duration>480000</duration>
+        <resultDef>ET_HybridRoyalRifleThree</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>30</amount>
           </li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">            <!--vivicore rifle IV-->
-            <label>evolve vivicore rifle (IV)</label>
-            <description>Requirements:
+          <li>
+            <thingDef>ET_HybridRoyalRifleTwo</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">        <!--vivicore rifle IV-->
+        <label>evolve vivicore rifle (IV)</label>
+        <description>Requirements:
 x1 stage III vivicore rifle
 x45 shocksap
 Duration: 10 days</description>
-            <duration>600000</duration>
-            <resultDef>ET_HybridRoyalRifleFour</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>45</amount>
-              </li>
-              <li>
-                <thingDef>ET_HybridRoyalRifleThree</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
+        <duration>600000</duration>
+        <resultDef>ET_HybridRoyalRifleFour</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>45</amount>
           </li>
-        </recipeSet>
+          <li>
+            <thingDef>ET_HybridRoyalRifleThree</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
       </li>
-    </comps>
-    <specialDisplayRadius>11</specialDisplayRadius>
-  </ThingDef>
+    </recipeSet>
+  </li>
+</comps>
+<specialDisplayRadius>11</specialDisplayRadius>
+</ThingDef>
 </Defs>

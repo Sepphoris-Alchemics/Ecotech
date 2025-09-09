@@ -13,13 +13,13 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_CrystalCompressor</defName>
-    <label>terrathyst compressor</label>
-    <description>A crystal chamber that drops deep into the planet. This structure compresses various items, creating stronger materials from materials that may otherwise be plentiful.
-Deepsap protects and escorts the inserted items far below the surface, where the pressure is massive. Terrathyst, and any type of wood, can be inserted, and some time later a brand new, ultra-durable material will return.</description>
+    <defName>ET_LithicCraftingStationTierOne</defName>
+    <label>terrathyst crucible</label>
+    <description>A crystal chamber that has a pool of self-renewing shocksap. This structure allows a tribe to shape and charge smaller lithic items and weapons.
+While this crucible is a good starting point, it's working space is quite restricted. Any tribe that wishes to survive solely on a lithic lifestyle will need to eventually create a prismite well.</description>
     <size>(1,1)</size>
     <graphicData>
-      <texPath>Things/Building/TerrathystCultivator</texPath>
+      <texPath>Things/Building/LithicCrucible</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>(1.8,1.8)</drawSize>
@@ -53,7 +53,7 @@ Deepsap protects and escorts the inserted items far below the surface, where the
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_SmallTerravats</li>
+      <li>ET_TerrathystEssentials</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
@@ -88,23 +88,18 @@ Deepsap protects and escorts the inserted items far below the surface, where the
         <radius>11</radius>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
-          <li>            <!--biothite-->
-            <label>compress terrathyst into plating</label>
+          <li>            <!--prismite-->
+            <label>form prismite (x100)</label>
             <description>Requirements:
-x2 Deepsap
-x750 terrathyst shards
-Duration: 18 days</description>
-            <duration>3000</duration>
+x300 terrathyst shards
+Duration: 8 days</description>
+            <duration>480000</duration>
             <resultDef>ET_TierTwoCrystal</resultDef>
-            <amount>250</amount>
+            <amount>100</amount>
             <ingredientSets>
               <li>
-                <thingDef>ET_Deepsap</thingDef>
-                <amount>2</amount>
-              </li>
-              <li>
                 <thingDef>ET_TierOneCrystal</thingDef>
-                <amount>750</amount>
+                <amount>300</amount>
               </li>
             </ingredientSets>
           </li>

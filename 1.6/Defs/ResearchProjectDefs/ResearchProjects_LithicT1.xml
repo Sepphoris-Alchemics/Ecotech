@@ -91,7 +91,7 @@ Terrathyst production takes slightly longer than organic production, due to thei
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>Stonecutting</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
