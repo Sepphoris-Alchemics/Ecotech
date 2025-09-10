@@ -34,7 +34,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_LithicCraftingStationTierOne</plantDefToSpawn>
+        <plantDefToSpawn>ET_LithicCraftingStationTierOne_Plant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>
@@ -75,7 +75,7 @@
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_LithicCraftingStationTierOne</plantDefToSpawn>
+        <plantDefToSpawn>ET_LithicCraftingStationTierTwo_Plant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>

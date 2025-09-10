@@ -83,11 +83,11 @@
   <ResearchProjectDef>
     <defName>ET_TerrathystEssentials</defName>
     <label>Lithic Essentials</label>
-    <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability.
+    <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability. Also teaches how to make a terrathyst crucible.
 Teaches you how to grow a terrathyst cultivator, which then grows numerous smaller crystals that can be harvested or shattered for terrathyst. The cultivator grows the smaller crystals year-round, and requires little interaction once grown.
 Nature is not only verdant plants and trees, but also the earth, primal elements, and even the cosmos. Terrathyst is just another terratech technique, and has it's own unique upsides and downsides, which tribes might prefer over organic matter.
 Terrathyst production takes slightly longer than organic production, due to their terrain sensitivity, and the need for many shards. However, their ease of understanding and shaping is just as simple as Prima creations, and terrathyst serves as the dominant material.</description>
-    <baseCost>1000</baseCost>
+    <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
@@ -97,12 +97,14 @@ Terrathyst production takes slightly longer than organic production, due to thei
     <researchViewX>0.00</researchViewX>
     <researchViewY>4.00</researchViewY>
     <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
-    <discoveredLetterText>You can now create growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. These are easy to grow, and don't require high fertility. They will grow in glowsap and shocksap bays.</discoveredLetterText>
+    <discoveredLetterText>You can now create a terrathyst crucible, and growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. These are easy to grow, and don't require high fertility. They will grow in glowsap and shocksap bays.
+This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
+It's usability is quite limited, however, and stronger, deeper structures are needed for larger items, and more demanding recipes.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!--=====CRAFTING 1=====-->
 
-<ResearchProjectDef>
+<!--<ResearchProjectDef>
     <defName>ET_TerrathystCrafting1</defName>
     <label>Terrathyst Crucible</label>
     <description>Learn how to shape a unique seed at a crafting spot that will create a terrathyst crucible. This crucible has a shallow pool of recycling shocksap, and is ideal for manipulating terrathyst shards.
@@ -120,12 +122,12 @@ While the terrathyst crucible can deliver on both, it's unrealized potential mak
     <discoveredLetterTitle>About: Terrathyst Crucible</discoveredLetterTitle>
     <discoveredLetterText>You now have access to the terrathyst crucible. This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
 It's usability is quite limited, however, and stronger, deeper structures are needed for larger items, and more demanding recipes.</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
 <ResearchProjectDef>
-    <defName>ET_TerrathystCrafting2</defName>
+    <defName>ET_TerrathystCrafting1</defName>
     <label>Prismite Well</label>
-    <description>Learn how to shape a unique seed that will grow into a prismite well. This well has a decently deep pool of shocksap, provind more room and sap than a crucible.
+    <description>Learn how to shape a unique seed that will grow into a prismite well. This well has a decently deep pool of shocksap, providing more room and sap than a crucible.
 The prismite well is a terrastructure that is quite common, as it allows tribes to access most things they'll ever need to do with terrathyst.
 That said, there are other creations that simply require more space, more sap, or even a different type of sap entirely to make. These kind of creations are utilized by tribes that have fully dedicated to a lithic lifestyle.</description>
     <baseCost>1000</baseCost>
@@ -135,7 +137,7 @@ That said, there are other creations that simply require more space, more sap, o
       <li>ET_TerraseedEssentials</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>2.00</researchViewX>
+    <researchViewX>1.00</researchViewX>
     <researchViewY>4.00</researchViewY>
     <discoveredLetterTitle>About: Prismite Well</discoveredLetterTitle>
     <discoveredLetterText>You now have access to the prismite well. True to the name, this structure channels quite deep into the planet, carrying up shocksap that's pulled from lower resevoirs and pools.
