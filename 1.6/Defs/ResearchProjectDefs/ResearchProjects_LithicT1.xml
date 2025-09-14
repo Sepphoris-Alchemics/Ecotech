@@ -130,7 +130,7 @@ It's usability is quite limited, however, and stronger, deeper structures are ne
     <description>Learn how to shape a unique seed that will grow into a prismite well. This well has a decently deep pool of shocksap, providing more room and sap than a crucible.
 The prismite well is a terrastructure that is quite common, as it allows tribes to access most things they'll ever need to do with terrathyst.
 That said, there are other creations that simply require more space, more sap, or even a different type of sap entirely to make. These kind of creations are utilized by tribes that have fully dedicated to a lithic lifestyle.</description>
-    <baseCost>1000</baseCost>
+    <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>

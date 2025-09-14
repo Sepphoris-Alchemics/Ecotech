@@ -396,17 +396,17 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>
 
-    <!-- ================ Terrathyst Heart ================ -->
+    <!-- ================ Terrathyst Core ================ -->
 
     <ThingDef ParentName="ResourceBase">
-        <defName>ET_Tieronecrystalcore</defName>
-        <label>terrathyst heart</label>
+        <defName>ET_TierOneCrystalCore</defName>
+        <label>terrathyst core</label>
         <description>A clump of terrathyst that has melded together, forming a sharp, sealed vessel that contained shocksap. Critical to creating most &lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; items or structures that require charge.
 \n\nPlacing this in a prismite crucible will cause it to start creating a random lithic-class weapon or growth. this process takes a while, and once the item emerges, it generally requires more attention to reach it's full potential. As it contains shocksap already, only the heart is needed for this process.</description>
         <graphicData>
             <texPath>Things/Resource/TerrathystHeart</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.4</drawSize>
+            <drawSize>0.8</drawSize>
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>

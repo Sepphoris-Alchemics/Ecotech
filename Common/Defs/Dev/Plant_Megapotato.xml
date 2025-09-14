@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="PlantBase">
-    <defName>Plant_MegaPotatoSeed</defName>
+  <!--<ThingDef ParentName="PlantBase">
+    <defName>Plant_TestMegaPlant</defName>
     <label>mega potato seed</label>
     <description>-</description>
     <statBases>
@@ -51,7 +51,6 @@
       <Nutrition>0.5</Nutrition>
     </statBases>
     <rotatable>false</rotatable>
-    <!--<category>Building</category>-->
     <size>(2,2)</size>
     <graphicData>
       <texPath>Things/Plant/PotatoPlant</texPath>
@@ -81,5 +80,5 @@
         </terrainWhitelist>
       </li>
     </modExtensions>
-  </ThingDef>
+  </ThingDef>-->
 </Defs>

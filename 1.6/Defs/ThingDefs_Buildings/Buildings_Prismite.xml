@@ -84,7 +84,7 @@ Place materials nearby to charge/evolve items</inspectString>
         <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
         <inputThings>
           <!-- needs exactly one entry -->
-          <ET_Tieronecrystalcore>1</ET_Tieronecrystalcore>
+          <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
         </inputThings>
         <conversionDurationTicks>480000</conversionDurationTicks>
         <potentialResults>

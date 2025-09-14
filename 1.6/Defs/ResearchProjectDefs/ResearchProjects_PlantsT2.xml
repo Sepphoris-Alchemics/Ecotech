@@ -199,7 +199,7 @@ This advancement allows you to shape seeds capable of growing into plants aren't
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>6.00</researchViewX>
-    <researchViewY>7.00</researchViewY>
+    <researchViewY>0.80</researchViewY>
     <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
     <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
 \nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
@@ -218,7 +218,7 @@ This advancement allows you to shape seeds capable of growing into plants aren't
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>6.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
+    <researchViewY>2.20</researchViewY>
     <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
     <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
 \nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
@@ -291,8 +291,8 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
     <li>ET_KeyBriarGenome</li>
   </requiredAnalyzed>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>6.00</researchViewX>
-  <researchViewY>2.30</researchViewY>
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>2.20</researchViewY>
   <discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
   <discoveredLetterText>Your experiments of crossbreeding the Prima and Periwood genome has resulting in discovered a 'protected', secret genome: the Briar Genome.
 The Briar Genome combines the growth speed and adaptability of the Prima genome with the flexability and resilience of the Periwood Genome. Additionally, creations of the Briar genome - true to it's name - posess thorny growths that are highly effective in offense and defense.

@@ -16,7 +16,8 @@
     <defName>ET_LithicCraftingStationTierOne</defName>
     <label>terrathyst crucible</label>
     <description>A crystal chamber that has a pool of self-renewing shocksap. This structure allows a tribe to shape and charge smaller lithic items and weapons.
-While this crucible is a good starting point, it's working space is quite restricted. Any tribe that wishes to survive solely on a lithic lifestyle will need to eventually create a prismite well.</description>
+This crucible holds enough sap to form simpler lithic weapons. However, it cannot support upgrading them.
+While this crucible is a good starting point, any tribe that wishes to survive solely on a lithic lifestyle will need to eventually create a prismite well.</description>
     <size>(1,1)</size>
     <graphicData>
       <texPath>Things/Building/LithicCrucible</texPath>
@@ -78,6 +79,32 @@ While this crucible is a good starting point, it's working space is quite restri
       <li Class="CompProperties_Glower">
         <glowRadius>3.9</glowRadius>
         <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Right-click to insert terrathyst core
+Place materials nearby to charge/evolve items</inspectString>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_ThingConverter">
+        <compClass>Ecotech.ThingComp_ThingConverter</compClass>
+        <timeToFillTicks>600</timeToFillTicks>
+        <timeToEmptyTicks>600</timeToEmptyTicks>
+        <drawFillableBar>true</drawFillableBar>
+        <fillableBarDrawOffset>(0, 0.00001, 0)</fillableBarDrawOffset>
+        <fillableBarSize>(0.55, 0.1)</fillableBarSize>
+        <fillableBarBackgroundColor>(21, 25, 29)</fillableBarBackgroundColor>
+        <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
+        <inputThings>
+          <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+        </inputThings>
+        <conversionDurationTicks>480000</conversionDurationTicks>
+        <potentialResults>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_SoulsnareRifleOne>1</ET_SoulsnareRifleOne>
+            </things>
+          </li>
+        </potentialResults>
       </li>
       <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
         <isAssemblingPawn>false</isAssemblingPawn>
