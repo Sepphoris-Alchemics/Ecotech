@@ -1,9 +1,12 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Verse;
+using Verse.Noise;
 
 namespace Ecotech
 {
@@ -24,6 +27,7 @@ namespace Ecotech
         {
             set => potentialTransformedFaction = value;
         }
+        IEnumerable<IntVec3> TransformedOccupiedCells => GenAdj.CellsOccupiedBy(TransformedPosition, transformedRotation, Props.TransformedThingDef.Size);
 
         public override void PostExposeData()
         {
@@ -149,17 +153,44 @@ namespace Ecotech
             Map map = parent.Map;
             parent.Destroy(DestroyMode.WillReplace);
             Thing thingToSpawn = Props.MakeThing();
-            if(thingToSpawn.def.CanHaveFaction)
+
+            SetFaction(thingToSpawn);
+            GenSpawn.Spawn(thingToSpawn, TransformedPosition, map, transformedRotation, WipeMode.FullRefund);
+            WipeOtherPlants(thingToSpawn);
+        }
+
+        private void SetFaction(Thing spawnedThing)
+        {
+            if(spawnedThing.def.CanHaveFaction)
             {
-                thingToSpawn.SetFaction(potentialTransformedFaction);
+                spawnedThing.SetFaction(potentialTransformedFaction);
             }
             // if the produced thing is also a plant that transforms, pass the faction onto that plant
-            ThingComp_PlantTransformOnMaturity spawnedComp = thingToSpawn.TryGetComp<ThingComp_PlantTransformOnMaturity>();
+            ThingComp_PlantTransformOnMaturity spawnedComp = spawnedThing.TryGetComp<ThingComp_PlantTransformOnMaturity>();
             if(spawnedComp != null)
             {
                 spawnedComp.PotentialTransformedFaction = potentialTransformedFaction;
             }
-            GenSpawn.Spawn(thingToSpawn, TransformedPosition, map, transformedRotation, WipeMode.FullRefund);
+        }
+
+        private void WipeOtherPlants(Thing spawnedThing)
+        {
+            foreach(IntVec3 occupiedCell in spawnedThing.OccupiedRect())
+            {
+                List<Thing> otherThingsAtCell = occupiedCell.GetThingList(map);
+                foreach(Thing otherThing in otherThingsAtCell)
+                {
+                    if(otherThing == spawnedThing)
+                    {
+                        continue;
+                    }
+                    if(!otherThing.def.IsPlant)
+                    {
+                        continue;
+                    }
+                    otherThing.Destroy(DestroyMode.Vanish);
+                }
+            }
         }
     }
 }
