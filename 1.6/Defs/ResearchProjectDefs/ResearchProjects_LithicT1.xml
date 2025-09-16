@@ -176,7 +176,7 @@ Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but
   <techLevel>Neolithic</techLevel>
   <tab>ET_EcotechTab</tab>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>3.00</researchViewX>
+  <researchViewX>2.00</researchViewX>
   <researchViewY>5.00</researchViewY>
   <discoveredLetterTitle>Secrets of Terratech: The aquatic tribes</discoveredLetterTitle>
   <discoveredLetterText>You have discovered that some tribes once mastered the vast oceans, creating establishments that were impossible to get by most others. These tribes thrived in their environment, being able to focus on their technology and wealth, with no worries about danger. The history you pieced together also shows:

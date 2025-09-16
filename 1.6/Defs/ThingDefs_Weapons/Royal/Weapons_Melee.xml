@@ -92,5 +92,71 @@ Accuracy follows charge rifles-->
     </tradeTags>
 	</ThingDef>
 
-
+	<ThingDef ParentName="BaseWeapon">
+		<defName>ET_AquaticSpear</defName>
+		<label>Depthcore Spear</label>
+		<description>A highly designed and intricate spear, formed with both terratech wood and crystal, and guilded with gold. This spear comes from a terratech culture that is thought to be long gone, making it a truly valuable and unique artifact.</description>
+		<graphicData>
+			<texPath>Things/WeaponRoyal/Aquatic/ET_DepthcoreSpear</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+		</weaponTags>
+		<!--<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>-->
+    <relicChance>2</relicChance>
+		<statBases>
+			<Beauty>10</Beauty>
+      <MaxHitPoints>130</MaxHitPoints>
+			<Mass>3.6</Mass>
+			<Flammability>0.5</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<MarketValue>1500</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>22</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>6000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+      </li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+      <li>Artifact</li>
+    </tradeTags>
+	</ThingDef>
 </Defs>
