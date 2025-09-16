@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>ET_LithicForgeTierTwoRecipe</defName>
+    <label>form prismite well cluster</label>
+    <description>Shape a cluster of crystals that will grow into a prismite well. Prismite wells are direct upgrades to terrathyst crucibles, able to handle bigger amounts of sap and fragments.</description>
+    <jobString>shaping a crystal cluster.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_TierTwoCrystal</li>
+          </thingDefs>
+        </filter>
+        <count>7.5</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_TerrathystCrafting1</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>2400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_LithicForgeTierTwo>1</ET_Seed_LithicForgeTierTwo>
+    </products>
+    <displayPriority>0</displayPriority>
+  </RecipeDef>
+</Defs>

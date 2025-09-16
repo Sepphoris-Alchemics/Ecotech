@@ -118,4 +118,11 @@
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 	
+  <ThingCategoryDef>
+      <defName>LithicSeedsStructures</defName>
+      <label>Terrathyst Clusters</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/TerrathystSeed/TerrathystSeedA</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
 </Defs>

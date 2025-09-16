@@ -136,6 +136,11 @@ These smaller growths can grow on any fertile terrain, though larger growths req
       <sowMinSkill>4</sowMinSkill>
       <growDays>4</growDays>
       <harvestWork>600</harvestWork>
+      <sowTags>
+        <li>Ground</li>
+        <li>ET_SapTerrainTierOne</li>
+        <li>ET_ShocksapCompatible</li>
+      </sowTags>
       <sowResearchPrerequisites>
         <li>ET_TerrathystEssentials</li>
       </sowResearchPrerequisites>
@@ -145,7 +150,7 @@ These smaller growths can grow on any fertile terrain, though larger growths req
     <comps>
       <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
         <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
-        <cycleDurationRangeTicks>420000~540000</cycleDurationRangeTicks>        <!--7 to 9 days-->
+        <cycleDurationRangeTicks>42000~54000</cycleDurationRangeTicks>        <!--7 to 9 days-->
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>

@@ -92,6 +92,42 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
+
+<WorkGiverDef>
+    <defName>ET_DoBillsLithicForgeTierOne</defName>
+    <label>form cluster</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_LithicForgeTierOne</li>
+      <li>ET_LithicForgeTierTwo</li>
+    </fixedBillGiverDefs>
+    <verb>form crystal cluster at</verb>
+    <gerund>forming crystal cluster at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+<WorkGiverDef>
+    <defName>ET_DoBillsLithicForgeTierTwo</defName>
+    <label>form cluster</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_LithicForgeTierTwo</li>
+    </fixedBillGiverDefs>
+    <verb>form crystal cluster at</verb>
+    <gerund>forming crystal cluster at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
   <SoundDef>
     <defName>ET_CrystalShatter</defName>
     <context>MapOnly</context>

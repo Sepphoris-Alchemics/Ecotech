@@ -7,7 +7,7 @@
 -->
 
   <ThingDef ParentName="ResourceBase">
-    <defName>ET_Seed_LithicCraftingStationTierOne</defName>
+    <defName>ET_Seed_LithicForgeTierOne</defName>
     <label>terrathyst crucible cluster</label>
     <description>A cluster of crystals that will grow to a much larger size, forming a terrathyst crucible. This growth happens by the crystal converting terrain nutrients to a usable electric charge.
 \n\nThis seed is very sensitive to the terrain it's planted on; the higher the fertility, the faster it will grow. However, it will still eventually grow on non-fertile terrains.</description>
@@ -15,7 +15,7 @@
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/TerrathystSeed</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -30,11 +30,11 @@
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerraseedsLithicStructures</li>
+      <li>LithicSeedsStructures</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_LithicForgePlantTierOne</plantDefToSpawn>
+        <plantDefToSpawn>ET_Plant_LithicForgeTierOne</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>
@@ -48,7 +48,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>ET_Seed_LithicCraftingStationTierTwo</defName>
+    <defName>ET_Seed_LithicForgeTierTwo</defName>
     <label>Prismite Well Cluster</label>
     <description>A cluster of crystals that will grow to a much larger size, forming a prismite well. This growth happens by the crystal converting terrain nutrients to a usable electric charge.
 \n\nThis seed is very sensitive to the terrain it's planted on; the higher the fertility, the faster it will grow. However, it will still eventually grow on non-fertile terrains.</description>
@@ -56,7 +56,7 @@
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/TerrathystSeed</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>0.3</drawSize>
     </graphicData>
@@ -71,11 +71,11 @@
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <thingCategories>
-      <li>TerraseedsLithicStructures</li>
+      <li>LithicSeedsStructures</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_LithicCraftingStationTierTwo_Plant</plantDefToSpawn>
+        <plantDefToSpawn>ET_Plant_LithicForgeTierTwo</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>1.9</glowRadius>

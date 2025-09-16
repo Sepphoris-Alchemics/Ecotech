@@ -24,7 +24,7 @@ Tier 4 surge seeds: 20
 -->
 
   <ThingDef ParentName="ET_TerrathystPlantBase">
-    <defName>ET_LithicForgePlantTierOne</defName>
+    <defName>ET_Plant_LithicForgeTierOne</defName>
     <label>terrathyst crucible growth</label>
     <description>A cluster of crystals that will grow into a terrathyst crucible. It does not yet hold any sap, making it usuable until it's fully formed.</description>
     <graphicData>
@@ -42,10 +42,40 @@ Tier 4 surge seeds: 20
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_LithicCraftingStationTierOne</transformedThing>
+        <transformedThing>ET_LithicForgeTierOne</transformedThing>
       </li>
       <li Class="CompProperties_InspectString">
         <inspectString>Growing into: Terrathyst Crucible</inspectString>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_LithicStructureSeed</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_TerrathystPlantBase">
+    <defName>ET_Plant_LithicForgeTierTwo</defName>
+    <label>prismite well growth</label>
+    <description>A cluster of crystals that will grow into a terrathyst crucible. It does not yet hold any sap, making it usuable until it's fully formed.</description>
+    <graphicData>
+      <texPath>Things/Building/LithicCrucible</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <growDays>1.5</growDays>
+      <immatureGraphicPath>Things/Plant/TerrathystCrucible_Immature</immatureGraphicPath>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_LithicForgeTierTwo</transformedThing>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Growing into: Prismite Well</inspectString>
       </li>
     </comps>
     <tradeTags Inherit='false'>

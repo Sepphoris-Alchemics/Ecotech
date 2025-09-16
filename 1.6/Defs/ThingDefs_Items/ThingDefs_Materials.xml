@@ -406,7 +406,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <graphicData>
             <texPath>Things/Resource/TerrathystHeart</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.8</drawSize>
+            <drawSize>0.6</drawSize>
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>

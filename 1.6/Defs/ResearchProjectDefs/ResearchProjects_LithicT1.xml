@@ -84,7 +84,7 @@
     <defName>ET_TerrathystEssentials</defName>
     <label>Lithic Essentials</label>
     <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability. Also teaches how to make a terrathyst crucible.
-Teaches you how to grow a terrathyst cultivator, which then grows numerous smaller crystals that can be harvested or shattered for terrathyst. The cultivator grows the smaller crystals year-round, and requires little interaction once grown.
+Teaches you how to grow a terrathyst crucible, which is used to create basic lithic items.
 Nature is not only verdant plants and trees, but also the earth, primal elements, and even the cosmos. Terrathyst is just another terratech technique, and has it's own unique upsides and downsides, which tribes might prefer over organic matter.
 Terrathyst production takes slightly longer than organic production, due to their terrain sensitivity, and the need for many shards. However, their ease of understanding and shaping is just as simple as Prima creations, and terrathyst serves as the dominant material.</description>
     <baseCost>1500</baseCost>
@@ -159,11 +159,31 @@ It's usability is more than adequate for any tribe that wishes to use general li
   <researchViewX>1.00</researchViewX>
   <researchViewY>5.00</researchViewY>
   <discoveredLetterTitle>Secrets of Terratech: Pressurized Materials</discoveredLetterTitle>
-  <discoveredLetterText>You have discovered that original Terratech tribe somehow were able to subject various materials - organic and lithic alike - to immense pressure, creating powerful, brand new materials with special traits. The history you pieced together tells of three:
+  <discoveredLetterText>You have discovered that original Terratech tribes somehow were able to subject various materials - organic and lithic alike - to immense pressure, creating powerful, brand new materials with special traits. The history you pieced together tells of three:
 \nBiothite, a formless material that had both durability and utility. Research indicates it was a lithic material, but had features that were supposed to be exclusive to organic terratech. This made it a highly desirable amongst lithic tribes.
 Stellite, which is documented as the 'ultimate achievement'. Multiple people were required to move even a handful of it, while anything of a larger size was nearly indestructable. While this was used to enhance plant growths, records mostly indicate it was essential for creating specialized weapons and structures that exploited pure light. How light was compressed - and even captured - is another mystery entirely.
 Esperium, which was said to both defend against, and utilize, mental energies. Research indicates esperium was most commonly used in defensive practices, but also had quality-of-life utility. Not much is documented about Esperium, however, suggesting it was an underdeveloped or rare material.
 Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but no information regarding them could be pieced together.
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_AquaticEssentials</defName>
+  <label>Lore Entry: Aquatic Culture</label>
+  <description>Records tell of tribes that lived among the sea, rather than the earth, travelling the world and being able to survive within the unforgiving depths. Not only did they survive, but thrived; they are recorded as some of the most regal tribes to exist, posessing vaults filled with treasures.
+\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
+  <baseCost>3000</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_EcotechTab</tab>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>3.00</researchViewX>
+  <researchViewY>5.00</researchViewY>
+  <discoveredLetterTitle>Secrets of Terratech: The aquatic tribes</discoveredLetterTitle>
+  <discoveredLetterText>You have discovered that some tribes once mastered the vast oceans, creating establishments that were impossible to get by most others. These tribes thrived in their environment, being able to focus on their technology and wealth, with no worries about danger. The history you pieced together also shows:
+\nThese tribes were generally isolated from the surface tribes, only interacting and socializing with other aquatic tribes.
+Access to the depths of the ocean allowed them to find - and create - resources that were incredibly strong, in order to survive the crushing pressure. Additionally, traditionally valuable materials - gold, silver, gems, etc. - were also plentiful, as no others could possibly reach them.
+Their gear and structures were highly specialized to survive the depths, and use the resources available. Armor is said to be guilded with gold, while weapons were hybrid creations that were crafted with extreme decor and intricacy.
+Their overall technology excelled in strength and beauty, but fully piecing together how to attain or make any of it is impossible.
   </discoveredLetterText>
 </ResearchProjectDef>
 

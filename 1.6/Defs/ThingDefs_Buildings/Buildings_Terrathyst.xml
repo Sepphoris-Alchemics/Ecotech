@@ -12,12 +12,13 @@
     -->
 
 <Defs>
-  <ThingDef ParentName="BuildingBase">
-    <defName>ET_LithicCraftingStationTierOne</defName>
+  <ThingDef ParentName="BenchBase">
+    <defName>ET_LithicForgeTierOne</defName>
     <label>terrathyst crucible</label>
     <description>A crystal chamber that has a pool of self-renewing shocksap. This structure allows a tribe to shape and charge smaller lithic items and weapons.
 This crucible holds enough sap to form simpler lithic weapons. However, it cannot support upgrading them.
 While this crucible is a good starting point, any tribe that wishes to survive solely on a lithic lifestyle will need to eventually create a prismite well.</description>
+    <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
     <graphicData>
       <texPath>Things/Building/LithicCrucible</texPath>
@@ -38,10 +39,8 @@ While this crucible is a good starting point, any tribe that wishes to survive s
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
-    <!--<costList>
-      <WoodLog>80</WoodLog>
-      <ET_Glowsap>30</ET_Glowsap>
-    </costList>-->
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True"/>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
@@ -50,7 +49,6 @@ While this crucible is a good starting point, any tribe that wishes to survive s
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <!--<designationCategory>EcotechDesignation</designationCategory>-->
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
@@ -64,6 +62,12 @@ While this crucible is a good starting point, any tribe that wishes to survive s
     <killedLeavings>
       <WoodLog>12</WoodLog>
     </killedLeavings>
+    <recipes>
+      <li>ET_LithicForgeTierTwoRecipe</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
     <building>
       <deconstructible>false</deconstructible>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>

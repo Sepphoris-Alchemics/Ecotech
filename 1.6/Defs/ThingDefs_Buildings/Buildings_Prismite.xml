@@ -10,7 +10,7 @@
 
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_LithicCraftingStationTierTwo</defName>
+    <defName>ET_LithicForgeTierTwo</defName>
     <label>prismite well</label>
     <description>A crystal chamber that snakes deep into the planet. This particular structure holds large amounts of shocksap, which is generally used for creating and evolving lithoid weapons and items.
 This vessel can take a terrathyst core and use it as a catalyst to form a new, random lithic weapon. Adittionally, it can evolve most lithoid weapons as long as the desired weapon, and the required items, are near the crucible.
@@ -41,7 +41,7 @@ This well is a staple amongst tribes that take interest in lithic terratech, as 
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_TerrathystCrafting2</li>
+      <li>ET_TerrathystCrafting1</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
