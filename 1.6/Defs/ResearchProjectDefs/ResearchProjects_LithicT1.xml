@@ -152,7 +152,7 @@ It's usability is more than adequate for any tribe that wishes to use general li
   <label>Lore Entry: Hyperdense Materials</label>
   <description>Records tell of various materials that are entirely natural, but seem to have no presence on the planet. Even though some methods of dense terrathyst is common terratechnology, far denser materials - some not even lithic - once existed.
 \n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>3000</baseCost>
+  <baseCost>2000</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_EcotechTab</tab>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
@@ -172,7 +172,7 @@ Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but
   <label>Lore Entry: Aquatic Culture</label>
   <description>Records tell of tribes that lived among the sea, rather than the earth, travelling the world and being able to survive within the unforgiving depths. Not only did they survive, but thrived; they are recorded as some of the most regal tribes to exist, posessing vaults filled with treasures.
 \n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>3000</baseCost>
+  <baseCost>2000</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_EcotechTab</tab>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
@@ -184,6 +184,26 @@ Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but
 Access to the depths of the ocean allowed them to find - and create - resources that were incredibly strong, in order to survive the crushing pressure. Additionally, traditionally valuable materials - gold, silver, gems, etc. - were also plentiful, as no others could possibly reach them.
 Their gear and structures were highly specialized to survive the depths, and use the resources available. Armor is said to be guilded with gold, while weapons were hybrid creations that were crafted with extreme decor and intricacy.
 Their overall technology excelled in strength and beauty, but fully piecing together how to attain or make any of it is impossible.
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_PhytohazardGear</defName>
+  <label>Lore Entry: The Terratech Legion</label>
+  <description>Records tell of tribes that far back in their prime, Terratech tribes utilized highly-specialized bioarmors, used within an army that dedicated their lives to the Terratech military. these technologies are believed to still exist, but were sealed away for unknown reasons.
+\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
+  <baseCost>2000</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_EcotechTab</tab>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>3.00</researchViewX>
+  <researchViewY>5.00</researchViewY>
+  <discoveredLetterTitle>Secrets of Terratech: The Deeproot Legion</discoveredLetterTitle>
+  <discoveredLetterText>You have discovered that during a time of grand war, Terratech tribes united to create bioarmors that would bind to the wearer, given to the most dedicated and loyal warriors of their culture. These armors posessed incredible power, often not even requiring weapons in order to be highly lethal. The history you pieced together also shows:
+\nOrganic, lithic, starborn, and aquatic tribes all participated in engineering these bioarmors, creating an incredible arsenal that linked nature and beings together. This gave even outsiders a way of becoming highly valuable, as other paths of prestige was forbidden to them.
+Those that donned these bioarmors would froever be living within them - but also refused to seperate to begin with. This is attributed to some sort of ascendance, becoming more than whatever race they once were. The power they were given was simply too much to leave behind.
+The armors were incredibly powerful, grown with integrated weapons, defenses, and stimulants that made warriors rival even the Empire's strongest Cataphracts.
+Each culture developed their own bioarmors that had unique benefits and attributes trhat were favorable to the culture's values, but what exactly each culture developed is currently lost to time.
   </discoveredLetterText>
 </ResearchProjectDef>
 

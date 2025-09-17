@@ -48,7 +48,7 @@ The glowsap bloom can be harvested relatively fast, but it's harvesting yield is
       <growDays>4</growDays>
       <dieIfLeafless>false</dieIfLeafless>
       <dieIfNoSunlight>false</dieIfNoSunlight>
-      <visualSizeRange>0.3~0.8</visualSizeRange>
+      <visualSizeRange>0.5~1</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
       <purpose>Misc</purpose>
     </plant>

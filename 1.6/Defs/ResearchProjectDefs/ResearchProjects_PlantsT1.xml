@@ -493,7 +493,7 @@ You can now create Biothite, an incredibly strong material that can be used in m
   <label>Lore Entry: Psychic Weaponry</label>
   <description>Records tell of a special, exclusive breed of Terraweapons that only the highest of societies and engineers know of. This research will provide additional information about this unique breed....
 \n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>3000</baseCost>
+  <baseCost>2000</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_EcotechTab</tab>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
