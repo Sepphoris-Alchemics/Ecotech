@@ -24,7 +24,7 @@
       <fertilitySensitivity>0</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <burnedThingDef IsNull="True" />
-      <immatureGraphicPath>Things/Plant/Terraforge_Immature</immatureGraphicPath>
+      <immatureGraphicPath IsNull="True" />
       <sowWork>270</sowWork>
       <sowTags>
         <li>Ground</li>

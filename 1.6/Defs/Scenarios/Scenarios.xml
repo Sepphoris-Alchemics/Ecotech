@@ -129,10 +129,6 @@
 					<def>StartingResearch</def>
 					<project>ET_SmallTerravats</project>
 				</li>
-				<li Class="ScenPart_StartingResearch">
-					<def>StartingResearch</def>
-					<project>ET_TierTwoSpecialConduitTrees</project>
-				</li>
 				<li Class="ScenPart_DisallowBuilding">
 					<def>Rule_DisallowBuilding</def>
 					<building>HiTechResearchBench</building>

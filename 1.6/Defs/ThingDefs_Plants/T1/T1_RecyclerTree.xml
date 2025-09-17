@@ -79,7 +79,7 @@ The process always breaks materials down to their most fundamental components, r
     <comps>
       <li Class="CompProperties_PlantPreventCutting"/>
       <li Class="CVNPlantFunctions.CompProperties_EaterExchanger">
-        <interval>2000</interval>
+        <interval>30000</interval>
         <radius>11</radius>
         <isAffectBuilding>false</isAffectBuilding>
         <isAffectItem>true</isAffectItem>

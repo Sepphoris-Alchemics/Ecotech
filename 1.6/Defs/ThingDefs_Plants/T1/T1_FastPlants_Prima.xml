@@ -34,12 +34,13 @@ Tier 4 surge seeds: 20
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <label>prima hyperpod</label>
-    <description>A terrapod that produces Prima weapons. This particular terrapod has been delicately designed to grow on any terrain, and will produce weapons in roughly a day's time.
+    <description>A terrapod that produces Prima weapons. This particular terrapod has been designed to grow on any terrain, and it's hypersap usage allows it produce weapons in roughly a day's time.
 \n\nThis terrapod grows multiple seeds, but these seeds fight over nutrients, resulting in the production of one - rarely two - random terraweapons. The rest of the seeds simply turn to mush.</description>
     <descriptionHyperlinks>
       <ThingDef>ET_OverviewPrimaWeapons</ThingDef>
     </descriptionHyperlinks>
     <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
       <showGrowthInInspectPane>false</showGrowthInInspectPane>
       <harvestMinGrowth>1</harvestMinGrowth>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
@@ -53,7 +54,7 @@ Tier 4 surge seeds: 20
       <sowResearchPrerequisites>
         <li>ET_PrimaTerraweaponSeeds</li>
       </sowResearchPrerequisites>
-      <immatureGraphicPath>Things/Plant/PrimaPodRandom</immatureGraphicPath>
+      <immatureGraphicPath>Things/Plant/PrimaHyperpod_Mature</immatureGraphicPath>
       <visualSizeRange>0.8~1</visualSizeRange>
     </plant>
     <tickerType>Rare</tickerType>

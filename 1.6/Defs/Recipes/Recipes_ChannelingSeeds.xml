@@ -111,4 +111,25 @@
     <displayPriority>2</displayPriority>
   </RecipeDef>
 
+<RecipeDef>
+    <defName>ET_WildbarkTreeTierTwoSeedRecipe</defName>
+    <label>shape megatree seed (wildbark) </label>
+    <description>Shape a Wildbark tree seed. Wildbark trees produce massive amounts of yearly wooden platings.</description>
+    <jobString>shaping a conduit tree.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_MultiSpacePlants1</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>9600</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_WildbarkTreeTierTwo>1</ET_Seed_WildbarkTreeTierTwo>
+    </products>
+    <displayPriority>6</displayPriority>
+  </RecipeDef>
 </Defs>
