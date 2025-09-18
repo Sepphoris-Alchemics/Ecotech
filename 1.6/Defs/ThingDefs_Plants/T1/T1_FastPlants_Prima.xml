@@ -30,7 +30,7 @@ Tier 4 surge seeds: 20
   <ThingDef ParentName="ET_PrimaWeaponPodBase">
     <defName>ET_HyperPrimaPod_Random</defName>
     <graphicData>
-      <texPath>Things/Plant/PrimaPodRandom</texPath>
+      <texPath>Things/Plant/PrimaHyperpod_Mature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <label>prima hyperpod</label>

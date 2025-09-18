@@ -50,10 +50,6 @@ Tier 4 surge seeds: 20
       <harvestYieldAffectedByDifficulty>false</harvestYieldAffectedByDifficulty>
       <immatureGraphicPath>Things/Plant/Terrathyst_Mature</immatureGraphicPath>
       <sowWork>300</sowWork>
-      <sowTags>
-        <li>ET_SapTerrainTierOne</li>
-        <li>ET_ShocksapCompatible</li>
-      </sowTags>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0</topWindExposure>
       <visualSizeRange>0.5~1</visualSizeRange>

@@ -44,6 +44,10 @@ Alternatively, add a meditation method or some sort of gizmo operation that unlo
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
       <purpose>Misc</purpose>
     </plant>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+    </ingestible>
   </ThingDef>
 
   <ThingDef ParentName="ET_MegatreeBase">

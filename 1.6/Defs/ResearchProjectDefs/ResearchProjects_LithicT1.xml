@@ -133,9 +133,9 @@ That said, there are other creations that simply require more space, more sap, o
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TerraseedEssentials</li>
-    </hiddenPrerequisites>
+    <prerequisites>
+      <li>ET_TerrathystEssentials</li>
+    </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
     <researchViewY>4.00</researchViewY>

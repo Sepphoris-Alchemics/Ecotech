@@ -34,6 +34,10 @@ Tier 4 surge seeds: 20
     <plant>
       <growDays>1.5</growDays>
       <immatureGraphicPath>Things/Plant/TerrathystCrucible_Immature</immatureGraphicPath>
+      <sowTags>
+        <li>Ground</li>
+        <li>ET_SapTerrainTierOne</li>
+      </sowTags>
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
@@ -58,12 +62,16 @@ Tier 4 surge seeds: 20
     <label>prismite well growth</label>
     <description>A cluster of crystals that will grow into a terrathyst crucible. It does not yet hold any sap, making it usuable until it's fully formed.</description>
     <graphicData>
-      <texPath>Things/Building/LithicCrucible</texPath>
+      <texPath>Things/Plant/TerrathystCrucible_Immature</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <plant>
       <growDays>1.5</growDays>
       <immatureGraphicPath>Things/Plant/TerrathystCrucible_Immature</immatureGraphicPath>
+      <sowTags>
+        <li>Ground</li>
+        <li>ET_SapTerrainTierOne</li>
+      </sowTags>
     </plant>
     <comps>
       <li Class="CompProperties_Glower">

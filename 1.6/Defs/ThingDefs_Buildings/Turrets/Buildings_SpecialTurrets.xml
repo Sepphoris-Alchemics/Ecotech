@@ -135,7 +135,7 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>ET_PeriwoodTurretSeeds</li>
+      <li>ET_BriarGenome</li>
     </researchPrerequisites>
     <modExtensions>
       <!--<li Class="HeavyWeapons.HeavyWeapon">

@@ -191,7 +191,7 @@ The sap it recycles will not be replenished after growth, making sap farming not
     <label>Megaflora Bioengineering</label>
     <description>Terraplants have incredibly complex biology, and this biology can only go so far in a small space.
 This advancement allows you to shape seeds capable of growing into plants aren't restricted to a 1x1 size, and can instead go up to a 3x3 size. Bigger plants are theoretically possible, but require further research.
-Additionally, it teaches you how to make a new conduit megatree</description>
+Additionally, it teaches you how to make a new conduit megatree.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
