@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--todo:
+add dynamic graphics and the proper wood types
+add a way for the tree to recognize techs; the tree can then grow the bark.
+Alternatively, add a meditation method or some sort of gizmo operation that unlocks with other techs. This is how the player "guides" the tree.
+-->
+
+<ThingDef Name="ET_MegatreeBase" ParentName="PlantBaseNonEdible" Abstract="True">
+    <graphicData>
+      <texPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <plant>
+      <maxMeshCount>1</maxMeshCount>
+      <growDays>2</growDays> 
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <burnedThingDef IsNull="True" />
+      <immatureGraphicPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</immatureGraphicPath>
+      <sowWork>6000</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <topWindExposure>0</topWindExposure>
+      <visualSizeRange>0.7~1</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <sowResearchPrerequisites Inherit="False" />
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <purpose>Misc</purpose>
+    </plant>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+    </ingestible>
+  </ThingDef>
+
+<!--=====WILDBARK =====-->
+
+  <ThingDef ParentName="ET_MegatreeBase">
+    <defName>ET_WildbarkTreeTierTwo_Immature</defName>
+    <label>Wildbark Megatree</label>
+    <description>The Wildbark Tree is a special Conduit tree that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources.
+Twice a year, the tree will grow a random bark, which can then be harvested in massive amounts. The type of bark that's grown can't be controlled, and the process is quite long, but the final bounty is always massive and incredibly efficient.
+Wildbark Trees can only grow bark platings.
+\n\nThe tree will produce 2-3 stacks's worth of wood of one of the following, roughly once a year:
+-Primwood Plating
+-Elderwood Plating
+Multiple Wildbark Trees can exist together, but extensive spacing is required between each one. This tree also takes up a 3x3 space, so the surrounding area should be preserved while it's growing.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree_Immature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <canScatterOver>false</canScatterOver>
+    <descriptionHyperlinks>
+      <ThingDef>ET_TierOnePlating</ThingDef>
+      <ThingDef>ET_TierTwoPlating</ThingDef>
+    </descriptionHyperlinks>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>12</Beauty>      <!--Perhaps try to add beauty that matches the bark type?-->
+      <BeautyOutdoors>12</BeautyOutdoors>
+      <Flammability>2</Flammability>      <!--T1=3-->
+      <MaxHitPoints>200</MaxHitPoints>      <!--T1=300-->
+    </statBases>
+    <killedLeavings>
+      <ET_Glowsap>30</ET_Glowsap>
+    </killedLeavings>
+    <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
+    <selectable>true</selectable>
+    <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>1</growDays>
+      <immatureGraphicPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree_Immature</immatureGraphicPath>
+      <visualSizeRange>1~3</visualSizeRange>      <!--Both attributes .3 higher than T1 trees-->
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_WildbarkTreeTierTwo_Mature</transformedThing>
+        <isTransformedThingRotatable>false</isTransformedThingRotatable>
+        <transformedPositionOffset>(0, 1)</transformedPositionOffset>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+    </comps>
+    <specialDisplayRadius>67.9</specialDisplayRadius>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_MegatreeBase">
+    <defName>ET_WildbarkTreeTierTwo_Mature</defName>
+    <label>Wildbark Megatree</label>
+    <description>The Wildbark Tree is a special Conduit tree that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources.
+Twice a year, the tree will grow a random bark, which can then be harvested in massive amounts. The type of bark that's grown can't be controlled, and the process is quite long, but the final bounty is always massive and incredibly efficient.
+Wildbark Trees can only grow bark platings.
+\n\nThe tree will produce 2-3 stacks's worth of wood of one of the following, roughly once a year:
+-Primwood Plating
+-Elderwood Plating
+Multiple Wildbark Trees can exist together, but they must be fully grown before another can be planted nearby. This tree also takes up a 3x3 space, so the surrounding area should be preserved while it's growing.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <size>3,3</size>
+    <tickerType>Normal</tickerType>
+    <canScatterOver>false</canScatterOver>
+    <descriptionHyperlinks>
+      <ThingDef>ET_TierOnePlating</ThingDef>
+      <ThingDef>ET_TierTwoPlating</ThingDef>
+    </descriptionHyperlinks>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>18</Beauty>
+      <BeautyOutdoors>18</BeautyOutdoors>
+      <Flammability>2</Flammability>
+      <MaxHitPoints>400</MaxHitPoints>
+    </statBases>
+    <killedLeavings>
+      <ET_Glowsap>60</ET_Glowsap>
+    </killedLeavings>
+    <ingestible />
+    <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
+    <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>1</growDays>
+      <immatureGraphicPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</immatureGraphicPath>
+      <visualSizeRange>1~1.2</visualSizeRange>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>3300000~3900000</cycleDurationRangeTicks>
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_TierOnePlating>225~300</ET_TierOnePlating>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_TierTwoPlating>225~300</ET_TierTwoPlating>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+    </comps>
+  </ThingDef>
+
+<!--===GROVETENDER=====-->
+
+  <ThingDef ParentName="ET_MegatreeBase">
+    <defName>ET_GrovetenderTreeTierTwo_Immature</defName>
+    <label>Grovetender Megatree</label>
+    <description>The Grovetender Tree is the next iteration of the smaller Custodian tree. It's larger size allows it be far more efficient in it's duties, and makes it one of the most common Conduit Trees within Terratech tribes.
+Like it's smaller variants, it terraforms the surrounding area to support most terraplants. Both the area it covers, and the speed it works at, is much higher than Custodians. Grovetenders can also be adapted to create other sap-infused terrains, though this practice is currently unknown.
+\nGrovetender vs Elderwood Custodian differences:
+Terraforming radius: 9 (Custodian: 5)
+Terraforming speed: 4 tiles/day (Custodian: 2)
+Fertility requirement: 5% (Custodian: 80%)
+Growing time: 8 full days (Custodian: 4)
+Will also terraform stone.
+Multiple Grovetenders can exist together, but extensive spacing is required between each one during it's growing phase. This tree also takes up a 3x3 space, so the surrounding area should be preserved while it's growing.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree_Immature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <canScatterOver>false</canScatterOver>
+    <descriptionHyperlinks>
+      <ThingDef>ET_TierTwoPlating</ThingDef>
+    </descriptionHyperlinks>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>18</Beauty>      <!--Perhaps try to add beauty that matches the bark type?-->
+      <BeautyOutdoors>18</BeautyOutdoors>
+      <Flammability>2</Flammability>      <!--T1=3-->
+      <MaxHitPoints>200</MaxHitPoints>      <!--T1=300-->
+    </statBases>
+    <killedLeavings>
+      <ET_Glowsap>40</ET_Glowsap>
+      <ET_TierTwoPlating>45</ET_TierTwoPlating>
+    </killedLeavings>
+    <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
+    <selectable>true</selectable>
+    <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>7</growDays>
+      <immatureGraphicPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree_Immature</immatureGraphicPath>
+      <visualSizeRange>1~3</visualSizeRange>      <!--Both attributes .3 higher than T1 trees-->
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_GrovetenderTreeTierTwo_Mature</transformedThing>
+        <isTransformedThingRotatable>false</isTransformedThingRotatable>
+        <transformedPositionOffset>(0, 1)</transformedPositionOffset>
+      </li>
+     <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+      <li Class="CVNPlantFunctions.CompProperties_TerrainTerraforming">
+        <interval>60000</interval>
+        <radius>9</radius>
+        <countPerTrigger>2</countPerTrigger>
+        <Terraforms>
+          <li>
+            <validTerrain>
+              <li>Soil</li>
+              <li>SoilRich</li>
+              <li>Gravel</li>
+              <li>PackedDirt</li>
+              <li>MossyTerrain</li>
+            </validTerrain>
+            <changedInto>ET_SapTerrainTierOne</changedInto>
+          </li>
+        </Terraforms>
+      </li>
+    </comps>
+    <specialDisplayRadius>67.9</specialDisplayRadius>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_MegatreeBase">
+    <defName>ET_WildbarkTreeTierTwo_Mature</defName>
+    <label>Wildbark Megatree</label>
+    <description>The Wildbark Tree is a special Conduit tree that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources.
+Twice a year, the tree will grow a random bark, which can then be harvested in massive amounts. The type of bark that's grown can't be controlled, and the process is quite long, but the final bounty is always massive and incredibly efficient.
+Wildbark Trees can only grow bark platings.
+\n\nThe tree will produce 2-3 stacks's worth of wood of one of the following, roughly once a year:
+-Primwood Plating
+-Elderwood Plating
+Multiple Wildbark Trees can exist together, but they must be fully grown before another can be planted nearby. This tree also takes up a 3x3 space, so the surrounding area should be preserved while it's growing.</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <size>3,3</size>
+    <tickerType>Normal</tickerType>
+    <canScatterOver>false</canScatterOver>
+    <descriptionHyperlinks>
+      <ThingDef>ET_TierOnePlating</ThingDef>
+      <ThingDef>ET_TierTwoPlating</ThingDef>
+    </descriptionHyperlinks>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>18</Beauty>
+      <BeautyOutdoors>18</BeautyOutdoors>
+      <Flammability>2</Flammability>
+      <MaxHitPoints>400</MaxHitPoints>
+    </statBases>
+    <killedLeavings>
+      <ET_Glowsap>60</ET_Glowsap>
+    </killedLeavings>
+    <ingestible />
+    <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
+    <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>1</growDays>
+      <immatureGraphicPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</immatureGraphicPath>
+      <visualSizeRange>1~1.2</visualSizeRange>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="CompProperties_PlantPreventCutting"/>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>3300000~3900000</cycleDurationRangeTicks>
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_TierOnePlating>225~300</ET_TierOnePlating>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_TierTwoPlating>225~300</ET_TierTwoPlating>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

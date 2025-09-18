@@ -128,7 +128,7 @@ This tome teaches one how to shape seeds that can go beyond the size of normal t
             <li Class="CompProperties_CompAnalyzableUnlockResearch">
                 <analysisID>520135716</analysisID>
                 <requiresMechanitor>false</requiresMechanitor>
-                <analysisDurationHours>4</analysisDurationHours>
+                <analysisDurationHours>6</analysisDurationHours>
                 <destroyedOnAnalyzed>true</destroyedOnAnalyzed>
                 <completedLetterLabel>Tome studied: {RESEARCH} unlocked</completedLetterLabel>
                 <completedLetter>By studying this tome, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYou can now complete this research at a Terraseed research bench.</completedLetter>
