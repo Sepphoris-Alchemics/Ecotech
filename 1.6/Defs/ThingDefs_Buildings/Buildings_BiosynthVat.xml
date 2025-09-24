@@ -30,8 +30,8 @@
       <texPath>Things/Building/Terravats/BiosynthVat</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <drawSize>(1,2)</drawSize>
-      <drawOffset>(0,0,0.55)</drawOffset>
+      <drawSize>(2.6,2.6)</drawSize>
+      <drawOffset>(0,0,0.75)</drawOffset>
       <drawRotated>false</drawRotated>
       <damageData>
         <rect>(0.3,0,2.7,1)</rect>

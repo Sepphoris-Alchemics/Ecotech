@@ -29,6 +29,18 @@
       <Flammability>0</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Plants>2</Plants>
+      </skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <costList>
+      <WoodLog>5</WoodLog>
+    </costList>
     <thingCategories>
       <li>LithicSeedsStructures</li>
     </thingCategories>

@@ -1,6 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <RecipeDef>
+    <defName>ET_LithicForgeTierOneRecipe</defName>
+    <label>form terrathyst crucible cluster</label>
+    <description>Shape a cluster of crystals that will grow into a terrathyst crucible. Terrathyst Crucibles use sap and lithic fragments to form crystal clusters, and to grow weapons around terrathyst cores.</description>
+    <jobString>shaping a crystal cluster.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>3</Plants>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_TierOneCrystal</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_TerrathystEssentials</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>1600</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_LithicForgeTierOne>1</ET_Seed_LithicForgeTierOne>
+    </products>
+    <displayPriority>0</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
     <defName>ET_LithicForgeTierTwoRecipe</defName>
     <label>form prismite well cluster</label>
     <description>Shape a cluster of crystals that will grow into a prismite well. Prismite wells are direct upgrades to terrathyst crucibles, able to handle bigger amounts of sap and fragments.</description>
@@ -29,6 +61,6 @@
     <products>
       <ET_Seed_LithicForgeTierTwo>1</ET_Seed_LithicForgeTierTwo>
     </products>
-    <displayPriority>0</displayPriority>
+    <displayPriority>1</displayPriority>
   </RecipeDef>
 </Defs>

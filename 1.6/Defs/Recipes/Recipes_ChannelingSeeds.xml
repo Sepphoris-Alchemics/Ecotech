@@ -111,9 +111,31 @@
     <displayPriority>2</displayPriority>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>ET_BiosynthTreeSeedRecipe</defName>
+    <label>shape biosynth tree seed</label>
+    <description>Shape a Biosynth tree seed. Biosynth Trees grow items meant to integrate with sentient beings, and genetically modifying - or even creating - living beings as well.</description>
+    <jobString>shaping a biosynth tree seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>8</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_BiosynthVat</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>12000</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_BiosynthTree>1</ET_Seed_BiosynthTree>
+    </products>
+    <displayPriority>3</displayPriority>
+  </RecipeDef>
+
 <RecipeDef>
     <defName>ET_WildbarkTreeTierTwoSeedRecipe</defName>
-    <label>shape megatree seed (wildbark) </label>
+    <label>shape megatree seed (wildbark)</label>
     <description>Shape a Wildbark tree seed. Wildbark trees produce massive amounts of yearly wooden platings.</description>
     <jobString>shaping a conduit tree.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>

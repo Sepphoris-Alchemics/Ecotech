@@ -122,7 +122,7 @@ Growing time: 4 full days (Primwood: 2)</description>
 \nA biosynth tree supplies itself with sap, and thus this does not need to be manually replenished, like terravats.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Plant/ConduitTrees/ElderwoodCustodianTree</texPath>
+      <texPath>Things/Building/Terravats/BiosynthVat</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
@@ -191,6 +191,11 @@ Growing time: 4 full days (Primwood: 2)</description>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_BiosynthVat</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>
