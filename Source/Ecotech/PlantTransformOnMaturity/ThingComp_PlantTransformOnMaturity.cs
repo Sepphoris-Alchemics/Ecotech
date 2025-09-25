@@ -156,7 +156,7 @@ namespace Ecotech
 
             SetFaction(thingToSpawn);
             GenSpawn.Spawn(thingToSpawn, TransformedPosition, map, transformedRotation, WipeMode.FullRefund);
-            WipeOtherPlants(thingToSpawn);
+            WipeOtherPlants(thingToSpawn, map);
         }
 
         private void SetFaction(Thing spawnedThing)
@@ -173,7 +173,7 @@ namespace Ecotech
             }
         }
 
-        private void WipeOtherPlants(Thing spawnedThing)
+        private void WipeOtherPlants(Thing spawnedThing, Map map)
         {
             foreach(IntVec3 occupiedCell in spawnedThing.OccupiedRect())
             {
