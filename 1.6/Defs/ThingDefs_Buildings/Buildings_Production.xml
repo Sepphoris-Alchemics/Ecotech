@@ -107,6 +107,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
       <li>ET_ProtosapBaySeedRecipe</li>
       <li>ET_WildbarkTreeTierTwoSeedRecipe</li>
       <li>ET_BiosynthTreeSeedRecipe</li>
+      <li>ET_PeriwoodTreeSeedRecipe</li>
       <!--<li>ET_TestRecipe</li>-->
     </recipes>
     <inspectorTabs>

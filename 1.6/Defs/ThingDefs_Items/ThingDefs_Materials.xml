@@ -227,7 +227,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
 
     <!--VEF defs
   <ThingDef ParentName="UnfinishedBase">
-    <defName>ET_RandomTier2Weapon</defName>    
+    <defName>ET_RandomTierTwoWeapon</defName>    
     <label>carved periwood heart</label> 
     <description>The heart of a periwood tree, in the middle of being carved into a periwood weapon.</description>
     <graphicData>
@@ -259,7 +259,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
   </ThingDef>
 
 <ThingDef ParentName="UnfinishedBase">
-    <defName>ET_UnfinishedTier2Heart</defName>
+    <defName>ET_UnfinishedTierTwoHeart</defName>
     <label>partially carved periwood heart</label>
     <statBases>
       <Flammability>1</Flammability>
@@ -271,8 +271,8 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <stuffCategories Inherit="false" />
   </ThingDef>-->
 
-    <ThingDef ParentName="UnfinishedBase">
-        <defName>ET_UnfinishedTier2Heart</defName>
+    <!--<ThingDef ParentName="UnfinishedBase">
+        <defName>ET_UnfinishedTierTwoHeart</defName>
         <label>partially carved periwood heart</label>
         <description>The heart of a periwood tree, in the middle of being carved into a periwood weapon.</description>
         <graphicData>
@@ -296,17 +296,17 @@ Weapons that use a type of wood come far before the wood source itself, since en
                 <compClass>CompQuality</compClass>
             </li>
         </comps>
-    </ThingDef>
+    </ThingDef>-->
     <!-- ================ Periwood Heart ================ -->
 
     <ThingDef ParentName="ResourceBase">
-        <defName>ET_Tier2WeaponHeart</defName>
+        <defName>ET_TierTwoWeaponHeart</defName>
         <label>periwood heart</label>
-        <description>The heart of a periwood tree, ever so faintly pulsing, as if it was alive. Used at a terraforge to carve a random periwood weapon.</description>
+        <description>The heart of a periwood tree, ever so faintly pulsing, as if it was alive. Used at a terraforge to carve a specific periwood weapon.</description>
         <graphicData>
             <texPath>Things/Resource/PeriwoodHeart/ET_PeriwoodHeart</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.4</drawSize>
+            <drawSize>0.8</drawSize>
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>

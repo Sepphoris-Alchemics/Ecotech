@@ -234,7 +234,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
   <ResearchProjectDef>
     <defName>ET_PeriwoodSeeds</defName>
     <label>Periwood Terraseed Cultivation</label>
-    <description>Learn how to nuture and handle Periwood Terraseeds, which grow into Pericore Trees. The core of these trees can be harvested, which are then carefully carved into periwood weapons.</description>
+    <description>Learn how to nuture and handle Periwood Terraseeds, which grow into Periwood Trees. The core of these trees can be harvested, which are then carefully carved into periwood weapons.</description>
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -245,15 +245,16 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <researchViewX>1.00</researchViewX>
     <researchViewY>2.90</researchViewY>
     <discoveredLetterTitle>About: Periwood Weapons</discoveredLetterTitle>
-    <discoveredLetterText>Periwood Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Periwood Terratree in fertile soil, and then carving the weapon out when it's fully grown. Periwood weapons have a limited lifespan once they are harvested, but this base lifespan is significantly longer than nearly every other lifespan. Additionally, saps are much more effective in Periwood weapons than any other genome.
-\n\nUnlike Prima weapons, specific periwood weapons cannot be focused. However, the chance of getting any weapon is equal.</discoveredLetterText>
+    <discoveredLetterText>Periwood Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Periwood Terratree in fertile soil, and then carving the weapon out when it's fully grown. Periwood weapons have a significantly longer base lifespan than most other organic weapons. Additionally, saps are much more effective in Periwood weapons than any other genome.
+The trees themselves also serve as a source of wood that can easily be obtained and expanded; they aren't as efficient as other trees, but they don't require space between one another. do note that the periwood hearts are incredibly sensitive and fragile, and need to be used quickly upon harvest.
+\n\nUnlike Prima weapons, they are not immediately produced, and must be carved from a heart. The techniques for this is it's own field of study.</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>ET_PeriwoodCarving</defName>
     <label>Periwood Carving</label>
     <description>Learn how to carve periwood hearts into various weapons. Due to the smaller amount of periwood weapons, all the carving techniques can be learned at once.</description>
-    <baseCost>1200</baseCost>
+    <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
@@ -262,6 +263,9 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>2.90</researchViewY>
+<discoveredLetterTitle>About: Periwood Carving</discoveredLetterTitle>
+    <discoveredLetterText>Most periwood weapons are carved from a periwood heart at a terraforge. They take little material investment beyond the heart, usually only requiring sap to support them during the carving. However, the carver will need some skill with plants, alongside understanding artistic basics, since carving the weapon is just as involved - if not more - as carving a sculpture out of wood or stone.
+\n\nNote that cutting down a periwood tree is taboo in terratech culture, and those attuned with nature will not appreciate this. It is only advised to use this technique sparingly, or when absolutely necessary.</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -331,7 +335,7 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
   </ResearchProjectDef>
 
   <ResearchProjectDef>    <!--Tier 2 (Elderwood) Terraforge-->
-    <defName>ET_Tier2Terraforge</defName>
+    <defName>ET_TierTwoTerraforge</defName>
     <label>Pattern 52R8898111-E</label>
     <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
 \n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1500 when fully implemented.)</description>

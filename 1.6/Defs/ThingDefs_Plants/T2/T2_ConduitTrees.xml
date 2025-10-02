@@ -114,7 +114,72 @@ Growing time: 4 full days (Primwood: 2)</description>
 
   <!--=====BIOSYNTH TREE=====-->
 
-  <ThingDef ParentName="TreeBase">    <!--todo: add zone growth coding and add building coding-->
+  <ThingDef ParentName="ET_FundamentalPlantBase">
+    <defName>ET_BiosynthTree</defName>
+    <label>Biosynth tree sprout</label>
+    <description>A giant tree meant to mimic and replicate the processes of Terravats to extremely precise degrees. The biosynth vat is required for the manipulation or editing of anything that posesses complex genetic makeup, such as body parts, creatures, and even humanoids.
+\n\nWhile a terravat's contents can be freely modified, a biosynth tree will only use the required resources when the operation is called, and the items are used immediately.
+\nA biosynth tree supplies itself with sap, and thus this does not need to be manually replenished, like terravats.</description>
+    <graphicData>
+      <texPath>Things/Building/Terravats/BiosynthVat</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.21, 0.6, 0.21)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>21</Beauty>
+      <BeautyOutdoors>21</BeautyOutdoors>
+      <Flammability>2</Flammability>
+      <MaxHitPoints>250</MaxHitPoints>
+    </statBases>
+    <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>2</growDays>
+      <immatureGraphicPath>Things/Building/Terravats/BiosynthVat</immatureGraphicPath>
+      <visualSizeRange>1~1.2</visualSizeRange>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>0</harvestYield>
+      <neverBlightable>true</neverBlightable>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <warnIfMarkedForCut>true</warnIfMarkedForCut>
+      <burnedThingDef IsNull="True" />
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+    </plant>
+    <killedLeavings>
+      <ET_Brightsap>20</ET_Brightsap>
+      <ET_TierTwoPlating>30</ET_TierTwoPlating>
+    </killedLeavings>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(237,211,78,0)</glowColor>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_BiosynthVat</transformedThing>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Growing into: Biosynth Vat</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="ET_MegatreeBase">
     <defName>ET_BiosynthTree</defName>
     <label>Biosynth tree sprout</label>
     <description>A giant tree meant to mimic and replicate the processes of Terravats to extremely precise degrees. The biosynth vat is required for the manipulation or editing of anything that posesses complex genetic makeup, such as body parts, creatures, and even humanoids.
@@ -147,8 +212,10 @@ Growing time: 4 full days (Primwood: 2)</description>
     <ingestible />
     <preventSkyfallersLandingOn>false</preventSkyfallersLandingOn>
     <plant>
-      <growDays>2</growDays>
-      <visualSizeRange>2~2.6</visualSizeRange>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>1</growDays>
+      <immatureGraphicPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</immatureGraphicPath>
+      <visualSizeRange>1~1.2</visualSizeRange>
       <sowMinSkill>6</sowMinSkill>
       <sowTags>
         <li>Ground</li>
@@ -158,25 +225,13 @@ Growing time: 4 full days (Primwood: 2)</description>
       <fertilitySensitivity>0</fertilitySensitivity>
       <wildClusterWeight>0</wildClusterWeight>
       <harvestYield>0</harvestYield>
-      <mustBeWildToSow>true</mustBeWildToSow>
-      <sowWork>400</sowWork>
-      <!--<harvestTag>Standard</harvestTag>
-      <harvestYield>30</harvestYield>
-			<harvestedThingDef>ET_Glowsap</harvestedThingDef>
-			<harvestFailable>false</harvestFailable>
-			<harvestAfterGrowth>0.05</harvestAfterGrowth>
-      <harvestMinGrowth>0.9</harvestMinGrowth>-->
       <neverBlightable>true</neverBlightable>
       <treeCategory>Super</treeCategory>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
-      <!--<sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
-      </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
-      <showGrowthInInspectPane>true</showGrowthInInspectPane>
-      <minSpacingBetweenSamePlant>47.9</minSpacingBetweenSamePlant>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
       <blockAdjacentSow>true</blockAdjacentSow>
       <warnIfMarkedForCut>true</warnIfMarkedForCut>
       <burnedThingDef IsNull="True" />
@@ -190,14 +245,13 @@ Growing time: 4 full days (Primwood: 2)</description>
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+        <ticksPerHeal>2000</ticksPerHeal>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>ET_BiosynthVat</transformedThing>
-        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>
-  </ThingDef>
+  </ThingDef>-->
 </Defs>

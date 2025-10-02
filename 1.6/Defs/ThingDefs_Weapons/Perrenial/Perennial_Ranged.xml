@@ -3,7 +3,7 @@
 
 
 
-<!--Periwood Rifle-->
+	<!--Periwood Rifle-->
 	<ThingDef ParentName="BasePeriwoodTerraweapon">
 		<defName>ET_PeriwoodRifle</defName>		<!--Counterpart: Minigun-->
 		<label>Periwood PSR</label>
@@ -24,17 +24,40 @@
 		</weaponClasses>
 		<relicChance>0</relicChance>
 		<statBases>
-			<MaxHitPoints>45</MaxHitPoints> <!--- mid/long range is increased by 0.15, touch/short decreased by 0.15-->
+			<MaxHitPoints>45</MaxHitPoints>			<!--- mid/long range is increased by 0.15, touch/short decreased by 0.15-->
 			<AccuracyTouch>0.15</AccuracyTouch>
 			<AccuracyShort>0.15</AccuracyShort>
 			<AccuracyMedium>0.40</AccuracyMedium>
 			<AccuracyLong>0.32</AccuracyLong>
-			<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown> <!--half of the counterpart-->
+			<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>			<!--half of the counterpart-->
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.6</Mass>
 			<Flammability>3</Flammability>
-			<WorkToMake>12000</WorkToMake>
+			<WorkToMake>15000</WorkToMake>
 		</statBases>
+		<!--Crafting-->
+		<costList>
+			<ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+			<ET_Brightsap>2</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_Terraforge</li>
+			</recipeUsers>
+			<workAmount>15000</workAmount>
+			<skillRequirements>
+				<Plants>6</Plants>
+				<Artistic>3</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodCarving</li>
+			</researchPrerequisite>
+		</recipeMaker>
+	<!--End of crafting-->
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
 		<equippedAngleOffset>50</equippedAngleOffset>
@@ -42,11 +65,11 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
-				<warmupTime>2.1</warmupTime> <!--0.4 faster than it's counterpart-->
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile>				<!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>2.1</warmupTime>				<!--0.4 faster than it's counterpart-->
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-				<range>25.9</range> <!--five less than it's counterpart-->
+				<range>25.9</range>				<!--five less than it's counterpart-->
 				<soundCast>ET_Sound_Needle1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
@@ -82,13 +105,13 @@
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
-				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PeriwoodRifleGrowthPod</plantDefToSpawn>
-      	</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodRifleGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
 Renewable | Unable to be evolved or infused</inspectString>
-      </li>
+			</li>
 		</comps>
 	</ThingDef>
 
@@ -117,12 +140,35 @@ Renewable | Unable to be evolved or infused</inspectString>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.20</AccuracyMedium>
 			<AccuracyLong>0.15</AccuracyLong>
-			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown> <!--half of the counterpart, rounded down-->
+			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>			<!--half of the counterpart, rounded down-->
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.2</Mass>
 			<Flammability>1</Flammability>
-			<WorkToMake>12000</WorkToMake>
+			<WorkToMake>10000</WorkToMake>
 		</statBases>
+<!--Crafting-->
+		<costList>
+			<ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+			<ET_Brightsap>1</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_Terraforge</li>
+			</recipeUsers>
+			<workAmount>10000</workAmount>
+			<skillRequirements>
+				<Plants>4</Plants>
+				<Artistic>2</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodCarving</li>
+			</researchPrerequisite>
+		</recipeMaker>
+	<!--End of crafting-->
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
 		<equippedAngleOffset>50</equippedAngleOffset>
@@ -130,11 +176,11 @@ Renewable | Unable to be evolved or infused</inspectString>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
-				<warmupTime>2.1</warmupTime> <!--0.4 faster than it's counterpart-->
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile>				<!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>2.1</warmupTime>				<!--0.4 faster than it's counterpart-->
 				<burstShotCount>7</burstShotCount>
 				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
-				<range>17.9</range> <!--five less than it's counterpart-->
+				<range>17.9</range>				<!--five less than it's counterpart-->
 				<soundCast>ET_Sound_Needle1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
@@ -169,17 +215,17 @@ Renewable | Unable to be evolved or infused</inspectString>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
-				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PeriwoodSMGGrowthPod</plantDefToSpawn>
-      	</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodSMGGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
 Renewable | Unable to be evolved or infused</inspectString>
-      </li>
+			</li>
 		</comps>
 	</ThingDef>
 
-<!--Periwood Tricaster-->
+	<!--Periwood Tricaster-->
 
 	<ThingDef ParentName="BaseWildTerraweapon">
 		<defName>ET_PeriwoodTricaster</defName>
@@ -268,17 +314,17 @@ The Tricaster features the following bonuses and penalties:
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
-				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PeriwoodTricasterGrowthPod</plantDefToSpawn>
-      	</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Stage III&lt;/color&gt;
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodTricasterGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Stage III&lt;/color&gt;
 Upgradable | Renewable | ??? | ???</inspectString>
-      </li>
+			</li>
 		</comps>
 	</ThingDef>
 
-<!--==========-->
+	<!--==========-->
 
 	<ThingDef ParentName="BasePeriwoodTerraweapon">
 		<defName>ET_PeriwoodCannon</defName>		<!--Counterpart: Grenade Launcher-->
@@ -306,12 +352,35 @@ Upgradable | Renewable | ??? | ???</inspectString>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.20</AccuracyMedium>
 			<AccuracyLong>0.15</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown> <!--half of the counterpart, rounded down-->
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>			<!--half of the counterpart, rounded down-->
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>3.2</Mass>
 			<Flammability>1</Flammability>
-			<WorkToMake>12000</WorkToMake>
+			<WorkToMake>20000</WorkToMake>
 		</statBases>
+<!--Crafting-->
+		<costList>
+			<ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+			<ET_Brightsap>4</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_Terraforge</li>
+			</recipeUsers>
+			<workAmount>20000</workAmount>
+			<skillRequirements>
+				<Plants>8</Plants>
+				<Artistic>4</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodCarving</li>
+			</researchPrerequisite>
+		</recipeMaker>
+	<!--End of crafting-->
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
 		<equippedAngleOffset>50</equippedAngleOffset>
@@ -319,16 +388,16 @@ Upgradable | Renewable | ??? | ???</inspectString>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_PeriwoodCannon</defaultProjectile> <!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
-				<warmupTime>3.1</warmupTime> <!--0.4 faster than it's counterpart-->
+				<defaultProjectile>Bullet_PeriwoodCannon</defaultProjectile>				<!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>3.1</warmupTime>				<!--0.4 faster than it's counterpart-->
 				<burstShotCount>1</burstShotCount>
-				<range>15.9</range> <!--eight less than it's counterpart-->
+				<range>15.9</range>				<!--eight less than it's counterpart-->
 				<forcedMissRadius>0.9</forcedMissRadius>
 				<soundCast>ET_Sound_Needle1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
-			<targetParams>
-				<canTargetLocations>true</canTargetLocations>
-			</targetParams>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
 			</li>
 		</verbs>
 		<tools>
@@ -361,13 +430,13 @@ Upgradable | Renewable | ??? | ???</inspectString>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
-				<li Class="CompProperties_Plantable">
-        	<plantDefToSpawn>ET_PeriwoodCannonGrowthPod</plantDefToSpawn>
-      	</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodCannonGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
 Renewable | Unable to be evolved or infused</inspectString>
-      </li>
+			</li>
 		</comps>
 	</ThingDef>
 </Defs>

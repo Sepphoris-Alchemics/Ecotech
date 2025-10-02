@@ -7,9 +7,9 @@
     <defName>ET_PeriwoodTree</defName>
     <label>periheart tree</label>
     <description>A tree that is quite important to Terratech tribes, almost as important as many conduit trees. Periheart trees were carefully designed to be a staple plant of any Terratech tribe providing effective weaponry to it's tribe, while also requiring minimal effort in return.
-\nPeriheart Trees grow relatively fast and last a very long time, and once fully grown they produce various pods that create perwidood weapons. Specific periwood weapons can be cxreated, but this requires the cutting of a tree - which those in tune with nature will not like.
-All weapons come from this periwood heart, requiring no other ingredients. However, the carving process is very delicate; if the carving is paused, the heart with VERY quickly expire.
-\n\nLike most Terratech trees, they require ample growing space from others of their kind. Periheart trees are grown via seeds.</description>
+\nPeriheart Trees grow relatively fast (compared to a normal tree), last a very long time, and produces pods that will eventually grow a periwood weapon. However, the tree can also be felled to access the heart inside, which can be used to carve a desired periwood weapon - though those attuned with nature will not appreciate this.
+All weapons come from this periwood heart, requiring no other ingredients. However, the carving process is very delicate; if the carving is paused, progress will be lost and the heart with VERY quickly expire.
+\n\n Like most terratech trees, periheart trees are grown via seed.</description>
     <graphicData>
       <graphicClass>Graphic_Random</graphicClass>
       <texPath>Things/Plant/PeriwoodTree</texPath>
@@ -29,14 +29,14 @@ All weapons come from this periwood heart, requiring no other ingredients. Howev
     <neverMultiSelect>false</neverMultiSelect>
     <canScatterOver>false</canScatterOver>
     <killedLeavings>
-      <ET_Tier2WeaponHeart>1</ET_Tier2WeaponHeart>
+      <ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
     </killedLeavings>
     <plant>
       <pollution>Any</pollution>
       <growDays>5</growDays>
       <visualSizeRange>1.5~2.1</visualSizeRange>
       <sowMinSkill>8</sowMinSkill>
-      <sowTags Inherit="False"/>
+      <sowTags Inherit="False" />
       <lifespanDaysPerGrowDays>15</lifespanDaysPerGrowDays>
       <fertilityMin>0.4</fertilityMin>
       <fertilitySensitivity>0.6</fertilitySensitivity>
@@ -50,7 +50,7 @@ All weapons come from this periwood heart, requiring no other ingredients. Howev
       <sowResearchPrerequisites Inherit="False" />
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>false</showGrowthInInspectPane>
-      <minSpacingBetweenSamePlant>34.9</minSpacingBetweenSamePlant>
+      <minSpacingBetweenSamePlant>24.9</minSpacingBetweenSamePlant>
       <harvestWork>1600</harvestWork>
       <choppedThingDef IsNull="True" />
       <smashedThingDef IsNull="True" />

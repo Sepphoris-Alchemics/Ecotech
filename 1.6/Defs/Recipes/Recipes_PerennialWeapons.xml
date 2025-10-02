@@ -11,7 +11,7 @@
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>10000</workAmount>
-    <unfinishedThingDef>ET_UnfinishedTier2Heart</unfinishedThingDef>
+    <unfinishedThingDef IsNull="True" />
     <ingredients>
       <li>
         <filter>
@@ -28,7 +28,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <ET_RandomTier2Weapon>1</ET_RandomTier2Weapon>
+      <ET_RandomTierTwoWeapon>1</ET_RandomTierTwoWeapon>
     </products>
 	<researchPrerequisite>ET_PeriwoodSeeds</researchPrerequisite>
 		<skillRequirements>

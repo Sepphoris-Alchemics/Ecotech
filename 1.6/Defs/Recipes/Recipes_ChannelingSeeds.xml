@@ -23,7 +23,7 @@
     <displayPriority>5</displayPriority>
   </RecipeDef>
 
-  <RecipeDef>
+  <!--<RecipeDef>
     <defName>ET_PeriwoodTreeSeedRecipe</defName>
     <label>shape perigrove tree seed</label>
     <description>Shape a seed that will quickly grow into perigrove tree. Perigrove trees slowly grow pods that produce Periwood weaponry.</description>
@@ -43,7 +43,7 @@
       <ET_Seed_PeriwoodTree>1</ET_Seed_PeriwoodTree>
     </products>
     <displayPriority>4</displayPriority>
-  </RecipeDef>
+  </RecipeDef>-->
 
   <RecipeDef>
     <defName>ET_BuildingTreeSeedRecipe</defName>
