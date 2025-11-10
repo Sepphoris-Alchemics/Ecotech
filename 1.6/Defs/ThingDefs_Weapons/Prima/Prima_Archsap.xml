@@ -10,11 +10,11 @@
 <!--=====Prima Carbine=====-->
 
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
-		<defName>ET_PrimaCarbineEndosap</defName>
-		<label>prima endocarbine</label>
-		<description>An infused variant of the Prima Carbine. It's baseline sap has been replaced with endosap, creating a more durable epidermis, and decreasing flammability.</description>
+		<defName>ET_PrimaCarbineArchsap</defName>
+		<label>prima archobine</label>
+		<description>An infused variant of the Prima Carbine. It's baseline sap has been replaced with archsap, which is capable of self-sustainment, and thus grants it an unlimited lifespan.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Endosap/PrimaCarbineUpgraded_ES</texPath>
+			<texPath>Things/WeaponPrima/Archsap/PrimaCarbineUpgraded_AS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -24,7 +24,7 @@
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>55</MaxHitPoints> <!-- +20 health-->
+      <MaxHitPoints>55</MaxHitPoints> <!--50% of 35 = 17.5; rounds to nearest 5th, which is 20; 35+20=55-->
 			<AccuracyTouch>0.70</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.70</AccuracyMedium>
@@ -32,7 +32,7 @@
 			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1.6</Mass>
-			<Flammability>0.75</Flammability> <!--25% of 3-->
+			<Flammability>1.5</Flammability> <!--50% of 3-->
       <WorkToMake>12000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -85,17 +85,13 @@
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
 			<li Class="CompProperties_InspectString">
-      	<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
-+30 health | +9 lifespan days | +2.5 hp/day (unequipped)
-Genome: Prima</inspectString>
-      </li>
-			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
-				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
-					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
-        </li>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#D5DA3A&gt;Infused with Archsap&lt;/color&gt;
+&lt;color=#D5DA3A&gt;Unlimited Lifespan&lt;/color&gt; | &lt;color=#D5DA3A&gt;+50% health&lt;/color&gt;</inspectString>
+			</li>
 		</comps>
 		<modExtensions>
 			<li Class="VEF.Weapons.MoteProperties">
@@ -114,13 +110,13 @@ Genome: Prima</inspectString>
 
 <!--=====Prima Twincaster=====-->
 
-	<ThingDef ParentName="BaseEndosapTerraweapon">
-		<defName>ET_PrimaTwincasterEndosap</defName>
-		<label>Twincaster</label>
-		<description>The second-generation form of the Prima Stakecaster, infused with the Endosap. The presence of the sap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.
+	<ThingDef ParentName="UpgradedArchsapTerraweapon">
+		<defName>ET_PrimaTwincasterArchsap</defName>
+		<label>Archocaster</label>
+		<description>The second-generation form of the Prima Stakecaster, infused with Archosap. The presence of the sap has enabled the stakecaster to create self-rejuvinating sap, eliminating it's limited lifespan.
 \nUnfortunately the sap has also neutralized the Twincaster's growth potential, preventing it from being evolved further.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Endosap/PrimaCrossbowUpgraded_ES</texPath>
+			<texPath>Things/WeaponPrima/Archsap/PrimaCrossbowUpgraded_AS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -143,7 +139,7 @@ Genome: Prima</inspectString>
 			<RangedWeapon_Cooldown>1.125</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>2.8</Mass>
-			<Flammability>0.5</Flammability>
+			<Flammability>1.5</Flammability>
 			<WorkToMake>4000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -183,16 +179,13 @@ Genome: Prima</inspectString>
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
 			<li Class="CompProperties_InspectString">
-      	<inspectString>Permanence Genome | Infused
-+30 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
-      </li>
-			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
-				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
-					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
-        </li>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#D5DA3A&gt;Infused with Archsap&lt;/color&gt;
+&lt;color=#D5DA3A&gt;Unlimited Lifespan&lt;/color&gt; | &lt;color=#D5DA3A&gt;+50% health&lt;/color&gt;</inspectString>
+			</li>
 		</comps>
 	</ThingDef>
 

@@ -20,10 +20,12 @@
   <ThingDef ParentName="TreeBase">
     <defName>ET_RecycleTreeTierOne</defName>
     <label>Primwood Reclaimer Tree</label>
-    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. The roots of a reclaimer tree 'captures' any nearby items within a small radius, breaking them down into natural, usable materials that may be useful to Terratech colonies.
-This particular tree is capable of breaking down basic industrial items. As this is only the first generation tree, the amount of returned items is rather low, and it is incapable of breaking down steel. Still, it gives a use for any manufactured guns or mechanoid remains that may pop up. 
+    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Underground vines of a Reclaimer tree 'seek' out applicable items within a small radius, which it will then shortly break down into usable items, or even saps.
+This particular tree is only the first generation of the Reclaimer Trees, and can only break down basic industrial items. The applicable items is restricted to items that the local EcoTech tribes have commonly came across, and it is incapable of breaking down steel. Still, it gives a use for any manufactured guns or mechanoid remains that may pop up. 
 
-The process always breaks materials down to their most fundamental components, resulting in a 25-30% yield. Further generations of this tree will be able to process more complex items, and output more useful resources.</description>
+The process always breaks materials down to their most fundamental components, resulting in a 25-30% yield. Further generations of this tree will be able to process more complex items, may output more useful resources, and can even process entire structures.
+
+(Note to modders: items that can be processed can easily be patched in, and I am 100% open to adding them in myself. If you'd like to make a request, please feel free to!)</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Plant/ConduitTrees/PrimwoodReclaimerTree</texPath>
@@ -80,7 +82,7 @@ The process always breaks materials down to their most fundamental components, r
       <li Class="CompProperties_PlantPreventCutting"/>
       <li Class="CVNPlantFunctions.CompProperties_EaterExchanger">
         <interval>30000</interval>
-        <radius>11</radius>
+        <radius>5</radius>
         <isAffectBuilding>false</isAffectBuilding>
         <isAffectItem>true</isAffectItem>
         <exchangeOutputMethod>Fixed</exchangeOutputMethod>
@@ -619,7 +621,7 @@ The process always breaks materials down to their most fundamental components, r
         <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
     </comps>
-    <specialDisplayRadius>11</specialDisplayRadius>
+    <specialDisplayRadius>5</specialDisplayRadius>
   </ThingDef>
 
 </Defs>

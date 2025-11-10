@@ -36,6 +36,7 @@ Tier 4 surge seeds: 20
     <pathCost>14</pathCost>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
       <completelyIgnoreFertility>true</completelyIgnoreFertility>
       <showInFrozenWater>true</showInFrozenWater>
       <growMinGlow>0</growMinGlow>

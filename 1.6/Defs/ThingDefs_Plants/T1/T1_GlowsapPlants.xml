@@ -39,13 +39,13 @@ The glowsap bloom can be harvested relatively fast, but it's harvesting yield is
         <li>Decorative</li>
         <li>ET_GlowsapCompatible</li>
       </sowTags>
-      <sowMinSkill>2</sowMinSkill>
+      <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
         <li>ET_SapBasics</li>
       </sowResearchPrerequisites>
-      <blockAdjacentSow>true</blockAdjacentSow>
+      <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>
-      <growDays>4</growDays>
+      <growDays>8</growDays>
       <dieIfLeafless>false</dieIfLeafless>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <visualSizeRange>0.5~1</visualSizeRange>
@@ -103,13 +103,13 @@ Like most other blooms, it can quickly produce sap, but provides a very small yi
         <li>Decorative</li>
         <li>ET_GlowsapCompatible</li>
       </sowTags>
-      <sowMinSkill>2</sowMinSkill>
+      <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
         <li>ET_SapBasics</li>
       </sowResearchPrerequisites>
-      <blockAdjacentSow>true</blockAdjacentSow>
+      <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>
-      <growDays>4</growDays>
+      <growDays>8</growDays>
       <dieIfLeafless>false</dieIfLeafless>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <visualSizeRange>0.3~0.8</visualSizeRange>

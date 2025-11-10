@@ -32,12 +32,10 @@ Tier 4 surge seeds: 20
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
       <growDays>1.5</growDays>
       <immatureGraphicPath>Things/Plant/TerrathystCrucible_Immature</immatureGraphicPath>
-      <sowTags>
-        <li>Ground</li>
-        <li>ET_SapTerrainTierOne</li>
-      </sowTags>
+      <sowTags Inherit='False' />
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
@@ -66,12 +64,10 @@ Tier 4 surge seeds: 20
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
       <growDays>1.5</growDays>
       <immatureGraphicPath>Things/Plant/TerrathystCrucible_Immature</immatureGraphicPath>
-      <sowTags>
-        <li>Ground</li>
-        <li>ET_SapTerrainTierOne</li>
-      </sowTags>
+      <sowTags Inherit='False' />
     </plant>
     <comps>
       <li Class="CompProperties_Glower">

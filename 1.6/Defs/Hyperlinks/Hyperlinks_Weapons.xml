@@ -75,20 +75,22 @@ x30 SHOCKSAP for the weapon to reach it's full potential after creation (if desi
 			</li>
 		</tools>
 		<tickerType>Normal</tickerType>
-		<comps> <!--to-do: add ammo mechanic, make sure ammunition is generous-->
+		<comps>			<!--to-do: add ammo mechanic, make sure ammunition is generous-->
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>48000</ticksPerHeal> <!--To-do: set to 1HP per day-->
+				<ticksPerHeal>48000</ticksPerHeal>				<!--To-do: set to 1HP per day-->
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
-				<lifespanTicks>960</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
-    <li Class="CompProperties_InspectString">
-      <inspectString>This is a descriptor weapon.
+			<li Class="CompProperties_InspectString">
+				<inspectString>This is a descriptor weapon.
 You shouldn't have this!</inspectString>
-      </li>
+			</li>
 		</comps>
 		<tradeability>None</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
 	</ThingDef>
 </Defs>

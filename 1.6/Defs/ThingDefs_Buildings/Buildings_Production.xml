@@ -96,6 +96,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
       <li>ET_BuildingTreeSeedRecipe</li>
       <li>ET_SapTreeSeedRecipe</li>
       <li>ET_SentinelTreeSeedRecipe</li>
+      <li>ET_RecycleTreeSeedRecipe</li>
       <li>ET_SapFilterSeedRecipe</li>
       <li>ET_TerraforgeSeedRecipe</li>
       <li>ET_PrimaBrightsapLampSeedRecipe</li>

@@ -6,6 +6,55 @@
 	75% lower flammability
 	Mass increase of .5-->
 
+	<!--=====Archsap=====-->
+
+	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+		<defName>ET_PrimaShotgunArchsap</defName>
+		<label>prima archoburster</label>
+		<description>The matured form of the Prima Spreadshot, infused with archsap. The presence of archsap has enabled the sap to constantly rejuvinate the weapon, granting it an unlimited lifespan.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaShotgunUpgraded_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Shotgun</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedUpgraded</li>
+			<li>ET_PlantWeaponArchsap</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<Mass>1.5</Mass>
+			<Flammability>2</Flammability>
+		</statBases>
+		<verbs Inherit="False">
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<range>15.9</range>				<!--1 higher range than it's dormant form-->
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#D5DA3A&gt;Infused with Archsap&lt;/color&gt;
+&lt;color=#D5DA3A&gt;Unlimited Lifespan&lt;/color&gt; | &lt;color=#D5DA3A&gt;+50% health&lt;/color&gt;</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
 	<!--=====Endosap=====-->
 
 	<ThingDef ParentName="ET_PrimaShotgunSapBase">

@@ -152,6 +152,8 @@ Multiple Wildbark Trees can exist together, but they must be fully grown before 
       <texPath>Things/Plant/ConduitTrees/ElderwoodWildbarkTree</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <drawSize>(3,3)</drawSize>
+      <drawOffset>(0,0,-0.1)</drawOffset>
+      <drawRotated>false</drawRotated>
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
       </shadowData>

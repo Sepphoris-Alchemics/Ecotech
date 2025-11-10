@@ -69,6 +69,9 @@ x10 DAYS for the armor to fully form.
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
         </li>
 		</comps>
+		<tradeability>None</tradeability>
+<generateCommonality>0</generateCommonality>
+<generateAllowChance>0</generateAllowChance>
 	</ThingDef>
 
 	<ThingDef ParentName="PlantApparelBase">
@@ -131,5 +134,8 @@ x5 DAYS for the helmet to fully form.
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
         </li>
 		</comps>
+		<tradeability>None</tradeability>
+<generateCommonality>0</generateCommonality>
+<generateAllowChance>0</generateAllowChance>
 	</ThingDef>
 </Defs>

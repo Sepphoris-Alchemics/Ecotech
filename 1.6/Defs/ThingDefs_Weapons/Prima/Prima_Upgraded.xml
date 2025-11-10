@@ -52,8 +52,8 @@
 			<AccuracyLong>0.20</AccuracyLong>
 			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.2</Mass>
-			<Flammability>2</Flammability>
+			<Mass>1.4</Mass>
+			<Flammability>4</Flammability>
       <WorkToMake>4000</WorkToMake>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
@@ -97,7 +97,7 @@
           <lifespanTicks>945000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 	</ThingDef>

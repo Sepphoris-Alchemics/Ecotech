@@ -26,8 +26,14 @@
   <ThingDef ParentName="ET_SapFilter_Base">
     <defName>ET_GlowsapFilter</defName>
     <label>Sap Transposer</label>
-    <description>A deeply rooted basin that, when filled with glowsap, will slowly filter and absorb most of the elements and nutrients within. This process destroys the given glowsap, but the preserved contents produce a powerful, highly valuable sap. These new saps can then either be used, or sold.
-The outcome will always be one vial of refined sap, but which one it is will be entirely random. It's not an efficient use of glowsap, but is useful if glowsap reserves are plentiful.</description>
+    <description>A deeply rooted basin that, when filled with glowsap, will slowly filter and absorb most of the elements and nutrients within. This process destroys the given glowsap, but the result is a sap that can enhance a weapon. These new saps can then either be used, or sold.
+The outcome will always be one jar of refined sap, but which one it is will be entirely random. It's not an efficient use of glowsap, but is useful if glowsap reserves are plentiful.</description>
+<descriptionHyperlinks>
+      <ThingDef>ET_Archsap</ThingDef>
+      <ThingDef>ET_Brightsap</ThingDef>
+      <ThingDef>ET_Endosap</ThingDef>
+      <ThingDef>ET_Hypersap</ThingDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Building/Production/Transposer/Transposer</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -54,6 +60,9 @@ The outcome will always be one vial of refined sap, but which one it is will be 
       <WoodLog>30</WoodLog>
     </costList>-->
     <comps>
+    <li Class="CompProperties_InspectString">
+				<inspectString>Check description for potential outcomes</inspectString>
+			</li>
       <li Class="Ecotech.ThingCompProperties_ThingConverter">
         <compClass>Ecotech.ThingComp_ThingConverter</compClass>
         <!-- when a pawn carries items to the converter / takes them out, this is how long they stand in front of the building-->
