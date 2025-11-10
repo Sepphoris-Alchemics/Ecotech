@@ -61,7 +61,6 @@
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>ET_BriarLargeTurret</transformedThing>
-        <isTransformedThingRotatable>true</isTransformedThingRotatable>
       </li>
     <li Class="CompProperties_InspectString">
       <inspectString>Needs a 3x3 space to fully grow</inspectString>

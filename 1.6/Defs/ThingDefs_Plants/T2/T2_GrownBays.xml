@@ -66,7 +66,6 @@ These bays can be rotated once planted and before they fully mature. However, th
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>ET_BrightsapBay</transformedThing>
-        <isTransformedThingRotatable>false</isTransformedThingRotatable>
         <transformedPositionOffset>(0, 0)</transformedPositionOffset>
       </li>
       <li Class="CompProperties_Glower">
