@@ -9,11 +9,9 @@ namespace Ecotech
         private ThingDef transformedThing;
         private ThingDef transformedThingStuff;
         private bool randomTransformedThingStuff = false;
-        private bool isTransformedThingRotatable = false;
         private IntVec2 transformedPositionOffset = IntVec2.Zero;
 
         public ThingDef TransformedThingDef => transformedThing;
-        public bool IsTransformedThingRotatable => isTransformedThingRotatable;
         public IntVec3 TransformedPositionOffset => transformedPositionOffset.ToIntVec3;
 
         public Thing MakeThing()
