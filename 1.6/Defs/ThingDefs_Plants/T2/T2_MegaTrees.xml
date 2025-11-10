@@ -123,7 +123,6 @@ Multiple Wildbark Trees can exist together, but extensive spacing is required be
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
         <transformedThing>ET_WildbarkTreeTierTwo_Mature</transformedThing>
-        <isTransformedThingRotatable>false</isTransformedThingRotatable>
         <transformedPositionOffset>(0, 1)</transformedPositionOffset>
       </li>
       <li Class="CompProperties_Glower">
@@ -153,13 +152,14 @@ Multiple Wildbark Trees can exist together, but they must be fully grown before 
       <graphicClass>Graphic_Random</graphicClass>
       <drawSize>(3,3)</drawSize>
       <drawOffset>(0,0,-0.1)</drawOffset>
-      <drawRotated>false</drawRotated>
+      <!--<drawRotated>false</drawRotated>-->
       <shadowData>
         <volume>(0.21, 0.6, 0.21)</volume>
       </shadowData>
     </graphicData>
     <size>3,3</size>
     <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable> <!--this determines if the rotation gizmo lets the immature variant rotate it or not; if set to false, the rotation arrows won't appear-->
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
       <ThingDef>ET_TierOnePlating</ThingDef>
