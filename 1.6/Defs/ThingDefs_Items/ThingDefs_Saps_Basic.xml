@@ -23,7 +23,8 @@ The effects these apply to weapons are generally just stat changes, and are gene
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Glowsap</defName>
     <label>Glowsap</label>
-    <description>A jar of harvested glowsap. Used as a supplement or nutrition source for Ecotech plants. Unfortunately, it cannot affect baseline plants, such crops and most trees.</description>
+    <description>A jar of harvested glowsap. Used as a supplement or nutrition source for Ecotech plants. It's primary use is sustaining structures, growing certain terraplants, and will evolve dormant terraweapons into their unmodified, evolved forms.
+    It cannot affect non-ecotech plants, such crops as and most trees.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Glowsap</texPath>

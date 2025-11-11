@@ -83,6 +83,7 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
       <ShootingAccuracyTurret>0.8</ShootingAccuracyTurret>
     </statBases>
     <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
     <comps Inherit="False">
       <li Class="CompProperties_Refuelable">
         <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>

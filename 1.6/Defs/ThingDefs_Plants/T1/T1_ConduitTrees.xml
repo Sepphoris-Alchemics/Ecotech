@@ -313,7 +313,7 @@ The terrain this tree makes can support normal plants as well. However, this fea
     <defName>ET_SapTreeTierOne</defName>
     <label>Primwood Spectra Tree</label>
     <description>The Primwood Spectra tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra trees produce glowsap, alongside other specific saps that enhance weapons and certain structures.
-Each bounty will produce a large sum of glowsap, at minimum. The other, more specialized saps provided are generally hard to get ahold of, and can fetch a pretty penny from collectors.
+Each bounty will produce a large sum of glowsap, at minimum. The other, more specialized saps may or may not form during each harvest, and can fetch a pretty penny from collectors.
 
 The saps will appear at the base of the tree, every 8-10 in-game days.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
@@ -328,7 +328,10 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
     <canScatterOver>false</canScatterOver>
     <descriptionHyperlinks>
       <ThingDef>ET_Glowsap</ThingDef>
-      <!--<ThingDef>GlowsapTumor</ThingDef>-->
+      <ThingDef>ET_Brightsap</ThingDef>
+      <ThingDef>ET_Archsap</ThingDef>
+      <ThingDef>ET_Endosap</ThingDef>
+      <ThingDef>ET_Hypersap</ThingDef>
     </descriptionHyperlinks>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -439,6 +442,12 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
             <weight>0.3</weight>
             <things>
               <ET_Glowsap>300</ET_Glowsap>
+            </things>
+          </li>
+          <li>
+            <weight>0.1</weight>
+            <things>
+              <ET_Archsap>1</ET_Archsap>
             </things>
           </li>
         </potentialSpawnedThings>

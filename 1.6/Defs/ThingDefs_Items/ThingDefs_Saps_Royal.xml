@@ -17,8 +17,8 @@ The royal saps are
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Archsap</defName>
     <label>Archsap</label>
-    <description>A jar of archsap, originating from sources unknown. People and colonies skilled with Ecotech can use this to replace the mundane sap of immature Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
-\nArchsap requires a baseline weapon that has both sap and form at it's purest form; therefore, Archsap MUST be injected into unmodified matured weapons directly, making it's infusion method rather unique.
+    <description>A jar of archsap, originating from sources unknown. People and colonies skilled with Ecotech can use this to replace the mundane sap of certain Terraweapons, caused the weapon to gain special traits that will persist throughout it's lifetime.
+\nArchsap is considered a 'royal' sap, which is a sap so concentrated, it's toxic to weapons not fully grown. Therefore, it MUST be infused into an baseline matured weapon. These are weapons that have only been subjected to glowsap in a terravat.
 Careful care, usage, and weapon selection is highly advised, due to it's extreme rarity, value, and effect of making it's host weapon semi-immortal.
 \n\nNew traits:
 Infinite lifespan

@@ -236,7 +236,7 @@ Anima long range is brought down by 3
       <texPath>Things/Projectile/LauncherShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
-      <color>(100, 152, 100)</color>
+      <color>(232, 255, 165)</color>
       <drawSize>0.9</drawSize>
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
@@ -246,7 +246,7 @@ Anima long range is brought down by 3
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <stoppingPower>6</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -264,12 +264,12 @@ Anima long range is brought down by 3
     </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
-      <damageDef>ET_AcidDamage</damageDef>
+      <damageDef>ET_GlowsapExplosionDamage</damageDef>
       <damageAmountBase>1</damageAmountBase>
       <armorPenetrationBase>0.1</armorPenetrationBase>
-      <stoppingPower>6</stoppingPower>
+      <stoppingPower>8</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -292,7 +292,7 @@ Anima long range is brought down by 3
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <stoppingPower>6</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -315,7 +315,7 @@ Anima long range is brought down by 3
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <stoppingPower>6</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -338,7 +338,7 @@ Anima long range is brought down by 3
       <armorPenetrationBase>0.40</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -361,7 +361,7 @@ Anima long range is brought down by 3
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <stoppingPower>6</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -384,7 +384,7 @@ Anima long range is brought down by 3
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <stoppingPower>6</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>
@@ -407,7 +407,7 @@ Anima long range is brought down by 3
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <stoppingPower>6</stoppingPower>
       <explosionRadius>3.4</explosionRadius>
-      <postExplosionSpawnThingDef>ET_Filth_Acid</postExplosionSpawnThingDef>
+      <postExplosionSpawnThingDef>ET_Filth_Glowsap</postExplosionSpawnThingDef>
       <postExplosionSpawnChance>1</postExplosionSpawnChance>
       <speed>17</speed>
     </projectile>

@@ -2,23 +2,28 @@
 <Defs>
 
   <ThingDef ParentName="BaseFilth">
-    <defName>ET_Filth_Acid</defName>
-    <label>acid puddle</label>
-	<description>A puddle of acid</description>
+    <defName>ET_Filth_Glowsap</defName>
+    <label>glowsap puddle</label>
+    <description>A puddle of glowsap. Flammable.</description>
+    <useHitPoints>true</useHitPoints>
     <statBases>
-      <Beauty>-30</Beauty>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-10</Beauty>
       <Cleanliness>-15</Cleanliness>
+      <Flammability>2.0</Flammability>
     </statBases>
     <graphicData>
       <texPath>Things/Filth/Spatter</texPath>
-      <color>(100, 152, 100, 170)</color>
+      <color>(232, 225, 165, 170)</color>
     </graphicData>
-	<pathCost>30</pathCost>
+    <pathCost>30</pathCost>
     <filth>
       <rainWashes>true</rainWashes>
-      <cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+      <disappearsInDays>2~4</disappearsInDays>
+      <cleaningWorkToReduceThickness>45</cleaningWorkToReduceThickness>
       <canFilthAttach>true</canFilthAttach>
-	  <maxThickness>2</maxThickness>
+      <maxThickness>2</maxThickness>
+      <cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
     </filth>
   </ThingDef>
 
@@ -56,7 +61,7 @@
       <Beauty>-10</Beauty>
       <Cleanliness>-5</Cleanliness>
       <MaxHitPoints>60</MaxHitPoints>
-      <Flammability>1.0</Flammability>  
+      <Flammability>1.0</Flammability>
     </statBases>
     <graphicData>
       <texPath>Things/Filth/Filth_Briar</texPath>

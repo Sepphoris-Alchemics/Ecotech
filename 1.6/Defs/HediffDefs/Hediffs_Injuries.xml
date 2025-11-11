@@ -369,4 +369,81 @@
       </li>
     </stages>
   </HediffDef>
+
+<!--=====Muscle Disruption: Minor=====-->
+<!--TO-DO: Get back to this: this is a more advanced sap poisoning approach-->
+	<!--<HediffDef>
+		<defName>ET_SapPoisoning</defName>
+		<hediffClass>VEF.AnimalBehaviours.Hediff_AcidBuildup</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<label>sap poisoning</label>
+		<lethalSeverity>1</lethalSeverity>
+		<makesSickThought>true</makesSickThought>
+		<description>Splashes of exotic sap that wasn't meant for direct contact. It both irritates the skin, and is toxic to the body.</description>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>-4</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>minor</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>moderate, receiving burns</label>
+				<minSeverity>0.40</minSeverity>
+				<vomitMtbDays>5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>serious, receiving burns</label>
+				<minSeverity>0.60</minSeverity>
+				<vomitMtbDays>1</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.4</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="InjuryBase">
+		<defName>VEF_AcidBurn</defName>
+		<label>acid burn</label>
+		<labelNoun>an acid burn</labelNoun>
+		<description>An acid burn.</description>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>tended</labelTendedWellInner>
+				<labelSolidTendedWell>tended</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.30</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>acid burn scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.01875</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<canMerge>true</canMerge>
+			<destroyedLabel>Corroded</destroyedLabel>
+			<destroyedOutLabel>Corroded</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>-->
 </Defs>

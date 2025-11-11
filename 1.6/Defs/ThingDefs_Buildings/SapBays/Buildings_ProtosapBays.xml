@@ -57,6 +57,7 @@ Since this basin was specifically designed to channel brightsap (and by proxy, g
       </buildingTags>
     </building>
     <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Glower">
