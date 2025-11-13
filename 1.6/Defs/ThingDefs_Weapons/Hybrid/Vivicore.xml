@@ -12,7 +12,7 @@ Stage 4: grants new beam-like attack
 
 	<ThingDef ParentName="BaseWildTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ET_HybridRoyalRifleOne</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
-		<label>vivicore rifle</label>
+		<label>vivicore rifle (I)</label>
 		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
 \nThe damage potential of this weapon is relatively low, only on par with some prima weapons. It is best appreciated as a work of art, or a sign of status. It is comparable to a sword made of solid gold: quite valuable and technically functional, but vastly inferior to other swords for it's intended purpose.
 \n\nDue to it's hybrid nature, this weapon has both organic and lithoid traits. Specifically, this rifle will only react to specific saps - shocksap and starsap - and undergo dramatic alterations. It can also be rejuvinated with sunsap, though it requires a considerable amount more than other weapons.
@@ -107,7 +107,7 @@ Stage 4: grants new beam-like attack
 Royal Weapon | ??? | ??? | ???</inspectString>
       </li>
 		</comps>
-		<tradeability>Sellable</tradeability>
+		<tradeability>None</tradeability>
 		<tradeTags>
 			<li>ExoticMisc</li>
       <li>Artifact</li>
@@ -118,7 +118,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 
 	<ThingDef ParentName="BaseWildTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ET_HybridRoyalRifleTwo</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
-		<label>vivicore rifle</label>
+		<label>vivicore rifle (II)</label>
 		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
 \nThe damage potential of this weapon is relatively low, only on par with some prima weapons. It is best appreciated as a work of art, or a sign of status. It is comparable to a sword made of solid gold: quite valuable and technically functional, but vastly inferior to other swords for it's intended purpose.
 \n\nDue to it's hybrid nature, this weapon has both organic and lithoid traits. Specifically, this rifle will only react to specific saps - shocksap and starsap - and undergo dramatic alterations. It can also be rejuvinated with sunsap, though it requires a considerable amount more than other weapons.
@@ -213,7 +213,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 Royal Weapon | +20% social impact | ??? | ???</inspectString>
       </li>
 		</comps>
-		<tradeability>Sellable</tradeability>
+		<tradeability>None</tradeability>
 		<tradeTags>
 			<li>ExoticMisc</li>
       <li>Artifact</li>
@@ -222,7 +222,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 
 	<ThingDef ParentName="BaseWildTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ET_HybridRoyalRifleThree</defName>		<!--Counterpart: Prima AR, with penalties of minus 2 -->
-		<label>vivicore rifle</label>
+		<label>vivicore rifle (III)</label>
 		<description>The vivicore rifle is a weapon masterfully shaped from the rare and elusive vivicore tree, a special tree that grows a thick bark on the outside, and a vibrant, beautiful crystal beneath it. While the bark itself is quite durable, the crystal within is quite fragile, making it ill-suited for combat.
 \nThe damage potential of this weapon is relatively low, only on par with some prima weapons. It is best appreciated as a work of art, or a sign of status. It is comparable to a sword made of solid gold: quite valuable and technically functional, but vastly inferior to other swords for it's intended purpose.
 \n\nDue to it's hybrid nature, this weapon has both organic and lithoid traits. Specifically, this rifle will only react to specific saps - shocksap and starsap - and undergo dramatic alterations. It can also be rejuvinated with sunsap, though it requires a considerable amount more than other weapons.
@@ -317,7 +317,7 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
       </li>
 		</comps>
-		<tradeability>Sellable</tradeability>
+		<tradeability>None</tradeability>
 		<tradeTags>
 			<li>ExoticMisc</li>
       <li>Artifact</li>

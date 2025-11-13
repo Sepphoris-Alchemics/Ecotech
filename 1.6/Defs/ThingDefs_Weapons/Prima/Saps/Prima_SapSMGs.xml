@@ -20,7 +20,8 @@
 		</graphicData>
 		<soundInteract>Interact_SMG</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>ET_PlantWeapon</li>
+      <li>ET_PlantWeaponAdvanced</li>
+			<li>ET_PlantWeaponArchsap</li>
 		</weaponTags>
     <weaponClasses>
       <li>RangedLight</li>

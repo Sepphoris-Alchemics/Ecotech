@@ -170,7 +170,7 @@
             <li>Silver</li>
             <li>MedicineHerbal</li>
             <li>Jade</li>
-            <li>ET_SunDrop</li>
+            <!--<li>ET_SunDrop</li>-->
           </thingDefs>
         </filter>
       </fixedParams>

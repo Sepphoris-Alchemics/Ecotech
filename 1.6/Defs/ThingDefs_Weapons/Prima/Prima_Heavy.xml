@@ -244,105 +244,19 @@
         </li>
 		</comps>
 	</ThingDef>
+
+
 <!--====================
 SAP LAUNCHERS
 ====================-->
-
-
-	<!--Basic Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
-		<defName>ET_PrimaSapLauncher_Basic</defName>
-		<label>prima sap launcher</label>
-		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
-\n\nThis sap launcher fires it's natural, standard sap, which will slow targets while also causing irritation to exposed skin. Nearly any other sap is more ideal for combat.
-\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
-		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/ET_PrimaLauncherBasic</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.9</drawSize>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<weaponTags Inherit='False'>
-      <li>ET_PlantWeapon</li>
-		</weaponTags>
-    <weaponClasses>
-      <li>Ranged</li>
-			<li>RangedHeavy</li>
-    </weaponClasses>
-    <relicChance>0</relicChance>
-		<statBases>
-      <MaxHitPoints>40</MaxHitPoints> <!--20 shots-->
-			<RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
-			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.6</Mass>
-			<Flammability>3</Flammability>
-      <WorkToMake>12000</WorkToMake>
-		</statBases>
-		<equippedStatOffsets> <!--Base Sap allows increased planting and harvesting speed.-->
-      <PlantWorkSpeed>0.2</PlantWorkSpeed>
-	</equippedStatOffsets>
-		<techLevel>Neolithic</techLevel>
-		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>ET_SapShot_Base</defaultProjectile>
-        <warmupTime>4.375</warmupTime>
-        <forcedMissRadius>1.9</forcedMissRadius>
-        <range>15.9</range>
-        <minRange>2.4</minRange>
-        <soundCast>Shot_IncendiaryLauncher</soundCast>
-        <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-      </li>
-    </verbs>
-		<tools>
-			<li>
-				<label>grip</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tickerType>Normal</tickerType>
-		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>12000</ticksPerHeal> <!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
-      </li>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-          <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-        </li>
-		</comps>
-	</ThingDef>
-
 
 	<!--Glowsap Launcher-->
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Glowsap</defName>
 		<label>prima glowsap launcher</label>
-		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
-\n\nThis sap launcher fires glowsap, which will light up the immediate area for a few days. It will also slow targets and cause minor skin irritation. Nearly any other sap is more ideal for combat.
-\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. Glowsap itself is very comparable to a glue gun, causing explosions that cover anything nearby in sap that inhibit manipulation and movement.
+\n\nWhile the sap launcher is great for slkowing targets down, the most damage it does is based on the irritation it can cause skin.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown. Note that the very nature of a sap launcher allows it's sap to be infinitely swapped out at a Terravat.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Basic/ET_PrimaLauncherBasic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -427,9 +341,9 @@ SAP LAUNCHERS
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Brightsap</defName>
 		<label>prima brightsap launcher</label>
-		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
-\n\nThis sap launcher fires brightsap, which will light up a decent area for several days. It will also slow targets, cause minor skin irritation, and provide substantial bonuses when working with plants. Nearly any other sap is more ideal for combat.
-\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>A sap launcher that has had it's glowsap contents replaced with brightsap. The globs of concentrated brightsap create a bright flash when breaking, briefly causing visual impairment - and possible dazing - to anything in it's radius.
+\n\nThe sap itself also provides a high amount of glow, allowing it to serve as a method to light up areas for a few days. Like glowsap, brightsap is relatively simple sap, and will break off of skin pretty quickly. 
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown. Note that the very nature of a sap launcher allows it's sap to be infinitely swapped out at a Terravat.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Brightsap/PrimaLauncherUpgraded_BS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -515,9 +429,9 @@ SAP LAUNCHERS
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Endosap</defName>
 		<label>prima endosap launcher</label>
-		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
-\n\nThis sap launcher fires endosap, which will drastically slow anything it lands on, and anything that walks on it. quickly harden on anything it lands on. Very effective when pacifying specific targets or prisoners.
-\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>A sap launcher that has had it's glowsap contents replaced with endosap. The globs of concentrated endosap are very heavy, and the sap impacting anything nearby is akin to them getting hit by a mis-shapen rock.
+\n\nEndosap's weight makes it more likely to fall to the ground, but parts that stick to anything living end up being extremely burdening. However, it is still a relatively simple sap, and will eventually break away on it's own.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown. Note that the very nature of a sap launcher allows it's sap to be infinitely swapped out at a Terravat.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Endosap/PrimaLauncherUpgraded_ES</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -601,9 +515,9 @@ SAP LAUNCHERS
 	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Hypersap</defName>
 		<label>prima hypersap launcher</label>
-		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
-\n\nThis sap launcher fires hypersap, which will severely react with flesh and armor, burning and corroding it as if the sap were acid. Extremely effective in combat.
-\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<description>A sap launcher that has had it's glowsap contents replaced with hypersap. The globs of hypersap are quite acidic, causing burns that can get progressively worse.
+\n\nHypersap reacts severely with flesh and armor, burning and corroding it as if the sap were acid. In direct comparison to other sap launchers, it is quite effective in combat.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown. Note that the very nature of a sap launcher allows it's sap to be infinitely swapped out at a Terravat.</description>
 		<graphicData>
 			<texPath>Things/WeaponPrima/Hypersap/PrimaLauncherUpgraded_HS</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

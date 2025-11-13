@@ -137,7 +137,7 @@ Tier 4 surge seeds: 20
           <!--<li> Sap Launcher removed until all saps are sufficiently implemented.
             <weight>0.25</weight>
             <things>
-              <ET_PrimaSapLauncher_Basic>1</ET_PrimaSapLauncher_Basic>
+              <ET_PrimaSapLauncher_Glowsap>1</ET_PrimaSapLauncher_Glowsap>
             </things>
           </li>-->
           <li>

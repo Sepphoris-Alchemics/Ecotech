@@ -20,8 +20,7 @@
 		</graphicData>
 		<soundInteract>Interact_Revolver</soundInteract>
 		<weaponTags Inherit='False'>
-      <li>ET_PlantWeapon</li>
-			<li>ET_PrimaRangedUpgraded</li>
+			<li>ET_PlantWeaponAdvanced</li>
 			<li>ET_PlantWeaponArchsap</li>
 		</weaponTags>
     <weaponClasses>
@@ -79,10 +78,6 @@
 			<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-			</li>
-			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#D5DA3A&gt;Infused with Archsap&lt;/color&gt;
-&lt;color=#D5DA3A&gt;Unlimited Lifespan&lt;/color&gt; | &lt;color=#D5DA3A&gt;+50% health&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>

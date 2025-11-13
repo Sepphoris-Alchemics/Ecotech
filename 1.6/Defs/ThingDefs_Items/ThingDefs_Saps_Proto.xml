@@ -105,8 +105,8 @@ The Protosaps are:
           </li>
           <li>
             <fuelCount>1</fuelCount>
-            <inputThingDef>ET_PrimaSapLauncher_Basic</inputThingDef>
-            <outputThingDef>ET_PrimaSapLauncher_Basic</outputThingDef>
+            <inputThingDef>ET_PrimaSapLauncher_Glowsap</inputThingDef>
+            <outputThingDef>ET_PrimaSapLauncher_Glowsap</outputThingDef>
           </li>
           <li>
             <fuelCount>1</fuelCount>

@@ -9,7 +9,7 @@
 
 <!--=====Prima Carbine=====-->
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+	<ThingDef ParentName="UpgradedArchsapTerraweapon">
 		<defName>ET_PrimaCarbineArchsap</defName>
 		<label>prima archobine</label>
 		<description>An infused variant of the Prima Carbine. It's baseline sap has been replaced with archsap, which is capable of self-sustainment, and thus grants it an unlimited lifespan.</description>

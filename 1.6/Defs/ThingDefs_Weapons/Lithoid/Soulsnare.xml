@@ -21,7 +21,7 @@ Note that the initial ammo generation description was: \n\nDue to it's unique na
 Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. As mentioned before, they are upgrade over time, rather than having a wide variety.
 		-->
 
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
 		<defName>ET_SoulsnareRifleOne</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (I)</label>
 		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
@@ -103,7 +103,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 	</ThingDef>
 
 	<!--Tier 2: mental debuffs-->
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
 		<defName>ET_SoulsnareRifleTwo</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (II)</label>
 		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
@@ -201,7 +201,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 		<comps>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanTicks>1080000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
@@ -240,7 +240,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 	</ThingDef>
 
 	<!--Tier 3: muscle debuffs-->
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
 		<defName>ET_SoulsnareRifleThree</defName>		<!--Counterpart: Prima OLR-->
 		<label>soulsnare rifle (III)</label>
 		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
@@ -357,7 +357,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 		<comps>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanTicks>1200000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
@@ -407,13 +407,13 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 	</ThingDef>
 
 	<!--Tier 4: other increased stats-->
-	<ThingDef ParentName="BaseWildTerraweapon">
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
 		<defName>ET_SoulsnareRifleFour</defName>
 		<label>soulsnare prime</label>
 		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
 \n\nThe latest charge has greatly amplified all it's previous effects. Psychic disturbance is nearly as strong as a high drone, emotions are greatly disturbed, and interference with conciousness, speed, and manipulation can reach a much higher degree.
-\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
-\n\nThis is the final stage of the soulsnare rifle. Charging it will no longer evolve the weapon, but will rather replenish it's power.</description>
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed.
+\n\nThis is the final stage of the soulsnare rifle. Charging it will no longer evolve the weapon, but will rather replenish it's power. Sustaining it this way is significantly more efficient than evolving new ones to replace it.</description>
 		<graphicData>
 			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_c</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -525,7 +525,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 		<comps>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanTicks>1320000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
@@ -598,8 +598,8 @@ You will need to bring this weapon to a prismite crucible to regrow the crystals
 			<Flammability>0.5</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
 		</statBases>
-		<thingCategories>
-			<li>TerrasapsAll</li>
+		<thingCategories Inherit='false'>
+			<li>SoulsnareStages</li>
 		</thingCategories>
 		<comps>
 			<li Class="CompProperties_InspectString">

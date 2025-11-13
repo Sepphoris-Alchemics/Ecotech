@@ -172,7 +172,8 @@ Endosap: 70, 178, 83-->
 				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Dormant&lt;/color&gt; &lt;color=#dae691&gt;Accepts any sap transplant&lt;/color&gt;</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Dormant&lt;/color&gt;
+&lt;color=#dae691&gt;Accepts any sap transplant&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -195,7 +196,8 @@ Endosap: 70, 178, 83-->
 				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt; &lt;color=#e6784a&gt;Unable to be evolved or infused&lt;/color&gt;</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+&lt;color=#e6784a&gt;Unable to be evolved or infused&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -212,7 +214,8 @@ Endosap: 70, 178, 83-->
 				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Matured&lt;/color&gt; &lt;color=#e6784a&gt;Transplants impossible&lt;/color&gt;</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Matured&lt;/color&gt;
+&lt;color=#e6784a&gt;Transplants impossible&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -243,6 +246,9 @@ Endosap: 70, 178, 83-->
 			<MarketValue>40</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>PeriwoodTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<li>
 				<compClass>CompQuality</compClass>
@@ -258,13 +264,37 @@ Endosap: 70, 178, 83-->
 		</comps>
 	</ThingDef>
 
+<!--=====Briar=====-->
+
+	<ThingDef Name="BaseBriarTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+			<MarketValue>200</MarketValue>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>BriarTerraweapons</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Matured&lt;/color&gt;
+&lt;color=#e6784a&gt;Transplants impossible&lt;/color&gt;</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
 	<!--=====Wild=====-->
 
 	<ThingDef Name="BaseWildTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-			<MarketValue>40</MarketValue>
+			<MarketValue>600</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>AncientTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
@@ -277,15 +307,20 @@ Endosap: 70, 178, 83-->
 
 	<ThingDef Name="UpgradedArchsapTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-			<MarketValue>155</MarketValue>
+			<MarketValue>505</MarketValue> <!--Price changes depending on weapon-->
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+			<li>ET_ArchsapPrimaWeaponTag</li>
+		</tradeTags>
+		<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
-			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
-			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#D5DA3A&gt;Infused with Archsap&lt;/color&gt; &lt;color=#D5DA3A&gt;Unlimited Lifespan&lt;/color&gt; | &lt;color=#D5DA3A&gt;x2 health&lt;/color&gt;</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#D5DA3A&gt;Infused with Archsap&lt;/color&gt;
+&lt;color=#D5DA3A&gt;Unlimited Lifespan&lt;/color&gt; | &lt;color=#D5DA3A&gt;+50% health&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -295,13 +330,16 @@ Endosap: 70, 178, 83-->
 
 
 	<ThingDef Name="BaseDeepsapTerraweapon" Abstract="True" ParentName="BaseGun">
+	<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>Deepsap Genome | Immutable
-Lifespan renewable via Vitapod | +2.5 hp/day (unequipped)</inspectString>
+Lifespan renewable via Biosynth Vat | +2.5 hp/day (unequipped)</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -309,11 +347,14 @@ Lifespan renewable via Vitapod | +2.5 hp/day (unequipped)</inspectString>
 
 
 	<ThingDef Name="UpgradedDeepsapTerraweapon" Abstract="True" ParentName="BaseGun">
+	<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<!--No regeneration when matured-->
 			<li Class="CompProperties_InspectString">
 				<inspectString>Deepsap Genome | Matured
-Lifespan renewable via Vitapod</inspectString>
+Lifespan renewable via Biosynth Vat</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -327,6 +368,9 @@ Lifespan renewable via Vitapod</inspectString>
 			<MarketValue>85</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 18k = 3.75hp/day 24k ticks = 2.5hp/day -->
@@ -348,6 +392,9 @@ Lifespan renewable via Vitapod</inspectString>
 			<MarketValue>105</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<!--No healing over time-->
 			<!--InspectString will have variable health, and needs to be done locally-->
@@ -358,6 +405,9 @@ Lifespan renewable via Vitapod</inspectString>
 	<!--=====Toxsap=====-->
 
 	<ThingDef Name="UpgradedToxsapTerraweapon" Abstract="True" ParentName="BaseGun">
+	<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<!--No healing over time-->
 			<li Class="CompProperties_InspectString">
@@ -370,20 +420,28 @@ Lifespan renewable via Vitapod</inspectString>
 	<!--=====Hypersap=====-->
 
 	<ThingDef Name="UpgradedHypersapTerraweapon_Burst" Abstract="True" ParentName="BaseGun">
+	<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<!--No healing over time-->
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#9f73ff&gt;Infused with Hypersap&lt;/color&gt; &lt;color=#9f73ff&gt;Increased projectiles&lt;/color&gt; | &lt;color=#9f73ff&gt;Increased range&lt;/color&gt; | &lt;color=#9f73ff&gt;Faster fire rate&lt;/color&gt;</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#9f73ff&gt;Infused with Hypersap&lt;/color&gt;
+&lt;color=#9f73ff&gt;Increased projectiles&lt;/color&gt; | &lt;color=#9f73ff&gt;Increased range&lt;/color&gt; | &lt;color=#9f73ff&gt;Faster fire rate&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
 
 
 	<ThingDef Name="UpgradedHypersapTerraweapon_Single" Abstract="True" ParentName="BaseGun">
+	<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<!--No healing over time-->
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#9f73ff&gt;Infused with Hypersap&lt;/color&gt; &lt;color=#9f73ff&gt;Increased range&lt;/color&gt; | &lt;color=#9f73ff&gt;Faster fire rate&lt;/color&gt;</inspectString>
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#9f73ff&gt;Infused with Hypersap&lt;/color&gt;
+&lt;color=#9f73ff&gt;Increased range&lt;/color&gt; | &lt;color=#9f73ff&gt;Faster fire rate&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -393,6 +451,9 @@ Lifespan renewable via Vitapod</inspectString>
 
 
 	<ThingDef Name="BaseSunsapTerraweapon" Abstract="True" ParentName="BaseGun">
+	<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>3000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
@@ -407,6 +468,9 @@ Lifespan renewable via Vitapod</inspectString>
 
 
 	<ThingDef Name="UpgradedSunsapTerraweapon" Abstract="True" ParentName="BaseGun">
+	<thingCategories Inherit='false'>
+			<li>InfusedTerraweapons</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>3000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
@@ -417,7 +481,6 @@ Lifespan renewable via Vitapod</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
-
 
 
 	<!--==========UNIQUE/RELIC SAPS==========-->

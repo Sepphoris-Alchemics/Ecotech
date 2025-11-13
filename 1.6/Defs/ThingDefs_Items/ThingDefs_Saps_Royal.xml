@@ -30,12 +30,13 @@ Weapon HP increased by by 50%</description>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
+    <tradeability>Buyable</tradeability>
     <stackLimit>3</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>804</MarketValue>
+      <MarketValue>800</MarketValue>
       <Mass>0.05</Mass>
       <Flammability>1</Flammability>
       <DeteriorationRate>0.25</DeteriorationRate>

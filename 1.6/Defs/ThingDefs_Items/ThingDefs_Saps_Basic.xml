@@ -80,11 +80,6 @@ The effects these apply to weapons are generally just stat changes, and are gene
             <inputThingDef>ET_PrimaCarbine</inputThingDef>
             <outputThingDef>ET_PrimaCarbineUpgraded</outputThingDef>
           </li>
-          <li>
-            <fuelCount>30</fuelCount>
-            <inputThingDef>ET_PrimaSapLauncher_Basic</inputThingDef>
-            <outputThingDef>ET_PrimaSapLauncher_Glowsap</outputThingDef>
-          </li>
         </recipes>
       </li>
     </modExtensions>
@@ -171,6 +166,16 @@ Regenerates 2.5 HP/Day</description>
             <fuelCount>1</fuelCount>
             <inputThingDef>ET_PrimaShotgun</inputThingDef>
             <outputThingDef>ET_PrimaShotgunEndosap</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaSword</inputThingDef>
+            <outputThingDef>ET_PrimaSwordEndosap</outputThingDef>
+          </li>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaMace</inputThingDef>
+            <outputThingDef>ET_PrimaMaceEndosap</outputThingDef>
           </li>
         </recipes>
       </li>

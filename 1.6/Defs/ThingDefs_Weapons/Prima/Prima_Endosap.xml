@@ -196,4 +196,142 @@ Genome: Prima</inspectString>
 		</comps>
 	</ThingDef>
 
+<!--Prima Endosap Maul-->
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>ET_PrimaMaceEndosap</defName>
+		<label>prima endomaul</label>
+		<description>A prima maul infused with endosap. This sap replacement has created a more durable epidermis, and decreased flammability. The extra added weight of the sap has also increased the maul's damage output as a bonus.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaMaulBasic_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+    <thingCategories>
+      <li>InfusedTerraweapons</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaMeleeBasic</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>45</MaxHitPoints>
+			<Mass>1.6</Mass>
+			<Flammability>0.5</Flammability>
+      <WorkToMake>12000</WorkToMake>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>1.2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>24</power>
+				<cooldownTime>2.2</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Endosap
++50% health | 0.5 flammability | +4 damage to all attacks</inspectString>
+			</li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+		<tradeTags Inherit ='False'>
+      <li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>ET_PrimaSwordEndosap</defName>
+		<label>Prima endoblade</label>
+		<description>A prima crestblade infused with endosap. This sap replacement has created a more durable epidermis, and decreased flammability. The extra added weight of the sap has also increased the sword's damage output as a bonus.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaSwordBasic_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+    <thingCategories>
+      <li>InfusedTerraweapons</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaMeleeBasic</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>55</MaxHitPoints>
+			<Mass>1.2</Mass>
+			<Flammability>0.5</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>1.7</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>1.7</cooldownTime>
+			</li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.7</cooldownTime>
+      </li>
+		</tools>
+		<comps>
+		<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Endosap
++50% health | 0.5 flammability | +4 damage to all attacks</inspectString>
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+      </li>
+		</comps>
+		<tradeTags Inherit ='False'>
+      <li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
+	</ThingDef>
+
 </Defs>

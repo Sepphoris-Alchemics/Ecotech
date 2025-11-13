@@ -247,11 +247,11 @@ Tier 4 surge seeds: 20
   </ThingDef>
 
   <ThingDef ParentName="ET_PrimaWeaponPodBase">
-    <defName>ET_WeaponPod_AcidLauncher</defName>
-    <label>Terrapod: Acid Launcher</label>
-    <description>A plant pod that will slowly grow a biotic launcher that sprays acid. Requires highly fertile terrain.</description>
+    <defName>ET_WeaponPod_GlowsapLauncher</defName>
+    <label>Terrapod: Glowsap Launcher</label>
+    <description>A plant pod that will slowly grow a biotic launcher that fires a glob of sap. Requires highly fertile terrain.</description>
     <plant>
-      <harvestedThingDef>ET_PrimaSapLauncher_Basic</harvestedThingDef>
+      <harvestedThingDef>ET_PrimaSapLauncher_Glowsap</harvestedThingDef>
       <sowMinSkill>8</sowMinSkill>
       <growDays>10</growDays>
       <harvestWork>750</harvestWork>
@@ -371,7 +371,7 @@ Tier 4 surge seeds: 20
           <li>
             <weight>0.25</weight>
             <things>
-              <ET_PrimaSapLauncher_Basic>1</ET_PrimaSapLauncher_Basic>
+              <ET_PrimaSapLauncher_Glowsap>1</ET_PrimaSapLauncher_Glowsap>
             </things>
           </li>
           <li>

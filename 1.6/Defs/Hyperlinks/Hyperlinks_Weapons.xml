@@ -19,12 +19,11 @@ x30 SHOCKSAP for the weapon to reach it's full potential after creation (if desi
 			<drawSize>0.8</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
-		<weaponTags Inherit='False'>
-			<li>TerraweaponsNonObtainable</li>
-		</weaponTags>
+		<weaponTags IsNull="True" />
 		<weaponClasses>
 			<li>Ranged</li>
 		</weaponClasses>
+		<thingCategories IsNull="True" />
 		<statBases>
 			<Beauty>12</Beauty>
 			<MaxHitPoints>70</MaxHitPoints>

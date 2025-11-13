@@ -25,7 +25,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		<defName>ET_BiolithRifle</defName>
 		<label>biolith rifle</label>
 		<description>A rifle that fuses both crystal and wood together, combining pros (and cons) of both. It's organic features have given it a strong wooden shell and the ability to be replanted, while it's crystalline features have granted it aceess to optics, and the ability to fire entire sections of it's bore at once.
-\n\nDespite being a hybrid weapon, it functions nearly identical to an organic weapon. It has a relatively short lifespan compared to other hybrid weapons, but it can regenerate it's crystal properties constantly, as opposed to the crystals requiring charge to regenerate. It can also be revitalized with both sunsap and starsap.
+\n\nIt's organic nature gives it a relatively low lifespan, but this also allows it to it regenerate it's crystal properties with brightsap, as opposed to requiring shocksap to regenerate.
 \nThe biolith rifle has no innate sap or other infusion ability, but it can fire a massive, high-speed crystal spear thanks to it's large bore. It's optics allow for high accuracy at ranges, but this impacts it's effectiveness against closer targets.</description>
 		<graphicData>
 			<texPath>Things/WeaponRanged/Wild/BiolithRifle</texPath>
@@ -33,6 +33,10 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+		<li>ET_BuyableWildWeapon</li>
+    </tradeTags>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_InitiateWildWeapon</li>

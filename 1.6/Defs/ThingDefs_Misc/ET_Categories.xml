@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingCategoryDef>
-      <defName>TerraweaponsAll</defName>
+  <ThingCategoryDef>
+      <defName>EcoTechWeapons</defName>
       <label>Terraweapons</label>
       <parent>Weapons</parent>
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
@@ -10,17 +10,67 @@
     </ThingCategoryDef>
 
     <ThingCategoryDef>
+      <defName>OrganicTerraweaponsAll</defName>
+      <label>Organic terraweapons</label>
+      <parent>EcoTechWeapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
       <defName>BasicTerraweapons</defName>
-      <label>Base terraweapons</label>
-      <parent>TerraweaponsAll</parent>
+      <label>Prima genome</label>
+      <parent>OrganicTerraweaponsAll</parent>
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 
     <ThingCategoryDef>
       <defName>InfusedTerraweapons</defName>
-      <label>Infused terraweapons</label>
-      <parent>TerraweaponsAll</parent>
+      <label>Prima infused</label>
+      <parent>OrganicTerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>BriarTerraweapons</defName>
+      <label>Briar genome</label>
+      <parent>OrganicTerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>PeriwoodTerraweapons</defName>
+      <label>Periwood genome</label>
+      <parent>OrganicTerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>AncientTerraweapons</defName>
+      <label>Ancient terraweapons</label>
+      <parent>EcoTechWeapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<!--Soulsnare-->
+
+    <ThingCategoryDef>
+      <defName>LithicTerraweapons</defName>
+      <label>Lithic terraweapons</label>
+      <parent>EcoTechWeapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>SoulsnareStages</defName>
+      <label>Soulsnare variants</label>
+      <parent>LithicTerraweapons</parent>
       <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
@@ -48,7 +98,7 @@
       <defName>ProtosapsAll</defName>
       <label>Protosaps</label>
       <parent>TerrasapsAll</parent>
-      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <iconPath>Things/Resource/Brightsap/Brightsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 
@@ -56,7 +106,7 @@
       <defName>MetasapsAll</defName>
       <label>Metasaps</label>
       <parent>TerrasapsAll</parent>
-      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <iconPath>Things/Resource/Deepsap/Deepsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 
@@ -64,7 +114,7 @@
       <defName>RoyalSapsAll</defName>
       <label>Royal saps</label>
       <parent>TerrasapsAll</parent>
-      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <iconPath>Things/Resource/Archsap/Archsap_c</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 

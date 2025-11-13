@@ -153,7 +153,7 @@ The shots of the Pantheon Terracannon break into hundreds of briar tangles upon 
     <label>Pantheon Terracannon</label>
     <description>A giant cannon grown from a specialized seed, making full use of the Briar Genome. It's dominant traits give it a large body, relatively minimum soil sensitivity, and the ability to fire large, thorny-laden stakes. These specialized projectiles take a considerable time to regenerate, due to their size and genome mix.
 The shots of the Pantheon Terracannon break into hundreds of briar tangles upon impact. These shots are fired at a high arc, allowing it to fire over structures and other barriers. This makes it incapable of hitting anything close by, but it's sensory range and damage easily makes up for that.
-\nLike other grown turrets of the same tier, it can be revitialized with sundrops are long as it doesn't expire. It's large size, and deeper roots, allow it to survive roughly twice as long as a standard, uninfused Prima Turret.</description>
+\nIt's large size, and deeper roots, allow it to survive roughly twice as long as a standard, uninfused Prima Turret.</description>
     <graphicData>
       <texPath>Things/Security/BriarCannon/BriarCannon_Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>

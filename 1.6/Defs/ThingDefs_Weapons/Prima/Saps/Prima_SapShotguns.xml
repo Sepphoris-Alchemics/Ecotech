@@ -19,8 +19,7 @@
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponTags Inherit='False'>
-			<li>ET_PlantWeapon</li>
-			<li>ET_PrimaRangedUpgraded</li>
+			<li>ET_PlantWeaponAdvanced</li>
 			<li>ET_PlantWeaponArchsap</li>
 		</weaponTags>
 		<weaponClasses>

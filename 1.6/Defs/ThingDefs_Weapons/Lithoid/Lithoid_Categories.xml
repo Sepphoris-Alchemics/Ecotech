@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=====Soulsnare=====-->
+
+	<ThingDef Name="BaseSoulsnareTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+			<MarketValue>300</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>SoulsnareStages</li>
+		</thingCategories>
+	</ThingDef>
+
+<!--=====Vivicore=====-->
+
+	<ThingDef Name="BaseVivicoreTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>LithicTerraweapons</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

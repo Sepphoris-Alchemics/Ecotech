@@ -33,7 +33,7 @@
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1, 1, 0.9)</defaultLabelColor>
     <label>radiant flash</label>
-    <initialSeverity>0.3</initialSeverity>
+    <initialSeverity>0.4</initialSeverity>
     <maxSeverity>1.0</maxSeverity>
     <tendable>false</tendable>
     <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
@@ -106,7 +106,7 @@
     <defName>ET_PsychicWhispersBuildupMinor</defName>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
-    <label>psychic voices</label>
+    <label>psychic snare</label>
     <makesSickThought>false</makesSickThought>
     <initialSeverity>0.1</initialSeverity>
     <minSeverity>0.001</minSeverity>
@@ -144,7 +144,7 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.1</offset>
+            <offset>-0.05</offset>
           </li>
         </capMods>
         <statOffsets>
@@ -163,16 +163,8 @@
         <minSeverity>0.8</minSeverity>
         <capMods>
           <li>
-            <capacity>Moving</capacity>
-            <offset>-0.4</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.5</offset>
-          </li>
-          <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.15</offset>
+            <offset>-0.1</offset>
           </li>
         </capMods>
         <statOffsets>
@@ -191,16 +183,8 @@
         <minSeverity>0.9</minSeverity>
         <capMods>
           <li>
-            <capacity>Moving</capacity>
-            <offset>-0.5</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.6</offset>
-          </li>
-          <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.2</offset>
+            <offset>-0.15</offset>
           </li>
         </capMods>
         <statOffsets>
@@ -232,13 +216,13 @@
     <defName>ET_MentalDisruptionBuildupMinor</defName>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
-    <label>mental inhibitors</label>
+    <label>mental snare</label>
     <makesSickThought>false</makesSickThought>
     <initialSeverity>0.1</initialSeverity>
     <minSeverity>0.001</minSeverity>
     <maxSeverity>1</maxSeverity>
     <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
-    <description>Nerve disruptions that cause distrurbance to conciousness, and may even cause short-term mental lapses.</description>
+    <description>Nerve disruptions that cause a direct distrurbance to basic brain operations, and may even cause short-term mental breaks.</description>
     <alwaysShowSeverity>true</alwaysShowSeverity>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
@@ -262,7 +246,7 @@
         <mentalStateGivers>
           <li>
             <mentalState>Wander_Psychotic_Short</mentalState>
-            <mtbDays>45</mtbDays>
+            <mtbDays>30</mtbDays>
           </li>
         </mentalStateGivers>
       </li>
@@ -272,13 +256,13 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.15</offset>
+            <offset>-0.2</offset>
           </li>
         </capMods>
         <mentalStateGivers>
           <li>
             <mentalState>Wander_Psychotic_Short</mentalState>
-            <mtbDays>30</mtbDays>
+            <mtbDays>20</mtbDays>
           </li>
         </mentalStateGivers>
       </li>
@@ -288,13 +272,13 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.2</offset>
+            <offset>-0.3</offset>
           </li>
         </capMods>
         <mentalStateGivers>
           <li>
             <mentalState>Wander_Psychotic_Short</mentalState>
-            <mtbDays>15</mtbDays>
+            <mtbDays>10</mtbDays>
           </li>
         </mentalStateGivers>
       </li>
@@ -307,13 +291,13 @@
     <defName>ET_MuscleDisruptionBuildupMinor</defName>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
-    <label>mental inhibitors</label>
+    <label>muscle snare</label>
     <makesSickThought>false</makesSickThought>
     <initialSeverity>0.1</initialSeverity>
     <minSeverity>0.001</minSeverity>
     <maxSeverity>1</maxSeverity>
     <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
-    <description>Nerve disruptions that cause distrurbance to conciousness, and may even cause short-term mental lapses.</description>
+    <description>Nerve disruptions that affect the entire body, making it quite stressful to move.</description>
     <alwaysShowSeverity>true</alwaysShowSeverity>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">

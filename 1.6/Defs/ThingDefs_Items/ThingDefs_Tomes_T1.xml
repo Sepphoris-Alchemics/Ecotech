@@ -49,7 +49,7 @@ This tome teaches one how the very basics of *everything* that organic Terratech
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
-            <MarketValue>50</MarketValue>
+            <MarketValue>200</MarketValue>
             <MaxHitPoints>25</MaxHitPoints>
             <Mass>1.2</Mass>
             <Flammability>3</Flammability>
@@ -101,14 +101,17 @@ This tome teaches one how the very basics of *everything* that lithic Terratech 
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
-        <tradeability>Sellable</tradeability>
+        <tradeability>Buyable</tradeability>
+        <tradeTags>
+		    <li>ET_TechKeys</li>
+        </tradeTags>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <stackLimit>5</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
-            <MarketValue>125</MarketValue>
+            <MarketValue>400</MarketValue>
             <MaxHitPoints>25</MaxHitPoints>
             <Mass>1.2</Mass>
             <Flammability>3</Flammability>
@@ -162,14 +165,17 @@ This tome teaches one how to crossbreed Prima and Periwood seeds, creating a new
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
-        <tradeability>Sellable</tradeability>
+        <tradeability>Buyable</tradeability>
+        <tradeTags>
+		    <li>ET_TechKeys</li>
+        </tradeTags>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <stackLimit>5</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
-            <MarketValue>125</MarketValue>
+            <MarketValue>600</MarketValue>
             <MaxHitPoints>25</MaxHitPoints>
             <Mass>1.2</Mass>
             <Flammability>3</Flammability>
@@ -223,14 +229,17 @@ This tome teaches one how to tap into roots that expand nearly to the core of th
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
-        <tradeability>Sellable</tradeability>
+        <tradeability>Buyable</tradeability>
+        <tradeTags>
+		    <li>ET_TechKeys</li>
+        </tradeTags>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <stackLimit>5</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
-            <MarketValue>125</MarketValue>
+            <MarketValue>600</MarketValue>
             <MaxHitPoints>25</MaxHitPoints>
             <Mass>1.2</Mass>
             <Flammability>3</Flammability>

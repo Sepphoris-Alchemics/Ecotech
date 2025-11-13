@@ -44,14 +44,17 @@ This tome teaches one how to shape and nurture the seed of two special conduit t
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
-        <tradeability>Sellable</tradeability>
+        <tradeability>Buyable</tradeability>
+        <tradeTags>
+		    <li>ET_TechKeys</li>
+        </tradeTags>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <stackLimit>5</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
-            <MarketValue>50</MarketValue>
+            <MarketValue>400</MarketValue>
             <MaxHitPoints>25</MaxHitPoints>
             <Mass>1.2</Mass>
             <Flammability>3</Flammability>
@@ -106,14 +109,14 @@ This tome teaches one how to shape seeds that can go beyond the size of normal t
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
-        <tradeability>Sellable</tradeability>
+        <tradeability>Buyable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
         <stackLimit>5</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
         <statBases>
-            <MarketValue>75</MarketValue>
+            <MarketValue>500</MarketValue>
             <MaxHitPoints>25</MaxHitPoints>
             <Mass>1.2</Mass>
             <Flammability>3</Flammability>

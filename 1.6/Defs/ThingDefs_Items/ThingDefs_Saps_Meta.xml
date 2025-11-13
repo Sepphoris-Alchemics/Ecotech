@@ -12,7 +12,7 @@ The metasaps are
   -Meldsap
 -->
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_SunDrop</defName>
     <label>Sundrop</label>
     <description>A sphere infused with golden energy directly from the sun. Despite the source of it's power, it is only warm to the touch.\n\nCan be used to revitialize the life force of certain Terraweapons, increasing the time before they wither away.</description>
@@ -25,7 +25,7 @@ The metasaps are
     </graphicData>
     <stackLimit>150</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <MarketValue>5.5</MarketValue>
@@ -48,7 +48,7 @@ The metasaps are
       </li>
     </comps>
     <allowedArchonexusCount>100</allowedArchonexusCount>
-  </ThingDef>
+  </ThingDef>-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Deepsap</defName>

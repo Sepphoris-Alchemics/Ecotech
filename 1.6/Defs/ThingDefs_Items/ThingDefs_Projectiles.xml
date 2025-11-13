@@ -552,10 +552,10 @@ Anima long range is brought down by 3
       <drawSize>0.3</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>RangedStab</damageDef>
-      <damageAmountBase>13</damageAmountBase>
-      <stoppingPower>0.2</stoppingPower>
-      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <damageDef>ET_PsychicDisruptionShot</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <stoppingPower>0</stoppingPower>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
       <speed>45</speed>
     </projectile>
   </ThingDef>
@@ -569,10 +569,10 @@ Anima long range is brought down by 3
       <drawSize>0.3</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>RangedStab</damageDef>
-      <damageAmountBase>13</damageAmountBase>
-      <stoppingPower>0.2</stoppingPower>
-      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <damageDef>ET_MentalDisruptionShot</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <stoppingPower>0.1</stoppingPower>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
       <speed>45</speed>
     </projectile>
   </ThingDef>
@@ -586,8 +586,8 @@ Anima long range is brought down by 3
       <drawSize>0.3</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>RangedStab</damageDef>
-      <damageAmountBase>13</damageAmountBase>
+      <damageDef>ET_MuscleDisruptionShot</damageDef>
+      <damageAmountBase>9</damageAmountBase>
       <stoppingPower>0.2</stoppingPower>
       <armorPenetrationBase>0.2</armorPenetrationBase>
       <speed>45</speed>

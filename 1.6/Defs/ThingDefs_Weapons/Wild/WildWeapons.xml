@@ -11,6 +11,10 @@
 			<drawSize>1.2</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+		<li>ET_BuyableWildWeapon</li>
+    </tradeTags>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_InitiateWildWeapon</li>
@@ -106,6 +110,10 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 			<drawSize>0.9</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
+		<tradeability>Buyable</tradeability>
+		<tradeTags>
+		<li>ET_BuyableWildWeapon</li>
+    </tradeTags>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_InitiateWildWeapon</li>
