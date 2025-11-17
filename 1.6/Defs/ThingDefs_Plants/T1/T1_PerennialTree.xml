@@ -5,11 +5,11 @@
 
   <ThingDef ParentName="TreeBase">
     <defName>ET_PeriwoodTree</defName>
-    <label>periheart tree</label>
-    <description>A tree that is quite important to Terratech tribes, almost as important as many conduit trees. Periheart trees were carefully designed to be a staple plant of any Terratech tribe providing effective weaponry to it's tribe, while also requiring minimal effort in return.
-\nPeriheart Trees grow relatively fast (compared to a normal tree), last a very long time, and produces pods that will eventually grow a periwood weapon. However, the tree can also be felled to access the heart inside, which can be used to carve a desired periwood weapon - though those attuned with nature will not appreciate this.
-All weapons come from this periwood heart, requiring no other ingredients. However, the carving process is very delicate; if the carving is paused, progress will be lost and the heart with VERY quickly expire.
-\n\n Like most terratech trees, periheart trees are grown via seed.</description>
+    <label>Periwood tree</label>
+    <description>A tree that is quite important to Terratech tribes, almost as important as many conduit trees. Periwood trees were carefully designed to be a staple plant of any Terratech tribe providing effective weaponry to it's tribe, while also requiring minimal effort in return.
+\nPeriwood Trees grow relatively fast (compared to a normal tree), last a very long time, and produces pods that will eventually grow a Periwood weapon. However, the tree can also be felled to access the heart inside, which can be used to carve a desired Periwood weapon - though those attuned with nature will not appreciate this.
+All weapons come from this Periwood heart, requiring no other ingredients. However, the carving process is very delicate; if the carving is paused, progress will be lost and the heart with VERY quickly expire.
+\n\n Like most terratech trees, Periwood trees are grown via seed.</description>
     <graphicData>
       <graphicClass>Graphic_Random</graphicClass>
       <texPath>Things/Plant/PeriwoodTree</texPath>
@@ -48,22 +48,23 @@ All weapons come from this periwood heart, requiring no other ingredients. Howev
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <growMinGlow>0</growMinGlow>
       <sowResearchPrerequisites Inherit="False" />
-      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
       <showGrowthInInspectPane>false</showGrowthInInspectPane>
-      <minSpacingBetweenSamePlant>24.9</minSpacingBetweenSamePlant>
+      <minSpacingBetweenSamePlant>11.9</minSpacingBetweenSamePlant>
       <harvestWork>1600</harvestWork>
       <choppedThingDef IsNull="True" />
       <smashedThingDef IsNull="True" />
     </plant>
+    <tickerType>Normal</tickerType> <!-- Spawn subplant only works with normal ticker -->
     <comps>
       <li Class="CompProperties_SelfhealHitpoints">
-        <ticksPerHeal>2000</ticksPerHeal>        <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+        <ticksPerHeal>2000</ticksPerHeal>
       </li>
       <li Class="CompProperties_SpawnSubplant">
         <compClass>CompSpawnSubplantDuration</compClass>
         <subplant>ET_PeriwoodWeaponPod</subplant>
         <maxRadius>11.9</maxRadius>
-        <subplantSpawnDays>6</subplantSpawnDays>
+        <subplantSpawnDays>14</subplantSpawnDays>
         <minGrowthForSpawn>0.6</minGrowthForSpawn>
         <initialGrowthRange>0.2~0.4</initialGrowthRange>
         <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
@@ -73,6 +74,10 @@ All weapons come from this periwood heart, requiring no other ingredients. Howev
           <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
         </plantsToNotOverwrite>
       </li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Grows a weapon pod every 14 days
+&lt;color=#FF2E2E&gt;heretical to defile&lt;/color&gt;</inspectString>
+			</li>
     </comps>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>

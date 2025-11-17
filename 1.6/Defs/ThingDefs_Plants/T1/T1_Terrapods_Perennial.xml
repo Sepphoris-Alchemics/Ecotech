@@ -37,7 +37,7 @@ Tier 4 surge seeds: 20
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <tickerType>Normal</tickerType>
     <plant>
-      <growDays>1</growDays>
+      <growDays>6</growDays>
       <fertilityMin>0.3</fertilityMin>
       <fertilitySensitivity>0.3</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
@@ -55,7 +55,7 @@ Tier 4 surge seeds: 20
       <sowResearchPrerequisites Inherit="False" />
       <mustBeWildToSow>true</mustBeWildToSow>
       <dieIfNoSunlight>false</dieIfNoSunlight>
-      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
       <showGrowthInInspectPane>false</showGrowthInInspectPane>
     </plant>
   </ThingDef>
@@ -87,7 +87,7 @@ Tier 4 surge seeds: 20
 
   <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
     <defName>ET_PeriwoodWeaponPod</defName>
-    <label>Periwood Terraweapon Pod</label>
+    <label>Periwood terraweapon pod</label>
     <description>A fortified Terrapod that will create a random Periwood Terraweapon. Quite durable, but takes a long time to produce a final product. Seed can only be acquired from an expiring Periwood weapon.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.
 \nDue to the way the pod grows, smaller weapons are more likely to form over bigger/longer ones.</description>
