@@ -35,7 +35,7 @@ namespace Ecotech
             {
                 command.defaultLabel = "Infused";
                 command.defaultDesc =
-                    "This growth has already been infused with:\n\n" +
+                    "This growth has already been infused with" +
                     infusedSapDef.label.CapitalizeFirst() +
                     "\n\nIt cannot be infused again.";
                 command.Disable("Already infused");
@@ -44,14 +44,14 @@ namespace Ecotech
             {
                 command.defaultLabel = "Infuse sap…";
                 command.defaultDesc =
-                    "This growth is fully grown and can no longer be infused.";
+                    "This plant is fully grown and can no longer be infused.";
                 command.Disable("Already fully grown");
             }
             else
             {
                 command.defaultLabel = "Infuse sap…";
                 command.defaultDesc =
-                    "Infuse this growth with a sap while it is still growing.";
+                    "Influence what this plant grows into by infusing it with a specific sap.";
                 command.action = OpenSapMenu;
             }
 
@@ -65,7 +65,7 @@ namespace Ecotech
 
             if (Props?.supportedSaps == null)
             {
-                options.Add(new FloatMenuOption("No saps configured.", null));
+                options.Add(new FloatMenuOption("No saps available.", null));
                 Find.WindowStack.Add(new FloatMenu(options));
                 return;
             }
