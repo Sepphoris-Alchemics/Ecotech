@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_DevTendingPlant</defName>
+    <label>tending plant</label>
+    <description>A plant to test sap tending.</description>
+    <graphicData>
+      <texPath>Things/Plant/PlantWall</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(68,74,49)</color>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>-1</Beauty>
+      <BeautyOutdoors>0</BeautyOutdoors>
+      <Flammability>4</Flammability> <!--Very vulnerable during it's growth state-->
+      <MaxHitPoints>32</MaxHitPoints> <!-- main wall's durability/8, rounded to nearest whole-->
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>28</pathCost>
+    <plant>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <harvestWork>1000</harvestWork>
+      <burnedThingDef IsNull="True" />
+      <harvestMinGrowth>0.8</harvestMinGrowth>
+      <harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestTag>Standard</harvestTag>
+      <allowAutoCut>false</allowAutoCut>
+      <sowWork>200</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowMinSkill>0</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>ET_TerraseedEssentials</li>
+      </sowResearchPrerequisites>
+      <blockAdjacentSow>false</blockAdjacentSow>
+      <topWindExposure>0.01</topWindExposure>
+      <growDays>0.5</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <visualSizeRange>0.3~0.8</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <purpose>Misc</purpose>
+      <neverMultiSelect>true</neverMultiSelect>
+      <selectable>true</selectable>
+    </plant>
+    <comps>
+      <li Class="Ecotech.CompProperties_SapInfusable">
+        <supportedSaps>
+          <li>ET_Brightsap</li>
+          <li>ET_Endosap</li>
+          <li>ET_Hypersap</li>
+        </supportedSaps>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <transformedThing>ET_TestBuildingA</transformedThing>
+        <sapTransformOptions>
+          <li>
+            <sap>ET_Brightsap</sap>
+            <result>ET_TestBuildingB</result>
+          </li>
+          <li>
+            <sap>ET_Endosap</sap>
+            <result>ET_TestBuildingC</result>
+          </li>
+          <li>
+            <sap>ET_Hypersap</sap>
+            <result>ET_TestBuildingD</result>
+          </li>
+        </sapTransformOptions>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_TestBuildingA</defName>
+    <label>Testing building A</label>
+    <description>Testing Building A</description>
+    <size>(2,2)</size>
+    <graphicData>
+      <texPath>Things/Building/Terravats/SmallVat/Empty</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>30</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <!--<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>-->
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SmallTerravats</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>8</WoodLog>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_TestBuildingB</defName>
+    <label>Testing building B</label>
+    <description>Testing Building B</description>
+    <size>(2,2)</size>
+    <graphicData>
+      <texPath>Things/Building/Terravats/SmallVat/Empty</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>30</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <!--<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>-->
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SmallTerravats</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>8</WoodLog>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_TestBuildingC</defName>
+    <label>Testing building C</label>
+    <description>Testing Building C</description>
+    <size>(2,2)</size>
+    <graphicData>
+      <texPath>Things/Building/Terravats/SmallVat/Empty</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>30</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <!--<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>-->
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SmallTerravats</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>8</WoodLog>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_TestBuildingD</defName>
+    <label>Testing building D</label>
+    <description>Testing Building D</description>
+    <size>(2,2)</size>
+    <graphicData>
+      <texPath>Things/Building/Terravats/SmallVat/Empty</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>30</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>2</WoodLog>
+    </costList>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <!--<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>-->
+    <!--<designationCategory>EcotechDesignation</designationCategory>-->
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_SmallTerravats</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>8</WoodLog>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

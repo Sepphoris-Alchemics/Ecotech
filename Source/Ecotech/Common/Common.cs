@@ -10,6 +10,7 @@ namespace Ecotech
         public static JobDef fillThingConverterJobDef = DefDatabase<JobDef>.GetNamed("ET_FillThingConverter");
         public static JobDef emptyThingConverterJobDef = DefDatabase<JobDef>.GetNamed("ET_EmptyThingConverter");
         public static JobDef insertIntoSlottedTransformerJobDef = DefDatabase<JobDef>.GetNamed("ET_InsertIntoSlottedThingTransformer");
+        public static JobDef infuseSapJobDef = DefDatabase<JobDef>.GetNamed("ET_InfuseSapJob");
         public static Texture2D installableInSlottedThingTransformerGizmoTexture = ContentFinder<Texture2D>.Get("UI/Gizmo/InstallableInSlottedThingTransformerGizmo");
         public static DesignationDef installInSlottedThingTransformerDesignation = DefDatabase<DesignationDef>.GetNamed("ET_InstallInSlottedThingTransformer");
 
@@ -33,6 +34,11 @@ namespace Ecotech
                 }
                 return _allTransformerRecipes;
             }
+        }
+        static Common()
+        {
+            var jd = DefDatabase<JobDef>.GetNamedSilentFail("ET_InfuseSapJob");
+            Log.Message("[Ecotech] InfuseSapJob loaded? " + (jd != null));
         }
     }
 }

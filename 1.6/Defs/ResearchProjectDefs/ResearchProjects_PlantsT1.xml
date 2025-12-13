@@ -117,7 +117,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <defName>ET_PrimaTerraweaponSeeds</defName>
     <label>Prima Terraseed Cultivation</label>
     <description>Learn how to nuture and handle Prima Terraseeds, alongside growing the pods that produce them. Prima weapons are fast to grow and easy to handle, but are limited in their damage, and wither away relatively quickly.</description>
-    <baseCost>1250</baseCost>
+    <baseCost>1800</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
@@ -300,7 +300,7 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
     <label>Primwood Conduit Seeds</label>
     <description>Not everything is hands-on; while you take care of the planet, the planet will take care of you back. This research enables you to create "Conduit" seeds, which - when planted - grow powerful trees that protect and supply your colony.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-    <baseCost>1500</baseCost>
+    <baseCost>2600</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>

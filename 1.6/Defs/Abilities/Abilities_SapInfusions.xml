@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AbilityDef>
+  <defName>ET_Infuse_Glowsap</defName>
+  <label>infuse tree with glowsap</label>
+  <description>Infuse the selected tree with Glowsap sap, granting several pod charges.</description>
+  <iconPath>UI/Abilities/GlowsapInfusion</iconPath>
+
+  <targetRequired>true</targetRequired>
+  <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+
+  <verbProperties>
+    <verbClass>Verb_CastAbility</verbClass>
+    <warmupTime>0</warmupTime>
+    <requireLineOfSight>false</requireLineOfSight>
+    <range>6</range>
+    <targetParams>
+      <canTargetBuildings>true</canTargetBuildings>
+    </targetParams>
+  </verbProperties>
+
+  <comps>
+    <!-- STEP 1: Remove all other sap infusions -->
+    <li Class="CompProperties_AbilityRemoveHediff">
+      <hediffDef>ET_HypersapInfusion_Hediff</hediffDef>
+      <removeFromTarget>true</removeFromTarget>
+    </li>
+    <li Class="CompProperties_AbilityRemoveHediff">
+      <hediffDef>ET_EndosapInfusion_Hediff</hediffDef>
+      <removeFromTarget>true</removeFromTarget>
+    </li>
+    <!-- add more if needed -->
+    
+
+    <!-- STEP 2: Apply the Glowsap infusion with charges -->
+    <li Class="CompProperties_AbilityGiveHediff">
+      <compClass>CompAbilityEffect_GiveHediff</compClass>
+      <hediffDef>ET_GlowsapInfusion_Hediff</hediffDef>
+      <severity>5</severity> <!-- number of charges -->
+      <onlyApplyToTarget>true</onlyApplyToTarget>
+    </li>
+  </comps>
+</AbilityDef>
+
+</Defs>

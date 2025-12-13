@@ -23,4 +23,13 @@
     <suspendable>false</suspendable>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
+  <JobDef>
+    <defName>ET_InfuseSapJob</defName>
+    <driverClass>Ecotech.JobDriver_InfuseSapJob</driverClass>
+    <reportString>infusing TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
 </Defs>

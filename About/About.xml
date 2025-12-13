@@ -13,6 +13,9 @@
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
     </li>
 	</modDependencies>
+	<loadFolders>
+  	<li>1.6</li>
+	</loadFolders>
 	<loadAfter>
 		<li>brrainz.harmony</li>
 		<li>Ludeon.RimWorld</li>

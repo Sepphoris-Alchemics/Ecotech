@@ -65,8 +65,8 @@ The outcome will always be one jar of refined sap, but which one it is will be e
       <li Class="Ecotech.ThingCompProperties_ThingConverter">
         <compClass>Ecotech.ThingComp_ThingConverter</compClass>
         <!-- when a pawn carries items to the converter / takes them out, this is how long they stand in front of the building-->
-        <timeToFillTicks>600</timeToFillTicks>
-        <timeToEmptyTicks>100</timeToEmptyTicks>
+        <timeToFillTicks>1200</timeToFillTicks>
+        <timeToEmptyTicks>900</timeToEmptyTicks>
         <drawFillableBar>true</drawFillableBar>
         <!-- x, y, z offset for the bar. centered by default -->
         <fillableBarDrawOffset>(0, 0.00001, 0)</fillableBarDrawOffset>
@@ -75,26 +75,32 @@ The outcome will always be one jar of refined sap, but which one it is will be e
         <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
         <inputThings>
           <!-- needs exactly one entry -->
-          <ET_Glowsap>300</ET_Glowsap>
+          <ET_Glowsap>200</ET_Glowsap>
         </inputThings>
-        <conversionDurationTicks>72000</conversionDurationTicks>
+        <conversionDurationTicks>180000</conversionDurationTicks>
         <potentialResults>
           <li>
-            <weight>2</weight>
+            <weight>0.35</weight>
             <things>
               <ET_Endosap>1</ET_Endosap>
             </things>
           </li>
           <li>
-            <weight>2</weight>
+            <weight>0.3</weight>
             <things>
-              <ET_Brightsap>1</ET_Brightsap>
+              <ET_Hypersap>1</ET_Hypersap>
             </things>
           </li>
           <li>
-            <weight>1</weight>
+            <weight>0.25</weight>
             <things>
-              <ET_Hypersap>1</ET_Hypersap>
+              <ET_Shocksap>1</ET_Shocksap>
+            </things>
+          </li>
+          <li>
+            <weight>0.1</weight>
+            <things>
+              <ET_Brightsap>1</ET_Brightsap>
             </things>
           </li>
         </potentialResults>

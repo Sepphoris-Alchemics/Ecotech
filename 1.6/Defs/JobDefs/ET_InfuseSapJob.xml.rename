@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>ET_InfuseSapJob_Test</defName>
+    <label>INFUSE SAP TEST</label>
+    <driverClass>Ecotech.JobDriver_InfuseSapJob</driverClass>
+    <reportString>infusing sap into plant.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+    <checkOverrideOnDamage>true</checkOverrideOnDamage>
+    <description>
+    IF YOU SEE THIS IN LOGS, THE JOBDEF LOADED.
+  </description>
+  </JobDef>
+
+</Defs>

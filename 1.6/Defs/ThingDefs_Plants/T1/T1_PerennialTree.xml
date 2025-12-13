@@ -60,7 +60,7 @@ All weapons come from this Periwood heart, requiring no other ingredients. Howev
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal>
       </li>
-      <li Class="CompProperties_SpawnSubplant">
+      <!--<li Class="CompProperties_SpawnSubplant">
         <compClass>CompSpawnSubplantDuration</compClass>
         <subplant>ET_PeriwoodWeaponPod</subplant>
         <maxRadius>11.9</maxRadius>
@@ -73,11 +73,41 @@ All weapons come from this Periwood heart, requiring no other ingredients. Howev
           <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
           <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
         </plantsToNotOverwrite>
-      </li>
+      </li>-->
 			<li Class="CompProperties_InspectString">
-				<inspectString>Grows a weapon pod every 14 days
+				<inspectString>Grows a weapon pod every 12 days
 &lt;color=#FF2E2E&gt;heretical to defile&lt;/color&gt;</inspectString>
 			</li>
+<li Class="VEF.CompProperties_SpawnSubplant">
+      <!-- Spawn interval -->
+      <spawnIntervalDays>1.4</spawnIntervalDays>
+
+      <!-- Max number of pods active at once -->
+      <maxSimultaneousSubplants>3</maxSimultaneousSubplants>
+
+      <!-- Reduce hediff by 1 severity every time a pod spawns -->
+      <onSpawnHediffReduction>
+        <li>
+          <hediff>ET_GlowsapInfusion_Hediff</hediff>
+          <amount>1</amount>
+        </li>
+      </onSpawnHediffReduction>
+
+      <!-- Which pod to spawn -->
+      <subplantDefinitionsByHediff>
+        <li>
+          <hediff>ET_GlowsapInfusion_Hediff</hediff>   <!-- requires this hediff to spawn -->
+          <subplants>
+            <li>
+              <plantDef>ET_PeriwoodSMGGrowthPod</plantDef>
+              <plantCount>1</plantCount>
+              <spawnRadius>2</spawnRadius>
+            </li>
+          </subplants>
+        </li>
+      </subplantDefinitionsByHediff>
+
+    </li>
     </comps>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>

@@ -156,7 +156,7 @@ Tier 4 surge seeds: 20
 
 <ThingDef ParentName="ET_PeriwoodRegrowthPodBase">
     <defName>ET_PeriwoodTricasterGrowthPod</defName>
-    <label>Periwood Needler Pod</label>
+    <label>Periwood Tricaster Pod</label>
     <description>A fortified Terrapod that is revitalizing a Terraweapon. Will produce a single, revitalized Periwood Tricaster when finished.
 \nBe aware that the growth is a delicate process. If this pod is destroyed, any weapon inside it will be destroyed as well.</description>
     <comps>

@@ -128,6 +128,21 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
+<!--<WorkGiverDef>
+  <defName>ET_InfuseSap_WorkGiver</defName>
+  <label>infuse sap</label>
+
+  <giverClass>Ecotech.WorkGiver_InfuseSapJob</giverClass>
+  <workType>PlantCutting</workType>
+
+  <priorityInType>50</priorityInType>
+  <verb>infuse</verb>
+
+  <requiredCapacities>
+    <li>Manipulation</li>
+  </requiredCapacities>
+</WorkGiverDef>-->
+
   <SoundDef>
     <defName>ET_CrystalShatter</defName>
     <context>MapOnly</context>

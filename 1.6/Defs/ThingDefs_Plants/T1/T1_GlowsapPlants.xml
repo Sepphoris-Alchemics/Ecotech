@@ -5,8 +5,8 @@
   <ThingDef ParentName="PlantBaseNonEdible">
     <defName>ET_GlowsapBloom</defName>
     <label>Glowsap Bloom</label>
-    <description>A small plant bioengineered to produce Glowsap. Glowsap builds up underneath it's durable, transparent skin, and is ready for harvest once glowsap begins to break through. Also produces a moderate amount of light, but does provide any heat.
-The glowsap bloom can be harvested relatively fast, but it's harvesting yield is quite small. It is advised to have a Glowsap Tree as a reliable source.</description>
+    <description>A small plant bioengineered to produce Glowsap. Glowsap builds up underneath it's durable, transparent skin, and is ready for harvest once glowsap begins to break through. Also produces a moderate amount of light.
+Due to it's size, this plant only produces a trace amount of glowsap. It is advised to have a Glowsap Tree as a reliable source.</description>
     <graphicData>
       <texPath>Things/Plant/GlowsapBloom</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -23,13 +23,13 @@ The glowsap bloom can be harvested relatively fast, but it's harvesting yield is
     <pathCost>14</pathCost>
     <plant>
       <fertilityMin>0.1</fertilityMin>
-      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
-      <harvestWork>750</harvestWork>
+      <harvestWork>350</harvestWork>
       <harvestedThingDef>ET_Glowsap</harvestedThingDef>
       <burnedThingDef IsNull="True" />
-      <harvestYield>4</harvestYield> <!--One will produce about 60 every year, not accounting yield differences-->
-      <harvestMinGrowth>0.8</harvestMinGrowth>
+      <harvestYield>1</harvestYield> <!--This was extremely spammy before, now piles upon piles of growsap won't be near as common.-->
+      <harvestMinGrowth>0.9</harvestMinGrowth>
       <harvestAfterGrowth>0.05</harvestAfterGrowth>
       <harvestTag>Standard</harvestTag>
       <allowAutoCut>false</allowAutoCut>
@@ -45,12 +45,26 @@ The glowsap bloom can be harvested relatively fast, but it's harvesting yield is
       </sowResearchPrerequisites>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>
-      <growDays>8</growDays>
+      <growDays>10</growDays>
       <dieIfLeafless>false</dieIfLeafless>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <visualSizeRange>0.5~1</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
       <purpose>Misc</purpose>
+      <wildBiomes>
+				<TropicalRainforest>0.01</TropicalRainforest>
+				<TemperateForest>0.008</TemperateForest>
+				<AridShrubland>0.0015</AridShrubland>
+				<BorealForest>0.004</BorealForest>
+				<Tundra>0.002</Tundra>
+			</wildBiomes>
+      <wildOrder>2</wildOrder>
+      <wildClusterWeight>0.002</wildClusterWeight>
+      <wildClusterSizeRange>
+				<min>1</min>
+				<max>7</max>
+			</wildClusterSizeRange>
+			<wildClusterRadius>6</wildClusterRadius>
     </plant>
     <comps>
       <li Class="CompProperties_Glower">

@@ -152,7 +152,8 @@ namespace Ecotech
         {
             Map map = parent.Map;
             parent.Destroy(DestroyMode.WillReplace);
-            Thing thingToSpawn = Props.MakeThing();
+            ThingDef infusedSap = parent.TryGetComp<CompSapInfusable>()?.infusedSapDef;
+            Thing thingToSpawn = Props.MakeThing(infusedSap);
 
             SetFaction(thingToSpawn);
             GenSpawn.Spawn(thingToSpawn, TransformedPosition, map, transformedRotation, WipeMode.FullRefund);

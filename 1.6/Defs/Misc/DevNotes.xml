@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+<!--==========NEW YEAR'S DEV NOTES==========
+
+-Rebalanced saps; glowsap isn't near as spammy, and has much lowered outputs.
+-To help balance this, glowsap can now rarely appear in the wild.
+-Structures that also consume glowsap have also had their requirements lowered (such as sap filter only needing 200 instead of 300)
+
+
+-->
+
+
 
 <!--==========1.5 DEV NOTES==========
 

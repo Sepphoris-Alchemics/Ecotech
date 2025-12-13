@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_SapStorage</defName>
+    <label>sap cache</label>
+    <description>A small, root-woven storage node used to keep saps organized near growth trees.</description>
+
+    <graphicData>
+      <texPath>Things/Building/Production/Transposer/Transposer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+
+    <size>(1,1)</size>
+    <altitudeLayer>ItemImportant</altitudeLayer>
+    <thingClass>Building_Storage</thingClass>
+
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <MarketValue>250</MarketValue>
+    </statBases>
+
+    <building>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>ET_TerrasapsAll</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>ET_TerrasapsAll</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+    </building>
+
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+
+</Defs>
