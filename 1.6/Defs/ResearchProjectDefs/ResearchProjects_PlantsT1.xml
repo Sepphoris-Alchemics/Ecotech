@@ -388,9 +388,9 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     <discoveredLetterText>Glowsap Bays are fillable structures that you can use to grow most EcoTech plants. While they cannot support normal plants, glowsap bays do enable you to make dedicated spaces for EcoTech plants, allowing normal soil to be used for everyday crops.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <!--=====BRIGHTSAP CONTENT=====-->
+  <!--=====PRIMA SAP CONTENT=====-->
 
-<ResearchProjectDef>
+<!--<ResearchProjectDef>
     <defName>ET_GlowsapStructures</defName>
     <label>Pattern GL87416A1-5</label>
     <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
@@ -404,13 +404,13 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.50</researchViewY>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <ResearchProjectDef>
-    <defName>ET_BrightsapStructures</defName>
-    <label>Brightsap Structures</label>
-    <description>Learn how to further utilize Brightsap, and create various strutures that can compliment your base, while also providing decent amounts of light.
-\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
+    <defName>ET_PrimaSapStructures</defName>
+    <label>Basic Sap-fueled structures</label>
+    <description>Learn how to utilize saps to grow various commonplace strutures that are a nature-based alternative to fabricated structures. Many also produce a decent amount of light.
+\n\nThese seeds are shaped at the Terraforge. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
@@ -418,7 +418,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
       <li>ET_GlowsapRefinement</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>2.00</researchViewX>
     <researchViewY>1.50</researchViewY>
   </ResearchProjectDef>
 
@@ -427,7 +427,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
   <ResearchProjectDef>
     <defName>ET_GlowsapRefinement</defName>
     <label>Terrasap Refinement</label>
-    <description>Learn how to refine Glowsap into valuable terrasaps that can modify and strengthen Terraweapons, and learn how to break down more concentrated saps into usable ones.</description>
+    <description>Learn how to refine Glowsap into valuable terrasaps that can mutate terratech weapons and structures.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>

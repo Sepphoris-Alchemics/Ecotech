@@ -3,10 +3,51 @@
 <!--==========NEW YEAR'S DEV NOTES==========
 
 -Rebalanced saps; glowsap isn't near as spammy, and has much lowered outputs.
--To help balance this, glowsap can now rarely appear in the wild.
+-To help balance this, glowsap blooms now appears in the wild.
 -Structures that also consume glowsap have also had their requirements lowered (such as sap filter only needing 200 instead of 300)
 
+-NEW MAJOR FEATURE: PLANT MUTATION
+	-You can now directly infuence the outcome of plants by infusing them with saps you discover.
+	-These plants will usually begin as standard, basic plants that have a tag which states their MUTATION POTENTIAL.
+	-MUTATION POTENTIAL is shorthand for what saps it can be infused with. Plants can have a mutation potenial of None, Low, Medium, High, and Extreme.
+	-'Higher' mutation potential = being able to accept stronger, rarer saps, which means the more outcomes you can get.
+	-What you infuse into a mutatable plant will impact what kind of plants, structures, and even items something can produce.
+	-You will need to partially master a genome before you can mutate it's plants. 'Mastering' a genome is done by researching specifically-named techs.
+	-For example, to start infusing basic saps, you will need to research 'basic mutation applications'. For stronger, rarer saps, you research 'advanced mutation applications'
+	-Depending on the genome's potential, these techs can have relatively high research requirements.
+	-Whenever you discover a new sap, you will also need to 'study' it of them before it can be used for any infusions. This only needs to be done once per sap, however.
+	-There is no cheat sheet on what infusions do what, but all outcomes have a positive output. Experiment!
+	-Not everything will be infusable right off the bat. Due to the scope of the mod, more and more things will be infusable as time passes.
 
+-RESEARCH:
+	-Certain early researches have have their costs modified in order to (ideally) fall into certain in-game time frames.
+	-Research Pattern GL87416A1-5 removed. Due to plant mutations, it is no longer relevant.
+	-Glowsap structure research, and Brightsap structure research, have been combined into one tech due to plant mutations.
+
+-ARMOR:
+	-NEW: Elderwood Armor (alternative to Flak armor)
+		-The most common - but still protective - armor that Terratechists will have access to. Made in the Biosynth Chamber.
+	-Prima Exoshell has been buffed and made a bit harder to obtain.
+
+-WEAPONS:
+	-NEW: Embercore Rifle, a lithic weapon that utilizes white-hot plasma.
+	-NEW: Prism Scythe, a lithic weapon that utilizes solar energy.
+	-NEW: Fusion Scythe, a hybrid weapon that can reap more than just plants.
+
+-SAPS:
+	-NEW: Embersap, a sap believed to originate from the heart of a volcano.
+	-NEW: Cryosap, a sap believed to originate from the highest mountaintop of the world.
+	-NEW: Arcsap, a sap believed to contain energy from every lightning strike that ever occured. 
+	-Shocksap has been renamed to Chargesap, and now has uses with organic tech (but is still more applicable to lithic tech).
+	-'Archsap' has been removed as an item, as it didn't fit the nature theme well. It's effects now exist across the new saps.
+
+-STRUCTURES:
+	-Sap Lamps now have more variants.
+	-Sap Columns now have more variants.
+	-Terravat is now researched later on. It's purpose is now to infuse multiple weapons at once.
+	-Terravat now has shorter cycle times, occuring once every 6 days.
+	-Small terravat can now hold two weapons.
+	-Terravat has 200% sap efficiency, to make up for it's waiting time: 1 saps can infuse 2 weapons. Standard infusion requires 1 sap per weapon.
 -->
 
 

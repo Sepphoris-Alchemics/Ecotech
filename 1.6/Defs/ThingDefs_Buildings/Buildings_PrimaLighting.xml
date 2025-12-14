@@ -72,7 +72,7 @@
       <expandHomeArea>false</expandHomeArea>
     </building>
     <researchPrerequisites Inherit="False">
-      <li>ET_BrightsapStructures</li>
+      <li>ET_PrimaSapStructures</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
@@ -82,15 +82,15 @@
   </ThingDef>
 
   <ThingDef ParentName="LampBase">
-    <defName>ET_PrimaBrightsapLamp</defName>
-    <label>Prima Brightlamp</label>
+    <defName>ET_PrimaSapLamp_Base</defName>
+    <label>Prima Glowlamp</label>
     <description>A growth of wood and terramass that has multiple portruding sacs of glowsap, allowing it to shed a decent amount of light, almost as much as an industrial lamp.
 \n\nThe lamp itself is quite stable, but the glow of the sap within eventually fades away. You will need to renourish the lamp every year for it to retain it's glow.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <drawSize>(1.2,1.2)</drawSize>
       <drawOffset>(0,0,0.2)</drawOffset>
-      <texPath>Things/Building/PrimaBrightsapLamp/PrimaBrightsapLampA</texPath>
+      <texPath>Things/Building/PrimaSapLamp/PrimaSapLamp_Bright</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.3, 0.5, 0.3)</volume>
@@ -100,7 +100,86 @@
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
     </graphicData>
-    <uiIconPath>Things/Building/PrimaBrightsapLamp/PrimaBrightsapLampA</uiIconPath>
+    <uiIconPath>Things/Building/PrimaSapLamp/PrimaSapLamp_Bright</uiIconPath>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef IsNull="True" />
+    <thingCategories Inherit="False">
+    </thingCategories>
+    <designationCategory Inherit="False">
+    </designationCategory>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>2</Flammability>
+      <Beauty>3</Beauty>
+      <Mass>200</Mass>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <fillPercent>0.25</fillPercent>
+    <comps Inherit="False">
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>        <!--Same amount as a normal lamp-->
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.016</fuelConsumptionRate>
+        <fuelCapacity>1</fuelCapacity>        <!--Requires only one fuel per year-->
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Brightsap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Glowsap</fuelLabel>
+        <fuelGizmoLabel>Healthy glowsap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires glowsap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <killedLeavings>
+      <ET_TierOnePlating>6</ET_TierOnePlating>
+    </killedLeavings>
+    <pathCost>25</pathCost>
+    <passability>PassThroughOnly</passability>
+    <rotatable>false</rotatable>
+    <stealable>false</stealable>
+    <building>
+      <deconstructible>false</deconstructible>
+      <expandHomeArea>false</expandHomeArea>
+    </building>
+    <researchPrerequisites Inherit="False">
+      <li>ET_PrimaSapStructures</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <canOverlapZones>false</canOverlapZones>
+    <fertility>0</fertility>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="LampBase">
+    <defName>ET_PrimaSapLamp_Bright</defName>
+    <label>Prima Brightlamp</label>
+    <description>A growth of wood and terramass that has multiple portruding sacs of glowsap, allowing it to shed a decent amount of light, almost as much as an industrial lamp.
+\n\nThe lamp itself is quite stable, but the glow of the sap within eventually fades away. You will need to renourish the lamp every year for it to retain it's glow.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <drawSize>(1.2,1.2)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <texPath>Things/Building/PrimaSapLamp/PrimaSapLamp_Bright</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/PrimaSapLamp/PrimaSapLamp_Bright</uiIconPath>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Building</altitudeLayer>
     <minifiedDef IsNull="True" />
@@ -152,10 +231,10 @@
       <expandHomeArea>false</expandHomeArea>
     </building>
     <researchPrerequisites Inherit="False">
-      <li>ET_BrightsapStructures</li>
+      <li>ET_PrimaSapStructures</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-    <canOverlapZones>true</canOverlapZones>
+    <canOverlapZones>false</canOverlapZones>
     <fertility>0</fertility>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
   </ThingDef>

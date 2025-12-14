@@ -19,6 +19,7 @@
       <MaxHitPoints>32</MaxHitPoints> <!-- main wall's durability/8, rounded to nearest whole-->
     </statBases>
     <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
     <pathCost>28</pathCost>
     <plant>
       <fertilityMin>0.1</fertilityMin>
@@ -46,8 +47,6 @@
       <visualSizeRange>0.3~0.8</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
       <purpose>Misc</purpose>
-      <neverMultiSelect>true</neverMultiSelect>
-      <selectable>true</selectable>
     </plant>
     <comps>
       <li Class="Ecotech.CompProperties_SapInfusable">

@@ -2,31 +2,58 @@
 <Defs>
 
   <ThingDef ParentName="ET_FundamentalPlantBase">
-    <defName>ET_PrimaBrightsapLampPlant</defName>
-    <label>Prima Brightlamp Sprout</label>
-    <description>A growing sprout that will shape itself into a sturdy Brightlamp. Brightlamps provide light by only using brightsap.</description>
+    <defName>ET_PrimaSapLampPlant</defName>
+    <label>Prima sap lamp sprout</label>
+    <description>A growing sprout that will shape itself into a sturdy sap lamp. These lamps provide light simply by the presence of the sap within, and requires upkeep only once every year.
+\n\nMutation potential: &lt;color=#E8E1A4&gt;HIGH&lt;/color&gt;</description>
     <graphicData>
-      <texPath>Things/Plant/PrimaBrightsapLamp_Mature</texPath>
+      <texPath>Things/Plant/PrimaSapLamp</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <plant>
       <topWindExposure>0.15</topWindExposure>
       <growDays>1.5</growDays>
-      <immatureGraphicPath>Things/Plant/PrimaBrightsapLamp_Immature</immatureGraphicPath>
+      <immatureGraphicPath>Things/Plant/PrimaSapLamp</immatureGraphicPath>
       <visualSizeRange>0.8~1.2</visualSizeRange>
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
-        <glowColor>(238,211,77,0)</glowColor>
+        <glowColor>(232,255,164,0)</glowColor>
+      </li>
+      <li Class="Ecotech.CompProperties_SapInfusable">
+        <supportedSaps>
+          <li>ET_Brightsap</li>
+          <li>ET_Endosap</li>
+          <li>ET_Hypersap</li>
+          <li>ET_Chargesap</li>
+        </supportedSaps>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
-        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_PrimaBrightsapLamp</transformedThing>
-        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+        <!--<compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>-->
+        <transformedThing>ET_PrimaSapLamp_Base</transformedThing>
+        <sapTransformOptions>
+          <li>
+            <sap>ET_Brightsap</sap>
+            <result>ET_PrimaSapLamp_Bright</result>
+            <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+          </li>
+          <li>
+            <sap>ET_Endosap</sap>
+            <result>ET_PrimaSapLamp_Endo</result>
+          </li>
+          <li>
+            <sap>ET_Hypersap</sap>
+            <result>ET_PrimaSapLamp_Hyper</result>
+          </li>
+          <li>
+            <sap>ET_Chargesap</sap>
+            <result>ET_PrimaSapLamp_Charge</result>
+          </li>
+        </sapTransformOptions>
       </li>
       <li Class="CompProperties_InspectString">
-        <inspectString>Growing into: Prima Brightlamp</inspectString>
+        <inspectString>Mutation potential: &lt;color=#B2A644&gt;HIGH&lt;/color&gt;</inspectString>
       </li>
     </comps>
     <tradeTags Inherit='false'>
