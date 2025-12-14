@@ -3,7 +3,7 @@
 <!--==========NEW YEAR'S DEV NOTES==========
 
 -Rebalanced saps; glowsap isn't near as spammy, and has much lowered outputs.
--To help balance this, glowsap blooms now appears in the wild.
+-To help balance this, glowsap blooms now appear in the wild.
 -Structures that also consume glowsap have also had their requirements lowered (such as sap filter only needing 200 instead of 300)
 
 -NEW MAJOR FEATURE: PLANT MUTATION
@@ -39,7 +39,10 @@
 	-NEW: Cryosap, a sap believed to originate from the highest mountaintop of the world.
 	-NEW: Arcsap, a sap believed to contain energy from every lightning strike that ever occured. 
 	-Shocksap has been renamed to Chargesap, and now has uses with organic tech (but is still more applicable to lithic tech).
-	-'Archsap' has been removed as an item, as it didn't fit the nature theme well. It's effects now exist across the new saps.
+	-Archsap has been removed as an item, as it didn't fit the nature theme well. It's effect (infinite lifespan) now exists across the new saps.
+	-Deepsap now serves as a darklight source, and Deepsap Blooms can be found naturally in caves.
+	-Deepsap's effects have been heavily nerfed due to how early-game it now is. Deepsap-infused content only grows 50% faster, instead of 90%.
+	-The darksap bloom (which was just a retextured glowsap bloom) has been removed, as the deepsap bloom makes this entirely redundant.
 
 -STRUCTURES:
 	-Sap Lamps now have more variants.

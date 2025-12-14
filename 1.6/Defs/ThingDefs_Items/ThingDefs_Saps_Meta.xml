@@ -50,19 +50,17 @@ The metasaps are
     <allowedArchonexusCount>100</allowedArchonexusCount>
   </ThingDef>-->
 
+
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Deepsap</defName>
     <label>Deepsap</label>
-    <description>A jar of refined, potent terrasap, named due to only being found within roots miles underground. Deepsap is required for more advanced and complex procedures involving Terratech, and is a very valuable resource to colonies that know how to utilize it.
-\n\nLike glowsap and brightsap, deepsap is not directly infused into other Terratech. Instead, it is most often used as a catalyst, taking an older creation and retroactively applying a newer, stronger iteration to it.
-\nDeepsap also allows Terrastructures to root deeper into the ground, allowing it to pull more nutrients and grow into a stronger structure. This is commonplace is more advanced structures, but can be applied to earlier Terrastructures too. Structures that utilize Deepsap will generally have "Deeproot" in their name.
-\nDeepsap is quite rare and can't be grown, but it's nutrient concentration makes it a long-lasting sap source, fit for even the biggest of terrastructures. Deepsap is considered a "Metasap", meaning it's potency can only be handled by stronger Terraweapons.
-\n\nUse cases:
-Allows matured weapons to be freely be replanted and regrown in 10% of original growth time (uses Deepsap).
-Creation of Deeproot Crucible
-Creation of Elderwood Chambertree
-Creation of Stellic Crucible
-Creates Deeproot Terravats</description>
+    <description>A jar of refined, potent terrasap, named due to it being almost exclusively located miles underground. Deepsap itself is rather plentiful, but blooms that contain it only appear exclusively in caves. This makes it a relatively rare sap to get ahold of.
+\nDeepsap allows Terrastructures to root deeper into the ground, allowing it to pull more nutrients up to the surface. This is commonplace is more advanced structures, but can be applied to earlier Terrastructures too. Structures that utilize Deepsap will generally have "Deeproot" in their name.
+\nDeepsap emits a similar color to darklight sources, making any Deepsap plant desirable to those that prefer such lighting. However, it cannot thoroughly replace glowsap, brightsap, or any other sap type.
+\n\nNotable applications:
+Light-emitting plants infused with deepsap will instead emit darklight
+Deepsap-infused weapons can be replanted and regrown 50% faster than other variants.
+Deepsap-infused plants and structures will drop a deepsap seed, which will regrow the appropriate plant or structure in 50% of the original time.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Deepsap</texPath>

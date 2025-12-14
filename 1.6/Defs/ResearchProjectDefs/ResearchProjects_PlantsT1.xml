@@ -356,9 +356,9 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
 
   <ResearchProjectDef>
     <defName>ET_SapBasics</defName>    <!--Unlocks Glowsap plants-->
-    <label>Glowsap Cultivation</label>
-    <description>Learn how to cultivate plants and trees that produce Glowsap, a crucial item that fuels many structures and processes.
-Dark mode included!</description>
+    <label>Sap Bloom Cultivation</label>
+    <description>Learn how to cultivate plants that produce rudimentary saps, a crucial item that fuels many structures and processes.
+Glowsap blooms can also be found below the open sky, while deepsap blooms can also be found within caves.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>

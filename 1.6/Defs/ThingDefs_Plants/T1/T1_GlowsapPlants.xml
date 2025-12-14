@@ -11,7 +11,6 @@ Due to it's size, this plant only produces a trace amount of glowsap. It is advi
       <texPath>Things/Plant/GlowsapBloom</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
-    <altitudeLayer>Item</altitudeLayer>
     <minifiedDef IsNull="True" />
     <statBases>
       <Beauty>8</Beauty>
@@ -61,34 +60,36 @@ Due to it's size, this plant only produces a trace amount of glowsap. It is advi
       <wildOrder>2</wildOrder>
       <wildClusterWeight>0.002</wildClusterWeight>
       <wildClusterSizeRange>
-				<min>1</min>
+				<min>2</min>
 				<max>7</max>
 			</wildClusterSizeRange>
 			<wildClusterRadius>6</wildClusterRadius>
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>6.9</glowRadius>
+        <glowRadius>4.9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
       </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Mutation potential: &lt;color=#B2A644&gt;HIGH&lt;/color&gt;</inspectString>
+      </li>
     </comps>
   </ThingDef>
 
   <ThingDef ParentName="PlantBaseNonEdible">
-    <defName>ET_DarksapBloom</defName>
-    <label>Darksap Bloom</label>
-    <description>A small plant that produces glowsap, but has a modified appearance. Emits vibrant purple and blue colors, and compliments darklight ambience quite well.
-Like most other blooms, it can quickly produce sap, but provides a very small yield. A Glowsap Tree is recommended for a reliable source.</description>
+    <defName>ET_DeepsapBloom</defName>
+    <label>Deepsap Bloom</label>
+    <description>A small plant that produces deepsap. Emits a glow that's almost identical to darklight, making it ideal for colonies that prefer such ambience.
+Like most other unmodified blooms, it can quickly produce sap, but provides a very small yield. A farm is recommended for acquiring decent amounts of deepsap.</description>
     <!--<description>A small plant bioengineered to produce Darksap. Glows a pale purple color, and compliments darklight ambience quite well.
 Like most other blooms, it can quickly produce sap, but provides a very small yield. A Darksap Tree is recommended for a reliable source.</description>-->
     <graphicData>
-      <texPath>Things/Plant/DarksapBloom</texPath>
+      <texPath>Things/Plant/DeepsapBloom</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
-    <altitudeLayer>Item</altitudeLayer>
     <minifiedDef IsNull="True" />
     <statBases>
       <Beauty>8</Beauty>
@@ -103,10 +104,10 @@ Like most other blooms, it can quickly produce sap, but provides a very small yi
       <fertilitySensitivity>0.5</fertilitySensitivity>
       <growMinGlow>0</growMinGlow>
       <harvestWork>750</harvestWork>
-      <harvestedThingDef>ET_Glowsap</harvestedThingDef>
+      <harvestedThingDef>ET_Deepsap</harvestedThingDef>
       <!--<harvestedThingDef>ET_Darksap</harvestedThingDef>-->
       <burnedThingDef IsNull="True" />
-      <harvestYield>4</harvestYield> <!--One will produce about 30 every year, not accounting yield differences-->
+      <harvestYield>1</harvestYield> <!--One will produce about 30 every year, not accounting yield differences-->
       <harvestMinGrowth>0.8</harvestMinGrowth>
       <harvestAfterGrowth>0.05</harvestAfterGrowth>
       <harvestTag>Standard</harvestTag>
@@ -123,7 +124,8 @@ Like most other blooms, it can quickly produce sap, but provides a very small yi
       </sowResearchPrerequisites>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>
-      <growDays>8</growDays>
+      <growDays>10</growDays>
+      <cavePlant>true</cavePlant>
       <dieIfLeafless>false</dieIfLeafless>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <visualSizeRange>0.3~0.8</visualSizeRange>
@@ -132,11 +134,15 @@ Like most other blooms, it can quickly produce sap, but provides a very small yi
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>6.9</glowRadius>
+        <glowRadius>4.9</glowRadius>
         <glowColor>(78,226,229,0)</glowColor>
       </li>
       <li Class="CompProperties_SelfhealHitpoints">
         <ticksPerHeal>2000</ticksPerHeal> <!-- 30 hp per day, must be a multiple of 2000, since plants have Long ticker -->
+      </li>
+      <li Class="CompProperties_DarklightOverlay" MayRequire="Ludeon.RimWorld.Ideology">
+        <fireSize>0</fireSize>
+        <offset>(0,0,0.2)</offset>
       </li>
     </comps>
   </ThingDef>

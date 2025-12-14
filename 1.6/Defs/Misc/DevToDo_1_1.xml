@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--==========1.6 Backlog (as of 9.8.25)==========
+<!--==========1.6 Backlog (as of 12.14.25)==========
 
 =====As of 9.8.25, most of these features will need to appear in a future update.=====
 =====Anything marked 'Incomplete' will be added as soon as possible, while anything marked 'delayed' will be added in a larger future update.=====
@@ -15,6 +15,12 @@ CORE MECHANICS:
 	-DELAYED: Add Soulbloom kill mechanic: pawn that dies to soulbloom hediff becomes unique statue.
 	-DELAYED: Deepsap Changes: used for water-based plants. However, only a couple water-based plants exist.
 	-INCOMPLETE: Add Potency weapon mechanic
+	
+	-DELAYED:
+		-Creation of Deeproot Crucible
+		-Creation of Elderwood Chambertree
+		-Creation of Stellic Crucible
+		-Creates Deeproot Terravats
 ====================
 
 ====================
