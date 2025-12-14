@@ -13,10 +13,11 @@
     <plant>
       <topWindExposure>0.15</topWindExposure>
       <growDays>1.5</growDays>
-      <immatureGraphicPath>Things/Plant/PrimaSapLamp</immatureGraphicPath>
+      <immatureGraphicPath IsNull="true" />
       <visualSizeRange>0.8~1.2</visualSizeRange>
     </plant>
     <comps>
+      <li Class="CompProperties_Styleable"/>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
         <glowColor>(232,255,164,0)</glowColor>
@@ -36,6 +37,7 @@
           <li>
             <sap>ET_Brightsap</sap>
             <result>ET_PrimaSapLamp_Bright</result>
+            <plantStyle>ET_BrightsapStyle_PrimaSapLampPlant</plantStyle>
             <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
           </li>
           <li>

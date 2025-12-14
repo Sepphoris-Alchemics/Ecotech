@@ -44,6 +44,8 @@ namespace Ecotech
                     if (comp != null)
                     {
                         comp.infusedSapDef = Sap.def;
+
+                        comp.ApplySapStyle();
                     }
 
                     // Consume carried sap safely

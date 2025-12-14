@@ -139,6 +139,29 @@ namespace Ecotech
         {
             base.PostExposeData();
             Scribe_Defs.Look(ref infusedSapDef, "infusedSapDef");
+
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && infusedSapDef != null)
+            {
+                ApplySapStyle();
+            }
+        }
+
+        public void ApplySapStyle()
+        {
+            if (infusedSapDef == null)
+                return;
+
+            var maturityComp = parent.TryGetComp<ThingComp_PlantTransformOnMaturity>();
+            if (maturityComp?.Props?.sapTransformOptions == null)
+                return;
+
+            var option = maturityComp.Props.sapTransformOptions
+                .FirstOrDefault(o => o.sap == infusedSapDef);
+
+            if (option?.plantStyle != null)
+            {
+                ThingStyleHelper.SetStyleDef(parent, option.plantStyle);
+            }
         }
     }
 }

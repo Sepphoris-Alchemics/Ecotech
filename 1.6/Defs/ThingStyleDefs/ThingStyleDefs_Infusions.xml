@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--This is a hacky way to allow plants to change graphics when infused.
+These styles are exclusively tied to saps. They will not appear in any menues or options.
+-->
+
+  <ThingStyleDef Name="ET_InfusionStyleBase" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+  </ThingStyleDef>
+
+<!--Brightsap Styles-->
+
+  <ThingStyleDef>
+    <defName>ET_BrightsapStyle_PrimaSapLampPlant</defName>
+    <overrideLabel>brightlamp sprout</overrideLabel>
+    <graphicData>
+      <texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <!--<drawSize>(1,1)</drawSize>
+      <shaderType>CutoutPlant</shaderType>-->
+    </graphicData>
+
+  </ThingStyleDef>
+
+</Defs>

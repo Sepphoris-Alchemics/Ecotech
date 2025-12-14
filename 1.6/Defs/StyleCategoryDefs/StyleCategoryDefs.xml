@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <StyleCategoryDef>
+    <defName>ET_SapInfusionStyles</defName>
+    <label>sap infusion styles</label>
+    <fixedIdeoOnly>true</fixedIdeoOnly>
+    <thingDefStyles>
+      <li>
+        <thingDef>ET_PrimaSapLampPlant</thingDef>
+        <styleDef>ET_BrightsapStyle_PrimaSapLampPlant</styleDef>
+      </li>
+    </thingDefStyles>
+  </StyleCategoryDef>
+
+</Defs>
