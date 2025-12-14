@@ -6,7 +6,6 @@ using System.Linq;
 using System.Reflection.Emit;
 using Verse;
 using Verse.AI;
-using UnityEngine;
 
 namespace Ecotech
 {
@@ -14,7 +13,7 @@ namespace Ecotech
     {
         public ThingDef infusedSapDef;
         public CompProperties_SapInfusable Props =>
-        (CompProperties_SapInfusable)props;
+            (CompProperties_SapInfusable)props;
 
         public bool IsInfused => infusedSapDef != null;
 
@@ -87,21 +86,6 @@ namespace Ecotech
             }
 
             Find.WindowStack.Add(new FloatMenu(options));
-        }
-
-        public SapTransformOption GetActiveOption()
-        {
-            if (infusedSapDef == null)
-                return null;
-
-            var maturityComp =
-                parent.TryGetComp<ThingComp_PlantTransformOnMaturity>();
-
-            if (maturityComp?.Props?.sapTransformOptions == null)
-                return null;
-
-            return maturityComp.Props.sapTransformOptions
-                .FirstOrDefault(o => o.sap == infusedSapDef);
         }
 
         private void AddSapOption(List<FloatMenuOption> options, Pawn pawn, ThingDef sapDef)

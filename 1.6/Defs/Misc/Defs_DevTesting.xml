@@ -10,7 +10,6 @@
       <graphicClass>Graphic_Random</graphicClass>
       <color>(68,74,49)</color>
     </graphicData>
-    <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
     <minifiedDef IsNull="True" />
     <statBases>
@@ -64,32 +63,14 @@
           <li>
             <sap>ET_Brightsap</sap>
             <result>ET_TestBuildingB</result>
-            <graphicData>
-              <texPath>Things/Building/TerraseedResearchBench</texPath>
-              <graphicClass>Graphic_Single</graphicClass>
-              <drawSize>(1.0,1.0)</drawSize>
-              <color>(255,255,255)</color>
-            </graphicData>
           </li>
           <li>
             <sap>ET_Endosap</sap>
             <result>ET_TestBuildingC</result>
-            <graphicData>
-              <texPath>Things/Building/TerraseedResearchBench</texPath>
-              <graphicClass>Graphic_Single</graphicClass>
-              <drawSize>(1.0,1.0)</drawSize>
-              <color>(255,255,255)</color>
-            </graphicData>
           </li>
           <li>
             <sap>ET_Hypersap</sap>
             <result>ET_TestBuildingD</result>
-            <graphicData>
-              <texPath>Things/Building/TerraseedResearchBench</texPath>
-              <graphicClass>Graphic_Single</graphicClass>
-              <drawSize>(1.0,1.0)</drawSize>
-              <color>(255,255,255)</color>
-            </graphicData>
           </li>
         </sapTransformOptions>
       </li>
