@@ -4,6 +4,7 @@
   <ThingDef ParentName="ET_FundamentalPlantBase">
     <defName>ET_PrimaSapLampPlant</defName>
     <label>Prima sap lamp sprout</label>
+    <thingClass>Ecotech.Plant_SapInfusable</thingClass>
     <description>A growing sprout that will shape itself into a sturdy sap lamp. These lamps provide light simply by the presence of the sap within, and requires upkeep only once every year.
 \n\nMutation potential: &lt;color=#E8E1A4&gt;HIGH&lt;/color&gt;</description>
     <graphicData>
@@ -39,6 +40,12 @@
             <result>ET_PrimaSapLamp_Bright</result>
             <plantStyle>ET_BrightsapStyle_PrimaSapLampPlant</plantStyle>
             <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+            <graphicData>
+              <texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+              <drawSize>(1,1)</drawSize>
+              <shaderType>CutoutPlant</shaderType>
+            </graphicData>
           </li>
           <li>
             <sap>ET_Endosap</sap>

@@ -146,6 +146,21 @@ namespace Ecotech
             }
         }
 
+        public SapTransformOption GetActiveOption()
+        {
+            if (infusedSapDef == null)
+                return null;
+
+            var maturityComp =
+                parent.TryGetComp<ThingComp_PlantTransformOnMaturity>();
+
+            if (maturityComp?.Props?.sapTransformOptions == null)
+                return null;
+
+            return maturityComp.Props.sapTransformOptions
+                .FirstOrDefault(o => o.sap == infusedSapDef);
+        }
+
         public void ApplySapStyle()
         {
             if (infusedSapDef == null)

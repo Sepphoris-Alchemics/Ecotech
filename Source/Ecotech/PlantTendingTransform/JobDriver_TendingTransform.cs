@@ -44,7 +44,7 @@ namespace Ecotech
                     if (comp != null)
                     {
                         comp.infusedSapDef = Sap.def;
-
+                        Plant.DirtyMapMesh(Plant.Map);
                         comp.ApplySapStyle();
                     }
 

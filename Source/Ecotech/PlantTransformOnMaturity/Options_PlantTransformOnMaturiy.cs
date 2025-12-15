@@ -14,5 +14,6 @@ namespace Ecotech
         public ThingDef sap;
         public ThingDef result;
         public ThingStyleDef plantStyle;
+        public GraphicData graphicData;
     }
 }
