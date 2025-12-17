@@ -206,7 +206,7 @@ Infusing a weapon with this sap comes at a cost; the high focus on ammo generati
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>ET_Shocksap</defName>
+    <defName>ET_Chargesap</defName>
     <label>Shocksap</label>
     <description>A jar of terrasap containing a sap that is highly reactive to the world around it. It's makeup allows it to constantly carry a small electrical charge, which can be exploited by very specific weapons. 
 \n\nWeapons utilizing shocksap coat their projectiles in it, allowing the projectiles to electrocute anything they hit to wildly varying degrees. While it's innate charge allows infused weapons to deliver a small electrocution, it's usefully is greater when used in, or for, lithoid weaponry.

@@ -106,7 +106,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
                 <amount>12</amount>
               </li>
               <!--<li>
-                <thingDef>ET_Shocksap</thingDef>
+                <thingDef>ET_Chargesap</thingDef>
                 <amount>6</amount>
               </li>-->
             </ingredientSets>
@@ -123,7 +123,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
                 <amount>2</amount>
               </li>
               <!--<li>
-                <thingDef>ET_Shocksap</thingDef>
+                <thingDef>ET_Chargesap</thingDef>
                 <amount>6</amount>
               </li>-->
             </ingredientSets>

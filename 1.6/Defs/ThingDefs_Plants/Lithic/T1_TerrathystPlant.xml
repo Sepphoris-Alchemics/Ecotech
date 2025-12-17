@@ -136,7 +136,7 @@ These smaller growths can grow on any fertile terrain, though larger growths req
       <sowTags>
         <li>Ground</li>
         <li>ET_SapTerrainTierOne</li>
-        <li>ET_ShocksapCompatible</li>
+        <li>ET_ChargesapCompatible</li>
       </sowTags>
       <sowResearchPrerequisites>
         <li>ET_TerrathystEssentials</li>

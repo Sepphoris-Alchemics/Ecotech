@@ -1,21 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <HediffDef>
-    <defName>ET_GlowsapInfusion_Hediff</defName>
-    <label>glowsap infusion</label>
-    <description>Glowsap infusion applied to the tree. Each severity point corresponds to one infused pod charge.</description>
-
-    <hediffClass>Hediff</hediffClass>
-    <isBad>false</isBad>
-    <defaultSeverity>0</defaultSeverity>
-    <maxSeverity>25</maxSeverity>
-    <stages>
-      <li>
-        <minSeverity>1</minSeverity>
-        <label>glowsap-infused</label>
-      </li>
-    </stages>
-  </HediffDef>
-  
 </Defs>
