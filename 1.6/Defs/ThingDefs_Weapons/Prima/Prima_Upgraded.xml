@@ -1,29 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--
+TIME TICK BASICS:
+60,000 = 1 day
+900,000 = 1 quadrum (15 days)
+3,600,000	 = 1 quadrum (60 days)
+
+Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
+			-Immature light: 30 days (1800000) | 30 health
+			-Immature normal: 45 days (2700000) | 35 health
+			-Immature heavy: 60 days (3600000) | 50 health
+
+			-Mature light: 45 days (2700000) | 40 health
+			-Mature normal: 60 days (3600000) | 45 health
+			-Mature heavy: 75 days (4500000) | 50 health
+-->
+
 	<DesignatorDropdownGroupDef>
 		<defName>ET_PrimaTurretGroup</defName>
 		<label>prima turrets</label>
 	</DesignatorDropdownGroupDef>
-
-<!--Upgraded Primas get +10 health and -1 flammability. Lifespan times below:
-			-Immature light: 10 days (600000) | 40 health
-			-Immature normal: 12 days (720000) | 45 health
-			-Immature heavy: 14 days (840000) | 50 health
-
-			-Mature light: 14 days (840000) | 60 health
-			-Mature normal: 16 days (960000) | 65 health
-			-Mature heavy: 18 days (1080000) | 70 health
-			
-			
-			POST-TESTING LIFESPANS: Prima weapons now generally last more than a quadrum. Their upgraded growth time is only +2 instead of +3 or +4, due to their ease of access.
-			Immature Light: 14 days (840000) | 30 health
-			Immature Normal: 16 days (960000) | 35 health
-			Immature Heavy: 18 days (1080000) | 40 health
-			
-			Mature Light: 16 days (960000) | 40 health
-			Mature Normal: 18 days (1080000) | 45 health
-			Mature Heavy: 20 days (1200000) | 50 health-->
 
 	<ThingDef ParentName="UpgradedUnmodifiedTerraweapon"> <!--Counterpart: Revolver-->
 		<defName>ET_PrimaPistolUpgraded</defName>
@@ -94,7 +91,7 @@
 			<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>945000</lifespanTicks>
+          <lifespanTicks>2700000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
@@ -171,7 +168,7 @@
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
@@ -252,7 +249,7 @@
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks> <!--Light weapon-->
+          <lifespanTicks>2700000</lifespanTicks> <!--Light weapon-->
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
@@ -344,7 +341,7 @@ While this weapon doesn't feature any notable features, uninfused weapons are re
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -441,7 +438,7 @@ While this weapon doesn't feature any notable features, uninfused weapons are re
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+          <lifespanTicks>4500000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
           <lifespanBarColor>(28, 31, 15)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>

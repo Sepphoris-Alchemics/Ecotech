@@ -1,27 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!--
-		
-		
-		<ThingDef Abstract="True" Name="MeleeWeaponPlantBase" ParentName="BaseWeapon">
-    <statBases>
-      <MarketValue>200</MarketValue>
-      <Mass>1</Mass>
-    </statBases>
-    <techLevel>Neolithic</techLevel>
-		<smeltable>false</smeltable>
-    <burnableByRecipe>true</burnableByRecipe>
-    <thingCategories>
-      <li>WeaponsMelee</li>
-    </thingCategories>
-    <weaponTags>
-      <li>ET_PlantWeapon</li>
-    </weaponTags>
-    <weaponClasses>
-      <li>Melee</li>
-    </weaponClasses>
-  </ThingDef>-->
+<!--
+TIME TICK BASICS:
+60,000 = 1 day
+900,000 = 1 quadrum (15 days)
+3,600,000	 = 1 quadrum (60 days)
+
+Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
+			-Immature light: 30 days (1800000) | 30 health
+			-Immature normal: 45 days (2700000) | 35 health
+			-Immature heavy: 60 days (3600000) | 50 health
+
+			-Mature light: 45 days (2700000) | 40 health
+			-Mature normal: 60 days (3600000) | 45 health
+			-Mature heavy: 75 days (4500000) | 50 health
+-->
 
 	<ThingDef ParentName="BaseWeapon">
 		<defName>ET_PrimaKnife</defName>
@@ -83,7 +77,7 @@
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks>
+          <lifespanTicks>1800000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -148,7 +142,7 @@
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -218,7 +212,7 @@
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks>
+          <lifespanTicks>2700000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->

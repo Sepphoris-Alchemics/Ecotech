@@ -58,7 +58,7 @@ Due to it's size, this plant only produces a trace amount of glowsap. It is advi
 				<Tundra>0.002</Tundra>
 			</wildBiomes>
       <wildOrder>2</wildOrder>
-      <wildClusterWeight>0.002</wildClusterWeight>
+      <wildClusterWeight>0.001</wildClusterWeight>
 			<wildClusterRadius>6</wildClusterRadius>
     </plant>
     <comps>

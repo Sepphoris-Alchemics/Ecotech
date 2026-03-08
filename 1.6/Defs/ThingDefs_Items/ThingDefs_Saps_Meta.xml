@@ -59,8 +59,8 @@ The metasaps are
 \nDeepsap emits a similar color to darklight sources, making any Deepsap plant desirable to those that prefer such lighting. However, it cannot thoroughly replace glowsap, brightsap, or any other sap type.
 \n\nNotable applications:
 Light-emitting plants infused with deepsap will instead emit darklight
-Deepsap-infused weapons can be replanted and regrown 50% faster than other variants.
-Deepsap-infused plants and structures will drop a deepsap seed, which will regrow the appropriate plant or structure in 50% of the original time.</description>
+Deepsap-infused weapons can be replanted and regrown 50% faster than other variants, via their dropped seed.
+There is a chance that the a dropped seed can't root properly to deepsap resevoirs, resulting in the outcome being uninfused.</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Deepsap</texPath>

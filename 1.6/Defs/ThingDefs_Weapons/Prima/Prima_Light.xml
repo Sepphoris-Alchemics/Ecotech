@@ -1,82 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Greatbow-->
-		<defName>ET_PrimaStakecaster</defName> <!--has the pod growth time and research level of light weapons, but the duration of heavy-->
-		<label>Primcaster</label>
-		<description>A biotic weapon, patterned off of a heavy bolt caster, and grown straight from a specialized pod. Extremely powerful and capable of inflicting deadly wounds, but is slow to aim, with equally slow projectile speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
-		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/ET_PrimaCrossbowBasic</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.95</drawSize>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<weaponTags Inherit='False'>
-      <li>ET_PlantWeapon</li>
-		</weaponTags>
-    <weaponClasses>
-			<li>LongShots</li>
-      <li>Ranged</li>
-			<li>RangedHeavy</li>
-    </weaponClasses>
-    <relicChance>0</relicChance>
-		<statBases>
-      <MaxHitPoints>40</MaxHitPoints>
-			<AccuracyTouch>0.65</AccuracyTouch>
-			<AccuracyShort>0.65</AccuracyShort>
-			<AccuracyMedium>0.75</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>1.125</RangedWeapon_Cooldown> <!--CD lowered by 25% instead of 50%-->
-			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>2.6</Mass>
-			<Flammability>3</Flammability>
-      <WorkToMake>4000</WorkToMake>
-		</statBases>
-		<techLevel>Neolithic</techLevel>
-		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_StakeLight</defaultProjectile>
-        <warmupTime>3</warmupTime>
-        <range>31.9</range>
-        <soundCast>ET_Sound_LightStake</soundCast>
-        <muzzleFlashScale>0</muzzleFlashScale>
-      </li>
-    </verbs>
-		<tools>
-			<li>
-				<label>grip</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tickerType>Normal</tickerType>
-		<comps>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-          <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-        </li>
-      <li Class="Ecotech.ThingCompProperties_InstallableInSlottedThingTransformer"/>
-		</comps>
-	</ThingDef>
+<!--
+TIME TICK BASICS:
+60,000 = 1 day
+900,000 = 1 quadrum (15 days)
+3,600,000	 = 1 quadrum (60 days)
+
+Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
+			-Immature light: 30 days (1800000) | 30 health
+			-Immature normal: 45 days (2700000) | 35 health
+			-Immature heavy: 60 days (3600000) | 50 health
+
+			-Mature light: 45 days (2700000) | 40 health
+			-Mature normal: 60 days (3600000) | 45 health
+			-Mature heavy: 75 days (4500000) | 50 health
+-->
 
 	<ThingDef ParentName="BaseUnupgradableTerraweapon"> <!--Counterpart: Revolver-->
 		<defName>ET_PrimaPistol</defName>
@@ -147,7 +86,7 @@
 			<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks>
+          <lifespanTicks>1800000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -205,7 +144,6 @@
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>-->
-
       <li>
         <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
@@ -242,7 +180,7 @@
 			<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>840000</lifespanTicks> <!--10 days-->
+          <lifespanTicks>1800000</lifespanTicks> <!--10 days-->
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -259,187 +197,6 @@
 			</li>
 			<li Class="VEF.Weapons.MakeshiftProperties">
 				<shots>2~6</shots>
-			</li>
-		</modExtensions>
-	</ThingDef>
-
-<!--Medium Weapons-->
-
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Pump Shotgun-->
-		<defName>ET_PrimaShotgun</defName>
-		<label>prima scattershot</label>
-		<description>A biotic weapon, patterned off of a semi-automatic shotgun, and grown straight from a specialized pod. They are quite powerful, but have very limited range and speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
-		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/ET_PrimaShotgunBasic</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.85</drawSize>
-		</graphicData>
-		<soundInteract>Interact_Shotgun</soundInteract>
-		<weaponTags Inherit='False'>
-      <li>ET_PlantWeapon</li>
-			<li>ET_PrimaRangedBasic</li>
-		</weaponTags>
-    <weaponClasses>
-			<li>ShortShots</li>
-      <li>Ranged</li>
-    </weaponClasses>
-    <relicChance>0</relicChance>
-		<statBases>
-      <MaxHitPoints>35</MaxHitPoints>
-			<AccuracyTouch>0.80</AccuracyTouch>
-			<AccuracyShort>0.80</AccuracyShort>
-			<AccuracyMedium>0.70</AccuracyMedium>
-			<AccuracyLong>0.30</AccuracyLong>
-			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
-			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.2</Mass>
-			<Flammability>3</Flammability>
-      <WorkToMake>12000</WorkToMake>
-		</statBases>
-		<techLevel>Neolithic</techLevel>
-		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornShotgun</defaultProjectile>
-        <warmupTime>1.125</warmupTime>
-        <range>12.9</range>
-        <soundCast>Shot_Shotgun</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>0</muzzleFlashScale>
-      </li>
-    </verbs>
-		<tools>
-			<li>
-				<label>grip</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tickerType>Normal</tickerType>
-		<comps>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks> <!--16 days-->
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor> <!--old 47, 56, 35-->
-          <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-        </li>
-		</comps>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
-		<defName>ET_PrimaCarbine</defName>
-		<label>prima carbine</label>
-		<description>A biotic weapon, patterned off of an old rifle, and grown straight from a specialized pod. Their growth time, damage, and narrow projectile range make this a well-rounded Terraweapon.
-\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
-\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as two, to as many as five.</description>
-		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/ET_PrimaCarbineBasic</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1</drawSize>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<weaponTags Inherit='False'>
-      <li>ET_PlantWeapon</li>
-			<li>ET_PrimaRangedBasic</li>
-		</weaponTags>
-    <relicChance>0</relicChance>
-		<statBases>
-      <MaxHitPoints>35</MaxHitPoints>
-			<AccuracyTouch>0.50</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.60</AccuracyMedium>
-			<AccuracyLong>0.40</AccuracyLong>
-			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
-			<DeteriorationRate>0</DeteriorationRate>
-			<Mass>1.6</Mass>
-			<Flammability>3</Flammability>
-      <WorkToMake>12000</WorkToMake>
-		</statBases>
-		<techLevel>Neolithic</techLevel>
-		<smeltable>false</smeltable>
-    <equippedAngleOffset>50</equippedAngleOffset>
-    <verbs> <!--First one is if VWE Makeshift becomes unavailable-->
-      <!--<li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
-        <warmupTime>0.6</warmupTime>
-        <range>23.9</range>
-				<burstShotCount>2</burstShotCount>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-        <soundCast>Shot_AssaultRifle</soundCast>
-        <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>0</muzzleFlashScale>
-      </li>-->
-      <li>
-        <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
-        <warmupTime>0.6</warmupTime>
-        <range>23.9</range>
-				<burstShotCount>2</burstShotCount>
-				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
-        <soundCast>ET_Sound_BlowgunMedium</soundCast>
-        <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>0</muzzleFlashScale>
-      </li>
-    </verbs>
-		<tools>
-			<li>
-				<label>grip</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<tickerType>Normal</tickerType>
-		<comps>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>960000</lifespanTicks>
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-          <!--<expireEffect></expireEffect>-->
-					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
-        </li>
-		</comps>
-		<modExtensions>
-			<li Class="VEF.Weapons.MoteProperties">
-				<fleckDef>WoodBit</fleckDef>
-				<size>0.2</size>
-				<velocity>1</velocity>
-				<angleRange>-15~15</angleRange>
-				<rotationRange>-5~5</rotationRange>
-				<numTimesThrown>1</numTimesThrown>
-			</li>
-			<li Class="VEF.Weapons.MakeshiftProperties">
-				<shots>2~5</shots>
 			</li>
 		</modExtensions>
 	</ThingDef>

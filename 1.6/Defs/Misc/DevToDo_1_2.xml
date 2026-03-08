@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--==========1.2 Backlog (as of 12.14.25)==========
+
+=====As of 9.8.25, most of these features will need to appear in a future update.=====
+=====Anything marked 'Incomplete' will be added as soon as possible, while anything marked 'delayed' will be added in a larger future update.=====
+
+
+
+====================
+Sap variants to add to each Prima weapon:
+	-Endosap
+		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
+	-Hypersap
+		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
+	-Deepsap
+		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
+	-Toxsap
+		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
+	-Chargesap
+		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
+====================
+====================
+Add structures that use each sap
+	-Lamps
+	-Beacons
+	-Terraforge
+
+====================
+====================
+Make sure terraforming tree works
+Make sure the Spectra Tree can be infused
+
+====================
+NEW WEAPONS:
+	-Make sure Embercore Rifle has stages
+====================
+PRIMA WEAPONS:
+	-Add Briar Grenades
+	-(DELAYED) Add remaining upgraded variants
+	-(DELAYED) Rework Acid Launcher to Sap Launcher:
+		-Basesap: Light acidic damage + light slowing
+		-Glowsap: Light acidic damage + lighting up area for a few days
+		-Brightsap: Medium acidic damage + lighting up area for a few days (later: enriches terrain)
+		-Endosap: Medium acidic damage + heavy slowing
+		-Hypersap: High acidic damage
+		(Following saps requires upgraded sap launcher)
+		-Toxsap: Medium acidic damage + poisoning
+		-Deepsap: Light acidic damage + entanglement
+		-Archsap: Very high acidic damage + slowing
+	-All sap launcher filth sticks around for 3-9 days.
+	-Upgraded variant allows infinite infusions, and is needed for more advanced launchers
+	-Like the stakecaster, the sap launcher has multiple phases. Phase 1 - Prima - only supports basic saps, which phase 2 supports protosaps.
+====================
+====================
+BRIAR WEAPONS:
+	-(INCOMPLETE) Finish Briar Weapons:
+		-Add Briar Sword
+		-Add Briar Stakecaster
+		-Add Brair Shotgun
+
+	-(SEMI-COMPLETE) Add Briar Turret recipe (Prima Apex Seed + Periwood Heart)
+		-Requires Organic Aptitude
+		-Needs to be done in a biosynth vat
+		-Once these two items are combined, it results in a single turret seed.
+		-(INCOMPLETE) This seed can be planted to make one turret, but once analyzed it can be easily replicated.
+		-Requires a larger, grown research bench to fully analyze.
+
+	-Briar weapons combine the growability of Prima weapons with the lifespan of Periwood weapons.
+	-Briar weapons inflict a briar debuff, which slows and cuts the pawn it hits.
+	-Briar Weapons have +3 range compared to their Prima counterparts.
+	-Briar weapons cannot have their sap replaced, do not drop anything upon expiry, and cannot be replanted, as they are
+	weapons that fully utilized their sap, and are too unstable to further modify.
+	-Briar weapons can still be replenished by brightsap, but requires a Deeproot Terravat.
+	-Briar weapons can also be soaked in Toxsap, but this too requires a Deeproot Terravat.
+	-Briar weapons grow 75% at the speed of Prima weapons, and have 75% of the Periwood lifespan.
+
+====================
+====================
+PLANTS:
+	- Completely work out Periwood Tree
+		-The Periwood Tree should take time to grow, but produce a periwood heart. This heart is used to grow Periwood weapons
+	
+====================
+
+====================
+STRUCTURES:
+
+	-(INCOMPLETE) Add to Brightsap Lighting:
+		-Create Brightvines
+	-(INCOMPLETE) Create Glowsap Lighting:
+		-Glowsap Lamp
+		-Glowsap Pillar
+		-Glowvines
+	-(INCOMPLETE) Glowsap Lighting comes before Brightsap Lighting.
+	
+====================
+
+====================
+====================
+TECH TIERS:
+	Terratech comes in tech tiers, which is how involved the player needs to be in order to get ahold if it.
+	While the tech tiers doesn't matter much at the moment, it very much will later on.
+	The higher the tech tiers, the stronger the tech is - and the more reactive an Ecotech faction will be when an Industrial faction gets ahold of it.
+
+	-1: COMMONPLACE: Anyone can get ahold of this, with little to no research. this goes up to Periwood Basics.
+	-2: SENSITIVE: This is where factions start guarding their tech, and players need to show dedication. The following is required:
+		-The player gets a debuff for having industrial+ structures on the map.
+		-Conduit Trees function slower if industrial+ structures are on the map (except Reclaimer tree)
+		-Terratech structures will start to wither away with too many industrial+ structures.
+		-Factions may ask for Terratech back if on good or bad terms, but may also be lenient.
+		-This starts at Elderwood applications (T2), and goes up to T3 tech.
+	-3: DEVOTED: Only those who have proven they are fully committed to Terratech can have Devoted tech.
+		-Devoted Tech and higher is explicity outlawed to anyone Industrial+. The tech being returned will be demanded, or seizure squads may be sent in.
+		-If a Neolithic-Medieval faction has this tech, lenience may be shown if they are on goodwill AND the faction agrees to embrace Terratech. Otherwise, the tech must be returned.
+		-Some devoted tech requires meditations.
+	-4: CRUX: The pinnacle and most applicable of Terratech. Only those that have fully embraced all Terratech havbe access to this tier.
+		-Gaining access to Crux Terratech as an Industrial+ faction results in a permanent -100 reputation with Ecotech factions.
+		-Additionally, they'll launch yearly purging raids; raids that include all three factions.
+		-Most Crux tech lines requires meditation to discover. This can be done faster if done cooperatively.
+		-The player gains a +100 bonues with one Ecotech faction, and +50 with the other two.
+	-5: OBSCURED: Tech that doesn't fall into any category, and is likely just arcotech.
+		-Seen as gifts or sacred relics. Generally follows the rules of Crux.
+		-Certain items from these techs can be aquired from quests, or other special methods.
+		-One rare item may also allow an Industrial colony to freely use Ecotech without worry.
+
+====================
+PLANTS:
+	- Add Convergence Conduit Tree
+		-This Conduit Tree takes two different seeds, and attempts to grow something out of them.
+		-Generally this will quickly produce an item matching the seed, and is a quick way to grow a limited amount of items.
+		-However, when two differing seeds that are compatible are thrown together, there is a small chance it produces
+		a new genome, such as Briar.
+	
+====================
+
+====================
+STRUCTURES:
+	- (Possible) Add Deepsap Bay
+		-Deepsap Bays allow the player to place two different seeds in the same bay, producing a special plant every so often.
+		-This is by far the fatest way to grow any weapon. Deepsap growth is 200% faster, and the output is 2, sometimes even 3, weapons.
+		-It's true power lies in fusing different seeds with others, which can produce brand new genomes.
+		-Deepsap Bays only lose Deepsap when seeds are present. Once the two seeds are chosen, the deepsap and seeds cannot be changed.
+		-Deepsap is extremely rare; it can only be bought from EcoTech traders, and one is given to the player starting scenario.
+		-Deepsap will also rarely be produced by tier 2 Conduit Trees (Deeproot).
+		-Each Deepsap Bay lasts a year before the sap needs to be replaced.
+		-Deepsap cannot grow normal plants, and may later be required for specific plant types.
+
+	-Add to Brightsap Lighting:
+		-Create Brightvines
+	-Create Glowsap Lighting:
+		-Glowsap Lamp
+		-Glowsap Pillar
+		-Glowvines
+	-Glowsap Lighting is a strain of Brightsap Lighting.
+====================
+
+====================
+SAPS:
+	-Add Meldsap
+		-A strange sap that takes multiple items, and fuses them together.
+		-Carried only by EcoTech factions, as it's beyond the understanding of outsiders.
+
+		-Used for creating Briarseeds
+		-Used for combining two saps to create higher potencies.
+====================
+	-->
+
+</Defs>

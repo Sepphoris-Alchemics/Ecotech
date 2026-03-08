@@ -1,6 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--
+TIME TICK BASICS:
+60,000 = 1 day
+900,000 = 1 quadrum (15 days)
+3,600,000	 = 1 quadrum (60 days)
+
+Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
+			-Immature light: 30 days (1800000) | 30 health
+			-Immature normal: 45 days (2700000) | 35 health
+			-Immature heavy: 60 days (3600000) | 40 health
+
+			-Mature light: 45 days (2700000) | 40 health
+        -Sunsap: 4050000 | Endosap: 3300000 lifespan + 60 health
+			-Mature normal: 60 days (3600000) | 45 health
+        -Sunsap: 5400000 | Endosap 4200000 lifespan + 70 health
+			-Mature heavy: 75 days (4500000) | 50 health
+        -Sunsap: 6750000 | Endosap 5100000 lifespan + 75 health
+      +2 range for mature
+      +0.2 mass for mature
+      +1 burst
+-->
+
 <!--Prima Stakecaster downgraded to an entry weapon. Still quite powerful, but very limited on ammo and speed.-->
 
 	<ThingDef ParentName="BaseUnupgradableTerraweapon">
@@ -73,7 +95,7 @@
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -153,7 +175,7 @@
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -237,7 +259,7 @@
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -328,7 +350,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -416,7 +438,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -503,7 +525,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -589,7 +611,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -676,7 +698,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -763,7 +785,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -851,7 +873,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -950,7 +972,7 @@ SAP LAUNCHERS
       </li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->

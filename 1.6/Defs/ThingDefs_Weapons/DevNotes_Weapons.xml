@@ -1,7 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--==========1.5 DEV NOTES==========
+<!--==========1.2 DEV NOTES==========
+
+POTENCY REQUIREMENTS:
+	-EXTREME: Noblesaps, archsaps, and stellar saps
+	-VERY HIGH: Some noblesaps, all archsaps, some stellar saps
+	-HIGH: Some metasaps, all noblesaps
+	-NORMAL: All metasaps, some protosaps
+	-LOW: Protosaps only
+	-NONE: No saps
+	-ERRATIC: specific saps of any category
+	
+	Due to how potency works, each sap should provide their own unique advantage
+	
+
+
+
+==========1.1 DEV NOTES==========
 
 -10 PRIMARY weapon lines exist, 4 plant, 2 crystalline, 2 fungal, 2 hybrid.
 An additional 1 plant and 1 crystalline can exist based on a chosen growth method.

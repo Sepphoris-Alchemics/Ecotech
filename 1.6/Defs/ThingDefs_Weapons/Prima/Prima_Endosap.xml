@@ -24,7 +24,7 @@
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>55</MaxHitPoints> <!-- +20 health-->
+      <MaxHitPoints>70</MaxHitPoints>
 			<AccuracyTouch>0.70</AccuracyTouch>
 			<AccuracyShort>0.80</AccuracyShort>
 			<AccuracyMedium>0.70</AccuracyMedium>
@@ -87,12 +87,12 @@
 		<comps>
 			<li Class="CompProperties_InspectString">
       	<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
-+30 health | +9 lifespan days | +2.5 hp/day (unequipped)
++10 health | +10 lifespan days
 Genome: Prima</inspectString>
       </li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+				<lifespanTicks>4200000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
@@ -135,8 +135,8 @@ Genome: Prima</inspectString>
 		</weaponClasses>
 		<relicChance>0</relicChance>
 		<statBases>
-			<MaxHitPoints>90</MaxHitPoints>			<!--+50% hitpoints-->
-			<AccuracyTouch>0.70</AccuracyTouch>			<!--.05 higher accuracies than dormant-->
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.70</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
 			<AccuracyLong>0.60</AccuracyLong>
@@ -183,13 +183,12 @@ Genome: Prima</inspectString>
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
-			<li Class="CompProperties_InspectString">
-      	<inspectString>Permanence Genome | Infused
-+30 health | +9 lifespan days | +2.5 hp/day (unequipped)</inspectString>
-      </li>
+			<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
++10 health | +10 lifespan days
+Genome: Prima</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>1620000</lifespanTicks>				<!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+				<lifespanTicks>4200000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
 					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
@@ -216,7 +215,7 @@ Genome: Prima</inspectString>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>45</MaxHitPoints>
+      <MaxHitPoints>75</MaxHitPoints>
 			<Mass>1.6</Mass>
 			<Flammability>0.5</Flammability>
       <WorkToMake>12000</WorkToMake>
@@ -248,11 +247,11 @@ Genome: Prima</inspectString>
 		<comps>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Endosap
-+50% health | 0.5 flammability | +4 damage to all attacks</inspectString>
++15 health | +10 lifespan days | +4 damage</inspectString>
 			</li>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>510000</lifespanTicks>
           <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
@@ -282,7 +281,7 @@ Genome: Prima</inspectString>
 		</weaponTags>
     <relicChance>0</relicChance>
 		<statBases>
-      <MaxHitPoints>55</MaxHitPoints>
+      <MaxHitPoints>70</MaxHitPoints>
 			<Mass>1.2</Mass>
 			<Flammability>0.5</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
@@ -319,11 +318,11 @@ Genome: Prima</inspectString>
 		<comps>
 		<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Endosap
-+50% health | 0.5 flammability | +4 damage to all attacks</inspectString>
++10 health | +10 lifespan days | +4 damage</inspectString>
 			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks>
+          <lifespanTicks>3600000</lifespanTicks>
           <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->

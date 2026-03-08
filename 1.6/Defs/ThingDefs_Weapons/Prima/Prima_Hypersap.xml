@@ -88,7 +88,7 @@ At their matured form, they are given their maturity increases-->
 		<comps>
         <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1080000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
+          <lifespanTicks>3600000</lifespanTicks> <!-- due to second iteration, this will still have the expiry time of it's dormant form-->
           <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
         </li>
 		</comps>
