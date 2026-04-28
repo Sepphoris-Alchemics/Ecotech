@@ -19,6 +19,21 @@
 	-There is no cheat sheet on what infusions do what, but all outcomes have a positive output. Experiment!
 	-Not everything will be infusable right off the bat. Due to the scope of the mod, more and more things will be infusable as time passes.
 
+
+-COLORED TEXT HEX CODES:
+	In-game readable text (such as inspect strings) will use these hex codes for their colors:
+
+	ORGANIC-CLASS (Green): &lt;color=#68bd46&gt;Organic-class&lt;/color&gt;
+
+	LITHIC-CLASS (Pink): &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt;
+		-Old color (orange): &lt;color=#D46F44&gt;Lithic-class&lt;/color&gt;
+
+
+	GOOD TEXT (Yellow): &lt;color=#B2A644&gt;TEXT HERE&lt;/color&gt;
+	BAD TEXT (Orange): &lt;color=#E6784A&gt;TEXT HERE&lt;/color&gt;
+
+
+
 -RESEARCH:
 	-Certain early researches have have their costs modified in order to (ideally) fall into certain in-game time frames.
 	-Research Pattern GL87416A1-5 removed. Due to plant mutations, it is no longer relevant.

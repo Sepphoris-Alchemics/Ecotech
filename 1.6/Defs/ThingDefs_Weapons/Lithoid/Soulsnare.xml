@@ -96,7 +96,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
 Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 			</li>
 		</comps>
@@ -205,7 +205,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
 Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 			</li>
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
@@ -361,7 +361,7 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
 Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</inspectString>
 			</li>
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
@@ -529,7 +529,7 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; | &lt;color=#FFC800&gt;Stage IV&lt;/color&gt;
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#FFC800&gt;Stage IV&lt;/color&gt;
 Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | 1.5x effect bonus</inspectString>
 			</li>
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
@@ -603,7 +603,7 @@ You will need to bring this weapon to a prismite crucible to regrow the crystals
 		</thingCategories>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; | Inert
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | Inert
 Can be restored at a prismite crucible</inspectString>
 			</li>
 		</comps>

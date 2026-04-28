@@ -343,7 +343,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierOneCrystal</defName>
         <label>terrathyst fragments</label>
-        <description>tiny, broken shards of crystal that was once part of a &lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; structure or item. While not very useful on it's own, these shards can be used in other, or reconstructed into, other lithoid items. It can be used as a building/crafting material, but terrathyst requires special techniques to properly use.
+        <description>tiny, broken shards of crystal that was once part of a &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; structure or item. While not very useful on it's own, these shards can be used in other, or reconstructed into, other lithoid items. It can be used as a building/crafting material, but terrathyst requires special techniques to properly use.
 \n\nTerrathyst has quite unique properties; it is a transparent material, but when stimulated it's appearance changes to a rather pretty multicolored one. Additionally, terrathyst can be compressed into other forms by using shocksap or starsap; the terrathyst with both bind and charge when in contact with these saps, forming new, stronger materials. The more terrathyst that melds together, the stronger the outcome. This makes terrathyst a universally viable material... as long as one can access it.</description>
         <graphicData>
             <texPath>Things/Resource/Terrathyst/Fragments</texPath>
@@ -401,7 +401,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <ThingDef ParentName="ResourceBase">
         <defName>ET_TierOneCrystalCore</defName>
         <label>terrathyst core</label>
-        <description>A clump of terrathyst that has melded together, forming a sharp, sealed vessel that contained shocksap. Critical to creating most &lt;color=#D46F44&gt;Lithic-class&lt;/color&gt; items or structures that require charge.
+        <description>A clump of terrathyst that has melded together, forming a sharp, sealed vessel that contained shocksap. Critical to creating most &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; items or structures that require charge.
 \n\nPlacing this in a prismite crucible will cause it to start creating a random lithic-class weapon or growth. this process takes a while, and once the item emerges, it generally requires more attention to reach it's full potential. As it contains shocksap already, only the heart is needed for this process.</description>
         <graphicData>
             <texPath>Things/Resource/TerrathystHeart</texPath>

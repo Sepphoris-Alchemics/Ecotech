@@ -17,6 +17,7 @@
         <li>r_name->House [ET_Prefixes][ET_Affixes][ET_Suffixes]</li>
         <li>r_name->House [ET_Colors][ET_NaturalNouns]</li>
         <li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes] [ET_DedicatedNouns]</li>
+        <li>r_name->Circle of the [ET_Flowers]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

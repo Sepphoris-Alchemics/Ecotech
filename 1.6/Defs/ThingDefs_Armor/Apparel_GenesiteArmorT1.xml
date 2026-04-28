@@ -29,14 +29,14 @@ ANOTHER ARMOR WILL INCLUDE THE FOURTH STAGE:
 
 	<ThingDef ParentName="PlantApparelBase">
 		<defName>ET_LithicLightArmorT1</defName>
-		<label>genesite mantle</label>
+		<label>genesite nomad armor</label>
 		<techLevel>Neolithic</techLevel>
-		<description>An armor of ancient stone, far different from any stone time found on the planet's surface, or even within the atmosphere.
+		<description>An armor made entirely of genesite, far different from any stone that can normally be found. Genesite only exists near the core of a planet, making it impossible to acquire with traditional mining methods.
 This particular set of armor - which is more akin to a protective working suit - was made with efficiency in mind, layering *just* enough of the stone to provide protection, while also not being heavy or imposing movement restrictions.
-The stone that this armor is made of is exceptionally durable, and does not decay that easily.
-This specific set can be modified and charged with Shocksap provide offensive functions. However, this change will slightly diminish it's defensive capabilities.</description>
+The offered mobility and durability made it especially ideal for terratechists that chose to wander the planet instead of settling down, giving the armor it's name.
+This specific set can be charged with Shocksap, which will cause special crystals to grow. These crystals provide electrical abilities to the wearer; however the crystals also replace the genesite material, diminishing the armor's defensive capabilities.</description>
 		<graphicData>
-			<texPath>Things/Apparel/Terraplate/TerraplateArmor</texPath>
+			<texPath>Things/Apparel/LithicLightArmorT1/LithicLightArmorT1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -57,14 +57,14 @@ This specific set can be modified and charged with Shocksap provide offensive fu
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.2</MoveSpeed>
-			<IncomingDamageFactor>-.2</IncomingDamageFactor>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
 		</equippedStatOffsets>
 		<apparel>
 			<tags>
 				<li>LithicArmor</li>
 			</tags>
-			<wornGraphicPath>Things/Apparel/Terraplate/TerraplateArmor</wornGraphicPath>
+			<wornGraphicPath>Things/Apparel/LithicLightArmorT1/LithicLightArmorT1</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Middle</li>
@@ -85,24 +85,20 @@ This specific set can be modified and charged with Shocksap provide offensive fu
 		</apparel>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Immutable
--10% damage taken | 10% Toxic Resistance | -15% speed</inspectString>
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+-10% damage taken | -10% movement speed | Ability: Fortify | ???</inspectString>
 			</li>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1620000</lifespanTicks>
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-        </li>
 		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="PlantApparelBase">
-		<defName>ET_PrimaHeavyHelmet</defName>
-		<label>terraplate helmet</label>
+		<defName>ET_LithicLightArmorT1Helmet</defName>
+		<label>genesite nomad helmet</label>
 		<techLevel>Neolithic</techLevel>
-		<description>A helmet that is intended to be grown (and worn) alongside Terraplate armor. Due to the armor being fully formed before being worn, the helmet has to be grown seperately.</description>
+		<description>A helmet that is intended to be formed (and worn) alongside Genesite armor. Multiple variants of the helmets exists, but these variants generally exist for aesthetic purposes.
+\nNote that nomadic helmets do not continubte to any of the set abilities, and should only be evolved for aesthetic purposes only.</description>
 		<graphicData>
-			<texPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</texPath>
+			<texPath>Things/Apparel/LithicLightArmorT1_helm/LithicLightArmorT1Helmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.8</drawSize>
 		</graphicData>
@@ -130,10 +126,9 @@ This specific set can be modified and charged with Shocksap provide offensive fu
 		<generateCommonality>0</generateCommonality>
 		<apparel>
 			<tags>
-				<li>PlantArmor</li>
-				<li>HeavyPlantArmor</li>
+				<li>LithicArmor</li>
 			</tags>
-			<wornGraphicPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</wornGraphicPath>
+			<wornGraphicPath>Things/Apparel/LithicLightArmorT1_helm/LithicLightArmorT1Helmet</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Overhead</li>
@@ -144,14 +139,9 @@ This specific set can be modified and charged with Shocksap provide offensive fu
 		</apparel>
 		<comps>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Immutable
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
 -5% damage taken | 10% Toxic Resistance</inspectString>
 			</li>
-        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
-          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-          <lifespanTicks>1620000</lifespanTicks>
-          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
-        </li>
 		</comps>
 	</ThingDef>
 

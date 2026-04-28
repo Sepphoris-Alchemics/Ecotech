@@ -29,7 +29,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
     <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>
-      <MarketValue>750</MarketValue>
+      <MarketValue>300</MarketValue>
       <Mass>0.015</Mass>
       <Flammability>3</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
@@ -44,6 +44,9 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
       </li>
       <li Class="CompProperties_Lifespan">
         <lifespanTicks>420000</lifespanTicks>
+      </li>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_HyperPrimaPod_Warrior</plantDefToSpawn>
       </li>
     </comps>
     <tradeTags Inherit='false'>
@@ -78,7 +81,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
     <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>
-      <MarketValue>750</MarketValue>
+      <MarketValue>300</MarketValue>
       <Mass>0.015</Mass>
       <Flammability>3</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
@@ -93,6 +96,9 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
       </li>
       <li Class="CompProperties_Lifespan">
         <lifespanTicks>420000</lifespanTicks>
+      </li>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_HyperPrimaPod_Skirmisher</plantDefToSpawn>
       </li>
     </comps>
     <tradeTags Inherit='false'>
@@ -127,7 +133,7 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
     <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>
-      <MarketValue>750</MarketValue>
+      <MarketValue>300</MarketValue>
       <Mass>0.015</Mass>
       <Flammability>3</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
@@ -142,6 +148,9 @@ Will grow on any "soft" terrain (i.e. mud, dirt, and sand, but not on stone or i
       </li>
       <li Class="CompProperties_Lifespan">
         <lifespanTicks>420000</lifespanTicks>
+      </li>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_HyperPrimaPod_Ranger</plantDefToSpawn>
       </li>
     </comps>
     <tradeTags Inherit='false'>
@@ -176,7 +185,7 @@ Will grow on any solid or earthly terrain.</description>
     <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>
-      <MarketValue>750</MarketValue>
+      <MarketValue>300</MarketValue>
       <Mass>0.015</Mass>
       <Flammability>3</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
