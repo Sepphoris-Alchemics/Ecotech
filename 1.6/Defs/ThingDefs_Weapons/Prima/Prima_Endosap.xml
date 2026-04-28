@@ -87,8 +87,7 @@
 		<comps>
 			<li Class="CompProperties_InspectString">
       	<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
-+10 health | +10 lifespan days
-Genome: Prima</inspectString>
++10 health | +10 lifespan days</inspectString>
       </li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
@@ -183,15 +182,16 @@ Genome: Prima</inspectString>
 		</tools>
 		<tickerType>Normal</tickerType>
 		<comps>
+			<li Class="CompProperties_InspectString">
 			<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
-+10 health | +10 lifespan days
-Genome: Prima</inspectString>
++10 health | +10 lifespan days</inspectString>
+			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>4200000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
-					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
-        </li>
+				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+        	</li>
 		</comps>
 	</ThingDef>
 

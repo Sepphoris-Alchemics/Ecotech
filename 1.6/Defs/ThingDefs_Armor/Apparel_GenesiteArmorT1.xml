@@ -27,8 +27,8 @@ ANOTHER ARMOR WILL INCLUDE THE FOURTH STAGE:
 	STORM BARRAGE: FIRES 5 QUICK BLASTS OF ELECTRIC DAMAGE ON A TARGET. 
 -->
 
-	<ThingDef ParentName="PlantApparelBase">
-		<defName>ET_LithicLightArmorT1</defName>
+	<ThingDef ParentName="LithicApparelBase">
+		<defName>ET_LithicLightArmorT1_Base</defName>
 		<label>genesite nomad armor</label>
 		<techLevel>Neolithic</techLevel>
 		<description>An armor made entirely of genesite, far different from any stone that can normally be found. Genesite only exists near the core of a planet, making it impossible to acquire with traditional mining methods.
@@ -36,7 +36,7 @@ This particular set of armor - which is more akin to a protective working suit -
 The offered mobility and durability made it especially ideal for terratechists that chose to wander the planet instead of settling down, giving the armor it's name.
 This specific set can be charged with Shocksap, which will cause special crystals to grow. These crystals provide electrical abilities to the wearer; however the crystals also replace the genesite material, diminishing the armor's defensive capabilities.</description>
 		<graphicData>
-			<texPath>Things/Apparel/LithicLightArmorT1/LithicLightArmorT1</texPath>
+			<texPath>Things/Apparel/LithicLightArmorT1Base/LithicLightArmorT1Base</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -45,6 +45,7 @@ This specific set can be charged with Shocksap, which will cause special crystal
 			<Mass>4.6</Mass>
 			<MaxHitPoints>600</MaxHitPoints>			<!--Durability is 60% of base, rounded up to nearest 5th)-->
 			<MarketValue>200</MarketValue>
+			<DeteriorationRate>0</DeteriorationRate>
 			<Flammability>0</Flammability>
 			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
@@ -64,7 +65,7 @@ This specific set can be charged with Shocksap, which will cause special crystal
 			<tags>
 				<li>LithicArmor</li>
 			</tags>
-			<wornGraphicPath>Things/Apparel/LithicLightArmorT1/LithicLightArmorT1</wornGraphicPath>
+			<wornGraphicPath>Things/Apparel/LithicLightArmorT1Base/LithicLightArmorT1Base</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Middle</li>
@@ -86,33 +87,34 @@ This specific set can be charged with Shocksap, which will cause special crystal
 		<comps>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
--10% damage taken | -10% movement speed | Ability: Fortify | ???</inspectString>
+-10% damage taken | Ability: Fortify | ???</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="PlantApparelBase">
-		<defName>ET_LithicLightArmorT1Helmet</defName>
+	<ThingDef ParentName="LithicApparelBase">
+		<defName>ET_LithicLightArmorT1Helmet_Base</defName>
 		<label>genesite nomad helmet</label>
 		<techLevel>Neolithic</techLevel>
 		<description>A helmet that is intended to be formed (and worn) alongside Genesite armor. Multiple variants of the helmets exists, but these variants generally exist for aesthetic purposes.
 \nNote that nomadic helmets do not continubte to any of the set abilities, and should only be evolved for aesthetic purposes only.</description>
 		<graphicData>
-			<texPath>Things/Apparel/LithicLightArmorT1_helm/LithicLightArmorT1Helmet</texPath>
+			<texPath>Things/Apparel/LithicLightArmorT1Base_helm/LithicLightArmorT1BaseHelmet_main</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.8</drawSize>
+			<drawSize>1</drawSize>
 		</graphicData>
 		<statBases>
 			<Mass>2.4</Mass>
-			<MaxHitPoints>60</MaxHitPoints>
-			<MarketValue>80</MarketValue>
-			<Flammability>0.8</Flammability>
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<MaxHitPoints>400</MaxHitPoints>
+			<MarketValue>120</MarketValue>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.1</ArmorRating_Heat>
-			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Cold>2</Insulation_Cold>
 			<Insulation_Heat>5</Insulation_Heat>
-			<EquipDelay>10</EquipDelay>
+			<EquipDelay>8</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<IncomingDamageFactor>-.05</IncomingDamageFactor>
@@ -128,7 +130,7 @@ This specific set can be charged with Shocksap, which will cause special crystal
 			<tags>
 				<li>LithicArmor</li>
 			</tags>
-			<wornGraphicPath>Things/Apparel/LithicLightArmorT1_helm/LithicLightArmorT1Helmet</wornGraphicPath>
+			<wornGraphicPath>Things/Apparel/LithicLightArmorT1Base_helm/LithicLightArmorT1BaseHelmet</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Overhead</li>

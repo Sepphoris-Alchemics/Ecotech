@@ -18,7 +18,7 @@
       <visualSizeRange>0.8~1.2</visualSizeRange>
     </plant>
     <comps>
-      <li Class="CompProperties_Styleable"/>
+      <!--<li Class="CompProperties_Styleable"/>-->
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
         <glowColor>(232,255,164,0)</glowColor>

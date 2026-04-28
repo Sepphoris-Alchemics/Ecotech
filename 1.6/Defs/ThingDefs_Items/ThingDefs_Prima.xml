@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--Turret seeds-->
+
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_PrimaSMGTurret</defName>
     <label>Thistle Turret Seed</label>
@@ -167,6 +169,50 @@ This seed once could be awakened by hand, and at will; however, that knowledge i
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
         <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaTurretSeedTag</li>
+    </tradeTags>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+<!--Variant seeds-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_PrimaRogueWeapon</defName>
+    <label>roguesap seed</label>
+    <description>A special seed acquired from a Roguesap weapon. Exclusively designed to begin it's own specific cycle of life and death.
+This seed will quickly grow into a plant that will produce an entirely random Roguesap weapon. Upon that weapon's expiry, another Roguesap seed will drop, allowing this cycle to continue in a perpetually endless loop.
+\n\nThe seed will wither away if not planted soon after acquisition.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/Turret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>300</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsPrimaWeapons</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+<li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks>        <!--1.5x longer than surge seeds-->
       </li>
     </comps>
     <tradeTags Inherit='false'>
