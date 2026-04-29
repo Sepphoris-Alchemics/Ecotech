@@ -94,7 +94,7 @@ The outcome will always be one jar of refined sap, but which one it is will be e
           <li>
             <weight>0.25</weight>
             <things>
-              <ET_Chargesap>1</ET_Chargesap>
+              <ET_Shocksap>1</ET_Shocksap>
             </things>
           </li>
           <li>

@@ -95,7 +95,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -103,7 +103,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>3</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>1</amount>
               </li>
             </outputPair>
@@ -115,7 +115,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -123,7 +123,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>8</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>3</amount>
               </li>
             </outputPair>
@@ -135,7 +135,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -143,7 +143,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>10</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>2</amount>
               </li>
             </outputPair>
@@ -155,7 +155,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -163,7 +163,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>36</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>7</amount>
               </li>
             </outputPair>
@@ -175,7 +175,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -183,7 +183,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>14</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>2</amount>
               </li>
             </outputPair>
@@ -195,7 +195,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -203,7 +203,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>24</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>3</amount>
               </li>
             </outputPair>
@@ -215,7 +215,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -223,7 +223,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>33</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>5</amount>
               </li>
             </outputPair>
@@ -235,7 +235,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -243,7 +243,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>23</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>6</amount>
               </li>
             </outputPair>
@@ -255,7 +255,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -263,7 +263,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>43</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>8</amount>
               </li>
             </outputPair>
@@ -275,7 +275,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -283,7 +283,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>31</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>4</amount>
               </li>
             </outputPair>
@@ -295,7 +295,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -303,7 +303,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>31</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>4</amount>
               </li>
             </outputPair>
@@ -315,7 +315,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -323,7 +323,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>34</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>5</amount>
               </li>
             </outputPair>
@@ -335,7 +335,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -343,7 +343,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>20</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>3</amount>
               </li>
             </outputPair>
@@ -355,7 +355,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -363,7 +363,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>100</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>20</amount>
               </li>
             </outputPair>
@@ -375,7 +375,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -383,7 +383,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>24</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>3</amount>
               </li>
             </outputPair>
@@ -395,7 +395,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -403,7 +403,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>14</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>2</amount>
               </li>
             </outputPair>
@@ -415,7 +415,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -423,7 +423,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>31</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>4</amount>
               </li>
             </outputPair>
@@ -435,7 +435,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -443,7 +443,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>39</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>8</amount>
               </li>
             </outputPair>
@@ -535,7 +535,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -543,7 +543,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>23</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>1</amount>
               </li>
             </outputPair>
@@ -555,7 +555,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -563,7 +563,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>24</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>2</amount>
               </li>
             </outputPair>
@@ -575,7 +575,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -583,7 +583,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>8</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>1</amount>
               </li>
             </outputPair>
@@ -595,7 +595,7 @@ The process always breaks materials down to their most fundamental components, r
             </inputThings>
             <outputThings>
               <li>Steel</li>
-              <li>ET_Chargesap</li>
+              <li>ET_Shocksap</li>
             </outputThings>
             <outputPair>
               <li>
@@ -603,7 +603,7 @@ The process always breaks materials down to their most fundamental components, r
                 <amount>5</amount>
               </li>
               <li>
-                <output>ET_Chargesap</output>
+                <output>ET_Shocksap</output>
                 <amount>3</amount>
               </li>
             </outputPair>

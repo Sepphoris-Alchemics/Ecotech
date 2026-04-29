@@ -6,19 +6,6 @@
 -To help balance this, glowsap blooms now appear in the wild.
 -Structures that also consume glowsap have also had their requirements lowered (such as sap filter only needing 200 instead of 300)
 
--NEW MAJOR FEATURE: PLANT MUTATION
-	-You can now directly infuence the outcome of plants by infusing them with saps you discover.
-	-These plants will usually begin as standard, basic plants that have a tag which states their MUTATION POTENTIAL.
-	-MUTATION POTENTIAL is shorthand for what saps it can be infused with. Plants can have a mutation potenial of None, Low, Medium, High, and Extreme.
-	-'Higher' mutation potential = being able to accept stronger, rarer saps, which means the more outcomes you can get.
-	-What you infuse into a mutatable plant will impact what kind of plants, structures, and even items something can produce.
-	-You will need to partially master a genome before you can mutate it's plants. 'Mastering' a genome is done by researching specifically-named techs.
-	-For example, to start infusing basic saps, you will need to research 'basic mutation applications'. For stronger, rarer saps, you research 'advanced mutation applications'
-	-Depending on the genome's potential, these techs can have relatively high research requirements.
-	-Whenever you discover a new sap, you will also need to 'study' it of them before it can be used for any infusions. This only needs to be done once per sap, however.
-	-There is no cheat sheet on what infusions do what, but all outcomes have a positive output. Experiment!
-	-Not everything will be infusable right off the bat. Due to the scope of the mod, more and more things will be infusable as time passes.
-
 
 -COLORED TEXT HEX CODES:
 	In-game readable text (such as inspect strings) will use these hex codes for their colors:
@@ -56,7 +43,6 @@
 	-NEW: Embersap, a sap believed to originate from the heart of a volcano.
 	-NEW: Cryosap, a sap believed to originate from the highest mountaintop of the world.
 	-NEW: Arcsap, a sap believed to contain energy from every lightning strike that ever occured. 
-	-Shocksap has been renamed to Chargesap, and now has uses with organic tech (but is still more applicable to lithic tech).
 	-Archsap has been removed as an item, as it didn't fit the nature theme well. It's effect (infinite lifespan) now exists across the new saps.
 	-Deepsap now serves as a darklight source, and Deepsap Blooms can be found naturally in caves.
 	-Deepsap's effects have been heavily nerfed due to how early-game it now is. Deepsap-infused content only grows 50% faster, instead of 90%.

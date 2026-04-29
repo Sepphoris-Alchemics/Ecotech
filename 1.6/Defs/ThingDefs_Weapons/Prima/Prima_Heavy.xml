@@ -273,7 +273,7 @@ SAP LAUNCHERS
 ====================-->
 
 	<!--Glowsap Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Glowsap</defName>
 		<label>prima glowsap launcher</label>
 		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. Glowsap itself is very comparable to a glue gun, causing explosions that cover anything nearby in sap that inhibit manipulation and movement.
@@ -360,7 +360,7 @@ SAP LAUNCHERS
 
 
 	<!--Brightsap Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Brightsap</defName>
 		<label>prima brightsap launcher</label>
 		<description>A sap launcher that has had it's glowsap contents replaced with brightsap. The globs of concentrated brightsap create a bright flash when breaking, briefly causing visual impairment - and possible dazing - to anything in it's radius.
@@ -448,7 +448,7 @@ SAP LAUNCHERS
 
 
 	<!--Endosap Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Endosap</defName>
 		<label>prima endosap launcher</label>
 		<description>A sap launcher that has had it's glowsap contents replaced with endosap. The globs of concentrated endosap are very heavy, and the sap impacting anything nearby is akin to them getting hit by a mis-shapen rock.
@@ -534,7 +534,7 @@ SAP LAUNCHERS
 	</ThingDef>
 
 	<!--Hypersap Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Hypersap</defName>
 		<label>prima hypersap launcher</label>
 		<description>A sap launcher that has had it's glowsap contents replaced with hypersap. The globs of hypersap are quite acidic, causing burns that can get progressively worse.
@@ -621,7 +621,7 @@ SAP LAUNCHERS
 
 
 	<!--Hypersap Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Toxsap</defName>
 		<label>prima toxsap launcher</label>
 		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
@@ -708,7 +708,7 @@ SAP LAUNCHERS
 
 
 	<!--Hypersap Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Deepsap</defName>
 		<label>prima deepsap launcher</label>
 		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.
@@ -795,7 +795,7 @@ SAP LAUNCHERS
 
 
 	<!--Hypersap Launcher-->
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--no counterpart, so will be based off S. Launcher-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--no counterpart, so will be based off S. Launcher-->
 		<defName>ET_PrimaSapLauncher_Archsap</defName>
 		<label>prima archsap launcher</label>
 		<description>A biotic weapon, specially engineered to launch sap-filled globules that covers a small area upon impact. The type of sap fired is directly affected by it's infusion. Sap launchers serve as both weapons and as tools, depending on the contained sap. Sap launchers can have their contained saps exchanged indefinitely, so it is recommended to experiment to see what each sap does.

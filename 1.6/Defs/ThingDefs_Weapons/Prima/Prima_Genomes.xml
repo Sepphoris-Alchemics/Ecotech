@@ -156,9 +156,9 @@ Endosap: 70, 178, 83-->
 
 	<!--=====Basic=====-->
 
-	<ThingDef Name="BaseUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseUnmodifiedPrimaWeapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
-			<MarketValue>30</MarketValue>
+			<MarketValue>45</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
 		<tradeTags>
@@ -173,7 +173,7 @@ Endosap: 70, 178, 83-->
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Dormant&lt;/color&gt;
-&lt;color=#dae691&gt;Accepts any sap transplant&lt;/color&gt;</inspectString>
+Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 			</li>
 		</comps>
 	</ThingDef>

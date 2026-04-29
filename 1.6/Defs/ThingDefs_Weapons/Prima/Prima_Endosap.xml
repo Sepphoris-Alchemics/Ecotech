@@ -9,7 +9,7 @@
 
 <!--=====Prima Carbine=====-->
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon">
 		<defName>ET_PrimaCarbineEndosap</defName>
 		<label>prima endocarbine</label>
 		<description>An infused variant of the Prima Carbine. It's baseline sap has been replaced with endosap, creating a more durable epidermis, and decreasing flammability.</description>

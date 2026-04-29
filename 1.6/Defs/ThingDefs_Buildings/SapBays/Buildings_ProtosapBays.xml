@@ -70,7 +70,7 @@ Since this basin was specifically designed to channel brightsap (and by proxy, g
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_ChargesapBay</defName>
+    <defName>ET_ShocksapBay</defName>
     <label>Shocksap Bay</label>
     <description>A large, grown bay filled with ever-recycling shocksap. Primarily used for growing lithic resources and specific lithic weapons.
 Since this basin was specifically designed to channel shocksap, it cannot support most organic plants of any type. However, other bays are capable of channeling other saps.</description>
@@ -114,7 +114,7 @@ Since this basin was specifically designed to channel shocksap, it cannot suppor
       <deconstructible>false</deconstructible>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <defaultPlantToGrow>ET_TierOneCrystal</defaultPlantToGrow>
-      <sowTag>ET_ChargesapCompatible</sowTag>
+      <sowTag>ET_ShocksapCompatible</sowTag>
       <buildingTags>
         <li>Production</li>
       </buildingTags>

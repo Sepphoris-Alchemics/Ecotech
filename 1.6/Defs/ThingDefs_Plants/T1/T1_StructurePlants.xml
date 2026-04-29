@@ -18,7 +18,7 @@
       <visualSizeRange>0.8~1.2</visualSizeRange>
     </plant>
     <comps>
-      <!--<li Class="CompProperties_Styleable"/>-->
+      <li Class="CompProperties_Styleable"/>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
         <glowColor>(232,255,164,0)</glowColor>
@@ -28,7 +28,7 @@
           <li>ET_Brightsap</li>
           <li>ET_Endosap</li>
           <li>ET_Hypersap</li>
-          <li>ET_Chargesap</li>
+          <li>ET_Shocksap</li>
         </supportedSaps>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
@@ -43,8 +43,8 @@
             <graphicData>
               <texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath>
               <graphicClass>Graphic_Single</graphicClass>
-              <drawSize>(1,1)</drawSize>
-              <shaderType>CutoutPlant</shaderType>
+              <!--<drawSize>(1,1)</drawSize>
+              <shaderType>CutoutPlant</shaderType>-->
             </graphicData>
           </li>
           <li>
@@ -56,7 +56,7 @@
             <result>ET_PrimaSapLamp_Hyper</result>
           </li>
           <li>
-            <sap>ET_Chargesap</sap>
+            <sap>ET_Shocksap</sap>
             <result>ET_PrimaSapLamp_Charge</result>
           </li>
         </sapTransformOptions>

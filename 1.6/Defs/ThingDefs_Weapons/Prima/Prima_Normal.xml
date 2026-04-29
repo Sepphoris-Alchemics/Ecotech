@@ -17,7 +17,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
 			-Mature heavy: 75 days (4500000) | 50 health
 -->
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Greatbow-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--Counterpart: Greatbow-->
 		<defName>ET_PrimaStakecaster</defName> <!--has the pod growth time and research level of light weapons, but the duration of heavy-->
 		<label>Primcaster</label>
 		<description>A biotic weapon, patterned off of a heavy bolt caster, and grown straight from a specialized pod. Extremely powerful and capable of inflicting deadly wounds, but is slow to aim, with equally slow projectile speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -94,7 +94,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Pump Shotgun-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--Counterpart: Pump Shotgun-->
 		<defName>ET_PrimaShotgun</defName>
 		<label>prima scattershot</label>
 		<description>A biotic weapon, patterned off of a semi-automatic shotgun, and grown straight from a specialized pod. They are quite powerful, but have very limited range and speed.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -171,7 +171,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon">
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon">
 		<defName>ET_PrimaCarbine</defName>
 		<label>prima carbine</label>
 		<description>A biotic weapon, patterned off of an old rifle, and grown straight from a specialized pod. Their growth time, damage, and narrow projectile range make this a well-rounded Terraweapon.

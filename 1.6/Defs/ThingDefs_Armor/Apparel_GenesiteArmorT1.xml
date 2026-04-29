@@ -84,7 +84,7 @@ This specific set can be charged with Shocksap, which will cause special crystal
 				<li>Soldier</li>
 			</defaultOutfitTags>
 			<drawData>
-			
+
 			</drawData>
 		</apparel>
 		<comps>
@@ -104,7 +104,7 @@ This specific set can be charged with Shocksap, which will cause special crystal
 		<graphicData>
 			<texPath>Things/Apparel/LithicLightArmorT1Base_helm/LithicLightArmorT1BaseHelmet_main</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1</drawSize>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 		<statBases>
 			<Mass>2.4</Mass>

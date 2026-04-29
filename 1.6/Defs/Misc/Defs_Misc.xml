@@ -178,6 +178,16 @@
     </stages>
   </ThoughtDef>
 
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>ET_HowToMutatePlants</defName>
+    <label>EcoTech: Mutating Plants</label>
+    <opportunityDecays>false</opportunityDecays>
+    <helpText>You can can mutate specific Terratech plants by using special saps. Mutating plants causes them to produce different results when they finish growing!\n\nWhile the plant is growing, use the "Infuse" sap option to mutate the plant. Each sap infusion is unique, so experiment!</helpText>
+    <highlightTags>
+      <li>GrowingZoneSetPlant</li>
+    </highlightTags>
+  </ConceptDef>
+
   <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_MuseumDisplayBase">
     <label>Display Case</label>
     <thingClass>Building</thingClass>

@@ -17,7 +17,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
 			-Mature heavy: 75 days (4500000) | 50 health
 -->
 
-	<ThingDef ParentName="BaseUnupgradableTerraweapon"> <!--Counterpart: Revolver-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--Counterpart: Revolver-->
 		<defName>ET_PrimaPistol</defName>
 		<label>prima minishot</label>
 		<description>A biotic weapon, patterned off of a pistol design, and grown straight from a specialized pod. While not very powerful, it is quite quick to fire, and relatively fast to grow.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
@@ -94,7 +94,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseUnmodifiedTerraweapon"> <!--Counterpart: Machine Pistol-->
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--Counterpart: Machine Pistol-->
 		<defName>ET_PrimaSMG</defName>
 		<label>prima pincaster</label>
 		<description>A biotic weapon, patterned off of a compact submachine gun, and grown straight from a specialized pod. They are quick and suppressive, but their sporadic bursts can cause their damage and accuracy to be inconsistent.

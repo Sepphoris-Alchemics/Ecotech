@@ -146,7 +146,7 @@ Duration: 12 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>30</amount>
           </li>
           <li>
@@ -167,7 +167,7 @@ Duration: 4 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>15</amount>
           </li>
           <li>
@@ -188,7 +188,7 @@ Duration: 6 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>15</amount>
           </li>
           <li>
@@ -209,7 +209,7 @@ Duration: 8 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>15</amount>
           </li>
           <li>
@@ -230,7 +230,7 @@ Duration: 2 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>20</amount> <!--Same amount of sap from 3 to 4-->
           </li>
           <li>
@@ -253,7 +253,7 @@ Duration: 6 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>15</amount>
           </li>
           <li>
@@ -273,7 +273,7 @@ Duration: 8 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>30</amount>
           </li>
           <li>
@@ -293,7 +293,7 @@ Duration: 10 days</description>
         <amount>1</amount>
         <ingredientSets>
           <li>
-            <thingDef>ET_Chargesap</thingDef>
+            <thingDef>ET_Shocksap</thingDef>
             <amount>45</amount>
           </li>
           <li>

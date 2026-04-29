@@ -27,7 +27,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
 		<label>prima biopistol</label>
 		<description>The matured form of the prima minishot. While still not very powerful, it's easily carried, has decent lifepspan length, and the damage is strong enough to fend against predators and raiders. It's still vastly inferior to other weapons, however.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
 		<graphicData>
-			<texPath>Things/WeaponPrima/Basic/ET_PrimaPistolBasic</texPath>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaPistolUpgraded</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.7</drawSize>
 		</graphicData>
