@@ -18,7 +18,7 @@
       <visualSizeRange>0.8~1.2</visualSizeRange>
     </plant>
     <comps>
-      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Styleable"/> <!--THIS IS REQUIRED FOR PLANT GRAPHIC SWAPPING TO WORK-->
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
         <glowColor>(232,255,164,0)</glowColor>
@@ -41,10 +41,10 @@
             <plantStyle>ET_BrightsapStyle_PrimaSapLampPlant</plantStyle>
             <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
             <graphicData>
-              <texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath>
+              <texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath> <!--THIS IS A STYLEABLE TEXTURE, NOT A MAIN TEXTURE.-->
               <graphicClass>Graphic_Single</graphicClass>
-              <!--<drawSize>(1,1)</drawSize>
-              <shaderType>CutoutPlant</shaderType>-->
+              <drawSize>(1,1)</drawSize>
+              <shaderType>CutoutPlant</shaderType>
             </graphicData>
           </li>
           <li>
