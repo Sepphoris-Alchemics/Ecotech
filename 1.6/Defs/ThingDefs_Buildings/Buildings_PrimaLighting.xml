@@ -326,10 +326,11 @@
         <showFuelGizmo>true</showFuelGizmo>
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
       </li>
-      <li Class="CompProperties_CauseHediff_AoE">
+      <li Class="CompProperties_GiveHediffSeverity">
         <hediff>ET_EndosapLampBuff</hediff>
         <range>4.9</range>
-        <canTargetSelf>false</canTargetSelf>
+        <severityPerSecond>1</severityPerSecond>
+        <drugExposure>false</drugExposure>
         <drawLines>false</drawLines>
         <ignoreMechs>true</ignoreMechs>
         <!--<partsToAffect>
