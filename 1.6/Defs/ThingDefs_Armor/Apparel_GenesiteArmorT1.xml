@@ -83,6 +83,9 @@ This specific set can be charged with Shocksap, which will cause special crystal
 			<defaultOutfitTags>
 				<li>Soldier</li>
 			</defaultOutfitTags>
+			<drawData>
+			
+			</drawData>
 		</apparel>
 		<comps>
 			<li Class="CompProperties_InspectString">
