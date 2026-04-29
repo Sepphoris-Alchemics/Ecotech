@@ -278,6 +278,71 @@
   </ThingDef>
 
   <ThingDef ParentName="ET_PrimaSapLamp_Foundation">
+    <defName>ET_PrimaSapLamp_Endo</defName>
+    <label>Prima endolamp</label>
+    <description>A growth of wood and terramass that has multiple protruding sacs of endosap, allowing it to shed a decent amount of light.
+\nThe emission from the lamp applies a thin protective layer to anything that comes nearby, but the coating melts away extremely quickly.
+\n\nThe lamp itself doesn't root that deeply, and requires manual renourishment. You will need to replace it's sap yearly for it to retain it's glow.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <drawSize>(1.2,1.2)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <texPath>Things/Building/PrimaSapLamp/PrimaSapLamp_Endo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/PrimaSapLamp/PrimaSapLamp_Endo</uiIconPath>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>3</Beauty>
+      <Mass>200</Mass>
+    </statBases>
+    <comps Inherit="False">
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(171,216,173,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.016</fuelConsumptionRate>
+        <fuelCapacity>1</fuelCapacity>        <!--Requires only one fuel per year-->
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Endosap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Endosap</fuelLabel>
+        <fuelGizmoLabel>Healthy endosap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires endosap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_CauseHediff_AoE">
+        <hediff>ET_EndosapLampBuff</hediff>
+        <range>4.9</range>
+        <canTargetSelf>false</canTargetSelf>
+        <drawLines>false</drawLines>
+        <ignoreMechs>true</ignoreMechs>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ET_TierOnePlating>6</ET_TierOnePlating>
+    </killedLeavings>
+    <researchPrerequisites Inherit="False">
+      <li>ET_PrimaSapStructures</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_PrimaSapLamp_Foundation">
     <defName>ET_PrimaSapLamp_Deep</defName>
     <label>Prima deeplamp</label>
     <description>A growth of wood and terramass that has multiple protruding sacs of deepsap, allowing it to shed a decent amount of darklight.

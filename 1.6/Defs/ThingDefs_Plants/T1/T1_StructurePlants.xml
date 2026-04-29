@@ -24,7 +24,7 @@
         <glowColor>(232,255,164,0)</glowColor>
       </li>
       <li Class="Ecotech.CompProperties_SapInfusable">
-        <supportedSaps>
+        <supportedSaps> <!--THIS DETERMINES WHAT ITEM DEF CAN BE USED IN 'sapTransformOptions'. IF THE DEF ISN'T HERE, THE DEF CAN'T BE USED-->
           <li>ET_Brightsap</li>
           <li>ET_Endosap</li>
           <li>ET_Hypersap</li>
@@ -36,12 +36,12 @@
         <transformedThing>ET_PrimaSapLamp_Base</transformedThing>
         <sapTransformOptions>
           <li>
-            <sap>ET_Brightsap</sap>
+            <sap>ET_Brightsap</sap> <!--THE SUPPORTED ITEMSDEFS FROM 'supportedSaps' GO DIRECTLY HERE-->
             <result>ET_PrimaSapLamp_Bright</result>
-            <plantStyle>ET_BrightsapStyle_PrimaSapLampPlant</plantStyle>
+            <plantStyle>ET_BrightsapStyle_PrimaSapLampPlant</plantStyle> <!--MAKE SURE A STYLE IS DEFINED IN STYLE DEFS-->
             <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
             <graphicData>
-              <texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath> <!--THIS IS A STYLEABLE TEXTURE, NOT A MAIN TEXTURE.-->
+              <texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath> <!--THIS IS A STYLEABLE TEXTURE, NOT A MAIN TEXTURE-->
               <graphicClass>Graphic_Single</graphicClass>
               <drawSize>(1,1)</drawSize>
               <shaderType>CutoutPlant</shaderType>
@@ -50,6 +50,14 @@
           <li>
             <sap>ET_Endosap</sap>
             <result>ET_PrimaSapLamp_Endo</result>
+            <plantStyle>ET_EndosapStyle_PrimaSapLampPlant</plantStyle> <!--MAKE SURE A STYLE IS DEFINED IN STYLE DEFS-->
+            <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+            <graphicData>
+              <texPath>Things/Plant/PlantStyles/Endosap/PrimaSapLamp</texPath> <!--THIS IS A STYLEABLE TEXTURE, NOT A MAIN TEXTURE-->
+              <graphicClass>Graphic_Single</graphicClass>
+              <drawSize>(1,1)</drawSize>
+              <shaderType>CutoutPlant</shaderType>
+            </graphicData>
           </li>
           <li>
             <sap>ET_Hypersap</sap>

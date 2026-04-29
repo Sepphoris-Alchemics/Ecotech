@@ -182,10 +182,24 @@
     <defName>ET_HowToMutatePlants</defName>
     <label>EcoTech: Mutating Plants</label>
     <opportunityDecays>false</opportunityDecays>
-    <helpText>You can can mutate specific Terratech plants by using special saps. Mutating plants causes them to produce different results when they finish growing!\n\nWhile the plant is growing, use the "Infuse" sap option to mutate the plant. Each sap infusion is unique, so experiment!</helpText>
+    <helpText>You can mutate specific Terratech plants by using special saps. Mutating plants causes them to produce different results when they finish growing!
+\nWhile the plant is growing, use the "Infuse" sap option to mutate the plant. Each sap infusion is unique, so experiment!</helpText>
     <highlightTags>
       <li>GrowingZoneSetPlant</li>
     </highlightTags>
+  </ConceptDef>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>ET_MutationPotentialHelp</defName>
+    <label>EcoTech: Mutation Potential</label>
+    <opportunityDecays>false</opportunityDecays>
+    <helpText>Various organic terratech creations have different mutation potentials. This is designated within the inspection box. Mutation potential can be summarized as follows:
+  \nEXTREME: Capable of undergoing mutation at the atomic level.
+  \nHIGH: Capable of undergoing mutation at the cellular level.
+  \nMEDIUM: Capable of mutations affecting it's higher biological functions.
+  \nLOW: Capable of mutation affecting it's basic biological functions.
+  \nNONE: Incapable of mutation.
+  \nERRATIC: Results that can end up being anything, or don't fall into the other categories.</helpText>
   </ConceptDef>
 
   <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_MuseumDisplayBase">
