@@ -3,13 +3,16 @@
 
   <HediffDef>
     <defName>ET_EndosapLampBuff</defName>
+    <defaultLabelColor>(171, 216, 173)</defaultLabelColor>
     <label>endosap ambience (minor)</label>
     <description>The emissions of a nearby sap lamp have modified the immediate atmosphere, causing a thin, protective residual layer to form on this pawn. However, it won't last long outside the lamp's influence.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <stages>
-      <statFactors>
+      <li>
+        <statFactors>
           <IncomingDamageFactor>-0.1</IncomingDamageFactor>
         </statFactors>
+      </li>
     </stages>
     <comps>
       <li Class="HediffCompProperties_Disappears">

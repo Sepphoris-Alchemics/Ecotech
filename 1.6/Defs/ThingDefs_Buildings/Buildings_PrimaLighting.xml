@@ -332,6 +332,9 @@
         <canTargetSelf>false</canTargetSelf>
         <drawLines>false</drawLines>
         <ignoreMechs>true</ignoreMechs>
+        <!--<partsToAffect>
+          <li>Heart</li>
+        </partsToAffect>-->
       </li>
     </comps>
     <killedLeavings>
