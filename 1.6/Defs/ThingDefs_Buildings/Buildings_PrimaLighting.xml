@@ -117,10 +117,13 @@
     </statBases>
     <drawerType>MapMeshAndRealTime</drawerType>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <placeWorkers>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
     <fillPercent>0.25</fillPercent>
     <comps Inherit="False"> <!--These all need to be Inherit = false-->
       <li Class="CompProperties_Glower">
-        <glowRadius>8</glowRadius>        <!--Same amount as a normal lamp-->
+        <glowRadius>9</glowRadius>        <!--Same amount as a normal lamp-->
         <glowColor>(232,255,164,0)</glowColor>
       </li>
       <li Class="CompProperties_Refuelable">
@@ -193,11 +196,11 @@
     <fillPercent>0.25</fillPercent>
     <comps Inherit="False"> <!--These all need to be Inherit = false-->
       <li Class="CompProperties_Glower">
-        <glowRadius>6</glowRadius>
+        <glowRadius>9</glowRadius>
         <glowColor>(232,255,164,0)</glowColor>
       </li>
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>0.032</fuelConsumptionRate>
+        <fuelConsumptionRate>0.022</fuelConsumptionRate>
         <fuelCapacity>2</fuelCapacity> <!--Since glowsap is much more common, uses double-->
         <fuelFilter>
           <thingDefs>
@@ -250,7 +253,7 @@
     </statBases>
     <comps Inherit="False">
       <li Class="CompProperties_Glower">
-        <glowRadius>10</glowRadius>
+        <glowRadius>13</glowRadius>
         <glowColor>(238,211,77,0)</glowColor>
       </li>
       <li Class="CompProperties_Refuelable">
@@ -346,11 +349,13 @@
     </researchPrerequisites>
   </ThingDef>
 
+<!--==========-->
+
   <ThingDef ParentName="ET_PrimaSapLamp_Foundation">
     <defName>ET_PrimaSapLamp_Deep</defName>
     <label>Prima deeplamp</label>
     <description>A growth of wood and terramass that has multiple protruding sacs of deepsap, allowing it to shed a decent amount of darklight.
-\n\nThe lamp itself doesn't root that deeply, and requires manual renourishment. You will need to replace it's sap yearly for it to retain it's glow.</description>
+\n\nThe lamp itself doesn't root that deeply, and requires manual renourishment. You will need to replace it's sap every 2 years for it to retain it's glow.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <drawSize>(1.2,1.2)</drawSize>
@@ -376,12 +381,12 @@
     </statBases>
     <comps Inherit="False">
       <li Class="CompProperties_Glower">
-        <glowRadius>8</glowRadius>
+        <glowRadius>9</glowRadius>
         <glowColor>(78,226,229,0)</glowColor>
       </li>
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>0.016</fuelConsumptionRate>
-        <fuelCapacity>1</fuelCapacity>        <!--Requires only one fuel per year-->
+        <fuelConsumptionRate>0.022</fuelConsumptionRate>
+        <fuelCapacity>2</fuelCapacity>        <!--Requires only one fuel every 2 years-->
         <fuelFilter>
           <thingDefs>
             <li>ET_Deepsap</li>

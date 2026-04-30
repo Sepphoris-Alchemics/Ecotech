@@ -1,15 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--==========1.2 Backlog (as of 12.14.25)==========
+<!--==========1.3 Backlog (as of 4.29.26)==========
 
-=====As of 9.8.25, most of these features will need to appear in a future update.=====
+=====As of 4.29.26, most of these features will need to appear in a future update.=====
 =====Anything marked 'Incomplete' will be added as soon as possible, while anything marked 'delayed' will be added in a larger future update.=====
 
+=====SAP EFFECTS (Updated for 1.3)=====
 
+BASIC SAPS (Mutability: Low):
+  -Endosap
+  -Hypersap
+  -Deepsap
+
+PROTOSAPS (Mutability: Medium):
+  -Toxsap
+  -Brightsap
+  -Shocksap
+
+METASAPS (Mutability: High):
+  -Roguesap
+  -Ectosap
+  -Chronosap
+
+-NOBLESAPS (Mutability: Very High):
+  -Embersap
+  -Cryosap
+  -Arcsap
+
+-ARCHSAPS (Mutability: Extreme):
+  -Sunsap
+  -Starsap
 
 ====================
-Sap variants to add to each Prima weapon:
+Sap variants to add to each organic structure:
+	MINIMUM:
+	-GLOWSAP
+	-BRIGHTSAP
+	-DEEPSAP
+	-ENDOSAP
+
+	AFTERWARDS:
+	-HYPERSAP
+	-SHOCKSAP
+	-CRYOSAP (for Column)
+	-EMBERSAP (for Column)
+	-ARCSAP (for Column)
+
+For:
+	-Lamps (can do basic saps + brightsap)
+	-Columns
+	-Terraforge
+====================
+====================
+Sap variants to add to each weapon:
 	-Endosap
 		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
 	-Hypersap
@@ -20,13 +64,6 @@ Sap variants to add to each Prima weapon:
 		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
 	-Shocksap
 		Remaining: Pistol, SMG, Rifle, Carbine, Shotgun, Stakecaster, Sword, Knife, Maul
-====================
-====================
-Add structures that use each sap
-	-Lamps
-	-Beacons
-	-Terraforge
-
 ====================
 ====================
 Make sure terraforming tree works
@@ -86,6 +123,13 @@ PLANTS:
 
 ====================
 STRUCTURES:
+
+	-Add Lithic Cryogrowth
+		-Lowers the temperature of the surrounding environment with cryosap.
+
+	-Revitalizing Lamp/Pylon/etc. Some sort of plantable growth that emits a field which increases healing factor.
+
+	-Bioglass Press: A twist where materials are instead broken down and cold pressed into form by a heavily modified tree. This allows for player choice instead of random chance, but it takes more resources to force this through.
 
 	-(INCOMPLETE) Add to Brightsap Lighting:
 		-Create Brightvines

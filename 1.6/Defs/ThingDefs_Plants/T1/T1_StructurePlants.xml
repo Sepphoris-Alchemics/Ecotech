@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--
+
+LAMP EFFECTS:
+  -GLOWSAP: REPLANTABLE
+  -DEEPSAP: REPLANTABLE
+  -BRIGHTSAP: HIGHEST GLOW RADIUS
+  -ENDOSAP: -10% DAMAGE TAKEN
+
+-->
+
   <ThingDef ParentName="ET_FundamentalPlantBase">
     <defName>ET_PrimaSapLampPlant</defName>
     <label>Prima sap lamp sprout</label>
