@@ -45,6 +45,20 @@
   Later turrets require dedicated planting, but live far longer.
   -->
 
+
+<!-- 
+
+1.3 PRIMA TURRET SAP MUTATIONS:
+
+GLOWSAP/DEEPSAP: LONGER LIFESPAN
+BRIGHTSAP: GLOW RADIUS + HIGHER ACCURACY
+ENDOSAP: INCREASED HEALTH + DECREASED FLAMMABILITY
+HYPERSAP: INCREASED PROJECTILE MAX/MIN
+ROGUESAP: DROPS A RANDOM TURRET SEED EVERY 30 DAYS
+
+
+-->
+
 <!--=====SPEAR/STAKE TURRET=====-->
 
   <ThingDef ParentName="BuildingBase">
@@ -336,12 +350,13 @@
     <graphicData>
       <texPath>Things/Security/PrimaTurretShotgun/PrimaTurretShotgun_Base</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.6,1.6)</drawSize>
+      <drawSize>(1,1)</drawSize>
+      <drawOffset>(-0.14,0,0)</drawOffset>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
       <shadowData>
-        <offset>(-0.13,-0.87,-0.1)</offset>
+        <offset>(-0.26,-0.87,-0.1)</offset>
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
@@ -403,6 +418,8 @@
       <playTargetAcquiredSound>false</playTargetAcquiredSound>
       <deconstructible>false</deconstructible>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+      <turretTopDrawSize>1.2</turretTopDrawSize>
+      <!--<turretTopOffset>(0, 0.05)</turretTopOffset>-->
     </building>
     <placeWorkers>
       <li>PlaceWorker_TurretTop</li>

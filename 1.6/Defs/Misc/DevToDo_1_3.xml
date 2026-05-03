@@ -39,9 +39,9 @@ Sap variants to add to each organic structure:
 	-BRIGHTSAP
 	-DEEPSAP
 	-ENDOSAP
+	-HYPERSAP (for turrets)
 
 	AFTERWARDS:
-	-HYPERSAP
 	-SHOCKSAP
 	-CRYOSAP (for Column)
 	-EMBERSAP (for Column)
