@@ -85,7 +85,7 @@
           <lifespanTicks>3300000</lifespanTicks>
           <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
           <!--<expireEffect></expireEffect>-->
-					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+		<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
 		</comps>
 		<modExtensions>

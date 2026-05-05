@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs> <!--Todo: add secondary fire mode to Nightshade rifle. 1.5+ only-->
 
-  <!-- Base -->
+<!--Base-->
 
   <!--<AbilityDef Name="ET_AbilityBase" Abstract="True">
     <label>Secondary shot.</label>
