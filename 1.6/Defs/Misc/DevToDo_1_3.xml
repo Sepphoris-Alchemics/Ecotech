@@ -9,28 +9,29 @@
 =====SAP EFFECTS (Updated for 1.3)=====
 
 BASIC SAPS (Mutability: Low):
-  -Endosap
-  -Hypersap
-  -Deepsap
+	-Glowsap
+	-Endosap
+	-Hypersap
+	-Deepsap
 
 PROTOSAPS (Mutability: Medium):
-  -Toxsap
-  -Brightsap
-  -Shocksap
+	-Toxsap
+	-Brightsap
+	-Shocksap
 
 METASAPS (Mutability: High):
-  -Roguesap
-  -Ectosap
-  -Chronosap
+	-Roguesap
+	-Ectosap
+	-Chronosap
 
 -NOBLESAPS (Mutability: Very High):
-  -Embersap
-  -Cryosap
-  -Arcsap
+	-Embersap
+	-Cryosap
+	-Arcsap
 
 -ARCHSAPS (Mutability: Extreme):
-  -Sunsap
-  -Starsap
+	-Sunsap
+	-Starsap
 
 ====================
 Sap variants to add to each organic structure:
@@ -209,6 +210,24 @@ SAPS:
 		-Used for creating Briarseeds
 		-Used for combining two saps to create higher potencies.
 ====================
+
+====================
+MISC:
+
+	-Add mechanic that parallels oxidization
+		-Since later lithic advancements can provide extreme protection, some sort of hypergas can break down these protections.
+		-Normally this will be temporary, but some may be permanent.
+		-Usually will be emmited is gas, but can also be in AoEs or explosions.
+		-This is likely to be a Miasmic creation.
+
+	-Add Bloompox kill mechanic:
+		-Pawn that dies to bloompox hediff becomes limited-time fertile growth spot.
+	
+	-Add Soulbloom kill mechanic:
+		-Pawn that dies to Soulbloom hediff becomes a unique flower.
+			-Prior: Pawn that dies to soulbloom hediff becomes unique statue.
+		-Inflict hediff that can't be stopped, then use VE to drop the special plant right before the pawn dies.
+
 	-->
 
 </Defs>

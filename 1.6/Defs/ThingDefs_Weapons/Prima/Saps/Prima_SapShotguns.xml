@@ -130,7 +130,7 @@
 
 	<!--=====Toxsap=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunToxsap</defName>
 		<label>prima toxburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with toxsap. The presence of the toxsap has coated the shots in debilitating toxins.</description>
@@ -155,7 +155,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_BriarShotgun</defaultProjectile>
 				<warmupTime>1.125</warmupTime>
-				<range>13.9</range>				<!--1 higher range than it's dormant form-->
+				<range>13.9</range>
 				<soundCast>Shot_Shotgun</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>0</muzzleFlashScale>
@@ -171,14 +171,13 @@ Projectiles inflict toxins</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
-				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
-				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+				<ticksPerHeal>18000</ticksPerHeal>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 	<!--=====Deepsap=====-->
 
@@ -221,7 +220,7 @@ Can be replanted to be regrown</inspectString>
 
 	<!--=====Sunsap: TBE=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunSunsap</defName>
 		<label>prima sunburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with sunsap. The presence of the sunsap has drastically increased the lifespan, and the rate at which it heals itself.</description>
@@ -255,11 +254,11 @@ Can be replanted to be regrown</inspectString>
 				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 	<!--=====Starsap: TBE=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunStarsap</defName>
 		<label>prima starburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with starsap. The potent influence of the starsap increases the lifespan by a flat amount, and increases health regeneration.</description>
@@ -293,11 +292,11 @@ Can be replanted to be regrown</inspectString>
 				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 	<!--=====Surgesap=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunSurgesap</defName>
 		<label>prima surgeburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with surgesap. The presence of the surgesap allows the user to hold down the trigger to unleash multiple shots at once.</description>
@@ -346,7 +345,6 @@ Can burst fire at will | +2.5 hp/day (unequipped)</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>720000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
-				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -363,14 +361,14 @@ Can burst fire at will | +2.5 hp/day (unequipped)</inspectString>
 						<comps>
 							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
 								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
-								<cooldownTime>180</cooldownTime>								<!--Time in seconds-->
+								<cooldownTime>180</cooldownTime>
 							</li>
 						</comps>
 					</li>
 				</verbProps>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 	<!--=====Roguesap: TBE=====-->
 
@@ -414,7 +412,7 @@ Additionally, it will always have a 60-day lifespan, regardless of the weapon it
 
 	<!--=====Ectosap: TBE=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunAmmosap</defName>
 		<label>prima ectoburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with roguesap. The potent influence of the roguesap causes this weapon to drop a special seed upon expiry, which will grow into a random Prima weapon.
@@ -449,7 +447,7 @@ Additionally, it will always have a 60-day lifespan, regardless of the weapon it
 				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 <!--=====Meldsap: REMOVED until post 1.1=====-->
 

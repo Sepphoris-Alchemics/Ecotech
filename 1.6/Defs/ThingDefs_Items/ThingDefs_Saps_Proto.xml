@@ -175,7 +175,7 @@ Can be diluted into multiple long-term salves and other medicinal items.</descri
 
 <!--=====SURGESAP=====-->
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Surgesap</defName>
     <label>Surgesap</label>
     <description>A jar of terrasap containing a sap that is highly reactive to the world around it. It's makeup allows it a limited form of compression, which is exploited through weapons it in infused into. 
@@ -203,7 +203,7 @@ Infusing a weapon with this sap comes at a cost; the high focus on ammo generati
     <thingCategories>
       <li>MetasapsAll</li>
     </thingCategories>
-  </ThingDef>
+  </ThingDef>-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Shocksap</defName>

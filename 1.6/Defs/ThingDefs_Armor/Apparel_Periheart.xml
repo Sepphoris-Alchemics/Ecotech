@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+Periderm Armor:
+	-Periderm armor is the pprecursor to periheart armor, except it's entirely passives.
+	-Periderm armor is specifically based around health regeneration.
+	-When swapped to protection the health regen is lowered, but the protection rivals flak.
+
+Periheart armor:
+	-Periheart armor works similar to the weapons:
+		-Like weapons, it takes on a more 'robust' bioengineed design choice, reflected in it's healing passives.
+		-It will also get two special abilities that have limited uses:
+			-The first ability applies slow health regen for a couple hours that can target anyone. 3 uses.
+			-The second ability is an emergency heal that regenerates injuries extremely quickly. 1 use.
+			-Afterwards, the armor can be cycled in a terravat with sunsap.
+
+
+-->
+
+	<ThingDef ParentName="PlantApparelBase">
+		<defName>ET_PeriwoodArmor</defName>
+		<label>periheart plating</label>
+		<techLevel>Neolithic</techLevel>
+		<description>A set of adaptive bioarmor, molded together from the bark of a periwood tree. One of the most common armors used amongst terratechists.
+Despite being armor mostly comprised of tree bark, Periheart Plating is the first example of how terratech practices can rival standard technology. The protection of this set is comparable to flak armor, and the bioarmor's origins boost health aspects in multiple ways.
+The periwood set is one of the efficient sets to make when it comes to organic armors, making it a common sight to see in terratech tribes. However, outfitting many individuals can still take a long time.
+Like all organic armor, this set made at a Terravat.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Periwood/PeriwoodArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<Mass>3.2</Mass>
+			<MaxHitPoints>160</MaxHitPoints>			<!--Durability is 60% of base, rounded up to nearest 5th)-->
+			<MarketValue>120</MarketValue>
+			<Flammability>1.25</Flammability>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>12</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>0</IncomingDamageFactor>
+			<ToxicResistance>0.1</ToxicResistance>
+			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+		<apparel>
+			<tags>
+				<li>PlantArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/Periwood/PeriwoodArmor</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Feet</li>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Immutable
+10% Toxic Resistance | Regenerative Capabilities</inspectString>
+			</li>
+        <!--<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1620000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+        </li>-->
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="PlantApparelBase">
+		<defName>ET_PeriwoodHelmet</defName>
+		<label>periheart helmet</label>
+		<techLevel>Neolithic</techLevel>
+		<description>A helmet that is intended to be grown (and worn) alongside Periheart Plating. Due to the armor being fully formed before being worn, the helmet has to be grown seperately.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Periwood_helm/PeriwoodHelmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>1.2</Mass>
+			<MaxHitPoints>30</MaxHitPoints>
+			<MarketValue>50</MarketValue>
+			<Flammability>0.8</Flammability>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicResistance>0.1</ToxicResistance>
+			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<generateCommonality>0</generateCommonality>
+		<apparel>
+			<tags>
+				<li>PlantArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/Periwood_helm/PeriwoodHelmet</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Immutable
+10% Toxic Resistance | Regenerative Capabilities</inspectString>
+			</li>
+        <!--<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1620000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+        </li>-->
+		</comps>
+	</ThingDef>
+
+</Defs>

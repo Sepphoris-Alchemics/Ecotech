@@ -88,6 +88,8 @@ The effects these apply to weapons are generally just stat changes, and are gene
     </tradeTags>
   </ThingDef>
 
+<!--==========-->
+
   <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Darksap</defName>
     <label>Darksap</label>
@@ -112,6 +114,58 @@ The effects these apply to weapons are generally just stat changes, and are gene
       <li>TerrasapsAll</li>
     </thingCategories>
   </ThingDef>-->
+
+<!--==========-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Deepsap</defName>
+    <label>Deepsap</label>
+    <description>A jar of harvested deepsap. Deepsap itself is rather plentiful, but blooms that contain it only appears underground or in caves. Deepsap emits a similar color to darklight sources, making any deepsap terrastructure or terraplant desirable to those that prefer such lighting.
+\nDeepsap is extremely nutrient-dense, thick, and heavy. This makes it excellent for larger terrastructures, but unable to flow as easily as glowsap. However, these nutrients also allow weapons infused with it to be planted and regrown on the spot.
+\nDeepsap and glowsap are quite similar, as they both were designed to sustain their host plant with no heavy mutations. Both can be transmuted into one another at a Sap Transposer (with a bit of a net loss).
+\n\nNotable applications:
+Light-emitting plants infused with deepsap will instead emit darklight
+Deepsap-infused weapons can be planted at any time to be regrown at 150% speed.
+There is a chance that the a dropped seed can't root properly to deepsap resevoirs, resulting in the outcome being uninfused.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Deepsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>30</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>8</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>BasicSapsAll</li>
+    </thingCategories>
+    <!--<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>-->
+    <modExtensions>
+      <li Class="Ecotech.ThingDefExtension_TransformerRecipe">
+        <recipes>
+          <li>
+            <fuelCount>1</fuelCount>
+            <inputThingDef>ET_PrimaStakecaster</inputThingDef>
+            <outputThingDef>ET_PeriwoodTricaster</outputThingDef>
+          </li>
+        </recipes>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+<!--==========-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Endosap</defName>
@@ -184,6 +238,8 @@ Regenerates 2.5 HP/Day</description>
       <li>ET_SapsBasic</li>
     </tradeTags>
   </ThingDef>
+
+<!--==========-->
 
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Hypersap</defName>

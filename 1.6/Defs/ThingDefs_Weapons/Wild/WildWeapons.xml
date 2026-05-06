@@ -189,4 +189,97 @@ Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
 		</comps>
 	</ThingDef>
 
+<!--Brightbloom Staff-->
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_BrightbloomStaff</defName>
+		<label>brightbloom staff</label>
+		<description>An ancient relic of a bygone people, even by terratech culture. Brightbloom creations used to be much more common, but due to the power they harnessed, the trees used to created them were either eliminated, or hidden away. Only the staves are still seen, and are only held by those in spots of leadership.
+\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire. Additionally, it's ancient design prevents it from accepting other saps.</description>
+		<graphicData>
+			<texPath>Things/WeaponRanged/Wild/BrightbloomStaff</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Standard_Pickup</soundInteract>
+		<tradeability>None</tradeability> <!--May change later if contraband is introduced-->
+		<!--<tradeTags>
+			<li>ET_BuyableWildWeapon</li>
+    	</tradeTags>-->
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_InitiateWildWeapon</li> <!--Change this from Initiate to a spot of power-->
+		</weaponTags>
+		<weaponClasses>
+			<li>Melee</li>
+		</weaponClasses>
+		<relicChance>2</relicChance>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_GaubornShotgun</defaultProjectile>
+				<warmupTime>1.4</warmupTime>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<range>8.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>spears</label>
+				<capacities>
+					<li>Stab</li>
+					<li>Poke</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2.4</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1200000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+			</li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Ancient Genome | Immutable
+Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
+      </li>
+		</comps>
+	</ThingDef>
 </Defs>

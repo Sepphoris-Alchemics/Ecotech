@@ -40,11 +40,15 @@
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>ET_Glowsap</thingDef>
-        <countRange>50~200</countRange>
+        <countRange>25~100</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ET_Deepsap</thingDef>
+        <countRange>25~75</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>ET_Brightsap</thingDef>
-        <countRange>-50~50</countRange>
+        <countRange>-2~5</countRange>
       </li>
 
       <!--Categoried items-->
@@ -58,6 +62,10 @@
         <categoryDef>ResourcesRaw</categoryDef>
         <thingDefCountRange>2~4</thingDefCountRange>
         <totalPriceRange>1200~3000</totalPriceRange>
+        <excludedThingDefs>
+          <li MayRequire="Ludeon.RimWorld.Odyssey">GravlitePanel</li>
+          <li>Plasteel</li>
+        </excludedThingDefs>
       </li>
       <li Class="StockGenerator_Category">
         <categoryDef>FoodRaw</categoryDef>
@@ -101,8 +109,8 @@
 
       <li Class="StockGenerator_Category">
         <categoryDef>TerraseedsConduitTrees</categoryDef>
-        <thingDefCountRange>0~2</thingDefCountRange>
-        <countRange>1~3</countRange>
+        <thingDefCountRange>-2~1</thingDefCountRange>
+        <countRange>1</countRange>
       </li>
 
       <li Class="StockGenerator_Category">
@@ -115,6 +123,9 @@
         <categoryDef>TerraseedsPrimaStructures</categoryDef>
         <thingDefCountRange>0~2</thingDefCountRange>
         <countRange>1~3</countRange>
+        <excludedThingDefs>
+          <li>ET_Seed_SmallTerravat</li>
+        </excludedThingDefs>
       </li>
 
       <!--Saps-->
@@ -122,7 +133,7 @@
       <li Class="StockGenerator_Category">
         <categoryDef>BasicSapsAll</categoryDef>
         <thingDefCountRange>1~2</thingDefCountRange>
-        <totalPriceRange>250~750</totalPriceRange>
+        <countRange>1~8</countRange>
         <excludedThingDefs>
           <li>ET_Glowsap</li>
         </excludedThingDefs>
@@ -140,11 +151,11 @@
         <thingDefCountRange>0~2</thingDefCountRange>
         <countRange>1~3</countRange>
       </li>
-      <li Class="StockGenerator_Category">
+      <!--<li Class="StockGenerator_Category">
         <categoryDef>RoyalSapsAll</categoryDef>
         <thingDefCountRange>-1~1</thingDefCountRange>
         <countRange>1~1</countRange>
-      </li>
+      </li>-->
       <li Class="StockGenerator_Category">
         <categoryDef>ET_TechKeys</categoryDef>
         <thingDefCountRange>1~2</thingDefCountRange>
@@ -152,16 +163,16 @@
       </li>
       <!--Terratech gear-->
 
-      <li Class="StockGenerator_Tag">
+      <!--<li Class="StockGenerator_Tag">
         <tradeTag>ET_PlantArmorTag</tradeTag>
         <thingDefCountRange>1~2</thingDefCountRange>
         <countRange>1~2</countRange>
-      </li>
+      </li>-->
 
       <li Class="StockGenerator_Tag">
         <tradeTag>ET_PrimaTurretSeedTag</tradeTag>
-        <thingDefCountRange>1~3</thingDefCountRange>
-        <countRange>1~5</countRange>
+        <thingDefCountRange>0~2</thingDefCountRange>
+        <countRange>1~3</countRange>
       </li>
 
       <li Class="StockGenerator_Tag">
