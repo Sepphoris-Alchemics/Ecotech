@@ -28,6 +28,7 @@
     <factionIconPath>UI/World/TerratechTown</factionIconPath>
     <startingResearchTags>
       <li>TribalStart</li>
+      <li>ET_OrganicTechStart</li>
     </startingResearchTags>
     <startingTechprintsResearchTags>
       <li>TribalStart</li>

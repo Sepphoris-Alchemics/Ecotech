@@ -86,17 +86,18 @@
 			-->
       <li>
         <kindDef>Combat</kindDef>
+        <!--Briar-->
         <options>
-          <!--Briar-->
-          <ET_BriarSentry_Random>9</ET_BriarSentry_Random>
-          <ET_WildSentry_Random>6</ET_WildSentry_Random>
+          <ET_BriarSentry_Random>10</ET_BriarSentry_Random>
+          <ET_WildSentry_Random>4</ET_WildSentry_Random>
           <ET_InitiateSentry_HeavyAll>3</ET_InitiateSentry_HeavyAll>
-          <ET_Sentry_SkirmisherAll>8</ET_Sentry_SkirmisherAll>
+          <ET_Sentry_SkirmisherAll>6</ET_Sentry_SkirmisherAll>
           <ET_Sentry_RangerAll>6</ET_Sentry_RangerAll>
-          <ET_PeriwoodSentry_MeleeAll>5</ET_PeriwoodSentry_MeleeAll>
-          <ET_PrimaSentry_GunnerInfused>8</ET_PrimaSentry_GunnerInfused>
-          <ET_PrimaSentry_FighterInfused>3</ET_PrimaSentry_FighterInfused>
-          <ET_SentryElite>1</ET_SentryElite>
+          <ET_PeriwoodSentry_MeleeAll>2</ET_PeriwoodSentry_MeleeAll>
+          <ET_PrimaSentry_GunnerInfused>4</ET_PrimaSentry_GunnerInfused>
+          <ET_PrimaSentry_FighterInfused>2</ET_PrimaSentry_FighterInfused>
+          <ET_BrightbloomZealot_Random>2</ET_BrightbloomZealot_Random>
+          <ET_OrganicFactionLeader>1</ET_OrganicFactionLeader>
         </options>
       </li>
       <li>
@@ -136,7 +137,8 @@
           <ET_PrimaSentry_FighterInfused>9</ET_PrimaSentry_FighterInfused>
           <ET_PrimaSentry_GunnerInfused>8</ET_PrimaSentry_GunnerInfused>
           <ET_WildSentry_Random>8</ET_WildSentry_Random>
-          <ET_SentryElite>1</ET_SentryElite>
+          <ET_BrightbloomZealot_Random>2</ET_BrightbloomZealot_Random>
+          <ET_OrganicFactionLeader>1</ET_OrganicFactionLeader>
         </options>
       </li>
     </pawnGroupMakers>
@@ -146,7 +148,7 @@
     <modExtensions>
       <li Class="VEF.Factions.FactionDefExtension">
         <allowedBiomes>
-          <li>BorealForest</li>
+          <!--<li>BorealForest</li>-->
           <li>TemperateForest</li>
           <li>TemperateSwamp</li>
           <li>TropicalRainforest</li>

@@ -9,6 +9,7 @@
       <li>
         <thingDef>ET_PrimaSapLampPlant</thingDef>
         <styleDef>ET_BrightsapStyle_PrimaSapLampPlant</styleDef>
+        <styleDef>ET_EndosapStyle_PrimaSapLampPlant</styleDef>
       </li>
     </thingDefStyles>
   </StyleCategoryDef>

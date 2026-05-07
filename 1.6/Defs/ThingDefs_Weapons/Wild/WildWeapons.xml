@@ -208,7 +208,8 @@ Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
     	</tradeTags>-->
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
-			<li>ET_InitiateWildWeapon</li> <!--Change this from Initiate to a spot of power-->
+			<li>ET_BrightbloomWeapon</li>
+			<li>ET_ZealotWildWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Melee</li>

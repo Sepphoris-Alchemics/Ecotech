@@ -6,6 +6,10 @@
     <label>EcoTech</label>
   </ResearchTabDef>
 
+<ResearchProjectTagDef>
+    <defName>ET_OrganicTechStart</defName>
+  </ResearchProjectTagDef>
+
   <!--Ultimate Research Options:
     1: Seed Cultivation: Learn how to properly identify and plant Terrasecurity seeds. This allows the player to know use the plants.
       -The first reseach will teach how to plant Prima Terraseeds as well, which are the most basic.
@@ -100,7 +104,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
       <li>ET_KeyOrganicTech</li>
     </requiredAnalyzed>
     <tags>
-      <li>TribalStart</li>
+      <li>ET_OrganicTechStart</li>
     </tags>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
@@ -124,7 +128,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
       <li>ET_TerraseedEssentials</li>
     </prerequisites>
     <tags>
-      <li>TribalStart</li>
+      <li>ET_OrganicTechStart</li>
     </tags>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>

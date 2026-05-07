@@ -542,4 +542,36 @@
     </disallowedTraits>
     <shuffleable>False</shuffleable>
   </BackstoryDef>
+
+
+
+  <BackstoryDef>
+    <defName>ET_BrightBloomSurvivor</defName>
+    <title>bloompox survivor</title>
+    <titleShort>bloompox survivor</titleShort>
+    <description>[PAWN_nameDef] was afflicted with Bloompox for years, uncured for one reason or another. While fine now, [PAWN_pronoun] both learned how to tend their own body with surgical precision - while also discovering what kind of pain plants can truly deliver.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>PlantWork</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Social>-2</Social>
+      <Medicine>10</Medicine>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <possessions>
+      <MedicineHerbal>4</MedicineHerbal>
+    </possessions>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+  </BackstoryDef>
+
 </Defs>

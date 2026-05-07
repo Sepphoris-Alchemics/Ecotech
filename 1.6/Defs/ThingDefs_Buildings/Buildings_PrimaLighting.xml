@@ -334,8 +334,7 @@
         <range>4.9</range>
         <severityPerSecond>1</severityPerSecond>
         <drugExposure>false</drugExposure>
-        <drawLines>false</drawLines>
-        <ignoreMechs>true</ignoreMechs>
+        <allowMechs>false</allowMechs>
         <!--<partsToAffect>
           <li>Heart</li>
         </partsToAffect>-->

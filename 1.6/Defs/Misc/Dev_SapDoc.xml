@@ -55,57 +55,57 @@ NOTE: ALL effects are based on the matured weapon's baseline stats. DO NOT use t
 
 GLOWSAP:
 	Lifespan increased by 50%
-----------
+===
 DEEPSAP:
 	Can be replanted and regrown at 150% speed
-----------
+===
 ENDOSAP
   +10 lifespan days
   +50% HP, rounded to highest 5th
   Flammability decreased by 75%
   .3 more mass
-----------
+===
 HYPERSAP:
   Projectile max raised by 3
   REMOVED: Project min lowered by 1
   Projectile speed is increased by 50%, rounded to highest 5th
-----------
+===
 TOXSAP:
   Projectiles apply poison
-----------
+===
 SUNSAP:
   Lifespan doubled
   HP regen is a static 15
   Max projectiles doubled | min projectiles halved
-----------
+===
 STARSAP:
   Lifespan is increased by a flat 30 days
   HP regen is a static 15
   Projectiles fired increased by 4 and decreased by 2
-----------
+===
 SURGESAP:
   Allows a secondary fire mode that fires 5x the amount of standard projectiles.
-----------
+===
 MELDSAP:
   Weapon is considered a persona weapon
   +.1 accuracy in all areas. Caps at .9
   Warmup is decreased by 50%
-----------
+===
 ROGUESAP:
   Weapon has a flat 45 day lifespan
   Upon exiry, produces Rogue seed.
-----------
+===
 ECTOSAP (named Ammosap internally):
   -Lifespan is removed
   -Weapon now has ammo function. Ammo is highest projectile count x50
   -Reloaded with parent material
-----------
+===
 CHRONOSAP:
   Lifespan decreased by 50%
   Health regen increased by 100%
   Weapon CD is lowered by 50%
   Projectiles are 50% faster
-----------
+===
 ARCHSAP (REMOVED):
   -Lifespan is removed
   Weapon has 50% more health

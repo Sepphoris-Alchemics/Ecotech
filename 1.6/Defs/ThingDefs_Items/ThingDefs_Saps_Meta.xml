@@ -56,21 +56,21 @@ The metasaps are
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Sunsap</defName>
     <label>Sunsap</label>
-    <description>A jar of terrasap containing stellar energies that were captured directly from the local sun. This sap can only be created during daylight hours; weather does not matter.
-\n\nSunsap has no innate ability, but like Starsap it has immense energy potential. Those with sufficient Terratech knowledge can create Brightsap at an incredibly efficient ratio, alongside supporting very advanced Terrastructures.
-\n\nCurrent use cases:
-Conversion into Brightsap (1:10 ratio)
-Needed to grow Wild weaponry
-Upgrades organic weapons into their pinnacle form
-Highly valuable trade commodity with all EcoTech factions
-(Notes: Will have more use cases when Lithoid weapons are added!)</description>
+    <description>A jar of terrasap containing low energies that were captured directly from the local sun.
+Sunsap's main feature is it's high nutrient contents, and is one of the most valuable saps to any terratech colony. Overall, Sunsap can:
+
+-Be diluted into Brightsap (1:10 ratio)
+-Revitalize organic weapons and armor
+-Grow Wild weaponry
+-Grow non-hybrid chlorografts
+-Grow non-hybrid florafauna</description>
     <tickerType>Normal</tickerType>
     <graphicData>
       <texPath>Things/Resource/Sunsap</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>30</stackLimit>
+    <stackLimit>6</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>
     <statBases>

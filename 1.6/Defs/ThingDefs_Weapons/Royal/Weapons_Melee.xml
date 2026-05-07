@@ -24,6 +24,7 @@ Accuracy follows charge rifles-->
     </thingCategories>
 		<weaponTags Inherit='False'>
       <li>ET_PlantWeapon</li>
+	  <li>ET_RoyalWeapon</li>
 		</weaponTags>
 		<!--<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>

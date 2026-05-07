@@ -48,7 +48,6 @@ The armor organic state allows it to absorb and disperse damage, and filters tox
 		</equippedStatOffsets>
 		<apparel>
 			<tags>
-				<li>PlantArmor</li>
 				<li>HeavyPlantArmor</li>
 			</tags>
 			<wornGraphicPath>Things/Apparel/Terraplate/TerraplateArmor</wornGraphicPath>
@@ -117,7 +116,6 @@ The armor organic state allows it to absorb and disperse damage, and filters tox
 		<generateCommonality>0</generateCommonality>
 		<apparel>
 			<tags>
-				<li>PlantArmor</li>
 				<li>HeavyPlantArmor</li>
 			</tags>
 			<wornGraphicPath>Things/Apparel/Terraplate_helm/TerraplateHelmet</wornGraphicPath>

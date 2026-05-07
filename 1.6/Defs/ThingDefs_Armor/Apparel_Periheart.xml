@@ -54,7 +54,7 @@ Like all organic armor, this set made at a Terravat.</description>
 		</equippedStatOffsets>
 		<apparel>
 			<tags>
-				<li>PlantArmor</li>
+				<li>LightPlantArmor</li>
 			</tags>
 			<wornGraphicPath>Things/Apparel/Periwood/PeriwoodArmor</wornGraphicPath>
 			<layers>
@@ -120,7 +120,7 @@ Like all organic armor, this set made at a Terravat.</description>
 		<generateCommonality>0</generateCommonality>
 		<apparel>
 			<tags>
-				<li>PlantArmor</li>
+				<li>LightPlantArmor</li>
 			</tags>
 			<wornGraphicPath>Things/Apparel/Periwood_helm/PeriwoodHelmet</wornGraphicPath>
 			<layers>

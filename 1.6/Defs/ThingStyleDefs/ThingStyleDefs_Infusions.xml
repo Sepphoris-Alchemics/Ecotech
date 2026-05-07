@@ -31,7 +31,18 @@ These styles are exclusively tied to saps. They will not appear in any menues or
       <drawSize>(1,1)</drawSize>
       <shaderType>CutoutPlant</shaderType>-->
     </graphicData>
-
   </ThingStyleDef>
 
+<!--Endosap Styles-->
+
+  <ThingStyleDef>
+    <defName>ET_EndosapStyle_PrimaSapLampPlant</defName>
+    <overrideLabel>endolamp sprout</overrideLabel>
+    <graphicData>
+      <!--<texPath>Things/Plant/PlantStyles/Brightsap/PrimaSapLamp</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shaderType>CutoutPlant</shaderType>-->
+    </graphicData>
+  </ThingStyleDef>
 </Defs>

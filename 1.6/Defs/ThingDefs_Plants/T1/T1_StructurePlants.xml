@@ -36,9 +36,10 @@ LAMP EFFECTS:
       <li Class="Ecotech.CompProperties_SapInfusable">
         <supportedSaps> <!--THIS DETERMINES WHAT ITEM DEF CAN BE USED IN 'sapTransformOptions'. IF THE DEF ISN'T HERE, THE DEF CAN'T BE USED-->
           <li>ET_Brightsap</li>
+          <li>ET_Deepsap</li>
           <li>ET_Endosap</li>
-          <li>ET_Hypersap</li>
-          <li>ET_Shocksap</li>
+          <!--<li>ET_Hypersap</li>-->
+          <!--<li>ET_Shocksap</li>-->
         </supportedSaps>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
@@ -69,14 +70,14 @@ LAMP EFFECTS:
               <shaderType>CutoutPlant</shaderType>
             </graphicData>
           </li>
-          <li>
+          <!--<li>
             <sap>ET_Hypersap</sap>
             <result>ET_PrimaSapLamp_Hyper</result>
-          </li>
-          <li>
+          </li>-->
+          <!--<li>
             <sap>ET_Shocksap</sap>
             <result>ET_PrimaSapLamp_Charge</result>
-          </li>
+          </li>-->
         </sapTransformOptions>
       </li>
       <li Class="CompProperties_InspectString">
