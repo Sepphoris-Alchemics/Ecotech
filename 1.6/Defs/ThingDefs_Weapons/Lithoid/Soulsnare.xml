@@ -36,6 +36,7 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
+			<li>ET_LithicWeaponStageOne</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -118,6 +119,7 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
+			<li>ET_LithicWeaponStageTwo</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>

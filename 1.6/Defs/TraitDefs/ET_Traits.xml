@@ -5,7 +5,7 @@
 
   <TraitDef>
 		<defName>ET_SkytouchedTrait</defName>
-		<commonality>1</commonality>
+		<commonality>0.5</commonality>
 		<degreeDatas>	
 		  <li>
 			<label>&lt;color=#80C2FF&gt;Skytouched&lt;/color&gt;</label>
@@ -27,11 +27,11 @@
       <li>ET_WatertouchedTrait</li>
       <li>ET_SpacetouchedTrait</li>
 		</conflictingTraits>
-	</TraitDef> 
+	</TraitDef>
 
   <TraitDef>
 		<defName>ET_GrovetouchedTrait</defName>
-		<commonality>1</commonality>
+		<commonality>0.5</commonality>
 		<degreeDatas>	
 		  <li>
 			<label>&lt;color=#68bd46&gt;Grovetouched&lt;/color&gt;</label>
@@ -60,7 +60,7 @@
 
   <TraitDef>
 		<defName>ET_WatertouchedTrait</defName>
-		<commonality>1</commonality>
+		<commonality>0.5</commonality>
 		<degreeDatas>	
 		  <li>
 			<label>&lt;color=#A9A4D1&gt;Depthtouched&lt;/color&gt;</label>
@@ -88,7 +88,7 @@
 
   <TraitDef>
 		<defName>ET_EarthtouchedTrait</defName>
-		<commonality>1</commonality>
+		<commonality>0.5</commonality>
 		<degreeDatas>	
 		  <li>
 			<label>&lt;color=#BD9ABB&gt;Coretouched&lt;/color&gt;</label>
@@ -118,7 +118,7 @@
 
 <TraitDef>
 		<defName>ET_SpacetouchedTrait</defName>
-		<commonality>1</commonality>
+		<commonality>0.5</commonality>
 		<degreeDatas>	
 		  <li>
 			<label>&lt;color=#EDD34D&gt;Voidtouched&lt;/color&gt;</label>
@@ -143,5 +143,43 @@
       <li>ET_SkytouchedTrait</li>
 		</conflictingTraits>
 	</TraitDef> 
+
+<!--=====Stand-ins for vanilla traits; just replaces the gear but otherwise the same=====-->
+<!--<TraitDef>
+    <defName>ET_ShootingAccuracy</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>careful shooter</label>
+        <description>[PAWN_nameDef] takes more time to aim when shooting. [PAWN_pronoun] shoots less often than others, but with more accuracy.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <AimingDelayFactor>0.25</AimingDelayFactor>
+          <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+        </statOffsets>
+        <possessions>
+          <ET_PrimaRifle />
+        </possessions>
+      </li>
+      <li>
+        <label>trigger-happy</label>
+        <description>Pew! Pew! Pew! [PAWN_nameDef] just likes pulling the trigger. [PAWN_pronoun] shoots faster than others, but less accurately.</description>
+        <degree>-1</degree>
+        <statOffsets>
+          <AimingDelayFactor>-0.5</AimingDelayFactor>
+          <ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+        </statOffsets>
+        <possessions>
+          <ET_PrimaPistol />
+        </possessions>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Brawler</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>-->
 
 </Defs>

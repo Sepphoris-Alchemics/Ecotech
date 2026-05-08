@@ -18,6 +18,7 @@
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -129,6 +130,7 @@ Renewable | Unable to be evolved or infused</inspectString>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -250,6 +252,7 @@ The Tricaster features the following bonuses and penalties:
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -266,6 +269,7 @@ The Tricaster features the following bonuses and penalties:
 			<Mass>3.1</Mass>
 			<Flammability>1</Flammability>
 			<WorkToMake>12000</WorkToMake>
+			<MarketValue>80</MarketValue>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>
@@ -340,6 +344,7 @@ Upgradable | Renewable | ??? | ???</inspectString>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>

@@ -27,6 +27,7 @@
     </techHediffsDisallowTags>
     <initialResistanceRange>25~75</initialResistanceRange>
     <disallowedTraits>
+      <li>ShootingAccuracy</li>
 			<li>Brawler</li>
 			<li>Wimp</li>
 			<li>Pyromaniac</li>
@@ -56,6 +57,7 @@
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <maxGenerationAge>65</maxGenerationAge>
     <disallowedTraits>
+      <li>ShootingAccuracy</li>
 			<li>Brawler</li>
 			<li>Wimp</li>
 			<li>Pyromaniac</li>
