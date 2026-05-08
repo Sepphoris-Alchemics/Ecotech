@@ -24,14 +24,16 @@
   </ThingDef>
 
   <ThingDef ParentName="ET_SapFilter_Base">
-    <defName>ET_GlowsapFilter</defName>
-    <label>Sap Transposer</label>
-    <description>A deeply rooted basin that, when filled with glowsap, will slowly filter and absorb most of the elements and nutrients within. This process destroys the given glowsap, but the result is a sap that can enhance a weapon. These new saps can then either be used, or sold.
-The outcome will always be one jar of refined sap, but which one it is will be entirely random. It's not an efficient use of glowsap, but is useful if glowsap reserves are plentiful.</description>
+    <defName>ET_SmallGlowsapFilter</defName>
+    <label>small glowsap transposer</label>
+    <description>A deeply rooted basin that, when filled with glowsap, will slowly filter and absorb most of the elements and nutrients within. This process destroys the given glowsap, but the result is a more refined terrasap that can then either be used, or sold.
+The outcome will always be one jar of refined sap, but which one will be entirely random. It's not an efficient use of glowsap, but is useful if glowsap reserves are plentiful.
+This transposer is only capable of filtering glowsap into a few terrasap types. You'll need bigger transposers (and more glowsap) for chances of obtaining other terrasaps.</description>
 <descriptionHyperlinks>
       <ThingDef>ET_Brightsap</ThingDef>
       <ThingDef>ET_Endosap</ThingDef>
       <ThingDef>ET_Hypersap</ThingDef>
+      <ThingDef>ET_Shocksap</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Building/Production/Transposer/Transposer</texPath>
@@ -53,11 +55,6 @@ The outcome will always be one jar of refined sap, but which one it is will be e
     </statBases>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <!--<designationCategory>EcotechDesignation</designationCategory>-->
-    <!--<costList>
-      <Steel>10</Steel>
-      <WoodLog>30</WoodLog>
-    </costList>-->
     <comps>
     <li Class="CompProperties_InspectString">
 				<inspectString>Check description for potential outcomes</inspectString>
@@ -80,7 +77,7 @@ The outcome will always be one jar of refined sap, but which one it is will be e
         <conversionDurationTicks>180000</conversionDurationTicks>
         <potentialResults>
           <li>
-            <weight>0.35</weight>
+            <weight>0.3</weight>
             <things>
               <ET_Endosap>1</ET_Endosap>
             </things>
@@ -92,13 +89,13 @@ The outcome will always be one jar of refined sap, but which one it is will be e
             </things>
           </li>
           <li>
-            <weight>0.25</weight>
+            <weight>0.2</weight>
             <things>
               <ET_Shocksap>1</ET_Shocksap>
             </things>
           </li>
           <li>
-            <weight>0.1</weight>
+            <weight>0.2</weight>
             <things>
               <ET_Brightsap>1</ET_Brightsap>
             </things>

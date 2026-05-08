@@ -189,15 +189,15 @@ Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
 		</comps>
 	</ThingDef>
 
-<!--Brightbloom Staff-->
+<!--Bloomrot Staff-->
 
 	<ThingDef ParentName="BaseWildTerraweapon">
-		<defName>ET_BrightbloomStaff</defName>
-		<label>brightbloom staff</label>
-		<description>An ancient relic of a bygone people, even by terratech culture. Brightbloom creations used to be much more common, but due to the power they harnessed, the trees used to created them were either eliminated, or hidden away. Only the staves are still seen, and are only held by those in spots of leadership.
+		<defName>ET_BloomrotStaff</defName>
+		<label>bloomrot staff</label>
+		<description>An ancient relic of a bygone people, even by terratech culture. Bloomrot creations used to be much more common, but due to the power they harnessed, the trees used to created them were either eliminated, or hidden away. Only the staves are still seen, and are only held by those in spots of leadership.
 \nThis weapon is entirely organic; it has a limited lifetime and will eventually expire. Additionally, it's ancient design prevents it from accepting other saps.</description>
 		<graphicData>
-			<texPath>Things/WeaponRanged/Wild/BrightbloomStaff</texPath>
+			<texPath>Things/WeaponRanged/Wild/BloomrotStaff</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -208,7 +208,7 @@ Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
     	</tradeTags>-->
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
-			<li>ET_BrightbloomWeapon</li>
+			<li>ET_BloomrotWeapon</li>
 			<li>ET_ZealotWildWeapon</li>
 		</weaponTags>
 		<weaponClasses>

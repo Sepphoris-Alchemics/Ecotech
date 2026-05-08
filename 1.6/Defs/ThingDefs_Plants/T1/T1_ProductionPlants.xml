@@ -93,7 +93,7 @@
     <comps>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_GlowsapFilter</transformedThing>
+        <transformedThing>ET_SmallGlowsapFilter</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
       <li Class="CompProperties_InspectString">

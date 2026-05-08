@@ -15,6 +15,12 @@
 	LITHIC-CLASS (Pink): &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt;
 		-Old color (orange): &lt;color=#D46F44&gt;Lithic-class&lt;/color&gt;
 
+	SKY-CLASS (Blue): &lt;color=#80C2FF&gt;Sky-class&lt;/color&gt;
+
+	DEPTH-CLASS (Purple): &lt;color=#A9A4D1&gt;Depth-class&lt;/color&gt;
+
+	SPACE-CLASS (Yellow): &lt;color=#EDD34D&gt;Space-class&lt;/color&gt;
+
 
 	GOOD TEXT (Yellow): &lt;color=#B2A644&gt;TEXT HERE&lt;/color&gt;
 	BAD TEXT (Orange): &lt;color=#E6784A&gt;TEXT HERE&lt;/color&gt;

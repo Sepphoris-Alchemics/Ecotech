@@ -52,7 +52,7 @@
     <slot>Adulthood</slot>
     <skillGains>
       <Intellectual>8</Intellectual>
-      <Social>-4</Social>
+      <Social>-2</Social>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -76,8 +76,8 @@
     </requiredWorkTags>
     <skillGains>
       <Plants>10</Plants>
-      <Crafting>-4</Crafting>
-      <Construction>-4</Construction>
+      <Crafting>-2</Crafting>
+      <Construction>-2</Construction>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -143,7 +143,7 @@
     <defName>ET_Scribe</defName>
     <title>terratech scribe</title>
     <titleShort>scribe</titleShort>
-    <description>[PAWN_nameDef] is a terratech scribe, one of the most honored roles within the culture. [PAWN_objective] was in charge of keeping and passing down closely-guarded secrets, and defending them to their last breath.\n\n[PAWN_pronoun] was also trained in combat, as the threat of being captured for interrogation always loomed above their heads.</description>
+    <description>[PAWN_nameDef] is a terratech scribe, one of the most honored roles within the culture. [PAWN_objective] was in charge of keeping and passing down closely-guarded secrets.</description>
     <slot>Adulthood</slot>
     <workDisables>
       <li>Crafting</li>
@@ -152,9 +152,9 @@
       <li>Hauling</li>
     </workDisables>
     <skillGains>
-      <Melee>6</Melee>
+      <Melee>-4</Melee>
       <Intellectual>10</Intellectual>
-      <Plants>8</Plants>
+      <Plants>6</Plants>
     </skillGains>
     <requiredWorkTags>
       <li>Intellectual</li>
@@ -183,7 +183,7 @@
     <skillGains>
       <Plants>4</Plants>
       <Cooking>4</Cooking>
-      <Medicine>8</Medicine>
+      <Medicine>6</Medicine>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -225,7 +225,7 @@
     <description>Being products of nature, every Terratech weapon has infinite potential, and [PAWN_nameDef] was in charge of pushing this science. Their knowledge of Terratech bioengineering, particularly in weapons, is unmatched.</description>
     <slot>Adulthood</slot>
     <skillGains>
-      <Intellectual>8</Intellectual>
+      <Intellectual>6</Intellectual>
       <Plants>6</Plants>
       <Shooting>4</Shooting>
       <Melee>4</Melee>
@@ -253,13 +253,15 @@
     <slot>Adulthood</slot>
     <workDisables>
       <li>ManualDumb</li>
+      <li>Intellectual</li>
     </workDisables>
     <requiredWorkTags>
       <li>Violent</li>
     </requiredWorkTags>
     <skillGains>
       <Melee>8</Melee>
-      <Shooting>10</Shooting>
+      <Shooting>8</Shooting>
+      <Plants>-4</Plants>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -273,7 +275,7 @@
 
 
 
-<BackstoryDef>
+<!--<BackstoryDef>
     <defName>ET_SpecOps</defName>
     <title>terratech special operative</title>
     <titleShort>spec. operative</titleShort>
@@ -296,13 +298,9 @@
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
     </spawnCategories>
-    <!--<forcedTraits>
-      <nimble>0</nimble>
-      <jogger>2</jogger>
-    </forcedTraits>-->
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
-  </BackstoryDef>
+  </BackstoryDef>-->
 
 
 
@@ -310,7 +308,7 @@
     <defName>ET_Sculptor</defName>
     <title>terratech bloomcarver</title>
     <titleShort>bloomcarver</titleShort>
-    <description>[PAWN_nameDef] grew up working around woods that were almost exclusively used to create furniture and decor. Thus,  [PAWN_pronoun] mastered manual artistic and crafting skills, both of which were generally handled by specialized seeds.\n\nThis skill allowed them to become the go-to artist of multiple nobles and royals across the tribes, as their creations were unique symbols of status that seeds could never replicate.</description>
+    <description>[PAWN_nameDef] grew up working shaping bloomwood into high-quality furniture and decor. Thus, [PAWN_pronoun] mastered manual artistic and crafting skills, both of which were generally handled by specialized seeds.\n\nThis skill allowed them to become the go-to artist of multiple nobles and royals across the tribes, as their creations were unique symbols of status that seeds could never replicate.</description>
     <slot>Adulthood</slot>
     <workDisables>
       <li>ManualDumb</li>
@@ -322,6 +320,8 @@
     <skillGains>
       <Crafting>8</Crafting>
       <Artistic>10</Artistic>
+      <Melee>-2</Melee>
+      <Shooting>-4</Shooting>
     </skillGains>
     <spawnCategories>
     <li>ET_TerratechBackstories</li>
@@ -334,7 +334,7 @@
     <defName>ET_Chef</defName>
     <title>terratech chef</title>
     <titleShort>chef</titleShort>
-    <description>[PAWN_nameDef] managed the cooking of their tribe, an underappreciated - and vital - role. As the beliefs on eating fruits and vegetables from the earth varied between tribes, [PAWN_possessive] job also included handling livestock.</description>
+    <description>[PAWN_nameDef] managed the cooking of their tribe. Contrary to some beliefs, Many terratech tribes ate meats alongside fruits and vegetables, so occasionally [PAWN_possessive] job also included handling livestock.</description>
     <slot>Adulthood</slot>
     <requiredWorkTags>
       <li>ManualSkilled</li>
@@ -344,7 +344,8 @@
     <skillGains>
       <Animals>6</Animals>
       <Cooking>8</Cooking>
-      <Plants>4</Plants>
+      <Plants>6</Plants>
+      <Construction>-2</Construction>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -371,6 +372,7 @@
       <Medicine>6</Medicine>
       <Cooking>4</Cooking>
       <Plants>8</Plants>
+      <Mining>-2</Mining>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -381,13 +383,14 @@
 
 <BackstoryDef>
     <defName>ET_WaterWorker</defName>
-    <title>terratech seaworker</title>
-    <titleShort>seaworker</titleShort>
-    <description>[PAWN_nameDef] mostly worked away from their tribe, diving deep into the oceans to seek out the lost aquatic terratech that are documented to once exist. They were rarely successful, almost always finding decayed remains and destroyed ruins buried in the ocean floor.\n\nDue to their extensive travelling, they picked up many tricks regarding building structures wherever they went, whether that was on the surface, within caves, or even within the ocean.</description>
+    <title>terratech depthworker</title>
+    <titleShort>depthworker</titleShort>
+    <description>[PAWN_nameDef] mostly worked away from their tribe, diving deep into the oceans to seek out the lost aquatic terratech that were lost to the Golden Collapse. They were rarely successful, almost always finding decayed remains and destroyed ruins buried in the ocean floor.\n\nDue to their extensive travelling, they picked up many tricks regarding building structures wherever they went, whether that was on the surface, within caves, or even within the ocean.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Mining>6</Mining>
       <Construction>8</Construction>
+      <Plants>-2</Plants>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -419,8 +422,8 @@
     <skillGains>
       <Plants>4</Plants>
       <Construction>10</Construction>
-      <Shooting>-4</Shooting>
-      <Melee>-4</Melee>
+      <Shooting>-2</Shooting>
+      <Melee>-2</Melee>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -433,8 +436,8 @@
 
 <BackstoryDef>
     <defName>ET_OutsiderMedical</defName>
-    <title>terratech outsider</title>
-    <titleShort>outsider</titleShort>
+    <title>terratech pariah</title>
+    <titleShort>pariah</titleShort>
     <description>[PAWN_nameDef] was not born into the tribe, or brought in via cultural beliefs. Rather, [PAWN_pronoun] was allowed into the tribe as an adult, and proved [PAWN_possessive] worth through extreme trial. In particular, their medical skills was seen as valuable, as the tribe can generally hold off threats, but larger raids can result in relatively overwelming injuries.\n\nDespite their effort and willingness, [PAWN_pronoun] was treated more like a slave than an equal; they were untrusted, untrained in weapon handling, was forbidden from forming intimate relationships, and access to tribe technology was far out of [PAWN_nameDef]'s reach.</description>
     <slot>Adulthood</slot>
     <workDisables>
@@ -449,8 +452,8 @@
     <skillGains>
       <Plants>4</Plants>
       <Medicine>10</Medicine>
-      <Shooting>-4</Shooting>
-      <Melee>-4</Melee>
+      <Shooting>-2</Shooting>
+      <Melee>-2</Melee>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -463,8 +466,8 @@
 
 <BackstoryDef>
     <defName>ET_OutsiderCrafting</defName>
-    <title>terratech outsider</title>
-    <titleShort>outsider</titleShort>
+    <title>terratech pariah</title>
+    <titleShort>pariah</titleShort>
     <description>[PAWN_nameDef] was not born into the tribe, or brought in via cultural beliefs. Rather, [PAWN_pronoun] was allowed into the tribe as an adult, and proved [PAWN_possessive] worth through extreme trial. In particular, their crafting skills was seen as valuable, as the tribe's reliance on grown weapons and tools can backfire during droughts or in unfertile regions.\n\nDespite their effort and willingness, [PAWN_pronoun] was treated more like a slave than an equal; they were untrusted, untrained in weapon handling, was forbidden from forming intimate relationships, and access to tribe technology was far out of [PAWN_nameDef]'s reach.</description>
     <slot>Adulthood</slot>
     <workDisables>
@@ -478,8 +481,8 @@
     <skillGains>
       <Plants>4</Plants>
       <Crafting>10</Crafting>
-      <Shooting>-4</Shooting>
-      <Melee>-4</Melee>
+      <Shooting>-2</Shooting>
+      <Melee>-2</Melee>
     </skillGains>
     <spawnCategories>
       <li>ET_TerratechBackstories</li>
@@ -494,12 +497,13 @@
     <defName>ET_SpaceWorker</defName>
     <title>terratech spaceworker</title>
     <titleShort>spaceworker</titleShort>
-    <description>[PAWN_nameDef] was a part of a secretive tribe that lived in space, maintaining and guarding the remnants of terratechnologies that utilized the sun and stars. These assets were incredibly desired by pirates and others who would discover their existence, and demanded [PAWN_nameDef] to be highly skilled in combat and negotiation.</description>
+    <description>[PAWN_nameDef] was a part of a secretive tribe that lived in space, maintaining and guarding the remnants of terratechnologies that utilized the sun and stars. These assets were incredibly desired by pirates and others who would discover their existence, and dealing with those pirates - whether by negotiation or by force - was just part of [PAWN_nameDef]'s daily life.</description>
     <slot>Adulthood</slot>
     <skillGains>
-      <Melee>8</Melee>
+      <Melee>6</Melee>
       <Shooting>8</Shooting>
-      <Social>6</Social>
+      <Social>8</Social>
+      <Plants>-4</Plants>
     </skillGains>
     <spawnCategories>
     <li>ET_TerratechBackstories</li>
@@ -546,10 +550,10 @@
 
 
   <BackstoryDef>
-    <defName>ET_BrightBloomSurvivor</defName>
+    <defName>ET_BloomRotSurvivor</defName>
     <title>bloompox survivor</title>
     <titleShort>bloompox survivor</titleShort>
-    <description>[PAWN_nameDef] was afflicted with Bloompox for years, uncured for one reason or another. While fine now, [PAWN_pronoun] both learned how to tend their own body with surgical precision - while also discovering what kind of pain plants can truly deliver.</description>
+    <description>[PAWN_nameDef] was afflicted with Bloompox for years, uncured for one reason or another. While fine now, [PAWN_pronoun] both learned how to tend their own body with surgical precision - while also discovering what kind of horror lies within nature.</description>
     <slot>Adulthood</slot>
     <workDisables>
       <li>PlantWork</li>
@@ -558,7 +562,7 @@
       <li>Caring</li>
     </requiredWorkTags>
     <skillGains>
-      <Social>-2</Social>
+      <Social>-4</Social>
       <Medicine>10</Medicine>
     </skillGains>
     <spawnCategories>

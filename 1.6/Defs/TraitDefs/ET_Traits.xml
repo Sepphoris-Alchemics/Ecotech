@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <TraitDef>
+		<defName>ET_SkytouchedTrait</defName>
+		<commonality>1</commonality>
+		<degreeDatas>	
+		  <li>
+			<label>&lt;color=#80C2FF&gt;Skytouched&lt;/color&gt;</label>
+			<description>[PAWN_nameDef]'s bloodline is related directly to an ancient terratech faction that soared across the horizons, and lived amongst the clouds.</description>
+				<degree>0</degree>
+				<statOffsets>
+					<MoveSpeed>0.2</MoveSpeed>
+					<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+					<MeleeDodgeChance>2</MeleeDodgeChance>
+					<MiningSpeed>-0.4</MiningSpeed>
+					<MiningYield>-0.2</MiningYield>
+        </statOffsets>
+		  </li>
+		</degreeDatas>
+		<conflictingTraits>
+      <li>ET_EarthtouchedTrait</li>
+      <li>ET_GrovetouchedTrait</li>
+      <!--<li>ET_FiretouchedTrait</li>-->
+      <li>ET_WatertouchedTrait</li>
+      <li>ET_SpacetouchedTrait</li>
+		</conflictingTraits>
+	</TraitDef> 
+
+  <TraitDef>
+		<defName>ET_GrovetouchedTrait</defName>
+		<commonality>1</commonality>
+		<degreeDatas>	
+		  <li>
+			<label>&lt;color=#68bd46&gt;Grovetouched&lt;/color&gt;</label>
+			<description>[PAWN_nameDef]'s bloodline is related directly to an ancient terratech faction that specialized in the creation of massive, isolated terratech groves and ecospheres.</description>
+				<degree>0</degree>
+				<statOffsets>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+				  <ToxicResistance>0.2</ToxicResistance>
+				  <PlantWorkSpeed>0.25</PlantWorkSpeed>
+				  <PlantHarvestYield>0.25</PlantHarvestYield>
+				  <SocialImpact>-0.1</SocialImpact>
+				  <NegotiationAbility>-0.1</NegotiationAbility>
+				  <TradePriceImprovement>-0.1</TradePriceImprovement>
+				  <AnimalGatherYield>0.2</AnimalGatherYield>
+        </statOffsets>
+		  </li>
+		</degreeDatas>
+		<conflictingTraits>
+      <li>ET_SkytouchedTrait</li>
+      <li>ET_EarthtouchedTrait</li>
+      <!--<li>ET_FiretouchedTrait</li>-->
+      <li>ET_WatertouchedTrait</li>
+      <li>ET_SpacetouchedTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+  <TraitDef>
+		<defName>ET_WatertouchedTrait</defName>
+		<commonality>1</commonality>
+		<degreeDatas>	
+		  <li>
+			<label>&lt;color=#A9A4D1&gt;Depthtouched&lt;/color&gt;</label>
+			<description>[PAWN_nameDef]'s bloodline is related directly to an ancient terratech faction that lived far beneath the lightless, crushing pressures of the ocean, either before (or during) the Gold Collapse.</description>
+				<degree>0</degree>
+				<statOffsets>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+					<ResearchSpeed>0.20</ResearchSpeed>
+					<GlobalLearningFactor>0.1</GlobalLearningFactor>
+					<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>					
+					<SocialImpact>-0.2</SocialImpact>
+					<ComfyTemperatureMax>-5</ComfyTemperatureMax>
+					<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+        </statOffsets>
+		  </li>
+		</degreeDatas>
+		<conflictingTraits>
+      <li>ET_SkytouchedTrait</li>
+      <li>ET_GrovetouchedTrait</li>
+      <!--<li>ET_FiretouchedTrait</li>-->
+      <li>ET_EarthtouchedTrait</li>
+      <li>ET_SpacetouchedTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+  <TraitDef>
+		<defName>ET_EarthtouchedTrait</defName>
+		<commonality>1</commonality>
+		<degreeDatas>	
+		  <li>
+			<label>&lt;color=#BD9ABB&gt;Coretouched&lt;/color&gt;</label>
+			<description>[PAWN_nameDef]'s bloodline is related directly to an ancient terratech faction that spent centuries living underground, eventually settling near the upper mantle of the planet.</description>
+				<degree>0</degree>
+				<statOffsets>
+					<MoveSpeed>-0.1</MoveSpeed>
+				  <ToxicResistance>0.3</ToxicResistance>
+				  <ComfyTemperatureMin>+5</ComfyTemperatureMin>
+				  <ComfyTemperatureMax>+15</ComfyTemperatureMax>
+				  <MiningSpeed>0.25</MiningSpeed>
+				  <MiningYield>0.25</MiningYield>
+				  <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+				  <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+				  <GlobalLearningFactor>-0.2</GlobalLearningFactor>
+        </statOffsets>
+		  </li>
+		</degreeDatas>
+		<conflictingTraits>
+      <li>ET_SkytouchedTrait</li>
+      <li>ET_GrovetouchedTrait</li>
+      <!--<li>ET_FiretouchedTrait</li>-->
+      <li>ET_WatertouchedTrait</li>
+      <li>ET_SpacetouchedTrait</li>
+		</conflictingTraits>
+	</TraitDef>
+
+<TraitDef>
+		<defName>ET_SpacetouchedTrait</defName>
+		<commonality>1</commonality>
+		<degreeDatas>	
+		  <li>
+			<label>&lt;color=#EDD34D&gt;Voidtouched&lt;/color&gt;</label>
+			<description>[PAWN_nameDef]'s bloodline is related directly to a terratech faction that took to space, isolating itself from the other factions.</description>
+				<degree>0</degree>
+				<statOffsets>
+					<PsychicSensitivity>0.2</PsychicSensitivity>
+					<GlobalLearningFactor>0.2</GlobalLearningFactor>
+          <ResearchSpeed>0.2</ResearchSpeed>
+					<SocialImpact>-0.3</SocialImpact>
+					<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+					<ComfyTemperatureMax>10</ComfyTemperatureMax>
+          <ShootingAccuracyPawn>-20</ShootingAccuracyPawn>
+        </statOffsets>
+		  </li>
+		</degreeDatas>
+		<conflictingTraits>
+      <li>ET_EarthtouchedTrait</li>
+      <li>ET_GrovetouchedTrait</li>
+      <!--<li>ET_FiretouchedTrait</li>-->
+      <li>ET_WatertouchedTrait</li>
+      <li>ET_SkytouchedTrait</li>
+		</conflictingTraits>
+	</TraitDef> 
+
+</Defs>
