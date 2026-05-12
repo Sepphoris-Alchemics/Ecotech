@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--THERMIC MECHANICS:
+		-The THERMIC LANCE is a rifle that can be attuned extreme heat, extreme cold... or both.
+		-THERMIC starts off as as a basic rifle that does rudimentary damage, with no bonuses. It has half the lifespan of an attuned lance, but it can be attuned with any temperature.
+			-The damage values and stats are incredibly low, on part with a standard assault rifle or carbine.
+			-It is charged with shocksap in this state.
+		-When the THERMIC LANCE is imbued with embersap or cryosap, it gains elemental attunement to fire or ice, respectively. This attunement increases most stats, and grants the projectiles elemental properties.
+			-The THERMIC LANCE (IGNITED) gains the following:
+				-Fast projectile output and speed
+				-Lowered accuracy and high spread
+				-Projectiles deal burning damage
+				-Alt fire mode that ignites a small area (cooldown)
+			-The THERMIC LANCE (FRIGID) gains the following:
+				-High accuracy and lowered spread
+				-Lowered projectile output and speed
+				-Projectiles deal frost damage
+				-Alt fire mode causes hypothermia in a small area (cooldown)
+		-Imbuing the weapon with that same sap once more will further improve it, granting them the following effects:
+			-THERMIC LANCE (INFERAL):
+				-All stats affected (both good and bad)
+				-Gains and additional ability: "Hypersteam", which fires a barrage of 30 non-stop searing shots. Cannot be stopped.
+			-THERMIC LANCE (GLACIAL):
+				-All stats affected (good and bad)
+				-Gains an additional ability: "Deep Freeze", which stuns a large area for several seconds. Takes two days before cooldown ends.
+			
+		-HOWEVER, if the THERMIC LANCE is imbued with CHROMASAP, it will gain both stages of the ignited and frigid variants. This will only occur if the imbuement occurs while completely drained.
+		-The THERMIC LANCE *can* be imbued with the opposing sap, but this will only lower it's 'temperature' by one stage. This means a total of FOUR saps are needed to change one Stage 2 THERMIC LANCE to the other STAGE 2.
+			-For example, the process of obtaining an INFERAL THERMAL LANCE is:
+				THERMAL LANCE (dormant) -> Infuse with Embersap -> Create THERMAL LANCE (IGNITED) -> Infuse with Embersap -> Created THERMAL LANCE (INFERAL) (2 embersaps used)
+				...however, if you want to turn that into a THERMAL LANCE (FRIGID), the process would be:
+				THERMAL LANCE (INFERNAL) -> Infused with Cryosap -> Create THERMAL LANCE (IGNITED) -> Infuse with Cryosap -> Create THERMAL LANCE (dormant) -> Infuse with Cryosap ->  THERMAL LANCE (FRIGID)
+				... THEREFORE, IT IS HIGHLY SUGGESTED YOU LET YOUR LANCE SIMPLY RETURN TO THE DORMANT STAGE ITSELF.
+			-B ecause of this, it is very helpful to have a few THERMIC LANCES on hand, in case the need or desire for heat/cold-based weaponry changes.
+		-The THERMIC LANCE has a shorter lifespan than most other lithic weapons, but it won't enter a 'drained' state like most others; instead, it will go back to it's prior "temperature". This can be avoided by infusing it with it's proper sap.
+			-However, the stage 1 (dormant) rifle will enter a drained state if it's lifespan runs out. It will take a significant amount of shocksap to recharge... but can also accept Embersap or Cryosap at this stage.
+				-Additionally, this is the only stage it can accept Chromasap
+		-Like most other Lithic weapons, the THERMIC LANCE has some basic rules it follows:
+			-It will never truly expire
+			-Lifespans are extremely long, and at full charge it can easily last over a year, if not two.
+		-The theme of the weapon is pretty straightforward.
+			This weapon is based around temperature - specifically, fire and ice.
+		-->
+
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
+		<defName>ET_SoulsnareRifleOne</defName>		<!--Counterpart: Prima OLR-->
+		<label>soulsnare rifle (I)</label>
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe soulsnare rifle can be a sad sight to look at, which is reflected by the effect of it's crystals. Those hit by the low-damage projectiles of this weapon experience noticable psychic fatigue, as if being affected by a small psychic drone. The effect is non-lethal, but leaves behind negative, saddening feelings.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
+\n\nThe soulsnare rifle requires 10 shocksap to successfully charge into it's second state.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_a</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_LithicWeaponStageOne</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.8</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_CrystalRifle</defaultProjectile>
+				<warmupTime>1.6</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<range>26.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--Tier 2: mental debuffs-->
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
+		<defName>ET_SoulsnareRifleTwo</defName>		<!--Counterpart: Prima OLR-->
+		<label>soulsnare rifle (II)</label>
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe latest charge has enabled it's projectiles to not only inflict psychic fatigue, but also now interferes with brain activity. Projectiles will multiplicatively lower consciousness, and can even cause a target to fall into a short daze.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
+\n\nThe soulsnare rifle requires 15 shocksap to successfully charge into it's third state.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_b</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_LithicWeaponStageTwo</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>SoulsnareRifleBlueCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlue</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PsyCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>.2</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRiflePurpleCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnarePurple</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MentalCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0</commonality>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1080000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
+Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>SoulsnareRifleBlueCrystal</label>
+						<visualLabel>toggle psychic disruption</visualLabel>
+						<description>Fires crystals that cause miniature psychic disturbance.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlue</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRiflePurpleCrystal</label>
+						<visualLabel>toggle mental disruption</visualLabel>
+						<description>Fires crystal shards that disrupts and lowers conciousness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnarePurple</switchIcon>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--Tier 3: muscle debuffs-->
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
+		<defName>ET_SoulsnareRifleThree</defName>		<!--Counterpart: Prima OLR-->
+		<label>soulsnare rifle (III)</label>
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe latest charge has enabled it's projectiles to affect the entire body, rather than only the mind. The now potent interference it causes will also affect movement and manipulation, causing targets to become slower and less accurate as they are hit.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed. Additionally, it can be 'charged' with shocksap to grow more crystals, and enchance it's abilities.
+\n\nThe soulsnare rifle requires 20 shocksap to successfully charge into it's fourth - and final - state.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_c</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.4</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>SoulsnareRifleBlueCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlue</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PsyCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>.2</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRiflePurpleCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnarePurple</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MentalCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRifleBlackCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlack</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MuscleCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1200000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
+Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</inspectString>
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>SoulsnareRifleBlueCrystal</label>
+						<visualLabel>toggle psychic disruption</visualLabel>
+						<description>Fires crystals that cause miniature psychic disturbance.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlue</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRiflePurpleCrystal</label>
+						<visualLabel>toggle mental disruption</visualLabel>
+						<description>Fires crystal shards that disrupts and lowers conciousness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnarePurple</switchIcon>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRifleBlackCrystal</label>
+						<visualLabel>toggle muscle disruption</visualLabel>
+						<description>Fires crystal shards that cause muscles to strain, reducing their effectiveness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlack</switchIcon>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--Tier 4: other increased stats-->
+	<ThingDef ParentName="BaseSoulsnareTerraweapon">
+		<defName>ET_SoulsnareRifleFour</defName>
+		<label>soulsnare prime</label>
+		<description>A rifle that consists of ancient crystal and petrified wood. This rifle is an extreme divergence from organic Terratech weapons, but the fundamentals behind it's design remain the same.
+\n\nThe latest charge has greatly amplified all it's previous effects. Psychic disturbance is nearly as strong as a high drone, emotions are greatly disturbed, and interference with conciousness, speed, and manipulation can reach a much higher degree.
+\nThis weapon is a lithoid weapon; it has higher upkeep compared to organic weapons and is not as adaptable, but can be infinitely renewed.
+\n\nThis is the final stage of the soulsnare rifle. Charging it will no longer evolve the weapon, but will rather replenish it's power. Sustaining it this way is significantly more efficient than evolving new ones to replace it.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_c</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>LithoidWeapons</li>
+			<li>FullyChargedWeapons</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.5</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>SoulsnareRifleBlueCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlue</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PsyCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>.2</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRiflePurpleCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnarePurple</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MentalCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
+			</li>
+			<li>
+				<label>SoulsnareRifleBlackCrystal</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/SoulsnareBlack</commandIcon>
+				<accuracyTouch>0.85</accuracyTouch>
+				<accuracyShort>0.85</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.35</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MuscleCrystalRifle</defaultProjectile>
+				<warmupTime>1.125</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<minRange>0</minRange>
+				<range>26.9</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.1</commonality>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1320000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#FFC800&gt;Stage IV&lt;/color&gt;
+Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | 1.5x effect bonus</inspectString>
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>SoulsnareRifleBlueCrystal</label>
+						<visualLabel>toggle psychic disruption</visualLabel>
+						<description>Fires crystals that cause miniature psychic disturbance.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlue</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRiflePurpleCrystal</label>
+						<visualLabel>toggle mental disruption</visualLabel>
+						<description>Fires crystal shards that disrupts and lowers conciousness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnarePurple</switchIcon>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>SoulsnareRifleBlackCrystal</label>
+						<visualLabel>toggle muscle disruption</visualLabel>
+						<description>Fires crystal shards that cause muscles to strain, reducing their effectiveness.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/SoulsnareBlack</switchIcon>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--Drained variant-->
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ET_SoulsnareRifleDrained</defName>
+		<label>Drained soulsnare rifle</label>
+		<description>A soulsnare rifle that is devoid of even the slightest charge. Due to how inert it is, the crystals it once posessed have completely deteriorated.
+You will need to bring this weapon to a prismite crucible to regrow the crystals, and make it usable again. The absence of crystals has regressed it to stage I.
+5 starsap is required to restore it to a usable condition, on top of the shocksap required to charge it.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Soulsnare/Soulsnare_d</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>1</MarketValue>
+			<Mass>1.5</Mass>
+			<Flammability>0.5</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<thingCategories Inherit='false'>
+			<li>SoulsnareStages</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | Inert
+Can be restored at a prismite crucible</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>
