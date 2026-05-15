@@ -8,7 +8,7 @@
     <descriptionShort>Turning into precious metals.</descriptionShort>
     <hediffClass>HediffWithComps</hediffClass>
     <label>alchemizing</label>
-    <defaultLabelColor>(.8,0,0)</defaultLabelColor>
+    <defaultLabelColor>(203,148,62)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1</maxSeverity>
     <lethalSeverity>1</lethalSeverity>
@@ -24,7 +24,9 @@
                 <min>1</min>
                 <max>25</max>
               </countRange>
-            <chance>0.2</chance> <!-- 20% chance -->
+            <chance>0.2</chance>
+            <minSeverity>0.3</minSeverity>
+            <maxSeverity>0.9</maxSeverity>
           </li>
           <li>
             <thingDef>Silver</thingDef>
@@ -32,7 +34,8 @@
                 <min>1</min>
                 <max>50</max>
               </countRange>
-              <chance>0.5</chance> <!-- 50% chance -->
+              <chance>0.5</chance>
+              <maxSeverity>0.8</maxSeverity>
           </li>
                 <!-- Guaranteed drop -->
                 <li>
@@ -42,6 +45,7 @@
                         <max>50</max>
                     </countRange>
                     <chance>1</chance>
+                    <minSeverity>0.9</minSeverity>
                 </li>
             </drops>
         </li>

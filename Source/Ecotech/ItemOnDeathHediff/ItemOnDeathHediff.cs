@@ -11,28 +11,18 @@ using UnityEngine;
 namespace Ecotech
 
 {
-    /*
-     * Represents a single possible drop entry.
-     * Each entry rolls independently.
-     */
     public class ItemOnDeathHediff
     {
-        // Item to spawn
         public ThingDef thingDef;
-
-        // Min/max amount to spawn
         public IntRange countRange = new IntRange(1, 1);
-
-        // Independent chance to spawn (0.0 -> 1.0)
         public float chance = 1f;
-    }
 
-    /*
-     * XML properties class for the HediffComp.
-     */
+        public float? minSeverity;
+        public float? maxSeverity;
+
+    }
     public class HediffCompProperties_DropOnDeath : HediffCompProperties
     {
-        // List of possible drops
         public List<ItemOnDeathHediff> drops =
             new List<ItemOnDeathHediff>();
 
@@ -41,10 +31,6 @@ namespace Ecotech
             compClass = typeof(HediffComp_DropOnDeath);
         }
     }
-
-    /*
-     * HediffComp that spawns items when the pawn dies.
-     */
     public class HediffComp_DropOnDeath : HediffComp
     {
         public HediffCompProperties_DropOnDeath Props =>
@@ -56,7 +42,7 @@ namespace Ecotech
         {
             base.Notify_PawnDied(dinfo, culprit);
 
-            Log.Message("DropOnDeath fired.");
+            //Log.Message("DropOnDeath fired.");
 
             Pawn pawn = Pawn;
 
@@ -67,7 +53,6 @@ namespace Ecotech
 
             IntVec3 position = pawn.Corpse?.Position ?? pawn.Position;
 
-            // No valid spawn location
             if (map == null || !position.IsValid)
                 return;
 
@@ -78,6 +63,20 @@ namespace Ecotech
             {
                 if (entry == null || entry.thingDef == null)
                     continue;
+
+                float severity = parent.Severity;
+
+                if (entry.minSeverity.HasValue &&
+                    severity < entry.minSeverity.Value)
+                {
+                    continue;
+                }
+
+                if (entry.maxSeverity.HasValue &&
+                    severity > entry.maxSeverity.Value)
+                {
+                    continue;
+                }
 
                 if (!Rand.Chance(entry.chance))
                     continue;
