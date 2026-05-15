@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--WAYLIGHT CYCLER MECHANICS:
+		-The WAYLIGHT CYCLER is a hybrid rifle that can be attuned to various wavelengths of light, each having different effects.
+		-The WAYLIGHT CYCLER starts off in it's Class-K stage.
+			-The damage values and stats are incredibly low, on part with a standard assault rifle or carbine.
+			-It is charged with shocksap in this state.
+		-When the WAYLIGHT CYCLER is imbued with sunsap or starsap, it's class-type is increased.
+			-The class-types are as followed:
+				-Stage 1: K-Class
+				-Stage 2: F-Class
+				-Stage 3: B-Class
+				-Stage 4: O-Class
+			-Class O can only be acquired by using Starsap on a B-Class
+		-The WAYLIGHT CYCLER gains the following at each class:
+				-Class K: Fires projectiles that deal additional EMP and burning damage.
+				-Class F: Fires a flare deals a massive burst of burning damage + damage to all mechanoids and electrical structures.
+				-Class B: Stat increases, projectile count increases.
+				-Class O: Gains a ray with 150 range that has extremely high accuracy and damage.
+		-Like other Waylight creations, this weapon can be broken down to discover Stellarite.
+		-Waylight weapons can also use sunsap to be restored.
+		-Like most other Lithic weapons, the WAYLIGHT CYCLER has some basic rules it follows:
+			-It will never truly expire.
+			-Lifespans are extremely long, and at full charge it can easily last over a year, if not two.
+			-The theme of the weapon is pretty straightforward.
+				-This weapon is based around the Harvard classifications of main sequence stars
+		-->
+
+</Defs>

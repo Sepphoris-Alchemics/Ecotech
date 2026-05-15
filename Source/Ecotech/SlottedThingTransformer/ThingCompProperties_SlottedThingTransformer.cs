@@ -24,7 +24,7 @@ namespace Ecotech
         // the ticks to wait for until a transformation cycle starts (does NOT include cycle duration!)
         int transformationCycleIntervalTicks = -1;
         public int TransformationCycleIntervalTicks => transformationCycleIntervalTicks;
-        string gizmoOverlayIfTransformingPath;
+        ///string gizmoOverlayIfTransformingPath;
 
         /// <summary>
         /// Can be used to target exact days.
