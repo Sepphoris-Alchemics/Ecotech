@@ -16,7 +16,7 @@
 
 <!--=====Waylight=====-->
 
-	<ThingDef Name="BaseSoulsnareTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseWaylightTerraweapon" Abstract="True" ParentName="BaseGun">
 		<statBases>
 			<MarketValue>900</MarketValue>
 		</statBases>
