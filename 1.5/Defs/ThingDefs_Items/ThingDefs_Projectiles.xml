@@ -505,7 +505,7 @@ Anima long range is brought down by 3
     </projectile>
   </ThingDef>
 
-<!--Lithoid Bullets-->
+<!--Lithic Bullets-->
 
   <ThingDef ParentName="BaseBullet">    <!--To-do: balance later-->
     <defName>Bullet_CrystalRifle</defName>
@@ -540,4 +540,24 @@ Anima long range is brought down by 3
       <speed>45</speed>
     </projectile>
   </ThingDef>
+
+<!--Stellar Bullets-->
+
+  <ThingDef ParentName="BaseBullet">    <!--To-do: balance later-->
+    <defName>Bullet_WaylightRifle</defName>
+    <label>plasma shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_PlasmaShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <stoppingPower>0.4</stoppingPower>
+      <armorPenetrationBase>0.6</armorPenetrationBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
 </Defs>

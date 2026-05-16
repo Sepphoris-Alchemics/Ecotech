@@ -27,4 +27,343 @@
 				-This weapon is based around the Harvard classifications of main sequence stars
 		-->
 
+<!--Stage 1-->
+
+	<ThingDef ParentName="BaseWaylightTerraweapon">
+		<defName>ET_WaylightRifleOne</defName>
+		<label>waylight rifle (K-Class)</label>
+		<description>A rifle forged from metal of a star, and also burning with the heart of one. One of the few Stellar-class weapons that has managed to remain on the Rimworld.
+\n\nIt's lithic hybridization allows it to be upgraded, like other lithic weapons. However, it's stellar nature requires the upgrade materials to be sunsap or starsap, as opposed to shocksap.
+\nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
+\n\nThe waylight rifle requires 1 sunsap or starsap to successfully be heated into it's next class.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Waylight/Waylight_a</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_StellarWeapon</li>
+			<li>ET_StellarWeaponStageOne</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>160</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5.4</Mass> <!--Heavy due to stellar mass, but not as heavy as a pure stellar-->
+			<Flammability>0</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<range>26.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<!--<lifespanTicks>2700000</lifespanTicks>-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+Innate EMP damage | ??? | ??? | ???</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+<!--Stage 2-->
+
+	<ThingDef ParentName="BaseWaylightTerraweapon">
+		<defName>ET_WaylightRifleTwo</defName>
+		<label>waylight rifle (F-Class)</label>
+		<description>A rifle forged from metal of a star, and also burning with the heart of one. One of the few Stellar-class weapons that has managed to remain on the Rimworld.
+\n\nIt's lithic hybridization allows it to be upgraded, like other lithic weapons. However, it's stellar nature requires the upgrade materials to be sunsap or starsap, as opposed to shocksap.
+\nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
+\n\nThe waylight rifle requires 1 sunsap or starsap to successfully be heated into it's next class.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Waylight/Waylight_b</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_StellarWeapon</li>
+			<li>ET_StellarWeaponStageTwo</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>160</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5.4</Mass> <!--Heavy due to stellar mass, but not as heavy as a pure stellar-->
+			<Flammability>0</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<range>26.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>3600000</lifespanTicks>
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
+Innate EMP damage | Solar Flare Ability | ??? | ???</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+<!--Stage 3-->
+
+<ThingDef ParentName="BaseWaylightTerraweapon">
+		<defName>ET_WaylightRifleThree</defName>
+		<label>waylight rifle (B-Class)</label>
+		<description>A rifle forged from metal of a star, and also burning with the heart of one. One of the few Stellar-class weapons that has managed to remain on the Rimworld.
+\n\nIt's lithic hybridization allows it to be upgraded, like other lithic weapons. However, it's stellar nature requires the upgrade materials to be sunsap or starsap, as opposed to shocksap.
+\nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
+\n\nThe waylight rifle requires 1 starsap to be successfully ignited into it's next class. Alternatively, one can use sunsap to replenish it's lifespan.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Waylight/Waylight_c</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_StellarWeapon</li>
+			<li>ET_StellarWeaponStageThree</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5.8</Mass> <!--Heavy due to stellar mass, but not as heavy as a pure stellar-->
+			<Flammability>0</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<range>32.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>bayonet</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.4</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>4500000</lifespanTicks>
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
+Innate EMP damage | Solar Flare Ability | Increased Stats | ???</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+<!--Stage 4-->
+
+<ThingDef ParentName="BaseWaylightTerraweapon">
+		<defName>ET_WaylightRifleFour</defName>
+		<label>waylight rifle (O-Class)</label>
+		<description>A rifle forged from metal of a star, and also burning with the heart of one. One of the few Stellar-class weapons that has managed to remain on the Rimworld.
+\nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
+\n\nThis is the final stage of the waylight rifle, and can no longer be evolved. However, it can still be infused with starsap to replenish it's lifespan.
+\n\nWhispers tell of stellar tech that only O-Class Waylight creations can be used for - and of which can easily rival most glittertech. But exactly what those creations are, and what the process is, is yet to be seen....</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Waylight/Waylight_d</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_StellarWeapon</li>
+			<li>ET_StellarWeaponStageFour</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.75</AccuracyLong>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5.8</Mass> <!--Heavy due to stellar mass, but not as heavy as a pure stellar-->
+			<Flammability>0</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<range>32.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>bayonet</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.4</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>5400000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage IV&lt;/color&gt;
+Innate EMP damage | Solar Flare Ability | Increased Stats | Solar Ray Ability</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
 </Defs>

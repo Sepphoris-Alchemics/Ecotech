@@ -6,7 +6,16 @@ TIME TICK BASICS:
 60,000 = 1 day
 600,000 = 10 days
 900,000 = 1 quadrum (15 days)
-3,600,000	 = 1 quadrum (60 days)
+1,800,000 = 2 quadrums (30 days)
+2,700,000 = 3 quadrums (45 days)
+3,600,000	 = 1 year (60 days)
+4,500,000 = 5 quadrums (75 days)
+5,400,000 = 6 quadrums (90 days)
+6,300,000 = 7 quadrums (105 days)
+7,200,000 = 2 years (120 days)
+8,100,000 = 9 quadrums (135 days)
+9,000,000 = 10 quadrums (150 days)
+
 
 =====PRIMA WEAPONS (1.2.0)=====
 

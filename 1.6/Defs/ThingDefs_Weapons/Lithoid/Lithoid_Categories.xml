@@ -14,6 +14,19 @@
 		</thingCategories>
 	</ThingDef>
 
+<!--=====Waylight=====-->
+
+	<ThingDef Name="BaseSoulsnareTerraweapon" Abstract="True" ParentName="BaseGun">
+		<statBases>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>WaylightTerraweapons</li>
+		</thingCategories>
+	</ThingDef>
+
 <!--=====Vivicore=====-->
 
 	<ThingDef Name="BaseVivicoreTerraweapon" Abstract="True" ParentName="BaseGun">
