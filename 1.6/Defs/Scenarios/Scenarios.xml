@@ -120,19 +120,23 @@
 				</li>
 				<li Class="ScenPart_StartingResearch">
 					<def>StartingResearch</def>
-					<project>ET_PrimaTurretSeeds</project>
+					<project>ET_PrimaTurretTerraseeds</project>
 				</li>
 				<li Class="ScenPart_StartingResearch">
 					<def>StartingResearch</def>
-					<project>ET_SapBasics</project>
+					<project>ET_TerrasapBasics</project>
 				</li>
 				<li Class="ScenPart_StartingResearch">
 					<def>StartingResearch</def>
-					<project>ET_GlowsapRefinement</project>
+					<project>ET_BasicTerrasapFiltering</project>
 				</li>
 				<li Class="ScenPart_StartingResearch">
 					<def>StartingResearch</def>
 					<project>ET_SmallTerravats</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_PeriwoodTerraseeds</project>
 				</li>
 				<li Class="ScenPart_DisallowBuilding">
 					<def>Rule_DisallowBuilding</def>

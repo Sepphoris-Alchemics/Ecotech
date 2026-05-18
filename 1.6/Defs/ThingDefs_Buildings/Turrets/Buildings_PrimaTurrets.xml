@@ -149,7 +149,7 @@ ROGUESAP: DROPS A RANDOM TURRET SEED EVERY 30 DAYS
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>ET_PrimaTurretSeeds</li>
+      <li>ET_PrimaTurretTerraseeds</li>
     </researchPrerequisites>
     <modExtensions>
 			<!--<li Class="HeavyWeapons.HeavyWeapon">
@@ -289,7 +289,7 @@ ROGUESAP: DROPS A RANDOM TURRET SEED EVERY 30 DAYS
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>ET_PrimaTurretSeeds</li>
+      <li>ET_PrimaTurretTerraseeds</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -426,7 +426,7 @@ ROGUESAP: DROPS A RANDOM TURRET SEED EVERY 30 DAYS
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
-      <li>ET_PrimaTurretSeeds</li>
+      <li>ET_PrimaTurretTerraseeds</li>
     </researchPrerequisites>
   </ThingDef>
 

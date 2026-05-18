@@ -86,7 +86,7 @@ Tier 4 surge seeds: 20
       <growDays>4</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_FundamentalArms</li>
+        <li>ET_PrimaMeleeWeapons</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -101,7 +101,7 @@ Tier 4 surge seeds: 20
       <growDays>5</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_FundamentalArms</li>
+        <li>ET_PrimaMeleeWeapons</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -116,7 +116,7 @@ Tier 4 surge seeds: 20
       <growDays>5</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_FundamentalArms</li>
+        <li>ET_PrimaMeleeWeapons</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -130,7 +130,7 @@ Tier 4 surge seeds: 20
       <sowMinSkill>4</sowMinSkill>
       <growDays>7</growDays>
       <sowResearchPrerequisites>
-        <li>ET_FundamentalArms</li>
+        <li>ET_PrimaMeleeWeapons</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -147,7 +147,7 @@ Tier 4 surge seeds: 20
       <growDays>6</growDays>
       <harvestWork>450</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_BasicFirearms</li>
+        <li>ET_PrimaBasicFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -162,7 +162,7 @@ Tier 4 surge seeds: 20
       <growDays>6</growDays>
       <harvestWork>450</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_BasicFirearms</li>
+        <li>ET_PrimaBasicFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -179,7 +179,7 @@ Tier 4 surge seeds: 20
       <growDays>7</growDays>
       <harvestWork>600</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_StandardFirearms</li>
+        <li>ET_PrimaStandardFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -194,7 +194,7 @@ Tier 4 surge seeds: 20
       <growDays>7</growDays>
       <harvestWork>600</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_StandardFirearms</li>
+        <li>ET_PrimaStandardFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -209,7 +209,7 @@ Tier 4 surge seeds: 20
       <growDays>8</growDays>
       <harvestWork>600</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_StandardFirearms</li>
+        <li>ET_PrimaStandardFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -226,7 +226,7 @@ Tier 4 surge seeds: 20
       <growDays>9</growDays>
       <harvestWork>750</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_HeavyFirearms</li>
+        <li>ET_PrimaHeavyFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -241,7 +241,7 @@ Tier 4 surge seeds: 20
       <growDays>10</growDays>
       <harvestWork>750</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_HeavyFirearms</li>
+        <li>ET_PrimaHeavyFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -256,7 +256,7 @@ Tier 4 surge seeds: 20
       <growDays>10</growDays>
       <harvestWork>750</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_HeavyFirearms</li>
+        <li>ET_PrimaHeavyFirearms</li>
       </sowResearchPrerequisites>
     </plant>
   </ThingDef>
@@ -287,7 +287,7 @@ Tier 4 surge seeds: 20
       <growDays>12</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_PrimaTerraweaponSeeds</li>
+        <li>ET_PrimaTerraseedCultivation</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/PrimaPodRandom</immatureGraphicPath>
     </plant>

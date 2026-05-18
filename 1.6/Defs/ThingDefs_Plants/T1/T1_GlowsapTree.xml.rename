@@ -37,7 +37,7 @@
       </sowTags>
       <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
@@ -117,7 +117,7 @@
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>

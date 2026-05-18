@@ -55,7 +55,7 @@
 				<Artistic>3</Artistic>
 			</skillRequirements>
 			<researchPrerequisite>
-				<li>ET_PeriwoodCarving</li>
+				<li>ET_PeriwoodHeartshifting</li>
 			</researchPrerequisite>
 		</recipeMaker>
 	<!--End of crafting-->
@@ -167,7 +167,7 @@ Renewable | Unable to be evolved or infused</inspectString>
 				<Artistic>2</Artistic>
 			</skillRequirements>
 			<researchPrerequisite>
-				<li>ET_PeriwoodCarving</li>
+				<li>ET_PeriwoodHeartshifting</li>
 			</researchPrerequisite>
 		</recipeMaker>
 	<!--End of crafting-->
@@ -382,7 +382,7 @@ Upgradable | Renewable | ??? | ???</inspectString>
 				<Artistic>4</Artistic>
 			</skillRequirements>
 			<researchPrerequisite>
-				<li>ET_PeriwoodCarving</li>
+				<li>ET_PeriwoodHeartshifting</li>
 			</researchPrerequisite>
 		</recipeMaker>
 	<!--End of crafting-->

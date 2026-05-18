@@ -71,7 +71,7 @@ Growing time: 4 full days (Primwood: 2)</description>
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
@@ -171,7 +171,7 @@ Growing time: 4 full days (Primwood: 2)</description>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_BiosynthVat</transformedThing>
+        <transformedThing>ET_BasicBiosynthVat</transformedThing>
       </li>
       <li Class="CompProperties_InspectString">
         <inspectString>Growing into: Biosynth Vat</inspectString>
@@ -249,7 +249,7 @@ Growing time: 4 full days (Primwood: 2)</description>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_BiosynthVat</transformedThing>
+        <transformedThing>ET_BasicBiosynthVat</transformedThing>
       </li>
     </comps>
     <specialDisplayRadius>67.9</specialDisplayRadius>

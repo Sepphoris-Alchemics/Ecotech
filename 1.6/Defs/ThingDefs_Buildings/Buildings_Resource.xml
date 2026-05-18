@@ -34,7 +34,7 @@ Since this basin was specifically designed to house glowsap, this basin cannot s
 		<techLevel>Neolithic</techLevel>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_GlowsapBays</li>
+      <li>ET_BasicTerrasapBays</li>
     </researchPrerequisites>
 		<!--<constructEffect>ConstructWood</constructEffect>-->
 		<fillPercent>0.30</fillPercent>

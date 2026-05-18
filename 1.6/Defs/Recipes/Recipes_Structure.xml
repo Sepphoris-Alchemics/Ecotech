@@ -26,7 +26,7 @@
         <li>ET_Brightsap</li>
       </thingDefs>
     </fixedIngredientFilter>
-    <researchPrerequisite>ET_PrimaSapStructures</researchPrerequisite>
+    <researchPrerequisite>ET_PrimaTerrastructures</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>2800</workAmount>
@@ -64,7 +64,7 @@
         <li>ET_Brightsap</li>
       </thingDefs>
     </fixedIngredientFilter>
-    <researchPrerequisite>ET_PrimaSapStructures</researchPrerequisite>
+    <researchPrerequisite>ET_PrimaTerrastructures</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>2800</workAmount>
@@ -77,17 +77,17 @@
   </RecipeDef>
 
  <RecipeDef>
-    <defName>ET_ProtosapBaySeedRecipe</defName>
-    <label>shape protosap bay seed (brightsap)</label>
-    <description>Shape a seed that will grow into a brightsap bay. Protosap bays take time to grow, but allow a way to grow terraplants in environments with little to no suitable terrains.
-\n\nThe roots grow deep enough to allow the seed to be growable on any solid surface. When planted, the way the plant grows can be manually determined, allowing you to define the space it'll grow into.</description>
+    <defName>ET_BrightsapBaySeedRecipe</defName>
+    <label>shape brightsap bay seed</label>
+    <description>Shape a seed that will grow into a brightsap bay. Allows a way to grow terraplants in environments with little to no suitable terrains.
+\n\nThe roots grow deep enough to allow the seed to be growable on any solid surface. Once planted, you can freely choose the rotation the final structure will take.</description>
     <jobString>shaping a brightsap bay seed.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Plants</workSkill>
     <skillRequirements>
       <Plants>6</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_GrownProtosapBays</researchPrerequisite>
+    <researchPrerequisite>ET_BrightsapBays</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>3200</workAmount>

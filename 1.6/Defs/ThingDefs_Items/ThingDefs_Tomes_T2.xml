@@ -29,17 +29,83 @@ Currently, the tech are:
 
 -->
 
+<!-- ================Organic Terratech Key================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_KeyT2OrganicAptitude</defName>
+        <label>Devotee's Tome: Organic Aptitude</label>
+        <description>A large tome, make out of thick glintwood and guilded with gold. This book holds guarded Terratech knowledge, and is quite valuable.
+This tome teaches vital techniques needed to further handle and develop more complex organic terratech. It is the only way one can properly become a devoted terratechist.
+\nA Terratech devotee can study this at a Terratech research bench in order to successfully experiment with, and understand, the knowledge held within.</description>
+        <graphicData>
+            <drawSize>0.6</drawSize>
+            <texPath>Things/Resource/Tome/Tome_Devotee</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Buyable</tradeability>
+        <tradeTags>
+		    <li>ET_TechKeys</li>
+            <li>ET_TechKeysDevotee</li>
+        </tradeTags>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>1</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>800</MarketValue>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>2.4</Mass>
+            <Flammability>1</Flammability>
+            <DeteriorationRate>1</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ET_TechKeys</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_CompAnalyzableUnlockResearch">
+                <analysisID>130912525</analysisID>
+                <requiresMechanitor>false</requiresMechanitor>
+                <analysisDurationHours>12</analysisDurationHours>
+                <destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+                <completedLetterLabel>Tome studied: {RESEARCH} unlocked</completedLetterLabel>
+                <completedLetter>By studying this tome, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYou can now progress the next tier of organic terratech.</completedLetter>
+                <completedLetterDef>PositiveEvent</completedLetterDef>
+                <activateTexPath>UI/Icons/Study</activateTexPath>
+                <activateLabelString>Study...</activateLabelString>
+                <activateDescString>Study the tome.</activateDescString>
+                <jobString>Study the tome</jobString>
+                <guiLabelString>Choose who should study the tome</guiLabelString>
+                <inspectString>Can be studied for exclusive knowledge.</inspectString>
+
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>false</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+                </targetingParameters>
+            </li>
+        </comps>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
     <!-- ================Tree Keys================ -->
 
     <ThingDef ParentName="ResourceBase">
         <defName>ET_KeyT2ResourceTrees</defName>
-        <label>Acolyte's Tome: Bountiful Conduit Trees</label>
-        <description>A thick book, make out of razor-thin bloomwood and guilded with elderwood. This book holds guarded Terratech knowledge, and is quite valuable.
+        <label>Devotee's Tome: Bountiful Conduit Trees</label>
+        <description>A large tome, make out of thick glintwood and guilded with gold. This book holds guarded Terratech knowledge, and is quite valuable.
 This tome teaches one how to shape and nurture the seed of two special conduit trees, both of which provides massive bounties of valuable resources.
 \nA Terratech devotee can study this at a Terratech research bench in order to successfully experiment with, and understand, the knowledge held within.</description>
         <graphicData>
             <drawSize>0.6</drawSize>
-            <texPath>Things/Resource/Book/Book_Acolyte</texPath>
+            <texPath>Things/Resource/Tome/Tome_Devotee</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <generateCommonality>0</generateCommonality>
@@ -98,13 +164,13 @@ This tome teaches one how to shape and nurture the seed of two special conduit t
 
 <ThingDef ParentName="ResourceBase">
         <defName>ET_KeyT2Megaflora</defName>
-        <label>Acolyte's Tome: Megaflora</label>
-        <description>A thick book, make out of razor-thin bloomwood and guilded with elderwood. This book holds guarded Terratech knowledge, and is quite valuable.
+        <label>Devotee's Tome: Megaflora</label>
+        <description>A large tome, make out of thick glintwood and guilded with gold. This book holds guarded Terratech knowledge, and is quite valuable.
 This tome teaches one how to shape seeds that can go beyond the size of normal trees, and can instead grow up to 3x bigger.
 \nA Terratech devotee can study this at a Terratech research bench in order to successfully experiment with, and understand, the knowledge held within.</description>
         <graphicData>
             <drawSize>0.6</drawSize>
-            <texPath>Things/Resource/Book/Book_Acolyte</texPath>
+            <texPath>Things/Resource/Tome/Tome_Devotee</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <generateCommonality>0</generateCommonality>
@@ -132,6 +198,71 @@ This tome teaches one how to shape seeds that can go beyond the size of normal t
                 <analysisID>520135716</analysisID>
                 <requiresMechanitor>false</requiresMechanitor>
                 <analysisDurationHours>6</analysisDurationHours>
+                <destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+                <completedLetterLabel>Tome studied: {RESEARCH} unlocked</completedLetterLabel>
+                <completedLetter>By studying this tome, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYou can now complete this research at a Terraseed research bench.</completedLetter>
+                <completedLetterDef>PositiveEvent</completedLetterDef>
+                <activateTexPath>UI/Icons/Study</activateTexPath>
+                <activateLabelString>Study...</activateLabelString>
+                <activateDescString>Study the tome.</activateDescString>
+                <jobString>Study the tome</jobString>
+                <guiLabelString>Choose who should study the tome</guiLabelString>
+                <inspectString>Can be studied for exclusive knowledge.</inspectString>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>false</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+                </targetingParameters>
+            </li>
+        </comps>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <!-- ================ Organic Wild Weapon Restoration ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_KeyOrganicWildWeaponRestoration</defName>
+        <label>Devotee's Tome: Organic Wild Weapon Restoration</label>
+        <description>A large tome, make out of thick glintwood and guilded with gold. This book holds guarded Terratech knowledge, and is quite valuable.
+This tome teaches one how to maintain and restore organic wild weapons, weapons of ancient terratech that can no longer be created.
+One can only learn how to maintain organic-class wild weapons through this tome; any hybrid weapons require learning tomes of both terratech paths.
+\nA Terratech devotee can study this at a Terratech research bench in order to successfully experiment with, and understand, the knowledge held within.</description>
+        <graphicData>
+            <drawSize>0.6</drawSize>
+            <texPath>Things/Resource/Tome/Tome_Devotee</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Buyable</tradeability>
+        <tradeTags>
+		    <li>ET_TechKeys</li>
+        </tradeTags>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>5</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>600</MarketValue>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <Flammability>3</Flammability>
+            <DeteriorationRate>1.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ET_TechKeys</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_CompAnalyzableUnlockResearch">
+                <analysisID>041809019</analysisID>
+                <requiresMechanitor>false</requiresMechanitor>
+                <analysisDurationHours>1</analysisDurationHours>
                 <destroyedOnAnalyzed>true</destroyedOnAnalyzed>
                 <completedLetterLabel>Tome studied: {RESEARCH} unlocked</completedLetterLabel>
                 <completedLetter>By studying this tome, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYou can now complete this research at a Terraseed research bench.</completedLetter>

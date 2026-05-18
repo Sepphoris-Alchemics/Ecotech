@@ -56,7 +56,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>

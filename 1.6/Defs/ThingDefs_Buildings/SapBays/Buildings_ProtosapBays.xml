@@ -33,7 +33,7 @@ Since this basin was specifically designed to channel brightsap (and by proxy, g
     <techLevel>Neolithic</techLevel>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_GrownProtosapBays</li>
+      <li>ET_BrightsapBays</li>
     </researchPrerequisites>
     <!--<constructEffect>ConstructWood</constructEffect>-->
     <fillPercent>0.30</fillPercent>
@@ -96,8 +96,7 @@ Since this basin was specifically designed to channel shocksap, it cannot suppor
     <techLevel>Neolithic</techLevel>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_GrownProtosapBays</li>
-      <li>ET_TerrathystEssentials</li>
+      <li>ET_LithicTerratechEssentials</li>
     </researchPrerequisites>
     <!--<constructEffect>ConstructWood</constructEffect>-->
     <fillPercent>0.30</fillPercent>

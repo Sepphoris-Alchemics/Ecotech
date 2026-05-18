@@ -72,7 +72,7 @@
       <expandHomeArea>false</expandHomeArea>
     </building>
     <researchPrerequisites Inherit="False">
-      <li>ET_PrimaSapStructures</li>
+      <li>ET_PrimaTerrastructures</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <holdsRoof>true</holdsRoof>
@@ -155,7 +155,7 @@
       <expandHomeArea>false</expandHomeArea>
     </building>
     <researchPrerequisites Inherit="False">
-      <li>ET_PrimaSapStructures</li>
+      <li>ET_PrimaTerrastructures</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <canOverlapZones>false</canOverlapZones>
@@ -219,7 +219,7 @@
       <ET_TierOnePlating>6</ET_TierOnePlating>
     </killedLeavings>
     <researchPrerequisites Inherit="False">
-      <li>ET_PrimaSapStructures</li>
+      <li>ET_PrimaTerrastructures</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -276,7 +276,7 @@
       <ET_TierOnePlating>6</ET_TierOnePlating>
     </killedLeavings>
     <researchPrerequisites Inherit="False">
-      <li>ET_PrimaSapStructures</li>
+      <li>ET_PrimaTerrastructures</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -344,7 +344,7 @@
       <ET_TierOnePlating>6</ET_TierOnePlating>
     </killedLeavings>
     <researchPrerequisites Inherit="False">
-      <li>ET_PrimaSapStructures</li>
+      <li>ET_PrimaTerrastructures</li>
     </researchPrerequisites>
   </ThingDef>
 
@@ -407,7 +407,7 @@
       <ET_TierOnePlating>6</ET_TierOnePlating>
     </killedLeavings>
     <researchPrerequisites Inherit="False">
-      <li>ET_PrimaSapStructures</li>
+      <li>ET_PrimaTerrastructures</li>
     </researchPrerequisites>
   </ThingDef>
 </Defs>

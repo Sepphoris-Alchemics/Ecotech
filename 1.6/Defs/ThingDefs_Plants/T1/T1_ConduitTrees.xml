@@ -37,7 +37,7 @@
       </sowTags>
       <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
@@ -118,7 +118,7 @@ While this tree is present, weapons and seeds will be created at the base of the
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
@@ -251,7 +251,7 @@ The terrain this tree makes can support normal plants as well. However, this fea
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>
@@ -371,7 +371,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
       <growMinGlow>0</growMinGlow>
       <dieIfLeafless>false</dieIfLeafless>
       <!--<sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>-->
       <dieFromToxicFallout>False</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>

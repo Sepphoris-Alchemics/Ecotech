@@ -50,7 +50,7 @@ The growth can be placed anywhere, but will only grow harvestable crystals in wa
         <li>Ground</li>
       </sowTags>
       <sowResearchPrerequisites>
-        <li>ET_TerrathystEssentials</li>
+        <li>ET_LithicTerratechEssentials</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/TerrathystGrower</immatureGraphicPath>
     </plant>

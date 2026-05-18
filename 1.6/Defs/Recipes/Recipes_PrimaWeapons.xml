@@ -54,7 +54,7 @@
     <skillRequirements>
       <Plants>4</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_PrimaTerraweaponSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_PrimaTerraseedCultivation</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>1200</workAmount>
@@ -92,7 +92,7 @@
     <skillRequirements>
       <Plants>4</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_PrimaTerraweaponSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_PrimaTerraseedCultivation</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>1200</workAmount>
@@ -130,7 +130,7 @@
     <skillRequirements>
       <Plants>4</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_PrimaTerraweaponSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_PrimaTerraseedCultivation</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>1200</workAmount>

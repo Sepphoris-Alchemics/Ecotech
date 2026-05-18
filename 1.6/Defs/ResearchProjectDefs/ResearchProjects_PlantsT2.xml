@@ -93,25 +93,22 @@
   <!--=====GLOWSAP CONTENT=====-->
 
   <ResearchProjectDef>
-    <defName>ET_GrownProtosapBays</defName>
-    <label>Seeded Protosap Bays</label>
+    <defName>ET_BrightsapBays</defName>
+    <label>Brightsap Bays</label>
     <description>Learn how to plant seeds that grow into rooted sap bays, consisting entirely of Elderwood. These sap bays are capable of recycling the contained protosap, eliminating manual care.
 Various lithic and organic growths can be grown faster within certain saps, and these bays also serve as a way to make sure every terratech product is available in any environment.
 The sap it recycles will not be replenished after growth, making sap farming not ideal. But if needed, destroying the structure will yield a few usable jars.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <prerequisites>
-      <li>ET_MultiSpacePlants1</li>
-    </prerequisites>
     <hiddenPrerequisites>
-      <li>ET_GlowsapBays</li>
+      <li>ET_BasicTerrasapBays</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>1.50</researchViewY>
-    <discoveredLetterTitle>About: Protosap Bays</discoveredLetterTitle>
-    <discoveredLetterText>Protosap Bays are grown structures that you can use to grow many smaller EcoTech plants. As designated by the name, these bays specifically hold protosaps, those being brightsap and shocksap. Surgesap does not have a dedicated bay, as it's not required for growing any plants.</discoveredLetterText>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>About: Brightsap Bays</discoveredLetterTitle>
+    <discoveredLetterText>Brightsap Bays are grown structures that you can use to grow many smaller EcoTech plants. As designated by the name, these bays specifically hold protosaps, those being brightsap and shocksap. Surgesap does not have a dedicated bay, as it's not required for growing any plants.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!--=====BRIGHTSAP CONTENT=====-->
@@ -139,29 +136,27 @@ The sap it recycles will not be replenished after growth, making sap farming not
   </ResearchProjectDef>-->
 
   <ResearchProjectDef>
-    <defName>ET_BiosynthVat</defName>
+    <defName>ET_BasicBiosynthVat</defName>
     <label>Biosynthesis Chamber</label>
     <description>Learn how to create a terravat that specializes in utilizing and transforming flesh, organs, and other bodily parts. Notably, this vat is used for armor.
 \nAdditionally, this immediately enables the creation of Terraplate armor.</description>
-    <baseCost>2500</baseCost>
+    <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
       <li>ET_SmallTerravats</li>
+      <li>ET_PeriwoodTerraseeds</li>
     </prerequisites>
-    <hiddenPrerequisites>
-      <li>ET_TierTwoConduitSeeds</li>
-    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>4.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
     <discoveredLetterTitle>About: Biosythesis Chambers</discoveredLetterTitle>
     <discoveredLetterText>Biosynthesis Chambers - often shortened to Biosynth Chambers - are special vats that serves as a direct, usable connection to the planet, allowing a faction to fully - and personally - embrace Terratech, often to a very permanent degree. Most armor sets will be created in these vats by using a large amount of their respective material(s), combined with one or more saps.
 \nThe potential of this chamber is vast - it was known to create the rarest of saps, transfer sentience to giant plants, and was even capable of transforming beings into an ascended state. However, at the moment, only one set of (powerful) armor has been made attainable knowledge.
 \nYou can check the description of the Biosynth Vat to see the current possible combinations.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <!--=====MASTERY TECH=====-->
+  <!--=====DEVOTEE TECH=====-->
 
   <ResearchProjectDef>
     <defName>ET_TierOneOrganicMastery</defName>
@@ -172,22 +167,24 @@ The sap it recycles will not be replenished after growth, making sap farming not
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_GlowsapRefinement</li>
-      <!--<li>ET_MediumTerravats</li>-->
+      <li>ET_TerrasapBasics</li>
       <li>ET_TierTwoConduitSeeds</li>
-      <li>ET_PrimaTurretSeeds</li>
-      <li>ET_PeriwoodTurretSeeds</li>
-      <!--<li>ET_PrimaArmorHeavy</li>-->
+      <li>ET_BasicBiosynthVat</li>
+      <li>ET_PeriwoodTerraseeds</li>
     </hiddenPrerequisites>
+    <requiredAnalyzed>
+      <li>ET_KeyT2OrganicAptitude</li>
+    </requiredAnalyzed>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>6.00</researchViewX>
-    <researchViewY>0</researchViewY>
-    <discoveredLetterTitle>About: Terravats</discoveredLetterTitle>
-    <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
+    <discoveredLetterText>Your dedication to organic terratech culture is starting to pay off. the milestone you have reached has granted you a new understanding of organic nature as a whole, and how you can shape it all. This is just the beginning, however.
+\nEntirely new terratech projects, alongside improving old research, awaits you.</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_MultiSpacePlants1</defName>
+    <defName>ET_MegafloraPlants</defName>
     <label>Megaflora Bioengineering</label>
     <description>Terraplants have incredibly complex biology, and this biology can only go so far in a small space.
 This advancement allows you to shape seeds capable of growing into plants aren't restricted to a 1x1 size, and can instead go up to a 3x3 size. Bigger plants are theoretically possible, but require further research.
@@ -202,8 +199,8 @@ Additionally, it teaches you how to make a new conduit megatree.</description>
       <li>ET_KeyT2Megaflora</li>
     </requiredAnalyzed>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>6.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
     <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
     <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
 \nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
@@ -211,7 +208,7 @@ Additionally, it teaches you how to make a new conduit megatree.</description>
 
   <ResearchProjectDef>
     <defName>ET_AdeptFacilities</defName>
-    <label>Pattern ADE781557711-7</label>
+    <label>Adept Facilities</label>
     <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
 \n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 500 when fully implemented.)</description>
     <baseCost>50</baseCost>
@@ -221,13 +218,223 @@ Additionally, it teaches you how to make a new conduit megatree.</description>
       <li>ET_TierOneOrganicMastery</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>6.00</researchViewX>
-    <researchViewY>1.50</researchViewY>
-    <discoveredLetterTitle>Breakthrough achieved!</discoveredLetterTitle>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>About: Adept Facilities</discoveredLetterTitle>
     <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
 \nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
   </ResearchProjectDef>
 
+  <ResearchProjectDef>
+    <defName>ET_Empty1</defName>
+    <label>Todo</label>
+    <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
+\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 500 when fully implemented.)</description>
+    <baseCost>50</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>10.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>About: Brightsap Bays</discoveredLetterTitle>
+    <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
+\nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_BriarGenome</defName>
+    <label>Prima-Periwood Crossbreeding</label>
+    <description>Discover how to combine the Prima and Periwood genomes to creature a specialized genome that utilizes the best traits of both.
+This advancement is closely guarded by Terratech tribes. You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
+\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
+    <discoveredLetterText>Your experiments of crossbreeding the Prima and Periwood genome has resulting in discovered a 'protected', secret genome: the Briar Genome.
+The Briar Genome combines the growth speed and adaptability of the Prima genome with the flexability and resilience of the Periwood Genome. Additionally, creations of the Briar genome - true to it's name - posess thorny growths that are highly effective in offense and defense.
+You can now create:
+\nBriar Growths, which produce various briar weapons.
+The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====PROSTHETIC/IMPLANT CONTENT=====-->
+
+  <ResearchProjectDef>
+    <defName>ET_BasicOrganicProsthetics</defName>
+    <label>Florografts</label>
+    <description>Todo</description>
+    <baseCost>1600</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <hiddenPrerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+    <discoveredLetterTitle>About: Florografts</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_BasicOrganicImplants</defName>
+    <label>Stage I Floromimicry</label>
+    <description>Todo</description>
+    <baseCost>1600</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_BasicOrganicProsthetics</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+    <discoveredLetterTitle>About: Stage I Floromimicry</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====BLOOMROT CONTENT=====-->
+
+  <ResearchProjectDef>
+    <defName>ET_BloomwoodTerraseeds</defName>
+    <label>Bloomwood Genome Fundamentals</label>
+    <description>Todo</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <!--<hiddenPrerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </hiddenPrerequisites>-->
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+    <discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_BloomwoodProcedures</defName>
+    <label>Bloomrot Medical Procedures</label>
+    <description>Todo</description>
+    <baseCost>1400</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_BloomwoodTerraseeds</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+    <discoveredLetterTitle>About: Bloomrot Medical Procedures</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_BloomwoodCultivation</defName>
+    <label>Bloomwood Cultivation</label>
+    <description>Todo</description>
+    <baseCost>1600</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_BloomwoodTerraseeds</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>3.50</researchViewY>
+    <discoveredLetterTitle>About: Bloomwood Cultivation</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!--=====TERRASAP RESEARCH=====-->
+
+  <ResearchProjectDef>
+    <defName>ET_AdvancedTerrasapFiltering</defName>
+    <label>Advanced Terrasap Filtering</label>
+    <description>Todo</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>ET_BasicTerrasapFiltering</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>About: Advanced Terrasap Filtering</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ET_BasicTerrasapRefinement</defName>
+    <label>Terrasap Refinement</label>
+    <description>Todo</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_AdvancedTerrasapFiltering</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>10.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>About: Terrasap Refinement</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====TERRAPLATE=====-->
+
+<ResearchProjectDef>
+    <defName>ET_HeavyPrimaArmor</defName>
+    <label>Terraplate Armor</label>
+    <description>Terraplate Armor</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>10.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+    <discoveredLetterTitle>About: Terraplate Armor</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+<!--=====WILD WEAPON RESTORATION=====-->
+
+  <ResearchProjectDef> <!--Todo: make secret tech-->
+    <defName>ET_OrganicWildWeaponRestoration</defName>
+    <label>Organic Wild Weapon Restoration</label>
+    <description>Todo</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_EcotechTab</tab>
+    <prerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </prerequisites>
+    <requiredAnalyzed>
+      <li>ET_KeyOrganicWildWeaponRestoration</li>
+    </requiredAnalyzed>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>10.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+    <discoveredLetterTitle>About: Wild Weapon Restoration</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
 
   <!--=====GUARDED KNOWLEDGE=====-->
 
@@ -241,7 +448,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_MultiSpacePlants1</li>
+      <li>ET_MegafloraPlants</li>
     </hiddenPrerequisites>
     <requiredAnalyzed>
       <li>ET_KeyT2ResourceTrees</li>
@@ -279,32 +486,6 @@ This advancement is closely guarded by Terratech tribes.  You will need to obtai
 Thermoleaf Tree, which regulates temperature in larger rooms.</discoveredLetterText>
   </ResearchProjectDef>-->
 
-  <ResearchProjectDef>    <!--Briar weapons and structures-->
-    <defName>ET_BriarGenome</defName>
-    <label>Prima-Periwood Crossbreeding</label>
-    <description>Discover how to combine the Prima and Periwood genomes to creature a specialized genome that utilizes the best traits of both.
-This advancement is closely guarded by Terratech tribes. You will need to obtain and study a special tome to unlock these secrets. These special tomes can be bought from Terratech colonies.
-\n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-    <baseCost>1500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TierOneOrganicMastery</li>
-    </hiddenPrerequisites>
-    <requiredAnalyzed>
-      <li>ET_KeyBriarGenome</li>
-    </requiredAnalyzed>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>2.20</researchViewY>
-    <discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
-    <discoveredLetterText>Your experiments of crossbreeding the Prima and Periwood genome has resulting in discovered a 'protected', secret genome: the Briar Genome.
-The Briar Genome combines the growth speed and adaptability of the Prima genome with the flexability and resilience of the Periwood Genome. Additionally, creations of the Briar genome - true to it's name - posess thorny growths that are highly effective in offense and defense.
-You can now create:
-\nBriar Growths, which produce various briar weapons.
-The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLetterText>
-  </ResearchProjectDef>
-
   <!--<ResearchProjectDef>
     <defName>ET_MaterialCompression</defName>
     <label>Plating Compression</label>
@@ -315,7 +496,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_TerrathystEssentials</li>
+      <li>ET_LithicTerratechEssentials</li>
     </hiddenPrerequisites>
     <requiredAnalyzed>
       <li>ET_KeyMaterialCompression</li>
@@ -345,7 +526,7 @@ Terrathyst is reactive to terrain it's grown in, which directly affects it's col
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_TerrathystEssentials</li>
+      <li>ET_LithicTerratechEssentials</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>

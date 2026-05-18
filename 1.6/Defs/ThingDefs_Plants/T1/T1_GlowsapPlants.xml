@@ -40,7 +40,7 @@ Due to it's size, this plant only produces a trace amount of glowsap. It is advi
       </sowTags>
       <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>
@@ -116,7 +116,7 @@ Like most other blooms, it can quickly produce sap, but provides a very small yi
       </sowTags>
       <sowMinSkill>4</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>false</blockAdjacentSow>
       <topWindExposure>0.1</topWindExposure>

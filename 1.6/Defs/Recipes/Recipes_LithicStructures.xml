@@ -20,7 +20,7 @@
         <count>3</count>
       </li>
     </ingredients>
-    <researchPrerequisite>ET_TerrathystEssentials</researchPrerequisite>
+    <researchPrerequisite>ET_LithicTerratechEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>1600</workAmount>

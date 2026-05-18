@@ -11,7 +11,7 @@
     <skillRequirements>
       <Plants>4</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_SapBasics</researchPrerequisite>
+    <researchPrerequisite>ET_TerrasapBasics</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>6400</workAmount>
@@ -33,7 +33,7 @@
     <skillRequirements>
       <Plants>8</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_PeriwoodSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_PeriwoodTerraseeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>6400</workAmount>
@@ -143,7 +143,7 @@
     <skillRequirements>
       <Plants>8</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_BiosynthVat</researchPrerequisite>
+    <researchPrerequisite>ET_BasicBiosynthVat</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>12000</workAmount>
@@ -165,7 +165,7 @@
     <skillRequirements>
       <Plants>6</Plants>
     </skillRequirements>
-    <researchPrerequisite>ET_MultiSpacePlants1</researchPrerequisite>
+    <researchPrerequisite>ET_MegafloraPlants</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>9600</workAmount>

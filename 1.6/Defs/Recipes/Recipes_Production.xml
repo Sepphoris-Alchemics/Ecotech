@@ -20,7 +20,7 @@
         <count>5</count>
       </li>
     </ingredients>-->
-    <researchPrerequisite>ET_TerraseedEssentials</researchPrerequisite>
+    <researchPrerequisite>ET_OrganicTerratechEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>6400</workAmount>
@@ -42,7 +42,7 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
-    <researchPrerequisite>ET_GlowsapRefinement</researchPrerequisite>
+    <researchPrerequisite>ET_BasicTerrasapFiltering</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>3200</workAmount>
@@ -86,7 +86,7 @@
       <skillRequirements>
         <Plants>8</Plants>
       </skillRequirements>
-    <researchPrerequisite>ET_PeriwoodSeeds</researchPrerequisite>
+    <researchPrerequisite>ET_PeriwoodTerraseeds</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>4800</workAmount>

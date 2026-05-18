@@ -85,7 +85,7 @@ The growth can be placed anywhere, but will only grow harvestable crystals in wa
         <li>Ground</li>
       </sowTags>
       <sowResearchPrerequisites>
-        <li>ET_TerrathystEssentials</li>
+        <li>ET_LithicTerratechEssentials</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/TerrathystGrower</immatureGraphicPath>
     </plant>
@@ -139,7 +139,7 @@ These smaller growths can grow on any fertile terrain, though larger growths req
         <li>ET_ShocksapCompatible</li>
       </sowTags>
       <sowResearchPrerequisites>
-        <li>ET_TerrathystEssentials</li>
+        <li>ET_LithicTerratechEssentials</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/Terrathyst_Mature</immatureGraphicPath>
     </plant>

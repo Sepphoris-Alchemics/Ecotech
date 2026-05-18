@@ -52,7 +52,7 @@ While this crucible is a good starting point, any tribe that wishes to survive s
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_TerrathystEssentials</li>
+      <li>ET_LithicTerratechEssentials</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>

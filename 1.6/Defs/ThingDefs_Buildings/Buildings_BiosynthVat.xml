@@ -21,7 +21,7 @@
   -->
 
   <ThingDef ParentName="BuildingBase">
-    <defName>ET_BiosynthVat</defName>
+    <defName>ET_BasicBiosynthVat</defName>
     <label>Biosynth vat</label>
     <description>A tree meant to mimic and replicate the processes of Terravats to extremely precise degrees. The biosynth vat is required for the manipulation or fusion of anything that posesses complex genetic makeup, such as body parts, creatures, and even humanoids.
 \n\nWhile a terravat's contents can be freely modified, a biosynth tree will only use the required resources when the operation is called, and the items are used immediately.</description>

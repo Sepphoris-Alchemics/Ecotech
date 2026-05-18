@@ -61,7 +61,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>ET_OrganicTerratechEssentials</li>
     </researchPrerequisites>
     <castEdgeShadows>false</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
@@ -105,7 +105,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
       <li>ET_PrimaTurretSeedApexToStake</li>
       <li>ET_PrimaTurretSeedApexToSMG</li>
       <li>ET_PrimaTurretSeedApexToShotgun</li>
-      <li>ET_ProtosapBaySeedRecipe</li>
+      <li>ET_BrightsapBaySeedRecipe</li>
       <li>ET_WildbarkTreeTierTwoSeedRecipe</li>
       <li>ET_BiosynthTreeSeedRecipe</li>
       <li>ET_PeriwoodTreeSeedRecipe</li>
@@ -181,7 +181,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>ET_OrganicTerratechEssentials</li>
     </researchPrerequisites>
     <castEdgeShadows>false</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>

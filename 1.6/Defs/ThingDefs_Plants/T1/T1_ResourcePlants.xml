@@ -69,7 +69,7 @@
       </sowTags>
       <sowMinSkill>2</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>ET_TerraseedEssentials</li>
+        <li>ET_OrganicTerratechEssentials</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>false</blockAdjacentSow>
       <dieIfLeafless>false</dieIfLeafless>

@@ -30,7 +30,7 @@
     <products>
       <ET_RandomTierTwoWeapon>1</ET_RandomTierTwoWeapon>
     </products>
-	<researchPrerequisite>ET_PeriwoodSeeds</researchPrerequisite>
+	<researchPrerequisite>ET_PeriwoodTerraseeds</researchPrerequisite>
 		<skillRequirements>
 			<Intellectual>2</Intellectual>
 		</skillRequirements>

@@ -51,7 +51,7 @@ Tier 4 surge seeds: 20
       <growDays>1</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_PrimaTerraweaponSeeds</li>
+        <li>ET_PrimaTerraseedCultivation</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/PrimaHyperpod_Mature</immatureGraphicPath>
       <visualSizeRange>0.8~1</visualSizeRange>
@@ -212,7 +212,7 @@ Tier 4 surge seeds: 20
       <growDays>1</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_PrimaTerraweaponSeeds</li>
+        <li>ET_PrimaTerraseedCultivation</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/PrimaHyperpod_Mature</immatureGraphicPath>
       <visualSizeRange>0.8~1</visualSizeRange>
@@ -310,7 +310,7 @@ Tier 4 surge seeds: 20
       <growDays>1</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_PrimaTerraweaponSeeds</li>
+        <li>ET_PrimaTerraseedCultivation</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/PrimaHyperpod_Mature</immatureGraphicPath>
       <visualSizeRange>0.8~1</visualSizeRange>
@@ -408,7 +408,7 @@ Tier 4 surge seeds: 20
       <growDays>1</growDays>
       <harvestWork>300</harvestWork>
       <sowResearchPrerequisites>
-        <li>ET_PrimaTerraweaponSeeds</li>
+        <li>ET_PrimaTerraseedCultivation</li>
       </sowResearchPrerequisites>
       <immatureGraphicPath>Things/Plant/PrimaHyperpod_Mature</immatureGraphicPath>
       <visualSizeRange>0.8~1</visualSizeRange>

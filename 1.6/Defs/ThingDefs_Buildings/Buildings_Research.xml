@@ -103,7 +103,7 @@
 		<pathCost>30</pathCost>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_SapBasics</li>
+      <li>ET_TerrasapBasics</li>
     </researchPrerequisites>
 		<!--<constructEffect>ConstructWood</constructEffect>-->
 		<fillPercent>0.30</fillPercent>
@@ -266,7 +266,7 @@
 		<pathCost>30</pathCost>
     <maxTechLevelToBuild>Medieval</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_SapBasics</li>
+      <li>ET_TerrasapBasics</li>
     </researchPrerequisites>
 		<fillPercent>0.30</fillPercent>
 		<statBases>

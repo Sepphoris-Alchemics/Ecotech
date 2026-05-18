@@ -89,12 +89,12 @@
   <!--=====ESSENTIALS: BENCHES AND STARTING RESOURCES=====-->
 
   <ResearchProjectDef>
-    <defName>ET_TerraseedEssentials</defName>
-    <label>Organic Essentials</label>
+    <defName>ET_OrganicTerratechEssentials</defName>
+    <label>Organic Terratech Essentials</label>
     <description>Learn how to properly create and grow the fundamentals of organic terratech, such as terramass - a growable building material - and various terraseeds, which are specialized seeds that are used to grow biotic gear and equipment.
 Teaches you how to nurture a Terraforge channeling seed, which can be shaped at a crafting spot.
 Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded by the local Terratech faction.</description>
-    <baseCost>1500</baseCost>
+    <baseCost>1400</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
@@ -118,14 +118,14 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
   <!--=====PRIMA WEAPONS=====-->
 
   <ResearchProjectDef>
-    <defName>ET_PrimaTerraweaponSeeds</defName>
-    <label>Prima Terraseed Cultivation</label>
+    <defName>ET_PrimaTerraseedCultivation</defName>
+    <label>Prima Genome Fundamentals</label>
     <description>Learn how to nuture and handle Prima Terraseeds, alongside growing the pods that produce them. Prima weapons are fast to grow and easy to handle, but are limited in their damage, and wither away relatively quickly.</description>
-    <baseCost>1800</baseCost>
+    <baseCost>1400</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>ET_OrganicTerratechEssentials</li>
     </prerequisites>
     <tags>
       <li>ET_OrganicTechStart</li>
@@ -138,80 +138,80 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_FundamentalArms</defName>    <!--Outdated name-->
+    <defName>ET_PrimaMeleeWeapons</defName>
     <label>Prima Focusing: Melee Weapons</label>
     <description>Learn how to grow terrapods that specifically grow patterns based off melee weapons.</description>
     <baseCost>900</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_PrimaTerraweaponSeeds</li>
+      <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>ET_GlowsapBasinResearch</li>
     </requiredResearchFacilities>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>0.00</researchViewY>
+    <researchViewY>2.10</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_BasicFirearms</defName>
+    <defName>ET_PrimaBasicFirearms</defName>
     <label>Prima Focusing: Light Weapons</label>
     <description>Learn how to grow terrapods that specifically produce light, quickly grown Prima weapons.</description>
     <baseCost>900</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_PrimaTerraweaponSeeds</li>
+      <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>ET_GlowsapBasinResearch</li>
     </requiredResearchFacilities>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>0.00</researchViewY>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_StandardFirearms</defName>
+    <defName>ET_PrimaStandardFirearms</defName>
     <label>Prima Focusing: Standard Weapons</label>
     <description>Learn how to grow terrapods that specifically grow standard, well-rounded Prima weapons.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_PrimaTerraweaponSeeds</li>
+      <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>ET_GlowsapBasinResearch</li>
     </requiredResearchFacilities>
-    <researchViewX>4.00</researchViewX>
-    <researchViewY>0.00</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_HeavyFirearms</defName>
+    <defName>ET_PrimaHeavyFirearms</defName>
     <label>Prima Focusing: Heavy Weapons</label>
     <description>Learn how to grow terrapods that specifically grow powerful, role-oriented Prima weapons.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_PrimaTerraweaponSeeds</li>
+      <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>ET_GlowsapBasinResearch</li>
       <li>ET_TerravatBasic</li>
     </requiredResearchFacilities>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>0.00</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_PrimaTurretSeeds</defName>
+    <defName>ET_PrimaTurretTerraseeds</defName>
     <label>Prima Sentry Seeds</label>
     <description>Learn how to properly grow and plant specialized seeds which will instantly sprout into biotic plant patterns akin to small turrets. The nature of these plants - labelled as "Sentries" - requires them to be placed in soil that can grow plants.
 Instead of using electricity or requiring fuel, these sentries have a limited lifespan, which drains over time and whenever they generate projectiles. The seeds these sentries come from are acquired directly from Primwood Sentinels, and matured, unmodified Terraweapons.</description>
@@ -219,61 +219,61 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_PrimaTerraweaponSeeds</li>
+      <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
-    <!--<hiddenPrerequisites>
-      <li>ET_SurgeSeeds</li>
-    </hiddenPrerequisites>-->
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>ET_GlowsapBasinResearch</li>
       <li>ET_TerravatBasic</li>
     </requiredResearchFacilities>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
 
-  <!--=====PERIWOOD WEAPONS=====-->
+  <!--=====PERIWOOD CONTENT=====-->
 
   <ResearchProjectDef>
-    <defName>ET_PeriwoodSeeds</defName>
-    <label>Periwood Terraseed Cultivation</label>
+    <defName>ET_PeriwoodTerraseeds</defName>
+    <label>Periwood Genome Fundmentals</label>
     <description>Learn how to nuture and handle Periwood Terraseeds, which grow into Periwood Trees. The core of these trees can be harvested, which are then carefully carved into periwood weapons.</description>
-    <baseCost>1250</baseCost>
+    <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TerraseedEssentials</li>
-    </hiddenPrerequisites>
+    <prerequisites>
+      <li>ET_PrimaTerrastructures</li>
+    </prerequisites>
+    <requiredAnalyzed>
+      <li>ET_KeyPeriwoodTerraseeds</li>
+    </requiredAnalyzed>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>2.90</researchViewY>
-    <discoveredLetterTitle>About: Periwood Weapons</discoveredLetterTitle>
-    <discoveredLetterText>Periwood Weapons are considered the 'staple' terraweapon type due to their low requirements, sap potential, and accuracy. They are grown by planting a Periwood Terratree in fertile soil, and then carving the weapon out when it's fully grown. Periwood weapons have a significantly longer base lifespan than most other organic weapons. Additionally, saps are much more effective in Periwood weapons than any other genome.
-The trees themselves also serve as a source of wood that can easily be obtained and expanded; they aren't as efficient as other trees, but they don't require space between one another. do note that the periwood hearts are incredibly sensitive and fragile, and need to be used quickly upon harvest.
-\n\nUnlike Prima weapons, they are not immediately produced, and must be carved from a heart. The techniques for this is it's own field of study.</discoveredLetterText>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+    <discoveredLetterTitle>About: Periwood Genome</discoveredLetterTitle>
+    <discoveredLetterText>The Periwood genome is almost as adaptable as the prima genome, but trades flexability for resilience. It serves as a much more 'defensible' option for early developing terratech tribes, but still requires an understanding of the prima genome.
+Periwood weapon development is entirely different. A periwood tree much be first planted, of which weapon pods will grow around. Periwood weapons can then be harvested from those pods. These weapons have a significantly longer base lifespan than most other organic weapons.
+The trees themselves also produce a durable and fire-resistant wood, and the periwood hearts can be used for crafting specific weapons, or living armor.</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_PeriwoodCarving</defName>
-    <label>Periwood Carving</label>
-    <description>Learn how to carve periwood hearts into various weapons. Due to the smaller amount of periwood weapons, all the carving techniques can be learned at once.</description>
+    <defName>ET_PeriwoodHeartshifting</defName>
+    <label>Periwood Heartshifting</label>
+    <description>Learn how to influence periwood hearts to grow into specific weapons, similar to how prima seeds are based on genetic patterns. Due to the smaller amount of periwood weapons, all the heartshifting techniques can be learned at once.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_PeriwoodSeeds</li>
+      <li>ET_PeriwoodTerraseeds</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>2.90</researchViewY>
-<discoveredLetterTitle>About: Periwood Carving</discoveredLetterTitle>
-    <discoveredLetterText>Most periwood weapons are carved from a periwood heart at a terraforge. They take little material investment beyond the heart, usually only requiring sap to support them during the carving. However, the carver will need some skill with plants, alongside understanding artistic basics, since carving the weapon is just as involved - if not more - as carving a sculpture out of wood or stone.
-\n\nNote that cutting down a periwood tree is taboo in terratech culture, and those attuned with nature will not appreciate this. It is only advised to use this technique sparingly, or when absolutely necessary.</discoveredLetterText>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+<discoveredLetterTitle>About: Periwood Heartshifting</discoveredLetterTitle>
+    <discoveredLetterText>Heartshifting is done at a terraforge. They take little material investment beyond the heart, usually only requiring sap to support them during the process. However, the heartshifter will need some skill with both plants and artistry, since heartshifting is just as delicate - if not more - as shaping a sculpture out of clay or even molten glass.
+\n\nNote that since obtaining a periwood heart requires cutting down a periwood tree, certain cultures will be ethically against the procedure.</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_PeriwoodTurretSeeds</defName>
+    <defName>ET_PeriwoodTurretTerraseeds</defName>
     <label>Periwood Groveguard Seeds</label>
     <description>Learn how to properly grow and plant specialized seeds which will shortly sprout into a biotic turret that's effective at defense and supression.
 Like other biotic turrets, the Groveguard has a limited lifespan, which drains over time and whenever they generate projectiles. However, this loss is slower than Prima turrets.
@@ -281,20 +281,17 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_PeriwoodSeeds</li>
-      <li>ET_PrimaTurretSeeds</li>
-    </hiddenPrerequisites>
-    <!--<hiddenPrerequisites>
-      <li>ET_SurgeSeeds</li>
-    </hiddenPrerequisites>-->
+    <prerequisites>
+      <li>ET_PeriwoodTerraseeds</li>
+      <li>ET_PrimaTurretTerraseeds</li>
+    </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>ET_GlowsapBasinResearch</li>
       <li>ET_TerravatBasic</li>
     </requiredResearchFacilities>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>1.50</researchViewY>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
 
   <!--=====CONDUIT TREES=====-->
@@ -304,92 +301,93 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
     <label>Primwood Conduit Seeds</label>
     <description>Not everything is hands-on; while you take care of the planet, the planet will take care of you back. This research enables you to create "Conduit" seeds, which - when planted - grow powerful trees that protect and supply your colony.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-    <baseCost>2600</baseCost>
+    <baseCost>1600</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_PrimaTerraweaponSeeds</li>
-    </hiddenPrerequisites>
+    <prerequisites>
+      <li>ET_PrimaTerraseedCultivation</li>
+    </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>0.00</researchViewX>
-    <researchViewY>2.20</researchViewY>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
     <discoveredLetterTitle>About: Conduit Trees</discoveredLetterTitle>
     <discoveredLetterText>Conduit Trees are special trees meant to assist and advance EcoTech tribes. Each tree provides a special, unique passive mechanic, such as providing special weapons, saps, and materials. Like any other seed, you can shape the seed of every tree at a Terraforge.\n\nYou can have multiples of the same tree available on the map, but be aware that each tree requires ample space from one of the same kind!</discoveredLetterText>
   </ResearchProjectDef>
 
   <ResearchProjectDef>    <!--Tier 2 Conduit Trees-->
     <defName>ET_TierTwoConduitSeeds</defName>
-    <label>Elderwood Conduit Seeds</label>
-    <description>Discover how to shape more advanced conduit seeds consisting of Elderwood, allowing access to new, powerful conduit trees.
+    <label>Periwood Conduit Seeds</label>
+    <description>Discover how to shape more advanced conduit seeds consisting of Periwood, allowing access to new, powerful conduit trees.
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
-    <baseCost>2000</baseCost>
+    <baseCost>1800</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
       <li>ET_TierOneConduitSeeds</li>
+      <li>ET_PeriwoodTerraseeds</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>2.20</researchViewY>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
     <discoveredLetterTitle>New Conduit Trees Discovered!</discoveredLetterTitle>
     <discoveredLetterText>Your research into more advanced conduit trees has allowed you to learn the creation of an entirely unique tree:
 \nReclaimer Trees, which recycle fabricated and electronic items into more usable materials.
-\nAll Primwood trees now also have a more effective Elderwood variant (see seed descriptions).
+\nAll Primwood trees now also have a more effective Periwood variant (see seed descriptions).
 Additionally, you can now properly handle and plant more exclusive seeds that are carried by the Terratech Curators.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <ResearchProjectDef>    <!--Tier 2 (Elderwood) Terraforge-->
-    <defName>ET_TierTwoTerraforge</defName>
-    <label>Pattern 52R8898111-E</label>
-    <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
-\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1500 when fully implemented.)</description>
-    <baseCost>150</baseCost>
+  <ResearchProjectDef>
+    <defName>ET_PeriwoodArmor</defName>
+    <label>Periheart Plating</label>
+    <description>Discover how to form a set living armor that has served terratech colonies for generations, striking a perfect balance between protection and ease of use.
+\n\nRelatively quick to grow, but each set will require access to a biosynth vat, and to a small supply of brightsap.</description>
+    <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_TierOneConduitSeeds</li>
+      <li>ET_BasicBiosynthVat</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>2.20</researchViewY>
-    <discoveredLetterTitle>Mysery study complete!</discoveredLetterTitle>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>About: Periheart Bioarmor</discoveredLetterTitle>
     <discoveredLetterText>Your research into this tech has has gone as far as it can. One day, your colonists will put two and two together... but for now, it remains a mystery.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!--=====GLOWSAP CONTENT=====-->
 
   <ResearchProjectDef>
-    <defName>ET_SapBasics</defName>    <!--Unlocks Glowsap plants-->
-    <label>Sap Bloom Cultivation</label>
+    <defName>ET_TerrasapBasics</defName>    <!--Unlocks glowsap and deepsap blooms-->
+    <label>Basic Sap Bloom Cultivation</label>
     <description>Learn how to cultivate plants that produce rudimentary saps, a crucial item that fuels many structures and processes.
 Glowsap blooms can also be found below the open sky, while deepsap blooms can also be found within caves.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>ET_OrganicTerratechEssentials</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>0.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_GlowsapBays</defName>
-    <label>Simple Glowsap Bays</label>
-    <description>Learn how to construct simple basins that utilize glowsap to sustain Terratech plants. Ideal for locations where fertile soil is scarce or entirely absent.
-Glowsap has enough nutrients to sustain many growths that have relatively simple patterns, but more complex ones require stronger or specific saps.</description>
+    <defName>ET_BasicTerrasapBays</defName>
+    <label>Simple Terrasap Bays</label>
+    <description>Learn how to construct simple basins that utilize glowsap or deepsap to sustain Terratech plants. Ideal for locations where fertile soil is scarce or entirely absent.
+Both terrasaps have enough nutrients to sustain many growths that have relatively simple patterns, but more complex terraplants require stronger or specific terrasaps.</description>
     <baseCost>750</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_SapBasics</li>
+      <li>ET_TerrasapBasics</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>1.50</researchViewY>
-    <discoveredLetterTitle>About: Glowsap Bays</discoveredLetterTitle>
-    <discoveredLetterText>Glowsap Bays are fillable structures that you can use to grow most EcoTech plants. While they cannot support normal plants, glowsap bays do enable you to make dedicated spaces for EcoTech plants, allowing normal soil to be used for everyday crops.</discoveredLetterText>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>About: Glowsap/Deepsap Bays</discoveredLetterTitle>
+    <discoveredLetterText>Glowsap and Deepsap Bays are fillable structures that you can use to grow simple terratech plants. While they also cannot support normal plants, these bays do enable you to make dedicated spaces for terratech plants, allowing normal soil to be used for everyday crops.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!--=====PRIMA SAP CONTENT=====-->
@@ -403,7 +401,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_GlowsapRefinement</li>
+      <li>ET_BasicTerrasapFiltering</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
@@ -411,38 +409,39 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
   </ResearchProjectDef>-->
 
   <ResearchProjectDef>
-    <defName>ET_PrimaSapStructures</defName>
-    <label>Basic Sap-fueled structures</label>
+    <defName>ET_PrimaTerrastructures</defName>
+    <label>Prima Terrastructures</label>
     <description>Learn how to utilize saps to grow various commonplace strutures that are a nature-based alternative to fabricated structures. Many also produce a decent amount of light.
 \n\nThese seeds are shaped at the Terraforge. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_GlowsapRefinement</li>
+      <li>ET_PrimaTerraseedCultivation</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>1.50</researchViewY>
+    <researchViewY>0.70</researchViewY>
   </ResearchProjectDef>
 
   <!--=====PROTOSAP (T1) CONTENT=====-->
 
   <ResearchProjectDef>
-    <defName>ET_GlowsapRefinement</defName>
-    <label>Terrasap Refinement</label>
-    <description>Learn how to refine Glowsap into valuable terrasaps that can mutate terratech weapons and structures.</description>
+    <defName>ET_BasicTerrasapFiltering</defName>
+    <label>Basic Terrasap Filtering</label>
+    <description>Learn how to refine glowsap and deepsap into valuable terrasaps that can mutate terratech weapons and structures.
+\nThis research will also allow you to grow structures that exchange glowsap to deepsap (and vice versa) at at 2:1 ratio.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_SapBasics</li>
+      <li>ET_PrimaTerrastructures</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
-    <discoveredLetterTitle>About: Refining Glowsap</discoveredLetterTitle>
-    <discoveredLetterText>Glowsap may become abundant eventually, and refinement allows you to turn it into items that can be used to improve your weapons, or fuel various structures. After creating and planting the seed for a Sap Transposer, you can fill it with glowsap. A random refined sap will be produced a short time later.</discoveredLetterText>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>About: Refining Terrasap</discoveredLetterTitle>
+    <discoveredLetterText>Glowsap and deepsap may become abundant eventually, and refinement allows you to turn it into stronger, more specialized terrasaps. After growing a Sap Transposer, and filtering either glowsap or deepsap, a random refined terrasap will be produced a short time later. You can check the description of the produces sap to see it's use cases.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!--=====TERRAVATS=====-->
@@ -456,11 +455,11 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_GlowsapRefinement</li>
+      <li>ET_PrimaTerrastructures</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>0.80</researchViewY>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
     <discoveredLetterTitle>About: Terravats</discoveredLetterTitle>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
   </ResearchProjectDef>
@@ -477,7 +476,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_TerrathystEssentials</li>
+      <li>ET_LithicTerratechEssentials</li>
     </hiddenPrerequisites>
     <requiredAnalyzed>
       <li>ET_KeyMaterialCompression</li>
@@ -522,7 +521,7 @@ Terrathyst is reactive to terrain it's grown in, which directly affects it's col
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_TerrathystEssentials</li>
+      <li>ET_LithicTerratechEssentials</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>

@@ -45,7 +45,7 @@
       </sowTags>
       <sowMinSkill>6</sowMinSkill>
       <sowResearchPrerequisites>
-        <li>ET_SapBasics</li>
+        <li>ET_TerrasapBasics</li>
       </sowResearchPrerequisites>
       <blockAdjacentSow>true</blockAdjacentSow>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>

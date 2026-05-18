@@ -81,8 +81,8 @@
 
   
   <ResearchProjectDef>
-    <defName>ET_TerrathystEssentials</defName>
-    <label>Lithic Essentials</label>
+    <defName>ET_LithicTerratechEssentials</defName>
+    <label>Lithic Terratech Essentials</label>
     <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability. Also teaches how to make a terrathyst crucible.
 Teaches you how to grow a terrathyst crucible, which is used to create basic lithic items.
 Nature is not only verdant plants and trees, but also the earth, primal elements, and even the cosmos. Terrathyst is just another terratech technique, and has it's own unique upsides and downsides, which tribes might prefer over organic matter.
@@ -114,7 +114,7 @@ While the terrathyst crucible can deliver on both, it's unrealized potential mak
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <hiddenPrerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>ET_OrganicTerratechEssentials</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
@@ -134,7 +134,7 @@ That said, there are other creations that simply require more space, more sap, o
     <techLevel>Neolithic</techLevel>
     <tab>ET_EcotechTab</tab>
     <prerequisites>
-      <li>ET_TerrathystEssentials</li>
+      <li>ET_LithicTerratechEssentials</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
