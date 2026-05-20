@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ResearchTabDef>
+    <defName>ET_ResearchTab_Lithic</defName>
+    <label>EcoTech: Lithic</label>
+    <generalTitle>Lithic terratech research</generalTitle>
+    <generalDescription>Unlock lithic terratech projects, such as those based on crystals, metals, and precious ores.\n\nYou can have both a basic and an advanced project active at the same time. If no advanced project is active, advanced research will contribute to a basic project instead.</generalDescription>
+  </ResearchTabDef>
+
   <!--Ultimate Research Options:
     1: Seed Cultivation: Learn how to properly identify and plant Terrasecurity seeds. This allows the player to know use the plants.
       -The first reseach will teach how to plant Prima Terraseeds as well, which are the most basic.
@@ -89,13 +96,13 @@ Nature is not only verdant plants and trees, but also the earth, primal elements
 Terrathyst production takes slightly longer than organic production, due to their terrain sensitivity, and the need for many shards. However, their ease of understanding and shaping is just as simple as Prima creations, and terrathyst serves as the dominant material.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Lithic</tab>
     <hiddenPrerequisites>
       <li>Stonecutting</li>
     </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
-    <researchViewY>4.00</researchViewY>
+    <researchViewY>0.70</researchViewY>
     <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
     <discoveredLetterText>You can now create a terrathyst crucible, and growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. These are easy to grow, and don't require high fertility. They will grow in glowsap and shocksap bays.
 This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
@@ -105,14 +112,14 @@ It's usability is quite limited, however, and stronger, deeper structures are ne
   <!--=====CRAFTING 1=====-->
 
 <!--<ResearchProjectDef>
-    <defName>ET_TerrathystCrafting1</defName>
+    <defName>ET_TierOneLithicMastery</defName>
     <label>Terrathyst Crucible</label>
     <description>Learn how to shape a unique seed at a crafting spot that will create a terrathyst crucible. This crucible has a shallow pool of recycling shocksap, and is ideal for manipulating terrathyst shards.
 Unlike organic tech, which has many variants and genomes due to bioengineering, lithic creations are inanimate, and are far more striaghtforward. Most everything lithic simply requires adequate charge, and the right environment to influence crystal growth.
 While the terrathyst crucible can deliver on both, it's unrealized potential makes it very slow, and the shallow pool can only handle creations of small size.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Lithic</tab>
     <hiddenPrerequisites>
       <li>ET_OrganicTerratechEssentials</li>
     </hiddenPrerequisites>
@@ -125,85 +132,233 @@ It's usability is quite limited, however, and stronger, deeper structures are ne
   </ResearchProjectDef>-->
 
 <ResearchProjectDef>
-    <defName>ET_TerrathystCrafting1</defName>
-    <label>Prismite Well</label>
-    <description>Learn how to shape a unique seed that will grow into a prismite well. This well has a decently deep pool of shocksap, providing more room and sap than a crucible.
-The prismite well is a terrastructure that is quite common, as it allows tribes to access most things they'll ever need to do with terrathyst.
-That said, there are other creations that simply require more space, more sap, or even a different type of sap entirely to make. These kind of creations are utilized by tribes that have fully dedicated to a lithic lifestyle.</description>
-    <baseCost>1250</baseCost>
+  <defName>ET_ShocksapBasics</defName>
+  <label>Shocksap Basics</label>
+  <description>Todo</description>
+  <baseCost>1200</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_LithicTerratechEssentials</li>
+    </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  <discoveredLetterTitle>About: Shocksap</discoveredLetterTitle>
+  <discoveredLetterText>Todo</discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_LithicWeaponCrafting</defName>
+  <label>Lithic Weapon Crafting</label>
+  <description>Records tell of various materials that are entirely natural, but seem to have no presence on the planet. Even though some methods of dense terrathyst is common terratechnology, far denser materials - some not even lithic - once existed.
+\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
+  <baseCost>1500</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_LithicTerratechEssentials</li>
+    </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>0.70</researchViewY>
+  <discoveredLetterTitle>About: Lithic Weapon Crafting</discoveredLetterTitle>
+  <discoveredLetterText>Todo</discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>ET_LithicArmorCrafting</defName>
+    <label>Lithic Armor Crafting</label>
+    <description>Todo</description>
+    <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Lithic</tab>
     <prerequisites>
       <li>ET_LithicTerratechEssentials</li>
     </prerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>4.00</researchViewY>
-    <discoveredLetterTitle>About: Prismite Well</discoveredLetterTitle>
-    <discoveredLetterText>You now have access to the prismite well. True to the name, this structure channels quite deep into the planet, carrying up shocksap that's pulled from lower resevoirs and pools.
-It's usability is more than adequate for any tribe that wishes to use general lithic terratech. However, specialized and more advanced creations will require a pool of a larger and deeper size.</discoveredLetterText>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>About: Lithic Armor Crafting</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
   </ResearchProjectDef>
 
-
-  <!--=====Further research=====-->
-
 <ResearchProjectDef>
-  <defName>ET_PressuredMaterials</defName>
-  <label>Lore Entry: Hyperdense Materials</label>
-  <description>Records tell of various materials that are entirely natural, but seem to have no presence on the planet. Even though some methods of dense terrathyst is common terratechnology, far denser materials - some not even lithic - once existed.
-\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>2000</baseCost>
+  <defName>ET_BasicChargeManipulation</defName>
+  <label>Lithic Charge Manipulation</label>
+  <description>Todo</description>
+  <baseCost>1200</baseCost>
   <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
-  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>1.00</researchViewX>
-  <researchViewY>5.00</researchViewY>
-  <discoveredLetterTitle>Secrets of Terratech: Pressurized Materials</discoveredLetterTitle>
-  <discoveredLetterText>You have discovered that original Terratech tribes somehow were able to subject various materials - organic and lithic alike - to immense pressure, creating powerful, brand new materials with special traits. The history you pieced together tells of three:
-\nBiothite, a formless material that had both durability and utility. Research indicates it was a lithic material, but had features that were supposed to be exclusive to organic terratech. This made it a highly desirable amongst lithic tribes.
-Stellite, which is documented as the 'ultimate achievement'. Multiple people were required to move even a handful of it, while anything of a larger size was nearly indestructable. While this was used to enhance plant growths, records mostly indicate it was essential for creating specialized weapons and structures that exploited pure light. How light was compressed - and even captured - is another mystery entirely.
-Esperium, which was said to both defend against, and utilize, mental energies. Research indicates esperium was most commonly used in defensive practices, but also had quality-of-life utility. Not much is documented about Esperium, however, suggesting it was an underdeveloped or rare material.
-Other materials - such as Tallorium, Prismium, and Genesite - are mentioned, but no information regarding them could be pieced together.
-  </discoveredLetterText>
-</ResearchProjectDef>
-
-<ResearchProjectDef>
-  <defName>ET_AquaticEssentials</defName>
-  <label>Lore Entry: Aquatic Culture</label>
-  <description>Records tell of tribes that lived among the sea, rather than the earth, travelling the world and being able to survive within the unforgiving depths. Not only did they survive, but thrived; they are recorded as some of the most regal tribes to exist, posessing vaults filled with treasures.
-\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>2000</baseCost>
-  <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_ShocksapBasics</li>
+  </prerequisites>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>2.00</researchViewX>
-  <researchViewY>5.00</researchViewY>
-  <discoveredLetterTitle>Secrets of Terratech: The aquatic tribes</discoveredLetterTitle>
-  <discoveredLetterText>You have discovered that some tribes once mastered the vast oceans, creating establishments that were impossible to get by most others. These tribes thrived in their environment, being able to focus on their technology and wealth, with no worries about danger. The history you pieced together also shows:
-\nThese tribes were generally isolated from the surface tribes, only interacting and socializing with other aquatic tribes.
-Access to the depths of the ocean allowed them to find - and create - resources that were incredibly strong, in order to survive the crushing pressure. Additionally, traditionally valuable materials - gold, silver, gems, etc. - were also plentiful, as no others could possibly reach them.
-Their gear and structures were highly specialized to survive the depths, and use the resources available. Armor is said to be guilded with gold, while weapons were hybrid creations that were crafted with extreme decor and intricacy.
-Their overall technology excelled in strength and beauty, but fully piecing together how to attain or make any of it is impossible.
+  <researchViewY>0.00</researchViewY>
+  <discoveredLetterTitle>About: Lithic Charge Manipulation</discoveredLetterTitle>
+  <discoveredLetterText>Todo</discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>ET_ThermalTerrasapPooling</defName>
+    <label>Thermal Terrasap Pooling</label>
+    <description>Thermal Terrasap Pooling</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_ResearchTab_Lithic</tab>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <discoveredLetterTitle>About: Thermal Terrasap Pooling</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>ET_BasicMetalReclamation</defName>
+    <label>Basic Metal Reclamation</label>
+    <description>Todo</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_ResearchTab_Lithic</tab>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>About: Basic Metal Reclamation</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!--=====Tier One Tech=====-->
+
+
+<ResearchProjectDef>
+    <defName>ET_TierOneLithicMastery</defName>
+    <label>Lithic Aptitude</label>
+    <description>Todo</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_ResearchTab_Lithic</tab>
+    <hiddenPrerequisites>
+      <li>ET_BasicChargeManipulation</li>
+      <li>ET_LithicWeaponCrafting</li>
+      <li>ET_LithicArmorCrafting</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!--=====Midas-Class=====-->
+
+<ResearchProjectDef>
+  <defName>ET_MidasClassEssentials</defName>
+  <label>Midas-Class Essentials</label>
+  <description>Todo</description>
+  <baseCost>2100</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_TierOneLithicMastery</li>
+    </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  <discoveredLetterTitle>New Class Discovered!</discoveredLetterTitle>
+  <discoveredLetterText>Todo
   </discoveredLetterText>
 </ResearchProjectDef>
 
 <ResearchProjectDef>
-  <defName>ET_PhytohazardGear</defName>
-  <label>Lore Entry: The Terratech Legion</label>
-  <description>Records tell of tribes that far back in their prime, Terratech tribes utilized highly-specialized bioarmors, used within an army that dedicated their lives to the Terratech military. these technologies are believed to still exist, but were sealed away for unknown reasons.
-\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>2000</baseCost>
+  <defName>ET_MidasClassStructures</defName>
+  <label>Midas-Class Structures</label>
+  <description>Todo</description>
+  <baseCost>1800</baseCost>
   <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_MidasClassEssentials</li>
+    </prerequisites>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>3.00</researchViewX>
-  <researchViewY>5.00</researchViewY>
-  <discoveredLetterTitle>Secrets of Terratech: The Deeproot Legion</discoveredLetterTitle>
-  <discoveredLetterText>You have discovered that during a time of grand war, Terratech tribes united to create bioarmors that would bind to the wearer, given to the most dedicated and loyal warriors of their culture. These armors posessed incredible power, often not even requiring weapons in order to be highly lethal. The history you pieced together also shows:
-\nOrganic, lithic, starborn, and aquatic tribes all participated in engineering these bioarmors, creating an incredible arsenal that linked nature and beings together. This gave even outsiders a way of becoming highly valuable, as other paths of prestige was forbidden to them.
--Those that donned these bioarmors would forever be living within them - but also refused to seperate to begin with. This is attributed to some sort of ascendance, becoming more than whatever race they once were. The power they were given was simply too much to leave behind.
--The armors were incredibly powerful, grown with integrated weapons, defenses, and stimulants that made warriors rival even the Empire's strongest Cataphracts.
--Each culture developed their own bioarmors that had unique benefits and attributes trhat were favorable to the culture's values, but what exactly each culture developed is currently lost to time.
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  <discoveredLetterTitle>About: Midas-Class Structures</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_MidasClassProcessing</defName>
+  <label>Midas-Class Processing</label>
+  <description>Todo</description>
+  <baseCost>1800</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_MidasClassStructures</li>
+  </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>6.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  <discoveredLetterTitle>About: Midas-Class Processing</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+  <!--=====Etc.=====-->
+
+<ResearchProjectDef>
+  <defName>ET_AdvancedMetalReclaimation</defName>
+  <label>Advanced Metal Reclaimation</label>
+  <description>Todo</description>
+  <baseCost>2100</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_TierOneLithicMastery</li>
+  </prerequisites>
+  <hiddenPrerequisites>
+      <li>ET_BasicMetalReclamation</li>
+  </hiddenPrerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>0.70</researchViewY>
+  <discoveredLetterTitle>About: Advanced Metal Reclaimation</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_LithicWildWeaponRestoration</defName>
+  <label>Lithic Wild Weapon Restoration</label>
+  <description>Todo</description>
+  <baseCost>2400</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_TierOneLithicMastery</li>
+  </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>0.70</researchViewY>
+  <discoveredLetterTitle>About: Lithic Wild Weapon Restoration</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_LithicOrganicHybridization</defName>
+  <label>Lithic-Organic Hybridization</label>
+  <description>Todo</description>
+  <baseCost>2400</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>1.40</researchViewY>
+  <discoveredLetterTitle>About: Lithic-Organic Hybridization</discoveredLetterTitle>
+  <discoveredLetterText>Todo
   </discoveredLetterText>
 </ResearchProjectDef>
 

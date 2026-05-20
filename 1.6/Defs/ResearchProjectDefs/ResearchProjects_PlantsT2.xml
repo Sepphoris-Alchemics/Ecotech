@@ -100,7 +100,7 @@ Various lithic and organic growths can be grown faster within certain saps, and 
 The sap it recycles will not be replenished after growth, making sap farming not ideal. But if needed, destroying the structure will yield a few usable jars.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_BasicTerrasapBays</li>
     </hiddenPrerequisites>
@@ -124,7 +124,7 @@ The sap it recycles will not be replenished after growth, making sap farming not
 \n\nTerravats utilize large amounts of glowsap, protosaps, and metasaps. You will need access to both to properly utilize Terravats.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_SmallTerravats</li>
     </prerequisites>
@@ -142,7 +142,7 @@ The sap it recycles will not be replenished after growth, making sap farming not
 \nAdditionally, this immediately enables the creation of Terraplate armor.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_SmallTerravats</li>
       <li>ET_PeriwoodTerraseeds</li>
@@ -163,9 +163,9 @@ The sap it recycles will not be replenished after growth, making sap farming not
     <label>Organic Aptitude</label>
     <description>You've studied the behavior of Prima and Primwood plants to an exact science. This research shows you not only know how to handle these genomes, but also a deep understanding of their very composition.
 \n\nOrganic Aptitude shows other Terratech colonies your dedication to the Terratech lifestyle. Terratech tribes will look more favorably on you, though another Mastery is required to show true devotion.</description>
-    <baseCost>1000</baseCost>
+    <baseCost>1600</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_TerrasapBasics</li>
       <li>ET_TierTwoConduitSeeds</li>
@@ -191,7 +191,7 @@ This advancement allows you to shape seeds capable of growing into plants aren't
 Additionally, it teaches you how to make a new conduit megatree.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </hiddenPrerequisites>
@@ -213,7 +213,7 @@ Additionally, it teaches you how to make a new conduit megatree.</description>
 \n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 500 when fully implemented.)</description>
     <baseCost>50</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </hiddenPrerequisites>
@@ -226,25 +226,6 @@ Additionally, it teaches you how to make a new conduit megatree.</description>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>ET_Empty1</defName>
-    <label>Todo</label>
-    <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
-\n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 500 when fully implemented.)</description>
-    <baseCost>50</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
-    <hiddenPrerequisites>
-      <li>ET_TierOneOrganicMastery</li>
-    </hiddenPrerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>10.00</researchViewX>
-    <researchViewY>0.70</researchViewY>
-    <discoveredLetterTitle>About: Brightsap Bays</discoveredLetterTitle>
-    <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
-\nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
-  </ResearchProjectDef>
-
-  <ResearchProjectDef>
     <defName>ET_BriarGenome</defName>
     <label>Prima-Periwood Crossbreeding</label>
     <description>Discover how to combine the Prima and Periwood genomes to creature a specialized genome that utilizes the best traits of both.
@@ -252,7 +233,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </hiddenPrerequisites>
@@ -275,7 +256,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <description>Todo</description>
     <baseCost>1600</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </hiddenPrerequisites>
@@ -292,7 +273,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <description>Todo</description>
     <baseCost>1600</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BasicOrganicProsthetics</li>
     </prerequisites>
@@ -311,7 +292,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <description>Todo</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <!--<hiddenPrerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </hiddenPrerequisites>-->
@@ -328,7 +309,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <description>Todo</description>
     <baseCost>1400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BloomwoodTerraseeds</li>
     </prerequisites>
@@ -345,7 +326,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <description>Todo</description>
     <baseCost>1600</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BloomwoodTerraseeds</li>
     </prerequisites>
@@ -364,7 +345,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <description>Todo</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </prerequisites>
@@ -384,7 +365,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <description>Todo</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_AdvancedTerrasapFiltering</li>
     </prerequisites>
@@ -401,9 +382,9 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <defName>ET_HeavyPrimaArmor</defName>
     <label>Terraplate Armor</label>
     <description>Terraplate Armor</description>
-    <baseCost>2200</baseCost>
+    <baseCost>2400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </prerequisites>
@@ -420,9 +401,9 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <defName>ET_OrganicWildWeaponRestoration</defName>
     <label>Organic Wild Weapon Restoration</label>
     <description>Todo</description>
-    <baseCost>2200</baseCost>
+    <baseCost>2400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TierOneOrganicMastery</li>
     </prerequisites>
@@ -446,7 +427,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_MegafloraPlants</li>
     </hiddenPrerequisites>
@@ -470,7 +451,7 @@ This advancement is closely guarded by Terratech tribes.  You will need to obtai
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_TierOneConduitSeeds</li>
     </hiddenPrerequisites>
@@ -494,7 +475,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
 \n\nThe seed for this is shaped at a Terrathyst growth, and take considerable time - and resources - to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_LithicTerratechEssentials</li>
     </hiddenPrerequisites>
@@ -524,7 +505,7 @@ You can now create Biothite, an incredibly strong material that can be used in m
 Terrathyst is reactive to terrain it's grown in, which directly affects it's color and potential. This aspects are unknown until research concludes.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_LithicTerratechEssentials</li>
     </prerequisites>

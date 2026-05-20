@@ -41,7 +41,7 @@ This well is a staple amongst tribes that take interest in lithic terratech, as 
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_TerrathystCrafting1</li>
+      <li>ET_TierOneLithicMastery</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>

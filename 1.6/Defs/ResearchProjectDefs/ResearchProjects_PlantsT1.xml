@@ -2,8 +2,10 @@
 <Defs>
 
   <ResearchTabDef>
-    <defName>ET_EcotechTab</defName>
-    <label>EcoTech</label>
+    <defName>ET_ResearchTab_Organic</defName>
+    <label>EcoTech: Organic</label>
+    <generalTitle>Organic terratech research</generalTitle>
+    <generalDescription>Unlock organic terratech projects, such as those based on plants, trees, and fruits.\n\nYou can have both a basic and an advanced project active at the same time. If no advanced project is active, advanced research will contribute to a basic project instead.</generalDescription>
   </ResearchTabDef>
 
 <ResearchProjectTagDef>
@@ -96,7 +98,7 @@ Teaches you how to nurture a Terraforge channeling seed, which can be shaped at 
 Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefore, it's knowledge is both sacred, and closely guarded by the local Terratech faction.</description>
     <baseCost>1400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -123,7 +125,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <description>Learn how to nuture and handle Prima Terraseeds, alongside growing the pods that produce them. Prima weapons are fast to grow and easy to handle, but are limited in their damage, and wither away relatively quickly.</description>
     <baseCost>1400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_OrganicTerratechEssentials</li>
     </prerequisites>
@@ -143,7 +145,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <description>Learn how to grow terrapods that specifically grow patterns based off melee weapons.</description>
     <baseCost>900</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -161,7 +163,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <description>Learn how to grow terrapods that specifically produce light, quickly grown Prima weapons.</description>
     <baseCost>900</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -179,7 +181,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <description>Learn how to grow terrapods that specifically grow standard, well-rounded Prima weapons.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -197,7 +199,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <description>Learn how to grow terrapods that specifically grow powerful, role-oriented Prima weapons.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -210,6 +212,18 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
     <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
 
+<ResearchProjectDef>
+  <defName>ET_PrimaExplosiveWeapons</defName>
+  <label>Prima Focusing: Explosive Weapons</label>
+  <description>Todo</description>
+  <baseCost>1800</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Organic</tab>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>3.00</researchViewX>
+  <researchViewY>3.50</researchViewY>
+</ResearchProjectDef>
+
   <ResearchProjectDef>
     <defName>ET_PrimaTurretTerraseeds</defName>
     <label>Prima Sentry Seeds</label>
@@ -217,7 +231,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
 Instead of using electricity or requiring fuel, these sentries have a limited lifespan, which drains over time and whenever they generate projectiles. The seeds these sentries come from are acquired directly from Primwood Sentinels, and matured, unmodified Terraweapons.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -238,7 +252,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <description>Learn how to nuture and handle Periwood Terraseeds, which grow into Periwood Trees. The core of these trees can be harvested, which are then carefully carved into periwood weapons.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PrimaTerrastructures</li>
     </prerequisites>
@@ -260,7 +274,7 @@ The trees themselves also produce a durable and fire-resistant wood, and the per
     <description>Learn how to influence periwood hearts to grow into specific weapons, similar to how prima seeds are based on genetic patterns. Due to the smaller amount of periwood weapons, all the heartshifting techniques can be learned at once.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PeriwoodTerraseeds</li>
     </prerequisites>
@@ -280,7 +294,7 @@ Like other biotic turrets, the Groveguard has a limited lifespan, which drains o
 Groveguard seeds require understanding of pressurized projectiles, which is protected knowledge. You will need to study the tome that gives this knowledge.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PeriwoodTerraseeds</li>
       <li>ET_PrimaTurretTerraseeds</li>
@@ -303,7 +317,7 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1600</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </prerequisites>
@@ -321,7 +335,7 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1800</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TierOneConduitSeeds</li>
       <li>ET_PeriwoodTerraseeds</li>
@@ -343,7 +357,7 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
 \n\nRelatively quick to grow, but each set will require access to a biosynth vat, and to a small supply of brightsap.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BasicBiosynthVat</li>
     </prerequisites>
@@ -363,7 +377,7 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
 Glowsap blooms can also be found below the open sky, while deepsap blooms can also be found within caves.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_OrganicTerratechEssentials</li>
     </prerequisites>
@@ -379,7 +393,7 @@ Glowsap blooms can also be found below the open sky, while deepsap blooms can al
 Both terrasaps have enough nutrients to sustain many growths that have relatively simple patterns, but more complex terraplants require stronger or specific terrasaps.</description>
     <baseCost>750</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TerrasapBasics</li>
     </prerequisites>
@@ -399,7 +413,7 @@ Both terrasaps have enough nutrients to sustain many growths that have relativel
 \n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1000 when fully implemented.)</description>
     <baseCost>100</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BasicTerrasapFiltering</li>
     </prerequisites>
@@ -415,7 +429,7 @@ Both terrasaps have enough nutrients to sustain many growths that have relativel
 \n\nThese seeds are shaped at the Terraforge. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </prerequisites>
@@ -433,7 +447,7 @@ Both terrasaps have enough nutrients to sustain many growths that have relativel
 \nThis research will also allow you to grow structures that exchange glowsap to deepsap (and vice versa) at at 2:1 ratio.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PrimaTerrastructures</li>
     </prerequisites>
@@ -453,7 +467,7 @@ Both terrasaps have enough nutrients to sustain many growths that have relativel
 \n\nTerravats utilize large amounts of glowsap, and refined terrasaps. You will need access to both to properly utilize Terravats.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PrimaTerrastructures</li>
     </prerequisites>
@@ -474,7 +488,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
 \n\nThe seed for this is shaped at a Terrathyst growth, and take considerable time - and resources - to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_LithicTerratechEssentials</li>
     </hiddenPrerequisites>
@@ -495,21 +509,6 @@ You can now create Biothite, an incredibly strong material that can be used in m
 
 <!--=====LORE ENTRIES=====-->
 
-<ResearchProjectDef>
-  <defName>ET_RoyalSeeds</defName>
-  <label>Lore Entry: Psychic Weaponry</label>
-  <description>Records tell of a special, exclusive breed of Terraweapons that only the highest of societies and engineers know of. This research will provide additional information about this unique breed....
-\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>2000</baseCost>
-  <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
-  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>0.00</researchViewX>
-  <researchViewY>5.00</researchViewY>
-  <discoveredLetterTitle>Secrets of Terratech: Royal Seeds</discoveredLetterTitle>
-  <discoveredLetterText>You have discovered that Prima Terraweapons are just one of several known types of Terraseeds. This particular research has unveiled that one of the most powerful types are known as "Royal" Terraseeds, and are carefully engineered with the mysterious - and massive - power of Anima. Products of these seeds are documented to take up to years to grow, and properly growing them requires skill that only prodigies can achieve; however, any given Royal Terraweapon contains power that rivals - or even completely overshadows - Spacer tech that's widely believed to be superior. The secrets behind producing the weapons are currently lost and not known to any; however, records rumor that *very* few surviving Anima weapons may still be out there, perhaps within relative reach....</discoveredLetterText>
-</ResearchProjectDef>
-
 <!--=====TERRATHYST T1 CONTENT=====-->
 
 <!--<ResearchProjectDef>
@@ -519,7 +518,7 @@ You can now create Biothite, an incredibly strong material that can be used in m
 Terrathyst is reactive to terrain it's grown in, which directly affects it's color and potential. This aspects are unknown until research concludes.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_LithicTerratechEssentials</li>
     </prerequisites>

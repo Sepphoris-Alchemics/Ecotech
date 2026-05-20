@@ -14,7 +14,7 @@
 \nYou will also need to complete the mastery research for each genome in order to infuse anything within it.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -40,7 +40,7 @@
 \nYou will also need to complete the mastery research for each genome in order to infuse anything within it.</description>
     <baseCost>2500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -66,7 +66,7 @@
 \nYou will also need to complete the mastery research for each genome in order to infuse anything within it.</description>
     <baseCost>3000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -92,7 +92,7 @@
 \nYou will also need to complete the mastery research for each genome in order to infuse anything within it.</description>
     <baseCost>3000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -123,7 +123,7 @@
 All prima plants have high mutation potential, meaning they can accept most saps. However, you will need to analyze each sap type once to be able to fully understand it's effects.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -150,7 +150,7 @@ All prima plants have high mutation potential, meaning they can accept most saps
 All periwood plants have medium mutation potential, meaning they can accept most saps that can be manually farmed or produced. However, you will need to analyze each sap type once to be able to fully understand it's effects.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>TreeSowing</li>
     </prerequisites>
@@ -176,7 +176,7 @@ All periwood plants have medium mutation potential, meaning they can accept most
     <description>Learn how to nuture and handle Prima Terraseeds, alongside growing the pods that produce them. Prima weapons are fast to grow and easy to handle, but are limited in their damage, and wither away relatively quickly.</description>
     <baseCost>1800</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_OrganicTerratechEssentials</li>
     </prerequisites>
@@ -196,7 +196,7 @@ All periwood plants have medium mutation potential, meaning they can accept most
     <description>Learn how to grow terrapods that specifically grow patterns based off melee weapons.</description>
     <baseCost>900</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -214,7 +214,7 @@ All periwood plants have medium mutation potential, meaning they can accept most
     <description>Learn how to grow terrapods that specifically produce light, quickly grown Prima weapons.</description>
     <baseCost>900</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -232,7 +232,7 @@ All periwood plants have medium mutation potential, meaning they can accept most
     <description>Learn how to grow terrapods that specifically grow standard, well-rounded Prima weapons.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -250,7 +250,7 @@ All periwood plants have medium mutation potential, meaning they can accept most
     <description>Learn how to grow terrapods that specifically grow powerful, role-oriented Prima weapons.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -270,7 +270,7 @@ All periwood plants have medium mutation potential, meaning they can accept most
 Instead of using electricity or requiring fuel, these sentries have a limited lifespan, which drains over time and whenever they generate projectiles. The seeds these sentries come from are acquired directly from Primwood Sentinels, and matured, unmodified Terraweapons.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -294,7 +294,7 @@ Instead of using electricity or requiring fuel, these sentries have a limited li
     <description>Learn how to nuture and handle Periwood Terraseeds, which grow into Periwood Trees. The core of these trees can be harvested, which are then carefully carved into periwood weapons.</description>
     <baseCost>1250</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_OrganicTerratechEssentials</li>
     </hiddenPrerequisites>
@@ -313,7 +313,7 @@ The trees themselves also serve as a source of wood that can easily be obtained 
     <description>Learn how to carve periwood hearts into various weapons. Due to the smaller amount of periwood weapons, all the carving techniques can be learned at once.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_PeriwoodTerraseeds</li>
     </prerequisites>
@@ -333,7 +333,7 @@ Like other biotic turrets, the Groveguard has a limited lifespan, which drains o
 Groveguard seeds require understanding of pressurized projectiles, which is protected knowledge. You will need to study the tome that gives this knowledge.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PeriwoodTerraseeds</li>
       <li>ET_PrimaTurretTerraseeds</li>
@@ -359,7 +359,7 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>2600</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_PrimaTerraseedCultivation</li>
     </hiddenPrerequisites>
@@ -377,7 +377,7 @@ Groveguard seeds require understanding of pressurized projectiles, which is prot
 \n\nThese seeds are shaped at the Terraforge, and take considerable time to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TierOneConduitSeeds</li>
     </prerequisites>
@@ -398,7 +398,7 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
 \n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1500 when fully implemented.)</description>
     <baseCost>150</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TierOneConduitSeeds</li>
     </prerequisites>
@@ -418,7 +418,7 @@ Additionally, you can now properly handle and plant more exclusive seeds that ar
 Glowsap blooms can also be found below the open sky, while deepsap blooms can also be found within caves.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_OrganicTerratechEssentials</li>
     </prerequisites>
@@ -434,7 +434,7 @@ Glowsap blooms can also be found below the open sky, while deepsap blooms can al
 Glowsap has enough nutrients to sustain many growths that have relatively simple patterns, but more complex ones require stronger or specific saps.</description>
     <baseCost>750</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TerrasapBasics</li>
     </prerequisites>
@@ -454,7 +454,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
 \n\n(Despite this research not being fully implemented, the research cost has been reduced by 90%. It will go back to it's intended amount of 1000 when fully implemented.)</description>
     <baseCost>100</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BasicTerrasapFiltering</li>
     </prerequisites>
@@ -470,7 +470,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
 \n\nThese seeds are shaped at the Terraforge. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BasicTerrasapFiltering</li>
     </prerequisites>
@@ -487,7 +487,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
     <description>Learn how to refine Glowsap into valuable terrasaps that can mutate terratech weapons and structures.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_TerrasapBasics</li>
     </prerequisites>
@@ -507,7 +507,7 @@ Glowsap has enough nutrients to sustain many growths that have relatively simple
 \n\nTerravats utilize large amounts of glowsap, and refined terrasaps. You will need access to both to properly utilize Terravats.</description>
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_BasicTerrasapFiltering</li>
     </prerequisites>
@@ -528,7 +528,7 @@ This advancement is closely guarded by Terratech tribes. You will need to obtain
 \n\nThe seed for this is shaped at a Terrathyst growth, and take considerable time - and resources - to finish. Stopping in the middle of creating a seed will require you to start all over again.</description>
     <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
       <li>ET_LithicTerratechEssentials</li>
     </hiddenPrerequisites>
@@ -556,7 +556,7 @@ You can now create Biothite, an incredibly strong material that can be used in m
 \n\nUpon researching, you will discover some information about possibilities known to exist, but not known to the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
   <baseCost>2000</baseCost>
   <techLevel>Neolithic</techLevel>
-  <tab>ET_EcotechTab</tab>
+  <tab>ET_ResearchTab_Organic</tab>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>0.00</researchViewX>
   <researchViewY>5.00</researchViewY>
@@ -573,7 +573,7 @@ You can now create Biothite, an incredibly strong material that can be used in m
 Terrathyst is reactive to terrain it's grown in, which directly affects it's color and potential. This aspects are unknown until research concludes.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ET_EcotechTab</tab>
+    <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
       <li>ET_LithicTerratechEssentials</li>
     </prerequisites>

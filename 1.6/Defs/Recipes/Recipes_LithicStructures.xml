@@ -52,7 +52,7 @@
         <count>7.5</count>
       </li>
     </ingredients>
-    <researchPrerequisite>ET_TerrathystCrafting1</researchPrerequisite>
+    <researchPrerequisite>ET_TierOneLithicMastery</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
     <workAmount>2400</workAmount>
