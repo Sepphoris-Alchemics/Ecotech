@@ -7,9 +7,9 @@
 		<label>Wardens of the Terratech</label>
 
 		<scenario>
-			<summary>Four guardians of Ecotech build anew to preserve their culture.</summary>
-			<description>Your near-extinct tribe was the last on the planet that knew the sacred secrets of the Terraseed. Half of you have been sent off to start a new home, in pursuit of keeping the knowledge alive.
-\nThis scenario starts you off with several Ecotech technologies and items, and in high relations with the present Terratech tribes, but prohibits you from progressing mechanical tech too far. Designed for low-tech-only playthroughs.</description>
+			<summary>Five decendants of different Terratech cultures come together to unite as one.</summary>
+			<description>Terratech knowledge across every path is quickly dying out. In a push for both preservation and change, the five main terratech factions have came together to form the foundation for a new, united culture entirely.
+\nThis scenario starts you off with several Ecotech technologies (Terratech), cultural items carried by each pawn (not listed in the scenario), and in high relations with the present Terratech tribes, but prohibits you from progressing mechanical research too far. Designed for low-tech-only playthroughs.</description>
 			<playerFaction>
 				<def>PlayerFaction</def>
 				<factionDef>ET_TerratechKeepers</factionDef>
@@ -30,27 +30,26 @@
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
           			<def>ConfigurePawnsKindDefs</def>
           			<pawnChoiceCount>5</pawnChoiceCount>
-          			<leftBehindPawnKind>ET_SpacetouchedPawnKind</leftBehindPawnKind>
           			<kindCounts>
+						<li>
+              				<kindDef>ET_SpacetouchedPawnKind</kindDef>
+              				<count>1</count>
+            			</li>
             			<li>
               				<kindDef>ET_SkytouchedPawnKind</kindDef>
               				<count>1</count>
-              				<requiredAtStart>true</requiredAtStart>
             			</li>
 						<li>
               				<kindDef>ET_GrovetouchedPawnKind</kindDef>
               				<count>1</count>
-              				<requiredAtStart>true</requiredAtStart>
             			</li>
 						<li>
               				<kindDef>ET_WatertouchedPawnKind</kindDef>
               				<count>1</count>
-              				<requiredAtStart>true</requiredAtStart>
             			</li>
 						<li>
               				<kindDef>ET_EarthtouchedPawnKind</kindDef>
               				<count>1</count>
-              				<requiredAtStart>true</requiredAtStart>
             			</li>
           			</kindCounts>
 				</li>

@@ -156,11 +156,6 @@
         <thingDefCountRange>-1~1</thingDefCountRange>
         <countRange>1~1</countRange>
       </li>-->
-      <li Class="StockGenerator_Category">
-        <categoryDef>ET_TechKeys</categoryDef>
-        <thingDefCountRange>1~2</thingDefCountRange>
-        <countRange>-2~2</countRange>
-      </li>
       <!--Terratech gear-->
 
       <!--<li Class="StockGenerator_Tag">
@@ -169,6 +164,26 @@
         <countRange>1~2</countRange>
       </li>-->
 
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_TechKeysInitiate</tradeTag>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <countRange>-2~1</countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_TechKeysDevotee</tradeTag>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <countRange>-4~1</countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_TechKeysWildWeapon</tradeTag>
+        <thingDefCountRange>1~1</thingDefCountRange>
+        <countRange>-6~1</countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>ET_TechKeysHybridization</tradeTag>
+        <thingDefCountRange>1~1</thingDefCountRange>
+        <countRange>-6~1</countRange>
+      </li>
       <li Class="StockGenerator_Tag">
         <tradeTag>ET_PrimaTurretSeedTag</tradeTag>
         <thingDefCountRange>0~2</thingDefCountRange>

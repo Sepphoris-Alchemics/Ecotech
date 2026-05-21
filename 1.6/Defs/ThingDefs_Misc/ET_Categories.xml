@@ -164,7 +164,7 @@
       <defName>ET_TechKeys</defName>
       <label>Terratech Tomes</label>
       <parent>Root</parent>
-      <iconPath>Things/Resource/Tome/Tome_Devotee</iconPath>
+      <iconPath>Things/Resource/Tome/Tome_OrganicDevotee</iconPath>
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 	

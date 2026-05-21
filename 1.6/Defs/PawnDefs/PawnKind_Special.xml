@@ -61,11 +61,11 @@
     <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
     <apparelMoney>60~2000</apparelMoney>
     <weaponMoney>
-			<min>40</min>
+			<min>45</min>
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>ET_PeriwoodWeapon</li>
+			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <backstoryFilters>
@@ -109,13 +109,13 @@
     </apparelTags>
     <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
     <apparelMoney>60~2000</apparelMoney>
-    <!--<weaponMoney>
-			<min>40</min>
+    <weaponMoney>
+			<min>900</min>
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>ET_PeriwoodWeapon</li>
-		</weaponTags>-->
+			<li>ET_WatertouchedWeapon</li>
+		</weaponTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <backstoryFilters>
       <li>
@@ -160,11 +160,10 @@
     <apparelMoney>60~2000</apparelMoney>
     <weaponMoney>
 			<min>300</min>
-			<max>400</max>
+			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>ET_LithicWeaponStageOne</li>
-      <li>ET_LithicWeaponStageTwo</li>
+			<li>ET_CoretouchedWeapon</li>
 		</weaponTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <backstoryFilters>
@@ -208,14 +207,13 @@
     </apparelTags>
     <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
     <apparelMoney>60~2000</apparelMoney>
-    <!--<weaponMoney>
-			<min>300</min>
+    <weaponMoney>
+			<min>900</min>
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>ET_BloomrotWeapon</li>
-      <li>ET_LithicWeaponStageTwo</li>
-		</weaponTags>-->
+      <li>ET_VoidtouchedWeapon</li>
+		</weaponTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <backstoryFilters>
       <li>

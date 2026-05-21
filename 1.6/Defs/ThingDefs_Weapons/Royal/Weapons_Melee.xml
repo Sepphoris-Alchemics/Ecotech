@@ -95,8 +95,8 @@ Accuracy follows charge rifles-->
 
 	<ThingDef ParentName="BaseWeapon">
 		<defName>ET_AquaticSpear</defName>
-		<label>Depthcore Spear</label>
-		<description>A highly designed and intricate spear, formed with both terratech wood and crystal, and guilded with gold. This spear comes from a terratech culture that is thought to be long gone, making it a truly valuable and unique artifact.</description>
+		<label>Depthforged Spear</label>
+		<description>A highly designed and intricate spear, forged out of materials that exist only on the lowest ocean floors. This spear comes from a terratech culture that is thought to be long gone, making it a truly valuable and unique artifact.</description>
 		<graphicData>
 			<texPath>Things/WeaponRoyal/Aquatic/ET_DepthcoreSpear</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -107,6 +107,7 @@ Accuracy follows charge rifles-->
     </thingCategories>
 		<weaponTags Inherit='False'>
       <li>ET_PlantWeapon</li>
+	  <li>ET_WatertouchedWeapon</li>
 		</weaponTags>
 		<!--<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>
@@ -114,11 +115,11 @@ Accuracy follows charge rifles-->
     <relicChance>2</relicChance>
 		<statBases>
 			<Beauty>10</Beauty>
-      <MaxHitPoints>130</MaxHitPoints>
+      <MaxHitPoints>260</MaxHitPoints>
 			<Mass>3.6</Mass>
 			<Flammability>0.5</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
-			<MarketValue>1500</MarketValue>
+			<MarketValue>900</MarketValue>
 		</statBases>
 		<techLevel>Neolithic</techLevel>
 		<smeltable>false</smeltable>

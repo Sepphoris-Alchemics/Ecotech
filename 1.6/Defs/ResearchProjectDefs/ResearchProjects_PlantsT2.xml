@@ -417,6 +417,29 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <discoveredLetterText>Todo</discoveredLetterText>
   </ResearchProjectDef>
 
+<!--=====HYBRIDIZATION=====-->
+
+<ResearchProjectDef>
+  <defName>ET_BasicOrganicHybridization</defName>
+  <label>Basic Organic Hybridization</label>
+  <description>Todo</description>
+  <baseCost>2400</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Organic</tab>
+  <requiredAnalyzed>
+    <li>ET_KeyBasicOrganicHybridization</li>
+  </requiredAnalyzed>
+  <prerequisites>
+      <li>ET_TierOneLithicMastery</li>
+  </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>10.00</researchViewX>
+  <researchViewY>0.70</researchViewY>
+  <discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>
+</ResearchProjectDef>
+
   <!--=====GUARDED KNOWLEDGE=====-->
 
   <!--<ResearchProjectDef>

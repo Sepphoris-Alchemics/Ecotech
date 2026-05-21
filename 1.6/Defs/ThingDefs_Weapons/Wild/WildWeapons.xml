@@ -18,6 +18,7 @@
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_InitiateWildWeapon</li>
+			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -117,6 +118,7 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_InitiateWildWeapon</li>
+			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>ShortShots</li>
@@ -210,6 +212,7 @@ Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
 			<li>ET_PlantWeapon</li>
 			<li>ET_BloomrotWeapon</li>
 			<li>ET_ZealotWildWeapon</li>
+			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Melee</li>

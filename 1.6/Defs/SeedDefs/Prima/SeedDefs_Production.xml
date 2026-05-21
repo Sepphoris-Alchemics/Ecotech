@@ -25,7 +25,7 @@
     <statBases>
       <WorkToMake>2400</WorkToMake>
       <MaxHitPoints>80</MaxHitPoints>
-      <MarketValue>105</MarketValue>
+      <MarketValue>70</MarketValue>
       <Mass>0.015</Mass>
       <Flammability>0.5</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
@@ -35,16 +35,14 @@
     </thingCategories>
     <recipeMaker>
       <recipeUsers>
-        <li>CraftingSpot</li>
+        <li>ET_TerratechCraftingSpot</li>
       </recipeUsers>
       <skillRequirements>
         <Plants>2</Plants>
       </skillRequirements>
       <displayPriority>510</displayPriority>
     </recipeMaker>
-    <costList>
-      <WoodLog>5</WoodLog>
-    </costList>
+    <costList IsNull="True" />
     <comps>
       <li Class="CompProperties_Plantable">
         <plantDefToSpawn>ET_TerraforgePlant</plantDefToSpawn>

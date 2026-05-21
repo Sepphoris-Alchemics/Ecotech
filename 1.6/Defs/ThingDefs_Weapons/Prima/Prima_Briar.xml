@@ -36,6 +36,7 @@ Briar weapons also retain the random projectile output, though with higher accur
 			<li>ET_PlantWeapon</li>
 			<li>ApexWeapon</li>
 			<li>BriarWeapon</li>
+			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>ShortShots</li>
@@ -117,6 +118,7 @@ Briar weapons also retain the random projectile output, though with higher accur
 			<li>ET_PlantWeapon</li>
 			<li>ApexWeapon</li>
 			<li>BriarWeapon</li>
+			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>RangedLight</li>

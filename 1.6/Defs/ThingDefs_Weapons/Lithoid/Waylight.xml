@@ -45,6 +45,7 @@
 		<weaponTags Inherit='False'>
 			<li>ET_StellarWeapon</li>
 			<li>ET_StellarWeaponStageOne</li>
+			<li>ET_VoidtouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -129,6 +130,7 @@ Innate EMP damage | ??? | ??? | ???</inspectString>
 		<weaponTags Inherit='False'>
 			<li>ET_StellarWeapon</li>
 			<li>ET_StellarWeaponStageTwo</li>
+			<li>ET_VoidtouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>

@@ -216,7 +216,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
   <defName>ET_PrimaExplosiveWeapons</defName>
   <label>Prima Focusing: Explosive Weapons</label>
   <description>Todo</description>
-  <baseCost>1800</baseCost>
+  <baseCost>1500</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Organic</tab>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
@@ -477,8 +477,6 @@ Both terrasaps have enough nutrients to sustain many growths that have relativel
     <discoveredLetterTitle>About: Terravats</discoveredLetterTitle>
     <discoveredLetterText>Terravats are special structures that allow you to modify Terraweapons. You can insert various saps and weapons into the vat. When these combine together (which happens roughly every 15 days, starting from when the Terravat reached maturity), the two will fuse together and create a new variant!\n\nWeapons that can be infused will have a tag that says "Accepts any sap transplant", and you can check the description of each sap to see what modifications they produce. You can also check the Terravat description for a full guide on the Terravat mechanics as well.</discoveredLetterText>
   </ResearchProjectDef>
-
-<!--=====MASTERY TECH=====-->
 
 <!--<ResearchProjectDef>
     <defName>ET_MaterialCompression</defName>

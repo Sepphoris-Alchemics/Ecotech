@@ -27,6 +27,7 @@ Stage 4: grants new beam-like attack
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>HybridWeapons</li>
+			<li>ET_CoretouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -133,6 +134,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>HybridWeapons</li>
+			<li>ET_CoretouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
