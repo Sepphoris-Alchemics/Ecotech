@@ -22,6 +22,43 @@
     <factionNameMaker>ET_NamerOrganicFaction</factionNameMaker>    <!--create custom def-->
     <settlementNameMaker>ET_NamerOrganicSettlement</settlementNameMaker>    <!--create custom def-->
     <techLevel>Neolithic</techLevel>
+
+<!--==========Ideo Fields==========-->
+
+<allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <styles>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Totemic</li>
+    </styles>
+    <forcedMemes>
+      <li>TreeConnection</li>
+    </forcedMemes>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhuman</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">Shipborn</li>
+    </disallowedMemes>
+    <structureMemeWeights>
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Animist>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistEmbodied>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">5</Structure_Archist>
+    </structureMemeWeights>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Highmate MayRequire="Ludeon.RimWorld.Biotech">0.05</Highmate>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.05</Genie>
+        <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0.05</Sanguophage>
+      </xenotypeChances>
+    </xenotypeSet>
+
+<!--==========End Ideo Fields==========-->
+
     <backstoryFilters>
       <li>
         <categories>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+  <!--<Operation Class="PatchOperationAdd">
+    <xpath>
+      /Defs/ThingDef[
+        weaponClasses
+        and not(weaponClasses/li[text()="ET_NaturalWeapon"])
+        and (
+          techLevel="Industrial"
+          or techLevel="Spacer"
+          or techLevel="Ultra"
+          or techLevel="Archotech"
+        )
+      ]/weaponClasses
+    </xpath>
+
+    <value>
+      <li>ET_SyntheticWeapon</li>
+    </value>
+  </Operation>-->
+
+</Patch>

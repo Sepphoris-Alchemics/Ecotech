@@ -154,13 +154,32 @@ Base Dormant: 81, 89, 45
 Base Mature: 28, 31, 15
 Endosap: 70, 178, 83-->
 
-	<!--=====Basic=====-->
+	<!--=====MINIUM - EVERYTHING SHOULD BE BASED ON THIS=====-->
 
-	<ThingDef Name="BaseUnmodifiedPrimaWeapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseTerraweapon" Abstract="True" ParentName="BaseGun">
+		<techLevel>Neolithic</techLevel>
 		<statBases>
 			<MarketValue>45</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses Inherit='false'>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
+		<thingCategories Inherit='false'>
+			<li>BasicTerraweapons</li>
+		</thingCategories>
+	</ThingDef>
+
+	<!--=====Basic=====-->
+
+	<ThingDef Name="BaseUnmodifiedPrimaWeapon" Abstract="True" ParentName="BaseTerraweapon">
+		<statBases>
+			<MarketValue>45</MarketValue>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<tradeTags>
 			<li>ET_BasePrimaWeaponTag</li>
 		</tradeTags>
@@ -180,11 +199,14 @@ Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 
 	<!--=====Weapons that can't be upgraded yet=====-->
 
-	<ThingDef Name="BaseUnupgradableTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseUnupgradableTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
 			<MarketValue>30</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<tradeTags>
 			<li>ET_BasePrimaWeaponTag</li>
 		</tradeTags>
@@ -204,11 +226,14 @@ Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 
 	<!--=====Basic upgraded terraweapon=====-->
 
-	<ThingDef Name="UpgradedUnmodifiedTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="UpgradedUnmodifiedTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
 			<MarketValue>45</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<comps>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>18000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
@@ -221,11 +246,14 @@ Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 	</ThingDef>
 
 
-	<ThingDef Name="BaseUpgradedTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseUpgradedTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
 			<MarketValue>60</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<tradeTags>
 			<li>ET_BasePrimaWeaponTag</li>
 		</tradeTags>
@@ -241,11 +269,14 @@ Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 
 	<!--=====Periwood=====-->
 
-	<ThingDef Name="BasePeriwoodTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BasePeriwoodTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
 			<MarketValue>40</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<thingCategories Inherit='false'>
 			<li>PeriwoodTerraweapons</li>
 		</thingCategories>
@@ -271,6 +302,9 @@ Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 			<MarketValue>200</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<thingCategories Inherit='false'>
 			<li>BriarTerraweapons</li>
 		</thingCategories>
@@ -292,6 +326,9 @@ Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 			<MarketValue>600</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<thingCategories Inherit='false'>
 			<li>AncientTerraweapons</li>
 		</thingCategories>
@@ -310,6 +347,9 @@ Mutation Potential: &lt;color=#dae691&gt;MEDIUM&lt;/color&gt;</inspectString>
 			<MarketValue>505</MarketValue> <!--Price changes depending on weapon-->
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<tradeability>Buyable</tradeability>
 		<tradeTags>
 			<li>ET_ArchsapPrimaWeaponTag</li>
@@ -368,6 +408,9 @@ Lifespan renewable via Biosynth Vat</inspectString>
 			<MarketValue>85</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<thingCategories Inherit='false'>
 			<li>InfusedTerraweapons</li>
 		</thingCategories>
@@ -392,6 +435,9 @@ Lifespan renewable via Biosynth Vat</inspectString>
 			<MarketValue>105</MarketValue>
 		</statBases>
 		<tickerType>Normal</tickerType>
+		<weaponClasses>
+		  <li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<thingCategories Inherit='false'>
 			<li>InfusedTerraweapons</li>
 		</thingCategories>

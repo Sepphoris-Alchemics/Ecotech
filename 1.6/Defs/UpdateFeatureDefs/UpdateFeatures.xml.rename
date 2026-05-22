@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
+		<modNameReadable>EcoTech</modNameReadable>
+		<modIdentifier>RadiantAlchemics.EcoTech</modIdentifier>
+		<linkUrl>https://ludeon.com/forums/index.php?topic=37161.0</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+		<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>RA_EcoTech_1_3_0</defName>
+		<assemblyVersion>1.3.0</assemblyVersion>
+		<content>Update 1.3.0
+
+NEW MECHANICS:
+ o Terraplant Infusion: Infuse plants with different terrasaps while they are growing to change what they'll ultimately grow into.
+ o Bio-Alchemization: Utilize powerful (and macabre) lithic terratech to turn flesh into pure silver and gold.
+NEW TERRATECH PATH EXPANSIONS:
+ o Stellar Path: A new path that focuses on stellar energies. Introductory.
+ o Bloomwood: A new genome focused on turning biotic mass into various flora.
+ o Periwood: Can now be further utilized using a process called Heartshifting.
+ o Metal Reclamation: You can now recycle captured and scavenged gear into it's it's base metals.
+ o Lithic Aptitude: Lithic research has been expanded to allow further, and stronger, development.
+FIRST LITHIC PRIMARY CLASS - MIDAS:
+ o Midas-Class focuses on giving a dedicated use for silver, gold, and machined items you may end up stockpiling.
+ o Midas-Class weaponry, which utilizes valuable metals as an damage source with extreme potential.
+ o Midas-Class conditions, which converts body parts into as variety of solid valuable metals.
+ o Midas-Class structures, which melts down items into gold, silver, or even other unique, highly valuable alloys.
+ o This class will certainly expand later, and give more use cases for melting down your riches.
+NEW ITEMS:
+ o Two new armors: Periheart and Genesite armor
+ o Waylight Rifle, a Stellar path upgradable rifle
+ o Bloomrot Staff, a melee weapon that inflicts Bloomrot
+ o Several new sap-infused weapons
+OTHER:
+ o Scenario overhaul, which adds some exclusive benefits, such as powerful traits and starting gear.
+ o Tech progression overhaul.
+ o Major rebalancing of many weapons, structures, and items.
+ o Major tweaking of terrasap distribution.
+ O MANY oversight and typo changes.
+ o Several texture overhauls.
+
+--See mod discord announcements for all the update details! - https://discord.gg/ksksHj --
+		</content>
+	</HugsLib.UpdateFeatureDef>	
+
+	<!--<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>RadiantAlchemics_1_3_0</defName>
+		<assemblyVersion>1.3.0</assemblyVersion>
+		<content>Update 1.3.0
+
+		</content>
+	</HugsLib.UpdateFeatureDef>-->
+
+</Defs>

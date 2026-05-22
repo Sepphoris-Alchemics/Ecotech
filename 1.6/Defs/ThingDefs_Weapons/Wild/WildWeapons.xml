@@ -21,6 +21,7 @@
 			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
 			<li>Ranged</li>
 		</weaponClasses>
 		<relicChance>0</relicChance>
@@ -121,6 +122,7 @@ Projectiles inject toxins | +2.5 hp/day (unequipped)</inspectString>
 			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
 			<li>ShortShots</li>
 			<li>Ranged</li>
 		</weaponClasses>
@@ -215,6 +217,7 @@ Extended Lifespan | +2.5 hp/day (unequipped)</inspectString>
 			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
 			<li>Melee</li>
 		</weaponClasses>
 		<relicChance>2</relicChance>

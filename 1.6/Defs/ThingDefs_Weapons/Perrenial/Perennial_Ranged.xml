@@ -21,6 +21,7 @@
 			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
 			<li>Ranged</li>
 		</weaponClasses>
 		<relicChance>0</relicChance>
@@ -133,6 +134,7 @@ Renewable | Unable to be evolved or infused</inspectString>
 			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
 			<li>Ranged</li>
 		</weaponClasses>
 		<relicChance>0</relicChance>
@@ -255,6 +257,7 @@ The Tricaster features the following bonuses and penalties:
 			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
 			<li>Ranged</li>
 		</weaponClasses>
 		<relicChance>0</relicChance>
@@ -347,6 +350,7 @@ Upgradable | Renewable | ??? | ???</inspectString>
 			<li>ET_PeriwoodWeaponRanged</li>
 		</weaponTags>
 		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
 			<li>Ranged</li>
 		</weaponClasses>
 		<relicChance>0</relicChance>

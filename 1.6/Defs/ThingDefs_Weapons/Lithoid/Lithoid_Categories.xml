@@ -3,7 +3,7 @@
 
 	<!--=====Soulsnare=====-->
 
-	<ThingDef Name="BaseSoulsnareTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseSoulsnareTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
 			<MarketValue>300</MarketValue>
 		</statBases>
@@ -16,7 +16,7 @@
 
 <!--=====Waylight=====-->
 
-	<ThingDef Name="BaseWaylightTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseWaylightTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
 			<MarketValue>900</MarketValue>
 		</statBases>
@@ -29,7 +29,7 @@
 
 <!--=====Vivicore=====-->
 
-	<ThingDef Name="BaseVivicoreTerraweapon" Abstract="True" ParentName="BaseGun">
+	<ThingDef Name="BaseVivicoreTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
 			<MarketValue>900</MarketValue>
 		</statBases>

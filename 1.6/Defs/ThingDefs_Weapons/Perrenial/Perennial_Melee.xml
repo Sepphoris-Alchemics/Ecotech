@@ -23,7 +23,7 @@
     </weaponClasses>
   </ThingDef>-->
 
-	<ThingDef ParentName="BaseWeapon">
+	<ThingDef ParentName="BaseTerraweapon">
 		<defName>ET_PeriwoodGlaive</defName>
 		<label>Periwood Stemglaive</label>
 		<description>A large bladed weapon with exceptionally long reach. Quite slow, but it's design allows many different form of attack, with each one being able to deal high damage.</description>
@@ -41,6 +41,9 @@
 			<li>ET_PeriwoodWeapon</li>
 			<li>ET_GrovetouchedWeapon</li>
 		</weaponTags>
+		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
+		</weaponClasses>
 		<relicChance>0</relicChance>
 		<statBases>
 			<MaxHitPoints>60</MaxHitPoints>
