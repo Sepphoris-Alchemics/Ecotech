@@ -121,7 +121,7 @@
 		<commonality>0.5</commonality>
 		<degreeDatas>	
 		  <li>
-			<label>&lt;color=#EDD34D&gt;Voidtouched&lt;/color&gt;</label>
+			<label>&lt;color=#EDD34D&gt;Startouched&lt;/color&gt;</label>
 			<description>[PAWN_nameDef]'s bloodline is related directly to a terratech faction that took to space, isolating itself from the other factions.</description>
 				<degree>0</degree>
 				<statOffsets>

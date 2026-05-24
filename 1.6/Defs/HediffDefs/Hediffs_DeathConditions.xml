@@ -1,50 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--
+
+This test hediff allows a pawn to drop certain tiems on death. This is designed for Bloomwood and Midas conditions.
+<enablePeriodicDrops>: Allows items to drop while the pawn is alive. Set to true or false.
+<periodicDropInterval>: How often the items will spawn. This is based on ticks.
+<drops>: where items, alongside the chances, amount, and hediff severity, is defined.
+These features only go in hediff comps, not in stages. So stages won't have to be edited.
+The Severity fields can overlap, allowing multiple drops to possibly occur at the same hediff severities. this allows multiple items to drop at certain severities if required.
+
+-->
+
   <HediffDef>
     <defName>ET_TestAlchemize</defName>
     <description>Turning into precious metals.
 \nThis probably sucks.</description>
     <descriptionShort>Turning into precious metals.</descriptionShort>
-    <hediffClass>HediffWithComps</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass> <!--MUST be a HediffWithComps-->
     <label>alchemizing</label>
     <defaultLabelColor>(203,148,62)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
-    <maxSeverity>1</maxSeverity>
-    <lethalSeverity>1</lethalSeverity>
+    <maxSeverity>1</maxSeverity> <!--Doesn't have to be 1, but generally makes it easier to work with. Just make sure lethalSeverity, minSeverity, and (other) maxSeverity also account for this if changed.-->
+    <lethalSeverity>1</lethalSeverity> <!--Since this comp normally relies on the pawn dying, you'll want the lethal severity set.-->
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.6</severityPerDay>
       </li>
       <li Class="Ecotech.HediffCompProperties_DropOnDeath">
+           <!--<enablePeriodicDrops>true</enablePeriodicDrops>
+            <periodicDropInterval>30000</periodicDropInterval>-->
         <drops>
           <li>
-            <thingDef>Jade</thingDef>
-              <countRange>
-                <min>1</min>
+            <thingDef>Jade</thingDef> <!--The item dropped.-->
+              <countRange> <!--The comp uses this range to determine the amount of items dropped-->
+                <min>5</min> <!--Needs to be 1 or higher-->
                 <max>25</max>
               </countRange>
-            <chance>0.2</chance>
-            <minSeverity>0.3</minSeverity>
-            <maxSeverity>0.9</maxSeverity>
+            <chance>0.2</chance> <!--The chance the item will drop while within the combine severity min and max. 0.2 = 20%-->
+            <minSeverity>0.3</minSeverity> <!--Minimum hediff severity range. In this particular case, this drop can occur ONLY if the hediff severity is above 30%-->
+            <maxSeverity>0.9</maxSeverity> <!--Maximum hediff sevrity range. In this particular case, this drop can occur ONLY if the hediff severity is below 90%-->
           </li>
           <li>
             <thingDef>Silver</thingDef>
               <countRange>
-                <min>1</min>
+                <min>10</min>
                 <max>50</max>
               </countRange>
-              <chance>0.5</chance>
+              <chance>0.5</chance> <!--50% chance-->
               <maxSeverity>0.8</maxSeverity>
           </li>
                 <!-- Guaranteed drop -->
                 <li>
                     <thingDef>Gold</thingDef>
                     <countRange>
-                        <min>1</min>
+                        <min>10</min>
                         <max>50</max>
                     </countRange>
-                    <chance>1</chance>
+                    <chance>1</chance> <!--100% chance-->
                     <minSeverity>0.9</minSeverity>
                 </li>
             </drops>

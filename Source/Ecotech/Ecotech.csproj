@@ -5,18 +5,15 @@
     <OutputPath>..\..\$(Configuration)\Assemblies\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <DisableImplicitFrameworkDefines>true</DisableImplicitFrameworkDefines>
-    <Configurations>1.5;1.6</Configurations>
+    <Configurations>1.6</Configurations>
     <NoWarn>1701;1702;CS0649</NoWarn>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' == '1.5'">
-    <DefineConstants>v1_5</DefineConstants>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == '1.6'">
     <DefineConstants>v1_6</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="$(Configuration).*-*">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="*">
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Lib.Harmony" Version="*">

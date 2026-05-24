@@ -212,7 +212,7 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-      <li>ET_VoidtouchedWeapon</li>
+      <li>ET_SpacetouchedWeapon</li>
 		</weaponTags>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <backstoryFilters>

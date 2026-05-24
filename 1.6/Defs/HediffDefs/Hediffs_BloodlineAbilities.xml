@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>ET_SkytouchedTraitHediff</defName>
+    <label>Stormblooded (Dormant)</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>This person has blood of an ancient skyborn terratech culture flowing in their veins. With proper meditation, they have the potential to easily master the same practices they once did.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>ET_StormWraithAbility</li>
+        </abilityDefs>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ET_StormWraithHediff</defName>
+    <label>Stormwraith Aura</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>The ancient skyborn bloodline of this person has allowed them to temporarily focus an aura that increases their movement abilities to a heightened degree.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <minSeverity>0.2</minSeverity>
+        <statFactors>
+          <MeleeCooldownFactor>0.9</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>1.5</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <statFactors>
+          <MeleeCooldownFactor>0.8</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>2</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <statFactors>
+          <MeleeCooldownFactor>0.7</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>2.5</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <statFactors>
+          <MeleeCooldownFactor>0.6</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>3</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statFactors>
+          <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>3.5</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerSecond">
+        <severityPerSecondRange>-0.0003</severityPerSecondRange>
+      </li>
+      <!--<li Class="VEF.Hediffs.HediffCompProperties_DamageAura">
+        <compClass>VEF.Hediffs.HediffComp_DamageAura</compClass>
+        <graphic>
+          <texPath>Effects/Staticlord/StaticAura/StaticAura</texPath>
+          <drawSize>(7, 7)</drawSize>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+        </graphic>
+        <damageDef>EMP</damageDef>
+        <damageAmount>5</damageAmount>
+        <ticksBetween>60</ticksBetween>
+        <radius>5</radius>
+        <sustainer>VPE_StaticAura_Sustainer</sustainer>
+        <soundEnded>VPE_StaticAura_End</soundEnded>
+        <hostileOnly>true</hostileOnly>
+      </li>-->
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

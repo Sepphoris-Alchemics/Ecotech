@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AbilityDef ParentName="AbilityTouchBase">
+    <defName>ET_StormWraithAbility</defName>
+    <label>stormwraith form</label>
+    <description>Focus to allow the knowledge of your bloodline to guide your movement abilities for a long period of time.</description>
+    <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <warmupMote>Mote_CoagulateStencil</warmupMote>
+    <warmupEffecter>Coagulate</warmupEffecter>
+    <warmupStartSound>Coagulate_Cast</warmupStartSound>
+    <jobDef>CastAbilityOnThingMelee</jobDef>
+    <statBases>
+      <Ability_EffectRadius>23.9</Ability_EffectRadius>
+    </statBases>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <warmupTime>6</warmupTime>
+      <targetParams>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetBloodfeeders>false</canTargetBloodfeeders>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>ET_StormWraithHediff</hediffDef>
+        <!--<durationSecondsOverride>300000</durationSecondsOverride>-->
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
