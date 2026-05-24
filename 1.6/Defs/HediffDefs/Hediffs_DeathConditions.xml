@@ -14,8 +14,7 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
 
   <HediffDef>
     <defName>ET_TestAlchemize</defName>
-    <description>Turning into precious metals.
-\nThis probably sucks.</description>
+    <description>Turning into precious metals. This sucks.</description>
     <descriptionShort>Turning into precious metals.</descriptionShort>
     <hediffClass>HediffWithComps</hediffClass> <!--MUST be a HediffWithComps-->
     <label>alchemizing</label>
@@ -146,6 +145,94 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
         </hediffGivers>
       </li>
     </stages>
+  </HediffDef>
+
+  <!--=====Test Hediff: Body part to item infection=====-->
+
+  <HediffDef>
+    <defName>ET_AlchemizingInfection</defName>
+    <label>alchemizing infection</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>The affected body part is slowly being transformed into valuable metals. This REALLY sucks.</description>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <maxSeverity>1</maxSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <defaultLabelColor>(203,148,62)</defaultLabelColor>
+    <comps>
+      <li Class="Ecotech.HediffCompProperties_BodyPartTransformation">
+        <transformSeverity>1</transformSeverity>
+        <checkIntervalTicks>60</checkIntervalTicks>
+        <sendLetter>true</sendLetter>
+        <letterLabelKey>ET_LetterLabel_BodyPartTransformed</letterLabelKey>
+        <letterTextKey>ET_LetterText_BodyPartTransformed</letterTextKey>
+        <drops>
+          <li>
+            <thingDef>Gold</thingDef>
+            <countRange>
+              <min>10</min>
+              <max>40</max>
+            </countRange>
+            <chance>1</chance>
+          </li>
+        </drops>
+        <bodyPartModifiers>
+        <!-- Fingers -->
+          <li>
+            <bodyPart>Finger</bodyPart>
+            <severityMultiplier>2.0</severityMultiplier>
+            <yieldMultiplier>0.1</yieldMultiplier>
+            <sendLetter>false</sendLetter>
+          </li>
+          <!-- Arms -->
+          <li>
+            <bodyPart>Arm</bodyPart>
+            <severityMultiplier>1.0</severityMultiplier>
+            <yieldMultiplier>1.5</yieldMultiplier>
+            <sendLetter>true</sendLetter>
+          </li>
+          <!-- Lungs -->
+          <li>
+            <bodyPart>Lung</bodyPart>
+            <severityMultiplier>0.35</severityMultiplier>
+            <yieldMultiplier>2.5</yieldMultiplier>
+            <sendLetter>true</sendLetter>
+          </li>
+          <!-- Heart -->
+          <li>
+            <bodyPart>Heart</bodyPart>
+            <severityMultiplier>0.15</severityMultiplier>
+            <yieldMultiplier>5.0</yieldMultiplier>
+            <sendLetter>true</sendLetter>
+            <overrideChance>1</overrideChance>
+            <overrideDrops>
+              <li>
+                <thingDef>ComponentSpacer</thingDef>
+                  <countRange>
+                    <min>7</min>
+                    <max>7</max>
+                  </countRange>
+                <chance>1</chance>
+              </li>
+            </overrideDrops>
+          </li>
+          <!-- Brain -->
+          <li>
+            <bodyPart>Brain</bodyPart>
+            <severityMultiplier>0.1</severityMultiplier>
+            <yieldMultiplier>8.0</yieldMultiplier>
+            <sendLetter>true</sendLetter>
+          </li>
+          <!-- Torso -->
+          <li>
+            <bodyPart>Torso</bodyPart>
+            <severityMultiplier>0.05</severityMultiplier>
+            <yieldMultiplier>10.0</yieldMultiplier>
+            <sendLetter>true</sendLetter>
+          </li>
+        </bodyPartModifiers>
+      </li>
+    </comps>
   </HediffDef>
 
 </Defs>
