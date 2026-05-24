@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
   <ET_LetterLabel_BodyPartTransformed>Body Part Transmuted</ET_LetterLabel_BodyPartTransformed>
-  <ET_LetterText_BodyPartTransformed>{PAWN}'s {BODYPART} has been completely transmuted into another material. It has been forcefully expelled from their body.</ET_LetterText_BodyPartTransformed>
+  <ET_LetterText_BodyPartTransformed>{PAWN}'s {BODYPART} has been completely transmuted into {ITEM}. It has been forcefully expelled from their body.</ET_LetterText_BodyPartTransformed>
   <Ecotech_Message_LifespanAboutToExpire>Life span of {THING} is low.</Ecotech_Message_LifespanAboutToExpire>
   <Ecotech_Message_SpawnedThingFromThingSpawner>{SOURCE} has provided a new gift.</Ecotech_Message_SpawnedThingFromThingSpawner>
   <Ecotech_Message_ThingTransformerFinishedTransformation>{TRANSFORMER} successfully transformed items.</Ecotech_Message_ThingTransformerFinishedTransformation>
