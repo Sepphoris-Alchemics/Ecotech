@@ -1,6 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!-- Base Terratech part-->
+
+<ThingDef Name="ET_BodyPartOrganicBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Neolithic</techLevel>
+    <thingCategories>
+      <li>BodyPartsProsthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(75,113,96)</color>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="ET_BodyPartLithicBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Neolithic</techLevel>
+    <thingCategories>
+      <li>BodyPartsProsthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(97,127,191)</color>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <displayPriority>500</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+<!---->
+
   <HediffDef>
     <defName>ET_BriarHediff</defName>
     <description>Effects and consequences caused by being in direct contact with the thorny tendrils of briars. The higher the affliction, the more the briar is tangled around - and enlodged into - the entire body.

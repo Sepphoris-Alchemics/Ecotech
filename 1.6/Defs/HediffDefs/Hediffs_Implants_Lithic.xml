@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+
+Notes:
+-Vivium is an alloy with undeterminate amount of silver, gold, and jade. It will always produce a random amount of all three when melted down. 
+-All can also be graded or melted down.
+-Grading makes the implant unusable, but turns it into art and increases the value considerably.
+-Midas-Class Implants don't really give bonuses beyond beauty or social.
+
+To make implants that react to damage, the following comp can be used:
+    <comps>
+      <li Class="HediffCompProperties_ReactOnDamage">
+        <damageDefIncoming>EMP</damageDefIncoming>
+        <createHediff>BrainShock</createHediff>
+      </li>
+    </comps>
+
+Todo:
+	-Golden/Silver/Vivium Jaw: a jaw with all teeth of the given material. Gives extra social and beauty.
+	-Golden/Silver/Vivium Skull: a skull made out of the full material.
+	-Golden/Silver/Vivium Eye. an eye made out of of the given material. No extra sight, but gives extra beauty.
+	-Golden/Silver/Vivium Kidney: a kidney made out of the given material.
+
+	-Chronite Kidney: a kidney that increases blood filtration and injury regeneration, but adds an innate pain.
+	-Chronite Lung: a lung that increases toxin filtration, but adds an innate pain.
+	-Chronite Mech Tether: A brain implant that continuously debuffs mech in range. Affects friendly mechs too. Lowers pawn conciousness and psychic sensitivity.
+	-Biothite Slumbergem: A brain implant that lowers rest rate multiplier, but drastically decreases sleep fall rate. Causes innate pain.
+	-Deeproot Linkspine: Connects the user to the fungal network below, giving them a 20% conciousness boost and speeds at everything else, but lowering movement speed and also causing random mood swings.
+	-Biothite Nerve Dampener: A spine implant that reduces Pain by 90%. No drawbacks, but extremely rare.
+	-Deeproot Linkleg: Leg replacements that connect the pawn to the network below, lowing their movement speed but massively increasing carry weight. Also regenerates part health.
+
+
+Bloomcore Serum: Ancient slave tech that infuses a pawn with hardened skin and glowing purple aspects. Once they die, they explode into a Nightshade explosive that lingers for days, quickly killing anything around it.
+
+Terrameld gets introduced as a basic material that also replaces parts on a pawn. This material specifically uses organic materials, and only goes up to 110% efficiency on any part.
+
+Terrameld prosthetics can first be acquired by placing normal limbs below a Reclaimer Tree.
+
+
+Terrameld Oculus: A collection of carefully grown, organic bioreceptors that allow the user to see the world. Due to its plant origins, the image one sees with this eye is extremely unique, as it blurs out most of the visual ‘noise’ human-likes would otherwise see every day - which is almost everything. Similarly, anything that would be important to a plant - or in the case, the person - would be in sharp focus as soon as the subconscious registers it.
+
+Due to this it takes a long time to get used to, and many won’t appreciate the lack of detail. However, those who wish to get as close to nature as they can may appreciate - and even envy - this kind of unique perspective.
+Final results (per eye):
+	-Sight: 30%
+	-Not affected by light levels
+	-Increase of 0.5 to Plant Skills
+	-Increase of 0.3 to Foraged food amounts.
+	-Increase of 1 to dodge chances.
+	-Negative mood of -5 for anyone that is into higher tech/bionics.
+	-Positive mood of +5 for anyone that is into nature/art.
+
+-->
+
+  <!--===== Vivium Jaw =====-->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ET_ViviumJaw</defName>
+    <label>vivium jaw</label>
+    <labelNoun>a vivium jaw</labelNoun>
+    <description>An installed vivium jaw. While not as effective as a normal jaw, it's terratech nature makes it better than a denture... and it's alloy materials make any smiles quite radiant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_ViviumJaw</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>ET_ViviumJaw</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.9</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+	<stages>
+      <li>
+        <statOffsets>
+			<TradePriceImprovement>0.1</TradePriceImprovement>
+        	<PawnBeauty>1</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="ET_BodyPartLithicBase">
+    <defName>ET_ViviumJaw</defName>
+    <label>vivium jaw</label>
+    <description>A jaw made entirely out of vivium alloy, fitted with a full set of matching teeth. Unlike pure silver and gold, vivium is strong enough to perform the everyday tasks any person would need teeth to do... such as chewing. Still, it is not functionally better than actual bone.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>ET_InstallViviumJaw</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <Mass>1.1</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallViviumJaw</defName>
+    <label>Install vivium jaw</label>
+    <description>Install vivium jaw.</description>
+    <jobString>Installing vivium jaw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_ViviumJaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_ViviumJaw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Jaw</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_ViviumJaw</addsHediff>
+  </RecipeDef>
+
+	<!--===== Vivium Eye =====-->
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>ET_ViviumEye</defName>
+    <label>vivium eye</label>
+    <labelNoun>a vivium eye</labelNoun>
+    <description>An installed vivium eye. Provides no sight, but it's shine and luster is quite appealing.</description>
+	<descriptionHyperlinks>
+      	<ThingDef>ET_ViviumEye</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>ET_ViviumEye</spawnThingOnRemoved>
+    <addedPartProps>
+      	<solid>true</solid>
+      	<partEfficiency>0</partEfficiency>
+    	<betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+	<stages>
+    	<li>
+    		<statOffsets>
+				<SocialImpact>0.1</SocialImpact>
+        		<PawnBeauty>1</PawnBeauty>
+    		</statOffsets>
+    	</li>
+    </stages>
+</HediffDef>
+
+<ThingDef ParentName="ET_BodyPartLithicBase">
+	<defName>ET_ViviumEye</defName>
+	<label>vivium eye</label>
+	<description>An eye made entirely out of vivium eye. Provides no sight, but is extremely pretty.</description>
+	<descriptionHyperlinks>
+    	<RecipeDef>ET_InstallViviumEye</RecipeDef>
+	</descriptionHyperlinks>
+	<statBases>
+    	<Mass>0.1</Mass>
+	</statBases>
+</ThingDef>
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+	<defName>ET_InstallViviumEye</defName>
+	<label>Install vivium eye</label>
+	<description>Install vivium eye</description>
+	<jobString>Installing vivium eye.</jobString>
+	<ingredients>
+    	<li>
+    		<filter>
+        		<thingDefs>
+        			<li>ET_ViviumEye</li>
+        		</thingDefs>
+        	</filter>
+    		<count>1</count>
+    	</li>
+	</ingredients>
+    <fixedIngredientFilter>
+    	<thingDefs>
+        	<li>ET_ViviumEye</li>
+      	</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+    	<li>Jaw</li>
+    </appliedOnFixedBodyParts>
+	<addsHediff>ET_ViviumEye</addsHediff>
+</RecipeDef>
+
+<!--===== Biothite Kidney =====-->
+
+<ThingDef ParentName="ET_BodyPartLithicBase">
+    <defName>ET_BiothiteKidney</defName>
+    <label>Biothite kidney</label>
+    <description>A kidney formed out of biothite. It's biothite nature offers supreme filtration and improved injury regeneration, but the crystal properties of the kidney cause chronic internal pain.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>ET_InstallBiothiteKidney</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <MarketValue>1200</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ET_BiothiteKidney</defName>
+    <label>biothite kidney</label>
+    <labelNoun>biothite kidney</labelNoun>
+    <description>An implanted biothite kidney. It's biothite nature offers supreme filtration and improved injury regeneration, but the crystal properties of the kidney cause chronic internal pain.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_InstallBiothiteKidney</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>ET_BiothiteKidney</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.2</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+	  	<painOffset>0.05</painOffset>
+        <statOffsets>
+          <InjuryHealingFactor>0.25</InjuryHealingFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallBiothiteKidney</defName>
+    <label>install biothite kidney</label>
+    <description>Install a biothite kidney.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_BiothiteKidney</ThingDef>
+      <HediffDef>ET_BiothiteKidney</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing biothite kidney.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_BiothiteKidney</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_BiothiteKidney</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Kidney</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_BiothiteKidney</addsHediff>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+  </RecipeDef>
+
+<!--===== Biothite Lung =====-->
+
+  <ThingDef ParentName="ET_BodyPartLithicBase">
+    <defName>ET_BiothiteLung</defName>
+    <label>biothite lung</label>
+    <description>A lung formed out of biothite. It's biothite nature offers superior breathing capabilities, filters toxins quite effectively, and prevents residues from building up. However, the crystal properties long are felt with every breath, causing chronic internal pain.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>ET_InstallBiothiteLung</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ET_BiothiteLung</defName> <!--Todo: make immune to the ThoughtDef called NoxiousHaze and immunt to hediffs such as asthma-->
+    <label>biothite lung</label>
+    <labelNoun>a biothite lung</labelNoun>
+    <description>An implanted lung. It's biothite nature offers superior breathing capabilities, filters toxins quite effectively, and prevents residues from building up. However, the crystal properties long are felt with every breath, causing chronic internal pain.</description>
+    <preventsLungRot>true</preventsLungRot>
+    <descriptionHyperlinks>
+      <ThingDef>ET_BiothiteLung</ThingDef>
+      <HediffDef>LungRot</HediffDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>ET_BiothiteLung</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.2</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+	    <painOffset>0.05</painOffset>
+        <statOffsets>
+          <ToxicEnvironmentResistance>0.4</ToxicEnvironmentResistance>
+        </statOffsets>
+		<makeImmuneTo>
+          <li>Asthma</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallBiothiteLung</defName>
+    <label>install biothite lung</label>
+    <description>Install a biothite lung.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_BiothiteLung</ThingDef>
+      <HediffDef>ET_BiothiteLung</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing biothite lung.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_BiothiteLung</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_BiothiteLung</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Lung</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_BiothiteLung</addsHediff>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+  </RecipeDef>
+
+<!--===== Chronite Mech Tether =====-->
+
+<!--===== Biothite Slumbergem =====-->
+
+<HediffDef ParentName="ImplantHediffBase">
+    <defName>ET_BiothiteWakegem</defName>
+    <label>biothite slumbergem</label>
+    <labelNoun>a biothite slumbergem</labelNoun>
+    <description>An implanted biothite slumbergem. Drastically increases the time one can stay awake, but also requires the user to sleep longer when rest is needed. It's crystal properties cause chronic pain.</description>
+    <descriptionHyperlinks>
+		<ThingDef>ET_BiothiteWakegem</ThingDef>
+	</descriptionHyperlinks>
+    <spawnThingOnRemoved>ET_BiothiteWakegem</spawnThingOnRemoved>
+    <stages>
+      <li>
+	  	<painOffset>0.1</painOffset>
+        <statOffsets>
+          <RestFallRateFactor>-0.8</RestFallRateFactor>
+		  <BedRestEffectiveness>-0.6</BedRestEffectiveness>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="ET_BodyPartLithicBase">
+    <defName>ET_BiothiteWakegem</defName>
+    <label>biothite slumbergem</label>
+    <description>A half-organic, half-crystal gem that meshes itself directly to the brain. Drastically increases the time one can stay awake, but also requires the user to sleep longer when rest is needed. It's crystal properties cause chronic pain.
+\nDue to how it uniquely melds with the brain, it cannot be removed.</description>
+    <descriptionHyperlinks>
+	<RecipeDef>ET_BiothiteWakegem</RecipeDef>
+	</descriptionHyperlinks>
+    <!--<thingSetMakerTags>
+	<li>RewardStandardLowFreq</li>
+	</thingSetMakerTags>-->
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>ET_InstallBiothiteWakegem</defName>
+    <label>install biothite slumbergem</label>
+    <description>Install a biothite slumbergem.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_BiothiteWakegem</ThingDef>
+      <HediffDef>ET_BiothiteWakegem</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing biothite slumbergem.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_BiothiteWakegem</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_BiothiteWakeGem</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_BiothiteWakegem</addsHediff>
+  </RecipeDef>
+  
+  <!--<RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>ET_RemoveBiothiteWakegem</defName>
+    <label>remove biothite slumbergem</label>
+    <description>Remove biothite slumbergem.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_BiothiteWakegem</ThingDef>
+      <HediffDef>ET_BiothiteWakegem</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing biothite slumbergem.</jobString>
+    <removesHediff>ET_BiothiteWakegem</removesHediff>
+  </RecipeDef>-->
+
+</Defs>

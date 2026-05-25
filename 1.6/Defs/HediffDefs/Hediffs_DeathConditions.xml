@@ -12,6 +12,12 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
 
 -->
 
+<!--<HediffDef ParentName="MissingBodyPart">
+  <defName>ET_TransmutedBodyPart</defName>
+    <hediffClass>Ecotech.Hediff_TransmutedPart</hediffClass>
+    <label>transmuted</label>
+</HediffDef>-->
+
   <HediffDef>
     <defName>ET_TestAlchemize</defName>
     <description>Turning into precious metals. This sucks.</description>
