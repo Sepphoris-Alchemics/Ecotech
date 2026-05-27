@@ -47,4 +47,96 @@ The roots can be made larger and more effective, but keep in mind that movement 
 		</stages>
 	</HediffDef>
 
+<!--===== Deeproot Linkspine =====-->
+
+<HediffDef ParentName="ImplantHediffBase">
+    <defName>ET_DeeprootLinkspine</defName>
+    <label>deeproot linkspine</label>
+    <description>A spine that connects the host deep into to the earth via a network of roots and nerves. Heightens reflexes, mental awareness, and coordination. However, it can cause personality disassociation breaks at multiple levels.</description>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+	<stages>
+      <li>
+        <capMods>
+    	<li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
+        </li>
+		<li>
+        	<statOffsets>
+          		<WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+        	</statOffsets>
+      	</li>
+		<li>
+        	<statFactors>
+        		<MoveSpeed>-0.5</MoveSpeed>
+        	</statFactors>
+      	</li>
+        </capMods>
+		<mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+		  <li>
+            <mentalState>Wander_Sad</mentalState>
+            <mtbDays>30</mtbDays>
+          </li>
+		  <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>45</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="ET_BodyPartOrganicBase">
+    <defName>ET_DeeprootLinkspine</defName>
+    <label>deeproot linkspine</label>
+    <description>An organic spine that connects the host deep into to the earth via a network of roots and nerves. With the spine serving as the linkroot hub, the host's entire body is also linked, allowing higher reflexes, mental awareness, and coordination. However, linking to a psuedo-hivemind so deeply has risks, and can cause personality disassociation at multiple levels.</description>
+    <descriptionHyperlinks>
+		<RecipeDef>ET_InstallDeeprootLinkspine</RecipeDef>
+	</descriptionHyperlinks>
+    <statBases>
+      <Mass>0.2</Mass>
+      <WorkToMake>24000</WorkToMake>
+    </statBases>
+    <!--<techHediffsTags>
+      <li>ET_OrganicTechTag</li>
+    </techHediffsTags>-->
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallDeeprootLinkspine</defName>
+    <label>install deeproot linkspine</label>
+    <description>Install deeproot linkspine.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_DeeprootLinkspine</ThingDef>
+      <HediffDef>ET_DeeprootLinkspine</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing deeproot linkspine.</jobString>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_DeeprootLinkspine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_DeeprootLinkspine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_DeeprootLinkspine</addsHediff>
+  </RecipeDef>
+
 </Defs>

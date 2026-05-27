@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+<ThingDef Name="ET_TransmutationPylon" ParentName="BuildingBase" Abstract="True">
+    <description>A large monolith consisting of a forbidden crystal type, reinforced by ebonwood, and filled with unknown contents. Designed for Wildheart Sects, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin rapidly transmuting anything alive within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of lithic or organic resources.
+Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential for  turn raids - and excess prisoners - into an abundance of usable resources should not be underestimated. and  for a  Even by terratech standards, the technology behind this monolith is quite arcane, and is highly classified.</description>
+    <tickerType>Normal</tickerType>
+    <size>(3,3)</size>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>1</fillPercent>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <shadowData>
+        <volume>(2.5, 5, 2.5)</volume>
+        <offset>(0, 0, -0.3)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <building>
+      <paintable>false</paintable>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <soundMeleeHitOverride>ObeliskDamaged</soundMeleeHitOverride>
+    </building>
+    <killedLeavings>
+    </killedLeavings>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <MeditationFocusStrength>1</MeditationFocusStrength>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Natural</li>
+        </focusTypes>
+      </li>
+    </comps>
+  </ThingDef>
+
   <!--<ThingDef ParentName="BuildingBase">
     <defName>ET_GiftTreeTierOne</defName>
     <label>Primwood Tidetree</label>

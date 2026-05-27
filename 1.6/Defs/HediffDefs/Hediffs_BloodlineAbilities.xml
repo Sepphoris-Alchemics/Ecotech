@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--Note: abilities can also be added as so:
+<HediffDef ParentName="ImplantHediffBase">
+    <defName></defName>
+    <label></label>
+    <description></description>
+    <abilities>
+      <li>RevenantInvisibility</li>
+    </abilities>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+  </HediffDef>-->
+
   <HediffDef>
     <defName>ET_SkytouchedTraitHediff</defName>
     <label>Stormblooded (Dormant)</label>

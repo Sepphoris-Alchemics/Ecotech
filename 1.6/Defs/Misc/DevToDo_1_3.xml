@@ -12,6 +12,40 @@
 	-Background not present on Classes below O
 	-Stage colors too visibly similar; consider making them a stellar hue/class apart.
 
+-For Ichor preset weapons (and possibly other items), the following comps can be used (MAKE COMP CLASS IN C# FIRST, OTHERWISE USE "CompRevenantSpine" FOR COMP CLASS):
+
+<li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Open {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} opened the bottle of ichor, allowing it to form into it's previous state. It has formed into a sword.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+	  <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ET_IchorBottleOpen</soundOnUsed>
+      </li>
+	<li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <ET_IchorSword>1</ET_IchorSword>
+        </leavings>
+      </li>
+	<li Class="CompProperties_Interactable">
+        <compClass>ET_CompUsableItem</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/OpenIchorBottle</activateTexPath>
+        <activateLabelString>Open bottle...</activateLabelString>
+        <activateDescString>Open the bottle of ichor and allow it to form into a new weapon.</activateDescString>
+        <activatingStringPending>opening a bottle of ichor</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+
 =====SAP EFFECTS (Updated for 1.3)=====
 
 BASIC SAPS (Mutability: Low):

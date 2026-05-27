@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+
+Since hediff amount can't seemingly be controlled via surgery amount, it looks like
+Bloompox will be imcreased in dosage via Hediff_Level. Each severity will increase by 1.
+This means that the potions can't be administered like normal drugs or medical operations, but are done via gizmo.
+
+-->
+
+<!--=====Potion Base=====-->
+
+<ThingDef Name="ET_OrganicPotionBase" ParentName="ResourceBase" Abstract="True" >
+    <thingClass>ThingWithComps</thingClass>
+    <stackLimit>3</stackLimit>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <orderedTakeGroup>Drug</orderedTakeGroup>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Mass>0.5</Mass>
+      <Flammability>0.3</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <!--<thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>-->
+    <tradeTags>
+      <li>ET_OrganicPotionBase</li>
+    </tradeTags>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <drugCategory>Medical</drugCategory>
+      <foodType>Processed</foodType>
+      <baseIngestTicks>100</baseIngestTicks>
+      <humanlikeOnly>true</humanlikeOnly>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Ingest {0}</ingestCommandString>
+      <ingestReportString>Ingesting {0}.</ingestReportString>
+      <showIngestFloatOption>false</showIngestFloatOption> <!-- Useable does this -->
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_UseThing" />
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1200</listOrder>
+        <teetotalerCanConsume>true</teetotalerCanConsume>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useLabel>Use {0_label}</useLabel>
+        <useJob>Ingest</useJob>
+        <showUseGizmo>true</showUseGizmo>
+        <allowedMutants>
+          <li>Ghoul</li>
+        </allowedMutants>
+      </li>
+      <li Class="CompProperties_Serum" />
+    </comps>
+    <recipeMaker>
+      <productCount>1</productCount>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>ET_Terraforge</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+<!--=====Bloompox Potions=====-->
+
+  <ThingDef ParentName="ET_OrganicPotionBase">
+    <defName>ET_BloomsapPotion</defName>
+    <label>bloomsap potion</label>
+    <description>A full bottle of bloomsap. When ingested or injected, the victim starts developing a condition that causes exotic flowers and wooden growths to painfully bursts from the body periodically. While not lethal on it's own, the injuries the condition can cause can easily lead to death.
+\nDedicated terratech cultures often have a total grasp of the bloomwood genome, and can manipulate it many ways at any stage. However, those that rely on standard technology will find stopping bloompox difficult... and completely curing it is another feat entirely.
+\nA full bottle of bloomsap is considerably valuable compared to other terrasaps, due to it's rarity and VERY specific applications. It should be used wisely, and guarded carefully.</description>
+    <graphicData>
+      <texPath>Things/Medical/BloompoxPotion</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>150</MarketValue>
+    </statBases>
+    <comps> <!--Todo: add bloompox explosion when broken/destroyed-->
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>ET_BloompoxFading</hediffDef>
+        <allowRepeatedUse>true</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+    </comps>
+    <!--<costList>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <recipeMaker>
+      <workAmount>720</workAmount>
+      <researchPrerequisite>SerumSynthesis</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>-->
+
+<RecipeDef ParentName="SurgeryFlesh">
+    <defName>ET_BloompoxFading</defName>
+    <label>Infect with bloompox (fading)</label>
+    <description>Infect someone with bloompox. This dosage is low, and will fade after a period of time. however, it will still result in one - rarely two - blooms from the victim.</description>
+    <workerClass>Recipe_Surgery</workerClass>
+    <jobString>Injecting bloomsap.</jobString>
+    <workAmount>300</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>ET_Bloomsap</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+<RecipeDef ParentName="SurgeryFlesh">
+    <defName>ET_BloompoxStagnant</defName>
+    <label>Infect with bloompox (stagnant)</label>
+    <description>Infect someone with bloompox. This dosage is enough to allow the bloompox to establish a hold on the victim, resulting in it not fading away over time. however, it can still be cured will enough time and effort.</description>
+    <workerClass>Recipe_Surgery</workerClass>
+    <jobString>Injecting bloomsap.</jobString>
+    <workAmount>300</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>ET_Bloomsap</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+<RecipeDef ParentName="SurgeryFlesh">
+    <defName>ET_BloompoxLethal</defName>
+    <label>Infect with bloompox (lethal)</label>
+    <description>Infect {1} with bloompox. This dosage is extremely high and quickly spreads throughout the body, guaranteeing a miserable death. However, several blooms can be harvested before {1} completely expires.
+\nTerratech tribes with sufficient understanding of the Bloomwood genome can cure this affliction, but colonies relying on standard tech almost certainly cannot.</description>
+    <workerClass>Recipe_Surgery</workerClass>
+    <jobString>Injecting bloomsap.</jobString>
+    <workAmount>300</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>ET_Bloomsap</li>
+          </categories>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+<RecipeDef ParentName="SurgeryFlesh">
+    <defName>ET_CureBloompox</defName>
+    <label>cure bloompox</label>
+    <description>cure bloompox</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Curing Bloompox.</jobString>
+    <workAmount>4500</workAmount>
+    <removesHediff>ET_Bloompox</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully cured {1}'s bloompox.</successfullyRemovedHediffMessage>
+    <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>MedicineHerbal</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>

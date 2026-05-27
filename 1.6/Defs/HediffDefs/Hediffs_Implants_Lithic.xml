@@ -202,7 +202,7 @@ Final results (per eye):
     <labelNoun>biothite kidney</labelNoun>
     <description>An implanted biothite kidney. It's biothite nature offers supreme filtration and improved injury regeneration, but the crystal properties of the kidney cause chronic internal pain.</description>
     <descriptionHyperlinks>
-      <ThingDef>ET_InstallBiothiteKidney</ThingDef>
+      <ThingDef>ET_BiothiteKidney</ThingDef>
     </descriptionHyperlinks>
     <spawnThingOnRemoved>ET_BiothiteKidney</spawnThingOnRemoved>
     <addedPartProps>
@@ -403,5 +403,72 @@ Final results (per eye):
     <jobString>Removing biothite slumbergem.</jobString>
     <removesHediff>ET_BiothiteWakegem</removesHediff>
   </RecipeDef>-->
+
+<!--===== Biothite Nerve Dampener =====-->
+
+<HediffDef ParentName="ImplantHediffBase">
+    <defName>ET_BiothiteNerveDampener</defName>
+    <label>biothite nerve dampener</label>
+    <description>A specialized biothite implant that melds directly to the spinal cord. Suppresses most pain, but makes the person more suspectable to disease.</description>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+	<stages>
+      <li>
+	  	<painOffset>-0.9</painOffset>
+        <statFactors>
+      		<ImmunityGainSpeed>0.8</ImmunityGainSpeed>
+    	</statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="ET_BodyPartOrganicBase">
+    <defName>ET_BiothiteNerveDampener</defName>
+    <label>biothite nerve dampener</label>
+    <description>A specialized biothite implant that melds directly to the spinal cord. Specifically eliminates pain reception almost entirely, while still allowing nerves to recieve generally favorable signals.
+\nUnfortunately, the lack of pain also makes the person more suspectable to disease. Cannot be removed.</description>
+    <descriptionHyperlinks>
+		<RecipeDef>ET_InstallBiothiteNerveDampener</RecipeDef>
+	</descriptionHyperlinks>
+    <statBases>
+      <Mass>0.2</Mass>
+      <WorkToMake>24000</WorkToMake>
+    </statBases>
+    <!--<techHediffsTags>
+      <li>ET_OrganicTechTag</li>
+    </techHediffsTags>-->
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallBiothiteNerveDampener</defName>
+    <label>install biothite nerve dampener</label>
+    <description>Install biothite nerve dampener.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_BiothiteNerveDampener</ThingDef>
+      <HediffDef>ET_BiothiteNerveDampener</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing biothite nerve dampener.</jobString>
+    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_BiothiteNerveDampener</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_BiothiteNerveDampener</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_BiothiteNerveDampener</addsHediff>
+  </RecipeDef>
 
 </Defs>
