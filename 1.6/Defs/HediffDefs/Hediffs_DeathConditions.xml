@@ -241,4 +241,66 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
     </comps>
   </HediffDef>
 
+  <!--=====Test Hediff: Total Body Alchemization=====-->
+
+  <HediffDef>
+    <defName>ET_TotalAlchemizingInfection</defName>
+    <label>total alchemizing infection</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>The total body is being transmuted. This REALLY sucks.</description>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <maxSeverity>1</maxSeverity>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <defaultLabelColor>(203,148,62)</defaultLabelColor>
+    <comps>
+      <li Class="Ecotech.HediffCompProperties_BodyPartTransformation">
+        <transformSeverity>1</transformSeverity>
+        <checkIntervalTicks>60</checkIntervalTicks>
+        <destroyCorpse>true</destroyCorpse>
+        <sendLetter>true</sendLetter>
+        <letterLabelKey>ET_LetterLabel_TotalTransmutation</letterLabelKey>
+        <letterTextKey>ET_LetterText_TotalTransmutation</letterTextKey>
+        <drops>
+          <li>
+            <thingDef>Gold</thingDef>
+            <countRange>
+              <min>150</min>
+              <max>300</max>
+            </countRange>
+            <chance>1</chance>
+          </li>
+          <li>
+            <thingDef>Silver</thingDef>
+            <countRange>
+              <min>300</min>
+              <max>600</max>
+            </countRange>
+            <chance>1</chance>
+          </li>
+        </drops>
+        <bodyPartModifiers>
+          <!-- Torso -->
+          <li>
+            <bodyPart>Torso</bodyPart>
+            <severityMultiplier>0.05</severityMultiplier>
+            <yieldMultiplier>1</yieldMultiplier>
+            <sendLetter>true</sendLetter>
+            <overrideChance>0.1</overrideChance>
+            <overrideDrops>
+              <li>
+                <thingDef>ComponentSpacer</thingDef>
+                  <countRange>
+                    <min>10</min>
+                    <max>10</max>
+                  </countRange>
+                <chance>1</chance>
+              </li>
+            </overrideDrops>
+          </li>
+        </bodyPartModifiers>
+      </li>
+    </comps>
+  </HediffDef>
+
 </Defs>

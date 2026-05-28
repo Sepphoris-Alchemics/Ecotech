@@ -3,7 +3,7 @@
 
 <ThingDef Name="ET_MidasTransmutationPylon" ParentName="BuildingBase" Abstract="True">
     <description>A large monolith consisting of a golden crystal and reinforced by ebonwood. Designed by Wildheart tribes, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin transmuting both mechs and organics within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of valuable resources.
-Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential for  turn raids - and excess prisoners - into an abundance of usable resources should not be underestimated.
+Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential to turn raiders - and excess prisoners - into an abundance of usable resources should not be underestimated.
 \nThis pylon can only be activated once every 15 days.</description>
     <tickerType>Normal</tickerType>
     <size>(3,3)</size>

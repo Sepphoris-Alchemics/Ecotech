@@ -133,66 +133,196 @@ namespace Ecotech
             );
         }
 
-        public override void CompPostTick(
-            ref float severityAdjustment)
+ public override void CompPostTick(
+    ref float severityAdjustment)
+{
+    base.CompPostTick(ref severityAdjustment);
+
+    if (transformed)
+        return;
+
+    if (Pawn == null)
+        return;
+
+    /*
+     * Whole-body Hediff.
+     * (Systemic transmutation)
+     */
+    if (parent.Part == null)
+    {
+        /*
+         * Performance-safe checks.
+         */
+        if (!Pawn.IsHashIntervalTick(
+            Props.checkIntervalTicks))
         {
-            base.CompPostTick(ref severityAdjustment);
-
-            if (transformed)
-                return;
-
-            if (Pawn == null)
-                return;
-
-            BodyPartRecord part = parent.Part;
-
-            if (part == null)
-                return;
-
-            /*
-             * Already gone.
-             */
-            if (Pawn.health.hediffSet.PartIsMissing(part))
-                return;
-
-            /*
-             * Modifier lookup.
-             */
-            BodyPartTransformationModifier modifier =
-                GetModifierForPart(part);
-
-            /*
-             * Severity scaling.
-             */
-            if (modifier != null)
-            {
-                severityAdjustment *=
-                    modifier.severityMultiplier;
-            }
-
-            /*
-             * Performance-safe checks.
-             */
-            if (!Pawn.IsHashIntervalTick(
-                Props.checkIntervalTicks))
-            {
-                return;
-            }
-
-            /*
-             * Final transformation threshold.
-             */
-            if (parent.Severity <
-                Props.transformSeverity)
-            {
-                return;
-            }
-
-            TransformBodyPart(
-                part,
-                modifier
-            );
+            return;
         }
+
+        /*
+         * Final threshold.
+         */
+        if (parent.Severity <
+            Props.transformSeverity)
+        {
+            return;
+        }
+
+        TransformWholeBody();
+
+        return;
+    }
+
+    /*
+     * Existing localized logic.
+     */
+    BodyPartRecord part = parent.Part;
+
+    /*
+     * Already gone.
+     */
+    if (Pawn.health.hediffSet.PartIsMissing(part))
+        return;
+
+    /*
+     * Modifier lookup.
+     */
+    BodyPartTransformationModifier modifier =
+        GetModifierForPart(part);
+
+    /*
+     * Severity scaling.
+     */
+    if (modifier != null)
+    {
+        severityAdjustment *=
+            modifier.severityMultiplier;
+    }
+
+    /*
+     * Performance-safe checks.
+     */
+    if (!Pawn.IsHashIntervalTick(
+        Props.checkIntervalTicks))
+    {
+        return;
+    }
+
+    /*
+     * Final transformation threshold.
+     */
+    if (parent.Severity <
+        Props.transformSeverity)
+    {
+        return;
+    }
+
+    TransformBodyPart(
+        part,
+        modifier
+    );
+}
+
+/*
+ * Whole-body transmutation.
+ */
+private void TransformWholeBody()
+{
+    if (transformed)
+        return;
+
+    if (Pawn == null)
+        return;
+
+    transformed = true;
+
+    Map map = Pawn.MapHeld;
+
+    IntVec3 position = Pawn.PositionHeld;
+
+    /*
+     * Spawn configured drops.
+     */
+    if (map != null && position.IsValid)
+    {
+        SpawnDropList(
+            Props.drops,
+            map,
+            position,
+            1f
+        );
+    }
+
+    /*
+     * Optional notification.
+     */
+    if (Props.sendLetter)
+    {
+        SendWholeBodyLetter();
+    }
+
+    /*
+     * Destroy corpse after death.
+     */
+    bool destroyCorpse =
+        Props.destroyCorpse;
+
+    /*
+     * Kill pawn.
+     * This is safer and more reliable
+     * for systemic transmutation than
+     * trying to remove all body parts.
+     */
+    Pawn.Kill(null);
+
+    /*
+     * Remove corpse entirely.
+     */
+    if (destroyCorpse)
+    {
+        Corpse corpse = Pawn.Corpse;
+
+        if (corpse != null &&
+            !corpse.Destroyed)
+        {
+            corpse.Destroy();
+        }
+    }
+}
+
+/*
+ * Whole-body notification.
+ */
+private void SendWholeBodyLetter()
+{
+    if (string.IsNullOrEmpty(
+        Props.letterLabelKey))
+    {
+        return;
+    }
+
+    if (string.IsNullOrEmpty(
+        Props.letterTextKey))
+    {
+        return;
+    }
+
+    string label =
+        Props.letterLabelKey.Translate();
+
+    string text =
+        Props.letterTextKey.Translate(
+            Pawn.Named("PAWN"),
+            parent.LabelCap.Named("HEDIFF")
+        );
+
+    Find.LetterStack.ReceiveLetter(
+        label,
+        text,
+        LetterDefOf.NegativeEvent,
+        Pawn
+    );
+}       
 
         private BodyPartTransformationModifier
             GetModifierForPart(
@@ -288,7 +418,7 @@ namespace Ecotech
             );
 
             Pawn.health.RemoveHediff(parent);
-            
+
             if (Props.destroyCorpse)
 {
     Corpse corpse = Pawn.Corpse;
