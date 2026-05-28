@@ -98,6 +98,7 @@ namespace Ecotech
          * Future-proofing.
          */
         public bool allowArtificialParts = false;
+        public bool destroyCorpse = false;
 
         public HediffCompProperties_BodyPartTransformation()
         {
@@ -287,6 +288,17 @@ namespace Ecotech
             );
 
             Pawn.health.RemoveHediff(parent);
+            
+            if (Props.destroyCorpse)
+{
+    Corpse corpse = Pawn.Corpse;
+
+    if (corpse != null &&
+        !corpse.Destroyed)
+    {
+        corpse.Destroy();
+    }
+}
         }
 
         private void SpawnDrops(

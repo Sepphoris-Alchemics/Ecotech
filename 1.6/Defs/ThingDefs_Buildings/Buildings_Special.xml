@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<ThingDef Name="ET_TransmutationPylon" ParentName="BuildingBase" Abstract="True">
-    <description>A large monolith consisting of a forbidden crystal type, reinforced by ebonwood, and filled with unknown contents. Designed for Wildheart Sects, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin rapidly transmuting anything alive within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of lithic or organic resources.
-Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential for  turn raids - and excess prisoners - into an abundance of usable resources should not be underestimated. and  for a  Even by terratech standards, the technology behind this monolith is quite arcane, and is highly classified.</description>
+<ThingDef Name="ET_MidasTransmutationPylon" ParentName="BuildingBase" Abstract="True">
+    <description>A large monolith consisting of a golden crystal and reinforced by ebonwood. Designed by Wildheart tribes, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin transmuting both mechs and organics within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of valuable resources.
+Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential for  turn raids - and excess prisoners - into an abundance of usable resources should not be underestimated.
+\nThis pylon can only be activated once every 15 days.</description>
     <tickerType>Normal</tickerType>
     <size>(3,3)</size>
     <drawerType>RealtimeOnly</drawerType>
     <fillPercent>1</fillPercent>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/TransmutePylon/ET_TransmutePylon_Gold</texPath>
       <drawSize>(5,5)</drawSize>
       <addTopAltitudeBias>true</addTopAltitudeBias>
       <drawOffset>(0,0,0.3)</drawOffset>
@@ -29,8 +31,8 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
     <killedLeavings>
     </killedLeavings>
     <statBases>
-      <MaxHitPoints>1200</MaxHitPoints>
-      <Flammability>0.5</Flammability>
+      <MaxHitPoints>900</MaxHitPoints>
+      <Flammability>0.2</Flammability>
       <MeditationFocusStrength>1</MeditationFocusStrength>
     </statBases>
     <comps>
@@ -131,4 +133,5 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
       </li>
     </comps>
   </ThingDef>-->
+  
 </Defs>
