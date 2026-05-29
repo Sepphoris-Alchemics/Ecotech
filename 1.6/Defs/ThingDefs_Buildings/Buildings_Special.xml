@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<ThingDef Name="ET_MidasTransmutationPylon" ParentName="BuildingBase" Abstract="True">
+<!--<li Class="PipeSystem.CompProperties_Resource">
+  <pipeNet>ET_MidasNetwork</pipeNet>
+  <sustainer>SoundDef</sustainer>
+</li>-->
+
+<ThingDef ParentName="BuildingBase">
+    <defName>ET_MidasTransmutationPylon</defName>
+    <label>transmutation pylon</label>
     <description>A large monolith consisting of a golden crystal and reinforced by ebonwood. Designed by Wildheart tribes, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin transmuting both mechs and organics within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of valuable resources.
 Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential to turn raiders - and excess prisoners - into an abundance of usable resources should not be underestimated.
-\nThis pylon can only be activated once every 15 days.</description>
+\nThis pylon will transmuted ANYONE within it's radius - including your own. Additionally, those being transmuted will recognize what's happening, and likely not quiety accept their fate. Be careful!</description>
     <tickerType>Normal</tickerType>
-    <size>(3,3)</size>
+    <size>(1,1)</size>
     <drawerType>RealtimeOnly</drawerType>
     <fillPercent>1</fillPercent>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Building/TransmutePylon/ET_TransmutePylon_Gold</texPath>
-      <drawSize>(5,5)</drawSize>
+      <drawSize>(1.5,1.5)</drawSize>
       <addTopAltitudeBias>true</addTopAltitudeBias>
       <drawOffset>(0,0,0.3)</drawOffset>
       <shadowData>
@@ -20,6 +27,7 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
         <offset>(0, 0, -0.3)</offset>
       </shadowData>
     </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
     <building>
@@ -28,6 +36,9 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
       <claimable>false</claimable>
       <soundMeleeHitOverride>ObeliskDamaged</soundMeleeHitOverride>
     </building>
+    <placeWorkers>
+      <li>VEF.Buildings.PlaceWorker_CompCustomCauseHediff_AoE</li>
+    </placeWorkers>
     <killedLeavings>
     </killedLeavings>
     <statBases>
@@ -41,6 +52,59 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
         <focusTypes>
           <li>Natural</li>
         </focusTypes>
+      </li>
+      <!--<li Class="PipeSystem.CompProperties_ResourceTrader">
+        <pipeNet>ET_MidasNetwork</pipeNet>
+        <consumptionPerTick>1</consumptionPerTick>
+      </li>-->
+<!--<li Class="CompProperties_Power">
+  <transmitsPower>true</transmitsPower>
+  <compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
+  <basePowerConsumption>-1000</basePowerConsumption>
+</li>-->
+      <!--<li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.1</fuelConsumptionRate>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>-->
+      <!--<li Class="CompProperties_GiveHediffSeverity">
+        <hediff>ET_TotalAlchemizingInfection</hediff>
+        <range>6.9</range>
+        <severityPerSecond>1</severityPerSecond>
+        <drugExposure>false</drugExposure>
+        <allowMechs>true</allowMechs>
+      </li>-->
+      <!--<li Class="CompProperties_CauseHediff_AoE">
+        <hediff>ET_TotalAlchemizingInfection</hediff>
+        <range>6.9</range>
+        <part>torso</part>
+        <canTargetSelf>false</canTargetSelf>
+        <drawLines>true</drawLines>
+        <ignoreMechs>true</ignoreMechs>
+      </li>-->
+      <li Class="VEF.Buildings.CompProperties_CustomCauseHediff_AoE">
+        <hediff>ET_TotalAlchemizingInfection</hediff>
+        <range>6.9</range>
+        <allowHumanlike>true</allowHumanlike>
+        <allowInsects>true</allowInsects>
+        <allowDryads>true</allowDryads>
+        <allowAnimals>true</allowAnimals>
+        <allowMechanoids>true</allowMechanoids>
+        <allowEntities>true</allowEntities>
+        <startingSeverity>0.0111</startingSeverity>
+        <checkInterval>100</checkInterval>
+        <hediffDuration>120</hediffDuration>
+      </li>
+      <!--<li Class="CompProperties_Flickable"/>-->
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
       </li>
     </comps>
   </ThingDef>

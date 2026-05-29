@@ -251,9 +251,13 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
     <isBad>true</isBad>
     <tendable>false</tendable>
     <maxSeverity>1</maxSeverity>
+    <initialSeverity>0.001</initialSeverity>
     <alwaysShowSeverity>true</alwaysShowSeverity>
     <defaultLabelColor>(203,148,62)</defaultLabelColor>
     <comps>
+      <li Class="HediffCompProperties_SeverityPerSecond">
+        <severityPerSecondRange>0.0111</severityPerSecondRange>
+      </li>
       <li Class="Ecotech.HediffCompProperties_BodyPartTransformation">
         <transformSeverity>1</transformSeverity>
         <checkIntervalTicks>60</checkIntervalTicks>
@@ -299,6 +303,9 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
             </overrideDrops>
           </li>
         </bodyPartModifiers>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
       </li>
     </comps>
   </HediffDef>
