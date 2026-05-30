@@ -166,7 +166,14 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
     <alwaysShowSeverity>true</alwaysShowSeverity>
     <defaultLabelColor>(203,148,62)</defaultLabelColor>
     <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
+      </li>
       <li Class="Ecotech.HediffCompProperties_BodyPartTransformation">
+        <blockedByHediffs>
+          <li>ET_AlchemicInhibitor</li>
+        </blockedByHediffs>
+        <systemicTransformation>false</systemicTransformation>
         <transformSeverity>1</transformSeverity>
         <checkIntervalTicks>60</checkIntervalTicks>
         <sendLetter>true</sendLetter>
@@ -208,15 +215,15 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
           <li>
             <bodyPart>Heart</bodyPart>
             <severityMultiplier>0.15</severityMultiplier>
-            <yieldMultiplier>5.0</yieldMultiplier>
+            <yieldMultiplier>1.0</yieldMultiplier>
             <sendLetter>true</sendLetter>
             <overrideChance>1</overrideChance>
             <overrideDrops>
               <li>
-                <thingDef>ComponentSpacer</thingDef>
+                <thingDef>ET_GoldenHeart</thingDef>
                   <countRange>
-                    <min>7</min>
-                    <max>7</max>
+                    <min>1</min>
+                    <max>1</max>
                   </countRange>
                 <chance>1</chance>
               </li>
@@ -252,8 +259,14 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
     <tendable>false</tendable>
     <maxSeverity>1</maxSeverity>
     <initialSeverity>0.001</initialSeverity>
-    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <alwaysShowSeverity>false</alwaysShowSeverity>
     <defaultLabelColor>(203,148,62)</defaultLabelColor>
+    <stages>
+      <li>
+        <label>transmuting</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>2</severityPerDay>

@@ -27,10 +27,14 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
         <offset>(0, 0, -0.3)</offset>
       </shadowData>
     </graphicData>
+    <drawGUIOverlay>True</drawGUIOverlay>
     <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
+    <specialDisplayRadius>7</specialDisplayRadius>
     <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <ai_combatDangerous>true</ai_combatDangerous>
       <paintable>false</paintable>
       <deconstructible>false</deconstructible>
       <claimable>false</claimable>
@@ -42,7 +46,7 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
     <killedLeavings>
     </killedLeavings>
     <statBases>
-      <MaxHitPoints>900</MaxHitPoints>
+      <MaxHitPoints>300</MaxHitPoints>
       <Flammability>0.2</Flammability>
       <MeditationFocusStrength>1</MeditationFocusStrength>
     </statBases>
@@ -53,18 +57,32 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
         <canTargetSelf>false</canTargetSelf>
         <drawLines>true</drawLines>
         <ignoreMechs>true</ignoreMechs>
-      </li>    
-      <li Class="CompProperties_MeditationFocus">
+      </li>
+      <li Class="CompProperties_Refuelable"> <!--Same life duration-->
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>3</fuelConsumptionRate>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelLabel>Stability percentage left</fuelLabel>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelMultiplier>100</fuelMultiplier>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Sunsap</li>
+          </thingDefs>
+        </fuelFilter>
+      </li> 
+      <!--<li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
         <focusTypes>
           <li>Natural</li>
         </focusTypes>
-      </li>
+      </li>-->
       <li Class="CompProperties_MoteEmitter">
     <mote>Mote_SparkThrown</mote>
-    <emissionInterval>45</emissionInterval>
-    <offsetMin>(-0.45, 0, -0.9)</offsetMin>
-    <offsetMax>(0.45, 0, 0.9)</offsetMax>
+    <emissionInterval>120</emissionInterval>
+    <offsetMin>(-0.45, 0, -0.45)</offsetMin>
+    <offsetMax>(0.45, 0, 0.12)</offsetMax>
     <ticksSinceLastEmittedMaxOffset>60</ticksSinceLastEmittedMaxOffset>
   </li>
       <!--<li Class="PipeSystem.CompProperties_ResourceTrader">
@@ -113,7 +131,6 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
         <glowRadius>6</glowRadius>
         <glowColor>(255,190,60,0)</glowColor>
       </li>
-      <specialDisplayRadius>6.9</specialDisplayRadius>
     </comps>
   </ThingDef>
 

@@ -106,12 +106,17 @@ namespace Ecotech
          */
         public bool sendLetter = true;
 
-        /*
-         * Translation keys.
-         */
         public string letterLabelKey;
 
         public string letterTextKey;
+
+        public bool sendLetterForPlayerFaction = true;
+
+        public bool sendLetterForPrisonersOfColony = true;
+
+        public bool sendLetterForHostiles = false;
+
+        public bool sendLetterForOthers = false;
 
         /*
          * Future-proofing.
@@ -354,7 +359,8 @@ namespace Ecotech
             /*
              * Optional notification.
              */
-            if (Props.sendLetter)
+            if (Props.sendLetter &&
+    ShouldSendTransmutationLetter())
             {
                 SendWholeBodyLetter();
             }
@@ -415,6 +421,37 @@ namespace Ecotech
                 LetterDefOf.NegativeEvent,
                 Pawn
             );
+        }
+
+        private bool ShouldSendTransmutationLetter()
+        {
+            if (Pawn == null)
+                return false;
+
+            /*
+             * Prisoners should be checked before hostility,
+             * because prisoners can retain their original faction.
+             */
+            if (Pawn.IsPrisonerOfColony)
+                return Props.sendLetterForPrisonersOfColony;
+
+            /*
+             * Includes colonists and player-faction animals/mechs
+             * where applicable.
+             */
+            if (Pawn.Faction == Faction.OfPlayer)
+                return Props.sendLetterForPlayerFaction;
+
+            /*
+             * Raiders/enemies.
+             */
+            if (Pawn.HostileTo(Faction.OfPlayer))
+                return Props.sendLetterForHostiles;
+
+            /*
+             * Neutral/allied visitors, wild animals, and anything else.
+             */
+            return Props.sendLetterForOthers;
         }
 
         private BodyPartTransformationModifier
@@ -492,7 +529,8 @@ namespace Ecotech
                     ? modifier.sendLetter
                     : Props.sendLetter;
 
-            if (shouldSendLetter)
+            if (shouldSendLetter &&
+    ShouldSendTransmutationLetter())
             {
                 SendLetter(
                     part,
