@@ -471,4 +471,76 @@ Final results (per eye):
     <addsHediff>ET_BiothiteNerveDampener</addsHediff>
   </RecipeDef>
 
+<!--===== alchemic inhibitor =====-->
+
+  <ThingDef ParentName="ET_BodyPartLithicBase">
+    <defName>ET_AlchemicInhibitor</defName>
+    <label>midas wardlimb</label>
+    <description>A highly specialized procedure that prevents one's body from transmuting in any way. This implant forces any transmutation to be focused on 'dummy' flesh that the body discards and quickly regenerates.
+One must replace an entire limb of their choice for this process, as the transmutation requires a large space for the dummy flesh. The limb is still operational, however, albeit not as functional as a natural one.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>ET_InstallAlchemicInhibitor</RecipeDef>
+    </descriptionHyperlinks>
+    <statBases>
+      <MarketValue>800</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ET_AlchemicInhibitor</defName>
+    <label>midas wardlimb</label>
+    <labelNoun>a midas wardlimb</labelNoun>
+    <description>A midas wardlimb. Prevents one from transmuting into metals, making them immune to Midas-Class weaponry or structures.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_AlchemicInhibitor</ThingDef>
+      <HediffDef>ET_AlchemizingInfection</HediffDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>ET_AlchemicInhibitor</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.8</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+	    <hungerRateFactor>0.2</hungerRateFactor>
+		    <makeImmuneTo>
+          <li>ET_AlchemizingInfection</li>
+          <li>ET_TotalAlchemizingInfection</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallAlchemicInhibitor</defName>
+    <label>install midas wardlimb</label>
+    <description>Install a midas wardlimb.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_AlchemicInhibitor</ThingDef>
+      <HediffDef>ET_AlchemicInhibitor</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing midas wardlimb.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_AlchemicInhibitor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_AlchemicInhibitor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_AlchemicInhibitor</addsHediff>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+  </RecipeDef>
+
 </Defs>

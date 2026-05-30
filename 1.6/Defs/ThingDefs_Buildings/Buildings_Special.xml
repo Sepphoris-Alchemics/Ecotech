@@ -47,12 +47,26 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
       <MeditationFocusStrength>1</MeditationFocusStrength>
     </statBases>
     <comps>
+      <li Class="CompProperties_CauseHediff_AoE">
+        <hediff>ET_TotalAlchemizingInfection</hediff>
+        <range>6.9</range>
+        <canTargetSelf>false</canTargetSelf>
+        <drawLines>true</drawLines>
+        <ignoreMechs>true</ignoreMechs>
+      </li>    
       <li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
         <focusTypes>
           <li>Natural</li>
         </focusTypes>
       </li>
+      <li Class="CompProperties_MoteEmitter">
+    <mote>Mote_SparkThrown</mote>
+    <emissionInterval>45</emissionInterval>
+    <offsetMin>(-0.45, 0, -0.9)</offsetMin>
+    <offsetMax>(0.45, 0, 0.9)</offsetMax>
+    <ticksSinceLastEmittedMaxOffset>60</ticksSinceLastEmittedMaxOffset>
+  </li>
       <!--<li Class="PipeSystem.CompProperties_ResourceTrader">
         <pipeNet>ET_MidasNetwork</pipeNet>
         <consumptionPerTick>1</consumptionPerTick>
@@ -70,25 +84,18 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
             <li>Gold</li>
           </thingDefs>
         </fuelFilter>
-        <initialFuelPercent>1</initialFuelPercent>
+        <initialFuelPercent>0</initialFuelPercent>
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
       </li>-->
+<!--The comps below don't work with the hediff properly-->
       <!--<li Class="CompProperties_GiveHediffSeverity">
         <hediff>ET_TotalAlchemizingInfection</hediff>
         <range>6.9</range>
-        <severityPerSecond>1</severityPerSecond>
+        <severityPerSecond>0.1</severityPerSecond>
         <drugExposure>false</drugExposure>
         <allowMechs>true</allowMechs>
       </li>-->
-      <!--<li Class="CompProperties_CauseHediff_AoE">
-        <hediff>ET_TotalAlchemizingInfection</hediff>
-        <range>6.9</range>
-        <part>torso</part>
-        <canTargetSelf>false</canTargetSelf>
-        <drawLines>true</drawLines>
-        <ignoreMechs>true</ignoreMechs>
-      </li>-->
-      <li Class="VEF.Buildings.CompProperties_CustomCauseHediff_AoE">
+      <!--<li Class="VEF.Buildings.CompProperties_CustomCauseHediff_AoE">
         <hediff>ET_TotalAlchemizingInfection</hediff>
         <range>6.9</range>
         <allowHumanlike>true</allowHumanlike>
@@ -98,14 +105,15 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
         <allowMechanoids>true</allowMechanoids>
         <allowEntities>true</allowEntities>
         <startingSeverity>0.0111</startingSeverity>
-        <checkInterval>100</checkInterval>
-        <hediffDuration>120</hediffDuration>
-      </li>
+        <checkInterval>305</checkInterval>
+        <hediffDuration>300</hediffDuration>
+      </li>-->
       <!--<li Class="CompProperties_Flickable"/>-->
       <li Class="CompProperties_Glower">
-        <glowRadius>10</glowRadius>
-        <glowColor>(252,187,113,0)</glowColor>
+        <glowRadius>6</glowRadius>
+        <glowColor>(255,190,60,0)</glowColor>
       </li>
+      <specialDisplayRadius>6.9</specialDisplayRadius>
     </comps>
   </ThingDef>
 
