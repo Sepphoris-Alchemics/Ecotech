@@ -48,7 +48,7 @@
 			<effectWorking>Sculpt</effectWorking>
 			<unfinishedThingDef IsNull="True" />
 			<recipeUsers>
-				<li>ET_Terraforge</li>
+				<li>ET_PrimaTerraforge</li>
 			</recipeUsers>
 			<workAmount>15000</workAmount>
 			<skillRequirements>
@@ -161,7 +161,7 @@ Renewable | Unable to be evolved or infused</inspectString>
 			<effectWorking>Sculpt</effectWorking>
 			<unfinishedThingDef IsNull="True" />
 			<recipeUsers>
-				<li>ET_Terraforge</li>
+				<li>ET_PrimaTerraforge</li>
 			</recipeUsers>
 			<workAmount>10000</workAmount>
 			<skillRequirements>
@@ -378,7 +378,7 @@ Upgradable | Renewable | ??? | ???</inspectString>
 			<effectWorking>Sculpt</effectWorking>
 			<unfinishedThingDef IsNull="True" />
 			<recipeUsers>
-				<li>ET_Terraforge</li>
+				<li>ET_PrimaTerraforge</li>
 			</recipeUsers>
 			<workAmount>20000</workAmount>
 			<skillRequirements>

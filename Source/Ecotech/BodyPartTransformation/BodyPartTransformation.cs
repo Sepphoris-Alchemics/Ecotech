@@ -11,9 +11,6 @@ using UnityEngine;
 namespace Ecotech
 
 {
-    /*
-     * Standard drop entry.
-     */
     public class BodyPartTransformationDrop
     {
         public ThingDef thingDef;
@@ -23,46 +20,18 @@ namespace Ecotech
 
         public float chance = 1f;
     }
-
-    /*
-     * Per-body-part modifiers.
-     */
     public class BodyPartTransformationModifier
     {
         public BodyPartDef bodyPart;
-
-        /*
-         * Severity gain multiplier.
-         */
         public float severityMultiplier = 1f;
-
-        /*
-         * Material yield multiplier.
-         */
         public float yieldMultiplier = 1f;
-
-        /*
-         * Optional letter override.
-         */
         public bool sendLetter = true;
-
-        /*
-         * Chance to replace normal drops
-         * with override drops.
-         */
         public float overrideChance = 0f;
 
-        /*
-         * Special replacement drops.
-         */
         public List<BodyPartTransformationDrop>
             overrideDrops =
                 new List<BodyPartTransformationDrop>();
     }
-
-    /*
-     * Hediff properties.
-     */
     public class HediffCompProperties_BodyPartTransformation
         : HediffCompProperties
     {
@@ -74,36 +43,15 @@ namespace Ecotech
             bodyPartModifiers =
                 new List<BodyPartTransformationModifier>();
 
-        /*
-         * Hediffs that prevent this transmutation
-         * from executing.
-         *
-         * Example:
-         * ET_MidasWardLimb
-         */
         public List<HediffDef> blockedByHediffs =
             new List<HediffDef>();
 
-        /*
-         * Severity required before transformation.
-         */
         public float transformSeverity = 1f;
 
-        /*
-         * If true, this Hediff transforms the
-         * entire pawn instead of a specific body part.
-         */
         public bool systemicTransformation = false;
 
-        /*
-         * Tick interval.
-         * 60 = once per second.
-         */
         public int checkIntervalTicks = 60;
 
-        /*
-         * Default fallback letter behavior.
-         */
         public bool sendLetter = true;
 
         public string letterLabelKey;
@@ -117,15 +65,9 @@ namespace Ecotech
         public bool sendLetterForHostiles = false;
 
         public bool sendLetterForOthers = false;
-
-        /*
-         * Future-proofing.
-         */
         public bool allowArtificialParts = false;
+        //Just in case I want to take over artificial parts later, since Midas Touch would transmute metals.
 
-        /*
-         * Used for total-body transmutation.
-         */
         public bool destroyCorpse = false;
 
         public HediffCompProperties_BodyPartTransformation()
@@ -135,9 +77,6 @@ namespace Ecotech
         }
     }
 
-    /*
-     * Main comp.
-     */
     public class HediffComp_BodyPartTransformation
         : HediffComp
     {
@@ -177,41 +116,18 @@ namespace Ecotech
             if (Pawn == null)
                 return;
 
-            /*
-             * Absolute safety check.
-             *
-             * This must happen before:
-             * - severity checks
-             * - systemic transformation
-             * - localized transformation
-             * - drop spawning
-             *
-             * If the pawn has a blocker Hediff,
-             * remove this transmutation Hediff and stop.
-             */
             if (IsBlockedByProtectionHediff())
             {
                 Pawn.health.RemoveHediff(parent);
                 return;
             }
-
-            /*
-             * Whole-body systemic Hediff.
-             */
             if (Props.systemicTransformation)
             {
-                /*
-                 * Performance-safe checks.
-                 */
                 if (!Pawn.IsHashIntervalTick(
                     Props.checkIntervalTicks))
                 {
                     return;
                 }
-
-                /*
-                 * Final threshold.
-                 */
                 if (parent.Severity <
                     Props.transformSeverity)
                 {
@@ -223,52 +139,33 @@ namespace Ecotech
                 return;
             }
 
-            /*
-             * Existing localized logic.
-             */
             BodyPartRecord part =
                 parent.Part;
 
             if (part == null)
                 return;
 
-            /*
-             * Already gone.
-             */
             if (Pawn.health.hediffSet
                 .PartIsMissing(part))
             {
                 return;
             }
 
-            /*
-             * Modifier lookup.
-             */
             BodyPartTransformationModifier
                 modifier =
                     GetModifierForPart(part);
-
-            /*
-             * Severity scaling.
-             */
             if (modifier != null)
             {
                 severityAdjustment *=
                     modifier.severityMultiplier;
             }
 
-            /*
-             * Performance-safe checks.
-             */
             if (!Pawn.IsHashIntervalTick(
                 Props.checkIntervalTicks))
             {
                 return;
             }
 
-            /*
-             * Final threshold.
-             */
             if (parent.Severity <
                 Props.transformSeverity)
             {
@@ -280,11 +177,6 @@ namespace Ecotech
                 modifier
             );
         }
-
-        /*
-         * Returns true if the pawn has any Hediff
-         * that should block this transmutation.
-         */
         private bool IsBlockedByProtectionHediff()
         {
             if (Props.blockedByHediffs == null)
@@ -308,12 +200,7 @@ namespace Ecotech
                 if (blocker == null)
                     continue;
 
-                /*
-                 * GetFirstHediffOfDef is used here because
-                 * it is already used by RimWorld's AoE Hediff
-                 * comp pattern and is appropriate for checking
-                 * whether a pawn currently has a HediffDef.
-                 */
+                //To-do: look into a better way for hediff handling
                 if (Pawn.health.hediffSet
                     .GetFirstHediffOfDef(blocker) != null)
                 {
@@ -324,9 +211,6 @@ namespace Ecotech
             return false;
         }
 
-        /*
-         * Whole-body transmutation.
-         */
         private void TransformWholeBody()
         {
             if (transformed)
@@ -342,9 +226,6 @@ namespace Ecotech
             IntVec3 position =
                 Pawn.PositionHeld;
 
-            /*
-             * Spawn configured drops.
-             */
             if (map != null &&
                 position.IsValid)
             {
@@ -356,23 +237,14 @@ namespace Ecotech
                 );
             }
 
-            /*
-             * Optional notification.
-             */
             if (Props.sendLetter &&
     ShouldSendTransmutationLetter())
             {
                 SendWholeBodyLetter();
             }
 
-            /*
-             * Kill pawn safely.
-             */
             Pawn.Kill(null);
 
-            /*
-             * Remove corpse entirely.
-             */
             if (Props.destroyCorpse)
             {
                 Corpse corpse =
@@ -386,9 +258,6 @@ namespace Ecotech
             }
         }
 
-        /*
-         * Whole-body notification.
-         */
         private void SendWholeBodyLetter()
         {
             if (string.IsNullOrEmpty(
@@ -428,29 +297,15 @@ namespace Ecotech
             if (Pawn == null)
                 return false;
 
-            /*
-             * Prisoners should be checked before hostility,
-             * because prisoners can retain their original faction.
-             */
             if (Pawn.IsPrisonerOfColony)
                 return Props.sendLetterForPrisonersOfColony;
 
-            /*
-             * Includes colonists and player-faction animals/mechs
-             * where applicable.
-             */
             if (Pawn.Faction == Faction.OfPlayer)
                 return Props.sendLetterForPlayerFaction;
 
-            /*
-             * Raiders/enemies.
-             */
             if (Pawn.HostileTo(Faction.OfPlayer))
                 return Props.sendLetterForHostiles;
 
-            /*
-             * Neutral/allied visitors, wild animals, and anything else.
-             */
             return Props.sendLetterForOthers;
         }
 
@@ -508,9 +363,6 @@ namespace Ecotech
             IntVec3 position =
                 Pawn.PositionHeld;
 
-            /*
-             * Spawn drops BEFORE destruction.
-             */
             if (map != null &&
                 position.IsValid)
             {
@@ -521,9 +373,6 @@ namespace Ecotech
                 );
             }
 
-            /*
-             * Optional letter.
-             */
             bool shouldSendLetter =
                 modifier != null
                     ? modifier.sendLetter
@@ -539,9 +388,6 @@ namespace Ecotech
                 );
             }
 
-            /*
-             * Remove body part.
-             */
             Pawn.health.AddHediff(
                 HediffDefOf.MissingBodyPart,
                 part
@@ -549,9 +395,6 @@ namespace Ecotech
 
             Pawn.health.RemoveHediff(parent);
 
-            /*
-             * Optional corpse cleanup.
-             */
             if (Props.destroyCorpse)
             {
                 Corpse corpse =
@@ -572,9 +415,6 @@ namespace Ecotech
         {
             bool usedOverride = false;
 
-            /*
-             * Try override drops first.
-             */
             if (modifier != null &&
                 modifier.overrideDrops != null &&
                 modifier.overrideDrops.Count > 0)
@@ -597,9 +437,6 @@ namespace Ecotech
                 }
             }
 
-            /*
-             * Skip normal drops if override succeeded.
-             */
             if (usedOverride)
                 return;
 

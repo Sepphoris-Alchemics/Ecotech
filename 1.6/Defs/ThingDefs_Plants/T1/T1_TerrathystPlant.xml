@@ -44,7 +44,7 @@ Tier 4 surge seeds: 20
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_LithicForgeTierOne</transformedThing>
+        <transformedThing>ET_TerrathystCrucible</transformedThing>
       </li>
       <li Class="CompProperties_InspectString">
         <inspectString>Growing into: Terrathyst Crucible</inspectString>

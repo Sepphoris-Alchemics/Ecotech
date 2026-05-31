@@ -35,7 +35,7 @@
 <Defs>
 
   <ThingDef ParentName="BenchBase">
-    <defName>ET_Terraforge</defName>
+    <defName>ET_PrimaTerraforge</defName>
     <label>Prima Terraforge</label>
     <description>A grown structure that channels natural energies of the world, allowing you to shape existing Ecotech, or grow new Ecotech formations.
 Some Ecotech creations may have features that simply make the product unusable, or even dangerous, to most races (generally to ward off undeserving colonies). The Terraforge exists to refine that Ecotech into a usable state - not by destruction, by rather by letting the creation know that it is in safe hands.</description>
@@ -97,7 +97,7 @@ Some Ecotech creations may have features that simply make the product unusable, 
       <li>ET_SapTreeSeedRecipe</li>
       <li>ET_SentinelTreeSeedRecipe</li>
       <li>ET_SapFilterSeedRecipe</li>
-      <li>ET_TerraforgeSeedRecipe</li>
+      <li>ET_PrimaTerraforgeSeedRecipe</li>
       <li>ET_PrimaBrightsapLampSeedRecipe</li>
       <li>ET_PrimaBrightsapColumnSeedRecipe</li>
       <li>ET_SmallTerravatSeedRecipe</li>

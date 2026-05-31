@@ -65,7 +65,7 @@
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>ET_Terraforge</li>
+      <li>ET_PrimaTerraforge</li>
     </fixedBillGiverDefs>
     <verb>shape seed at</verb>
     <gerund>shaping seed at</gerund>
@@ -82,7 +82,7 @@
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>ET_Terraforge</li>
+      <li>ET_PrimaTerraforge</li>
     </fixedBillGiverDefs>
     <verb>shape seed at</verb>
     <gerund>shaping seed at</gerund>
@@ -100,7 +100,7 @@
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>ET_LithicForgeTierOne</li>
+      <li>ET_TerrathystCrucible</li>
       <li>ET_LithicForgeTierTwo</li>
     </fixedBillGiverDefs>
     <verb>form crystal cluster at</verb>

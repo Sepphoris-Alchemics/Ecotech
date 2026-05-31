@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <RecipeDef>
-    <defName>ET_TerraforgeSeedRecipe</defName>
+    <defName>ET_PrimaTerraforgeSeedRecipe</defName>
     <label>shape channeling seed (terraforge) </label>
     <description>Shape a seed that will quickly grow into a Terraforge. The terraforge is crucial in utilizing and advancing Ecotech.</description>
     <jobString>shaping a sap terraforge seed.</jobString>

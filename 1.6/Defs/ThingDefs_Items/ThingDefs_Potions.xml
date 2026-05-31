@@ -70,7 +70,7 @@ This means that the potions can't be administered like normal drugs or medical o
       <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <recipeUsers>
-        <li>ET_Terraforge</li>
+        <li>ET_PrimaTerraforge</li>
       </recipeUsers>
     </recipeMaker>
   </ThingDef>

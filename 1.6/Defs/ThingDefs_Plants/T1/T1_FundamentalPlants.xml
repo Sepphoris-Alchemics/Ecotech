@@ -44,7 +44,7 @@
   </ThingDef>
 
   <ThingDef ParentName="ET_FundamentalPlantBase">
-    <defName>ET_TerraforgePlant</defName>
+    <defName>ET_PrimaTerraforgePlant</defName>
     <label>Terraforge Sprout</label>
     <description>A quickly growing sprout that will shape itself into a Terraforge. Terraforges are critical in utilizing Ecotech.</description>
     <graphicData>
@@ -61,7 +61,7 @@
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
         <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
-        <transformedThing>ET_Terraforge</transformedThing>
+        <transformedThing>ET_PrimaTerraforge</transformedThing>
         <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
       </li>
     <li Class="CompProperties_InspectString">

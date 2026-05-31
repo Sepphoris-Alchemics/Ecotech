@@ -45,7 +45,7 @@
     <costList IsNull="True" />
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_TerraforgePlant</plantDefToSpawn>
+        <plantDefToSpawn>ET_PrimaTerraforgePlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>

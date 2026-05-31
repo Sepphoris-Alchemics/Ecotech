@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
+<!--
+
+Tier 1: Terrathyst Crucible:
+-Creates only basic and genesite items.
+-Creates normal weapons and items.
+-High crafting speed
+-Low stone extraction output
+
+Tier 1: Terrathyst Charger:
+-Charges tier 1 and 2 gear at a low rate
+-Evolves lithic weapons
+-1 item capacity
+
+Tier 2: Chronite Forge:
+-Creates Tier 2 gear
+-Normal crafting speed
+-Better stone extraction output
+
+-->
+
 <!--Biolith Cultivator (name WIP; may be Crucible as well)
   The Cultivator takes saps and terrathyst cores, and creates crystals that are imbued with the aspects of saps.
   These item crystals are then grown to create larger, permanent structure crystals that act as facilities to create new weapons, structures, and items.
@@ -13,9 +34,9 @@
 
 <Defs>
   <ThingDef ParentName="BenchBase">
-    <defName>ET_TerrathystCrucible</defName> <!--Tier 2: Chronite Forge-->
-    <label>terrathyst crucible</label>
-    <description>A crystal chamber that has a pool of self-renewing shocksap. This structure allows a tribe to shape and charge smaller lithic items and weapons.
+    <defName>ET_ChroniteForge</defName> <!--Tier 2: Chronite Forge-->
+    <label>chronite forge</label>
+    <description>A crystal chamber made out of precious chronite. that has a pool of self-renewing shocksap. This structure allows a tribe to shape and charge smaller lithic items and weapons.
 This crucible holds enough sap to form simpler lithic weapons. However, it cannot support upgrading them.
 While this crucible is a good starting point, any tribe that wishes to survive solely on a lithic lifestyle will need to eventually create a prismite well.</description>
     <thingClass>Building_WorkTable</thingClass>

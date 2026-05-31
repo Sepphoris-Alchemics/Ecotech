@@ -51,7 +51,7 @@
         <linkableFacilities>
           <li>ET_TerravatBasic</li>
           <li>ET_GlowsapBasinResearch</li>
-          <li>ET_Terraforge</li>
+          <li>ET_PrimaTerraforge</li>
         </linkableFacilities>
       </li>
       <li Class="CompProperties_ReportWorkSpeed">

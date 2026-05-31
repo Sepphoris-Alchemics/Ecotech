@@ -481,6 +481,10 @@ One must replace an entire limb of their choice for this process, as the transmu
     <descriptionHyperlinks>
       <RecipeDef>ET_InstallAlchemicInhibitor</RecipeDef>
     </descriptionHyperlinks>
+    <costList>
+      <ET_RawVivium>20</RawVivium>
+      <ET_TerrathystSmall>15</ET_TerrathystSmall>
+    </costList>
     <statBases>
       <MarketValue>800</MarketValue>
     </statBases>
@@ -490,7 +494,8 @@ One must replace an entire limb of their choice for this process, as the transmu
     <defName>ET_AlchemicInhibitor</defName>
     <label>midas wardlimb</label>
     <labelNoun>a midas wardlimb</labelNoun>
-    <description>A midas wardlimb. Prevents one from transmuting into metals, making them immune to Midas-Class weaponry or structures.</description>
+    <description>A midas wardlimb. Prevents someone from transmuting into metals, making them immune to Midas-Class weaponry and structures.
+The limb itself is slightly less effective than a natural one, but is better than a prostehtic. And a limb entirely encased in metal is also pretty... well, you know.</description>
     <descriptionHyperlinks>
       <ThingDef>ET_AlchemicInhibitor</ThingDef>
       <HediffDef>ET_AlchemizingInfection</HediffDef>
@@ -514,7 +519,7 @@ One must replace an entire limb of their choice for this process, as the transmu
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>ET_InstallAlchemicInhibitor</defName>
-    <label>install midas wardlimb</label>
+    <label>install midas wardlimb (arm)</label>
     <description>Install a midas wardlimb.</description>
     <descriptionHyperlinks>
       <ThingDef>ET_AlchemicInhibitor</ThingDef>
@@ -538,6 +543,37 @@ One must replace an entire limb of their choice for this process, as the transmu
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
       <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_AlchemicInhibitor</addsHediff>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+  </RecipeDef>
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallAlchemicInhibitor</defName>
+    <label>install midas wardlimb (leg)</label>
+    <description>Install a midas wardlimb.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_AlchemicInhibitor</ThingDef>
+      <HediffDef>ET_AlchemicInhibitor</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing midas wardlimb.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_AlchemicInhibitor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_AlchemicInhibitor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
     </appliedOnFixedBodyParts>
     <addsHediff>ET_AlchemicInhibitor</addsHediff>
     <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>

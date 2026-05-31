@@ -62,7 +62,7 @@
 			<effectWorking>Sculpt</effectWorking>
 			<unfinishedThingDef IsNull="True" />
 			<recipeUsers>
-				<li>ET_Terraforge</li>
+				<li>ET_PrimaTerraforge</li>
 			</recipeUsers>
 			<workAmount>10000</workAmount>
 			<skillRequirements>

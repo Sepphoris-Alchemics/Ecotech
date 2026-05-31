@@ -3,7 +3,7 @@
 
 <!--
 
-This test hediff allows a pawn to drop certain tiems on death. This is designed for Bloomwood and Midas conditions.
+This test hediff allows a pawn to drop certain items on death. This is designed for Bloomwood and Midas conditions.
 <enablePeriodicDrops>: Allows items to drop while the pawn is alive. Set to true or false.
 <periodicDropInterval>: How often the items will spawn. This is based on ticks.
 <drops>: where items, alongside the chances, amount, and hediff severity, is defined.
@@ -177,6 +177,10 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
         <transformSeverity>1</transformSeverity>
         <checkIntervalTicks>60</checkIntervalTicks>
         <sendLetter>true</sendLetter>
+        <sendLetterForPlayerFaction>true</sendLetterForPlayerFaction>
+        <sendLetterForPrisonersOfColony>true</sendLetterForPrisonersOfColony>
+        <sendLetterForHostiles>false</sendLetterForHostiles>
+        <sendLetterForOthers>false</sendLetterForOthers>
         <letterLabelKey>ET_LetterLabel_BodyPartTransformed</letterLabelKey>
         <letterTextKey>ET_LetterText_BodyPartTransformed</letterTextKey>
         <drops>

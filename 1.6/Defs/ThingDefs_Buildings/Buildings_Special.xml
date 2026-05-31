@@ -9,16 +9,16 @@
 <ThingDef ParentName="BuildingBase">
     <defName>ET_MidasTransmutationPylon</defName>
     <label>transmutation pylon</label>
-    <description>A large monolith consisting of a golden crystal and reinforced by ebonwood. Designed by Wildheart tribes, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin transmuting both mechs and organics within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of valuable resources.
+    <description>A large monolith consisting of a vivium crystal and reinforced by ebonwood. Designed by Wildheart tribes, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin transmuting organics within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of valuable resources.
 Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential to turn raiders - and excess prisoners - into an abundance of usable resources should not be underestimated.
-\nThis pylon will transmuted ANYONE within it's radius - including your own. Additionally, those being transmuted will recognize what's happening, and likely not quiety accept their fate. Be careful!</description>
+\nThis pylon will transmute ANYONE within it's radius - including your own. Therefore, it is EXTREMELY suggested to outfit EVERY colonist you have with a Vivium Wardlimb before establishing one of these pylons.</description>
     <tickerType>Normal</tickerType>
     <size>(1,1)</size>
     <drawerType>RealtimeOnly</drawerType>
     <fillPercent>1</fillPercent>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Things/Building/TransmutePylon/ET_TransmutePylon_Gold</texPath>
+      <texPath>Things/Building/TransmutePylon/ET_TransmutePylon_Vivium</texPath>
       <drawSize>(1.5,1.5)</drawSize>
       <addTopAltitudeBias>true</addTopAltitudeBias>
       <drawOffset>(0,0,0.3)</drawOffset>
@@ -68,7 +68,7 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
         <fuelMultiplier>100</fuelMultiplier>
         <fuelFilter>
           <thingDefs>
-            <li>ET_Sunsap</li>
+            <li>ET_Shocksap</li>
           </thingDefs>
         </fuelFilter>
       </li> 
