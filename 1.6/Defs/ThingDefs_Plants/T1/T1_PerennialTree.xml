@@ -29,7 +29,7 @@ All weapons come from this Periwood heart, requiring no other ingredients. Howev
     <neverMultiSelect>false</neverMultiSelect>
     <canScatterOver>false</canScatterOver>
     <killedLeavings>
-      <ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+      <ET_PeriwoodHeart>1</ET_PeriwoodHeart>
     </killedLeavings>
     <plant>
       <pollution>Any</pollution>

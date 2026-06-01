@@ -161,7 +161,7 @@ Duration: 2 days</description>
                 <amount>1</amount>
               </li>
               <li>
-                <thingDef>ET_TierTwoWeaponHeart</thingDef>
+                <thingDef>ET_PeriwoodHeart</thingDef>
                 <amount>1</amount>
               </li>
             </ingredientSets>

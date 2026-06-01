@@ -41,7 +41,7 @@ Tier 4 surge seeds: 20
       <showInFrozenWater>true</showInFrozenWater>
       <growMinGlow>0</growMinGlow>
       <harvestWork>600</harvestWork>
-      <harvestedThingDef>ET_TierOneCrystal</harvestedThingDef>
+      <harvestedThingDef>ET_Terrathyst</harvestedThingDef>
       <burnedThingDef IsNull="True" />
       <harvestYield>8</harvestYield>
       <harvestMinGrowth>0.8</harvestMinGrowth>
@@ -153,65 +153,65 @@ These smaller growths can grow on any fertile terrain, though larger growths req
           <li>
             <weight>1</weight>
             <things>
-              <ET_TierOneCrystal>4</ET_TierOneCrystal>
+              <ET_Terrathyst>4</ET_Terrathyst>
             </things>
           </li>
           <li>
             <weight>1</weight>
             <things>
-              <ET_TierOneCrystal>2</ET_TierOneCrystal>
+              <ET_Terrathyst>2</ET_Terrathyst>
             </things>
           </li>
           <li>
             <weight>0.8</weight>
             <things>
-              <ET_TierOneCrystal>8</ET_TierOneCrystal>
+              <ET_Terrathyst>8</ET_Terrathyst>
             </things>
           </li>
           <li>
             <weight>0.6</weight>
             <things>
-              <ET_TierOneCrystal>12</ET_TierOneCrystal>
+              <ET_Terrathyst>12</ET_Terrathyst>
             </things>
           </li>
           <li>
             <weight>0.4</weight>
             <things>
-              <ET_TierOneCrystal>16</ET_TierOneCrystal>
+              <ET_Terrathyst>16</ET_Terrathyst>
             </things>
           </li>
           <li>
             <weight>0.2</weight>
             <things>
-              <ET_TierOneCrystal>20</ET_TierOneCrystal>
+              <ET_Terrathyst>20</ET_Terrathyst>
             </things>
           </li>
           <!--Prismite additions-->
           <li>
             <weight>0.6</weight>
             <things>
-              <ET_TierOneCrystal>4</ET_TierOneCrystal>
+              <ET_Terrathyst>4</ET_Terrathyst>
               <ET_TierTwoCrystal>2</ET_TierTwoCrystal>
             </things>
           </li>
           <li>
             <weight>0.4</weight>
             <things>
-              <ET_TierOneCrystal>6</ET_TierOneCrystal>
+              <ET_Terrathyst>6</ET_Terrathyst>
               <ET_TierTwoCrystal>4</ET_TierTwoCrystal>
             </things>
           </li>
           <li>
             <weight>0.2</weight>
             <things>
-              <ET_TierOneCrystal>8</ET_TierOneCrystal>
+              <ET_Terrathyst>8</ET_Terrathyst>
               <ET_TierTwoCrystal>6</ET_TierTwoCrystal>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
-              <ET_TierOneCrystal>10</ET_TierOneCrystal>
+              <ET_Terrathyst>10</ET_Terrathyst>
               <ET_TierTwoCrystal>8</ET_TierTwoCrystal>
             </things>
           </li>
@@ -219,35 +219,35 @@ These smaller growths can grow on any fertile terrain, though larger growths req
           <li>
             <weight>0.2</weight>
             <things>
-              <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+              <ET_TerrathystCore>1</ET_TerrathystCore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
-              <ET_TierOneCrystal>4</ET_TierOneCrystal>
-              <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+              <ET_Terrathyst>4</ET_Terrathyst>
+              <ET_TerrathystCore>1</ET_TerrathystCore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
-              <ET_TierOneCrystal>6</ET_TierOneCrystal>
-              <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+              <ET_Terrathyst>6</ET_Terrathyst>
+              <ET_TerrathystCore>1</ET_TerrathystCore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
-              <ET_TierOneCrystal>8</ET_TierOneCrystal>
-              <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+              <ET_Terrathyst>8</ET_Terrathyst>
+              <ET_TerrathystCore>1</ET_TerrathystCore>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
-              <ET_TierOneCrystal>10</ET_TierOneCrystal>
-              <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+              <ET_Terrathyst>10</ET_Terrathyst>
+              <ET_TerrathystCore>1</ET_TerrathystCore>
             </things>
           </li>
         </potentialSpawnedThings>

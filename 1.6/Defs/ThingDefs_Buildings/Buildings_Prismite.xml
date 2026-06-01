@@ -84,7 +84,7 @@ Place materials nearby to charge/evolve items</inspectString>
         <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
         <inputThings>
           <!-- needs exactly one entry -->
-          <ET_TierOneCrystalCore>1</ET_TierOneCrystalCore>
+          <ET_TerrathystCore>1</ET_TerrathystCore>
         </inputThings>
         <conversionDurationTicks>480000</conversionDurationTicks>
         <potentialResults>
@@ -128,7 +128,7 @@ Duration: 18 days</description>
             <amount>250</amount>
             <ingredientSets>
               <li>
-                <thingDef>ET_TierOneCrystal</thingDef>
+                <thingDef>ET_Terrathyst</thingDef>
                 <amount>750</amount>
               </li>
             </ingredientSets>

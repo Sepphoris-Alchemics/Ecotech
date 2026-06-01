@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--MIDAS MECHANICS:
+		-TO-DO: finished, but needs to be typed out
+		Stage 2: \nLarger limbs and body parts will alchemize into higher yields, and specific organs and parts may produce special outcomes (such as the heart).
+		-->
+
+<!--Stage 1-->
+
+	<ThingDef ParentName="BaseWaylightTerraweapon">
+		<defName>ET_MidasRifleOne</defName>
+		<label>midas lance (faded)</label>
+		<description>A massive rifle that is emitted and solidified from a vivium core. and also burning with the heart of one. Extremely heavy, but extremely lethal.
+\nThis lance fires shots that transmutes blood, flesh, and bone upon impact, turning them into various precious materials.
+\nLarger limbs and body parts will transmute into higher yields. Internal organs will transmute as well, though not into anything special.
+\nWhile the lance itself cannot be upgraded, the vivium core can cracked open to form an even more effective lance. This can be done at a Chronite Forge.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Vivium/ViviumRifle_a</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_LithicWeapon</li>
+			<li>ET_LithicWeaponStageOne</li>
+			<li>ET_MidasWeapon</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<AccuracyTouch>0.20</AccuracyTouch>
+			<AccuracyShort>0.20</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>3.6</Mass>
+			<Flammability>0</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MidasRifle</defaultProjectile>
+				<warmupTime>0.8</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<range>22.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<!--<lifespanTicks>2700000</lifespanTicks>-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<replacementToSpawn>ET_ViviumCore</replacementToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#CB943E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+Transmutes living targets | ???</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+<!--Stage 2-->
+
+	<ThingDef ParentName="BaseWaylightTerraweapon">
+		<defName>ET_MidasRifleTwo</defName>
+		<label>midas lance (gleaming)</label>
+		<description>A massive rifle that is emitted and solidified from a vivium core. and also burning with the heart of one. Extremely heavy, but extremely lethal.
+\nThis lance fires shots that transmutes blood, flesh, and bone upon impact, turning them into various precious materials.
+\nLarger limbs and body parts will alchemize into higher yields, and specific organs and parts may produce special outcomes (such as the heart).
+\nWhile the lance itself cannot be upgraded, the vivium core can enriched to form an even more effective lance. This can be done at a Chronite Forge.</description>
+		<graphicData>
+			<texPath>Things/WeaponLithoid/Vivium/ViviumRifle_b</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_LithicWeapon</li>
+			<li>ET_LithicWeaponStageTwo</li>
+			<li>ET_MidasWeapon</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<AccuracyTouch>0.20</AccuracyTouch>
+			<AccuracyShort>0.20</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>3.6</Mass>
+			<Flammability>0</Flammability>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>30</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MidasRifle</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<range>22.9</range>
+				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>3600000</lifespanTicks>
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<replacementToSpawn>ET_ViviumCore</replacementToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#CB943E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
+Transmutes living targets| Specialized drops</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

@@ -300,7 +300,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <!-- ================ Periwood Heart ================ -->
 
     <ThingDef ParentName="ResourceBase">
-        <defName>ET_TierTwoWeaponHeart</defName>
+        <defName>ET_PeriwoodHeart</defName>
         <label>periwood heart</label>
         <description>The heart of a periwood tree, ever so faintly pulsing, as if it was alive. Used at a terraforge to carve a specific periwood weapon.</description>
         <graphicData>
@@ -341,7 +341,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <!-- ================ Terrathyst ================ -->
 
     <ThingDef ParentName="ResourceBase">
-        <defName>ET_TierOneCrystal</defName>
+        <defName>ET_Terrathyst</defName>
         <label>terrathyst fragments</label>
         <description>tiny, broken shards of crystal that was once part of a &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; structure or item. While not very useful on it's own, these shards can be used in other, or reconstructed into, other lithoid items. It can be used as a building/crafting material, but terrathyst requires special techniques to properly use.
 \n\nTerrathyst has quite unique properties; it is a transparent material, but when stimulated it's appearance changes to a rather pretty multicolored one. Additionally, terrathyst can be compressed into other forms by using shocksap or starsap; the terrathyst with both bind and charge when in contact with these saps, forming new, stronger materials. The more terrathyst that melds together, the stronger the outcome. This makes terrathyst a universally viable material... as long as one can access it.</description>
@@ -399,7 +399,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <!-- ================ Terrathyst Core ================ -->
 
     <ThingDef ParentName="ResourceBase">
-        <defName>ET_TierOneCrystalCore</defName>
+        <defName>ET_TerrathystCore</defName>
         <label>terrathyst core</label>
         <description>A clump of terrathyst that has melded together, forming a sharp, sealed vessel that contained shocksap. Critical to creating most &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; items or structures that require charge.
 \n\nPlacing this in a prismite crucible will cause it to start creating a random lithic-class weapon or growth. this process takes a while, and once the item emerges, it generally requires more attention to reach it's full potential. As it contains shocksap already, only the heart is needed for this process.</description>
@@ -412,7 +412,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <generateAllowChance>0</generateAllowChance>
         <tradeability>Sellable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <stackLimit>750</stackLimit>
+        <stackLimit>250</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>
@@ -425,6 +425,117 @@ Weapons that use a type of wood come far before the wood source itself, since en
         </statBases>
         <burnableByRecipe>false</burnableByRecipe>
         <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <!-- ================ Liquid Vivium ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_LiquidVivium</defName>
+        <label>liquid vivium</label>
+        <description>A bottle of sealed liquid vivium. Vivium is an alloy consisting purely of gold and silver, and structurally reinforced with endosap. Vivium is a key component of &lt;color=#BD9ABB&gt;Midas-class&lt;/color&gt; terratech.
+\n\nDespite being formed of such valuable materials, liquid vivium has little use as a commodity. It's use cases in this form are specific to lithic terratech applications; to be valuable to the rest of the world, it must be solidifed into another form.</description>
+        <graphicData>
+            <texPath>Things/Resource/ET_LiquidVivium</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.6</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>25</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>25</MarketValue>
+            <MaxHitPoints>20</MaxHitPoints>
+            <Mass>1.8</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.2</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+<!-- ================ Uncracked Vivium Geode ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_ViviumGeodeSealed</defName>
+        <label>sealed vivium geode</label>
+        <description>A decently sized stone containing liquid vivium. Only the tiniest cracks that allow the metal to properly form into patterns are present; beyond that, the geode is perfectly sealed and harder than granite, to avoid those unworthy from extracting it's precious contents.
+\n\nSealed geodes can be opened with the proper terratech, but one should have clear intentions when doing so. Liquid vivium will harden after a few weeks, and has a tendancy to split back up into gold and silver when doing so. This effectively means an opened geode has a finite lifetime if unused.</description>
+        <graphicData>
+            <texPath>Things/Resource/ViviumGeodeSealed</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>8</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>125</MarketValue>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>2.2</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+<!-- ================ Opened Vivium Geode ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_ViviumGeode</defName>
+        <label>vivium geode</label>
+        <description>A vivium geode that's been cracked open, revealing the contents inside. Used as a source for Midas-Class weaponry and structures.
+\n\nDespite the present valuable metals inside, an unopened geode is generally more valuable than an opened one. Liquid vivium has a tendancy split back up into gold and silver when drying up, meaning an open core has a finite lifetime if unused.</description>
+        <graphicData>
+            <texPath>Things/Resource/ViviumGeodeOpen</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>8</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>60</MarketValue>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>2.2</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>

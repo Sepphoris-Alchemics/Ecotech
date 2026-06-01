@@ -53,7 +53,7 @@
 		</statBases>
 		<!--Crafting-->
 		<costList>
-			<ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
 			<ET_Brightsap>1</ET_Brightsap>
 		</costList>
 		<recipeMaker>

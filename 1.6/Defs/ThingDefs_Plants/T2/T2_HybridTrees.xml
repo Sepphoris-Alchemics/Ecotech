@@ -32,7 +32,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
       <MeditationFocusStrength>0.42</MeditationFocusStrength>
     </statBases>
     <killedLeavings>
-      <ET_TierOneCrystal>8</ET_TierOneCrystal>
+      <ET_Terrathyst>8</ET_Terrathyst>
     </killedLeavings>
     <ingestible />
     <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
@@ -115,7 +115,7 @@ The Vivicore tree can also produce a special weapon with proper care, but this p
             <label>stimulate terrathyst</label>
             <description>Requires x6 Shocksap | Duration: 30 days</description>
             <duration>1800000</duration>            <!--Two quadrums-->
-            <resultDef>ET_TierOneCrystal</resultDef>
+            <resultDef>ET_Terrathyst</resultDef>
             <amount>60</amount> <!--2 terrathyst a day, should be inefficient-->
             <ingredientSets>
               <!--<li>

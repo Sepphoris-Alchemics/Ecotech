@@ -112,7 +112,7 @@ Since this basin was specifically designed to channel shocksap, it cannot suppor
     <building>
       <deconstructible>false</deconstructible>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-      <defaultPlantToGrow>ET_TierOneCrystal</defaultPlantToGrow>
+      <defaultPlantToGrow>ET_Terrathyst</defaultPlantToGrow>
       <sowTag>ET_ShocksapCompatible</sowTag>
       <buildingTags>
         <li>Production</li>

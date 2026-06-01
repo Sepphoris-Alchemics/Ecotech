@@ -39,7 +39,7 @@
 		</statBases>
 		<!--Crafting-->
 		<costList>
-			<ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
 			<ET_Brightsap>2</ET_Brightsap>
 		</costList>
 		<recipeMaker>
@@ -152,7 +152,7 @@ Renewable | Unable to be evolved or infused</inspectString>
 		</statBases>
 <!--Crafting-->
 		<costList>
-			<ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
 			<ET_Brightsap>1</ET_Brightsap>
 		</costList>
 		<recipeMaker>
@@ -369,7 +369,7 @@ Upgradable | Renewable | ??? | ???</inspectString>
 		</statBases>
 <!--Crafting-->
 		<costList>
-			<ET_TierTwoWeaponHeart>1</ET_TierTwoWeaponHeart>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
 			<ET_Brightsap>4</ET_Brightsap>
 		</costList>
 		<recipeMaker>
