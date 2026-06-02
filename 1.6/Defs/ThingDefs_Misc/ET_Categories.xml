@@ -75,6 +75,32 @@
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 
+    <ThingCategoryDef>
+      <defName>VivicoreStages</defName>
+      <label>Vivicore variants</label>
+      <parent>LithicTerraweapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<ThingCategoryDef>
+      <defName>MidasStages</defName>
+      <label>Midas variants</label>
+      <parent>LithicTerraweapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<!--Stellar Weapons-->
+
+    <ThingCategoryDef>
+      <defName>WaylightStages</defName>
+      <label>Waylight variants</label>
+      <parent>LithicTerraweapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
 
 <!--Saps-->
 

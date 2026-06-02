@@ -8,7 +8,7 @@
 
 <!--Stage 1-->
 
-	<ThingDef ParentName="BaseWaylightTerraweapon">
+	<ThingDef ParentName="BaseMidasTerraweapon">
 		<defName>ET_MidasRifleOne</defName>
 		<label>midas lance (faded)</label>
 		<description>A massive rifle that is emitted and solidified from a vivium core. and also burning with the heart of one. Extremely heavy, but extremely lethal.
@@ -82,7 +82,7 @@
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<!--<lifespanTicks>2700000</lifespanTicks>-->
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
-				<replacementToSpawn>ET_ViviumCore</replacementToSpawn>
+				<replacementToSpawn>ET_ViviumGeode</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#CB943E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
@@ -93,7 +93,7 @@ Transmutes living targets | ???</inspectString>
 
 <!--Stage 2-->
 
-	<ThingDef ParentName="BaseWaylightTerraweapon">
+	<ThingDef ParentName="BaseMidasTerraweapon">
 		<defName>ET_MidasRifleTwo</defName>
 		<label>midas lance (gleaming)</label>
 		<description>A massive rifle that is emitted and solidified from a vivium core. and also burning with the heart of one. Extremely heavy, but extremely lethal.
@@ -167,7 +167,7 @@ Transmutes living targets | ???</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
-				<replacementToSpawn>ET_ViviumCore</replacementToSpawn>
+				<replacementToSpawn>ET_ViviumGeodeSealed</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#CB943E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;

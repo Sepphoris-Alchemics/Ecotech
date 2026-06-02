@@ -195,7 +195,6 @@ Duration: 18 days</description>
             <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
             <label>form genesite nomad helmet</label>
             <description>Requirements:
-x1 patterned shieldstone
 x3 terrathyst core
 x20 shocksap
 Duration: 22 days</description>
@@ -218,7 +217,6 @@ Duration: 22 days</description>
             <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
             <label>form genesite nomad armor</label>
             <description>Requirements:
-x2 patterned shieldstone
 x4 terrathyst core
 x40 shocksap
 Duration: 24 days</description>

@@ -482,8 +482,8 @@ One must replace an entire limb of their choice for this process, as the transmu
       <RecipeDef>ET_InstallAlchemicInhibitor</RecipeDef>
     </descriptionHyperlinks>
     <costList>
-      <ET_RawVivium>20</RawVivium>
-      <ET_TerrathystSmall>15</ET_TerrathystSmall>
+      <ET_LiquidVivium>6</ET_LiquidVivium>
+      <ET_Terrathyst>18</ET_Terrathyst>
     </costList>
     <statBases>
       <MarketValue>800</MarketValue>
@@ -518,7 +518,7 @@ The limb itself is slightly less effective than a natural one, but is better tha
   </HediffDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>ET_InstallAlchemicInhibitor</defName>
+    <defName>ET_InstallAlchemicInhibitorArm</defName>
     <label>install midas wardlimb (arm)</label>
     <description>Install a midas wardlimb.</description>
     <descriptionHyperlinks>
@@ -549,7 +549,7 @@ The limb itself is slightly less effective than a natural one, but is better tha
   </RecipeDef>
 
 <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>ET_InstallAlchemicInhibitor</defName>
+    <defName>ET_InstallAlchemicInhibitorLeg</defName>
     <label>install midas wardlimb (leg)</label>
     <description>Install a midas wardlimb.</description>
     <descriptionHyperlinks>

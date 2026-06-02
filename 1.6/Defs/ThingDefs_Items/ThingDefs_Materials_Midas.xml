@@ -1,0 +1,82 @@
+<Defs>
+
+    <!--
+
+-->
+
+    <!-- ================ Golden Heart ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_GoldenHeart</defName>
+        <label>heart of gold</label>
+        <description>A human heart, alchemized into pure gold by midas terratechnology. Extremely valuable due to the circumstances needed for such a thing to occur. The practical applications are next to none, however, as this heart won't function at all in a body.
+\n\nThis heart can sold for a high profit. If required, it can also be melted down into raw gold - though not for a large amount.</description>
+        <graphicData>
+            <texPath>Things/Resource/BodyParts/ET_GoldenHeart</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>1</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>2500</MarketValue>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>2</Mass>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <!-- ================ Sharpened Mind ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_SharpenedMind</defName>
+        <label>sharpened mind fragment</label>
+        <description>Brain tissue that's been crystallized and features multiple growths of jade, created by midas terratechnology. Quite valuable due to the circumstances needed for such a thing to occur. The practical applications are next to none, however.
+\n\nThis piece of disturbing matter can still sell for a high amount of profit. The jade can also be seperated from the flesh, though the process isn't very pleasant.
+Multiple fragments of a brain alchemizing is common (when it happens), but a FULL brain alchemizing has never been recorded. Such a thing would be one of a kind, and a truly priceless artifact.</description>
+        <graphicData>
+            <texPath>Things/Resource/BodyParts/ET_MindJade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>1</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>300</MarketValue>
+            <MaxHitPoints>30</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <Flammability>0.4</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+</Defs>

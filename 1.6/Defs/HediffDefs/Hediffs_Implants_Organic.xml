@@ -58,22 +58,19 @@ The roots can be made larger and more effective, but keep in mind that movement 
     </addedPartProps>
 	<stages>
       <li>
-        <capMods>
-    	<li>
-            <capacity>Consciousness</capacity>
-            <offset>0.2</offset>
+        <statFactors>
+          <WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+        </statFactors>
+          <statOffsets>
+          <MoveSpeed>-0.5</MoveSpeed>
+        </statOffsets>
+      </li>
+      <capMods>
+    	  <li>
+          <capacity>Consciousness</capacity>
+          <offset>0.2</offset>
         </li>
-		<li>
-        	<statOffsets>
-          		<WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-        	</statOffsets>
-      	</li>
-		<li>
-        	<statFactors>
-        		<MoveSpeed>-0.5</MoveSpeed>
-        	</statFactors>
-      	</li>
-        </capMods>
+      </capMods>
 		<mentalStateGivers>
           <li>
             <mentalState>WanderConfused</mentalState>

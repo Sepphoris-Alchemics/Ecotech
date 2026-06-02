@@ -106,8 +106,8 @@ This means that the potions can't be administered like normal drugs or medical o
     <recipeMaker>
       <workAmount>720</workAmount>
       <researchPrerequisite>SerumSynthesis</researchPrerequisite>
-    </recipeMaker>
-  </ThingDef>-->
+    </recipeMaker>-->
+  </ThingDef>
 
 <RecipeDef ParentName="SurgeryFlesh">
     <defName>ET_BloompoxFading</defName>

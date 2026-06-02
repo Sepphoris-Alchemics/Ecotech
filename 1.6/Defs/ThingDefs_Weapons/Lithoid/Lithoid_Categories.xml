@@ -23,7 +23,7 @@
 		<tradeability>Buyable</tradeability>
 		<tickerType>Normal</tickerType>
 		<thingCategories Inherit='false'>
-			<li>WaylightTerraweapons</li>
+			<li>WaylightStages</li>
 		</thingCategories>
 	</ThingDef>
 
@@ -31,12 +31,25 @@
 
 	<ThingDef Name="BaseVivicoreTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
 		<statBases>
-			<MarketValue>900</MarketValue>
+			<MarketValue>500</MarketValue>
 		</statBases>
 		<tradeability>Buyable</tradeability>
 		<tickerType>Normal</tickerType>
 		<thingCategories Inherit='false'>
-			<li>LithicTerraweapons</li>
+			<li>VivicoreStages</li>
+		</thingCategories>
+	</ThingDef>
+
+	<!--=====Midas=====-->
+
+	<ThingDef Name="BaseMidasTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
+		<statBases>
+			<MarketValue>700</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>MidasStages</li>
 		</thingCategories>
 	</ThingDef>
 

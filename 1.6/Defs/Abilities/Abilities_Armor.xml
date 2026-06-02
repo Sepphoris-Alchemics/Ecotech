@@ -32,12 +32,12 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="CompProperties_AbilityGiveHediff">
+      <!--<li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
         <hediffDef>ET_Hediff_GenesiteHardening</hediffDef>
         <onlyApplyToSelf>true</onlyApplyToSelf>
         <replaceExisting>true</replaceExisting>
-      </li>
+      </li>-->
     </comps>
   </AbilityDef>
   

@@ -13,7 +13,7 @@
 				<degree>0</degree>
 				<statOffsets>
 					<MoveSpeed>0.2</MoveSpeed>
-					<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+					<WorkSpeedGlobal>0.2</WorkSpeedGlobal>
 					<MeleeDodgeChance>2</MeleeDodgeChance>
 					<MiningSpeed>-0.4</MiningSpeed>
 					<MiningYield>-0.2</MiningYield>
