@@ -222,7 +222,7 @@ Infusing an organic weapon with this sap comes at a cost; the projectiles being 
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.8</drawSize>
     </graphicData>
-    <stackLimit>6</stackLimit>
+    <stackLimit>30</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
     <intricate>true</intricate>
     <statBases>

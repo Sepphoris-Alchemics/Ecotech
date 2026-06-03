@@ -80,7 +80,7 @@
 		<comps>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<!--<lifespanTicks>2700000</lifespanTicks>-->
+				<lifespanTicks>2700000</lifespanTicks>
 				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
 				<replacementToSpawn>ET_ViviumGeode</replacementToSpawn>
 			</li>

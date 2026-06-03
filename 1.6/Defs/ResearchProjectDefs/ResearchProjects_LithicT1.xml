@@ -22,12 +22,11 @@
   
   <ResearchProjectDef>
     <defName>ET_LithicTerratechEssentials</defName>
-    <label>Lithic Essentials: Materials</label>
-    <description>Learn how to properly create and grow Terrathyst; a crystal that forms an ever-strengthening lattice the more of it that is present, making it a infinitely usable material in terms of viability. Also teaches how to make a terrathyst crucible.
-Teaches you how to grow a terrathyst crucible, which is used to create basic lithic items.
-Nature is not only verdant plants and trees, but also the earth, primal elements, and even the cosmos. Terrathyst is just another terratech technique, and has it's own unique upsides and downsides, which tribes might prefer over organic matter.
-Terrathyst production takes slightly longer than organic production, due to their terrain sensitivity, and the need for many shards. However, their ease of understanding and shaping is just as simple as Prima creations, and terrathyst serves as the dominant material.</description>
-    <baseCost>500</baseCost>
+    <label>Lithic Terratech Essentials</label>
+    <description>Study proper lithic terratech fundamentals, and learn how to create a crucible that let's you apply it all.
+Just as importantly, this will teach you how to grow terrathyst, which is essential in creating lithic items.
+Lithic terratech has it's own unique upsides and downsides, which tribes might prefer over organic matter. It's is quite straightforward and highly durable, but takes much more time and material investment.</description>
+    <baseCost>1500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>
     <prerequisites>
@@ -38,7 +37,7 @@ Terrathyst production takes slightly longer than organic production, due to thei
     </requiredAnalyzed>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>0.00</researchViewX>
-    <researchViewY>0.00</researchViewY>
+    <researchViewY>0.70</researchViewY>
     <discoveredLetterTitle>About: Terrathyst</discoveredLetterTitle>
     <discoveredLetterText>You can now create a terrathyst crucible, and growths of terrathyst, which is your primary method of creating crystal-based structures and weapons. These are easy to grow, and don't require high fertility. They will grow in glowsap and shocksap bays.
 This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
@@ -50,66 +49,65 @@ It's usability is quite limited, however, and stronger, deeper structures are ne
 <ResearchProjectDef>
   <defName>ET_LithicTerrasapEssentials</defName>
   <label>Lithic Essentials: Terrasaps</label>
-  <description>Todo</description>
-  <baseCost>500</baseCost>
-  <techLevel>Neolithic</techLevel>
-  <tab>ET_ResearchTab_Lithic</tab>
-  <prerequisites>
-      <li>Stonecutting</li>
-    </prerequisites>
-  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-  <researchViewX>0.00</researchViewX>
-  <researchViewY>0.70</researchViewY>
-  <discoveredLetterTitle>About: Shocksap</discoveredLetterTitle>
-  <discoveredLetterText>Todo</discoveredLetterText>
-</ResearchProjectDef>
-
-<ResearchProjectDef>
-    <defName>ET_LithicEquipmentEssentials</defName>
-    <label>Lithic Essentials: Usable Equipment</label>
-    <description>Todo</description>
-    <baseCost>500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>ET_ResearchTab_Lithic</tab>
-    <prerequisites>
-      <li>Stonecutting</li>
-    </prerequisites>
-    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
-    <researchViewX>0.00</researchViewX>
-    <researchViewY>1.40</researchViewY>
-    <discoveredLetterTitle>About: Genesite</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
-  </ResearchProjectDef>
-
-<ResearchProjectDef>
-  <defName>ET_LithicBasicApplications</defName>
-  <label>Fundamental Lithic Applications</label>
-  <description>Records tell of various materials that are entirely natural, but seem to have no presence on the planet. Even though some methods of dense terrathyst is common terratechnology, far denser materials - some not even lithic - once existed.
-\n\nUpon researching, you will discover some information about possibilities known to exist, but not known to any on the Rimworld. This research currently doesn't grant anything; however, should it's contained knowledge ever come within reach, this information will help you achieve it quickly.</description>
-  <baseCost>1000</baseCost>
+  <description>Lithic terratech requires a couple specific terrasaps. This research will teach you extract them from the planet, and how to create the appropriate terrasap bays.</description>
+  <baseCost>1200</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
   <prerequisites>
       <li>ET_LithicTerratechEssentials</li>
-      <li>ET_LithicTerrasapEssentials</li>
-      <li>ET_LithicEquipmentEssentials</li>
     </prerequisites>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>1.00</researchViewX>
-  <researchViewY>0.70</researchViewY>
-  <discoveredLetterTitle>About: Terrathyst Applications</discoveredLetterTitle>
+  <researchViewY>0.00</researchViewY>
+  <discoveredLetterTitle>About: Lithic Terrasap Usage</discoveredLetterTitle>
+  <discoveredLetterText>Todo</discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+    <defName>ET_LithicWeaponCrafting</defName>
+    <label>Lithic Weapon Crafting</label>
+    <description>Teaches you how to make lithic weapon for the foreseeable future, and also teaches you how make a couple weapons at the terrathyst crucible.
+While the weapons can be made at the crucible, upgrading them to stronger stages requires a different structure.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_ResearchTab_Lithic</tab>
+    <prerequisites>
+      <li>ET_LithicTerratechEssentials</li>
+    </prerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>About: Lithic Weapon Crafting</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>
+  </ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_LithicArmorCrafting</defName>
+  <label>Lithic Armor Crafting</label>
+  <description>Teaches you how to make lithic armor for the foreseeable future, and also teaches you how make the armor at the terrathyst crucible.
+(Dev note: Lithic armor will bge upgradable, but there wasn't enough time to finish the art.)</description>
+  <baseCost>1800</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_LithicTerratechEssentials</li>
+    </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>1.00</researchViewX>
+  <researchViewY>1.40</researchViewY>
+  <discoveredLetterTitle>About: Lithic Armor Crafting</discoveredLetterTitle>
   <discoveredLetterText>Todo</discoveredLetterText>
 </ResearchProjectDef>
 
 <ResearchProjectDef>
   <defName>ET_BasicChargeManipulation</defName>
   <label>Lithic Charge Manipulation</label>
-  <description>Todo</description>
+  <description>Teaches how to create a structure that can both recharge and evolve usable gear.</description>
   <baseCost>1200</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
   <prerequisites>
-      <li>ET_LithicBasicApplications</li>
+      <li>ET_LithicTerrasapEssentials</li>
   </prerequisites>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>2.00</researchViewX>
@@ -120,22 +118,24 @@ It's usability is quite limited, however, and stronger, deeper structures are ne
 
 <ResearchProjectDef>
     <defName>ET_ThermalTerrasapPooling</defName>
-    <label>Thermal Terrasap Pooling</label>
-    <description>Thermal Terrasap Pooling</description>
-    <baseCost>1500</baseCost>
+    <label>Pattern TTP-214L</label> <!--Thermal Terrasap Pooling-->
+    <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+    (Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    <!--<description>Teaches how to create two unique terrasaps, which are attuned to the high and low ends of the thermal spectrum. These terrasaps can then be used to control temperature in a multitude of ways.</description>-->
+    <baseCost>150</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.40</researchViewY>
-    <discoveredLetterTitle>About: Thermal Terrasap Pooling</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Thermal Terrasap Pooling</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
 <ResearchProjectDef>
     <defName>ET_BasicMetalReclamation</defName>
     <label>Basic Metal Reclamation</label>
-    <description>Todo</description>
+    <description>Teaches how to create structures which can recover the natural materials of specific items that requires standardized technology to access. While the return ratio isn't high, this allows you to recycle items you likely won't have use for, such as guns and machined armor.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>

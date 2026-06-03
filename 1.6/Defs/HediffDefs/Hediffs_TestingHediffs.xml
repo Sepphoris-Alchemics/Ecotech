@@ -153,182 +153,204 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
     </stages>
   </HediffDef>
 
-  <!--=====Test Hediff: Body part to item infection=====-->
+<!--=====Test Hediff: Single body part to item infection=====-->
 
-  <HediffDef>
-    <defName>ET_AlchemizingInfection</defName>
-    <label>alchemizing infection</label>
-    <hediffClass>HediffWithComps</hediffClass>
-    <description>The affected body part is slowly being transformed into valuable metals. This REALLY sucks.</description>
-    <isBad>true</isBad>
-    <tendable>false</tendable>
-    <maxSeverity>1</maxSeverity>
-    <alwaysShowSeverity>true</alwaysShowSeverity>
-    <defaultLabelColor>(203,148,62)</defaultLabelColor>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.2</severityPerDay>
-      </li>
-      <li Class="Ecotech.HediffCompProperties_BodyPartTransformation">
-        <blockedByHediffs>
-          <li>ET_AlchemicInhibitor</li>
-        </blockedByHediffs>
-        <systemicTransformation>false</systemicTransformation>
-        <transformSeverity>1</transformSeverity>
-        <checkIntervalTicks>60</checkIntervalTicks>
-        <sendLetter>true</sendLetter>
-        <sendLetterForPlayerFaction>true</sendLetterForPlayerFaction>
-        <sendLetterForPrisonersOfColony>true</sendLetterForPrisonersOfColony>
-        <sendLetterForHostiles>false</sendLetterForHostiles>
-        <sendLetterForOthers>false</sendLetterForOthers>
-        <letterLabelKey>ET_LetterLabel_BodyPartTransformed</letterLabelKey>
-        <letterTextKey>ET_LetterText_BodyPartTransformed</letterTextKey>
-        <drops>
-          <li>
-            <thingDef>Gold</thingDef>
-            <countRange>
-              <min>10</min>
-              <max>40</max>
-            </countRange>
-            <chance>1</chance>
-          </li>
-        </drops>
-        <bodyPartModifiers>
-        <!-- Fingers -->
-          <li>
-            <bodyPart>Finger</bodyPart>
-            <severityMultiplier>2.0</severityMultiplier>
-            <yieldMultiplier>0.1</yieldMultiplier>
-            <sendLetter>false</sendLetter>
-          </li>
-          <!-- Arms -->
-          <li>
-            <bodyPart>Arm</bodyPart>
-            <severityMultiplier>1.0</severityMultiplier>
-            <yieldMultiplier>1.5</yieldMultiplier>
-            <sendLetter>true</sendLetter>
-          </li>
-          <!-- Lungs -->
-          <li>
-            <bodyPart>Lung</bodyPart>
-            <severityMultiplier>0.35</severityMultiplier>
-            <yieldMultiplier>2.5</yieldMultiplier>
-            <sendLetter>true</sendLetter>
-          </li>
-          <!-- Heart -->
-          <li>
-            <bodyPart>Heart</bodyPart>
-            <severityMultiplier>0.15</severityMultiplier>
-            <yieldMultiplier>1.0</yieldMultiplier>
-            <sendLetter>true</sendLetter>
-            <overrideChance>1</overrideChance>
-            <overrideDrops>
-              <li>
-                <thingDef>ET_GoldenHeart</thingDef>
-                  <countRange>
-                    <min>1</min>
-                    <max>1</max>
-                  </countRange>
-                <chance>1</chance>
-              </li>
-            </overrideDrops>
-          </li>
-          <!-- Brain -->
-          <li>
-            <bodyPart>Brain</bodyPart>
-            <severityMultiplier>0.1</severityMultiplier>
-            <yieldMultiplier>8.0</yieldMultiplier>
-            <sendLetter>true</sendLetter>
-          </li>
-          <!-- Torso -->
-          <li>
-            <bodyPart>Torso</bodyPart>
-            <severityMultiplier>0.05</severityMultiplier>
-            <yieldMultiplier>10.0</yieldMultiplier>
-            <sendLetter>true</sendLetter>
-          </li>
-        </bodyPartModifiers>
-      </li>
-    </comps>
-  </HediffDef>
+<HediffDef>
+  <defName>ET_AlchemizingInfection</defName>
+  <label>alchemizing infection</label>
+  <hediffClass>HediffWithComps</hediffClass>
+  <description>The affected body part is slowly being transformed into valuable metals. This REALLY sucks.</description>
+  <isBad>true</isBad>
+  <tendable>false</tendable>
+  <maxSeverity>1</maxSeverity>
+  <alwaysShowSeverity>true</alwaysShowSeverity>
+  <defaultLabelColor>(203,148,62)</defaultLabelColor>
 
-  <!--=====Test Hediff: Total Body Alchemization=====-->
+  <comps>
+    <li Class="HediffCompProperties_SeverityPerDay">
+      <severityPerDay>0.2</severityPerDay>
+    </li>
 
-  <HediffDef>
-    <defName>ET_TotalAlchemizingInfection</defName>
-    <label>total alchemizing infection</label>
-    <hediffClass>HediffWithComps</hediffClass>
-    <description>The total body is being transmuted. This REALLY sucks.</description>
-    <isBad>true</isBad>
-    <tendable>false</tendable>
-    <maxSeverity>1</maxSeverity>
-    <initialSeverity>0.001</initialSeverity>
-    <alwaysShowSeverity>false</alwaysShowSeverity>
-    <defaultLabelColor>(203,148,62)</defaultLabelColor>
-    <stages>
-      <li>
-        <label>transmuting</label>
-        <becomeVisible>false</becomeVisible>
-      </li>
-    </stages>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>2</severityPerDay>
-      </li>
-      <li Class="Ecotech.HediffCompProperties_BodyPartTransformation">
-        <blockedByHediffs>
+    <li Class="Ecotech.HediffCompProperties_BodyPartTransformation_Single">
+      <blockedByHediffs>
         <li>ET_AlchemicInhibitor</li>
-        </blockedByHediffs>
-        <systemicTransformation>true</systemicTransformation>
-        <transformSeverity>1</transformSeverity>
-        <checkIntervalTicks>60</checkIntervalTicks>
-        <destroyCorpse>true</destroyCorpse>
-        <sendLetter>true</sendLetter>
-        <letterLabelKey>ET_LetterLabel_TotalTransmutation</letterLabelKey>
-        <letterTextKey>ET_LetterText_TotalTransmutation</letterTextKey>
-        <drops>
-          <li>
-            <thingDef>Gold</thingDef>
-            <countRange>
-              <min>150</min>
-              <max>300</max>
-            </countRange>
-            <chance>1</chance>
-          </li>
-          <li>
-            <thingDef>Silver</thingDef>
-            <countRange>
-              <min>300</min>
-              <max>600</max>
-            </countRange>
-            <chance>1</chance>
-          </li>
-        </drops>
-        <bodyPartModifiers>
-          <!-- Torso -->
-          <li>
-            <bodyPart>Torso</bodyPart>
-            <severityMultiplier>0.05</severityMultiplier>
-            <yieldMultiplier>1</yieldMultiplier>
-            <sendLetter>true</sendLetter>
-            <overrideChance>0.1</overrideChance>
-            <overrideDrops>
-              <li>
-                <thingDef>ComponentSpacer</thingDef>
-                  <countRange>
-                    <min>10</min>
-                    <max>10</max>
-                  </countRange>
-                <chance>1</chance>
-              </li>
-            </overrideDrops>
-          </li>
-        </bodyPartModifiers>
-      </li>
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>12000</disappearsAfterTicks>
-      </li>
-    </comps>
-  </HediffDef>
+      </blockedByHediffs>
+
+      <transformSeverity>1</transformSeverity>
+      <checkIntervalTicks>60</checkIntervalTicks>
+
+      <sendLetter>true</sendLetter>
+      <sendLetterForPlayerFaction>true</sendLetterForPlayerFaction>
+      <sendLetterForPrisonersOfColony>true</sendLetterForPrisonersOfColony>
+      <sendLetterForHostiles>false</sendLetterForHostiles>
+      <sendLetterForOthers>false</sendLetterForOthers>
+
+      <letterLabelKey>ET_LetterLabel_BodyPartTransformed</letterLabelKey>
+      <letterTextKey>ET_LetterText_BodyPartTransformed</letterTextKey>
+
+      <drops>
+        <li>
+          <thingDef>Gold</thingDef>
+          <countRange>
+            <min>10</min>
+            <max>40</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+      </drops>
+
+      <bodyPartModifiers>
+        <!-- Fingers -->
+        <li>
+          <bodyPart>Finger</bodyPart>
+          <severityMultiplier>2.0</severityMultiplier>
+          <yieldMultiplier>0.1</yieldMultiplier>
+          <sendLetter>false</sendLetter>
+        </li>
+
+        <!-- Arms -->
+        <li>
+          <bodyPart>Arm</bodyPart>
+          <severityMultiplier>1.0</severityMultiplier>
+          <yieldMultiplier>1.5</yieldMultiplier>
+          <sendLetter>true</sendLetter>
+        </li>
+
+        <!-- Lungs -->
+        <li>
+          <bodyPart>Lung</bodyPart>
+          <severityMultiplier>0.35</severityMultiplier>
+          <yieldMultiplier>2.5</yieldMultiplier>
+          <sendLetter>true</sendLetter>
+        </li>
+
+        <!-- Heart -->
+        <li>
+          <bodyPart>Heart</bodyPart>
+          <severityMultiplier>0.15</severityMultiplier>
+          <yieldMultiplier>1.0</yieldMultiplier>
+          <sendLetter>true</sendLetter>
+          <overrideChance>1</overrideChance>
+          <overrideDrops>
+            <li>
+              <thingDef>ET_GoldenHeart</thingDef>
+              <countRange>
+                <min>1</min>
+                <max>1</max>
+              </countRange>
+              <chance>1</chance>
+            </li>
+          </overrideDrops>
+        </li>
+
+        <!-- Brain -->
+        <li>
+          <bodyPart>Brain</bodyPart>
+          <severityMultiplier>0.1</severityMultiplier>
+          <yieldMultiplier>8.0</yieldMultiplier>
+          <sendLetter>true</sendLetter>
+        </li>
+
+        <!-- Torso -->
+        <li>
+          <bodyPart>Torso</bodyPart>
+          <severityMultiplier>0.05</severityMultiplier>
+          <yieldMultiplier>10.0</yieldMultiplier>
+          <sendLetter>true</sendLetter>
+        </li>
+      </bodyPartModifiers>
+    </li>
+  </comps>
+</HediffDef>
+
+<!--=====Test Hediff: Total Body Alchemization=====-->
+
+<HediffDef>
+  <defName>ET_TotalAlchemizingInfection</defName>
+  <label>total alchemizing infection</label>
+  <hediffClass>HediffWithComps</hediffClass>
+  <description>The total body is being transmuted. This REALLY sucks.</description>
+  <isBad>true</isBad>
+  <tendable>false</tendable>
+  <maxSeverity>1</maxSeverity>
+  <initialSeverity>0.001</initialSeverity>
+  <alwaysShowSeverity>false</alwaysShowSeverity>
+  <defaultLabelColor>(203,148,62)</defaultLabelColor>
+
+  <stages>
+    <li>
+      <label>transmuting</label>
+      <becomeVisible>false</becomeVisible>
+    </li>
+  </stages>
+
+  <comps>
+    <li Class="HediffCompProperties_SeverityPerDay">
+      <severityPerDay>2</severityPerDay>
+    </li>
+
+    <li Class="Ecotech.HediffCompProperties_BodyPartTransformation_Full">
+      <blockedByHediffs>
+        <li>ET_AlchemicInhibitor</li>
+      </blockedByHediffs>
+
+      <transformSeverity>1</transformSeverity>
+      <checkIntervalTicks>60</checkIntervalTicks>
+      <destroyCorpse>true</destroyCorpse>
+
+      <sendLetter>true</sendLetter>
+      <sendLetterForPlayerFaction>true</sendLetterForPlayerFaction>
+      <sendLetterForPrisonersOfColony>true</sendLetterForPrisonersOfColony>
+      <sendLetterForHostiles>false</sendLetterForHostiles>
+      <sendLetterForOthers>false</sendLetterForOthers>
+
+      <letterLabelKey>ET_LetterLabel_TotalTransmutation</letterLabelKey>
+      <letterTextKey>ET_LetterText_TotalTransmutation</letterTextKey>
+
+      <drops>
+        <li>
+          <thingDef>Gold</thingDef>
+          <countRange>
+            <min>150</min>
+            <max>300</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>300</min>
+            <max>600</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+      </drops>
+    </li>
+
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>12000</disappearsAfterTicks>
+    </li>
+  </comps>
+</HediffDef>
+
+<!--=====Midas DamageDef Proxy=====-->
+
+<HediffDef>
+  <defName>ET_MidasAlchemizingInjuryProxy</defName>
+  <label>midas infection</label>
+  <description>A wound contaminated with Midas transmutation residue.</description>
+  <hediffClass>Ecotech.Hediff_Injury_ApplyHediffToSamePart</hediffClass>
+  <isBad>true</isBad>
+  <tendable>false</tendable>
+  <modExtensions>
+    <li Class="Ecotech.HediffDefExtension_ApplyHediffToSamePart">
+      <hediff>ET_AlchemizingInfection</hediff>
+      <severityPerInjurySeverity>0.5</severityPerInjurySeverity>
+      <fixedSeverity>0</fixedSeverity>
+    </li>
+  </modExtensions>
+</HediffDef>
+
 
 </Defs>

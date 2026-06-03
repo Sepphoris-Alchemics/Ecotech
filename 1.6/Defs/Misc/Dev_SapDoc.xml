@@ -40,12 +40,12 @@ METASAPS (Mutability: High):
 	-Ectosap
 	-Chronosap
 
--NOBLESAPS (Mutability: Very High):
+-NOBLESAPS (Mutability: Very High - rename to Extreme) :
 	-Embersap
 	-Cryosap
 	-Arcsap
 
--ARCHSAPS (Mutability: Extreme):
+-ARCHSAPS (Mutability: Extreme - rename to Boundless):
 	-Sunsap
 	-Starsap
 

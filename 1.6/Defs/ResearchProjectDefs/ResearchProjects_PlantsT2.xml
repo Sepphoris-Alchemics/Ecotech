@@ -206,7 +206,7 @@ Additionally, it teaches you how to make a new conduit megatree.</description>
 \nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
   </ResearchProjectDef>
 
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>ET_AdeptFacilities</defName>
     <label>Adept Facilities</label>
     <description>This research is obfuscated; experiments with seed shaping shows this will result in a new seed, but what it exactly grows into is not yet known.
@@ -223,7 +223,7 @@ Additionally, it teaches you how to make a new conduit megatree.</description>
     <discoveredLetterTitle>About: Adept Facilities</discoveredLetterTitle>
     <discoveredLetterText>Your study of creating larger, more powerful plants has paid off! You can now apply this knwoledge to further studies, allowing the creation of massive terraplants.
 \nMost plants this research can be applied to requires further study, but certain previous plants can also have this applied as well.</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <ResearchProjectDef>
     <defName>ET_BriarGenome</defName>
@@ -288,9 +288,11 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
 
   <ResearchProjectDef>
     <defName>ET_BloomwoodTerraseeds</defName>
-    <label>Bloomwood Genome Fundamentals</label>
-    <description>Todo</description>
-    <baseCost>2000</baseCost>
+    <label>Pattern BGF-828-O</label> <!--Bloomwood Genome Fundamentals-->
+    <!--<description>Todo</description>-->
+    <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    <baseCost>200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
     <!--<hiddenPrerequisites>
@@ -299,15 +301,17 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>8.00</researchViewX>
     <researchViewY>2.80</researchViewY>
-    <discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>New Genome Discovered!</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>ET_BloomwoodProcedures</defName>
-    <label>Bloomrot Medical Procedures</label>
-    <description>Todo</description>
-    <baseCost>1400</baseCost>
+    <label>Pattern BMP-928-O</label> <!--Bloomrot Medical Procedures-->
+    <!--<description>Todo</description>-->
+    <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    <baseCost>140</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
@@ -316,15 +320,17 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>9.00</researchViewX>
     <researchViewY>2.80</researchViewY>
-    <discoveredLetterTitle>About: Bloomrot Medical Procedures</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Bloomrot Medical Procedures</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>ET_BloomwoodCultivation</defName>
-    <label>Bloomwood Cultivation</label>
-    <description>Todo</description>
-    <baseCost>1600</baseCost>
+    <label>Pattern BC-935-O</label> <!--Bloomwood Cultivation-->
+    <!--<description>Todo</description>-->
+    <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    <baseCost>160</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
@@ -333,8 +339,8 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>9.00</researchViewX>
     <researchViewY>3.50</researchViewY>
-    <discoveredLetterTitle>About: Bloomwood Cultivation</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Bloomwood Cultivation</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
   <!--=====TERRASAP RESEARCH=====-->
@@ -399,9 +405,11 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
 
   <ResearchProjectDef> <!--Todo: make secret tech-->
     <defName>ET_OrganicWildWeaponRestoration</defName>
-    <label>Organic Wild Weapon Restoration</label>
-    <description>Todo</description>
-    <baseCost>2400</baseCost>
+    <label>Pattern OWWR-1028-OW</label> <!--Organic Wild Weapon Restoration-->
+    <!--<description>Todo</description>-->
+    <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    <baseCost>240</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
@@ -413,17 +421,19 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>10.00</researchViewX>
     <researchViewY>2.80</researchViewY>
-    <discoveredLetterTitle>About: Wild Weapon Restoration</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Wild Weapon Restoration</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
 <!--=====HYBRIDIZATION=====-->
 
 <ResearchProjectDef>
   <defName>ET_BasicOrganicHybridization</defName>
-  <label>Basic Organic Hybridization</label>
-  <description>Todo</description>
-  <baseCost>2400</baseCost>
+  <label>Pattern BOH-1007-OH</label> <!--Basic Organic Hybridization-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+  <baseCost>240</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Organic</tab>
   <requiredAnalyzed>
@@ -435,9 +445,9 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>10.00</researchViewX>
   <researchViewY>0.70</researchViewY>
-  <discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
+  <!--<discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
   <discoveredLetterText>Todo
-  </discoveredLetterText>
+  </discoveredLetterText>-->
 </ResearchProjectDef>
 
   <!--=====GUARDED KNOWLEDGE=====-->

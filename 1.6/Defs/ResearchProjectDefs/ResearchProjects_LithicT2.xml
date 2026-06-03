@@ -62,9 +62,11 @@
 
 <ResearchProjectDef>
   <defName>ET_MidasClassProcessing</defName>
-  <label>Midas-Class Processing</label>
-  <description>Todo</description>
-  <baseCost>1800</baseCost>
+  <label>Pattern MCP-600LM</label> <!--Midas-Class Processing-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+  <baseCost>180</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
   <prerequisites>
@@ -73,18 +75,19 @@
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>6.00</researchViewX>
   <researchViewY>0.00</researchViewY>
-  <discoveredLetterTitle>About: Midas-Class Processing</discoveredLetterTitle>
-  <discoveredLetterText>Todo
-  </discoveredLetterText>
+  <!--<discoveredLetterTitle>About: Midas-Class Processing</discoveredLetterTitle>
+  <discoveredLetterText>Todo</discoveredLetterText>-->
 </ResearchProjectDef>
 
   <!--=====Etc.=====-->
 
 <ResearchProjectDef>
   <defName>ET_AdvancedMetalReclaimation</defName>
-  <label>Advanced Metal Reclaimation</label>
-  <description>Todo</description>
-  <baseCost>2100</baseCost>
+  <label>Pattern AMR-407L</label> <!--Advanced Metal Reclamation-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+  <baseCost>210</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
   <prerequisites>
@@ -96,16 +99,18 @@
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>4.00</researchViewX>
   <researchViewY>0.70</researchViewY>
-  <discoveredLetterTitle>About: Advanced Metal Reclaimation</discoveredLetterTitle>
+  <!--<discoveredLetterTitle>About: Advanced Metal Reclaimation</discoveredLetterTitle>
   <discoveredLetterText>Todo
-  </discoveredLetterText>
+  </discoveredLetterText>-->
 </ResearchProjectDef>
 
 <ResearchProjectDef>
   <defName>ET_LithicWildWeaponRestoration</defName>
-  <label>Lithic Wild Weapon Restoration</label>
-  <description>Todo</description>
-  <baseCost>2400</baseCost>
+  <label>Pattern LWWR-514L</label> <!--Lithic Wild Weapon Restoration-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+  <baseCost>240</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
   <requiredAnalyzed>
@@ -117,16 +122,18 @@
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>5.00</researchViewX>
   <researchViewY>1.40</researchViewY>
-  <discoveredLetterTitle>About: Lithic Wild Weapon Restoration</discoveredLetterTitle>
+  <!--<discoveredLetterTitle>About: Lithic Wild Weapon Restoration</discoveredLetterTitle>
   <discoveredLetterText>Todo
-  </discoveredLetterText>
+  </discoveredLetterText>-->
 </ResearchProjectDef>
 
 <ResearchProjectDef>
   <defName>ET_BasicLithicHybridization</defName>
-  <label>Basic Lithic Hybridization</label>
-  <description>Todo</description>
-  <baseCost>2400</baseCost>
+  <label>Pattern BLH-507L</label> <!--Basic Lithic Hybridization-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+  <baseCost>240</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
   <requiredAnalyzed>
@@ -138,9 +145,9 @@
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>5.00</researchViewX>
   <researchViewY>0.70</researchViewY>
-  <discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
+  <!--<discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
   <discoveredLetterText>Todo
-  </discoveredLetterText>
+  </discoveredLetterText>-->
 </ResearchProjectDef>
 
 <!--<ResearchProjectDef>

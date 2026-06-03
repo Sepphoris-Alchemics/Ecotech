@@ -187,6 +187,43 @@
   </additionalHediffs>
 </DamageDef>
 
+
+<!--Midas damage defs-->
+
+<DamageDef>
+  <defName>ET_MidasBulletDamage</defName>
+  <workerClass>DamageWorker_AddInjury</workerClass>
+  <externalViolence>false</externalViolence>
+  <deathMessage>{0} has been stabbed to death.</deathMessage>
+  <impactSoundType>Slice</impactSoundType>
+  <armorCategory>Sharp</armorCategory>
+  <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+  <isRanged>true</isRanged>
+  <makesAnimalsFlee>true</makesAnimalsFlee>
+  <hediff>ET_MidasAlchemizingInjuryProxy</hediff>
+  <hediffSolid>Crack</hediffSolid>
+</DamageDef>
+
+<!--<DamageDef>
+  <defName>ET_MidasBulletDamage</defName>
+  <workerClass>DamageWorker_AddInjury</workerClass>
+  <externalViolence>false</externalViolence>
+  <deathMessage>{0} has been stabbed to death.</deathMessage>
+  <impactSoundType>Slice</impactSoundType>
+  <armorCategory>Sharp</armorCategory>
+  <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+  <isRanged>true</isRanged>
+  <makesAnimalsFlee>true</makesAnimalsFlee>
+  <hediff>Stab</hediff>
+  <hediffSolid>Crack</hediffSolid>
+  <additionalHediffs>
+    <li>
+      <hediff>ET_TotalAlchemizingInfection</hediff>
+      <severityPerDamageDealt>0.002</severityPerDamageDealt>
+    </li>
+  </additionalHediffs>
+</DamageDef>-->
+
 <!--PeriwoodDamage-->
 
 <!--<DamageDef>

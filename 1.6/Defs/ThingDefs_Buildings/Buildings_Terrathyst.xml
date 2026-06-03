@@ -169,10 +169,11 @@ Duration: 32 days</description>
           </li>-->
 <!--=====SOULSNARE RIFLE=====-->
           <li>
-            <!--<researchPrerequisites>ET_LithicWeaponry</researchPrerequisites>-->
+            <researchPrerequisite>
+              <li>ET_LithicWeaponCrafting</li>
+            </researchPrerequisite>
             <label>form soulsnare rifle</label>
             <description>Requirements:
-x1 patterned swordstone
 x3 terrathyst core
 x25 shocksap
 Duration: 18 days</description>
@@ -192,7 +193,9 @@ Duration: 18 days</description>
           </li>
 <!--=====GENESITE HELMET=====-->
           <li>
-            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
+            <researchPrerequisite>
+              <li>ET_LithicArmorCrafting</li>
+            </researchPrerequisite>
             <label>form genesite nomad helmet</label>
             <description>Requirements:
 x3 terrathyst core
@@ -214,7 +217,9 @@ Duration: 22 days</description>
           </li>
 <!--=====GENESITE HELMET=====-->
           <li>
-            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
+            <researchPrerequisite>
+              <li>ET_LithicArmorCrafting</li>
+            </researchPrerequisite>
             <label>form genesite nomad armor</label>
             <description>Requirements:
 x4 terrathyst core
