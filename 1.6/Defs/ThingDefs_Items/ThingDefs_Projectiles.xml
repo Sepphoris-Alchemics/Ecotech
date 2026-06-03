@@ -608,7 +608,7 @@ Anima long range is brought down by 3
     </graphicData>
     <projectile>
       <damageDef>ET_MidasBulletDamage</damageDef>
-      <damageAmountBase>4</damageAmountBase>
+      <damageAmountBase>2</damageAmountBase>
       <stoppingPower>0</stoppingPower>
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <speed>30</speed>

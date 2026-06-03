@@ -190,7 +190,7 @@
 
 <!--Midas damage defs-->
 
-<DamageDef>
+<!--<DamageDef>
   <defName>ET_MidasBulletDamage</defName>
   <workerClass>DamageWorker_AddInjury</workerClass>
   <externalViolence>false</externalViolence>
@@ -202,9 +202,9 @@
   <makesAnimalsFlee>true</makesAnimalsFlee>
   <hediff>ET_MidasAlchemizingInjuryProxy</hediff>
   <hediffSolid>Crack</hediffSolid>
-</DamageDef>
+</DamageDef>-->
 
-<!--<DamageDef>
+<DamageDef>
   <defName>ET_MidasBulletDamage</defName>
   <workerClass>DamageWorker_AddInjury</workerClass>
   <externalViolence>false</externalViolence>
@@ -218,11 +218,11 @@
   <hediffSolid>Crack</hediffSolid>
   <additionalHediffs>
     <li>
-      <hediff>ET_TotalAlchemizingInfection</hediff>
-      <severityPerDamageDealt>0.002</severityPerDamageDealt>
+      <hediff>ET_TotalAlchemizingInfection_Bullet</hediff>
+      <severityPerDamageDealt>0.01</severityPerDamageDealt>
     </li>
   </additionalHediffs>
-</DamageDef>-->
+</DamageDef>
 
 <!--PeriwoodDamage-->
 
