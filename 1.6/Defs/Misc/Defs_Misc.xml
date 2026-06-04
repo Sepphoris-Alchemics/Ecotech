@@ -101,7 +101,7 @@
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
       <li>ET_TerrathystCrucible</li>
-      <li>ET_LithicForgeTierTwo</li>
+      <!--<li>ET_LithicForgeTierTwo</li>-->
     </fixedBillGiverDefs>
     <verb>form crystal cluster at</verb>
     <gerund>forming crystal cluster at</gerund>
@@ -118,7 +118,7 @@
     <workType>Growing</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>ET_LithicForgeTierTwo</li>
+      <!--<li>ET_LithicForgeTierTwo</li>-->
     </fixedBillGiverDefs>
     <verb>form crystal cluster at</verb>
     <gerund>forming crystal cluster at</gerund>

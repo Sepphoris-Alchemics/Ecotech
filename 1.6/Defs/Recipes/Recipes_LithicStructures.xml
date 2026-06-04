@@ -32,7 +32,7 @@
     <displayPriority>0</displayPriority>
   </RecipeDef>
 
-  <RecipeDef>
+  <!--<RecipeDef>
     <defName>ET_LithicForgeTierTwoRecipe</defName>
     <label>form prismite well cluster</label>
     <description>Shape a cluster of crystals that will grow into a prismite well. Prismite wells are direct upgrades to terrathyst crucibles, able to handle bigger amounts of sap and fragments.</description>
@@ -62,7 +62,7 @@
       <ET_Seed_LithicForgeTierTwo>1</ET_Seed_LithicForgeTierTwo>
     </products>
     <displayPriority>2</displayPriority>
-  </RecipeDef>
+  </RecipeDef>-->
 
 <!--=====Crack open Vivium Geode=====-->
 

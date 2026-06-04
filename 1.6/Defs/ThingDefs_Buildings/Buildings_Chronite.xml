@@ -36,9 +36,9 @@ Tier 2: Chronite Forge:
   <ThingDef ParentName="BenchBase">
     <defName>ET_ChroniteForge</defName> <!--Tier 2: Chronite Forge-->
     <label>chronite forge</label>
-    <description>A crystal chamber made out of precious chronite. that has a pool of self-renewing shocksap. This structure allows a tribe to shape and charge smaller lithic items and weapons.
-This crucible holds enough sap to form simpler lithic weapons. However, it cannot support upgrading them.
-While this crucible is a good starting point, any tribe that wishes to survive solely on a lithic lifestyle will need to eventually create a prismite well.</description>
+    <description>A massive crystal chamber made out of precious chronite. This structure allows a tribe to shape and evolve larger lithic items and weapons.
+The chronite of this forge has immense charge potential, giving it a large discount on shocksap usage. However, the forge cannot make smaller items, and still needs endosap to evolve items.
+Having a terrathyst crucible is still highly recommended due to it's ability to make smaller items, and because of it's time effeciency.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
     <graphicData>
@@ -85,7 +85,7 @@ While this crucible is a good starting point, any tribe that wishes to survive s
     </killedLeavings>
     <recipes>
       <li>ET_OpenViviumGeodeSealedRecipe</li>
-      <li>ET_LithicForgeTierTwoRecipe</li>
+      <!--<li>ET_LithicForgeTierTwoRecipe</li>-->
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -171,12 +171,11 @@ Duration: 32 days</description>
 <!--=====SOULSNARE RIFLE=====-->
           <li>
             <researchPrerequisite>
-              <li>ET_BasicChargeManipulation</li>
+              <li>ET_LithicWeaponCrafting</li>
             </researchPrerequisite>
             <label>shape soulsnare rifle</label>
             <description>Requirements:
 x3 terrathyst core
-x25 shocksap
 Duration: 18 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleOne</resultDef>
@@ -201,18 +200,23 @@ Duration: 18 days</description>
             <description>Requirements:
 x1 soulnare rifle I
 x10 shocksap
+x2 endosap
 Duration: 14 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleTwo</resultDef>
             <amount>1</amount>
             <ingredientSets>
-              <li>
-                <thingDef>ET_TerrathystCore</thingDef>
-                <amount>4</amount>
+            <li>
+                <thingDef>ET_SoulsnareRifleOne</thingDef>
+                <amount>1</amount>
               </li>
               <li>
                 <thingDef>ET_Shocksap</thingDef>
                 <amount>10</amount>
+              </li>
+              <li>
+                <thingDef>ET_Endosap</thingDef>
+                <amount>2</amount>
               </li>
             </ingredientSets>
           </li>
@@ -224,15 +228,24 @@ Duration: 14 days</description>
             <label>evolve soulsnare rifle to stage III</label>
             <description>Requirements:
 x1 soulnare rifle II
-x16 shocksap
+x20 shocksap
+x4 endosap
 Duration: 18 days</description>
             <duration>480000</duration>
-            <resultDef>ET_SoulsnareRifleTwo</resultDef>
+            <resultDef>ET_SoulsnareRifleThree</resultDef>
             <amount>1</amount>
             <ingredientSets>
+            <li>
+                <thingDef>ET_SoulsnareRifleTwo</thingDef>
+                <amount>1</amount>
+              </li>
               <li>
                 <thingDef>ET_Shocksap</thingDef>
-                <amount>16</amount>
+                <amount>20</amount>
+              </li>
+              <li>
+                <thingDef>ET_Endosap</thingDef>
+                <amount>4</amount>
               </li>
             </ingredientSets>
           </li>
@@ -244,15 +257,24 @@ Duration: 18 days</description>
             <label>evolve soulsnare rifle to stage IV</label>
             <description>Requirements:
 x1 soulnare rifle III
-x24 shocksap
+x30 shocksap
+x6 endosap
 Duration: 22 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleFour</resultDef>
             <amount>1</amount>
             <ingredientSets>
+            <li>
+                <thingDef>ET_SoulsnareRifleThree</thingDef>
+                <amount>1</amount>
+              </li>
               <li>
                 <thingDef>ET_Shocksap</thingDef>
-                <amount>24</amount>
+                <amount>30</amount>
+              </li>
+              <li>
+                <thingDef>ET_Endosap</thingDef>
+                <amount>6</amount>
               </li>
             </ingredientSets>
           </li>
@@ -264,15 +286,24 @@ Duration: 22 days</description>
             <label>restore drained soulsnare rifle</label>
             <description>Requirements:
 x1 drained soulsnare rifle
-x16 shocksap
+x30 shocksap
+x6 endosap
 Duration: 22 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
+                <thingDef>ET_SoulsnareRifleDrained</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
                 <thingDef>ET_Shocksap</thingDef>
-                <amount>16</amount>
+                <amount>30</amount>
+              </li>
+              <li>
+                <thingDef>ET_Endosap</thingDef>
+                <amount>6</amount>
               </li>
             </ingredientSets>
           </li>
@@ -284,7 +315,6 @@ Duration: 22 days</description>
             <label>form genesite nomad helmet</label>
             <description>Requirements:
 x3 terrathyst core
-x20 shocksap
 Duration: 22 days</description>
             <duration>480000</duration>
             <resultDef>ET_LithicLightArmorT1Helmet_Base</resultDef>
@@ -308,7 +338,6 @@ Duration: 22 days</description>
             <label>form genesite nomad armor</label>
             <description>Requirements:
 x4 terrathyst core
-x40 shocksap
 Duration: 24 days</description>
             <duration>480000</duration>
             <resultDef>ET_LithicLightArmorT1_Base</resultDef>
@@ -325,7 +354,7 @@ Duration: 24 days</description>
             </ingredientSets>
           </li>
   <!--=====VIVIUM GEODE=====-->
-          <li>
+          <!--<li>
             <researchPrerequisite>
               <li>ET_MidasClassEssentials</li>
             </researchPrerequisite>
@@ -352,92 +381,7 @@ Duration: 12 days</description>
                 <amount>40</amount>
               </li>
             </ingredientSets>
-          </li>
-<!--=====MARBLE BLOCKS=====-->
-          <li>
-            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
-            <label>razor-carve marble chunk</label>
-            <description>Requirements:
-x1 marble chunk
-Duration: 0.5 days</description>
-            <duration>30000</duration>
-            <resultDef>BlocksMarble</resultDef>
-            <amount>6</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ChunkMarble</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-<!--=====GRANITE BLOCKS=====-->
-          <li>
-            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
-            <label>razor-carve granite chunk</label>
-            <description>Requirements:
-x1 granite chunk
-Duration: 0.5 day</description>
-            <duration>30000</duration>
-            <resultDef>BlocksGranite</resultDef>
-            <amount>6</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ChunkGranite</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-<!--=====SLATE BLOCKS=====-->
-          <li>
-            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
-            <label>razor-carve slate chunk</label>
-            <description>Requirements:
-x1 slate chunk
-Duration: 0.5 day</description>
-            <duration>30000</duration>
-            <resultDef>BlocksSlate</resultDef>
-            <amount>6</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ChunkSlate</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-<!--=====SANDSTONE BLOCKS=====-->
-          <li>
-            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
-            <label>razor-carve sandstone chunk</label>
-            <description>Requirements:
-x1 sandstone chunk
-Duration: 0.5 days</description>
-            <duration>30000</duration>
-            <resultDef>BlocksSandstone</resultDef>
-            <amount>6</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ChunkSandstone</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-<!--=====LIMESTONE BLOCKS=====-->
-          <li>
-            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
-            <label>razor-carve limestone chunk</label>
-            <description>Requirements:
-x1 limestone chunk
-Duration: 0.5 days</description>
-            <duration>30000</duration>
-            <resultDef>BlocksLimestone</resultDef>
-            <amount>6</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ChunkLimestone</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
+          </li>-->
         </recipeSet>
       </li>
     </comps>

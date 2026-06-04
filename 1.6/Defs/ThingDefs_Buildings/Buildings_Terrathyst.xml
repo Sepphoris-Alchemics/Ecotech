@@ -84,7 +84,7 @@ While this crucible is a good starting point and can always prove useful, there 
       <WoodLog>12</WoodLog>
     </killedLeavings>
     <recipes>
-      <li>ET_LithicForgeTierTwoRecipe</li>
+      <!--<li>ET_LithicForgeTierTwoRecipe</li>-->
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>

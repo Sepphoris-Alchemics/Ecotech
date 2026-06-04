@@ -55,7 +55,7 @@ Tier 4 surge seeds: 20
     </tradeTags>
   </ThingDef>
 
-  <ThingDef ParentName="ET_TerrathystPlantBase">
+  <!--<ThingDef ParentName="ET_TerrathystPlantBase">
     <defName>ET_Plant_LithicForgeTierTwo</defName>
     <label>prismite well growth</label>
     <description>A cluster of crystals that will grow into a terrathyst crucible. It does not yet hold any sap, making it usuable until it's fully formed.</description>
@@ -85,5 +85,6 @@ Tier 4 surge seeds: 20
     <tradeTags Inherit='false'>
       <li>ET_LithicStructureSeed</li>
     </tradeTags>
-  </ThingDef>
+  </ThingDef>-->
+  
 </Defs>

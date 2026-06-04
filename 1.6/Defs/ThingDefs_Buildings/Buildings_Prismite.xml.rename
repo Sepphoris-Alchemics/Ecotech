@@ -118,7 +118,7 @@ Place materials nearby to charge/evolve items</inspectString>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
         <!--=====PRISMITE=====-->
-          <li>            
+          <!--<li>            
             <label>form prismite (x250)</label>
             <description>Requirements:
 x750 terrathyst shards
@@ -132,7 +132,7 @@ Duration: 18 days</description>
                 <amount>750</amount>
               </li>
             </ingredientSets>
-          </li>
+          </li>-->
       <!--=====SOULSNARE RIFLE=====-->
       <!--restore drained rifle-->
       <li>

@@ -187,7 +187,7 @@ These smaller growths can grow on any fertile terrain, though larger growths req
             </things>
           </li>
           <!--Prismite additions-->
-          <li>
+          <!--<li>
             <weight>0.6</weight>
             <things>
               <ET_Terrathyst>4</ET_Terrathyst>
@@ -214,7 +214,7 @@ These smaller growths can grow on any fertile terrain, though larger growths req
               <ET_Terrathyst>10</ET_Terrathyst>
               <ET_TierTwoCrystal>8</ET_TierTwoCrystal>
             </things>
-          </li>
+          </li>-->
           <!--Terrathyst heart additions-->
           <li>
             <weight>0.2</weight>

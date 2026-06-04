@@ -586,7 +586,7 @@ to unleash the content within.</inspectString>
 
     <!--=====Prismite=====-->
 
-    <ThingDef ParentName="ResourceBase">
+    <!--<ThingDef ParentName="ResourceBase">
         <defName>ET_TierTwoCrystal</defName>
         <label>prismite</label>
         <description>tiny shards of crystal that's effectively stimulated terrathyst. These shards course with electrical charge, which alters the crystal's opacity and refraction, giving it a pleasing, multicolored appearance.
@@ -640,5 +640,6 @@ to unleash the content within.</inspectString>
             <li>Poor</li>
         </techHediffsTags>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    </ThingDef>
+    </ThingDef>-->
+    
 </Defs>

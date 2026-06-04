@@ -58,7 +58,7 @@
     <allowedArchonexusCount>4</allowedArchonexusCount>
   </ThingDef>
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_LithicForgeTierTwo</defName>
     <label>Prismite Well Cluster</label>
     <description>A cluster of crystals that will grow to a much larger size, forming a prismite well. This growth happens by the crystal converting terrain nutrients to a usable electric charge.
@@ -97,5 +97,6 @@
       <li>ET_LithicStructureSeed</li>
     </tradeTags>
     <allowedArchonexusCount>4</allowedArchonexusCount>
-  </ThingDef>
+  </ThingDef>-->
+
 </Defs>
