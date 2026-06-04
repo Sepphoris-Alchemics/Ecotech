@@ -49,7 +49,7 @@ The roots can be made larger and more effective, but keep in mind that movement 
 
 <!--===== Deeproot Linkspine =====-->
 
-<HediffDef ParentName="ImplantHediffBase">
+<!--<HediffDef ParentName="ImplantHediffBase">
     <defName>ET_DeeprootLinkspine</defName>
     <label>deeproot linkspine</label>
     <description>A spine that connects the host deep into to the earth via a network of roots and nerves. Heightens reflexes, mental awareness, and coordination. However, it can cause personality disassociation breaks at multiple levels.</description>
@@ -87,7 +87,7 @@ The roots can be made larger and more effective, but keep in mind that movement 
         </mentalStateGivers>
       </li>
     </stages>
-  </HediffDef>
+  </HediffDef>-->
 
   <ThingDef ParentName="ET_BodyPartOrganicBase">
     <defName>ET_DeeprootLinkspine</defName>

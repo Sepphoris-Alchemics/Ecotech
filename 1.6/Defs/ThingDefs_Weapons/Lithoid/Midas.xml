@@ -49,7 +49,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_MidasRifle</defaultProjectile>
+				<defaultProjectile>Bullet_MidasRifleMinor</defaultProjectile>
 				<warmupTime>0.8</warmupTime>
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
@@ -134,7 +134,7 @@ Transmutes living targets | ???</inspectString>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_MidasRifle</defaultProjectile>
+				<defaultProjectile>Bullet_MidasRifleMajor</defaultProjectile>
 				<warmupTime>0.3</warmupTime>
 				<burstShotCount>3</burstShotCount>
 				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>

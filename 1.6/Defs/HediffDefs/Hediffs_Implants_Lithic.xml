@@ -578,5 +578,5 @@ The limb itself is slightly less effective than a natural one, but is better tha
     <addsHediff>ET_AlchemicInhibitor</addsHediff>
     <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
   </RecipeDef>
-
+  
 </Defs>

@@ -61,6 +61,42 @@
     <products>
       <ET_Seed_LithicForgeTierTwo>1</ET_Seed_LithicForgeTierTwo>
     </products>
+    <displayPriority>2</displayPriority>
+  </RecipeDef>
+
+<!--=====Crack open Vivium Geode=====-->
+
+  <RecipeDef>
+    <defName>ET_OpenViviumGeodeSealedRecipe</defName>
+    <label>open sealed vivium geode</label>
+    <description>crack open an unsealed vivium geode, revealing the resources inside. The liquid vivium inside will dry up after a short amount of time, but the geode can also be processed into raw vivium, or turned into a more potent midas lance.
+Requires both a steady hand, and a precise eye.</description>
+    <jobString>cracking geode open.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+      <Artistic>4</Artistic>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_ViviumGeodeSealed</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_MidasClassEssentials</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>2400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_ViviumGeode>1</ET_ViviumGeode>
+    </products>
     <displayPriority>1</displayPriority>
   </RecipeDef>
 </Defs>

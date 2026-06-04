@@ -480,7 +480,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <graphicData>
             <texPath>Things/Resource/ViviumGeodeSealed</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>1</drawSize>
+            <drawSize>0.5</drawSize>
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
@@ -505,6 +505,26 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <techHediffsTags>
             <li>Poor</li>
         </techHediffsTags>
+        <comps>
+        <li Class="CompProperties_InspectString">
+				<inspectString>Rick-click with a pawn
+to unleash the content within.</inspectString>
+			</li>
+        <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Form midas lance</useLabel>
+        <useMessage>{PAWN_nameDef} has allowed the geode's internal vivium to flow. The entire geode has turned into a massive heavy gun.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+	  <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+	<li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <ET_MidasRifleOne>1</ET_MidasRifleOne>
+        </leavings>
+        </li>
+        </comps>
     </ThingDef>
 
 <!-- ================ Opened Vivium Geode ================ -->
@@ -517,7 +537,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <graphicData>
             <texPath>Things/Resource/ViviumGeodeOpen</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>1</drawSize>
+            <drawSize>0.5</drawSize>
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
@@ -542,6 +562,26 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <techHediffsTags>
             <li>Poor</li>
         </techHediffsTags>
+        <comps>
+        <li Class="CompProperties_InspectString">
+				<inspectString>Rick-click with a pawn
+to unleash the content within.</inspectString>
+			</li>
+        <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Form midas lance</useLabel>
+        <useMessage>{PAWN_nameDef} has allowed the geode's internal vivium to flow. The entire geode has turned into a massive heavy gun.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+	  <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+	<li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <ET_MidasRifleTwo>1</ET_MidasRifleTwo>
+        </leavings>
+    </li>
+    </comps>
     </ThingDef>
 
     <!--=====Prismite=====-->

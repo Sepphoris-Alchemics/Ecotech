@@ -333,13 +333,13 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
   </comps>
 </HediffDef>
 
-<!--=====Bullet Alchemization=====-->
+<!--=====Minor Bullet Alchemization=====-->
 
 <HediffDef>
-  <defName>ET_TotalAlchemizingInfection_Bullet</defName>
+  <defName>ET_TotalAlchemizingInfection_BulletMinor</defName>
   <label>midas infection</label>
   <hediffClass>HediffWithComps</hediffClass>
-  <description>The total body is slowly being transmuted. Quite uncomfortable.</description>
+  <description>The total body is slowly being transmuted. Quite uncomfortable, but dissipates very quickly.</description>
   <isBad>true</isBad>
   <tendable>false</tendable>
   <maxSeverity>1</maxSeverity>
@@ -381,8 +381,8 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
         <li>
           <thingDef>Gold</thingDef>
           <countRange>
-            <min>50</min>
-            <max>200</max>
+            <min>25</min>
+            <max>100</max>
           </countRange>
           <chance>1</chance>
         </li>
@@ -390,15 +390,117 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
         <li>
           <thingDef>Silver</thingDef>
           <countRange>
-            <min>100</min>
-            <max>250</max>
+            <min>75</min>
+            <max>150</max>
           </countRange>
           <chance>1</chance>
         </li>
+
+        <li>
+          <thingDef>Jade</thingDef>
+          <countRange>
+            <min>50</min>
+            <max>125</max>
+          </countRange>
+          <chance>0.5</chance>
+        </li>
+
+        <li>
+          <thingDef>ET_ViviumGeodeSealed</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+          <chance>0.1</chance>
+        </li>
       </drops>
+
     </li>
-    <li Class="HediffCompProperties_Disappears">
-      <disappearsAfterTicks>12000</disappearsAfterTicks>
+  </comps>
+</HediffDef>
+
+<!--=====Major Bullet Alchemization=====-->
+
+<HediffDef>
+  <defName>ET_TotalAlchemizingInfection_BulletMajor</defName>
+  <label>midas infection</label>
+  <hediffClass>HediffWithComps</hediffClass>
+  <description>The total body is slowly being transmuted. Quite uncomfortable, but dissipates very quickly.</description>
+  <isBad>true</isBad>
+  <tendable>false</tendable>
+  <maxSeverity>1</maxSeverity>
+  <initialSeverity>0.001</initialSeverity>
+  <alwaysShowSeverity>true</alwaysShowSeverity>
+  <defaultLabelColor>(203,148,62)</defaultLabelColor>
+
+  <stages>
+    <li>
+      <label>transmuting</label>
+      <becomeVisible>false</becomeVisible>
+    </li>
+  </stages>
+
+  <comps>
+    <li Class="HediffCompProperties_SeverityPerDay">
+      <severityPerDay>-2</severityPerDay>
+    </li>
+
+    <li Class="Ecotech.HediffCompProperties_BodyPartTransformation_Full">
+      <blockedByHediffs>
+        <li>ET_AlchemicInhibitor</li>
+      </blockedByHediffs>
+
+      <transformSeverity>1</transformSeverity>
+      <checkIntervalTicks>60</checkIntervalTicks>
+      <destroyCorpse>true</destroyCorpse>
+
+      <sendLetter>true</sendLetter>
+      <sendLetterForPlayerFaction>true</sendLetterForPlayerFaction>
+      <sendLetterForPrisonersOfColony>true</sendLetterForPrisonersOfColony>
+      <sendLetterForHostiles>false</sendLetterForHostiles>
+      <sendLetterForOthers>false</sendLetterForOthers>
+
+      <letterLabelKey>ET_LetterLabel_TotalTransmutation</letterLabelKey>
+      <letterTextKey>ET_LetterText_TotalTransmutation</letterTextKey>
+
+      <drops>
+        <li>
+          <thingDef>Gold</thingDef>
+          <countRange>
+            <min>75</min>
+            <max>150</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>125</min>
+            <max>225</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+
+        <li>
+          <thingDef>Jade</thingDef>
+          <countRange>
+            <min>100</min>
+            <max>175</max>
+          </countRange>
+          <chance>0.5</chance>
+        </li>
+
+        <li>
+          <thingDef>ET_ViviumGeodeSealed</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+          <chance>0.2</chance>
+        </li>
+      </drops>
+
     </li>
   </comps>
 </HediffDef>

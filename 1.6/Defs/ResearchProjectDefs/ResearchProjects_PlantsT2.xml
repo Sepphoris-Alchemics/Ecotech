@@ -252,9 +252,11 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
 
   <ResearchProjectDef>
     <defName>ET_BasicOrganicProsthetics</defName>
-    <label>Florografts</label>
-    <description>Todo</description>
-    <baseCost>1600</baseCost>
+    <label>Pattern FG-821-O</label> <!--Florografts-->
+    <!--<description>Todo</description>-->
+    <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    <baseCost>160</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
     <hiddenPrerequisites>
@@ -263,15 +265,17 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>8.00</researchViewX>
     <researchViewY>2.10</researchViewY>
-    <discoveredLetterTitle>About: Florografts</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Florografts</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>ET_BasicOrganicImplants</defName>
-    <label>Stage I Floromimicry</label>
-    <description>Todo</description>
-    <baseCost>1600</baseCost>
+    <label>Pattern SOF-921-O</label> <!--Stage I Floromimicry-->
+    <!--<description>Todo</description>-->
+    <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    <baseCost>160</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
     <prerequisites>
@@ -280,8 +284,8 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>9.00</researchViewX>
     <researchViewY>2.10</researchViewY>
-    <discoveredLetterTitle>About: Stage I Floromimicry</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Stage I Floromimicry</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
 <!--=====BLOOMROT CONTENT=====-->
@@ -345,7 +349,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
 
   <!--=====TERRASAP RESEARCH=====-->
 
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>ET_AdvancedTerrasapFiltering</defName>
     <label>Advanced Terrasap Filtering</label>
     <description>Todo</description>
@@ -363,9 +367,9 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <researchViewY>1.40</researchViewY>
     <discoveredLetterTitle>About: Advanced Terrasap Filtering</discoveredLetterTitle>
     <discoveredLetterText>Todo</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>ET_BasicTerrasapRefinement</defName>
     <label>Terrasap Refinement</label>
     <description>Todo</description>
@@ -380,7 +384,7 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <researchViewY>1.40</researchViewY>
     <discoveredLetterTitle>About: Terrasap Refinement</discoveredLetterTitle>
     <discoveredLetterText>Todo</discoveredLetterText>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
 <!--=====TERRAPLATE=====-->
 

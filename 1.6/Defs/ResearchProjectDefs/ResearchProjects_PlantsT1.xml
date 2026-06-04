@@ -214,9 +214,11 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
 
 <ResearchProjectDef>
   <defName>ET_PrimaExplosiveWeapons</defName>
-  <label>Prima Focusing: Explosive Weapons</label>
-  <description>Todo</description>
-  <baseCost>1500</baseCost>
+  <label>Prima Focusing: Explosive Weapons</label> <!--Prima Focusing: Explosive Weapons-->
+  <!--<description>Pattern PFEW-335-O</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+  <baseCost>150</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Organic</tab>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>

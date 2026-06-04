@@ -36,9 +36,7 @@
     <statBases>
       <WorkToMake>15000</WorkToMake>
     </statBases>
-    <recipeMaker>
-      <displayPriority>500</displayPriority>
-    </recipeMaker>
+    <recipeMaker Inherit="False" IsNull="True" />
   </ThingDef>
 
 <!---->
