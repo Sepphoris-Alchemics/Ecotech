@@ -27,7 +27,7 @@ Despite being armor mostly comprised of tree bark, Periheart Plating is the firs
 The periwood set is one of the efficient sets to make when it comes to organic armors, making it a common sight to see in terratech tribes. However, outfitting many individuals can still take a long time.
 Like all organic armor, this set made at a Terravat.</description>
 		<graphicData>
-			<texPath>Things/Apparel/Periwood/PeriwoodArmor</texPath>
+			<texPath>Things/Apparel/Periheart/PeriheartArmor</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -48,15 +48,14 @@ Like all organic armor, this set made at a Terravat.</description>
 			<li>ApparelArmor</li>
 		</thingCategories>
 		<equippedStatOffsets>
-			<IncomingDamageFactor>0</IncomingDamageFactor>
-			<ToxicResistance>0.1</ToxicResistance>
-			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+			<ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+          	<InjuryHealingFactor>0.2</InjuryHealingFactor>
 		</equippedStatOffsets>
 		<apparel>
 			<tags>
 				<li>LightPlantArmor</li>
 			</tags>
-			<wornGraphicPath>Things/Apparel/Periwood/PeriwoodArmor</wornGraphicPath>
+			<wornGraphicPath>Things/Apparel/Periheart/PeriheartArmor</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Middle</li>
@@ -94,7 +93,7 @@ Like all organic armor, this set made at a Terravat.</description>
 		<techLevel>Neolithic</techLevel>
 		<description>A helmet that is intended to be grown (and worn) alongside Periheart Plating. Due to the armor being fully formed before being worn, the helmet has to be grown seperately.</description>
 		<graphicData>
-			<texPath>Things/Apparel/Periwood_helm/PeriwoodHelmet</texPath>
+			<texPath>Things/Apparel/Periheart_helm/PeriheartHelmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.8</drawSize>
 		</graphicData>
@@ -111,8 +110,8 @@ Like all organic armor, this set made at a Terravat.</description>
 			<EquipDelay>6</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<ToxicResistance>0.1</ToxicResistance>
-			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+			<ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+          	<InjuryHealingFactor>0.1</InjuryHealingFactor>
 		</equippedStatOffsets>
 		<thingCategories>
 			<li>ApparelArmor</li>
@@ -122,7 +121,7 @@ Like all organic armor, this set made at a Terravat.</description>
 			<tags>
 				<li>LightPlantArmor</li>
 			</tags>
-			<wornGraphicPath>Things/Apparel/Periwood_helm/PeriwoodHelmet</wornGraphicPath>
+			<wornGraphicPath>Things/Apparel/Periheart_helm/PeriheartHelmet</wornGraphicPath>
 			<layers>
 				<li>OnSkin</li>
 				<li>Overhead</li>

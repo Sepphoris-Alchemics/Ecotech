@@ -411,7 +411,7 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
             <min>1</min>
             <max>1</max>
           </countRange>
-          <chance>0.1</chance>
+          <chance>0.05</chance>
         </li>
       </drops>
 
@@ -430,13 +430,24 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
   <tendable>false</tendable>
   <maxSeverity>1</maxSeverity>
   <initialSeverity>0.001</initialSeverity>
-  <alwaysShowSeverity>true</alwaysShowSeverity>
+  <alwaysShowSeverity>false</alwaysShowSeverity>
   <defaultLabelColor>(203,148,62)</defaultLabelColor>
 
   <stages>
     <li>
+      <minSeverity>0.5</minSeverity>
       <label>transmuting</label>
-      <becomeVisible>false</becomeVisible>
+      <becomeVisible>true</becomeVisible>
+    </li>
+    <li>
+      <minSeverity>0.75</minSeverity>
+      <label>heavily transmuted</label>
+      <becomeVisible>true</becomeVisible>
+    </li>
+    <li>
+      <minSeverity>0.9</minSeverity>
+      <label>completely transmuted</label>
+      <becomeVisible>true</becomeVisible>
     </li>
   </stages>
 
@@ -497,7 +508,25 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
             <min>1</min>
             <max>1</max>
           </countRange>
-          <chance>0.2</chance>
+          <chance>0.1</chance>
+        </li>
+
+        <li>
+          <thingDef>ET_GoldenHeart</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+          <chance>0.1</chance>
+        </li>
+
+        <li>
+          <thingDef>ET_SharpenedMind</thingDef>
+          <countRange>
+            <min>4</min>
+            <max>12</max>
+          </countRange>
+          <chance>0.1</chance>
         </li>
       </drops>
 
