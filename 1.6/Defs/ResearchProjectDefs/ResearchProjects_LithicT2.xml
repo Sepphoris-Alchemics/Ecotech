@@ -37,6 +37,10 @@
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>4.00</researchViewX>
   <researchViewY>0.00</researchViewY>
+  <customUnlockTexts>
+    <li>Midas Wardlimbs at the Chronite Forge</li>
+    <li>Vivium Geode Shaping at the Chronite Forge</li>
+  </customUnlockTexts>
   <discoveredLetterTitle>New Class Discovered!</discoveredLetterTitle>
   <discoveredLetterText>Todo
   </discoveredLetterText>
@@ -55,6 +59,9 @@
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>5.00</researchViewX>
   <researchViewY>0.00</researchViewY>
+  <customUnlockTexts>
+    <li>Vivium Pylon Lattice at the Chronite Forge</li>
+  </customUnlockTexts>
   <discoveredLetterTitle>About: Midas-Class Structures</discoveredLetterTitle>
   <discoveredLetterText>Todo
   </discoveredLetterText>
@@ -65,7 +72,7 @@
   <label>Pattern MCP-600LM</label> <!--Midas-Class Processing-->
   <!--<description>Todo</description>-->
   <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
-(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
   <baseCost>180</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
@@ -86,7 +93,7 @@
   <label>Pattern AMR-407L</label> <!--Advanced Metal Reclamation-->
   <!--<description>Todo</description>-->
   <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
-(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
   <baseCost>210</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
@@ -109,7 +116,7 @@
   <label>Pattern LWWR-514L</label> <!--Lithic Wild Weapon Restoration-->
   <!--<description>Todo</description>-->
   <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
-(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
   <baseCost>240</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
@@ -132,7 +139,7 @@
   <label>Pattern BLH-507L</label> <!--Basic Lithic Hybridization-->
   <!--<description>Todo</description>-->
   <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
-(Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
   <baseCost>240</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>

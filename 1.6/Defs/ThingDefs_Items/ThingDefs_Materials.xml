@@ -517,7 +517,7 @@ to unleash the content within.</inspectString>
         <useDuration>300</useDuration>
       </li>
 	  <li Class="CompProperties_UseEffectPlaySound">
-        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+        <soundOnUsed>ET_CrystalShatter</soundOnUsed>
       </li>
 	<li Class="CompProperties_UseEffectDestroySelf">
         <leavings>
@@ -574,7 +574,7 @@ to unleash the content within.</inspectString>
         <useDuration>300</useDuration>
       </li>
 	  <li Class="CompProperties_UseEffectPlaySound">
-        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+        <soundOnUsed>ET_CrystalShatter</soundOnUsed>
       </li>
 	<li Class="CompProperties_UseEffectDestroySelf">
         <leavings>
@@ -641,5 +641,5 @@ to unleash the content within.</inspectString>
         </techHediffsTags>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     </ThingDef>-->
-    
+
 </Defs>

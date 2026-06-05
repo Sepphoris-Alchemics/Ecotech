@@ -68,10 +68,10 @@
 
   <RecipeDef>
     <defName>ET_OpenViviumGeodeSealedRecipe</defName>
-    <label>open sealed vivium geode</label>
-    <description>crack open an unsealed vivium geode, revealing the resources inside. The liquid vivium inside will dry up after a short amount of time, but the geode can also be processed into raw vivium, or turned into a more potent midas lance.
+    <label>Open sealed vivium geode</label>
+    <description>Crack open an unsealed vivium geode, revealing the resources inside. The liquid vivium inside will dry up after a short amount of time, but the geode can also be processed into raw vivium, or turned into a more potent midas lance.
 Requires both a steady hand, and a precise eye.</description>
-    <jobString>cracking geode open.</jobString>
+    <jobString>Cracking geode open.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <skillRequirements>
@@ -98,5 +98,48 @@ Requires both a steady hand, and a precise eye.</description>
       <ET_ViviumGeode>1</ET_ViviumGeode>
     </products>
     <displayPriority>1</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ET_FormChroniteForgeSeed</defName>
+    <label>form chronite forge lattice</label>
+    <description>Using chronite on the forge, create a brand new lattice ready for planting, which will grow into a new forge.
+This process takes a long time, requires several saps, and any progress will be lost if the process is interrupted.
+Requires both a steady hand, and a precise eye.</description>
+    <jobString>forming chronite forge lattice.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+      <Artistic>2</Artistic>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Endosap</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_TierOneLithicMastery</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>2800</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_ChroniteForge>1</ET_ViviumGeode>
+    </products>
+    <displayPriority>2</displayPriority>
   </RecipeDef>
 </Defs>

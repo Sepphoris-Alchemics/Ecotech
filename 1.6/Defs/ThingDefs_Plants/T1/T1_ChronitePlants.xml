@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ET_TerrathystPlantBase">
+    <defName>ET_ChroniteForgePlant</defName>
+    <label>Chronite Forge Crystal</label>
+    <description>A burst of crystals that will shape itself into a chronite forge. Chronite forges are a massive step-up from terrathyst crucibles, allowing one to manipulate gear and saps in new ways.</description>
+    <graphicData>
+      <texPath>Things/Plant/ChroniteForge_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <immatureGraphicPath>Things/Plant/ChroniteForge_Immature</immatureGraphicPath>
+      <growDays>2</growDays> 
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(34,159,113,0)</glowColor>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_ChroniteForge</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Growing into: Chronite Forge</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

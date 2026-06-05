@@ -58,6 +58,60 @@
     <allowedArchonexusCount>4</allowedArchonexusCount>
   </ThingDef>
 
+<ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_ChroniteForge</defName>
+    <label>chronite forge lattice</label>
+    <description>A specialized piece of chronite that will grow into a chronite forge. Can be planted into any terrain, and will grow within a couple days.
+\n\nThis lattice ignores fertility, allowing it to be planted on many surfaces.</description>
+    <possessionCount>0</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/ChroniteForgeSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <statBases>
+      <WorkToMake>2400</WorkToMake>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>105</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsPrimaStructures</li>
+    </thingCategories>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>2</Crafting>
+      </skillRequirements>
+      <displayPriority>520</displayPriority>
+    </recipeMaker>
+    <costList>
+      <WoodLog>5</WoodLog>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Plantable">
+        <plantDefToSpawn>ET_ChroniteForgePlant</plantDefToSpawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(34,159,113,0)</glowColor>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_LithicStructureSeed</li>
+    </tradeTags>
+    <allowedArchonexusCount>2</allowedArchonexusCount>
+  </ThingDef>
+
   <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_LithicForgeTierTwo</defName>
     <label>Prismite Well Cluster</label>

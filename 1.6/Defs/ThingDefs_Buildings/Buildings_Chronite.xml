@@ -37,7 +37,7 @@ Tier 2: Chronite Forge:
     <defName>ET_ChroniteForge</defName> <!--Tier 2: Chronite Forge-->
     <label>chronite forge</label>
     <description>A massive crystal chamber made out of precious chronite. This structure allows a tribe to shape and evolve larger lithic items and weapons.
-The chronite of this forge has immense charge potential, giving it a large discount on shocksap usage. However, the forge cannot make smaller items, and still needs endosap to evolve items.
+The chronite of this forge has immense charge potential, giving it a large discount on shocksap usage. However, the forge cannot make smaller items, and and isn't as time-efficient.
 Having a terrathyst crucible is still highly recommended due to it's ability to make smaller items, and because of it's time effeciency.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
@@ -73,19 +73,17 @@ Having a terrathyst crucible is still highly recommended due to it's ability to 
     <uiIconScale>0.5</uiIconScale>
     <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
     <researchPrerequisites>
-      <li>ET_LithicTerratechEssentials</li>
+      <li>ET_TierOneLithicMastery</li>
     </researchPrerequisites>
     <drawerType>MapMeshAndRealTime</drawerType>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
     <surfaceType>Item</surfaceType>
-    <killedLeavings>
-      <WoodLog>12</WoodLog>
-    </killedLeavings>
+    <killedLeavings IsNull="True" />
     <recipes>
       <li>ET_OpenViviumGeodeSealedRecipe</li>
-      <!--<li>ET_LithicForgeTierTwoRecipe</li>-->
+      <li>ET_FormChroniteForgeSeed</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -98,7 +96,7 @@ Having a terrathyst crucible is still highly recommended due to it's ability to 
       </buildingTags>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
-    <tickerType>Rare</tickerType>
+    <tickerType>Normal</tickerType>
     <rotatable>true</rotatable>
     <uiOrder>2710</uiOrder>
     <comps>
@@ -120,9 +118,28 @@ Place materials nearby to charge/evolve items</inspectString>
         <radius>125</radius>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
+<!--=====CHRONITE FORGE LATTICE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_TierOneLithicMastery</li>
+            </researchPrerequisite>
+            <label>Form chronite forge lattice</label>
+            <description>Requirements:
+x20 shocksap
+Duration: 60 days</description>
+            <duration>480000</duration>
+            <resultDef>ET_Seed_ChroniteForge</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>20</amount>
+              </li>
+            </ingredientSets>
+          </li>
 <!--=====TERRATHYST CORE=====-->
           <li>
-            <label>form terrathyst core</label>
+            <label>Form terrathyst core</label>
             <description>Requirements:
 x40 terrathyst shards
 Duration: 4 days</description>
@@ -138,7 +155,7 @@ Duration: 4 days</description>
           </li>
 <!--=====TERRATHYST CORE x4=====-->
           <li>
-            <label>form terrathyst core x4</label>
+            <label>Form terrathyst core x4</label>
             <description>Requirements:
 x120 terrathyst shards
 Duration: 16 days</description>
@@ -154,7 +171,7 @@ Duration: 16 days</description>
           </li>
 <!--=====TERRATHYST CORE x8=====-->
           <li>
-            <label>form terrathyst core x8</label>
+            <label>Form terrathyst core x8</label>
             <description>Requirements:
 x240 terrathyst shards
 Duration: 32 days</description>
@@ -173,7 +190,7 @@ Duration: 32 days</description>
             <researchPrerequisite>
               <li>ET_LithicWeaponCrafting</li>
             </researchPrerequisite>
-            <label>shape soulsnare rifle</label>
+            <label>Soulsnare Rifle: Shape Stage I</label>
             <description>Requirements:
 x3 terrathyst core
 Duration: 18 days</description>
@@ -196,11 +213,10 @@ Duration: 18 days</description>
             <researchPrerequisite>
               <li>ET_BasicChargeManipulation</li>
             </researchPrerequisite>
-            <label>evolve soulsnare rifle to stage II</label>
+            <label>Soulsnare Rifle: Evolve to Stage II</label>
             <description>Requirements:
 x1 soulnare rifle I
 x10 shocksap
-x2 endosap
 Duration: 14 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleTwo</resultDef>
@@ -214,10 +230,6 @@ Duration: 14 days</description>
                 <thingDef>ET_Shocksap</thingDef>
                 <amount>10</amount>
               </li>
-              <li>
-                <thingDef>ET_Endosap</thingDef>
-                <amount>2</amount>
-              </li>
             </ingredientSets>
           </li>
   <!--=====EVOLVE SOULSNARE II=====-->
@@ -225,11 +237,10 @@ Duration: 14 days</description>
             <researchPrerequisite>
               <li>ET_BasicChargeManipulation</li>
             </researchPrerequisite>
-            <label>evolve soulsnare rifle to stage III</label>
+            <label>Soulsnare Rifle: Evolve to Stage III</label>
             <description>Requirements:
 x1 soulnare rifle II
 x20 shocksap
-x4 endosap
 Duration: 18 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleThree</resultDef>
@@ -243,10 +254,6 @@ Duration: 18 days</description>
                 <thingDef>ET_Shocksap</thingDef>
                 <amount>20</amount>
               </li>
-              <li>
-                <thingDef>ET_Endosap</thingDef>
-                <amount>4</amount>
-              </li>
             </ingredientSets>
           </li>
   <!--=====EVOLVE SOULSNARE III=====-->
@@ -254,12 +261,11 @@ Duration: 18 days</description>
             <researchPrerequisite>
               <li>ET_BasicChargeManipulation</li>
             </researchPrerequisite>
-            <label>evolve soulsnare rifle to stage IV</label>
+            <label>Soulsnare Rifle: Evolve to Stage IV</label>
             <description>Requirements:
 x1 soulnare rifle III
 x30 shocksap
-x6 endosap
-Duration: 22 days</description>
+Duration: 24 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleFour</resultDef>
             <amount>1</amount>
@@ -272,10 +278,6 @@ Duration: 22 days</description>
                 <thingDef>ET_Shocksap</thingDef>
                 <amount>30</amount>
               </li>
-              <li>
-                <thingDef>ET_Endosap</thingDef>
-                <amount>6</amount>
-              </li>
             </ingredientSets>
           </li>
   <!--=====DRAINED SOULSNARE RIFLE=====-->
@@ -283,11 +285,10 @@ Duration: 22 days</description>
             <researchPrerequisite>
               <li>ET_BasicChargeManipulation</li>
             </researchPrerequisite>
-            <label>restore drained soulsnare rifle</label>
+            <label>Soulsnare Rifle: Restore drained variant</label>
             <description>Requirements:
 x1 drained soulsnare rifle
 x30 shocksap
-x6 endosap
 Duration: 22 days</description>
             <duration>480000</duration>
             <resultDef>ET_SoulsnareRifleOne</resultDef>
@@ -300,10 +301,6 @@ Duration: 22 days</description>
               <li>
                 <thingDef>ET_Shocksap</thingDef>
                 <amount>30</amount>
-              </li>
-              <li>
-                <thingDef>ET_Endosap</thingDef>
-                <amount>6</amount>
               </li>
             </ingredientSets>
           </li>
@@ -330,12 +327,12 @@ Duration: 22 days</description>
               </li>
             </ingredientSets>
           </li>
-<!--=====GENESITE HELMET=====-->
+<!--=====GENESITE ARMOR=====-->
           <li>
             <researchPrerequisite>
               <li>ET_LithicArmorCrafting</li>
             </researchPrerequisite>
-            <label>form genesite nomad armor</label>
+            <label>Form genesite nomad armor</label>
             <description>Requirements:
 x4 terrathyst core
 Duration: 24 days</description>
@@ -353,37 +350,369 @@ Duration: 24 days</description>
               </li>
             </ingredientSets>
           </li>
-  <!--=====VIVIUM GEODE=====-->
-          <!--<li>
+<!--=====ASSAULT RIFLE=====-->
+          <li>
             <researchPrerequisite>
-              <li>ET_MidasClassEssentials</li>
+              <li>ET_BasicMetalReclamation</li>
             </researchPrerequisite>
-            <label>form sealed vivium geode</label>
+            <label>Basic Metal Reclamation: Assault Rifle</label>
             <description>Requirements:
-x120 gold
-x80 silver
-x40 jade
-Duration: 12 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_ViviumGeodeSealed</resultDef>
-            <amount>1</amount>
+x1 Assault Rifle
+Duration: 4 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>36</amount>
             <ingredientSets>
               <li>
-                <thingDef>Gold</thingDef>
-                <amount>120</amount>
-              </li>
-              <li>
-                <thingDef>Silver</thingDef>
-                <amount>80</amount>
-              </li>
-              <li>
-                <thingDef>Jade</thingDef>
-                <amount>40</amount>
+                <thingDef>Gun_AssaultRifle</thingDef>
+                <amount>1</amount>
               </li>
             </ingredientSets>
-          </li>-->
+          </li>
+<!--=====AUTOPISTOL=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Autopistol</label>
+            <description>Requirements:
+x1 Autopistol
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>14</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_Autopistol</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====BOLT ACTION RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Bolt Action Rifle</label>
+            <description>Requirements:
+x1 Bolt Action Rifle
+Duration: 4 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>24</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_BoltActionRifle</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====CHAIN SHOTGUN=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Chain Shotgun</label>
+            <description>Requirements:
+x1 Chain Shotgun
+Duration: 4 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>33</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_ChainShotgun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EMP LAUNCHER=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: EMP Launcher</label>
+            <description>Requirements:
+x1 EMP Launcher
+Duration: 6 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>43</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_EmpLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Heavy SMG=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Heavy SMG</label>
+            <description>Requirements:
+x1 Heavy SMG
+Duration: 4 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>31</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_HeavySMG</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Incen. Launcher=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Incendiary Launcher</label>
+            <description>Requirements:
+x1 Incendiary Launcher
+Duration: 4 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>31</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_IncendiaryLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====LMG=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: LMG</label>
+            <description>Requirements:
+x1 LMG
+Duration: 4 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>34</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_LMG</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Machine Pistol=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Machine Pistol</label>
+            <description>Requirements:
+x1 Machine Pistol
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>20</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_MachinePistol</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Minigun=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Minigun</label>
+            <description>Requirements:
+x1 Minigun
+Duration: 10 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>100</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_Minigun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Pump Shotgun=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Pump Shotgun</label>
+            <description>Requirements:
+x1 Pump Shotgun
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>24</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_PumpShotgun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Revolver=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Revolver</label>
+            <description>Requirements:
+x1 Revolver
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>14</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_Revolver</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Smoke Launcher=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Smoke Launcher</label>
+            <description>Requirements:
+x1 Smoke Launcher
+Duration: 4 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>31</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_SmokeLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Sniper Rifle=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Sniper Rifle</label>
+            <description>Requirements:
+x1 Sniper Rifle
+Duration: 6 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>39</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_SniperRifle</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Helmet=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Helmet</label>
+            <description>Requirements:
+x1 Flak Helmet
+Duration: 1 day</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>3</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_AdvancedHelmet</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Jacket=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Jacket</label>
+            <description>Requirements:
+x1 Flak Jacket
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>21</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FlakJacket</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Pants=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Pants</label>
+            <description>Requirements:
+x1 Flak Pants
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>18</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FlakPants</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Vest=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Vest</label>
+            <description>Requirements:
+x1 Flak Vest
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>18</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FlakVest</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Mechanoid Chunk=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Mechanoid Slag Chunk</label>
+            <description>Requirements:
+x1 Mechanoid Slag Chunk
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>20</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkMechanoidSlag</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
         </recipeSet>
-      </li>
+        </li>
     </comps>
     <specialDisplayRadius>125</specialDisplayRadius>
   </ThingDef>

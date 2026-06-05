@@ -77,6 +77,10 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
     <researchViewY>0.70</researchViewY>
+    <customUnlockTexts>
+      <li>Weapon shaping at terrathyst crucible</li>
+      <li>Weapon shaping at chronite forge</li>
+    </customUnlockTexts>
     <discoveredLetterTitle>About: Lithic Weapon Crafting</discoveredLetterTitle>
     <discoveredLetterText>Todo</discoveredLetterText>
   </ResearchProjectDef>
@@ -85,16 +89,20 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
   <defName>ET_LithicArmorCrafting</defName>
   <label>Lithic Armor Crafting</label>
   <description>Teaches you how to make lithic armor for the foreseeable future, and also teaches you how make the armor at the terrathyst crucible.
-(Dev note: Lithic armor will bge upgradable, but there wasn't enough time to finish the art.)</description>
+(Dev note: Lithic armor will be upgradable, but there wasn't enough time to finish the art.)</description>
   <baseCost>1800</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
   <prerequisites>
-      <li>ET_LithicTerratechEssentials</li>
-    </prerequisites>
+    <li>ET_LithicTerratechEssentials</li>
+  </prerequisites>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>1.00</researchViewX>
   <researchViewY>1.40</researchViewY>
+  <customUnlockTexts>
+    <li>Armor shaping at terrathyst crucible</li>
+    <li>Armor shaping at chronite forge</li>
+  </customUnlockTexts>
   <discoveredLetterTitle>About: Lithic Armor Crafting</discoveredLetterTitle>
   <discoveredLetterText>Todo</discoveredLetterText>
 </ResearchProjectDef>
@@ -102,7 +110,7 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
 <ResearchProjectDef>
   <defName>ET_BasicChargeManipulation</defName>
   <label>Lithic Charge Manipulation</label>
-  <description>Teaches how to create a structure that can both recharge and evolve usable gear.</description>
+  <description>Teaches how to both recharge and evolve usable gear at lithic structures that can pool terrasaps.</description>
   <baseCost>1200</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
@@ -112,6 +120,10 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>2.00</researchViewX>
   <researchViewY>0.00</researchViewY>
+  <customUnlockTexts>
+    <li>Restoring weapons at the terrathyst crucible</li>
+    <li>Evolving weapons at chronite forge</li>
+  </customUnlockTexts>
   <discoveredLetterTitle>About: Lithic Charge Manipulation</discoveredLetterTitle>
   <discoveredLetterText>Todo</discoveredLetterText>
 </ResearchProjectDef>
@@ -120,7 +132,7 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
     <defName>ET_ThermalTerrasapPooling</defName>
     <label>Pattern TTP-214L</label> <!--Thermal Terrasap Pooling-->
     <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
-    (Dev Note: Unfortunately I wasn't able to finish this before my deadline. However, I'm planning to get this into the mod ASAP, and the research for it will still be valid. Additionally, it'll only be 90% of it's intended cost until it's fully implemented!)</description>
+    \n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
     <!--<description>Teaches how to create two unique terrasaps, which are attuned to the high and low ends of the thermal spectrum. These terrasaps can then be used to control temperature in a multitude of ways.</description>-->
     <baseCost>150</baseCost>
     <techLevel>Neolithic</techLevel>
@@ -135,14 +147,19 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
 <ResearchProjectDef>
     <defName>ET_BasicMetalReclamation</defName>
     <label>Basic Metal Reclamation</label>
-    <description>Teaches how to create structures which can recover the natural materials of specific items that requires standardized technology to access. While the return ratio isn't high, this allows you to recycle items you likely won't have use for, such as guns and machined armor.</description>
+    <description>Teaches how to create structures which can recover the dominant metal of specific items that requires standardized technology to access. While the return ratio isn't high, this allows you to recycle items you likely won't have use for, such as guns and machined armor.
+The ability to recover more resources with higher efficiency is very much possible, but will require more in-depth research.</description>
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>0.70</researchViewY>
-    <discoveredLetterTitle>About: Basic Metal Reclamation</discoveredLetterTitle>
+    <customUnlockTexts>
+    <li>Reclaiming metals from smaller machined items at the terrathyst crucible</li>
+    <li>Reclaiming metals from larger machined items at the chronite forge</li>
+  </customUnlockTexts>
+    <discoveredLetterTitle>About: Basic Metal Reclaimation</discoveredLetterTitle>
     <discoveredLetterText>Todo</discoveredLetterText>
   </ResearchProjectDef>
 
