@@ -7,6 +7,7 @@
 -->
 
   <ThingDef ParentName="ResourceBase">
+    <ignoreConfigErrors>true</ignoreConfigErrors> <!--Needed because it doesn't require ingredients-->
     <defName>ET_Seed_Terraforge</defName>
     <label>Terraforge Channeling Seed</label>
     <description>A durable seed specifically patterned to immediately grow into a Terraforge, which is critical in Ecotech usage. The Terraforge violently roots into the surface beneath it, making it unable to be moved once planted.

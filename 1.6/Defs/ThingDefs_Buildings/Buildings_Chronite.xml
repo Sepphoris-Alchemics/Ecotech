@@ -60,6 +60,7 @@ Having a terrathyst crucible is still highly recommended due to it's ability to 
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>0.2</Flammability>
     </statBases>
+    <interactionCellIcon IsNull="True"/>
     <minifiedDef IsNull="True" />
     <thingCategories IsNull="True"/>
     <placeWorkers>
@@ -80,7 +81,9 @@ Having a terrathyst crucible is still highly recommended due to it's ability to 
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
     <surfaceType>Item</surfaceType>
-    <killedLeavings IsNull="True" />
+    <killedLeavings>
+      <ET_Seed_ChroniteForge>1</ET_Seed_ChroniteForge>
+    </killedLeavings>
     <recipes>
       <li>ET_OpenViviumGeodeSealedRecipe</li>
       <li>ET_FormChroniteForgeSeed</li>
@@ -102,7 +105,27 @@ Having a terrathyst crucible is still highly recommended due to it's ability to 
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>3.9</glowRadius>
-        <glowColor>(239,84,203,0)</glowColor>
+        <glowColor>(34,159,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Art">
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>15</initialConfigurableTargetFuelLevel>
+        <fuelConsumptionRate>0.50</fuelConsumptionRate>
+        <fuelCapacity>30</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Shocksap</fuelLabel>
+        <fuelGizmoLabel>Healthy shocksap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires Shocksap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
       </li>
       <!--<li Class="CompProperties_InspectString">
         <inspectString>Right-click to insert terrathyst core

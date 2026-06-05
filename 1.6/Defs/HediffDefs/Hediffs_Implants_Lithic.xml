@@ -329,7 +329,7 @@ Final results (per eye):
 
 <!--===== Biothite Slumbergem =====-->
 
-<HediffDef ParentName="ImplantHediffBase">
+<!--<HediffDef ParentName="ImplantHediffBase">
     <defName>ET_BiothiteWakegem</defName>
     <label>biothite slumbergem</label>
     <labelNoun>a biothite slumbergem</labelNoun>
@@ -357,9 +357,6 @@ Final results (per eye):
     <descriptionHyperlinks>
 	<RecipeDef>ET_BiothiteWakegem</RecipeDef>
 	</descriptionHyperlinks>
-    <!--<thingSetMakerTags>
-	<li>RewardStandardLowFreq</li>
-	</thingSetMakerTags>-->
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallImplantBase">
@@ -390,7 +387,7 @@ Final results (per eye):
       <li>Brain</li>
     </appliedOnFixedBodyParts>
     <addsHediff>ET_BiothiteWakegem</addsHediff>
-  </RecipeDef>
+  </RecipeDef>-->
   
   <!--<RecipeDef ParentName="SurgeryRemoveImplantBase">
     <defName>ET_RemoveBiothiteWakegem</defName>
@@ -406,7 +403,7 @@ Final results (per eye):
 
 <!--===== Biothite Nerve Dampener =====-->
 
-<HediffDef ParentName="ImplantHediffBase">
+<!--<HediffDef ParentName="ImplantHediffBase">
     <defName>ET_BiothiteNerveDampener</defName>
     <label>biothite nerve dampener</label>
     <description>A specialized biothite implant that melds directly to the spinal cord. Suppresses most pain, but makes the person more suspectable to disease.</description>
@@ -435,9 +432,6 @@ Final results (per eye):
       <Mass>0.2</Mass>
       <WorkToMake>24000</WorkToMake>
     </statBases>
-    <!--<techHediffsTags>
-      <li>ET_OrganicTechTag</li>
-    </techHediffsTags>-->
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
@@ -449,7 +443,7 @@ Final results (per eye):
       <HediffDef>ET_BiothiteNerveDampener</HediffDef>
     </descriptionHyperlinks>
     <jobString>Installing biothite nerve dampener.</jobString>
-    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <surgeryOutcomeEffect IsNull="True" />
     <ingredients>
       <li>
         <filter>
@@ -469,7 +463,7 @@ Final results (per eye):
       <li>Spine</li>
     </appliedOnFixedBodyParts>
     <addsHediff>ET_BiothiteNerveDampener</addsHediff>
-  </RecipeDef>
+  </RecipeDef>-->
 
 <!--===== alchemic inhibitor =====-->
 
@@ -479,7 +473,8 @@ Final results (per eye):
     <description>A highly specialized procedure that prevents one's body from transmuting in any way. This implant forces any transmutation to be focused on 'dummy' flesh that the body discards and quickly regenerates.
 One must replace an entire limb of their choice for this process, as the transmutation requires a large space for the dummy flesh. The limb is still operational, however, albeit not as functional as a natural one.</description>
     <descriptionHyperlinks>
-      <RecipeDef>ET_InstallAlchemicInhibitor</RecipeDef>
+      <RecipeDef>ET_InstallAlchemicInhibitorArm</RecipeDef>
+      <RecipeDef>ET_InstallAlchemicInhibitorLeg</RecipeDef>
     </descriptionHyperlinks>
     <costList>
       <ET_LiquidVivium>6</ET_LiquidVivium>
@@ -578,5 +573,5 @@ The limb itself is slightly less effective than a natural one, but is better tha
     <addsHediff>ET_AlchemicInhibitor</addsHediff>
     <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
   </RecipeDef>
-  
+
 </Defs>

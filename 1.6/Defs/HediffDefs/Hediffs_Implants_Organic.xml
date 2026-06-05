@@ -87,7 +87,7 @@ The roots can be made larger and more effective, but keep in mind that movement 
         </mentalStateGivers>
       </li>
     </stages>
-  </HediffDef>-->
+  </HediffDef>
 
   <ThingDef ParentName="ET_BodyPartOrganicBase">
     <defName>ET_DeeprootLinkspine</defName>
@@ -100,9 +100,6 @@ The roots can be made larger and more effective, but keep in mind that movement 
       <Mass>0.2</Mass>
       <WorkToMake>24000</WorkToMake>
     </statBases>
-    <!--<techHediffsTags>
-      <li>ET_OrganicTechTag</li>
-    </techHediffsTags>-->
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
@@ -114,7 +111,7 @@ The roots can be made larger and more effective, but keep in mind that movement 
       <HediffDef>ET_DeeprootLinkspine</HediffDef>
     </descriptionHyperlinks>
     <jobString>Installing deeproot linkspine.</jobString>
-    <surgeryOutcomeEffect IsNull="True" /> <!-- Always succeeds -->
+    <surgeryOutcomeEffect IsNull="True" />
     <ingredients>
       <li>
         <filter>
@@ -134,6 +131,6 @@ The roots can be made larger and more effective, but keep in mind that movement 
       <li>Spine</li>
     </appliedOnFixedBodyParts>
     <addsHediff>ET_DeeprootLinkspine</addsHediff>
-  </RecipeDef>
+  </RecipeDef>-->
 
 </Defs>

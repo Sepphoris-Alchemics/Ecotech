@@ -16,7 +16,7 @@
 \nLarger limbs and body parts will transmute into higher yields. Internal organs will transmute as well, though not into anything special.
 \nWhile the lance itself cannot be upgraded, the vivium core can cracked open to form an even more effective lance. This can be done at a Chronite Forge.</description>
 		<graphicData>
-			<texPath>Things/WeaponLithoid/Vivium/ViviumRifle_a</texPath>
+			<texPath>Things/WeaponLithoid/Midas/MidasRifle_a</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -81,11 +81,11 @@
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>2700000</lifespanTicks>
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<lifespanBarColor>(135, 110, 57)</lifespanBarColor>
 				<replacementToSpawn>ET_ViviumGeode</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#CB943E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+				<inspectString>&lt;color=#FFB92E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
 Transmutes living targets | ???</inspectString>
 			</li>
 		</comps>
@@ -101,7 +101,7 @@ Transmutes living targets | ???</inspectString>
 \nLarger limbs and body parts will alchemize into higher yields, and specific organs and parts may produce special outcomes (such as the heart).
 \nWhile the lance itself cannot be upgraded, the vivium core can enriched to form an even more effective lance. This can be done at a Chronite Forge.</description>
 		<graphicData>
-			<texPath>Things/WeaponLithoid/Vivium/ViviumRifle_b</texPath>
+			<texPath>Things/WeaponLithoid/Midas/MidasRifle_b</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
@@ -166,11 +166,11 @@ Transmutes living targets | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<lifespanBarColor>(135, 110, 57)</lifespanBarColor>
 				<replacementToSpawn>ET_ViviumGeodeSealed</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#CB943E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
+				<inspectString>&lt;color=#FFB92E&gt;Midas-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
 Transmutes living targets| Specialized drops</inspectString>
 			</li>
 		</comps>

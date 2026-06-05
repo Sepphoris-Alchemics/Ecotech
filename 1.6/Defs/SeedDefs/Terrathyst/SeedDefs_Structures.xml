@@ -7,6 +7,7 @@
 -->
 
   <ThingDef ParentName="ResourceBase">
+    <ignoreConfigErrors>true</ignoreConfigErrors> <!--Needed because it doesn't require ingredients-->
     <defName>ET_Seed_LithicForgeTierOne</defName>
     <label>terrathyst crucible cluster</label>
     <description>A cluster of crystals that will grow to a much larger size, forming a terrathyst crucible. This growth happens by the crystal converting terrain nutrients to a usable electric charge.

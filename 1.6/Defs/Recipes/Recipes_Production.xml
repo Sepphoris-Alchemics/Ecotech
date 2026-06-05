@@ -10,16 +10,7 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
-    <!--<ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>WoodLog</li>
-          </thingDefs>
-        </filter>
-        <count>5</count>
-      </li>
-    </ingredients>-->
+    <ingredients IsNull="True" />
     <researchPrerequisite>ET_OrganicTerratechEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>

@@ -28,7 +28,7 @@ Even by terratech standards, this pylon was often seen excessive and overly viol
       </shadowData>
     </graphicData>
     <drawGUIOverlay>True</drawGUIOverlay>
-    <minifiedDef>MinifiedThing</minifiedDef>
+    <!--<minifiedDef>MinifiedThing</minifiedDef>-->
     <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
     <specialDisplayRadius>7</specialDisplayRadius>

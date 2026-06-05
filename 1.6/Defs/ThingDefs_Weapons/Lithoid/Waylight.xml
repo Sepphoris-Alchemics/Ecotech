@@ -37,7 +37,7 @@
 \nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
 \n\nThe waylight rifle requires 1 sunsap or starsap to successfully be heated into it's next class.</description>
 		<graphicData>
-			<texPath>Things/WeaponLithoid/Waylight/Waylight_a</texPath>
+			<texPath>Things/WeaponLithoid/Waylight/WaylightRifle_a</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -122,7 +122,7 @@ Innate EMP damage | ??? | ??? | ???</inspectString>
 \nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
 \n\nThe waylight rifle requires 1 sunsap or starsap to successfully be heated into it's next class.</description>
 		<graphicData>
-			<texPath>Things/WeaponLithoid/Waylight/Waylight_b</texPath>
+			<texPath>Things/WeaponLithoid/Waylight/WaylightRifle_b</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -208,7 +208,7 @@ Innate EMP damage | Solar Flare Ability | ??? | ???</inspectString>
 \nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
 \n\nThe waylight rifle requires 1 starsap to be successfully ignited into it's next class. Alternatively, one can use sunsap to replenish it's lifespan.</description>
 		<graphicData>
-			<texPath>Things/WeaponLithoid/Waylight/Waylight_c</texPath>
+			<texPath>Things/WeaponLithoid/Waylight/WaylightRifle_c</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
@@ -293,7 +293,7 @@ Innate EMP damage | Solar Flare Ability | Increased Stats | ???</inspectString>
 \n\nThis is the final stage of the waylight rifle, and can no longer be evolved. However, it can still be infused with starsap to replenish it's lifespan.
 \n\nWhispers tell of stellar tech that only O-Class Waylight creations can be used for - and of which can easily rival most glittertech. But exactly what those creations are, and what the process is, is yet to be seen....</description>
 		<graphicData>
-			<texPath>Things/WeaponLithoid/Waylight/Waylight_d</texPath>
+			<texPath>Things/WeaponLithoid/Waylight/WaylightRifle_d</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>

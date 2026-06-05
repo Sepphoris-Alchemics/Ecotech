@@ -448,6 +448,82 @@ Duration: 0.5 days</description>
               </li>
             </ingredientSets>
           </li>
+<!--=====EMP Grenade=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: EMP Grenade</label>
+            <description>Requirements:
+x1 EMP Grenade
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>23</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Weapon_GrenadeEMP</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Firefoam Pack=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Firefoam Pack</label>
+            <description>Requirements:
+x1 Firefoam Pack
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>23</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FirefoampopPack</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+  <!--=====Shield Belt=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Shield Belt</label>
+            <description>Requirements:
+x1 Shield Belt
+Duration: 2 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>24</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_ShieldBelt</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+  <!--=====Shield Belt=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Shield Belt</label>
+            <description>Requirements:
+x1 Shield Belt
+Duration: 1 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>8</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_SmokepopBelt</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
         </recipeSet>
         </li>
     </comps>

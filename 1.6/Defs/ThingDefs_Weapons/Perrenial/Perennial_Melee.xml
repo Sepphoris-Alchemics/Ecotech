@@ -32,9 +32,6 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.2</drawSize>
 		</graphicData>
-		<thingCategories>
-			<li>BasicTerraweapons</li>
-		</thingCategories>
 		<weaponTags Inherit='False'>
 			<li>ET_PlantWeapon</li>
 			<li>ET_PeriwoodMelee</li>
