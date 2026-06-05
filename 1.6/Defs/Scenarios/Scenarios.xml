@@ -69,12 +69,22 @@
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
-					<thingDef>ET_PrimaHeavyArmor</thingDef>
+					<thingDef>ET_PeriwoodArmor</thingDef>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
-					<thingDef>ET_PrimaHeavyHelmet</thingDef>
+					<thingDef>ET_PeriwoodHelmet</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_GenesiteNomadArmorOne</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_GenesiteNomadHelmetOne</thingDef>
 					<count>1</count>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
@@ -85,6 +95,10 @@
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
 					<thingDef>ET_Seed_Terraforge</thingDef>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_TerrathystCrucible</thingDef>
 				</li>
 				<li Class="ScenPart_StartingThing_Defined">
 					<def>StartingThing_Defined</def>
@@ -136,6 +150,22 @@
 				<li Class="ScenPart_StartingResearch">
 					<def>StartingResearch</def>
 					<project>ET_PeriwoodTerraseeds</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicTerratechEssentials</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicTerrasapEssentials</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicWeaponCrafting</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicArmorCrafting</project>
 				</li>
 				<li Class="ScenPart_DisallowBuilding">
 					<def>Rule_DisallowBuilding</def>

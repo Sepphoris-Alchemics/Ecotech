@@ -441,7 +441,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <description>A bottle of sealed liquid vivium. Vivium is an alloy consisting purely of gold and silver, and structurally reinforced with endosap. Vivium is a key component of &lt;color=#BD9ABB&gt;Midas-class&lt;/color&gt; terratech.
 \n\nDespite being formed of such valuable materials, liquid vivium has little use as a commodity. It's use cases in this form are specific to lithic terratech applications; to be valuable to the rest of the world, it must be solidifed into another form.</description>
         <graphicData>
-            <texPath>Things/Resource/ET_LiquidVivium</texPath>
+            <texPath>Things/Resource/Vivium/LiquidVivium</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.6</drawSize>
         </graphicData>
@@ -449,7 +449,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <generateAllowChance>0</generateAllowChance>
         <tradeability>Sellable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <stackLimit>25</stackLimit>
+        <stackLimit>3</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>

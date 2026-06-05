@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="BuildingBase">
+  <!--<ThingDef ParentName="BuildingBase">
     <defName>ET_SapStorage</defName>
     <label>sap cache</label>
     <description>A small, root-woven storage node used to keep saps organized near growth trees.</description>
@@ -46,6 +46,6 @@
     </inspectorTabs>
 
     <tickerType>Normal</tickerType>
-  </ThingDef>
+  </ThingDef>-->
 
 </Defs>

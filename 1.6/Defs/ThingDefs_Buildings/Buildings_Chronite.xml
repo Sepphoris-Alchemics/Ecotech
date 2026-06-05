@@ -150,7 +150,7 @@ Place materials nearby to charge/evolve items</inspectString>
             <description>Requirements:
 x20 shocksap
 Duration: 60 days</description>
-            <duration>480000</duration>
+            <duration>3600000</duration>
             <resultDef>ET_Seed_ChroniteForge</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -166,7 +166,7 @@ Duration: 60 days</description>
             <description>Requirements:
 x40 terrathyst shards
 Duration: 4 days</description>
-            <duration>480000</duration>
+            <duration>24000</duration>
             <resultDef>ET_TerrathystCore</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -182,7 +182,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x120 terrathyst shards
 Duration: 16 days</description>
-            <duration>1920000</duration>
+            <duration>960000</duration>
             <resultDef>ET_TerrathystCore</resultDef>
             <amount>4</amount>
             <ingredientSets>
@@ -198,7 +198,7 @@ Duration: 16 days</description>
             <description>Requirements:
 x240 terrathyst shards
 Duration: 32 days</description>
-            <duration>3840000</duration>
+            <duration>1920000</duration>
             <resultDef>ET_TerrathystCore</resultDef>
             <amount>8</amount>
             <ingredientSets>
@@ -217,7 +217,7 @@ Duration: 32 days</description>
             <description>Requirements:
 x3 terrathyst core
 Duration: 18 days</description>
-            <duration>480000</duration>
+            <duration>918000</duration>
             <resultDef>ET_SoulsnareRifleOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -241,7 +241,7 @@ Duration: 18 days</description>
 x1 soulnare rifle I
 x10 shocksap
 Duration: 14 days</description>
-            <duration>480000</duration>
+            <duration>624000</duration>
             <resultDef>ET_SoulsnareRifleTwo</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -265,7 +265,7 @@ Duration: 14 days</description>
 x1 soulnare rifle II
 x20 shocksap
 Duration: 18 days</description>
-            <duration>480000</duration>
+            <duration>918000</duration>
             <resultDef>ET_SoulsnareRifleThree</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -289,7 +289,7 @@ Duration: 18 days</description>
 x1 soulnare rifle III
 x30 shocksap
 Duration: 24 days</description>
-            <duration>480000</duration>
+            <duration>1440000</duration>
             <resultDef>ET_SoulsnareRifleFour</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -313,7 +313,7 @@ Duration: 24 days</description>
 x1 drained soulsnare rifle
 x30 shocksap
 Duration: 22 days</description>
-            <duration>480000</duration>
+            <duration>1130000</duration>
             <resultDef>ET_SoulsnareRifleOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -336,8 +336,8 @@ Duration: 22 days</description>
             <description>Requirements:
 x3 terrathyst core
 Duration: 22 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_LithicLightArmorT1Helmet_Base</resultDef>
+            <duration>1130000</duration>
+            <resultDef>ET_GenesiteNomadHelmetOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
@@ -359,8 +359,8 @@ Duration: 22 days</description>
             <description>Requirements:
 x4 terrathyst core
 Duration: 24 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_LithicLightArmorT1_Base</resultDef>
+            <duration>1440000</duration>
+            <resultDef>ET_GenesiteNomadArmorOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
@@ -382,7 +382,7 @@ Duration: 24 days</description>
             <description>Requirements:
 x1 Assault Rifle
 Duration: 4 days</description>
-            <duration>30000</duration>
+            <duration>240000</duration>
             <resultDef>Steel</resultDef>
             <amount>36</amount>
             <ingredientSets>
@@ -401,7 +401,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x1 Autopistol
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>14</amount>
             <ingredientSets>
@@ -420,7 +420,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Bolt Action Rifle
 Duration: 4 days</description>
-            <duration>30000</duration>
+            <duration>240000</duration>
             <resultDef>Steel</resultDef>
             <amount>24</amount>
             <ingredientSets>
@@ -439,7 +439,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x1 Chain Shotgun
 Duration: 4 days</description>
-            <duration>30000</duration>
+            <duration>240000</duration>
             <resultDef>Steel</resultDef>
             <amount>33</amount>
             <ingredientSets>
@@ -458,7 +458,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x1 EMP Launcher
 Duration: 6 days</description>
-            <duration>30000</duration>
+            <duration>360000</duration>
             <resultDef>Steel</resultDef>
             <amount>43</amount>
             <ingredientSets>
@@ -477,7 +477,7 @@ Duration: 6 days</description>
             <description>Requirements:
 x1 Heavy SMG
 Duration: 4 days</description>
-            <duration>30000</duration>
+            <duration>240000</duration>
             <resultDef>Steel</resultDef>
             <amount>31</amount>
             <ingredientSets>
@@ -496,7 +496,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x1 Incendiary Launcher
 Duration: 4 days</description>
-            <duration>30000</duration>
+            <duration>240000</duration>
             <resultDef>Steel</resultDef>
             <amount>31</amount>
             <ingredientSets>
@@ -515,7 +515,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x1 LMG
 Duration: 4 days</description>
-            <duration>30000</duration>
+            <duration>240000</duration>
             <resultDef>Steel</resultDef>
             <amount>34</amount>
             <ingredientSets>
@@ -534,7 +534,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x1 Machine Pistol
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>20</amount>
             <ingredientSets>
@@ -553,7 +553,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Minigun
 Duration: 10 days</description>
-            <duration>30000</duration>
+            <duration>600000</duration>
             <resultDef>Steel</resultDef>
             <amount>100</amount>
             <ingredientSets>
@@ -572,7 +572,7 @@ Duration: 10 days</description>
             <description>Requirements:
 x1 Pump Shotgun
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>24</amount>
             <ingredientSets>
@@ -591,7 +591,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Revolver
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>14</amount>
             <ingredientSets>
@@ -610,7 +610,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Smoke Launcher
 Duration: 4 days</description>
-            <duration>30000</duration>
+            <duration>240000</duration>
             <resultDef>Steel</resultDef>
             <amount>31</amount>
             <ingredientSets>
@@ -629,7 +629,7 @@ Duration: 4 days</description>
             <description>Requirements:
 x1 Sniper Rifle
 Duration: 6 days</description>
-            <duration>30000</duration>
+            <duration>360000</duration>
             <resultDef>Steel</resultDef>
             <amount>39</amount>
             <ingredientSets>
@@ -648,7 +648,7 @@ Duration: 6 days</description>
             <description>Requirements:
 x1 Flak Helmet
 Duration: 1 day</description>
-            <duration>30000</duration>
+            <duration>60000</duration>
             <resultDef>Steel</resultDef>
             <amount>3</amount>
             <ingredientSets>
@@ -667,7 +667,7 @@ Duration: 1 day</description>
             <description>Requirements:
 x1 Flak Jacket
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>21</amount>
             <ingredientSets>
@@ -686,7 +686,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Flak Pants
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>18</amount>
             <ingredientSets>
@@ -705,7 +705,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Flak Vest
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>18</amount>
             <ingredientSets>
@@ -724,7 +724,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Mechanoid Slag Chunk
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>20</amount>
             <ingredientSets>

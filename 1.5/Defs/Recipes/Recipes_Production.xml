@@ -10,7 +10,7 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
-    <ingredients>
+    <!--<ingredients>
       <li>
         <filter>
           <thingDefs>
@@ -19,7 +19,7 @@
         </filter>
         <count>5</count>
       </li>
-    </ingredients>
+    </ingredients>-->
     <researchPrerequisite>ET_TerraseedEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>

@@ -10,11 +10,10 @@
       <skillRequirements>
         <Plants>4</Plants>
       </skillRequirements>
-    <ingredients IsNull="True" />
     <researchPrerequisite>ET_OrganicTerratechEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
     <soundWorking>Recipe_MakeBow</soundWorking>
-    <workAmount>6400</workAmount>
+    <workAmount>3200</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>

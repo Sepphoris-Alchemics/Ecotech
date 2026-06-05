@@ -27,7 +27,7 @@
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
-      <ET_Seed_LithicForgeTierOne>1</ET_Seed_LithicForgeTierOne>
+      <ET_Seed_TerrathystCrucible>1</ET_Seed_TerrathystCrucible>
     </products>
     <displayPriority>0</displayPriority>
   </RecipeDef>

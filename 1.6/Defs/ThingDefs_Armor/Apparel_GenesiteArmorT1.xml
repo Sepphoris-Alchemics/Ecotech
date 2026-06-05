@@ -28,7 +28,7 @@ ANOTHER ARMOR WILL INCLUDE THE FOURTH STAGE:
 -->
 
 	<ThingDef ParentName="LithicApparelBase">
-		<defName>ET_LithicLightArmorT1_Base</defName>
+		<defName>ET_GenesiteNomadArmorOne</defName>
 		<label>genesite nomad armor</label>
 		<techLevel>Neolithic</techLevel>
 		<description>An armor made entirely of genesite, far different from any stone that can normally be found. Genesite only exists near the core of a planet, making it impossible to acquire with traditional mining methods.
@@ -100,7 +100,7 @@ This specific set can be charged with Shocksap, which will cause special crystal
 	</ThingDef>
 
 	<ThingDef ParentName="LithicApparelBase">
-		<defName>ET_LithicLightArmorT1Helmet_Base</defName>
+		<defName>ET_GenesiteNomadHelmetOne</defName>
 		<label>genesite nomad helmet</label>
 		<techLevel>Neolithic</techLevel>
 		<description>A helmet that is intended to be formed (and worn) alongside Genesite armor. Multiple variants of the helmets exists, but these variants generally exist for aesthetic purposes.

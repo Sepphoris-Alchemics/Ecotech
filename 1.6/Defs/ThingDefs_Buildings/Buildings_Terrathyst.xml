@@ -123,8 +123,8 @@ Place materials nearby to charge/evolve items</inspectString>
             <label>form terrathyst core</label>
             <description>Requirements:
 x40 terrathyst shards
-Duration: 4 days</description>
-            <duration>480000</duration>
+Duration: 3 days</description>
+            <duration>180000</duration>
             <resultDef>ET_TerrathystCore</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -143,8 +143,8 @@ Duration: 4 days</description>
             <description>Requirements:
 x3 terrathyst core
 x30 shocksap
-Duration: 16 days</description>
-            <duration>480000</duration>
+Duration: 12 days</description>
+            <duration>720000</duration>
             <resultDef>ET_SoulsnareRifleOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -167,8 +167,8 @@ Duration: 16 days</description>
             <description>Requirements:
 x1 drained soulsnare rifle
 x30 shocksap
-Duration: 12 days</description>
-            <duration>480000</duration>
+Duration: 9 days</description>
+            <duration>540000</duration>
             <resultDef>ET_SoulsnareRifleOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
@@ -191,9 +191,9 @@ Duration: 12 days</description>
             <description>Requirements:
 x3 terrathyst core
 x20 shocksap
-Duration: 22 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_LithicLightArmorT1Helmet_Base</resultDef>
+Duration: 16 days</description>
+            <duration>960000</duration>
+            <resultDef>ET_GenesiteNomadHelmetOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
@@ -215,9 +215,9 @@ Duration: 22 days</description>
             <description>Requirements:
 x4 terrathyst core
 x40 shocksap
-Duration: 24 days</description>
-            <duration>480000</duration>
-            <resultDef>ET_LithicLightArmorT1_Base</resultDef>
+Duration: 18 days</description>
+            <duration>918000</duration>
+            <resultDef>ET_GenesiteNomadArmorOne</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
@@ -253,7 +253,7 @@ Duration: 0.5 days</description>
             <label>Razor-carve granite chunk</label>
             <description>Requirements:
 x1 granite chunk
-Duration: 0.5 day</description>
+Duration: 0.5 days</description>
             <duration>30000</duration>
             <resultDef>BlocksGranite</resultDef>
             <amount>6</amount>
@@ -270,7 +270,7 @@ Duration: 0.5 day</description>
             <label>Razor-carve slate chunk</label>
             <description>Requirements:
 x1 slate chunk
-Duration: 0.5 day</description>
+Duration: 0.5 days</description>
             <duration>30000</duration>
             <resultDef>BlocksSlate</resultDef>
             <amount>6</amount>
@@ -457,7 +457,7 @@ Duration: 0.5 days</description>
             <description>Requirements:
 x1 EMP Grenade
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>23</amount>
             <ingredientSets>
@@ -476,7 +476,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Firefoam Pack
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>23</amount>
             <ingredientSets>
@@ -495,7 +495,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Shield Belt
 Duration: 2 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>24</amount>
             <ingredientSets>
@@ -514,7 +514,7 @@ Duration: 2 days</description>
             <description>Requirements:
 x1 Shield Belt
 Duration: 1 days</description>
-            <duration>30000</duration>
+            <duration>120000</duration>
             <resultDef>Steel</resultDef>
             <amount>8</amount>
             <ingredientSets>
