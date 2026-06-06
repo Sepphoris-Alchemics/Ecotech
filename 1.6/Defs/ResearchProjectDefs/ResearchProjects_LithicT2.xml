@@ -6,7 +6,8 @@
 <ResearchProjectDef>
     <defName>ET_TierOneLithicMastery</defName>
     <label>Lithic Aptitude</label>
-    <description>Todo</description>
+    <description>The straightforward - but massive - potential of what forms the backback of lithic terratech is well understood to you. And with everything together, the earth itself with reward you, allowing you to ccreate new growths of chronite.
+\n\nLithic Aptitude shows other Terratech colonies your dedication to the Terratech lifestyle. Terratech tribes will look more favorably on you, though another Mastery is required to show true devotion.</description>
     <baseCost>1800</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>
@@ -19,7 +20,8 @@
     <researchViewX>3.00</researchViewX>
     <researchViewY>0.70</researchViewY>
     <discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <discoveredLetterText>Your dedication to lithic terratech culture is starting to pay off. The milestone you have reached has granted you a new understanding of lithic nature as a whole, and how you can shape it all. This is just the beginning, however.
+\nEntirely new terratech projects, alongside improving old research, awaits you.</discoveredLetterText>
   </ResearchProjectDef>
 
   <!--=====Midas-Class=====-->
@@ -27,7 +29,8 @@
 <ResearchProjectDef>
   <defName>ET_MidasClassEssentials</defName>
   <label>Midas-Class Essentials</label>
-  <description>Todo</description>
+  <description>Teache the basics - and precautions - of the Midas-Class, allowing access to it's secrets.
+While it promises high wealth and very high damage effeciency, one must exert the highest caution with this class. Trunsmutation of their own is a very real risk!</description>
   <baseCost>2100</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
@@ -42,14 +45,15 @@
     <li>Vivium Geode Shaping at the Chronite Forge</li>
   </customUnlockTexts>
   <discoveredLetterTitle>New Class Discovered!</discoveredLetterTitle>
-  <discoveredLetterText>Todo
+  <discoveredLetterText>The Midas Lithic Class is one of the few true lithic classes that has branched out due to it's usefulness.
+By utilizing the planet's natural wealth, the class further allows it's practicioners to access even more wealth, and be able to apply it to more fields.
   </discoveredLetterText>
 </ResearchProjectDef>
 
 <ResearchProjectDef>
   <defName>ET_MidasClassStructures</defName>
   <label>Midas-Class Structures</label>
-  <description>Todo</description>
+  <description>Teaches how to grow crystals that tie directly into Midas terratech. More specifically, teaches how to create the lethal transmutation pylon.</description>
   <baseCost>1800</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
@@ -63,7 +67,8 @@
     <li>Vivium Pylon Lattice at the Chronite Forge</li>
   </customUnlockTexts>
   <discoveredLetterTitle>About: Midas-Class Structures</discoveredLetterTitle>
-  <discoveredLetterText>Todo
+  <discoveredLetterText>You have learned how to make midas-class terrastructures. HOWEVER, a tribe might be incredibly careful when it comes to these structures.
+Structures such as pylons, turrets, etc. can transmutate flesh at incredible speeds. Before creating these structures, make sure your own colonists are outfitted with wardlimbs, and visitors will not be hit by these structures! 
   </discoveredLetterText>
 </ResearchProjectDef>
 

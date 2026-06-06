@@ -214,7 +214,7 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
 
 <ResearchProjectDef>
   <defName>ET_PrimaExplosiveWeapons</defName>
-  <label>Prima Focusing: Explosive Weapons</label> <!--Prima Focusing: Explosive Weapons-->
+  <label>Pattern PFEW-335-O</label> <!--Prima Focusing: Explosive Weapons-->
   <!--<description>Pattern PFEW-335-O</description>-->
   <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
 \n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>

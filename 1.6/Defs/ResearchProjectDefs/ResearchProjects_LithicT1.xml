@@ -60,7 +60,8 @@ It's usability is quite limited, however, and stronger, deeper structures are ne
   <researchViewX>1.00</researchViewX>
   <researchViewY>0.00</researchViewY>
   <discoveredLetterTitle>About: Lithic Terrasap Usage</discoveredLetterTitle>
-  <discoveredLetterText>Todo</discoveredLetterText>
+  <discoveredLetterText>While not used as commonly as in organic terratech, specific terrasaps are used due to their helpful effects. Some are even almost exclusviely used in lithic terratech.
+Shocksap is the most common, used to stimulate crystal growth and create electrical charge. Endosap is used for hardening purposes, generally for weaponry and armor. Embersap and cryosap may be used for temperature control or metallugry, and so on.</discoveredLetterText>
 </ResearchProjectDef>
 
 <ResearchProjectDef>
@@ -81,15 +82,16 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
       <li>Weapon shaping at terrathyst crucible</li>
       <li>Weapon shaping at chronite forge</li>
     </customUnlockTexts>
-    <discoveredLetterTitle>About: Lithic Weapon Crafting</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Lithic Weapon Crafting</discoveredLetterTitle>
+    <discoveredLetterText>Lithic Weapons are generally unique, and are continuously upgraded to stronger variants. Each upgrade will provide unique traits, abilities, and aspects that can be taken advantage of.
+Upgrading generally occurs at a chronite forge, though some weapons might function differently.</discoveredLetterText>-->
   </ResearchProjectDef>
 
 <ResearchProjectDef>
   <defName>ET_LithicArmorCrafting</defName>
   <label>Lithic Armor Crafting</label>
   <description>Teaches you how to make lithic armor for the foreseeable future, and also teaches you how make the armor at the terrathyst crucible.
-(Dev note: Lithic armor will be upgradable, but there wasn't enough time to finish the art.)</description>
+\n(Dev note: Lithic armor will be upgradable, but there wasn't enough time to finish the art.)</description>
   <baseCost>1800</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Lithic</tab>
@@ -103,8 +105,8 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
     <li>Armor shaping at terrathyst crucible</li>
     <li>Armor shaping at chronite forge</li>
   </customUnlockTexts>
-  <discoveredLetterTitle>About: Lithic Armor Crafting</discoveredLetterTitle>
-  <discoveredLetterText>Todo</discoveredLetterText>
+  <!--<discoveredLetterTitle>About: Lithic Armor Crafting</discoveredLetterTitle>
+  <discoveredLetterText>Todo</discoveredLetterText>-->
 </ResearchProjectDef>
 
 <ResearchProjectDef>
@@ -121,11 +123,13 @@ While the weapons can be made at the crucible, upgrading them to stronger stages
   <researchViewX>2.00</researchViewX>
   <researchViewY>0.00</researchViewY>
   <customUnlockTexts>
-    <li>Restoring weapons at the terrathyst crucible</li>
     <li>Evolving weapons at chronite forge</li>
+    <li>Restoring weapons at the terrathyst crucible</li>
+    <li>Restoring weapons at the chronite forge</li>
   </customUnlockTexts>
   <discoveredLetterTitle>About: Lithic Charge Manipulation</discoveredLetterTitle>
-  <discoveredLetterText>Todo</discoveredLetterText>
+  <discoveredLetterText>Lithic creations - most commonly weapons - are generally unique, and are continuously upgraded to stronger variants. Each upgrade will provide unique traits, abilities, and aspects that can be taken advantage of.
+Upgrading generally occurs at a chronite forge, though some items might function differently.</discoveredLetterText>
 </ResearchProjectDef>
 
 <ResearchProjectDef>
@@ -159,8 +163,8 @@ The ability to recover more resources with higher efficiency is very much possib
     <li>Reclaiming metals from smaller machined items at the terrathyst crucible</li>
     <li>Reclaiming metals from larger machined items at the chronite forge</li>
   </customUnlockTexts>
-    <discoveredLetterTitle>About: Basic Metal Reclaimation</discoveredLetterTitle>
-    <discoveredLetterText>Todo</discoveredLetterText>
+    <!--<discoveredLetterTitle>About: Basic Metal Reclaimation</discoveredLetterTitle>
+    <discoveredLetterText>Todo</discoveredLetterText>-->
   </ResearchProjectDef>
 
 </Defs>
