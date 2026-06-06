@@ -473,15 +473,15 @@ Final results (per eye):
     <description>A highly specialized procedure that prevents one's body from transmuting in any way. This implant forces any transmutation to be focused on 'dummy' flesh that the body discards and quickly regenerates.
 One must replace an entire limb of their choice for this process, as the transmutation requires a large space for the dummy flesh. The limb is still operational, however, albeit not as functional as a natural one.</description>
     <descriptionHyperlinks>
-      <RecipeDef>ET_InstallAlchemicInhibitorArm</RecipeDef>
-      <RecipeDef>ET_InstallAlchemicInhibitorLeg</RecipeDef>
+      <RecipeDef>ET_CreateAlchemicInhibitorArm</RecipeDef>
+      <RecipeDef>ET_CreateAlchemicInhibitorLeg</RecipeDef>
     </descriptionHyperlinks>
     <costList>
       <ET_LiquidVivium>6</ET_LiquidVivium>
       <ET_Terrathyst>18</ET_Terrathyst>
     </costList>
     <statBases>
-      <MarketValue>800</MarketValue>
+      <MarketValue>400</MarketValue>
     </statBases>
   </ThingDef>
 
@@ -493,7 +493,7 @@ One must replace an entire limb of their choice for this process, as the transmu
 The limb itself is slightly less effective than a natural one, but is better than a prostehtic. And a limb entirely encased in metal is also pretty... well, you know.</description>
     <descriptionHyperlinks>
       <ThingDef>ET_AlchemicInhibitor</ThingDef>
-      <HediffDef>ET_AlchemizingInfection</HediffDef>
+      <HediffDef>ET_TotalAlchemizingInfection_BulletMajor</HediffDef>
     </descriptionHyperlinks>
     <spawnThingOnRemoved>ET_AlchemicInhibitor</spawnThingOnRemoved>
     <addedPartProps>
@@ -503,18 +503,19 @@ The limb itself is slightly less effective than a natural one, but is better tha
     </addedPartProps>
     <stages>
       <li>
-	    <hungerRateFactor>0.2</hungerRateFactor>
+	    <hungerRateFactor>0.25</hungerRateFactor>
 		    <makeImmuneTo>
-          <li>ET_AlchemizingInfection</li>
           <li>ET_TotalAlchemizingInfection</li>
+          <li>ET_TotalAlchemizingInfection_BulletMinor</li>
+          <li>ET_TotalAlchemizingInfection_BulletMajor</li>
         </makeImmuneTo>
       </li>
     </stages>
   </HediffDef>
 
-  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>ET_InstallAlchemicInhibitorArm</defName>
-    <label>install midas wardlimb (arm)</label>
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_InstallAlchemicInhibitor</defName>
+    <label>install midas wardlimb</label>
     <description>Install a midas wardlimb.</description>
     <descriptionHyperlinks>
       <ThingDef>ET_AlchemicInhibitor</ThingDef>
@@ -522,6 +523,14 @@ The limb itself is slightly less effective than a natural one, but is better tha
     </descriptionHyperlinks>
     <jobString>Installing midas wardlimb.</jobString>
     <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
       <li>
         <filter>
           <thingDefs>
@@ -535,6 +544,52 @@ The limb itself is slightly less effective than a natural one, but is better tha
       <thingDefs>
         <li>ET_AlchemicInhibitor</li>
       </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>ET_AlchemicInhibitor</addsHediff>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+  </RecipeDef>
+
+<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>ET_CreateAlchemicInhibitorArm</defName>
+    <label>create midas wardlimb (arm)</label>
+    <description>Creating a midas wardlimb.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_AlchemicInhibitor</ThingDef>
+      <HediffDef>ET_AlchemicInhibitor</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Creating a midas wardlimb.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_LiquidVivium</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ET_LiquidVivium</li>
+      </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
       <li>Shoulder</li>
@@ -544,28 +599,39 @@ The limb itself is slightly less effective than a natural one, but is better tha
   </RecipeDef>
 
 <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
-    <defName>ET_InstallAlchemicInhibitorLeg</defName>
-    <label>install midas wardlimb (leg)</label>
+    <defName>ET_CreateAlchemicInhibitorLeg</defName>
+    <label>create midas wardlimb (leg)</label>
     <description>Install a midas wardlimb.</description>
     <descriptionHyperlinks>
       <ThingDef>ET_AlchemicInhibitor</ThingDef>
       <HediffDef>ET_AlchemicInhibitor</HediffDef>
     </descriptionHyperlinks>
-    <jobString>Installing midas wardlimb.</jobString>
+    <jobString>Creating a midas wardlimb.</jobString>
     <ingredients>
       <li>
         <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
           <thingDefs>
-            <li>ET_AlchemicInhibitor</li>
+            <li>ET_LiquidVivium</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>4</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>ET_AlchemicInhibitor</li>
+        <li>ET_LiquidVivium</li>
       </thingDefs>
+      <categories>
+        <li>Medicine</li>
+      </categories>
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
       <li>Leg</li>

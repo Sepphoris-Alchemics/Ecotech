@@ -267,9 +267,10 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
 
 <HediffDef>
   <defName>ET_TotalAlchemizingInfection</defName>
-  <label>total alchemizing infection</label>
+  <label>vivification</label>
   <hediffClass>HediffWithComps</hediffClass>
-  <description>The total body is being transmuted. This REALLY sucks.</description>
+  <description>A process that transmutes matter into illustrious materials. The process is instant, but imperfect; most of the material is fused with bone and flesh, but the rest is pure and unmistakable from any that is mined from the world.
+This process is quite deadly, but can be completely nullified by terratech such as wardlimbs.</description>
   <isBad>true</isBad>
   <tendable>false</tendable>
   <maxSeverity>1</maxSeverity>
@@ -311,8 +312,8 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
         <li>
           <thingDef>Gold</thingDef>
           <countRange>
-            <min>150</min>
-            <max>300</max>
+            <min>15</min>
+            <max>30</max>
           </countRange>
           <chance>1</chance>
         </li>
@@ -320,11 +321,30 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
         <li>
           <thingDef>Silver</thingDef>
           <countRange>
-            <min>300</min>
-            <max>600</max>
+            <min>30</min>
+            <max>45</max>
           </countRange>
           <chance>1</chance>
         </li>
+
+        <li>
+          <thingDef>Jade</thingDef>
+          <countRange>
+            <min>15</min>
+            <max>30</max>
+          </countRange>
+          <chance>0.5</chance>
+        </li>
+
+        <li>
+          <thingDef>ET_LiquidVivium</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+          <chance>0.1</chance>
+        </li>
+
       </drops>
     </li>
     <li Class="HediffCompProperties_Disappears">
@@ -337,7 +357,7 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
 
 <HediffDef>
   <defName>ET_TotalAlchemizingInfection_BulletMinor</defName>
-  <label>midas infection</label>
+  <label>stunted midas infection</label>
   <hediffClass>HediffWithComps</hediffClass>
   <description>The total body is slowly being transmuted. Quite uncomfortable, but dissipates very quickly.</description>
   <isBad>true</isBad>
@@ -423,7 +443,7 @@ The Severity fields can overlap, allowing multiple drops to possibly occur at th
 
 <HediffDef>
   <defName>ET_TotalAlchemizingInfection_BulletMajor</defName>
-  <label>midas infection</label>
+  <label>midas plague</label>
   <hediffClass>HediffWithComps</hediffClass>
   <description>The total body is slowly being transmuted. Quite uncomfortable, but dissipates very quickly.</description>
   <isBad>true</isBad>

@@ -6,13 +6,12 @@
 <ThingDef Name="ET_BodyPartOrganicBase" ParentName="BodyPartBase" Abstract="True">
     <techLevel>Neolithic</techLevel>
     <thingCategories>
-      <li>BodyPartsProsthetic</li>
+      <li>OrganicBodyParts</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
+      <texPath>Things/Medical/BodyPart/Organic</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.80</drawSize>
-      <color>(75,113,96)</color>
     </graphicData>
     <statBases>
       <WorkToMake>15000</WorkToMake>
@@ -25,13 +24,12 @@
   <ThingDef Name="ET_BodyPartLithicBase" ParentName="BodyPartBase" Abstract="True">
     <techLevel>Neolithic</techLevel>
     <thingCategories>
-      <li>BodyPartsProsthetic</li>
+      <li>LithicBodyParts</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Health/HealthItem</texPath>
+      <texPath>Things/Medical/BodyPart/Lithic</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.80</drawSize>
-      <color>(97,127,191)</color>
     </graphicData>
     <statBases>
       <WorkToMake>15000</WorkToMake>

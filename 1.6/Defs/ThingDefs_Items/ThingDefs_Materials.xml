@@ -438,12 +438,12 @@ Weapons that use a type of wood come far before the wood source itself, since en
     <ThingDef ParentName="ResourceBase">
         <defName>ET_LiquidVivium</defName>
         <label>liquid vivium</label>
-        <description>A bottle of sealed liquid vivium. Vivium is an alloy consisting purely of gold and silver, and structurally reinforced with endosap. Vivium is a key component of &lt;color=#BD9ABB&gt;Midas-class&lt;/color&gt; terratech.
+        <description>A bottle of sealed liquid vivium. Vivium is an alloy consisting purely of gold and silver, and structurally reinforced with endosap. Vivium is a key component of &lt;color=#FFB92E&gt;Midas-class&lt;/color&gt; terratech.
 \n\nDespite being formed of such valuable materials, liquid vivium has little use as a commodity. It's use cases in this form are specific to lithic terratech applications; to be valuable to the rest of the world, it must be solidifed into another form.</description>
         <graphicData>
             <texPath>Things/Resource/Vivium/LiquidVivium</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.6</drawSize>
+            <drawSize>0.5</drawSize>
         </graphicData>
         <generateCommonality>0</generateCommonality>
         <generateAllowChance>0</generateAllowChance>
@@ -476,7 +476,7 @@ Weapons that use a type of wood come far before the wood source itself, since en
         <defName>ET_ViviumGeodeSealed</defName>
         <label>sealed vivium geode</label>
         <description>A decently sized stone containing liquid vivium. Only the tiniest cracks that allow the metal to properly form into patterns are present; beyond that, the geode is perfectly sealed and harder than granite, to avoid those unworthy from extracting it's precious contents.
-\n\nSealed geodes can be opened with the proper terratech, but one should have clear intentions when doing so. Liquid vivium will harden after a few weeks, and has a tendancy to split back up into gold and silver when doing so. This effectively means an opened geode has a finite lifetime if unused.</description>
+\n\nSealed geodes can be opened with the proper terratech, but one should have clear intentions when doing so. Liquid vivium become impure and unusable after a short amount of time, and effectively means an opened geode has a finite lifetime if unused.</description>
         <graphicData>
             <texPath>Things/Resource/ViviumGeodeSealed</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -533,7 +533,7 @@ to unleash the content within.</inspectString>
         <defName>ET_ViviumGeode</defName>
         <label>vivium geode</label>
         <description>A vivium geode that's been cracked open, revealing the contents inside. Used as a source for Midas-Class weaponry and structures.
-\n\nDespite the present valuable metals inside, an unopened geode is generally more valuable than an opened one. Liquid vivium has a tendancy split back up into gold and silver when drying up, meaning an open core has a finite lifetime if unused.</description>
+\n\nDespite the present valuable metals inside, an unopened geode is generally more valuable than an opened one. The products it create are much more potent, but the geode's liquid vivium becomes unusable after a short amount of time.</description>
         <graphicData>
             <texPath>Things/Resource/ViviumGeodeOpen</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -581,6 +581,9 @@ to unleash the content within.</inspectString>
           <ET_MidasRifleTwo>1</ET_MidasRifleTwo>
         </leavings>
     </li>
+    <li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks>
+      </li>
     </comps>
     </ThingDef>
 

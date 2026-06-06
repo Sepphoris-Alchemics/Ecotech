@@ -91,48 +91,114 @@
         <radius>11</radius>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
-          <li>            <!--terraplate armor-->
+<!--=====Terraplate Armor=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_HeavyPrimaArmor</li>
+            </researchPrerequisite>
             <label>breed terraplate armor</label>
             <description>Requirements:
-x10 Brightsap
-x5 Endosap
-x20 Terramass
-Duration: 10 days</description>
+x6 Brightsap
+x10 Endosap
+x200 Terramass
+Duration: 24 days</description>
             <duration>3000</duration>
             <resultDef>ET_PrimaHeavyArmor</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
                 <thingDef>ET_Brightsap</thingDef>
-                <amount>10</amount>
+                <amount>6</amount>
               </li>
               <li>
                 <thingDef>ET_Endosap</thingDef>
-                <amount>5</amount>
+                <amount>10</amount>
               </li>
               <li>
                 <thingDef>ET_TerramassMaterial</thingDef>
-                <amount>20</amount>
+                <amount>200</amount>
               </li>
             </ingredientSets>
           </li>
-          <li>            <!--terraplate helm-->
+<!--=====Terraplate Helm=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_HeavyPrimaArmor</li>
+            </researchPrerequisite>
             <label>breed terraplate helmet</label>
             <description>Requirements:
-x5 Brightsap
-x1 Endosap
-x10 Terramass
-Duration: 5 days</description>
+x2 Brightsap
+x4 Endosap
+x80 Terramass
+Duration: 10 days</description>
             <duration>3000</duration>
             <resultDef>ET_PrimaHeavyHelmet</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
                 <thingDef>ET_Brightsap</thingDef>
-                <amount>5</amount>
+                <amount>2</amount>
               </li>
               <li>
                 <thingDef>ET_Endosap</thingDef>
+                <amount>4</amount>
+              </li>
+              <li>
+                <thingDef>ET_TerramassMaterial</thingDef>
+                <amount>80</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Periheart Armor=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_PeriwoodArmor</li>
+            </researchPrerequisite>
+            <label>breed periheart armor</label>
+            <description>Requirements:
+x1 Periwood Heart
+x4 Endosap
+x40 Terramass
+Duration: 16 days</description>
+            <duration>3000</duration>
+            <resultDef>ET_PeriwoodArmor</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_TerramassMaterial</thingDef>
+                <amount>4</amount>
+              </li>
+              <li>
+                <thingDef>ET_PeriwoodHeart</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_TerramassMaterial</thingDef>
+                <amount>40</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Periheart Helmet=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_PeriwoodArmor</li>
+            </researchPrerequisite>
+            <label>breed periheart helmet</label>
+            <description>Requirements:
+x1 Periwood Heart
+x1 Endosap
+x10 Terramass
+Duration: 4 days</description>
+            <duration>3000</duration>
+            <resultDef>ET_PeriwoodHelmet</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Endosap</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_PeriwoodHeart</thingDef>
                 <amount>1</amount>
               </li>
               <li>
@@ -141,20 +207,21 @@ Duration: 5 days</description>
               </li>
             </ingredientSets>
           </li>
-          <li>            <!--tricaster-->
+<!--=====Perennial Tricaster=====-->
+          <li>
             <label>breed tricaster</label>
             <description>Requirements:
-x5 Brightsap
-x1 Primcaster
 x1 Periwood Heart
-Duration: 2 days</description>
+x1 Primcaster
+x4 Brightsap
+Duration: 4 days</description>
             <duration>3000</duration>
             <resultDef>ET_PeriwoodTricaster</resultDef>
             <amount>1</amount>
             <ingredientSets>
               <li>
                 <thingDef>ET_Brightsap</thingDef>
-                <amount>5</amount>
+                <amount>4</amount>
               </li>
               <li>
                 <thingDef>ET_PrimaStakecaster</thingDef>

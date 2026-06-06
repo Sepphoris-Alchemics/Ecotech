@@ -292,7 +292,7 @@ This means that the potions can't be administered like normal drugs or medical o
 
 <RecipeDef ParentName="SurgeryFlesh">
   <defName>ET_JadeBrainInfection</defName>
-  <label>induce Midas brain traunsmutation</label>
+  <label>induce Midas brain transmutation</label>
   <description>
     Cause a transmutation of the brain, fragmenting it into many jade crystals and segments. The process is lethal, painful... and quite enriching.
   </description>

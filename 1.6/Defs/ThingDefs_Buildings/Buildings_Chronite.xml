@@ -734,6 +734,55 @@ Duration: 2 days</description>
               </li>
             </ingredientSets>
           </li>
+<!--=====Midas Wardlimb (Arm)=====-->
+          <!--<li>
+            <researchPrerequisite>
+              <li>ET_MidasClassEssentials</li>
+            </researchPrerequisite>
+            <label>Midas Biocrafting: Wardlimb (Arm)</label>
+            <description>Requirements:
+x1 Normal Arm
+x4 Liquid Vivium
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_MidasWardlimb_Arm</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Arm</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_LiquidVivium</thingDef>
+                <amount>4</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+<!--=====Midas Wardlimb (Leg)=====-->
+          <!--<li>
+            <researchPrerequisite>
+              <li>ET_MidasClassEssentials</li>
+            </researchPrerequisite>
+            <label>Midas Biocrafting: Wardlimb (Leg)</label>
+            <description>Requirements:
+x1 Normal Leg
+x4 Liquid Vivium
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_MidasWardlimb_Leg</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Leg</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_LiquidVivium</thingDef>
+                <amount>4</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+
         </recipeSet>
         </li>
     </comps>

@@ -22,7 +22,7 @@
     </ingredients>
     <researchPrerequisite>ET_LithicTerratechEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
-    <soundWorking>Recipe_MakeBow</soundWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
     <workAmount>1600</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
@@ -90,7 +90,7 @@ Requires both a steady hand, and a precise eye.</description>
     </ingredients>
     <researchPrerequisite>ET_MidasClassEssentials</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
-    <soundWorking>Recipe_MakeBow</soundWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
     <workAmount>2400</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
@@ -98,6 +98,40 @@ Requires both a steady hand, and a precise eye.</description>
       <ET_ViviumGeode>1</ET_ViviumGeode>
     </products>
     <displayPriority>1</displayPriority>
+  </RecipeDef>
+
+<!--=====Extract Liquid Vivium=====-->
+
+  <RecipeDef>
+    <defName>ET_ExtractLiquidViviumRecipe</defName>
+    <label>ExtractLiquidVivium</label>
+    <description>Extract the liquid vivium from a geode that's been cracked open. The process wasn't made for human hands and is inefficient, but still produces results.</description>
+    <jobString>Extracting liquid vivium.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_ViviumGeode</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_MidasClassEssentials</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>3200</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_LiquidVivium>1</ET_LiquidVivium>
+    </products>
+    <displayPriority>2</displayPriority>
   </RecipeDef>
 
   <RecipeDef>
@@ -133,13 +167,13 @@ Requires both a steady hand, and a precise eye.</description>
     </ingredients>
     <researchPrerequisite>ET_TierOneLithicMastery</researchPrerequisite>
     <effectWorking>Sculpt</effectWorking>
-    <soundWorking>Recipe_MakeBow</soundWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
     <workAmount>2800</workAmount>
     <allowMixingIngredients>false</allowMixingIngredients>
     <targetCountAdjustment>1</targetCountAdjustment>
     <products>
       <ET_Seed_ChroniteForge>1</ET_Seed_ChroniteForge>
     </products>
-    <displayPriority>2</displayPriority>
+    <displayPriority>3</displayPriority>
   </RecipeDef>
 </Defs>

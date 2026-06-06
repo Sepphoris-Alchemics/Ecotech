@@ -144,6 +144,22 @@
       <resourceReadoutRoot>true</resourceReadoutRoot>
     </ThingCategoryDef>
 
+<!--Body Parts-->
+
+    <ThingCategoryDef>
+      <defName>OrganicBodyParts</defName>
+      <label>Organic terratech</label>
+      <parent>BodyParts</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>LithicBodyParts</defName>
+      <label>Lithic terratech</label>
+      <parent>BodyParts</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
 <!--Seeds-->
 
     <ThingCategoryDef>
