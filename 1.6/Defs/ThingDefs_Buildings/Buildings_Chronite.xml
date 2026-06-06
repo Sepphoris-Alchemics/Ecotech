@@ -86,7 +86,9 @@ Having a terrathyst crucible is still highly recommended due to it's ability to 
     </killedLeavings>
     <recipes>
       <li>ET_OpenViviumGeodeSealedRecipe</li>
+      <li>ET_ExtractLiquidViviumRecipe</li>
       <li>ET_FormChroniteForgeSeed</li>
+      <li>ET_FormViviumPylonSeed</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -142,7 +144,7 @@ Place materials nearby to charge/evolve items</inspectString>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
 <!--=====CHRONITE FORGE LATTICE=====-->
-          <li>
+          <!--<li>
             <researchPrerequisite>
               <li>ET_TierOneLithicMastery</li>
             </researchPrerequisite>
@@ -159,7 +161,7 @@ Duration: 60 days</description>
                 <amount>20</amount>
               </li>
             </ingredientSets>
-          </li>
+          </li>-->
 <!--=====TERRATHYST CORE=====-->
           <li>
             <label>Form terrathyst core</label>

@@ -345,6 +345,24 @@ This process is quite deadly, but can be completely nullified by terratech such 
           <chance>0.1</chance>
         </li>
 
+        <li>
+          <thingDef>ET_GoldenHeart</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>1</max>
+          </countRange>
+          <chance>0.05</chance>
+        </li>
+
+        <li>
+          <thingDef>ET_SharpenedMind</thingDef>
+          <countRange>
+            <min>3</min>
+            <max>12</max>
+          </countRange>
+          <chance>0.05</chance>
+        </li>
+
       </drops>
     </li>
     <li Class="HediffCompProperties_Disappears">

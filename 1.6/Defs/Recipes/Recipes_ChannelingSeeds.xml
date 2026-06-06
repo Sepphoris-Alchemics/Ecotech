@@ -111,7 +111,7 @@
     <displayPriority>2</displayPriority>
   </RecipeDef>
 
-    <RecipeDef>
+    <!--<RecipeDef>
     <defName>ET_RecycleTreeSeedRecipe</defName>
     <label>shape conduit seed (reclaimer) </label>
     <description>Shape a Reclaimer tree seed. Reclaimer trees take industrial products (such as components and armor) and break them down into basic, nature-friendly materials.</description>
@@ -131,7 +131,7 @@
       <ET_Seed_RecycleTreeTierOne>1</ET_Seed_RecycleTreeTierOne>
     </products>
     <displayPriority>3</displayPriority>
-  </RecipeDef>
+  </RecipeDef>-->
 
   <RecipeDef>
     <defName>ET_BiosynthTreeSeedRecipe</defName>

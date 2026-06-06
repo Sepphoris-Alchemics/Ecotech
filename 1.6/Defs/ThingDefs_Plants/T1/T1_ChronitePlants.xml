@@ -29,4 +29,33 @@
     </comps>
   </ThingDef>
 
+<ThingDef ParentName="ET_TerrathystPlantBase">
+    <defName>ET_ViviumPylonPlant</defName>
+    <label>Vivium Pylon Crystal</label>
+    <description>A single crystal that emits a warm, but menacing, aura. Over the next several days it will grow into a Vivium Pylon. Be sure that your colonists are equipped with wardlimbs by then!</description>
+    <graphicData>
+      <texPath>Things/Plant/ViviumPylon_Mature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <immatureGraphicPath>Things/Plant/ViviumPylon_Immature</immatureGraphicPath>
+      <growDays>4</growDays>
+      <visualSizeRange>0.6~1</visualSizeRange>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>1.9</glowRadius>
+        <glowColor>(34,159,113,0)</glowColor>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_MidasTransmutationPylon</transformedThing>
+        <!--<transformedThingStuff>WoodLog</transformedThingStuff>-->
+      </li>
+    <li Class="CompProperties_InspectString">
+      <inspectString>Growing into: Vivium Pylon</inspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>

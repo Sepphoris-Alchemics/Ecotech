@@ -24,7 +24,7 @@ Tier 4 surge seeds: 20
 -->
 
   <ThingDef ParentName="ET_TerrathystPlantBase">
-    <defName>ET_Plant_LithicForgeTierOne</defName>
+    <defName>ET_Plant_TerrathystCrucible</defName>
     <label>terrathyst crucible growth</label>
     <description>A cluster of crystals that will grow into a terrathyst crucible. It does not yet hold any sap, making it usuable until it's fully formed.</description>
     <graphicData>

@@ -124,7 +124,7 @@
     <allowedArchonexusCount>2</allowedArchonexusCount>
   </ThingDef>
 
-  <ThingDef ParentName="ResourceBase">
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_RecycleTreeTierOne</defName>
     <label>Primwood Reclaimer Seed</label>
     <description>A durable seed that can be planted to grow a Reclaimer Tree.
@@ -139,7 +139,7 @@
     </graphicData>
     <stackLimit>8</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
       <MarketValue>105</MarketValue>
@@ -163,5 +163,6 @@
       <li>ET_PrimaStructureSeed</li>
     </tradeTags>
     <allowedArchonexusCount>2</allowedArchonexusCount>
-  </ThingDef>
+  </ThingDef>-->
+
 </Defs>

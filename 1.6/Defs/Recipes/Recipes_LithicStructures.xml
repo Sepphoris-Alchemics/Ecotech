@@ -137,7 +137,7 @@ Requires both a steady hand, and a precise eye.</description>
   <RecipeDef>
     <defName>ET_FormChroniteForgeSeed</defName>
     <label>form chronite forge lattice</label>
-    <description>Using chronite on the forge, create a brand new lattice ready for planting, which will grow into a new forge.
+    <description>Using chronite from the forge, create a brand new lattice ready for planting, which will grow into a new forge.
 This process takes a long time, requires several saps, and any progress will be lost if the process is interrupted.
 Requires both a steady hand, and a precise eye.</description>
     <jobString>forming chronite forge lattice.</jobString>
@@ -175,5 +175,48 @@ Requires both a steady hand, and a precise eye.</description>
       <ET_Seed_ChroniteForge>1</ET_Seed_ChroniteForge>
     </products>
     <displayPriority>3</displayPriority>
+  </RecipeDef>
+
+<RecipeDef>
+    <defName>ET_FormViviumPylonSeed</defName>
+    <label>form vivium pylon lattice</label>
+    <description>Using chronite from the forge, create a brand new lattice ready for growth, which will grow into a vivium transmutation pylon. This pylon takes a while to grow, but is deadly and highly profitable once complete.
+This process takes a long time, requires several saps, and any progress will be lost if the process is interrupted.
+Requires both a steady hand, and a precise eye.</description>
+    <jobString>forming vivium pylon lattice.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+      <Artistic>4</Artistic>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Endosap</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_MidasClassStructures</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>3000</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_ViviumPylon>1</ET_Seed_ViviumPylon>
+    </products>
+    <displayPriority>4</displayPriority>
   </RecipeDef>
 </Defs>
