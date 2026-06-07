@@ -47,7 +47,7 @@
 \n\nThese small growths can grow on any terrain with fertility, with any light level. However, they cannot be influenced like a normal plant (such as with harvest yield), and will break apart only when ready.</description>
     <plant>
       <maxMeshCount>1</maxMeshCount>
-      <mustBeWildToSow>true</mustBeWildToSow>
+      <mustBeWildToSow>false</mustBeWildToSow>
       <showGrowthInInspectPane>false</showGrowthInInspectPane>
       <harvestMinGrowth>1</harvestMinGrowth>
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>

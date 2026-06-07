@@ -61,12 +61,14 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
     <recipes>
-      <!--<li>SmashCorpseMechanoid</li>-->
+      <li>ET_TerraforgeSeedRecipe</li>
+      <li>ET_TerrathystCrucibleRecipe</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>
     <building>
+      <isEdifice>false</isEdifice>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <sowTag>SupportPlantsOnly</sowTag>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
@@ -77,18 +79,7 @@
         <li>Production</li>
       </buildingTags>
     </building>
-    <comps>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>ToolCabinet</li>
-        </linkableFacilities>
-      </li>
-      <li Class="CompProperties_ReportWorkSpeed">
-        <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
-      </li>
-    </comps>
     <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_ReportWorkSpeedPenalties</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>

@@ -34,16 +34,7 @@
     <thingCategories>
       <li>TerraseedsPrimaStructures</li>
     </thingCategories>
-    <recipeMaker>
-      <recipeUsers>
-        <li>ET_TerratechCraftingSpot</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Plants>2</Plants>
-      </skillRequirements>
-      <displayPriority>510</displayPriority>
-    </recipeMaker>
-    <costList IsNull="True" />
+    <recipeMaker Is="True" />
     <comps>
       <li Class="CompProperties_Plantable">
         <plantDefToSpawn>ET_PrimaTerraforgePlant</plantDefToSpawn>

@@ -31,16 +31,7 @@
       <Flammability>0</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
-    <recipeMaker>
-      <recipeUsers>
-        <li>ET_TerratechCraftingSpot</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Plants>2</Plants>
-      </skillRequirements>
-      <displayPriority>600</displayPriority>
-    </recipeMaker>
-    <costList IsNull="True" />
+    <recipeMaker IsNull="True" />
     <thingCategories>
       <li>LithicSeedsStructures</li>
     </thingCategories>

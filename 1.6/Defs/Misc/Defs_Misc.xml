@@ -128,6 +128,22 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
+<WorkGiverDef>
+    <defName>ET_DoBillsTerratechSpot</defName>
+    <label>create seed</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_TerratechCraftingSpot</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
 <!--<WorkGiverDef>
   <defName>ET_InfuseSap_WorkGiver</defName>
   <label>infuse sap</label>
