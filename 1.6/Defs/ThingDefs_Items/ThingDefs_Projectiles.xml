@@ -643,12 +643,46 @@ Anima long range is brought down by 3
       <drawSize>0.3</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>RangedStab</damageDef>
-      <damageAmountBase>20</damageAmountBase>
+      <damageDef>RT_WaylightBulletDamage</damageDef>
+      <damageAmountBase>8</damageAmountBase>
       <stoppingPower>0.4</stoppingPower>
       <armorPenetrationBase>0.6</armorPenetrationBase>
       <speed>60</speed>
+      <extraDamages>
+        <li>
+        <def>EMP</def>
+        <amount>4</amount>
+        <armorPenetration>0.2</armorPenetration>
+        <chance>1</chance>
+        </li>
+      </extraDamages>
     </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">    <!--To-do: balance later-->
+    <defName>Bullet_WaylightRifleHeavy</defName>
+    <label>heavy plasma shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/ET_PlasmaShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RT_WaylightHeavyBulletDamage</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <stoppingPower>0.6</stoppingPower>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <speed>60</speed>
+      <extraDamages>
+        <li>
+        <def>EMP</def>
+        <amount>8</amount>
+        <armorPenetration>0.4</armorPenetration>
+        <chance>1</chance>
+        </li>
+      </extraDamages>
+    </projectile>
+    
   </ThingDef>
   
 </Defs>

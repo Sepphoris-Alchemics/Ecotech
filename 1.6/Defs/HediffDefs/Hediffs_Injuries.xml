@@ -354,6 +354,38 @@
     </stages>
   </HediffDef>
 
+
+<!--=====Solar Burn=====-->
+
+<HediffDef ParentName="InjuryBase">
+    <defName>ET_SolarBurn</defName>
+    <label>solar burn</label>
+    <labelNoun>a solar burn</labelNoun>
+    <description>A burn caused from intense solar radiation.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.05</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>old solar burn</permanentLabel>
+        <instantlyPermanentLabel>deep solar burn</instantlyPermanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Vaporized</destroyedLabel>
+      <destroyedOutLabel>Vaporized</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
 <!--=====Muscle Disruption: Minor=====-->
 <!--TO-DO: Get back to this: this is a more advanced sap poisoning approach-->
 	<!--<HediffDef>

@@ -244,6 +244,58 @@
   </additionalHediffs>
 </DamageDef>
 
+<!--Stellar Damage-->
+
+<DamageDef>
+		<defName>RT_WaylightBulletDamage</defName>
+		<label>solar burn</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>false</externalViolence>
+		<deathMessage>{0} has burned to death.</deathMessage>
+		<hediff>ET_SolarBurn</hediff>
+		<!--<additionalHediffs>
+			<li>
+				<hediff>ET_WaylightBuildup</hediff>
+				<severityPerDamageDealt>0.008</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>-->
+		<isRanged>true</isRanged>
+    <defaultDamage>15</defaultDamage>
+    <armorCategory>Heat</armorCategory>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<!--<armorCategory>Cold</armorCategory> -->
+    <defaultArmorPenetration>0.1</defaultArmorPenetration>
+		<buildingDamageFactor>0.1</buildingDamageFactor>
+		<plantDamageFactor>1</plantDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<makesBlood>false</makesBlood>
+	</DamageDef>
+
+<DamageDef>
+		<defName>RT_WaylightHeavyBulletDamage</defName>
+		<label>solar burn</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>false</externalViolence>
+		<deathMessage>{0} has burned to death.</deathMessage>
+		<hediff>ET_SolarBurn</hediff>
+		<!--<additionalHediffs>
+			<li>
+				<hediff>ET_WaylightBuildup</hediff>
+				<severityPerDamageDealt>0.008</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>-->
+		<isRanged>true</isRanged>
+    <defaultDamage>15</defaultDamage>
+    <armorCategory>Heat</armorCategory>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<!--<armorCategory>Cold</armorCategory> -->
+    <defaultArmorPenetration>5</defaultArmorPenetration>
+		<buildingDamageFactor>5</buildingDamageFactor>
+		<plantDamageFactor>5</plantDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<makesBlood>false</makesBlood>
+	</DamageDef>
+
 <!--PeriwoodDamage-->
 
 <!--<DamageDef>

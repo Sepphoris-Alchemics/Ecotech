@@ -3,21 +3,21 @@
 
 	<!--WAYLIGHT CYCLER MECHANICS:
 		-The WAYLIGHT CYCLER is a hybrid rifle that can be attuned to various wavelengths of light, each having different effects.
-		-The WAYLIGHT CYCLER starts off in it's Class-K stage.
+		-The WAYLIGHT CYCLER starts off in it's Class-M stage.
 			-The damage values and stats are incredibly low, on part with a standard assault rifle or carbine.
 			-It is charged with shocksap in this state.
 		-When the WAYLIGHT CYCLER is imbued with sunsap or starsap, it's class-type is increased.
 			-The class-types are as followed:
-				-Stage 1: K-Class
-				-Stage 2: F-Class
+				-Stage 1: M-Class
+				-Stage 2: K-Class
 				-Stage 3: B-Class
 				-Stage 4: O-Class
 			-Class O can only be acquired by using Starsap on a B-Class
 		-The WAYLIGHT CYCLER gains the following at each class:
-				-Class K: Fires projectiles that deal additional EMP and burning damage.
-				-Class F: Fires a flare deals a massive burst of burning damage + damage to all mechanoids and electrical structures.
-				-Class B: Stat increases, projectile count increases.
-				-Class O: Gains a ray with 150 range that has extremely high accuracy and damage.
+				-Class M: Fires projectiles that deal additional EMP and burning damage.
+				-Class K: Stat increases, projectile count increases
+				-Class A: Gains two additional fire modes: a focused laser mode and a seige mode.
+				-Class O: Alt modes are improved, class O can be made is infinite.
 		-Like other Waylight creations, this weapon can be broken down to discover Stellarite.
 		-Waylight weapons can also use sunsap to be restored.
 		-Like most other Lithic weapons, the WAYLIGHT CYCLER has some basic rules it follows:
@@ -31,11 +31,11 @@
 
 	<ThingDef ParentName="BaseWaylightTerraweapon">
 		<defName>ET_WaylightRifleOne</defName>
-		<label>waylight rifle (K-Class)</label>
+		<label>waylight rifle (M-Class)</label>
 		<description>A rifle forged from metal of a star, and also burning with the heart of one. One of the few Stellar-class weapons that has managed to remain on the Rimworld.
-\n\nIt's lithic hybridization allows it to be upgraded, like other lithic weapons. However, it's stellar nature requires the upgrade materials to be sunsap or starsap, as opposed to shocksap.
+\nThis variant is one of the weakest of the stellar weapons; it's output it not very powerful or fast, but this allows it an infinite lifespan.
 \nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
-\n\nThe waylight rifle requires 1 sunsap or starsap to successfully be heated into it's next class.</description>
+\nThe waylight rifle requires 1 sunsap or starsap to successfully be heated into it's next star class.</description>
 		<graphicData>
 			<texPath>Things/WeaponLithoid/Waylight/WaylightRifle_a</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -45,7 +45,6 @@
 		<weaponTags Inherit='False'>
 			<li>ET_StellarWeapon</li>
 			<li>ET_StellarWeaponStageOne</li>
-			<li>ET_SpacetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -72,10 +71,10 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
 				<warmupTime>2</warmupTime>
-				<burstShotCount>2</burstShotCount>
-				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<range>26.9</range>
-				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<soundCast>ET_Sound_AnimaShot1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -98,15 +97,15 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-		<tickerType>Rare</tickerType>
+		<!--<tickerType>Rare</tickerType>-->
 		<comps>
-			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+			<!--<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<!--<lifespanTicks>2700000</lifespanTicks>-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
-			</li>
+				<lifespanTicks>2700000</lifespanTicks>
+				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
+			</li>-->
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+				<inspectString>&lt;color=#AA9CE8&gt;Stellar-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
 Innate EMP damage | ??? | ??? | ???</inspectString>
 			</li>
 		</comps>
@@ -116,7 +115,7 @@ Innate EMP damage | ??? | ??? | ???</inspectString>
 
 	<ThingDef ParentName="BaseWaylightTerraweapon">
 		<defName>ET_WaylightRifleTwo</defName>
-		<label>waylight rifle (F-Class)</label>
+		<label>waylight rifle (K-Class)</label>
 		<description>A rifle forged from metal of a star, and also burning with the heart of one. One of the few Stellar-class weapons that has managed to remain on the Rimworld.
 \n\nIt's lithic hybridization allows it to be upgraded, like other lithic weapons. However, it's stellar nature requires the upgrade materials to be sunsap or starsap, as opposed to shocksap.
 \nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
@@ -137,12 +136,12 @@ Innate EMP damage | ??? | ??? | ???</inspectString>
 		</weaponClasses>
 		<relicChance>0</relicChance>
 		<statBases>
-			<MaxHitPoints>160</MaxHitPoints>
+			<MaxHitPoints>180</MaxHitPoints>
 			<AccuracyTouch>0.30</AccuracyTouch>
 			<AccuracyShort>0.40</AccuracyShort>
 			<AccuracyMedium>0.60</AccuracyMedium>
 			<AccuracyLong>0.75</AccuracyLong>
-			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>5.4</Mass> <!--Heavy due to stellar mass, but not as heavy as a pure stellar-->
 			<Flammability>0</Flammability>
@@ -156,11 +155,11 @@ Innate EMP damage | ??? | ??? | ???</inspectString>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
-				<warmupTime>2</warmupTime>
-				<burstShotCount>2</burstShotCount>
-				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-				<range>26.9</range>
-				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<warmupTime>1.2</warmupTime>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<range>32.9</range>
+				<soundCast>ET_Sound_AnimaShot1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -188,12 +187,12 @@ Innate EMP damage | ??? | ??? | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
 				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
-Innate EMP damage | Solar Flare Ability | ??? | ???</inspectString>
+				<inspectString>&lt;color=#AA9CE8&gt;Stellar-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
+Innate EMP damage | Increased stats | ??? | ???</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -202,7 +201,7 @@ Innate EMP damage | Solar Flare Ability | ??? | ???</inspectString>
 
 <ThingDef ParentName="BaseWaylightTerraweapon">
 		<defName>ET_WaylightRifleThree</defName>
-		<label>waylight rifle (B-Class)</label>
+		<label>waylight rifle (A-Class)</label>
 		<description>A rifle forged from metal of a star, and also burning with the heart of one. One of the few Stellar-class weapons that has managed to remain on the Rimworld.
 \n\nIt's lithic hybridization allows it to be upgraded, like other lithic weapons. However, it's stellar nature requires the upgrade materials to be sunsap or starsap, as opposed to shocksap.
 \nOne should be very careful when using this weapon; stellar energy is extremely powerful... both in damage output, and should the weapon itself get destroyed!
@@ -216,6 +215,7 @@ Innate EMP damage | Solar Flare Ability | ??? | ???</inspectString>
 		<weaponTags Inherit='False'>
 			<li>ET_StellarWeapon</li>
 			<li>ET_StellarWeaponStageThree</li>
+			<li>ET_SpacetouchedWeapon</li>
 		</weaponTags>
 		<weaponClasses>
 			<li>Ranged</li>
@@ -238,15 +238,42 @@ Innate EMP damage | Solar Flare Ability | ??? | ???</inspectString>
 		<equippedAngleOffset>30</equippedAngleOffset>
 		<verbs>
 			<li>
+				<label>WaylightRifleNormalMode</label>
 				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/WaylightShots</commandIcon>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
-				<warmupTime>2</warmupTime>
+				<warmupTime>1.2</warmupTime>
 				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<accuracyTouch>0.30</accuracyTouch>
+				<accuracyShort>0.40</accuracyShort>
+				<accuracyMedium>0.60</accuracyMedium>
+				<accuracyLong>0.75</accuracyLong>
+				<minRange>0</minRange>
 				<range>32.9</range>
-				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<soundCast>ET_Sound_AnimaShot1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.8</commonality>
+			</li>
+			<li>
+				<label>WaylightRifleHeavyMode</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Lithoid/WaylightHeavy</commandIcon>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WaylightRifleHeavy</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<accuracyTouch>0.40</accuracyTouch>
+				<accuracyShort>0.60</accuracyShort>
+				<accuracyMedium>0.50</accuracyMedium>
+				<accuracyLong>0.45</accuracyLong>
+				<minRange>0</minRange>
+				<range>17.9</range>
+				<soundCast>ET_Sound_AnimaShot1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>0.2</commonality>
 			</li>
 		</verbs>
 		<tools>
@@ -270,15 +297,43 @@ Innate EMP damage | Solar Flare Ability | ??? | ???</inspectString>
 		</tools>
 		<tickerType>Rare</tickerType>
 		<comps>
+		<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>WaylightRifleNormalMode</label>
+						<visualLabel>toggle low-intensity shots</visualLabel>
+						<description>Fires fast plasma shots that are ideal for combat.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/WaylightShots</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>WaylightRifleHeavyMode</label>
+						<visualLabel>toggle heavy plasma shots</visualLabel>
+						<description>Fires plasma shots that are slow, but easily melt through structures and mechanoids.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Lithoid/WaylightHeavy</switchIcon>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>4500000</lifespanTicks>
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<lifespanTicks>7200000</lifespanTicks>
+				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
 				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
-Innate EMP damage | Solar Flare Ability | Increased Stats | ???</inspectString>
+				<inspectString>&lt;color=#AA9CE8&gt;Stellar-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
+Innate EMP damage | Increased stats | Focused fire modes | ???</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
@@ -326,11 +381,11 @@ Innate EMP damage | Solar Flare Ability | Increased Stats | ???</inspectString>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_WaylightRifle</defaultProjectile>
-				<warmupTime>2</warmupTime>
+				<warmupTime>1.2</warmupTime>
 				<burstShotCount>4</burstShotCount>
-				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<range>32.9</range>
-				<soundCast>ET_Sound_BlowgunMedium</soundCast>
+				<soundCast>ET_Sound_AnimaShot1</soundCast>
 				<muzzleFlashScale>0</muzzleFlashScale>
 			</li>
 		</verbs>
@@ -353,17 +408,17 @@ Innate EMP damage | Solar Flare Ability | Increased Stats | ???</inspectString>
 				<cooldownTime>2.4</cooldownTime>
 			</li>
 		</tools>
-		<tickerType>Rare</tickerType>
+		<!--<tickerType>Rare</tickerType>-->
 		<comps>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
-				<lifespanTicks>5400000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<lifespanTicks>9000000</lifespanTicks>
+				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
 				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>&lt;color=#CB943E&gt;Hybrid-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage IV&lt;/color&gt;
-Innate EMP damage | Solar Flare Ability | Increased Stats | Solar Ray Ability</inspectString>
+				<inspectString>&lt;color=#AA9CE8&gt;Stellar-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage IV&lt;/color&gt;
+Innate EMP damage | Increased stats | Focused fire modes | Can be hyperforged</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
