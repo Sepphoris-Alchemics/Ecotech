@@ -90,7 +90,7 @@
       <drawSize>(1.2,1.2)</drawSize>
       <drawOffset>(0,0,0.2)</drawOffset>
       <texPath>Things/Building/PrimaSapLamp/PrimaSapLamp_Base</texPath>
-      <graphicClass>Graphic_Single</graphicClass>>
+      <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.3, 0.5, 0.3)</volume>
         <offset>(0,0,-0.23)</offset>

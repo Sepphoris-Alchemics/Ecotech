@@ -87,11 +87,11 @@ This specific set can be charged with Shocksap, which will cause special crystal
 			</drawData>
 		</apparel>
 		<comps>
-			<li Class="VEF.Apparels.CompProperties_SwitchApparel">
+			<!--<li Class="VEF.Apparels.CompProperties_SwitchApparel">
 				<SwitchTo>ET_PrimaHeavyArmor</SwitchTo>
 				<graphicPath>UI/Gizmo/Switch</graphicPath>	
 				<Label>Transform</Label>
-			</li>
+			</li>-->
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
 -10% damage taken | Ability: Fortify | ???</inspectString>

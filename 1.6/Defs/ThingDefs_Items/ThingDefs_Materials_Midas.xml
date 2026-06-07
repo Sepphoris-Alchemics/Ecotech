@@ -58,7 +58,7 @@ Multiple fragments of a brain alchemizing is common (when it happens), but a FUL
         <generateAllowChance>0</generateAllowChance>
         <tradeability>Sellable</tradeability>
         <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <stackLimit>1</stackLimit>
+        <stackLimit>30</stackLimit>
         <useHitPoints>true</useHitPoints>
         <soundInteract>Wood_Drop</soundInteract>
         <soundDrop>Wood_Drop</soundDrop>

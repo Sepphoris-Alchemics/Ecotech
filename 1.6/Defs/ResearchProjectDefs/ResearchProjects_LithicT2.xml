@@ -11,6 +11,9 @@
     <baseCost>1800</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>
+    <requiredAnalyzed>
+      <li>ET_KeyLithicAptitude</li>
+    </requiredAnalyzed>
     <hiddenPrerequisites>
       <li>ET_BasicChargeManipulation</li>
       <li>ET_LithicWeaponCrafting</li>

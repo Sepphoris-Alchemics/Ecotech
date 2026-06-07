@@ -423,6 +423,71 @@ One can only learn how to maintain organic-class wild weapons through this tome;
         </techHediffsTags>
     </ThingDef>
 
+<!-- ================ Lithic Aptitude ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_KeyLithicAptitude</defName>
+        <label>Devotee's Tome: Lithic Aptitude</label>
+        <description>A thick tome, protected by terrathyst and guilded with periwood. This book holds guarded Terratech knowledge, and is quite valuable.
+This tome teaches one how to take the next step in lithic terratech, going beyond the basics of this path and learning what this path of terratech can truly offer.
+\nA Terratech initiate can study this at a Terratech research bench in order to successfully experiment with, and understand, the knowledge held within.</description>
+        <graphicData>
+            <drawSize>0.6</drawSize>
+            <texPath>Things/Resource/Tome/Tome_LithicInitiate</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Buyable</tradeability>
+        <tradeTags>
+		    <li>ET_TechKeys</li>
+            <li>ET_TechKeysInitiate</li>
+        </tradeTags>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>5</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>600</MarketValue>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <Flammability>3</Flammability>
+            <DeteriorationRate>1.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ET_TechKeys</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_CompAnalyzableUnlockResearch">
+                <analysisID>14181110</analysisID>
+                <requiresMechanitor>false</requiresMechanitor>
+                <analysisDurationHours>12</analysisDurationHours>
+                <destroyedOnAnalyzed>true</destroyedOnAnalyzed>
+                <completedLetterLabel>Tome studied: {RESEARCH} unlocked</completedLetterLabel>
+                <completedLetter>By studying this tome, {PAWN_labelShort} has acquired the insight needed for the research project(s) {RESEARCH}.\n\nYou can now complete this research at a Terraseed research bench.</completedLetter>
+                <completedLetterDef>PositiveEvent</completedLetterDef>
+                <activateTexPath>UI/Icons/Study</activateTexPath>
+                <activateLabelString>Study...</activateLabelString>
+                <activateDescString>Study the tome.</activateDescString>
+                <jobString>Study the tome</jobString>
+                <guiLabelString>Choose who should study the tome</guiLabelString>
+                <inspectString>Can be studied for exclusive knowledge.</inspectString>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>false</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+                </targetingParameters>
+            </li>
+        </comps>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
     <!-- ================ Lithic Wild Weapon Restoration ================ -->
 
     <ThingDef ParentName="ResourceBase">
