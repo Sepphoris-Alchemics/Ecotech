@@ -129,6 +129,23 @@
   </WorkGiverDef>
 
 <WorkGiverDef>
+    <defName>ET_DoBillsChroniteForge</defName>
+    <label>create item</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_ChroniteForge</li>
+    </fixedBillGiverDefs>
+    <verb>crafting items</verb>
+    <gerund>crafting items at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+<WorkGiverDef>
     <defName>ET_DoBillsTerratechSpot</defName>
     <label>create seed</label>
     <giverClass>WorkGiver_DoBill</giverClass>

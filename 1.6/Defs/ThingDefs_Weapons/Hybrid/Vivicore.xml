@@ -110,9 +110,9 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 		</comps>
 		<tradeability>None</tradeability>
 		<tradeTags>
-			<li>ExoticMisc</li>
-      <li>Artifact</li>
-    </tradeTags>
+			<li>ET_TerratechHybridWeapon</li>
+      		<li>ET_TerratechExoticWeapon</li>
+    	</tradeTags>
 	</ThingDef>
 
 <!--Tier 2: Utility improvement-->
@@ -218,9 +218,9 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 		</comps>
 		<tradeability>None</tradeability>
 		<tradeTags>
-			<li>ExoticMisc</li>
-      <li>Artifact</li>
-    </tradeTags>
+			<li>ET_TerratechHybridWeapon</li>
+      		<li>ET_TerratechExoticWeapon</li>
+    	</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseVivicoreTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
@@ -323,9 +323,9 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 		</comps>
 		<tradeability>None</tradeability>
 		<tradeTags>
-			<li>ExoticMisc</li>
-      <li>Artifact</li>
-    </tradeTags>
+			<li>ET_TerratechHybridWeapon</li>
+      		<li>ET_TerratechExoticWeapon</li>
+    	</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseVivicoreTerraweapon" MayRequire="Ludeon.RimWorld.Biotech">
@@ -486,8 +486,8 @@ Royal Weapon | +20% social impact | Slows/stuns targets | Secondary Beam Attack<
 		</comps>
 		<tradeability>Sellable</tradeability>
 		<tradeTags>
-			<li>ExoticMisc</li>
-      <li>Artifact</li>
-    </tradeTags>
+			<li>ET_TerratechHybridWeapon</li>
+      		<li>ET_TerratechExoticWeapon</li>
+    	</tradeTags>
 	</ThingDef>
 </Defs>

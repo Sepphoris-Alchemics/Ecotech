@@ -34,6 +34,9 @@
     <statBases>
       <WorkToMake>15000</WorkToMake>
     </statBases>
+    <tradeTags Inherit="False">
+			<li>ET_TerratechLithicBodyPart</li>
+    </tradeTags>
     <recipeMaker Inherit="False" IsNull="True" />
   </ThingDef>
 

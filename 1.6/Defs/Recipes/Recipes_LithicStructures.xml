@@ -73,7 +73,7 @@ Requires both a steady hand, and a precise eye.</description>
 
   <RecipeDef>
     <defName>ET_ExtractLiquidViviumRecipe</defName>
-    <label>ExtractLiquidVivium</label>
+    <label>extract liquid vivium</label>
     <description>Extract the liquid vivium from a geode that's been cracked open. The process wasn't made for human hands and is inefficient, but still produces results.</description>
     <jobString>Extracting liquid vivium.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>

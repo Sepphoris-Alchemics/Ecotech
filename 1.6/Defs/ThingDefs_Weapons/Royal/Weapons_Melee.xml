@@ -88,9 +88,9 @@ Accuracy follows charge rifles-->
       </li>
 		</comps>
 		<tradeTags>
-			<li>ExoticMisc</li>
-      <li>Artifact</li>
-    </tradeTags>
+			<li>ET_TerratechRoyalWeapon</li>
+      		<li>ET_TerratechExoticWeapon</li>
+    	</tradeTags>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseWeapon">
@@ -106,7 +106,6 @@ Accuracy follows charge rifles-->
       <li>WeaponsMelee</li>
     </thingCategories>
 		<weaponTags Inherit='False'>
-      <li>ET_PlantWeapon</li>
 	  <li>ET_WatertouchedWeapon</li>
 		</weaponTags>
 		<!--<thingSetMakerTags>
@@ -157,8 +156,8 @@ Accuracy follows charge rifles-->
       </li>
 		</comps>
 		<tradeTags>
-			<li>ExoticMisc</li>
-      <li>Artifact</li>
-    </tradeTags>
+			<li>ET_AquaticWeapon</li>
+      		<li>ET_TerratechExoticWeapon</li>
+    	</tradeTags>
 	</ThingDef>
 </Defs>

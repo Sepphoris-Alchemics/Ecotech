@@ -372,7 +372,7 @@ Can burst fire at will | +2.5 hp/day (unequipped)</inspectString>
 
 	<!--=====Roguesap: TBE=====-->
 
-	<ThingDef ParentName="ET_PrimaShotgunSapBase">
+	<!--<ThingDef ParentName="ET_PrimaShotgunSapBase">
 		<defName>ET_PrimaShotgunRoguesap</defName>
 		<label>prima rogueburster</label>
 		<description>The matured form of the Prima Spreadshot, infused with roguesap. The potent influence of the roguesap causes this weapon to drop a special seed upon expiry, which will grow into a random Prima weapon.
@@ -407,7 +407,7 @@ Additionally, it will always have a 60-day lifespan, regardless of the weapon it
 				<ticksPerHeal>3000</ticksPerHeal>
 			</li>
 		</comps>
-	</ThingDef>
+	</ThingDef>-->
 
 
 	<!--=====Ectosap: TBE=====-->
