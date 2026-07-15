@@ -3,8 +3,9 @@
   <ThingDef ParentName="BenchBase">
     <defName>ET_BasicResearchBench</defName>
     <label>Terratech Research Bench</label>
-    <description>A research bench designed to develop and discover the secrets of Terratech. Normal research benches simply aren't equipped with the proper equipment and elements to progress Terratech biotechnology. All research pertaining to them can only be done here.
-\n\nContains compartments for highly fertile soil, and flasks for water and nutrients. Requires different structures or growths nearby, depending on what is being studied or developed.</description>
+    <description>A research bench designed to develop and discover the secrets of Terratech. Normal research benches simply lack the proper elements needed to progress terratechnology, due to it's focus on nature. All research pertaining to them can only be done here.
+\n\nContains compartments for highly fertile soil, and flasks for water and nutrients. Requires different structures or growths nearby, depending on what is being studied or developed.
+\n\nMany studies require specialized research tomes, which can only be obtained from Terratech factions. These tomes are usually used to prevent the undeserving from exploiting Terratech secrets - but the method isn't infallible.</description>
     <thingClass>Building_ResearchBench</thingClass>
     <minifiedDef>MinifiedThing</minifiedDef>
     <size>(3,1)</size>

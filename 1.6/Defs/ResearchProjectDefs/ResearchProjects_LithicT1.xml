@@ -141,6 +141,9 @@ Upgrading generally occurs at a chronite forge, though some items might function
     <baseCost>150</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>
+    <hiddenPrerequisites>
+      <li>ET_LithicTerratechEssentials</li>
+    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.40</researchViewY>
@@ -156,6 +159,9 @@ The ability to recover more resources with higher efficiency is very much possib
     <baseCost>1200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Lithic</tab>
+    <hiddenPrerequisites>
+      <li>ET_LithicTerratechEssentials</li>
+    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
     <researchViewY>0.70</researchViewY>

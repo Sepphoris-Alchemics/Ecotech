@@ -221,6 +221,9 @@ Terraseeds are believed to be divine gifts to the tribes of the galaxy; therefor
   <baseCost>150</baseCost>
   <techLevel>Neolithic</techLevel>
   <tab>ET_ResearchTab_Organic</tab>
+  <hiddenPrerequisites>
+      <li>ET_PrimaTerraseedCultivation</li>
+    </hiddenPrerequisites>
   <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
   <researchViewX>3.00</researchViewX>
   <researchViewY>3.50</researchViewY>

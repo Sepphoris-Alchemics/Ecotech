@@ -1,78 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--==========1.3 Backlog (as of 6.1.26)==========
+<!--==========FERROKINESIS 1.4 Backlog (as of 6.20.26)==========
 
--ADD GENESITE HARDENING ABILITY TO GENESITE ARMOR
--ADD THERMAL SAP USAGE
--ADD LITHIC METAL RECLAMATION
+Ferrokinesis is one of two lithic classes. It allows the player to break down metals or stone from items, and turn them into other items, stones, or metals. Overall, this allows:
+
+-Basic and advanced reclamation of metals
+-Transmutation of one metal or stone into another
+-Terraforming the environment into one stone or metal type
+-Midas Class Technology
+-Breaking down any metal and stone into terrathyst, and transmuting terrathyst into any metal or stone.
+-Turning materials such as steel and plasteel into terrathyst, chronite, or saps.
+
+Ferrokinesis is basically a lite version of Alkatech.
 
 
-=====As of 4.29.26, most of these features will need to appear in a future update.=====
+==========
 =====Anything marked 'Incomplete' will be added as soon as possible, while anything marked 'delayed' will be added in a larger future update.=====
 
-=====MINOR=====
--Fix Waylight Rifle graphics
-	-Certain shadows not present on classes below O
-	-Background not present on Classes below O
-	-Stage colors too visibly similar; consider making them a stellar hue/class apart.
+=====SUMMARY=====
+-Basic and advanced metal reclamation is part of Ferrokinesis; once those two are researched, the player will need to dedicate themselves to the study.
+	-The player needs Chronite and Embersap at minimum for further creations. Various processors will still be used, divided by item type: wearables, weapons, basic items, and advanced items. They always melt down into their dominant material.
+	-The next processors are multi-tile forges that melt down anything within a 3x3 - 7x7 space. They produce an immense amount of heat around themselves, are always running, but are more efficient and can produce two ingredients instead of one.
+	-Later processors can produce gold, silver, uranium, etc. from specific items. Eventually a vat can be created that produces vivium.
 
--For Ichor preset weapons (and possibly other items), the following comps can be used (MAKE COMP CLASS IN C# FIRST, OTHERWISE USE "CompRevenantSpine" FOR COMP CLASS):
 
-<li Class="CompProperties_Usable">
-        <useJob>SmashThing</useJob>
-        <useLabel>Open {0_label}</useLabel>
-        <useMessage>{PAWN_nameDef} opened the bottle of ichor, allowing it to form into it's previous state. It has formed into a sword.</useMessage>
-        <useDuration>300</useDuration>
-      </li>
-	  <li Class="CompProperties_UseEffectPlaySound">
-        <soundOnUsed>ET_IchorBottleOpen</soundOnUsed>
-      </li>
-	<li Class="CompProperties_UseEffectDestroySelf">
-        <leavings>
-          <ET_IchorSword>1</ET_IchorSword>
-        </leavings>
-      </li>
-	<li Class="CompProperties_Interactable">
-        <compClass>ET_CompUsableItem</compClass>
-        <ticksToActivate>0</ticksToActivate>
-        <activateTexPath>UI/Commands/OpenIchorBottle</activateTexPath>
-        <activateLabelString>Open bottle...</activateLabelString>
-        <activateDescString>Open the bottle of ichor and allow it to form into a new weapon.</activateDescString>
-        <activatingStringPending>opening a bottle of ichor</activatingStringPending>
-        <guiLabelString>Choose who should do this</guiLabelString>
-        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
-        <targetingParameters>
-          <canTargetBuildings>false</canTargetBuildings>
-          <canTargetAnimals>false</canTargetAnimals>
-          <canTargetMechs>false</canTargetMechs>
-          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
-        </targetingParameters>
-      </li>
-    </comps>
 
-=====SAP EFFECTS (Updated for 1.3)=====
+=====TIER 1 FERROKINESIS=====
 
-BASIC SAPS (Mutability: Low):
-	-Glowsap
-	-Endosap
-	-Hypersap
-	-Deepsap
+-Enables the three 1x1 processor forges.
+	-Each item melts into it's dominant material. 
+	-A way to extract embersap is expected by this point.
+	-Materials stop at their base component; they cannot be reduced further.
 
-PROTOSAPS (Mutability: Medium):
-	-Toxsap
-	-Brightsap
-	-Shocksap
+=====TIER 2 FERROKINESIS=====
 
-METASAPS (Mutability: High):
-	-Roguesap
-	-Ectosap
-	-Chronosap
+-Enables the 3x3 multi-tile forge.
+-Processors can now break down uncraftable items.
+-Midas tech begins at this point.
 
--NOBLESAPS (Mutability: Very High):
-	-Embersap
-	-Cryosap
-	-Arcsap
+=====TIER 3 FERROKINESIS=====
+
+-Enables the 5x5 multi-tile forge.
+-Processors can now break down natural geo materials (stones and metals) into terrasalts
+-New alchemic benches can create other natural materials at a 70:30 ratio.
+-Steel and plasteel can be melted and shaped into compact canisters that can be sold or stored.
+
+=====TIER 4 FERROKINESIS=====
+
+-Enables the 7x7 multi-tile forge.
+-Processors can now break down synthetic geo materials (plasteel and steel) into terrasalts
+-Cross-compatibility with other paths is now possible.
+-New alchemic bench now has an efficiency of 40:60.
 
 -ARCHSAPS (Mutability: Extreme):
 	-Sunsap

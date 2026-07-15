@@ -31,7 +31,7 @@
       <li>Designator_PlantsHarvest</li>
     </specialDesignatorClasses>
     <researchPrerequisites>
-      <li>ET_TerraseedEssentials</li>
+      <li>TreeSowing</li>
     </researchPrerequisites>
   </DesignationCategoryDef>
 

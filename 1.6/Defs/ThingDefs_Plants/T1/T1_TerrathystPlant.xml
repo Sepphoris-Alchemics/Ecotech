@@ -1,25 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!--Pods should follow the following skill rules:
-Tier 1 weapons: 1-4
-Tier 1 heavy: 5-7
-Tier 1 upgrades: 6-8
-Tier 1 surge seeds: 6-8
 
-Tier 2 weapons: 4-8
-Tier 2 heavy: 9-11
-Tier 2 upgrades: 10-12
-Tier 2 surge seeds: 10-12
+<!--Terrathyst balance updates:
+Terrathyst will centerpoint of lithic tech, and be required for everything. It will always be relevant.
+Rather than new types of structures requiring new crystals, terrathyst is required is higher amounts.
+In response to this, terrathyst can be grown in more 'pure' crystal types, which produce more stronger seeds and fragments.
+The more pure of a crystal, the larger the crystal will be. the crystals get absolutely massive, up to 5x5.
 
-Tier 3 weapons: 8-12
-Tier 3 heavy: 13-15
-Tier 3 upgrades: 14-16
-Tier 3 surge seeds: 14-16
-
-Tier 4 weapons: 16-20
-Tier 4 heavy: 17-19
-Tier 4 upgrades: 20
+Terrathyst creates small amounts of electricity, which means large enough crystals can power certain structures.
+  -This makes terrathyst and chronite work quite well together, as one generates electricity while the other stores it.
 Tier 4 surge seeds: 20
 -->
 

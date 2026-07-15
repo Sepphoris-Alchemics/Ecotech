@@ -22,7 +22,7 @@
       <growDays>0.5</growDays> 
       <fertilityMin>0</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
-      <growMinGlow>0</growMinGlow>
+      <growMinGlow IsNull="True" />
       <burnedThingDef IsNull="True" />
       <immatureGraphicPath IsNull="True" />
       <sowWork>270</sowWork>
@@ -56,7 +56,7 @@
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>0.9</glowRadius>
+        <glowRadius>1.9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
@@ -84,7 +84,7 @@
     </plant>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>0.9</glowRadius>
+        <glowRadius>1.9</glowRadius>
         <glowColor>(237,211,78,0)</glowColor>
       </li>
       <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">

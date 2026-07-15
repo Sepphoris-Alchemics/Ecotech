@@ -31,7 +31,7 @@
       <li>Designator_PlantsHarvest</li>
     </specialDesignatorClasses>
     <researchPrerequisites>
-      <li>ET_OrganicTerratechEssentials</li>
+      <li>TreeSowing</li>
     </researchPrerequisites>
   </DesignationCategoryDef>
 

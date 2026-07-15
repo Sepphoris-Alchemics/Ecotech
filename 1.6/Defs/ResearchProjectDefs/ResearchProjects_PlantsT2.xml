@@ -299,9 +299,9 @@ The Pantheon Terracannon, a giant, long-lived defensive turret.</discoveredLette
     <baseCost>200</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
-    <!--<hiddenPrerequisites>
+    <hiddenPrerequisites>
       <li>ET_TierOneOrganicMastery</li>
-    </hiddenPrerequisites>-->
+    </hiddenPrerequisites>
     <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
     <researchViewX>8.00</researchViewX>
     <researchViewY>2.80</researchViewY>

@@ -33,7 +33,6 @@ This transposer is only capable of filtering glowsap into a few terrasap types. 
       <ThingDef>ET_Brightsap</ThingDef>
       <ThingDef>ET_Endosap</ThingDef>
       <ThingDef>ET_Hypersap</ThingDef>
-      <ThingDef>ET_Shocksap</ThingDef>
     </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Building/Production/Transposer/Transposer</texPath>
@@ -89,13 +88,7 @@ This transposer is only capable of filtering glowsap into a few terrasap types. 
             </things>
           </li>
           <li>
-            <weight>0.2</weight>
-            <things>
-              <ET_Shocksap>1</ET_Shocksap>
-            </things>
-          </li>
-          <li>
-            <weight>0.2</weight>
+            <weight>0.4</weight>
             <things>
               <ET_Brightsap>1</ET_Brightsap>
             </things>
