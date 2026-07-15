@@ -1,8 +1,3 @@
-Dormant
-Ancient
-Ageless
-Perfected
-Vibrant
 Radiant
 Starborn
 Startouched
@@ -24,6 +19,3 @@ Hydroborn
 Hydrotouched
 Terraborn
 Terratouched
-Precursor
-Forerunner
-First

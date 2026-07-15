@@ -10,7 +10,10 @@
         <li>FileET_AncientDescriptors->Words/ET_AncientDescriptors</li>
         <li>FileET_AncientNouns->Words/ET_AncientNouns</li>
         <li>FileET_BuiltStructures->Words/ET_BuiltStructures</li>
-        <li>FileET_Colors->Words/ET_Colors</li>
+        <li>FileET_ColorBasic->Words/ET_ColorBasic</li>
+        <li>FileET_ColorComplex->Words/ET_ColorComplex</li>
+        <li>FileET_ColorLong->Words/ET_ColorLong</li>
+        <li>FileET_Communities->Words/ET_Communities</li>
         <li>FileET_Descriptors->Words/ET_Descriptors</li>
         <li>FileET_Genomes->Words/ET_Genomes</li>
         <li>FileET_NaturalStructures->Words/ET_NaturalStructures</li>
@@ -20,15 +23,20 @@
         <li>FileET_Affixes->Names/ET_Affixes</li>
         <li>FileET_Suffixes->Names/ET_Suffixes</li>
         <li>FileET_DedicatedNouns->Words/ET_DedicatedNouns</li>
-        <li>FileET_Flowers->Words/ET_Flowers</li>
+        <li>FileET_PlantsAll->Words/ET_PlantsAll</li>
         <li>FileET_NaturalNouns->Words/ET_NaturalNouns</li>
         <li>FileET_WeaponNouns->Words/ET_WeaponNouns</li>
+        <li>FileET_SpecialEmpireNouns->Words/ET_SpecialEmpireNouns</li>
+        <li>FileET_SpecialEmpirePrefixes->Words/ET_SpecialEmpirePrefixes</li>
       </rulesFiles>
       <rulesStrings>
         <li>ET_AncientDescriptors->[FileET_AncientDescriptors]</li>
         <li>ET_AncientNouns->[FileET_AncientNouns]</li>
         <li>ET_BuiltStructures->[FileET_BuiltStructures]</li>
-        <li>ET_Colors->[FileET_Colors]</li>
+        <li>ET_ColorBasic->[FileET_ColorBasic]</li>
+        <li>ET_ColorComplex->[FileET_ColorComplex]</li>
+        <li>ET_ColorLong->[FileET_ColorLong]</li>
+        <li>ET_Communities->[FileET_Communities]</li>
         <li>ET_Descriptors->[FileET_Descriptors]</li>
         <li>ET_Genomes->[FileET_Genomes]</li>
         <li>ET_NaturalStructures->[FileET_NaturalStructures]</li>
@@ -39,6 +47,8 @@
         <li>ET_Suffixes->[FileET_Suffixes]</li>
         <li>ET_NaturalNouns->[FileET_NaturalNouns]</li>
         <li>ET_WeaponNouns->[FileET_WeaponNouns]</li>
+        <li>ET_SpecialEmpireNouns->[FileET_SpecialEmpireNouns]</li>
+        <li>ET_SpecialEmpirePrefixes->[FileET_SpecialEmpirePrefixes]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

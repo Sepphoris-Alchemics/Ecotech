@@ -4,7 +4,6 @@ Copse
 Thicket
 Wildlands
 Woodlands
-Hinterlands
 Overgrowths
 Haven
 Refuge
@@ -12,5 +11,16 @@ Cove
 Sanctum
 Veil
 Garden
-Sanctuary
 Morass
+Basin
+Caverns
+Valley
+Springs
+Rest
+Lakes
+River
+Fields
+Fissure
+Crater
+Zetagrove
+Exagrove

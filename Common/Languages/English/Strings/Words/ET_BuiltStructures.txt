@@ -5,3 +5,17 @@ Fortress
 Estuary
 Conservatory
 Heartlands
+Shrine
+Archives
+Sanctuary
+Shrine
+Tower
+Cathedral
+Hamlet
+Ruins
+Ward
+Manor
+Settlement
+Academy
+Hold
+Grounds

@@ -11,4 +11,6 @@ Yellow
 Azure
 Black
 White
-Pale
+Jade
+Violet
+Aqua
