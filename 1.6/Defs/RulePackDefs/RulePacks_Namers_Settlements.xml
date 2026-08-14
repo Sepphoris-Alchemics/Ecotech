@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--Note: Built and Natural Structures were combined into Standard structures for better generation variety.-->
+
   <RulePackDef>
     <defName>ET_NamerOrganicSettlement</defName>
     <include>
@@ -10,10 +12,13 @@
       <rulesStrings>
         <!--<li>r_name->[ET_BuiltStructures] [ET_Genomes]</li>-->
         <!--<li>r_name->The [ET_Descriptors] [ET_NaturalStructures] of [ET_Prefixes][ET_Affixes][ET_Suffixes]</li>-->
-        <li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes]'s [ET_BuiltStructures]</li>
-        <li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes]'s [ET_NaturalStructures]</li>
+        <!--<li>r_name->[ET_PrefixesOrganic][ET_AffixesOrganic]'s [ET_BuiltStructures]</li>-->
+        <!--<li>r_name->[ET_PrefixesOrganic][ET_AffixesOrganic]'s [ET_NaturalStructures]</li>-->
+        <li>r_name->[ET_PrefixesOrganic][ET_AffixesOrganic]'s [ET_StandardStructures]</li>
+        <!--<li>r_name->[ET_PrefixesOrganic][ET_AffixesOrganic][ET_Suffixes]'s [ET_NaturalStructures]</li>-->
         <li>r_name->[ET_PlantsAll][ET_NaturalNouns] [ET_BuiltStructures]</li>
         <li>r_name->[ET_ColorComplex][ET_NaturalNouns] [ET_NaturalStructures]</li>
+        <li>r_name->The [ET_CapitalDescriptors] [ET_CapitalStructures]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

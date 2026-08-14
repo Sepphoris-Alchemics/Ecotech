@@ -31,6 +31,13 @@ Todo:
 	-Biothite Nerve Dampener: A spine implant that reduces Pain by 90%. No drawbacks, but extremely rare.
 	-Deeproot Linkleg: Leg replacements that connect the pawn to the network below, lowing their movement speed but massively increasing carry weight. Also regenerates part health.
 
+Bloodmoss Growth: Grows slowly, lowering metabolism and immunity. Once it reaches 100%, creates a new "Bloodmoss Catalyst" hediff.
+  -Catalyst: Prevents hunger from lowering as long as the patient is given bloodsap.
+    -Does not replace hunger entirely, as the pawn still needs food.
+    -However, can infinitely suspend hunger if enough bloodsap is gathered.
+    -Bloodsap can be both farmed, and created if the Biotech and/or Anomaly DLC is installed.
+    -However, Bloodsap must be found first, as it is not researchable.
+  -A fully grown Growth can be excised to create a unique organic creature.
 
 Bloomcore Serum: Ancient slave tech that infuses a pawn with hardened skin and glowing purple aspects. Once they die, they explode into a Nightshade explosive that lingers for days, quickly killing anything around it.
 

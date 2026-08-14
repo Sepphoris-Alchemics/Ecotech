@@ -312,10 +312,10 @@ The terrain this tree makes can support normal plants as well. However, this fea
   <ThingDef ParentName="TreeBase">
     <defName>ET_SapTreeTierOne</defName>
     <label>Primwood Spectra Tree</label>
-    <description>The Primwood Spectra tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra trees produce glowsap, alongside other specific saps that enhance weapons and certain structures.
-Each bounty will produce a large sum of glowsap, at minimum. The other, more specialized saps may or may not form during each harvest, and can fetch a pretty penny from collectors.
+    <description>The Primwood Spectra Tree is one of the "Conduit" trees that Ecotech devotees learn to properly nurture, enabling tribes to live safely under natural resources. Spectra Trees produce a variety of terrasaps that enhance weapons and certain structures.
+Each bounty will always produce glowsap, making the Spectra Tree an extremely reliable harvesting source. Alternatively, some (but not all) of the glowsap may be naturally processed into a specialized sap, allowing the tree to produce a more potent sap alongside it's glowsap yield.
 
-The saps will appear at the base of the tree, every 8-10 in-game days.</description>
+The terrasaps will appear at the base of the tree, every 12-15 in-game days. Influencing the output of Spectra Trees, such as controlling the speed, yield, or randomness, currently isn't possible.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Plant/ConduitTrees/PrimwoodSapTree</texPath>
@@ -329,7 +329,6 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
     <descriptionHyperlinks>
       <ThingDef>ET_Glowsap</ThingDef>
       <ThingDef>ET_Brightsap</ThingDef>
-      <ThingDef>ET_Archsap</ThingDef>
       <ThingDef>ET_Endosap</ThingDef>
       <ThingDef>ET_Hypersap</ThingDef>
     </descriptionHyperlinks>
@@ -391,56 +390,52 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
         <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
         <potentialSpawnedThings>
           <li>
-            <weight>1.5</weight>
+            <weight>1.2</weight>
             <things>
-              <ET_Glowsap>100</ET_Glowsap>
+              <ET_Glowsap>80~140</ET_Glowsap>
             </things>
           </li>
           <li>
-            <weight>1</weight>
+            <weight>0.9</weight>
             <things>
-              <ET_Glowsap>60</ET_Glowsap>
+              <ET_Glowsap>60~80</ET_Glowsap>
               <ET_Endosap>1</ET_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>0.9</weight>
+            <things>
+              <ET_Glowsap>60~80</ET_Glowsap>
+              <ET_Hypersap>1</ET_Hypersap>
             </things>
           </li>
           <li>
             <weight>0.6</weight>
             <things>
-              <ET_Glowsap>60</ET_Glowsap>
-              <ET_Hypersap>1</ET_Hypersap>
+              <ET_Glowsap>60~80</ET_Glowsap>
+              <ET_Brightsap>1</ET_Brightsap>
             </things>
           </li>
           <li>
-            <weight>1.2</weight>
+            <weight>0.4</weight>
             <things>
-              <ET_Glowsap>80</ET_Glowsap>
-              <ET_Brightsap>2~3</ET_Brightsap>
-            </things>
-          </li>
-          <li>
-            <weight>0.5</weight>
-            <things>
-              <ET_Glowsap>60</ET_Glowsap>
-              <ET_Endosap>1~2</ET_Endosap>
-            </things>
-          </li>
-          <li>
-            <weight>0.45</weight>
-            <things>
-              <ET_Glowsap>100</ET_Glowsap>
-              <ET_Hypersap>3~5</ET_Hypersap>
+              <ET_Glowsap>40~60</ET_Glowsap>
+              <ET_Endosap>0~1</ET_Endosap>
+              <ET_Hypersap>0~1</ET_Hypersap>
+              <ET_Brightsap>1</Brightsap>
             </things>
           </li>
           <li>
             <weight>0.25</weight>
             <things>
-              <ET_Glowsap>120</ET_Glowsap>
+              <ET_Glowsap>140~200</ET_Glowsap>
             </things>
           </li>
           <li>
             <weight>0.1</weight>
             <things>
-              <ET_Archsap>1</ET_Archsap>
+              <ET_Glowsap>60</ET_Glowsap>
+              <ET_Sunsap>1</ET_Sunsap>
             </things>
           </li>
         </potentialSpawnedThings>

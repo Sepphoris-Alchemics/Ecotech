@@ -1,0 +1,9 @@
+Winter
+Summer
+Spring
+Fall
+Blizzard
+Tempest
+Storm
+Gale
+Wind

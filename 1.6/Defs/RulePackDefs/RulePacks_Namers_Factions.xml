@@ -14,9 +14,10 @@
         <li>r_name->The [ET_Descriptors] [ET_Nouns]s</li>
         <li>r_name->The [ET_Nouns]s of [ET_ColorBasic]</li>
         <li>r_name->The [ET_Nouns]s of [ET_Genomes]'s [ET_Weapons]</li>
-        <li>r_name->House [ET_Prefixes][ET_Affixes][ET_Suffixes]</li>
+        <li>r_name->House [ET_PrefixesOrganic][ET_AffixesOrganic]</li>
         <li>r_name->House [ET_ColorComplex][ET_NaturalNouns]</li>
-        <li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes] [ET_DedicatedNouns]</li>
+        <li>r_name->[ET_PrefixesOrganic][ET_AffixesOrganic] [ET_DedicatedNouns]</li>
+        <!--<li>r_name->[ET_Prefixes][ET_Affixes][ET_Suffixes] [ET_DedicatedNouns]</li>-->
         <li>r_name->[ET_Communities] of the [ET_PlantsAll]</li>
         <li>r_name->[ET_SpecialEmpirePrefixes] of the [ET_SpecialEmpireNames]</li>
         <li>r_name->The [ET_SpecialEmpireNames] [ET_SpecialEmpireNouns]</li>

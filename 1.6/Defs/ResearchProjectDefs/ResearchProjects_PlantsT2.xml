@@ -101,6 +101,9 @@ The sap it recycles will not be replenished after growth, making sap farming not
     <baseCost>1000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ET_ResearchTab_Organic</tab>
+    <prerequisites>
+      <li>ET_TierOneOrganicMastery</li>
+    </prerequisites>
     <hiddenPrerequisites>
       <li>ET_BasicTerrasapBays</li>
     </hiddenPrerequisites>
