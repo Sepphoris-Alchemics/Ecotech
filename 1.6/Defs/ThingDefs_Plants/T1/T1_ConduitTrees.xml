@@ -422,7 +422,7 @@ The terrasaps will appear at the base of the tree, every 12-15 in-game days. Inf
               <ET_Glowsap>40~60</ET_Glowsap>
               <ET_Endosap>0~1</ET_Endosap>
               <ET_Hypersap>0~1</ET_Hypersap>
-              <ET_Brightsap>1</Brightsap>
+              <ET_Brightsap>1</ET_Brightsap>
             </things>
           </li>
           <li>

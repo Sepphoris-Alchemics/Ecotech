@@ -22,7 +22,7 @@
     -For example, if a genome has a potential of High, the potential of the immature weapon will be Low, and the mature weapon will be None.
     -Prima is exempt from this, which only has it's potential decrease by 1 as the weapon grows.
 
-=====SAP EFFECTS (Updated for 1.3)=====
+=====SAP EFFECTS (Updated for 1.4)=====
 
 BASIC SAPS (Mutability: Low):
 	-Glowsap
@@ -53,19 +53,19 @@ METASAPS (Mutability: High):
 
 NOTE: ALL effects are based on the matured weapon's baseline stats. DO NOT use the immature weapon stats.
 
-GLOWSAP:
+GLOWSAP: this weapon has more nutrients than usual
 	Lifespan increased by 50%
 ===
-DEEPSAP:
-	Can be replanted and regrown at 150% speed
+DEEPSAP: this weapon can be planted to ve quickly regrown.
+	Can be replanted and regrown at 150% speed.
 ===
-ENDOSAP
-  +10 lifespan days
-  +50% HP, rounded to highest 5th
-  Flammability decreased by 75%
-  .3 more mass
+ENDOSAP: this weapon is significantly harder to destroy
+  x2 HP bar
+  0.5 flammability
+  +10/-10 temperature safety offsets (if on armor)
+  1.5x more mass
 ===
-HYPERSAP:
+HYPERSAP: this weapon has an erratic projectile behavior
   Projectile max raised by 3
   REMOVED: Project min lowered by 1
   Projectile speed is increased by 50%, rounded to highest 5th
@@ -73,13 +73,17 @@ HYPERSAP:
 TOXSAP:
   Projectiles apply poison
 ===
+SHOCKSAP:
+  Projectiles apply electrical damage on hit, with a chance to EMP.
+  Extra damage to mechanoids
+===
 SUNSAP:
   Lifespan doubled
   HP regen is a static 15
   Max projectiles doubled | min projectiles halved
 ===
 STARSAP:
-  Lifespan is increased by a flat 30 days
+  Lifespan is increased by a flat 60 days
   HP regen is a static 15
   Projectiles fired increased by 4 and decreased by 2
 ===
@@ -94,6 +98,7 @@ MELDSAP:
 ROGUESAP:
   Weapon has a flat 45 day lifespan
   Upon exiry, produces Rogue seed.
+  Rogue seeds grow within a couple days and produce a random rogue weapon.
 ===
 ECTOSAP (named Ammosap internally):
   -Lifespan is removed
@@ -101,14 +106,70 @@ ECTOSAP (named Ammosap internally):
   -Reloaded with parent material
 ===
 CHRONOSAP:
-  Lifespan decreased by 50%
-  Health regen increased by 100%
+  Infinite lifespan
+  Health capped at 20
   Weapon CD is lowered by 50%
   Projectiles are 50% faster
 ===
-ARCHSAP (REMOVED):
-  -Lifespan is removed
-  Weapon has 50% more health
-  Flammability decreased by 50%
+EMBERSAP:
+  Weapon deals additional burning damage.
+  May catch anything on fire
+  -25 lower temperature threshold (if on armor)
+===
+CRYOSAP:
+  Weapons deals additional cryo damage.
+  Extra damage to insectoids.
+  +25 temperature threshold (if on armor)
+===
+BLOOMSAP:
+  Weapon will inflict bloompox on a target. Type of bloombox depends on the bloomsap potency.
+===
+
+==========
+GEN 3 SAPS: These are saps that were discovered closer to more modern day, and can only
+be applied to T3+ gear. 
+These effects are very advanced and generally more effective against spacer+ tech.
+Saps have effects on not just weapons; they might have effects on pawns or armor too.
+Names TBE.
+==========
+===
+SAP OF SENTRIES:
+  Weapon can be replanted to cause a massive growth of turrets and other defensive plants.
+  Plants grown are generally T3+, but will be relevant to the weapon.
+===
+SAP OF PURGING:
+  -In all cases, sap prevents the host from getting most sicknesses. In return, projectiles are
+  toxic, and the medium vents corrosive gasses.
+  -When used on a pawn, they simply have disease immunity; however, the process takes time and
+  isn't guaranteed to succeed.
+  -On a weapon, the projectiles are poisonous, and can spray toxgas every 15 days.
+  -On armor, it can fire large arcing toxic projectiles, and spray a massive toxgas cone.
+===
+SAP OF CLARITY:
+  -Allows the pawn to process all information faster utilizing the armor they are wearing.
+  -The armor serves as the second 'brain', making more rooted armors most ideal.
+  -Pawns can infuse these directly, but will need to take several 'doses'.
+  -No effects on weapons.
+===
+SAP OF ABUNDANCE:
+  -The weapon will drop two seeds of itself instead of one. This generally has a 100% success
+  rate but is reserved for unique cases.
+  -In cases like the Terravat, this will produce two of the same weapon immediately.
+===
+
+
+LIKELY TO NOT BE ADDED:
+
+
+===
+SAP OF BINDING:
+  Weapon slows enemies down upon successful hits. Extremely similar to briar and cryo saps.
+  Likely to not be added.
+===
+SAP OF LEECHING:
+  Weapon adds health regeneration to it's wielder when it inflicts damage to another living being.
+  This is likely better off as a sub-path, and porbably won't be a sap.
+===
+
 -->
 </Defs>

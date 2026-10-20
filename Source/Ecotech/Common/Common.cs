@@ -38,7 +38,7 @@ namespace Ecotech
         static Common()
         {
             var jd = DefDatabase<JobDef>.GetNamedSilentFail("ET_InfuseSapJob");
-            Log.Message("[Ecotech] InfuseSapJob loaded? " + (jd != null));
+            //Log.Message("[Ecotech] InfuseSapJob loaded? " + (jd != null));
         }
     }
 }

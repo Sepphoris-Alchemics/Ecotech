@@ -29,13 +29,13 @@
       <sowTags>
         <li>Ground</li>
       </sowTags>
-      <blockAdjacentSow>true</blockAdjacentSow>
+      <blockAdjacentSow>false</blockAdjacentSow> <!--MUST BE FALSE FOR COMPPLANTABLE-->
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
       <topWindExposure>0</topWindExposure>
       <visualSizeRange>0.7~1</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
       <sowResearchPrerequisites Inherit="False" />
-      <mustBeWildToSow>true</mustBeWildToSow>
+      <mustBeWildToSow>true</mustBeWildToSow> <!--MUST BE FALSE FOR COMPPLANTABLE-->
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <dieFromToxicFallout>false</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>

@@ -24,7 +24,7 @@ namespace Ecotech
     ///   if (!writeNoReason)
     ///     ...
     /// </summary>
-    [HarmonyDebug]
+    /// [HarmonyDebug]
 #pragma warning disable format
     [HarmonyPatch(typeof(PlantUtility), nameof(PlantUtility.CanEverPlantAt),
         new Type[] {         typeof(ThingDef),    typeof(IntVec3),     typeof(Map),         typeof(Thing),    typeof(bool),        typeof(bool),        typeof(bool) },

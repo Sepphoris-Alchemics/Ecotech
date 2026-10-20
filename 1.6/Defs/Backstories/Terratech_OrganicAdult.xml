@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!--=====FACTION LEADER=====-->
+
+<BackstoryDef>
+    <defName>ET_Grovetender</defName>
+    <identifier>Grovetender</identifier>
+    <slot>Adulthood</slot>
+    <title>grovetender</title>
+    <titleShort>grovetender</titleShort>
+    <description>Throughout immense trials, conflict, and ambition, [PAWN_nameDef] was voted to lead of the few Terratech factions on the planet. [PAWN_pronoun] serves as the leader for the entire tribe, spending much of their life going from village to village, making sure the integrity terratech factions have held throughout history remains strong. [PAWN_pronoun] serves the most vital role in the faction, though it is custom to make sure another is ready to take [PAWN_possessive] place in the case of capture, or untimely death.\n\nDespite their high position they still partake in everyday tasks, working alongside the workers of the tribe.</description>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+      <li>Social</li>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Intellectual>8</Intellectual>
+      <Melee>6</Melee>
+      <Shooting>6</Shooting>
+      <Social>10</Social>
+    </skillGains>
+    <workDisables>Cleaning</workDisables>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <disallowedTraits>
+      <Psychopath>0</Psychopath>
+    </disallowedTraits>
+    <shuffleable>False</shuffleable>
+  </BackstoryDef>
+
+<!--=====END OF FACTION LEADER=====-->
+
   <BackstoryDef>
     <defName>ET_Ambassador</defName>
     <title>terratech ambassador</title>
@@ -515,40 +549,6 @@
     <bodyTypeFemale>Female</bodyTypeFemale>
   </BackstoryDef>
 
-
-
-<BackstoryDef>
-    <defName>ET_Grovetender</defName>
-    <identifier>Grovetender</identifier>
-    <slot>Adulthood</slot>
-    <title>grovetender</title>
-    <titleShort>grovetender</titleShort>
-    <description>Throughout immense trials, conflict, and ambition, [PAWN_nameDef] was voted to lead of the few Terratech factions on the planet. [PAWN_pronoun] serves as the leader for the entire tribe, spending much of their life going from village to village, making sure the integrity terratech factions have held throughout history remains strong. [PAWN_pronoun] serves the most vital role in the faction, though it is custom to make sure another is ready to take [PAWN_possessive] place in the case of capture, or untimely death.\n\nDespite their high position they still partake in everyday tasks, working alongside the workers of the tribe.</description>
-    <requiredWorkTags>
-      <li>ManualSkilled</li>
-      <li>Social</li>
-      <li>PlantWork</li>
-    </requiredWorkTags>
-    <skillGains>
-      <Intellectual>8</Intellectual>
-      <Melee>6</Melee>
-      <Shooting>6</Shooting>
-      <Social>10</Social>
-    </skillGains>
-    <workDisables>Cleaning</workDisables>
-    <spawnCategories>
-      <li>ET_TerratechBackstories</li>
-    </spawnCategories>
-    <bodyTypeMale>Male</bodyTypeMale>
-    <bodyTypeFemale>Female</bodyTypeFemale>
-    <disallowedTraits>
-      <Psychopath>0</Psychopath>
-    </disallowedTraits>
-    <shuffleable>False</shuffleable>
-  </BackstoryDef>
-
-
-
   <BackstoryDef>
     <defName>ET_BloomRotSurvivor</defName>
     <title>bloompox survivor</title>
@@ -576,6 +576,36 @@
     <forcedTraits>
       <Tough>0</Tough>
     </forcedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>ET_SporeHermit</defName>
+    <title>spore hermit</title>
+    <titleShort>spore hermit</titleShort>
+    <description>[PAWN_nameDef] has lived amongst the many fungi of the world, using themselves as a test subject to learn the pros and cons of each. While their body has been ravaged, [PAWN_pronoun] has learned unique practices that can be applied to medicine, cultivation, and even research.</description>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+    <skillGains>
+      <Medicine>8</Medicine>
+      <Plants>8</Plants>
+      <Intellectual>6</Intellectual>
+    </skillGains>
+    <spawnCategories>
+      <li>ET_TerratechBackstories</li>
+    </spawnCategories>
+    <possessions>
+          <RawFungus>30~60</RawFungus>
+        </possessions>
+    <forcedTraits>
+      <Beauty>-1</Beauty>
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
   </BackstoryDef>
 
 </Defs>
