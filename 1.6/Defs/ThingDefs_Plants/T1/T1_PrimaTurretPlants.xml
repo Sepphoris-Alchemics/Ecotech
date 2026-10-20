@@ -35,7 +35,7 @@
       <visualSizeRange>0.7~1</visualSizeRange>
       <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
       <sowResearchPrerequisites Inherit="False" />
-      <mustBeWildToSow>true</mustBeWildToSow> <!--MUST BE FALSE FOR COMPPLANTABLE-->
+      <mustBeWildToSow>true</mustBeWildToSow>
       <dieIfNoSunlight>false</dieIfNoSunlight>
       <dieFromToxicFallout>false</dieFromToxicFallout>
       <showGrowthInInspectPane>true</showGrowthInInspectPane>

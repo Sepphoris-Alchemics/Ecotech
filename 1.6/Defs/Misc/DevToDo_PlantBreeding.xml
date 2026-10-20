@@ -44,7 +44,9 @@ Aquiring new plants is handled via existing crafting methods:
 
 
 -Plants utilizing DLC trees will need the seed, or genetic material, of the DLC plant. It will also need a very specific rare sap.
-	-
+	-Anima Tree Essence + Summersap. The anima tree can 'consume' psychic energy over a period of time, causing a variety of map effects. This ranges from arti
+		-New Anima tree also grows berries over time
+	-Gauranlen Tree Seed + Springsap
 
 
 
@@ -87,5 +89,7 @@ Aquiring new plants is handled via existing crafting methods:
 -Processors can now break down synthetic geo materials (plasteel and steel) into terrasalts
 -Cross-compatibility with other paths is now possible.
 -New alchemic bench now has an efficiency of 40:60.
+
+-->
 
 </Defs>
