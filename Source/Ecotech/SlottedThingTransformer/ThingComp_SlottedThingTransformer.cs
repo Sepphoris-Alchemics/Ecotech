@@ -70,8 +70,12 @@ namespace Ecotech
             IEnumerable<Thing> designations = spawnedDesignations
              .Select(des => des.target.Thing)
              .Where(t => !t.IsForbidden(pawn) && pawn.CanReach(t, Verse.AI.PathEndMode.ClosestTouch, Danger.Deadly));
+#if v1_6
+            return designations.MinBy(t => t.Position.DistanceToSquared(pawn.Position));
+#else
             // have to use static method call because Ludeon thought it was a good idea to create their own generic MinBy, causing ambiguity with the C# Enumerable method. Ugh.
             return Enumerable.MinBy(designations, t => t.Position.DistanceToSquared(pawn.Position));
+#endif
         }
 
         public override int HaulCountFor(Thing thing)
