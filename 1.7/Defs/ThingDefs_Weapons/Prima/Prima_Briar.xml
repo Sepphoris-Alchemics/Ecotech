@@ -95,6 +95,7 @@ Briar weapons also retain the random projectile output, though with higher accur
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>30000</lifespanTicks> <!--Same as upgraded variant: 1080000-->
 				<lifespanBarColor>(28, 31, 15)</lifespanBarColor> <!--to-do: figure out special color-->
+				<showExpirationAlertOnRemainingTicks>15000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>-->
 			</li>
