@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+
+Tier 1: Terrathyst Crucible:
+-Creates only basic and genesite items.
+-Creates normal weapons and items.
+-High crafting speed
+-Low stone extraction output
+
+Tier 1: Terrathyst Charger:
+-Charges tier 1 and 2 gear at a low rate
+-Evolves lithic weapons
+-1 item capacity
+
+Chronite Capacitor shocksap recipe:
+  Recipe is based on steel output
+  Shocksap output is half of the steel output, rounded down to the nearest even number.
+  Time is increased by 1.5x
+
+-->
+
+<!--Biolith Cultivator (name WIP; may be Crucible as well)
+  The Cultivator takes saps and terrathyst cores, and creates crystals that are imbued with the aspects of saps.
+  These item crystals are then grown to create larger, permanent structure crystals that act as facilities to create new weapons, structures, and items.
+  It serves as a gateway to make sure terrathyst content cannot be spammed, due to terrathyst being a universal material.
+  Two cultivators exist, one that handles tier 1 and two saps and one that can handle tier three and four saps.
+  This station becomes the third and final main crafting station. The terraforge is used for seeds, the terravats are used for weapon progression, and the cultivator will be used for lithoid items.
+  The second tier handles most hybrid gear, as most hybrid gear requires advanced saps.
+  Generally the cultivator will only require one core, but will need A LOT of sap to create these special crystals. This amount of sap can range into the hundreds.
+  The more sap that's present in the cultivator, the stronger the crystal. By totally filling the cultivator, THEN providing the core, the crystal that's grown will have infinite lifespan.
+    -->
+
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>ET_ChroniteCapacitor</defName> <!--Tier 2: Chronite Forge-->
+    <label>chronite capacitor</label>
+    <description>A massive crystal chamber made out of stabilized chronite. This structure allows an EcoTech tribe to extract electrical charge from various items, and charge/evolve lithic items.
+The electrical charge taken from items is converted directly into shocksap, which can then be safely stored for further use. All solid materials are dissolved in the process, however.
+Only items posessing any sort of electrical charge can have charge extracted.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Things/Building/ChroniteForge/ChroniteForge_a</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <interactionCellIcon IsNull="True"/>
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True"/>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_TierOneLithicMastery</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <ET_Seed_ChroniteForge>1</ET_Seed_ChroniteForge>
+    </killedLeavings>
+    <recipes>
+      <li>ET_OpenViviumGeodeSealedRecipe</li>
+      <li>ET_ExtractLiquidViviumRecipe</li>
+      <li>ET_FormChroniteForgeSeed</li>
+      <li>ET_FormViviumPylonSeed</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(34,159,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Art">
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <!--<li Class="CompProperties_Refuelable">
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>15</initialConfigurableTargetFuelLevel>
+        <fuelConsumptionRate>0.50</fuelConsumptionRate>
+        <fuelCapacity>30</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Shocksap</fuelLabel>
+        <fuelGizmoLabel>Healthy shocksap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires Shocksap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>-->
+      <!--<li Class="CompProperties_InspectString">
+        <inspectString>Right-click to insert terrathyst core
+Place materials nearby to charge/evolve items</inspectString>
+      </li>-->
+      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
+        <isManualOnly>true</isManualOnly>
+        <isAssemblingPawn>false</isAssemblingPawn>
+        <uiIconChooseRecipe>UI/Gizmo/InstallableInSlottedThingTransformerGizmo</uiIconChooseRecipe>
+        <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
+        <useConnectedFacility>false</useConnectedFacility>
+        <useZone>false</useZone>
+        <radius>125</radius>
+        <effectWorking>Smith</effectWorking>
+        <recipeSet>
+<!--=====CHRONITE FORGE LATTICE=====-->
+          <!--<li>
+            <researchPrerequisite>
+              <li>ET_TierOneLithicMastery</li>
+            </researchPrerequisite>
+            <label>Form chronite forge lattice</label>
+            <description>Requirements:
+x20 shocksap
+Duration: 60 days</description>
+            <duration>3600000</duration>
+            <resultDef>ET_Seed_ChroniteForge</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>20</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+<!--=====TERRATHYST CORE=====-->
+          <li>
+            <label>Form terrathyst core</label>
+            <description>Requirements:
+x40 terrathyst shards
+Duration: 4 days</description>
+            <duration>24000</duration>
+            <resultDef>ET_TerrathystCore</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Terrathyst</thingDef>
+                <amount>40</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====TERRATHYST CORE x4=====-->
+          <li>
+            <label>Form terrathyst core x4</label>
+            <description>Requirements:
+x120 terrathyst shards
+Duration: 16 days</description>
+            <duration>960000</duration>
+            <resultDef>ET_TerrathystCore</resultDef>
+            <amount>4</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Terrathyst</thingDef>
+                <amount>120</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====TERRATHYST CORE x8=====-->
+          <li>
+            <label>Form terrathyst core x8</label>
+            <description>Requirements:
+x240 terrathyst shards
+Duration: 32 days</description>
+            <duration>1920000</duration>
+            <resultDef>ET_TerrathystCore</resultDef>
+            <amount>8</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Terrathyst</thingDef>
+                <amount>240</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====SOULSNARE RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_LithicWeaponCrafting</li>
+            </researchPrerequisite>
+            <label>Soulsnare Rifle: Shape Stage I</label>
+            <description>Requirements:
+x3 terrathyst core
+Duration: 18 days</description>
+            <duration>918000</duration>
+            <resultDef>ET_SoulsnareRifleOne</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_TerrathystCore</thingDef>
+                <amount>4</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>25</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EVOLVE SOULSNARE I=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Soulsnare Rifle: Evolve to Stage II</label>
+            <description>Requirements:
+x1 soulnare rifle I
+x10 shocksap
+Duration: 14 days</description>
+            <duration>624000</duration>
+            <resultDef>ET_SoulsnareRifleTwo</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+            <li>
+                <thingDef>ET_SoulsnareRifleOne</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>10</amount>
+              </li>
+            </ingredientSets>
+          </li>
+  <!--=====EVOLVE SOULSNARE II=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Soulsnare Rifle: Evolve to Stage III</label>
+            <description>Requirements:
+x1 soulnare rifle II
+x20 shocksap
+Duration: 18 days</description>
+            <duration>918000</duration>
+            <resultDef>ET_SoulsnareRifleThree</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+            <li>
+                <thingDef>ET_SoulsnareRifleTwo</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>20</amount>
+              </li>
+            </ingredientSets>
+          </li>
+  <!--=====EVOLVE SOULSNARE III=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Soulsnare Rifle: Evolve to Stage IV</label>
+            <description>Requirements:
+x1 soulnare rifle III
+x30 shocksap
+Duration: 24 days</description>
+            <duration>1440000</duration>
+            <resultDef>ET_SoulsnareRifleFour</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+            <li>
+                <thingDef>ET_SoulsnareRifleThree</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>30</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====DRAINED SOULSNARE RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Soulsnare Rifle: Restore drained variant</label>
+            <description>Requirements:
+x1 drained soulsnare rifle
+x30 shocksap
+Duration: 22 days</description>
+            <duration>1130000</duration>
+            <resultDef>ET_SoulsnareRifleOne</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_SoulsnareRifleDrained</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>30</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====GENESITE HELMET=====-->
+          <!--<li>
+            <researchPrerequisite>
+              <li>ET_LithicArmorCrafting</li>
+            </researchPrerequisite>
+            <label>form genesite nomad helmet</label>
+            <description>Requirements:
+x3 terrathyst core
+Duration: 22 days</description>
+            <duration>1130000</duration>
+            <resultDef>ET_GenesiteNomadHelmetOne</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_TerrathystCore</thingDef>
+                <amount>3</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>30</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+<!--=====GENESITE ARMOR=====-->
+          <!--<li>
+            <researchPrerequisite>
+              <li>ET_LithicArmorCrafting</li>
+            </researchPrerequisite>
+            <label>Form genesite nomad armor</label>
+            <description>Requirements:
+x4 terrathyst core
+Duration: 24 days</description>
+            <duration>1440000</duration>
+            <resultDef>ET_GenesiteNomadArmorOne</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_TerrathystCore</thingDef>
+                <amount>4</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>30</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+<!--=====ASSAULT RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Assault Rifle</label>
+            <description>Requirements:
+x1 Assault Rifle
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>18</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_AssaultRifle</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====CHAIN SHOTGUN=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Chain Shotgun</label>
+            <description>Requirements:
+x1 Chain Shotgun
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>16</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_ChainShotgun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EMP LAUNCHER=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: EMP Launcher</label>
+            <description>Requirements:
+x1 EMP Launcher
+Duration: 9 days</description>
+            <duration>540000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>20</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_EmpLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Heavy SMG=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Heavy SMG</label>
+            <description>Requirements:
+x1 Heavy SMG
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>14</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_HeavySMG</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Incen. Launcher=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Incendiary Launcher</label>
+            <description>Requirements:
+x1 Incendiary Launcher
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>14</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_IncendiaryLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====LMG=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: LMG</label>
+            <description>Requirements:
+x1 LMG
+Duration: 4 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>16</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_LMG</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Minigun=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Minigun</label>
+            <description>Requirements:
+x1 Minigun
+Duration: 15 days</description>
+            <duration>900000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>50</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_Minigun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Smoke Launcher=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Smoke Launcher</label>
+            <description>Requirements:
+x1 Smoke Launcher
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>14</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_SmokeLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Sniper Rifle=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Sniper Rifle</label>
+            <description>Requirements:
+x1 Sniper Rifle
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>18</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_SniperRifle</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Mechanoid Chunk=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Charge Extraction: Mechanoid Slag Chunk</label>
+            <description>Requirements:
+x1 Mechanoid Slag Chunk
+Duration: 3 days</description>
+            <duration>180000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkMechanoidSlag</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Midas Wardlimb (Arm)=====-->
+          <!--<li>
+            <researchPrerequisite>
+              <li>ET_MidasClassEssentials</li>
+            </researchPrerequisite>
+            <label>Midas Biocrafting: Wardlimb (Arm)</label>
+            <description>Requirements:
+x1 Normal Arm
+x4 Liquid Vivium
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_MidasWardlimb_Arm</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Arm</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_LiquidVivium</thingDef>
+                <amount>4</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+<!--=====Midas Wardlimb (Leg)=====-->
+          <!--<li>
+            <researchPrerequisite>
+              <li>ET_MidasClassEssentials</li>
+            </researchPrerequisite>
+            <label>Midas Biocrafting: Wardlimb (Leg)</label>
+            <description>Requirements:
+x1 Normal Leg
+x4 Liquid Vivium
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>ET_MidasWardlimb_Leg</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Leg</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_LiquidVivium</thingDef>
+                <amount>4</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+
+        </recipeSet>
+        </li>
+    </comps>
+    <specialDisplayRadius>125</specialDisplayRadius>
+  </ThingDef>
+
+</Defs>

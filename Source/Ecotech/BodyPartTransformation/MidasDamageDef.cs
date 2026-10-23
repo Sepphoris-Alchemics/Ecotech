@@ -10,33 +10,17 @@ using UnityEngine;
 
 namespace Ecotech
 {
-    /*
-     * Mod extension for DamageDefs that should apply
-     * a Hediff to the actual injured body part.
-     */
+
     public class DamageDefExtension_ApplyHediffToInjuredPart
         : DefModExtension
     {
         public HediffDef hediff;
 
-        /*
-         * Severity added per point of damage dealt.
-         */
         public float severityPerDamageDealt = 0f;
 
-        /*
-         * Optional flat severity added on hit.
-         */
         public float fixedSeverity = 0f;
     }
 
-    /*
-     * Damage worker for Midas projectiles.
-     *
-     * This applies normal injury first, then applies
-     * the configured Hediff to the body part that was
-     * actually injured.
-     */
     public class DamageWorker_MidasAddInjury
         : DamageWorker_AddInjury
     {
@@ -59,9 +43,6 @@ namespace Ecotech
                         .ToList();
             }
 
-            /*
-             * Let vanilla injury logic happen first.
-             */
             DamageResult result =
                 base.Apply(
                     dinfo,
@@ -94,11 +75,6 @@ namespace Ecotech
                     beforeHediffs
                 );
 
-            /*
-             * If no injured part could be found, do not
-             * apply the Hediff. This prevents accidental
-             * whole-body application.
-             */
             if (injuredPart == null)
                 return result;
 
@@ -130,10 +106,7 @@ namespace Ecotech
             return result;
         }
 
-        /*
-         * Finds the body part of the new injury created
-         * by this damage event.
-         */
+
         private BodyPartRecord FindNewInjuredPart(
             Pawn pawn,
             List<Hediff> beforeHediffs)
@@ -176,11 +149,7 @@ namespace Ecotech
             return null;
         }
 
-        /*
-         * Adds the transmutation Hediff to the injured part,
-         * or increases severity if that same Hediff already
-         * exists on that same part.
-         */
+
         private void ApplyOrIncreaseHediff(
             Pawn pawn,
             BodyPartRecord part,

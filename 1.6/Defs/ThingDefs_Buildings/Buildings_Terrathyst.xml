@@ -35,9 +35,9 @@ Tier 2: Chronite Forge:
   <ThingDef ParentName="BenchBase">
     <defName>ET_TerrathystCrucible</defName> <!--Tier 1-->
     <label>terrathyst crucible</label>
-    <description>A small crystal structure with its own shocksap pool. This structure allows a tribe to shape a limited amount of lithic items and weapons.
-The crucible's own shocksap reserve is self-sustaining, and small enough to replenish without running out. This allows it to be effectively unlimited; however, the tiny volume requires the user to supply additional shocksap during most processes. 
-While this crucible is a good starting point and can always prove useful, there is a lithic structure out there that does every crafting aspect of the terrathyst crucible better.</description>
+    <description>A small crystal structure with a tiny basin. This structure allows a tribe to shape a limited amount of lithic items and weapons.
+The crucible was designed to allow any lithic tribe to perform procedures to obtain any fundamental resources. However, it's size is severely limiting, and larger, more specialized structures are highly recommended. 
+A terrathyst crucible is capable of breaking down items into both metals and shocksap, and can charge certain items as well, but it can only support very small items.</description>
     <thingClass>Building_WorkTable</thingClass>
     <size>(1,1)</size>
     <graphicData>
@@ -118,6 +118,44 @@ Place materials nearby to charge/evolve items</inspectString>
         <radius>100</radius>
         <effectWorking>Smith</effectWorking>
         <recipeSet>
+<!--=====Shocksap: Industrial Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Shocksap Extraction: Industrial Component</label>
+            <description>Requirements:
+x1 Industrial Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>6</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentIndustrial</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Shocksap: Spacer Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Shocksap Extraction: Advanced Component</label>
+            <description>Requirements:
+x1 Spacer Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>16</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentSpacer</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
 <!--=====TERRATHYST CORE=====-->
           <li>
             <label>form terrathyst core</label>
@@ -179,54 +217,6 @@ Duration: 9 days</description>
               <li>
                 <thingDef>ET_Shocksap</thingDef>
                 <amount>60</amount>
-              </li>
-            </ingredientSets>
-          </li>
-<!--=====GENESITE HELMET=====-->
-          <li>
-            <researchPrerequisite>
-              <li>ET_LithicArmorCrafting</li>
-            </researchPrerequisite>
-            <label>form genesite nomad helmet</label>
-            <description>Requirements:
-x3 terrathyst core
-x20 shocksap
-Duration: 16 days</description>
-            <duration>960000</duration>
-            <resultDef>ET_GenesiteNomadHelmetOne</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_TerrathystCore</thingDef>
-                <amount>3</amount>
-              </li>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>30</amount>
-              </li>
-            </ingredientSets>
-          </li>
-<!--=====GENESITE HELMET=====-->
-          <li>
-            <researchPrerequisite>
-              <li>ET_LithicArmorCrafting</li>
-            </researchPrerequisite>
-            <label>form genesite nomad armor</label>
-            <description>Requirements:
-x4 terrathyst core
-x40 shocksap
-Duration: 18 days</description>
-            <duration>918000</duration>
-            <resultDef>ET_GenesiteNomadArmorOne</resultDef>
-            <amount>1</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>ET_TerrathystCore</thingDef>
-                <amount>4</amount>
-              </li>
-              <li>
-                <thingDef>ET_Shocksap</thingDef>
-                <amount>30</amount>
               </li>
             </ingredientSets>
           </li>
@@ -505,27 +495,6 @@ Duration: 2 days</description>
               </li>
             </ingredientSets>
           </li>
-  <!--=====Shield Belt=====-->
-          <li>
-            <researchPrerequisite>
-              <li>ET_BasicMetalReclamation</li>
-            </researchPrerequisite>
-            <label>Basic Metal Reclamation: Shield Belt</label>
-            <description>Requirements:
-x1 Shield Belt
-Duration: 1 days</description>
-            <duration>120000</duration>
-            <resultDef>Steel</resultDef>
-            <amount>8</amount>
-            <ingredientSets>
-              <li>
-                <thingDef>Apparel_SmokepopBelt</thingDef>
-                <amount>1</amount>
-              </li>
-            </ingredientSets>
-          </li>
-        </recipeSet>
-        </li>
     </comps>
     <specialDisplayRadius>125</specialDisplayRadius>
   </ThingDef>
