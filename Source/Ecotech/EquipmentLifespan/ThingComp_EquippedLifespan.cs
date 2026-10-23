@@ -91,11 +91,11 @@ namespace Ecotech
             {
                 return;
             }
-            if(parent.Faction != Faction.OfPlayer)
+            if(TicksRemaining > Props.showExpirationAlertOnRemainingTicks)
             {
                 return;
             }
-            if(TicksRemaining > Props.showExpirationAlertOnRemainingTicks)
+            if(wieldingPawn.Faction != Faction.OfPlayer)
             {
                 return;
             }
