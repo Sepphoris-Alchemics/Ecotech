@@ -495,6 +495,8 @@ Duration: 2 days</description>
               </li>
             </ingredientSets>
           </li>
+        </recipeSet>
+        </li>
     </comps>
     <specialDisplayRadius>125</specialDisplayRadius>
   </ThingDef>
