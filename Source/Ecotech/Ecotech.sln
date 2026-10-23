@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.33424.131
+# Visual Studio Version 18
+VisualStudioVersion = 18.11.12306.390 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecotech", "Ecotech.csproj", "{ADD01DDE-3823-41B6-9C78-4CFEF7D7BB8F}"
 EndProject
@@ -9,12 +9,15 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		1.5|Any CPU = 1.5|Any CPU
 		1.6|Any CPU = 1.6|Any CPU
+		1.7|Any CPU = 1.7|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{ADD01DDE-3823-41B6-9C78-4CFEF7D7BB8F}.1.5|Any CPU.ActiveCfg = 1.5|Any CPU
 		{ADD01DDE-3823-41B6-9C78-4CFEF7D7BB8F}.1.5|Any CPU.Build.0 = 1.5|Any CPU
 		{ADD01DDE-3823-41B6-9C78-4CFEF7D7BB8F}.1.6|Any CPU.ActiveCfg = 1.6|Any CPU
 		{ADD01DDE-3823-41B6-9C78-4CFEF7D7BB8F}.1.6|Any CPU.Build.0 = 1.6|Any CPU
+		{ADD01DDE-3823-41B6-9C78-4CFEF7D7BB8F}.1.7|Any CPU.ActiveCfg = 1.7|Any CPU
+		{ADD01DDE-3823-41B6-9C78-4CFEF7D7BB8F}.1.7|Any CPU.Build.0 = 1.7|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
