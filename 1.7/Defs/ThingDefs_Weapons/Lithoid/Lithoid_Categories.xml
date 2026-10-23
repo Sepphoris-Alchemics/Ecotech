@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=====Soulsnare=====-->
+
+	<ThingDef Name="BaseSoulsnareTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
+		<statBases>
+			<MarketValue>300</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>SoulsnareStages</li>
+		</thingCategories>
+	</ThingDef>
+
+<!--=====Waylight=====-->
+
+	<ThingDef Name="BaseWaylightTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
+		<statBases>
+			<MarketValue>900</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>WaylightStages</li>
+		</thingCategories>
+	</ThingDef>
+
+<!--=====Vivicore=====-->
+
+	<ThingDef Name="BaseVivicoreTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
+		<statBases>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>VivicoreStages</li>
+		</thingCategories>
+	</ThingDef>
+
+	<!--=====Midas=====-->
+
+	<ThingDef Name="BaseMidasTerraweapon" Abstract="True" ParentName="BaseTerraweapon">
+		<statBases>
+			<MarketValue>700</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<tickerType>Normal</tickerType>
+		<thingCategories Inherit='false'>
+			<li>MidasStages</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>ET_GlowsapTreeSeedRecipe</defName>
+    <label>shape glowsap tree seed</label>
+    <description>Shape a seed that will quickly grow into a glowsap tree. Glowsap trees periodically produce large amounts of glowsap.</description>
+    <jobString>shaping a sap transposer seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>4</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_TerrasapBasics</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>6400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_SapFilter>1</ET_Seed_SapFilter>
+    </products>
+    <displayPriority>5</displayPriority>
+  </RecipeDef>
+
+  <!--<RecipeDef>
+    <defName>ET_PeriwoodTreeSeedRecipe</defName>
+    <label>shape perigrove tree seed</label>
+    <description>Shape a seed that will quickly grow into perigrove tree. Perigrove trees slowly grow pods that produce Periwood weaponry.</description>
+    <jobString>shaping a perigrove tree seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>8</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_PeriwoodTerraseeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>6400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_PeriwoodTree>1</ET_Seed_PeriwoodTree>
+    </products>
+    <displayPriority>4</displayPriority>
+  </RecipeDef>-->
+
+  <RecipeDef>
+    <defName>ET_BuildingTreeSeedRecipe</defName>
+    <label>shape conduit seed (custodian)</label>
+    <description>Shape a Custodian tree seed. Custodian trees provide crafting materials, and passively create growable structures.</description>
+    <jobString>shaping a conduit tree.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>9600</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_BuildingTreeTierOne>1</ET_Seed_BuildingTreeTierOne>
+    </products>
+    <displayPriority>0</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ET_SapTreeSeedRecipe</defName>
+    <label>shape conduit seed (spectra) </label>
+    <description>Shape a Spectra tree seed. Spectra trees periodically produce potent saps.</description>
+    <jobString>shaping a conduit tree.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>9600</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_SapTreeTierOne>1</ET_Seed_SapTreeTierOne>
+    </products>
+    <displayPriority>1</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ET_SentinelTreeSeedRecipe</defName>
+    <label>shape conduit seed (sentinel) </label>
+    <description>Shape a Sentinel tree seed. Sentinel trees produce various unique defenses.</description>
+    <jobString>shaping a conduit tree.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>9600</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_SentinelTreeTierOne>1</ET_Seed_SentinelTreeTierOne>
+    </products>
+    <displayPriority>2</displayPriority>
+  </RecipeDef>
+
+    <!--<RecipeDef>
+    <defName>ET_RecycleTreeSeedRecipe</defName>
+    <label>shape conduit seed (reclaimer) </label>
+    <description>Shape a Reclaimer tree seed. Reclaimer trees take industrial products (such as components and armor) and break them down into basic, nature-friendly materials.</description>
+    <jobString>shaping a conduit tree seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_TierOneConduitSeeds</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>9600</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_RecycleTreeTierOne>1</ET_Seed_RecycleTreeTierOne>
+    </products>
+    <displayPriority>3</displayPriority>
+  </RecipeDef>-->
+
+  <RecipeDef>
+    <defName>ET_BiosynthTreeSeedRecipe</defName>
+    <label>shape biosynth tree seed</label>
+    <description>Shape a Biosynth tree seed. Biosynth Trees grow items meant to integrate with sentient beings, and genetically modifying - or even creating - living beings as well.</description>
+    <jobString>shaping a biosynth tree seed.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>8</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_BasicBiosynthVat</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>12000</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_BiosynthTree>1</ET_Seed_BiosynthTree>
+    </products>
+    <displayPriority>4</displayPriority>
+  </RecipeDef>
+
+<RecipeDef>
+    <defName>ET_WildbarkTreeTierTwoSeedRecipe</defName>
+    <label>shape megatree seed (wildbark)</label>
+    <description>Shape a Wildbark tree seed. Wildbark trees produce massive amounts of yearly wooden platings.</description>
+    <jobString>shaping a conduit tree.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+    <researchPrerequisite>ET_MegafloraPlants</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>9600</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_WildbarkTreeTierTwo>1</ET_Seed_WildbarkTreeTierTwo>
+    </products>
+    <displayPriority>6</displayPriority>
+  </RecipeDef>
+</Defs>

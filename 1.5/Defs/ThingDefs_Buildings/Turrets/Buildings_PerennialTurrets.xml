@@ -183,7 +183,7 @@
     </comps>
   </ThingDef>
 
-<!--Perennial Turret Stake shot-->
+<!--Perennial 1x1 Turret shot-->
 
   <ThingDef ParentName="BaseBullet">
     <defName>ET_PerennialTurretNeedle</defName>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=====Tier One Mastery=====-->
+
+<ResearchProjectDef>
+    <defName>ET_TierOneLithicMastery</defName>
+    <label>Lithic Aptitude</label>
+    <description>The straightforward - but massive - potential of what forms the backback of lithic terratech is well understood to you. And with everything together, the earth itself with reward you, allowing you to ccreate new growths of chronite.
+\n\nLithic Aptitude shows other Terratech colonies your dedication to the Terratech lifestyle. Terratech tribes will look more favorably on you, though another Mastery is required to show true devotion.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_ResearchTab_Lithic</tab>
+    <requiredAnalyzed>
+      <li>ET_KeyLithicAptitude</li>
+    </requiredAnalyzed>
+    <hiddenPrerequisites>
+      <li>ET_BasicChargeManipulation</li>
+      <li>ET_LithicWeaponCrafting</li>
+      <li>ET_LithicArmorCrafting</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+    <discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
+    <discoveredLetterText>Your dedication to lithic terratech culture is starting to pay off. The milestone you have reached has granted you a new understanding of lithic nature as a whole, and how you can shape it all. This is just the beginning, however.
+\nEntirely new terratech projects, alongside improving old research, awaits you.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!--=====Midas-Class=====-->
+
+<ResearchProjectDef>
+  <defName>ET_MidasClassEssentials</defName>
+  <label>Midas-Class Essentials</label>
+  <description>Teache the basics - and precautions - of the Midas-Class, allowing access to it's secrets.
+While it promises high wealth and very high damage effeciency, one must exert the highest caution with this class. Trunsmutation of their own is a very real risk!</description>
+  <baseCost>2100</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_TierOneLithicMastery</li>
+    </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  <customUnlockTexts>
+    <li>Midas Wardlimbs at the Chronite Forge</li>
+    <li>Vivium Geode Shaping at the Chronite Forge</li>
+  </customUnlockTexts>
+  <discoveredLetterTitle>New Class Discovered!</discoveredLetterTitle>
+  <discoveredLetterText>The Midas Lithic Class is one of the few true lithic classes that has branched out due to it's usefulness.
+By utilizing the planet's natural wealth, the class further allows it's practicioners to access even more wealth, and be able to apply it to more fields.
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_MidasClassStructures</defName>
+  <label>Midas-Class Structures</label>
+  <description>Teaches how to grow crystals that tie directly into Midas terratech. More specifically, teaches how to create the lethal transmutation pylon.</description>
+  <baseCost>1800</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_MidasClassEssentials</li>
+    </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  <customUnlockTexts>
+    <li>Vivium Pylon Lattice at the Chronite Forge</li>
+  </customUnlockTexts>
+  <discoveredLetterTitle>About: Midas-Class Structures</discoveredLetterTitle>
+  <discoveredLetterText>You have learned how to make midas-class terrastructures. HOWEVER, a tribe might be incredibly careful when it comes to these structures.
+Structures such as pylons, turrets, etc. can transmutate flesh at incredible speeds. Before creating these structures, make sure your own colonists are outfitted with wardlimbs, and visitors will not be hit by these structures! 
+  </discoveredLetterText>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_MidasClassProcessing</defName>
+  <label>Pattern MCP-600LM</label> <!--Midas-Class Processing-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
+  <baseCost>180</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_MidasClassStructures</li>
+  </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>6.00</researchViewX>
+  <researchViewY>0.00</researchViewY>
+  <!--<discoveredLetterTitle>About: Midas-Class Processing</discoveredLetterTitle>
+  <discoveredLetterText>Todo</discoveredLetterText>-->
+</ResearchProjectDef>
+
+  <!--=====Etc.=====-->
+
+<ResearchProjectDef>
+  <defName>ET_AdvancedMetalReclaimation</defName>
+  <label>Pattern AMR-407L</label> <!--Advanced Metal Reclamation-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
+  <baseCost>210</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <prerequisites>
+      <li>ET_TierOneLithicMastery</li>
+  </prerequisites>
+  <hiddenPrerequisites>
+      <li>ET_BasicMetalReclamation</li>
+  </hiddenPrerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>4.00</researchViewX>
+  <researchViewY>0.70</researchViewY>
+  <!--<discoveredLetterTitle>About: Advanced Metal Reclaimation</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>-->
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_LithicWildWeaponRestoration</defName>
+  <label>Pattern LWWR-514L</label> <!--Lithic Wild Weapon Restoration-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
+  <baseCost>240</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <requiredAnalyzed>
+    <li>ET_KeyLithicWildWeaponRestoration</li>
+  </requiredAnalyzed>
+  <prerequisites>
+      <li>ET_TierOneLithicMastery</li>
+  </prerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>1.40</researchViewY>
+  <!--<discoveredLetterTitle>About: Lithic Wild Weapon Restoration</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>-->
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>ET_BasicLithicHybridization</defName>
+  <label>Pattern BLH-507L</label> <!--Basic Lithic Hybridization-->
+  <!--<description>Todo</description>-->
+  <description>This research is obfuscated, and cannot be clearly pieced together yet. However, researching what can be understood of it now would provide a massive benefit when it's purpose becomes clear.
+\n(Dev Note: Unfortunately I wasn't able to finish this before release. I'm working to get this into the mod ASAP, and the research for it will still be valid! Keep an eye on it!)</description>
+  <baseCost>240</baseCost>
+  <techLevel>Neolithic</techLevel>
+  <tab>ET_ResearchTab_Lithic</tab>
+  <requiredAnalyzed>
+    <li>ET_KeyBasicLithicHybridization</li>
+  </requiredAnalyzed>
+  <hiddenPrerequisites>
+      <li>ET_TierOneLithicMastery</li>
+  </hiddenPrerequisites>
+  <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+  <researchViewX>5.00</researchViewX>
+  <researchViewY>0.70</researchViewY>
+  <!--<discoveredLetterTitle>Breakthrough Achieved!</discoveredLetterTitle>
+  <discoveredLetterText>Todo
+  </discoveredLetterText>-->
+</ResearchProjectDef>
+
+<!--<ResearchProjectDef>
+    <defName>ET_TierOneLithicMastery</defName>
+    <label>Terrathyst Crucible</label>
+    <description>Learn how to shape a unique seed at a crafting spot that will create a terrathyst crucible. This crucible has a shallow pool of recycling shocksap, and is ideal for manipulating terrathyst shards.
+Unlike organic tech, which has many variants and genomes due to bioengineering, lithic creations are inanimate, and are far more striaghtforward. Most everything lithic simply requires adequate charge, and the right environment to influence crystal growth.
+While the terrathyst crucible can deliver on both, it's unrealized potential makes it very slow, and the shallow pool can only handle creations of small size.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>ET_ResearchTab_Lithic</tab>
+    <hiddenPrerequisites>
+      <li>ET_OrganicTerratechEssentials</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>ET_BasicResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <discoveredLetterTitle>About: Terrathyst Crucible</discoveredLetterTitle>
+    <discoveredLetterText>You now have access to the terrathyst crucible. This crucible is used to form terrathyst seeds, and to charge or manipulate certain terrathyst items.
+It's usability is quite limited, however, and stronger, deeper structures are needed for larger items, and more demanding recipes.</discoveredLetterText>
+  </ResearchProjectDef>-->
+
+</Defs>

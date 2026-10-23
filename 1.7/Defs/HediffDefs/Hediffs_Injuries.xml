@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>ET_RadianceWound</defName>
+    <label>flash burn</label>
+    <labelNoun>a burn caused by intense, sudden heat</labelNoun>
+    <description>A flash burn.</description>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>old flash burn</permanentLabel>
+        <instantlyPermanentLabel>deep flash burn</instantlyPermanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>flash burnt</destroyedLabel>
+      <destroyedOutLabel>flash-burned off</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ET_RadianceBuildup</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1, 1, 0.9)</defaultLabelColor>
+    <label>radiant flash</label>
+    <initialSeverity>0.4</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <tendable>false</tendable>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Blindness and disorientation caused by a source of sudden, intense light.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-5</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>dim vision</label>
+        <minSeverity>.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>disoriented</label>
+        <minSeverity>.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>blinded</label>
+        <minSeverity>.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.8</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>blinded</label>
+        <minSeverity>.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!--=====Psychic Whispers: Minor=====-->
+
+  <HediffDef>
+    <defName>ET_PsychicWhispersBuildupMinor</defName>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>psychic snare</label>
+    <makesSickThought>false</makesSickThought>
+    <initialSeverity>0.1</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Unintelligible voices that constantly barrage the mind. While not lethal, the effect can linger for a good while and disrupt concentration.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>-0.2</severityPerDayRange>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>white noise</label>
+        <minSeverity>0.001</minSeverity>
+      </li>
+      <li>
+        <label>whispers</label>
+        <minSeverity>0.2</minSeverity>
+        <statOffsets>
+          <GlobalLearningFactor>-0.2</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>15</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>1.25</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+      </li>
+      <li>
+        <label>raised voices</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GlobalLearningFactor>-0.4</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>10</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>1.5</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+      </li>
+      <li>
+        <label>wailing</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GlobalLearningFactor>-0.6</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>5</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>1.75</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+      </li>
+      <li>
+        <label>wailing</label>
+        <minSeverity>0.9</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <GlobalLearningFactor>-0.8</GlobalLearningFactor>
+        </statOffsets>
+        <mentalBreakMtbDays>5</mentalBreakMtbDays>
+        <statFactors>
+          <RestFallRateFactor>2</RestFallRateFactor>
+        </statFactors>
+        <allowedMentalBreakIntensities>
+          <li>Minor</li>
+        </allowedMentalBreakIntensities>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>PsychicComa</hediff>
+            <mtbDays>30</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!--=====Mental Disruption: Minor=====-->
+
+  <HediffDef>
+    <defName>ET_MentalDisruptionBuildupMinor</defName>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>mental snare</label>
+    <makesSickThought>false</makesSickThought>
+    <initialSeverity>0.1</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Nerve disruptions that cause a direct distrurbance to basic brain operations, and may even cause short-term mental breaks.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>-0.2</severityPerDayRange>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.001</minSeverity>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic_Short</mentalState>
+            <mtbDays>30</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic_Short</mentalState>
+            <mtbDays>20</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>severe</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic_Short</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!--=====Muscle Disruption: Minor=====-->
+
+  <HediffDef>
+    <defName>ET_MuscleDisruptionBuildupMinor</defName>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>muscle snare</label>
+    <makesSickThought>false</makesSickThought>
+    <initialSeverity>0.1</initialSeverity>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <canAffectBionicOrImplant>false</canAffectBionicOrImplant>
+    <description>Nerve disruptions that affect the entire body, making it quite stressful to move.</description>
+    <alwaysShowSeverity>true</alwaysShowSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDayRange>-0.2</severityPerDayRange>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.001</minSeverity>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>severe</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+<!--=====Solar Burn=====-->
+
+<HediffDef ParentName="InjuryBase">
+    <defName>ET_SolarBurn</defName>
+    <label>solar burn</label>
+    <labelNoun>a solar burn</labelNoun>
+    <description>A burn caused from intense solar radiation.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.05</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>old solar burn</permanentLabel>
+        <instantlyPermanentLabel>deep solar burn</instantlyPermanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Vaporized</destroyedLabel>
+      <destroyedOutLabel>Vaporized</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+<!--=====Muscle Disruption: Minor=====-->
+<!--TO-DO: Get back to this: this is a more advanced sap poisoning approach-->
+	<!--<HediffDef>
+		<defName>ET_SapPoisoning</defName>
+		<hediffClass>VEF.AnimalBehaviours.Hediff_AcidBuildup</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<label>sap poisoning</label>
+		<lethalSeverity>1</lethalSeverity>
+		<makesSickThought>true</makesSickThought>
+		<description>Splashes of exotic sap that wasn't meant for direct contact. It both irritates the skin, and is toxic to the body.</description>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>-4</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>minor</label>
+				<minSeverity>0</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>moderate, receiving burns</label>
+				<minSeverity>0.40</minSeverity>
+				<vomitMtbDays>5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>serious, receiving burns</label>
+				<minSeverity>0.60</minSeverity>
+				<vomitMtbDays>1</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.4</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="InjuryBase">
+		<defName>VEF_AcidBurn</defName>
+		<label>acid burn</label>
+		<labelNoun>an acid burn</labelNoun>
+		<description>An acid burn.</description>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>tended</labelTendedWellInner>
+				<labelSolidTendedWell>tended</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.30</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>acid burn scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.01875</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<canMerge>true</canMerge>
+			<destroyedLabel>Corroded</destroyedLabel>
+			<destroyedOutLabel>Corroded</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>-->
+</Defs>

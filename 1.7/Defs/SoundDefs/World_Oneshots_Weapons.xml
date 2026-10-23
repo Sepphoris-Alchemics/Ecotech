@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  
+  <SoundDef>
+    <defName>ET_Sound_LightStake</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Stakecaster</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.83</min>        
+          <max>1.15</max>
+        </pitchRange>
+        <volumeRange>
+          <min>35</min>        
+          <max>35</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ET_Sound_BlowgunLight</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>3</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/BlowgunLight</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.83</min>        
+          <max>1.15</max>
+        </pitchRange>
+        <volumeRange>
+          <min>50</min>        
+          <max>50</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ET_Sound_BlowgunMedium</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/BlowgunMedium</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.83</min>        
+          <max>1.15</max>
+        </pitchRange>
+        <volumeRange>
+          <min>50</min>        
+          <max>50</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ET_Sound_BlowgunHeavy</defName>  
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>3</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/BlowgunHeavy</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.83</min>        
+          <max>1.15</max>
+        </pitchRange>
+        <volumeRange>
+          <min>50</min>        
+          <max>50</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ET_Sound_Needle1</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>3</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/Needle1</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.83</min>        
+          <max>1.15</max>
+        </pitchRange>
+        <volumeRange>
+          <min>50</min>        
+          <max>50</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ET_Sound_AnimaShot1</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/AnimaShot</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.83</min>        
+          <max>1.15</max>
+        </pitchRange>
+        <volumeRange>
+          <min>25</min>        
+          <max>25</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>ET_Sound_WoodExplosion1</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/WoodExplosion</clipFolderPath>
+          </li>
+        </grains>      
+        <pitchRange>
+          <min>0.83</min>        
+          <max>1.15</max>
+        </pitchRange>
+        <volumeRange>
+          <min>25</min>        
+          <max>25</max>
+        </volumeRange>    
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>

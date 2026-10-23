@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+TIME TICK BASICS:
+60,000 = 1 day
+900,000 = 1 quadrum (15 days)
+3,600,000	 = 1 quadrum (60 days)
+
+Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
+			-Immature light: 30 days (1800000) | 30 health
+			-Immature normal: 45 days (2700000) | 35 health
+			-Immature heavy: 60 days (3600000) | 50 health
+
+			-Mature light: 45 days (2700000) | 40 health
+			-Mature normal: 60 days (3600000) | 45 health
+			-Mature heavy: 75 days (4500000) | 50 health
+-->
+
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--Counterpart: Revolver-->
+		<defName>ET_PrimaPistol</defName>
+		<label>prima minishot</label>
+		<description>A biotic weapon, patterned off of a pistol design, and grown straight from a specialized pod. While not very powerful, it is quite quick to fire, and relatively fast to grow.\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaPistolBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.7</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedBasic</li>
+		</weaponTags>
+    <weaponClasses>
+			<li>RangedLight</li>
+      <li>Ranged</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.45</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>4000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornPistol</defaultProjectile>
+        <warmupTime>0.375</warmupTime>
+        <range>22.9</range>
+        <soundCast>ET_Sound_BlowgunLight</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+			<comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1800000</lifespanTicks>
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon"> <!--Counterpart: Machine Pistol-->
+		<defName>ET_PrimaSMG</defName>
+		<label>prima pincaster</label>
+		<description>A biotic weapon, patterned off of a compact submachine gun, and grown straight from a specialized pod. They are quick and suppressive, but their sporadic bursts can cause their damage and accuracy to be inconsistent.
+\n\nThis weapon is entirely organic; it has a limited lifetime and will eventually expire, but can be easily regrown.
+\n\nDue to it's plant nature, the amount of projectiles it can fire in one burst will vary from as few as three, to as many as six. When matured, this range will be much more narrow.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Basic/ET_PrimaSMGBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaRangedBasic</li>
+		</weaponTags>
+    <weaponClasses>
+			<li>ShortShots</li>
+      <li>Ranged</li>
+			<li>RangedLight</li>
+    </weaponClasses>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.25</AccuracyMedium>
+			<AccuracyLong>0.10</AccuracyLong>
+			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>3</Flammability>
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs>
+      <!--<li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_MachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>-->
+      <li>
+        <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornSMG</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>16.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_BlowgunLight</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+			<comps>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>1800000</lifespanTicks> <!--10 days-->
+          <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VEF.Weapons.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VEF.Weapons.MakeshiftProperties">
+				<shots>2~6</shots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

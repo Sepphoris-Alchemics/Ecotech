@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--
+
+TIME TICK BASICS:
+60,000 = 1 day
+600,000 = 10 days
+900,000 = 1 quadrum (15 days)
+1,800,000 = 2 quadrums (30 days)
+2,700,000 = 3 quadrums (45 days)
+3,600,000	 = 1 year (60 days)
+4,500,000 = 5 quadrums (75 days)
+5,400,000 = 6 quadrums (90 days)
+6,300,000 = 7 quadrums (105 days)
+7,200,000 = 2 years (120 days)
+8,100,000 = 9 quadrums (135 days)
+9,000,000 = 10 quadrums (150 days)
+
+
+=====PRIMA WEAPONS (1.2.0)=====
+
+Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
+			-Immature light: 30 days (1800000) | 30 health
+			-Immature normal: 45 days (2700000) | 35 health
+			-Immature heavy: 60 days (3600000) | 40 health
+
+			-Mature light: 45 days (2700000) | 40 health
+        -Sunsap: 4050000
+        -Endosap: 55 days (3300000) + 60 health
+
+			-Mature normal: 60 days (3600000) | 45 health
+        -Sunsap: 5400000
+        -Endosap 70 days (4200000) + 70 health
+
+			-Mature heavy: 75 days (4500000) | 50 health
+        -Sunsap: 6750000
+        -Endosap 85 days (5100000) + 75 health
+
+      +2 range for mature
+      +0.2 mass for mature
+      +1 burst
+
+
+=====SAP EFFECTS (Updated for 1.2)=====
+
+BASIC SAPS:
+  -Glowsap
+  -Endosap
+  -Hypersap
+  -Deepsap
+
+METASAPS:
+  -Toxsap
+  -???
+  -Shocksap
+
+NOBLESAPS:
+  -Roguesap
+  -Ectosap
+  -Chronosap
+
+-ARCHSAPS:
+  -Embersap
+  -Cryosap
+  -Arcsap
+
+-STELLAR SAPS:
+  -Sunsap
+  -Starsap
+
+NOTE: ALL effects are based on the matured weapon's baseline stats. DO NOT use the immature weapon stats.
+
+Endosap:
+  +10 lifespan days
+  +50% HP, rounded to highest 5th
+  Flammability decreased by 75%
+  .3 more mass
+
+Hypersap:
+  Projectile max raised by 3
+  REMOVED: Project min lowered by 1
+  Projectile speed is increased by 50%, rounded to highest 5th
+
+Toxsap:
+  Projectiles apply poison
+
+Deepsap:
+  Allows weapon to be replanted and grow 50% faster than ORIGINAL growth time.
+  Weapon reverts to basic variant afterwards.
+
+Sunsap:
+  Lifespan increased by 50%
+  HP regen is a static 15
+  Max projectiles doubled | min projectiles halved
+  
+Starsap:
+  Lifespan is increased by a flat 30 days
+  HP regen is a static 15
+  Projectiles fired increased by 4 and decreased by 2
+
+Surgesap:
+  Allows a secondary fire mode that fires 5x the amount of standard projectiles.
+
+Chargesap: (once named Shocksap)
+  Projectile applies muscular disruption (short-term paralysis)
+
+Meldsap:
+  Weapon is considered a persona weapon
+  +.1 accuracy in all areas. Caps at .9
+  Warmup is decreased by 50%
+
+Roguesap:
+  Weapon has a flat 45 day lifespan
+  Upon exiry, produces Rogue seed.
+
+Ectosap (named Ammosap internally):
+  -Lifespan is removed
+  -Weapon now has ammo function. Ammo is highest projectile count x50
+  -Reloaded with parent material
+
+Chronosap:
+  Lifespan decreased by 50%
+  Health regen increased by 100%
+  Weapon CD is lowered by 50%
+  Projectiles are 50% faster
+
+Archsap:
+  -Lifespan is removed
+  Weapon has 50% more health
+  Flammability decreased by 50%
+
+
+
+Prima Pistol (Immature):
+  HP: 30
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.2
+  Flammability: 3
+  Warmup: 0.375
+  Range: 22.9
+  Lifespan: 840000
+  Projectile Speed: 40
+
+Prima Pistol (Mature):
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add 0.2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 960000
+  Projectile Speed: 40
+
+Endosap Pistol:
+  HP: 75 (matured base health is 50, +50% is +25 = 75)
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.6 (add .4)
+  Flammability: .75 (25% of 3)
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 960000
+  Projectile Speed: 40
+
+Hypersap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 960000
+  Projectile Speed: 60 (40+50%)
+
+Toxsap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 960000
+  Projectile Speed: 40
+  Other: projectile inflicts poison
+
+Deepsap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 960000
+  Projectile Speed: 40
+  Other: can be replanted
+
+Sunsap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 1440000 (960000 + 480000)
+  Projectile Speed: 40
+  Other: regenerates 15hp per day
+
+Starsap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 2760000 (960000 +1800000) 180,0000 = 30 days
+  Projectile Speed: 40
+
+Surgesap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 720000 (960000x0.75)
+  Projectile Speed: 40
+  Other: secondary attack fires x5 bullets rapidly
+
+Shocksap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 960000
+  Projectile Speed: 40
+  Other: inflicts paralysis poison
+
+Meldsap Pistol:
+  HP: 50
+  Accuracy: .90 touch | .90 short | .55 medium | .30 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.1875 (.375 x 0.5)
+  Range: 24.9
+  Lifespan: 960000
+  Projectile Speed: 40
+  Other: binds to the user
+
+Roguesap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 180,0000 (flat 30 days)
+  Projectile Speed: 40
+  Other: upon exiry, produces a rogue seed that produces a random rogue weapon
+
+Eldersap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: N/A
+  Projectile Speed: 40
+  Other: total ammo is 50 shots before reload
+
+Chronosap Pistol:
+  HP: 50
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.4 (0.8x0.5)
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: 480000 (960000x0.5)
+  Projectile Speed: 60 (40x1.5)
+
+Archsap Pistol:
+  180
+  Accuracy: .80 touch | .80 short | .45 medium | .20 long
+  Ranged CD: 0.8
+  Deterioration Rate: 0
+  Mass: 1.4 (add .2)
+  Flammability: 3
+  Warmup: 0.375
+  Range: 24.9
+  Lifespan: N/A
+  Projectile Speed: 40
+
+
+=====Prima SMG=====
+
+Prima SMG (Immature):
+  HP: 30
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.2
+  Flammability: 3
+  Warmup: 0.375
+  Range: 16.9
+  Burst shot: 4
+  Lifespan: 840000
+  Projectile Speed: 40
+
+Prima SMG (Mature):
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 960000
+  Projectile Speed: 40
+
+Endosap SMG:
+  HP: 75 (50x1.5)
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.6
+  Flammability: 0.75
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 960000
+  Projectile Speed: 40
+
+Hypersap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 4~7 (5-1 | 5+2)
+  Lifespan: 960000
+  Projectile Speed: 60 (40x1.5)
+
+Toxsap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 960000
+  Projectile Speed: 40
+  Other: projectiles inflict poison
+
+Deepsap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 960000
+  Projectile Speed: 40
+  Other: can be replanted
+
+Sunsap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 1440000 (960000 + 480000)
+  Projectile Speed: 40
+  Other: regenerates 50hp per day
+
+Starsap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 2760000 (960000 +1800000) 180,0000 = 30 days
+  Projectile Speed: 40
+
+Surgesap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 720000 (960000x0.75)
+  Projectile Speed: 40
+  Special: fires a volley of 25 shots (5x5)
+
+Shocksap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 960000
+  Projectile Speed: 40
+  Other: inflicts paralysis poison
+
+Meldsap SMG:
+  HP: 50
+  Accuracy: .85 touch | .65 short | .25 medium | .10 long
+  Ranged CD: 0.45
+  Deterioration Rate: 0
+  Mass: 1.4
+  Flammability: 3
+  Warmup: 0.375
+  Range: 17.9
+  Burst shot: 5
+  Lifespan: 960000
+  Projectile Speed: 40
+-->
+</Defs>

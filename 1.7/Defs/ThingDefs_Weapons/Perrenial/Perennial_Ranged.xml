@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+	<!--Periwood Rifle-->
+	<ThingDef ParentName="BasePeriwoodTerraweapon">
+		<defName>ET_PeriwoodRifle</defName>		<!--Counterpart: Minigun-->
+		<label>Periwood PSR</label>
+		<description>The Periwood PSR (Plated Suppression Rifle) is a biotic weapon, carved from the heart of an Periwood Tree. The PSR is capable of firing bursts at relatively long ranges. Combines with it's high AP and projectile speed. This makes it a very effective suppresive weapon, or as a weapon meant to injure and down a target, with lowered chances of outright killing them.
+\n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+		<graphicData>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodRifleBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>			<!--- mid/long range is increased by 0.15, touch/short decreased by 0.15-->
+			<AccuracyTouch>0.15</AccuracyTouch>
+			<AccuracyShort>0.15</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.32</AccuracyLong>
+			<RangedWeapon_Cooldown>1.15</RangedWeapon_Cooldown>			<!--half of the counterpart-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>3</Flammability>
+			<WorkToMake>15000</WorkToMake>
+		</statBases>
+		<!--Crafting-->
+		<costList>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
+			<ET_Brightsap>2</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_PrimaTerraforge</li>
+			</recipeUsers>
+			<workAmount>15000</workAmount>
+			<skillRequirements>
+				<Plants>6</Plants>
+				<Artistic>3</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodHeartshifting</li>
+			</researchPrerequisite>
+		</recipeMaker>
+	<!--End of crafting-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile>				<!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>2.1</warmupTime>				<!--0.4 faster than it's counterpart-->
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<range>25.9</range>				<!--five less than it's counterpart-->
+				<soundCast>ET_Sound_Needle1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1200000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodRifleGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+Renewable | Unable to be evolved or infused</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BasePeriwoodTerraweapon">
+		<defName>ET_PeriwoodSMG</defName>		<!--Counterpart: Heavy SMG-->
+		<label>Periwood Needler</label>
+		<description>The Periwood Needler is a biotic weapon, carved fom the heart of an Periwood Tree. The Needler is quite limited on range, but it's volley of armor-shredding thorns are more than deadly to anything that gets too close. Contrary to some myths, it's projectiles do not explode, nor are they pink.
+\n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+		<graphicData>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodSMGBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>35</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.20</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>			<!--half of the counterpart, rounded down-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.2</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>10000</WorkToMake>
+		</statBases>
+<!--Crafting-->
+		<costList>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
+			<ET_Brightsap>1</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_PrimaTerraforge</li>
+			</recipeUsers>
+			<workAmount>10000</workAmount>
+			<skillRequirements>
+				<Plants>4</Plants>
+				<Artistic>2</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodHeartshifting</li>
+			</researchPrerequisite>
+		</recipeMaker>
+	<!--End of crafting-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile>				<!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>2.1</warmupTime>				<!--0.4 faster than it's counterpart-->
+				<burstShotCount>7</burstShotCount>
+				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+				<range>17.9</range>				<!--five less than it's counterpart-->
+				<soundCast>ET_Sound_Needle1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>spear</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1500000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodSMGGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+Renewable | Unable to be evolved or infused</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--Periwood Tricaster-->
+
+	<ThingDef ParentName="BaseWildTerraweapon">
+		<defName>ET_PeriwoodTricaster</defName>
+		<label>Periwood Tricaster</label>
+		<description>The Tricaster is the second iteration of the experimental "caster" weapon type, which was meant as a heirarchy of "staple" weapons that Terratech tribes could always rely on. This specific iteration introduces multiple traits of the Periwood line, though there are some notable differences due to it's method of acquisition.
+Created by combining a Primcaster with a Periwood Heart at a Biosynth Vat.
+\n\nThe "Caster" line is a special weapon that does not belong to one genome; rather, it is evolved directly into other ones to take on new traits, while maintaining previous ones. These weapons often outperform other weapons in their same tier, but creating them take significant time and investment.
+The Tricaster features the following bonuses and penalties:
+-Stage 2 out of ?
+-"Pure" Form: The Tricaster can be further evolved
+-Prima Bonus: The Tricaster can accept advanced saps
+-Prima Bonus: The Tricaster produces a special seed upon expiry
+-Periwood Bonus (NEW): The Tricaster has a drastically extended lifespan
+-Periwood Bonus (NEW): The Tricaster can be replanted to be regrown
+-Periwood Handicap (NEW): Sap infusion requires special means due to sap inaccesibility</description>
+		<graphicData>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodTricaster</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>45</MaxHitPoints>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>1.125</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>3.1</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>12000</WorkToMake>
+			<MarketValue>80</MarketValue>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PeriwoodNeedle</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<range>32.9</range>
+				<soundCast>ET_Sound_LightStake</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1800000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodTricasterGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#68bd46&gt;Stage III&lt;/color&gt;
+Upgradable | Renewable | ??? | ???</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--==========-->
+
+	<ThingDef ParentName="BasePeriwoodTerraweapon">
+		<defName>ET_PeriwoodCannon</defName>		<!--Counterpart: Grenade Launcher-->
+		<label>Periwood Spinecannon</label>
+		<description>The Periwood Spinecannon is a biotic weapon, carved from the heart of an Periwood Tree. This weapon fires a large stake at close range, which deal moderate damage on top of fragmenting into splinters that affect the immediate area. This makes the Cannon very capable against strong targets that are a bit too close for confort.
+\n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+		<graphicData>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodCannonBasic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.20</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>			<!--half of the counterpart, rounded down-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>3.2</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>20000</WorkToMake>
+		</statBases>
+<!--Crafting-->
+		<costList>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
+			<ET_Brightsap>4</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_PrimaTerraforge</li>
+			</recipeUsers>
+			<workAmount>20000</workAmount>
+			<skillRequirements>
+				<Plants>8</Plants>
+				<Artistic>4</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodHeartshifting</li>
+			</researchPrerequisite>
+		</recipeMaker>
+	<!--End of crafting-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PeriwoodCannon</defaultProjectile>				<!--the damage and count isn't the same, but the overall damage is right below the Heavy SMG-->
+				<warmupTime>3.1</warmupTime>				<!--0.4 faster than it's counterpart-->
+				<burstShotCount>1</burstShotCount>
+				<range>15.9</range>				<!--eight less than it's counterpart-->
+				<forcedMissRadius>0.9</forcedMissRadius>
+				<soundCast>ET_Sound_Needle1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>spear</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>900000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodCannonGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+Renewable | Unable to be evolved or infused</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>

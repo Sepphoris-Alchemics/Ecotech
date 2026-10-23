@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--VEF Random recipe
+  <RecipeDef>
+    <defName>ET_PeriwoodRandomWeaponRecipe</defName>
+    <label>carved periwood weapon</label>
+    <description>Create a random periwood weapon from a periwood core.</description>
+    <jobString>Carving periwood weapon.</jobString>
+    <workSpeedStat>ResearchSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>10000</workAmount>
+    <unfinishedThingDef IsNull="True" />
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacerEco</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ComponentSpacerEco</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ET_RandomTierTwoWeapon>1</ET_RandomTierTwoWeapon>
+    </products>
+	<researchPrerequisite>ET_PeriwoodTerraseeds</researchPrerequisite>
+		<skillRequirements>
+			<Intellectual>2</Intellectual>
+		</skillRequirements>
+    <workSkill>Intellectual</workSkill>
+    <recipeUsers>
+			<li>ET_PrimaTerraforge</li>
+		</recipeUsers>
+  </RecipeDef>-->
+
+
+</Defs>

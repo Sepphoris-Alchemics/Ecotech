@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ApparelBase" Name="LithicApparelBase" Abstract="True">
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<tickerType>Normal</tickerType>
+		<tradeTags>
+			<li>ET_LithicArmorTag</li>
+		</tradeTags>
+	</ThingDef>
+
+<!--TO-DO: LITHIC MANTLE
+
+MANTLE WILL HAVE 2 STAGES ON LAUNCH
+
+	-BASE STAGE: WILL INCLUDE "FORTIFY" ABILITY
+	-SECOND STAGE STAGE: WILL INCLUDE "SHOCK BURST" ABILITY
+	-THIRD STAGE: WILL INCLUDE "LIGHTNING BOLT" ABILITY
+
+ARMOR ABILITIES:
+	FORTIFY: INCREASES DEFENSES FOR A COUPLE HOURS BUT DECREASES MOVEMENT, ETC. FOR THE SAMER ABOUTN OF TIME
+	SHOCK BURST: FIRES A BURST OF ELECTRICITY THAT SHOCKS A TARGETS IN A SMALL AREA. DAMAGE + CHANCE TO EMP
+	LIGHTNING BOLT: FIRES A DIRECTED BOLT OF LIGHTNING AT A TARGET. MEDIUM RANGE, MEDIUM DAMAGE
+
+
+ANOTHER ARMOR WILL INCLUDE THE FOURTH STAGE:
+	STORM BARRAGE: FIRES 5 QUICK BLASTS OF ELECTRIC DAMAGE ON A TARGET. 
+-->
+
+	<ThingDef ParentName="LithicApparelBase">
+		<defName>ET_GenesiteNomadArmorOne</defName>
+		<label>genesite nomad armor</label>
+		<techLevel>Neolithic</techLevel>
+		<description>An armor made entirely of genesite, far different from any stone that can normally be found. Genesite only exists near the core of a planet, making it impossible to acquire with traditional mining methods.
+This particular set of armor - which is more akin to a protective working suit - was made with efficiency in mind, layering *just* enough of the stone to provide protection, while also not being heavy or imposing movement restrictions.
+The offered mobility and durability made it especially ideal for terratechists that chose to wander the planet instead of settling down, giving the armor it's name.
+This specific set can be charged with Shocksap, which will cause special crystals to grow. These crystals provide electrical abilities to the wearer; however the crystals also replace the genesite material, diminishing the armor's defensive capabilities.</description>
+		<graphicData>
+			<texPath>Things/Apparel/LithicLightArmorT1Base/LithicLightArmorT1Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<Mass>4.6</Mass>
+			<MaxHitPoints>600</MaxHitPoints>			<!--Durability is 60% of base, rounded up to nearest 5th)-->
+			<MarketValue>200</MarketValue>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>14</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+			<tags>
+				<li>LithicArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/LithicLightArmorT1Base/LithicLightArmorT1Base</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+				<li>Feet</li>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<drawData>
+			</drawData>
+		</apparel>
+		<comps>
+			<!--<li Class="VEF.Apparels.CompProperties_SwitchApparel">
+				<SwitchTo>ET_PrimaHeavyArmor</SwitchTo>
+				<graphicPath>UI/Gizmo/Switch</graphicPath>	
+				<Label>Transform</Label>
+			</li>-->
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+-10% damage taken | Ability: Fortify | ???</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="LithicApparelBase">
+		<defName>ET_GenesiteNomadHelmetOne</defName>
+		<label>genesite nomad helmet</label>
+		<techLevel>Neolithic</techLevel>
+		<description>A helmet that is intended to be formed (and worn) alongside Genesite armor. Multiple variants of the helmets exists, but these variants generally exist for aesthetic purposes.
+\nNote that nomadic helmets do not continubte to any of the set abilities, and should only be evolved for aesthetic purposes only.</description>
+		<graphicData>
+			<texPath>Things/Apparel/LithicLightArmorT1Base_helm/LithicLightArmorT1BaseHelmet_main</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>2.4</Mass>
+			<MaxHitPoints>400</MaxHitPoints>
+			<MarketValue>120</MarketValue>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>2</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>8</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>-.05</IncomingDamageFactor>
+			<ToxicResistance>0.1</ToxicResistance>
+			<ToxicEnvironmentResistance>0.1</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<generateCommonality>0</generateCommonality>
+		<apparel>
+			<tags>
+				<li>LithicArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/LithicLightArmorT1Base_helm/LithicLightArmorT1BaseHelmet</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
+-5% damage taken | 10% Toxic Resistance</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

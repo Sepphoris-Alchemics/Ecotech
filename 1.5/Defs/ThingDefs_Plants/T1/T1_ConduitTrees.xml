@@ -456,7 +456,7 @@ The saps will appear at the base of the tree, every 8-10 in-game days.</descript
   <ThingDef ParentName="TreeBase">
     <defName>ET_RecycleTreeTierOne</defName>
     <label>Primwood Reclaimer Tree</label>
-    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. The roots of a reclaimer tree 'capture nearby items within a certain radius, breaking them down into natural, usable materials that may be useful to Terratech colonies.
+    <description>The Primwood Reclaimer tree is one of the Conduit trees that Terratech devotees learn to properly nurture, enabling tribes to live safely under natural resources. The roots of a reclaimer tree capture nearby items within a certain radius, breaking them down into natural, usable materials that may be useful to Terratech colonies.
 Iterms with highly manufactured materials - such as plasteel - may instead be broken down into saps. For example, a normal component will yield steel, but an advanced component will be broken down into steel and endosap.
 
 The process always breaks materials down to their most fundamental components, and only 50-60% of the materials are returned to the player. This makes the tree only ideal for converting useless items.</description>

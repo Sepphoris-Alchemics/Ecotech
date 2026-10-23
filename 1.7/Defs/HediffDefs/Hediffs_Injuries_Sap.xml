@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>ET_GlowsapPoisoning</defName>
+    <label>glowsap slowing</label>
+    <description>Slowing caused by glowsap. While not lethal, large amounts of this sap can render a pawn immovable for several hours.</description>
+    <defaultLabelColor>(232, 225, 165)</defaultLabelColor>
+    <hediffClass>Hediff_Injury</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>45000</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.2</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>slightly hindered</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>slightly hindered</label>
+        <minSeverity>0.04</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>slowed</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>impeded</label>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>completely drenched</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.7</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <injuryProps>
+      <painPerSeverity>0.001</painPerSeverity>
+      <bleedRate>0</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Destroyed</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+
+</Defs>

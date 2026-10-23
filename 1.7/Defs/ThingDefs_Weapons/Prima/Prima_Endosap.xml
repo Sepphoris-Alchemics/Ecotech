@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--Endosap differences:
+	50% higher item health
+	75% lower flammability-->
+
+<!--=====Prima SMG=====-->
+
+<!--=====Prima Carbine=====-->
+
+	<ThingDef ParentName="BaseUnmodifiedPrimaWeapon">
+		<defName>ET_PrimaCarbineEndosap</defName>
+		<label>prima endocarbine</label>
+		<description>An infused variant of the Prima Carbine. It's baseline sap has been replaced with endosap, creating a more durable epidermis, and decreasing flammability.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaCarbineUpgraded_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1.6</Mass>
+			<Flammability>0.75</Flammability> <!--25% of 3-->
+      <WorkToMake>12000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+    <verbs> <!--First one is if VWE Makeshift becomes unavailable-->
+      <!--<li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>23.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>-->
+      <li>
+        <verbClass>VEF.Weapons.Verb_MakeshiftShoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThornCarbine</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>23.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ET_Sound_BlowgunMedium</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_InspectString">
+      	<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
++10 health | +10 lifespan days</inspectString>
+      </li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>4200000</lifespanTicks>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+					<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+        </li>
+		</comps>
+		<modExtensions>
+			<li Class="VEF.Weapons.MoteProperties">
+				<fleckDef>WoodBit</fleckDef>
+				<size>0.2</size>
+				<velocity>1</velocity>
+				<angleRange>-15~15</angleRange>
+				<rotationRange>-5~5</rotationRange>
+				<numTimesThrown>1</numTimesThrown>
+			</li>
+			<li Class="VEF.Weapons.MakeshiftProperties">
+				<shots>2~5</shots>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+<!--=====Prima Twincaster=====-->
+
+	<ThingDef ParentName="BaseEndosapTerraweapon">
+		<defName>ET_PrimaTwincasterEndosap</defName>
+		<label>Twincaster</label>
+		<description>The second-generation form of the Prima Stakecaster, infused with the Endosap. The presence of the sap has enabled the pincaster to create a more durable epidermis, alongside noticeably boosting it's lifespan.
+\nUnfortunately the sap has also neutralized the Twincaster's growth potential, preventing it from being evolved further.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaCrossbowUpgraded_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>LongShots</li>
+			<li>Ranged</li>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>1.125</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.8</Mass>
+			<Flammability>0.5</Flammability>
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_StakeBriar</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>32.9</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<soundCast>ET_Sound_LightStake</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_InspectString">
+			<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#007750&gt;Infused with Endosap&lt;/color&gt;
++10 health | +10 lifespan days</inspectString>
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>4200000</lifespanTicks>
+				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
+        	</li>
+		</comps>
+	</ThingDef>
+
+<!--Prima Endosap Maul-->
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>ET_PrimaMaceEndosap</defName>
+		<label>prima endomaul</label>
+		<description>A prima maul infused with endosap. This sap replacement has created a more durable epidermis, and decreased flammability. The extra added weight of the sap has also increased the maul's damage output as a bonus.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaMaulBasic_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+    <thingCategories>
+      <li>InfusedTerraweapons</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaMeleeBasic</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+			<Mass>1.6</Mass>
+			<Flammability>0.5</Flammability>
+      <WorkToMake>12000</WorkToMake>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>1.2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>24</power>
+				<cooldownTime>2.2</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Endosap
++15 health | +10 lifespan days | +4 damage</inspectString>
+			</li>
+        <li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>510000</lifespanTicks>
+          <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+        </li>
+		</comps>
+		<tradeTags Inherit ='False'>
+      <li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>ET_PrimaSwordEndosap</defName>
+		<label>Prima endoblade</label>
+		<description>A prima crestblade infused with endosap. This sap replacement has created a more durable epidermis, and decreased flammability. The extra added weight of the sap has also increased the sword's damage output as a bonus.</description>
+		<graphicData>
+			<texPath>Things/WeaponPrima/Endosap/PrimaSwordBasic_ES</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+    <thingCategories>
+      <li>InfusedTerraweapons</li>
+    </thingCategories>
+		<weaponTags Inherit='False'>
+      <li>ET_PlantWeapon</li>
+			<li>ET_PrimaMeleeBasic</li>
+		</weaponTags>
+    <relicChance>0</relicChance>
+		<statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+			<Mass>1.2</Mass>
+			<Flammability>0.5</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>1.7</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>1.7</cooldownTime>
+			</li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.7</cooldownTime>
+      </li>
+		</tools>
+		<comps>
+		<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | Infused with Endosap
++10 health | +10 lifespan days | +4 damage</inspectString>
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+          <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+          <lifespanTicks>3600000</lifespanTicks>
+          <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+          <!--<expireEffect></expireEffect>-->
+					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+      </li>
+		</comps>
+		<tradeTags Inherit ='False'>
+      <li>ET_BasePrimaWeaponTag</li>
+    </tradeTags>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+
+Tier 1: Terrathyst Crucible:
+-Creates only basic and genesite items.
+-Creates normal weapons and items.
+-High crafting speed
+-Low stone extraction output
+
+Tier 1: Terrathyst Charger:
+-Charges tier 1 and 2 gear at a low rate
+-Evolves lithic weapons
+-1 item capacity
+
+Tier 2: Chronite Forge:
+-Creates Tier 2 gear
+-Normal crafting speed
+-Better stone extraction output
+
+-->
+
+<!--Guide for T1 recycling:
+    -T1 only returns steel.
+    -Return on materials is 1/4th of the ingredients, rounded to nearest whole.
+    -Normal components always add 1 shocksap
+    -Advanced components add 3 shocksap
+    -Add +3 steel for every components used
+    -Cannot convert structures
+    -Armor produces Endosap instead of shocksap
+    -Supports up to Microelectronics, and only craftable items-->
+
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>ET_TerrathystCrucible</defName> <!--Tier 1-->
+    <label>terrathyst crucible</label>
+    <description>A small crystal structure with a tiny basin. This structure allows a tribe to shape a limited amount of lithic items and weapons.
+The crucible was designed to allow any lithic tribe to perform procedures to obtain any fundamental resources. However, it's size is severely limiting, and larger, more specialized structures are highly recommended. 
+A terrathyst crucible is capable of breaking down items into both metals and shocksap, and can charge certain items as well, but it can only support very small items.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Things/Building/LithicCrucible</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True"/>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_LithicTerratechEssentials</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <WoodLog>12</WoodLog>
+    </killedLeavings>
+    <recipes>
+      <!--<li>ET_LithicForgeTierTwoRecipe</li>-->
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <!--<li Class="CompProperties_InspectString">
+        <inspectString>Right-click to insert terrathyst core
+Place materials nearby to charge/evolve items</inspectString>
+      </li>-->
+      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
+        <isManualOnly>true</isManualOnly>
+        <isAssemblingPawn>false</isAssemblingPawn>
+        <uiIconChooseRecipe>UI/Gizmo/InstallableInSlottedThingTransformerGizmo</uiIconChooseRecipe>
+        <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
+        <useConnectedFacility>false</useConnectedFacility>
+        <useZone>false</useZone>
+        <radius>100</radius>
+        <effectWorking>Smith</effectWorking>
+        <recipeSet>
+<!--=====Shocksap: Industrial Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Shocksap Extraction: Industrial Component</label>
+            <description>Requirements:
+x1 Industrial Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>6</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentIndustrial</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Shocksap: Spacer Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Shocksap Extraction: Advanced Component</label>
+            <description>Requirements:
+x1 Spacer Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>ET_Shocksap</resultDef>
+            <amount>16</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentSpacer</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====TERRATHYST CORE=====-->
+          <li>
+            <label>form terrathyst core</label>
+            <description>Requirements:
+x40 terrathyst shards
+Duration: 3 days</description>
+            <duration>180000</duration>
+            <resultDef>ET_TerrathystCore</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Terrathyst</thingDef>
+                <amount>40</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====SOULSNARE RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_LithicWeaponCrafting</li>
+            </researchPrerequisite>
+            <label>Soulsnare Rifle: Form stage I</label>
+            <description>Requirements:
+x3 terrathyst core
+x30 shocksap
+Duration: 12 days</description>
+            <duration>720000</duration>
+            <resultDef>ET_SoulsnareRifleOne</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_TerrathystCore</thingDef>
+                <amount>4</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>25</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====DRAINED SOULSNARE RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicChargeManipulation</li>
+            </researchPrerequisite>
+            <label>Soulsnare Rifle: Restore drained variant</label>
+            <description>Requirements:
+x1 drained soulsnare rifle
+x30 shocksap
+Duration: 9 days</description>
+            <duration>540000</duration>
+            <resultDef>ET_SoulsnareRifleOne</resultDef>
+            <amount>1</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_SoulsnareRifleDrained</thingDef>
+                <amount>1</amount>
+              </li>
+              <li>
+                <thingDef>ET_Shocksap</thingDef>
+                <amount>60</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====MARBLE BLOCKS=====-->
+          <li>
+            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
+            <label>Razor-carve marble chunk</label>
+            <description>Requirements:
+x1 marble chunk
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>BlocksMarble</resultDef>
+            <amount>6</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkMarble</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====GRANITE BLOCKS=====-->
+          <li>
+            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
+            <label>Razor-carve granite chunk</label>
+            <description>Requirements:
+x1 granite chunk
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>BlocksGranite</resultDef>
+            <amount>6</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkGranite</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====SLATE BLOCKS=====-->
+          <li>
+            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
+            <label>Razor-carve slate chunk</label>
+            <description>Requirements:
+x1 slate chunk
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>BlocksSlate</resultDef>
+            <amount>6</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkSlate</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====SANDSTONE BLOCKS=====-->
+          <li>
+            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
+            <label>Razor-carve sandstone chunk</label>
+            <description>Requirements:
+x1 sandstone chunk
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>BlocksSandstone</resultDef>
+            <amount>6</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkSandstone</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====LIMESTONE BLOCKS=====-->
+          <li>
+            <!--<researchPrerequisites>ET_LithicArmor</researchPrerequisites>-->
+            <label>Razor-carve limestone chunk</label>
+            <description>Requirements:
+x1 limestone chunk
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>BlocksLimestone</resultDef>
+            <amount>6</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkLimestone</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Industrial Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Industrial Component</label>
+            <description>Requirements:
+x1 Industrial Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>3</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentIndustrial</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Spacer Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Advanced Component</label>
+            <description>Requirements:
+x1 Spacer Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>8</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentSpacer</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EMP Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: EMP Shell</label>
+            <description>Requirements:
+x1 EMP Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_EMP</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Incen. Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Incendiary Shell</label>
+            <description>Requirements:
+x1 Incendiary Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_Incendiary</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====High Explosive Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: High Explosive Shell</label>
+            <description>Requirements:
+x1 High Explosive Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_HighExplosive</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Smoke Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Smoke Shell</label>
+            <description>Requirements:
+x1 Smoke Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_Smoke</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Firefoam Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Firefoam Shell</label>
+            <description>Requirements:
+x1 Firefoam Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_Firefoam</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EMP Grenade=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: EMP Grenade</label>
+            <description>Requirements:
+x1 EMP Grenade
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>23</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Weapon_GrenadeEMP</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Firefoam Pack=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Firefoam Pack</label>
+            <description>Requirements:
+x1 Firefoam Pack
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>23</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FirefoampopPack</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+  <!--=====Shield Belt=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Shield Belt</label>
+            <description>Requirements:
+x1 Shield Belt
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>24</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_ShieldBelt</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+    </comps>
+    <specialDisplayRadius>125</specialDisplayRadius>
+  </ThingDef>
+  
+</Defs>

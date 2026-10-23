@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WeaponClassDef>
+		<defName>ET_NaturalWeapon</defName>
+		<label>natural weapons</label>
+	</WeaponClassDef>
+
+	<WeaponClassDef>
+		<defName>ET_SyntheticWeapon</defName>
+		<label>synthetic weapons</label>
+	</WeaponClassDef>
+
+</Defs>

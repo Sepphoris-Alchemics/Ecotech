@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+Metasaps are saps that apply drastic changes to whatever they are applied to.
+Weapons have new features they weren't able to do before.
+
+The metasaps are
+  -Deepsap
+  -Sunsap (including the sundrop)
+  -Starsap
+  -Meldsap
+-->
+
+  <!--<ThingDef ParentName="ResourceBase">
+    <defName>ET_SunDrop</defName>
+    <label>Sundrop</label>
+    <description>A sphere infused with golden energy directly from the sun. Despite the source of it's power, it is only warm to the touch.\n\nCan be used to revitialize the life force of certain Terraweapons, increasing the time before they wither away.</description>
+    <possessionCount>10</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/SunDrop</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>MetasapsAll</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>0.5</heatPerSecond>
+        <heatPushMaxTemperature>12</heatPushMaxTemperature>
+      </li>
+    </comps>
+    <allowedArchonexusCount>100</allowedArchonexusCount>
+  </ThingDef>-->
+
+
+  <!--=====SUNSAP AND STARSAP=====-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ET_Sunsap</defName>
+    <label>Sunsap</label>
+    <description>A jar of terrasap containing low energies that were captured directly from the local sun.
+Sunsap's main feature is it's high nutrient contents, and is one of the most valuable saps to any terratech colony. Overall, Sunsap can:
+
+-Be diluted into Brightsap (1:10 ratio)
+-Revitalize organic weapons and armor
+-Grow Wild weaponry
+-Grow non-hybrid chlorografts
+-Grow non-hybrid florafauna</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Sunsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>6</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>225</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>MetasapsAll</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="ResourceBase">
+    <defName>ET_Starsap</defName>
+    <label>Starsap</label>
+    <description>A jar of terrasap that contains stellar energies which are millions of years old. It can only be captured during the night, when the local solar energy isn't overwelming it.
+\n\nStarsap has no innate ability, but like Sunsap it has immense energy potential. Those with sufficient Terratech knowledge can create Brightsap at an incredibly efficient ratio.
+\n\nCurrent use cases:
+Conversion into Brightsap (1:10 ratio)
+Highly valuable trade commodity with all EcoTech factions
+(Notes: Will have many more uses case when Lithoid weapons are added!)</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/Starsap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>30</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>225</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.25</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>MetasapsAll</li>
+    </thingCategories>
+  </ThingDef>-->
+
+</Defs>

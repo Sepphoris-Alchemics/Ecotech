@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!--Terrathyst balance updates:
+Terrathyst will centerpoint of lithic tech, and be required for everything. It will always be relevant.
+Rather than new types of structures requiring new crystals, terrathyst is required is higher amounts.
+In response to this, terrathyst can be grown in more 'pure' crystal types, which produce more stronger seeds and fragments.
+The more pure of a crystal, the larger the crystal will be. the crystals get absolutely massive, up to 5x5.
+
+Terrathyst creates small amounts of electricity, which means large enough crystals can power certain structures.
+  -This makes terrathyst and chronite work quite well together, as one generates electricity while the other stores it.
+Tier 4 surge seeds: 20
+-->
+
+  <ThingDef ParentName="ET_TerrathystPlantBase">
+    <defName>ET_Plant_TerrathystCrucible</defName>
+    <label>terrathyst crucible growth</label>
+    <description>A cluster of crystals that will grow into a terrathyst crucible. It does not yet hold any sap, making it usuable until it's fully formed.</description>
+    <graphicData>
+      <texPath>Things/Building/LithicCrucible</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>1.5</growDays>
+      <immatureGraphicPath>Things/Plant/TerrathystCrucible_Immature</immatureGraphicPath>
+      <sowTags Inherit='False' />
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_TerrathystCrucible</transformedThing>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Growing into: Terrathyst Crucible</inspectString>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_LithicStructureSeed</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="ET_TerrathystPlantBase">
+    <defName>ET_Plant_LithicForgeTierTwo</defName>
+    <label>prismite well growth</label>
+    <description>A cluster of crystals that will grow into a terrathyst crucible. It does not yet hold any sap, making it usuable until it's fully formed.</description>
+    <graphicData>
+      <texPath>Things/Plant/TerrathystCrucible_Immature</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <growDays>1.5</growDays>
+      <immatureGraphicPath>Things/Plant/TerrathystCrucible_Immature</immatureGraphicPath>
+      <sowTags Inherit='False' />
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(238,211,77,0)</glowColor>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_LithicForgeTierTwo</transformedThing>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Growing into: Prismite Well</inspectString>
+      </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_LithicStructureSeed</li>
+    </tradeTags>
+  </ThingDef>-->
+  
+</Defs>

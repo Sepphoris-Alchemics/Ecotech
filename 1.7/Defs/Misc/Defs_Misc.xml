@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MVCF.ModDef>
+		<defName>ET_MCVFFeatures</defName>
+		<label>Base Terraweapon</label>
+		<description>MCVF features</description>
+			<ActivateFeatures>
+				<li>RangedAnimals</li>
+				<li>HediffVerbs</li>
+				<li>IntegratedToggle</li>
+        <li>ExtraEquipmentVerbs</li>
+        <li>ApparelVerbs</li>
+        <li>Drawing</li>
+        <li>IndependentFire</li>
+        <li>InventoryVerbs</li>
+        <li>VerbComps</li>
+        <li>Reloading</li>
+			</ActivateFeatures>
+	</MVCF.ModDef>
+
+  <DesignationCategoryDef>
+    <defName>EcotechDesignation</defName>
+    <label>Ecotech</label>
+    <order>429</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_PlantsHarvestWood</li>
+      <li>Designator_PlantsCut</li>
+      <li>Designator_PlantsHarvest</li>
+    </specialDesignatorClasses>
+    <researchPrerequisites>
+      <li>TreeSowing</li>
+    </researchPrerequisites>
+  </DesignationCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>ET_PrimaWeaponsMature</defName>
+    <label>prima weapons - matured</label>
+    <parent>Root</parent>
+  </ThingCategoryDef>
+
+   <WorkGiverDef>
+    <defName>ET_ExtractPrimaTurretSeed</defName>
+    <label>extract prima turret seed</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_TerravatBasic</li>
+    </fixedBillGiverDefs>
+    <verb>extract seed at</verb>
+    <gerund>extracting seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+   <WorkGiverDef>
+    <defName>ET_DoBillsTerraforge</defName>
+    <label>shape seeds</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_PrimaTerraforge</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+   <WorkGiverDef>
+    <defName>ET_DoBillsTerrathyst</defName>
+    <label>create item</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_PrimaTerraforge</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+
+<WorkGiverDef>
+    <defName>ET_DoBillsLithicForgeTierOne</defName>
+    <label>form cluster</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_TerrathystCrucible</li>
+      <!--<li>ET_LithicForgeTierTwo</li>-->
+    </fixedBillGiverDefs>
+    <verb>form crystal cluster at</verb>
+    <gerund>forming crystal cluster at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+<WorkGiverDef>
+    <defName>ET_DoBillsLithicForgeTierTwo</defName>
+    <label>form cluster</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <!--<li>ET_LithicForgeTierTwo</li>-->
+    </fixedBillGiverDefs>
+    <verb>form crystal cluster at</verb>
+    <gerund>forming crystal cluster at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+<WorkGiverDef>
+    <defName>ET_DoBillsChroniteForge</defName>
+    <label>create item</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_ChroniteForge</li>
+    </fixedBillGiverDefs>
+    <verb>crafting items</verb>
+    <gerund>crafting items at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+<WorkGiverDef>
+    <defName>ET_DoBillsTerratechSpot</defName>
+    <label>create seed</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>125</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ET_TerratechCraftingSpot</li>
+    </fixedBillGiverDefs>
+    <verb>shape seed at</verb>
+    <gerund>shaping seed at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+<!--<WorkGiverDef>
+  <defName>ET_InfuseSap_WorkGiver</defName>
+  <label>infuse sap</label>
+
+  <giverClass>Ecotech.WorkGiver_InfuseSapJob</giverClass>
+  <workType>PlantCutting</workType>
+
+  <priorityInType>50</priorityInType>
+  <verb>infuse</verb>
+
+  <requiredCapacities>
+    <li>Manipulation</li>
+  </requiredCapacities>
+</WorkGiverDef>-->
+
+  <SoundDef>
+    <defName>ET_CrystalShatter</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Lithoid/Shatter</clipFolderPath>
+          </li>
+        </grains>
+        <onCamera>True</onCamera>
+        <volumeRange>50</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+        <repeatMode>NeverTwice</repeatMode>
+        <canVacuumDampen>false</canVacuumDampen>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <ThoughtDef>
+    <defName>ET_VivicoreTreeDestroyed</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>shattered vivicore tree</label>
+        <description>A vivicore tree was destroyed. A terrible shame to lose such a unique specimen....</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>ET_HowToMutatePlants</defName>
+    <label>EcoTech: Mutating Plants</label>
+    <opportunityDecays>false</opportunityDecays>
+    <helpText>You can mutate specific Terratech plants by using special saps. Mutating plants causes them to produce different results when they finish growing!
+\nWhile the plant is growing, use the "Infuse" sap option to mutate the plant. Each sap infusion is unique, so experiment!</helpText>
+    <highlightTags>
+      <li>GrowingZoneSetPlant</li>
+    </highlightTags>
+  </ConceptDef>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>ET_MutationPotentialHelp</defName>
+    <label>EcoTech: Mutation Potential</label>
+    <opportunityDecays>false</opportunityDecays>
+    <helpText>Various organic terratech creations have different mutation potentials. This is designated within the inspection box. Mutation potential can be summarized as follows:
+  \nEXTREME: Capable of undergoing mutation at the atomic level.
+  \nHIGH: Capable of undergoing mutation at the cellular level.
+  \nMEDIUM: Capable of mutations affecting it's higher biological functions.
+  \nLOW: Capable of mutation affecting it's basic biological functions.
+  \nNONE: Incapable of mutation.
+  \nERRATIC: Results that can end up being anything, or don't fall into the other categories.</helpText>
+  </ConceptDef>
+
+  <!--<ThingDef Abstract="True" ParentName="BuildingBase" Name="ET_MuseumDisplayBase">
+    <label>Display Case</label>
+    <thingClass>Building</thingClass>
+    <description>A display case to display things in.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <tickerType>Never</tickerType>
+    <category>Building</category>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>80</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <building>
+      <buildingSizeCategory>Medium</buildingSizeCategory>
+      <watchBuildingStandRectWidth>2</watchBuildingStandRectWidth>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="ET_MuseumDisplayBase">
+    <defName>ET_Museums_DisplayCase_Small</defName>
+    <rotatable>false</rotatable>
+    <size>(1,1)</size>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+      <Mass>15</Mass>
+    </statBases>
+    <graphicData>
+      <shaderType>CutoutComplex</shaderType>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Temp/GlassCase/GlassCase1</texPath>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(1, 1, 0.5)</volume>
+      </shadowData>
+    </graphicData>
+  </ThingDef>
+
+    <ThingDef ParentName="Wall">
+    <defName>ET_LinkedDisplayBase</defName>
+    <label>Museum Display</label>
+    <description>Displays Items.</description>
+    <graphicData>
+      <texPath>Temp/Display/Display_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>	
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToBuild>350</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>	  
+    </statBases>
+    <costList>
+	    <WoodLog>5</WoodLog>
+    </costList>		
+    <linkFlags Inherit="False">
+        <li>Custom6</li>
+    </linkFlags>
+    <tickerType>Normal</tickerType>
+    <costStuffCount>0</costStuffCount>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <stuffCategories Inherit="false"/>
+    <building>
+      <repairable>true</repairable>
+    </building>
+	
+    <designationCategory>Furniture</designationCategory>
+</ThingDef>-->
+
+</Defs>

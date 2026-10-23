@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--<WeaponClassPairDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>ET_WeaponPairNaturalSynthetic</defName>
+    <first>ET_NaturalWeapon</first>
+    <second>ET_SyntheticWeapon</second>
+  </WeaponClassPairDef>
+
+  <WeaponClassPairDef>
+    <defName>ET_WeaponPairSynthetic</defName>
+    <first>MeleePiercer</first>
+    <second>MeleeBlunt</second>
+  </WeaponClassPairDef>
+
+  <WeaponClassPairDef>
+    <defName>LongShortShots</defName>
+    <first>LongShots</first>
+    <second>ShortShots</second>
+  </WeaponClassPairDef>
+
+  <WeaponClassPairDef>
+    <defName>RangedHeavyLight</defName>
+    <first>RangedHeavy</first>
+    <second>RangedLight</second>
+  </WeaponClassPairDef>
+
+  <WeaponClassPairDef>
+    <defName>NeolithicUltratech</defName>
+    <first>Neolithic</first>
+    <second>Ultratech</second>
+  </WeaponClassPairDef>-->
+
+</Defs>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingCategoryDef>
+      <defName>EcoTechWeapons</defName>
+      <label>Terraweapons</label>
+      <parent>Weapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>OrganicTerraweaponsAll</defName>
+      <label>Organic terraweapons</label>
+      <parent>EcoTechWeapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>BasicTerraweapons</defName>
+      <label>Prima genome</label>
+      <parent>OrganicTerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>InfusedTerraweapons</defName>
+      <label>Prima infused</label>
+      <parent>OrganicTerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>BriarTerraweapons</defName>
+      <label>Briar genome</label>
+      <parent>OrganicTerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>PeriwoodTerraweapons</defName>
+      <label>Periwood genome</label>
+      <parent>OrganicTerraweaponsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>AncientTerraweapons</defName>
+      <label>Ancient terraweapons</label>
+      <parent>EcoTechWeapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<!--Soulsnare-->
+
+    <ThingCategoryDef>
+      <defName>LithicTerraweapons</defName>
+      <label>Lithic terraweapons</label>
+      <parent>EcoTechWeapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>SoulsnareStages</defName>
+      <label>Soulsnare variants</label>
+      <parent>LithicTerraweapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>VivicoreStages</defName>
+      <label>Vivicore variants</label>
+      <parent>LithicTerraweapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<ThingCategoryDef>
+      <defName>MidasStages</defName>
+      <label>Midas variants</label>
+      <parent>LithicTerraweapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<!--Stellar Weapons-->
+
+    <ThingCategoryDef>
+      <defName>WaylightStages</defName>
+      <label>Waylight variants</label>
+      <parent>LithicTerraweapons</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+
+<!--Saps-->
+
+    <ThingCategoryDef>
+      <defName>TerrasapsAll</defName>
+      <label>Terrasaps</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>BasicSapsAll</defName>
+      <label>Basic saps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Glowsap/Glowsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>ProtosapsAll</defName>
+      <label>Protosaps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Brightsap/Brightsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>MetasapsAll</defName>
+      <label>Metasaps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Deepsap/Deepsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RoyalSapsAll</defName>
+      <label>Royal saps</label>
+      <parent>TerrasapsAll</parent>
+      <iconPath>Things/Resource/Archsap/Archsap_c</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<!--Body Parts-->
+
+    <ThingCategoryDef>
+      <defName>OrganicBodyParts</defName>
+      <label>Organic terratech</label>
+      <parent>BodyParts</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>LithicBodyParts</defName>
+      <label>Lithic terratech</label>
+      <parent>BodyParts</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+<!--Seeds-->
+
+    <ThingCategoryDef>
+      <defName>TerraseedsAll</defName>
+      <label>Terraseeds</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsConduitTrees</defName>
+      <label>Conduit trees</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsPrimaWeapons</defName>
+      <label>Prima weapons</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsPrimaStructures</defName>
+      <label>Prima structures</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>TerraseedsHyperseeds</defName>
+      <label>Prima hyperseeds</label>
+      <parent>TerraseedsAll</parent>
+      <iconPath>Things/Resource/MiscSeeds/ChannelingSeed</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>ET_TechKeys</defName>
+      <label>Terratech Tomes</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/Tome/Tome_OrganicDevotee</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+	
+  <ThingCategoryDef>
+      <defName>LithicSeedsStructures</defName>
+      <label>Terrathyst Clusters</label>
+      <parent>Root</parent>
+      <iconPath>Things/Resource/TerrathystSeed/TerrathystSeedA</iconPath>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+</Defs>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Exists for fallback reasons, unchanged from origina besides defName-->
+
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_DebugTransformer</defName>
+    <label>Sap Forge</label>
+    <description>Your text here.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/ToolCabinet</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,1)</drawSize>
+      <color>(96,114,95)</color>
+    </graphicData>
+    <size>(2,1)</size>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList> 
+      <Steel>50</Steel>
+    </costList>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>42</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2710</uiOrder>
+    <constructEffect>ConstructWood</constructEffect>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_MonoThingContainer">
+        <stackLimit>50</stackLimit>
+        <drawContainedThing>false</drawContainedThing>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerFuelContents</contentsTranslationKey>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_SlottedThingTransformer">
+        <drawContainedThing>false</drawContainedThing>
+        <!-- 
+          When the cycle is more than this many ticks away, the time is displayed in absolute format (on the xth), otherwise in relative (in x hours) 
+          Can be set to -1 or omitted to always display in relative format
+        -->
+        <cycleInspectStringRelativeToAbsoluteThreshold>60000</cycleInspectStringRelativeToAbsoluteThreshold>
+        <contentsTranslationKey>Ecotech_InspectString_ThingTransformerSlotContents</contentsTranslationKey>
+        <baseFuelColor>(56,204,220)</baseFuelColor>
+        <insufficientFuelColor>(168,60,50)</insufficientFuelColor>
+        <sufficientFuelColor>(33,209,69)</sufficientFuelColor>
+        <!-- the ticks to wait for until a transformation cycle starts (does NOT include cycle duration! -->
+        <timeToInsertTicks>100</timeToInsertTicks>
+        <!-- 
+          Can be used to target exact days.
+          !!If this field is used, transformationCycleIntervalTicks must not be used. Set to -1 or omit from the Def to use cycle interval ticks!!
+          The current in-game ticks are modulo'd and added with this value, which allows targeting an exact tick in a cycle.
+          E.g: 
+          - Current game tick: 7,572,374
+          - modulo set to 900,000 (ticks in a season) 
+          The following math is executed:
+          7572374 + (900000 - (7572374 % 900000)) = 8100000
+          That means the cycle starts at the calculated tick 8100000 (in 527626 ticks)
+        -->
+        <transformationCycleIntervalTicks>2000</transformationCycleIntervalTicks>
+        <validFuels>
+          <li>
+            <fuelThingDef>ET_Glowsap</fuelThingDef>
+            <!-- these graphics can be omitted without breaking anything. -->
+            <extraGraphicDataIfNotTransforming>
+              <texPath>Things/Building/Misc/DropBeacon</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+              <!-- extra graphics need a TINY amount of Y offset to be drawn on top of the original thing -->
+              <drawOffset>(0, 0.01, 0)</drawOffset>
+            </extraGraphicDataIfNotTransforming>
+            <extraGraphicDataIfTransforming>
+              <texPath>Things/Building/Production/TableButcher</texPath>
+              <graphicClass>Graphic_Multi</graphicClass>
+              <drawOffset>(0, 0.01, 0)</drawOffset>
+            </extraGraphicDataIfTransforming>
+          </li>
+        </validFuels>
+        <!-- these graphics can be omitted without breaking anything. -->
+        <extraGraphicDataIfNotTransformingAndNoFuel>
+          <texPath>Things/Building/Exotic/ShipChunk</texPath>
+          <graphicClass>Graphic_Random</graphicClass>
+          <drawOffset>(0, 0.01, 0)</drawOffset>
+        </extraGraphicDataIfNotTransformingAndNoFuel>
+        <extraGraphicDataIfTransformingAndNoFuel>
+          <texPath>Things/Building/Misc/Shuttle</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawOffset>(0, 0.01, 0)</drawOffset>
+        </extraGraphicDataIfTransformingAndNoFuel>
+        <transformerSlots>3</transformerSlots>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

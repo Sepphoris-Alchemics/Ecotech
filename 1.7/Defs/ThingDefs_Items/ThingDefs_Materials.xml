@@ -1,0 +1,648 @@
+<Defs>
+
+    <!--
+    =====ORGANIC MATERIALS (HP)=====
+    NOTE: health values need to be reworked.
+    Wood progression works by being able to grow older and older genomes. As they become more ancient the woods get stronger, but their health regen is decreased and the weapons take longer to produce.
+
+    Primwood (105): T1 wood. Basic material that can easily be farmed. Conduit material.
+    Terramass: in between wood and silver (200): early-game building material. Structures are growable.
+    Elderwood (245): T2 wood. A durable material that has optimal farming efficiency. Conduit material.
+    Steelwood (245): in between silver and steel (245). Produced when a T2+ Reclaimer breaks down steel items.
+    Purewood: T3 wood. In between steel and marble (330): mid-game all-around material. Conduit material.
+    Bloomwood: in between marble and slate (375): art/royal material. Second prettiest.
+
+    ===Major upgrade needed for the following===
+
+    Ambric: T4 wood. mid-game defensive material. Lasts longer than Elderwood. Conduit material.
+    Ebonmass: in between slate and sandstone (405): upgrade to terramass. Structures are growable.
+    Godwood: T5 wood. in between limestone and granite (480): only appears in rewards and quests. Special quest will allow the player to grow it. Conduit material.
+    
+    
+    Archwood: in between granite and uranium (630): ???
+
+Weapons that use a type of wood come far before the wood source itself, since engineering actual proper plants was a later goal.
+
+    =====LITHOID MATERIALS (HP)=====
+    Note: health values need to be added.
+    Lithoid progress works by being able to condense the material more and more. As they become more condensed, the stronger they get, but the faster they use charge and the more material they cost.
+
+    Terrathyst: T1 crystal. Early-game material used for building, stuffables, and some simple weapons
+    Prismite: T2 crystal. Early-game material used for making advanced weapons, armor, and buildings. Can be aquired by charging terrathyst
+    Roseglass: royal material.
+    Biothite: T3 material. Compressed prismite combined with deepsap. Used for high tier structures, armor, and weapons
+    Metajade: jade charged with large amounts of shocksap. Used as a capacitor for weapons and structures that require high charge, and to give lithoid weapons higher charge.
+    Esperium: T4 material. Rare material only found in specific ways. Used to create mid-tier structures and weapons. Allows passive generation.
+    Genesite: T5 material. Compressed prismite combined with starsap. Used to create high-tier content.
+    Gravitite: special material found in specific ways. Used to create weapons, structures, and implants that manipulate gravity.
+
+    =====HYBRID MATERIALS (HP)=====
+    Note: health values to be added.
+    Hybrid progress works by progressing both lines at once. Hybrid tech is usually end-game, but few exceptions exist if friendly with the right faction.
+
+    Terrameld: T2 material. Combines terrathyst and terramass. Is a growable material, and meant as an 'entry' hybrid material.
+    Biolith: T4 material. Combines biothite and purewood. Grows offensive weapons meant to mimic modern weaponry.
+    Stellite: T6 material. Combines genesite and godwood. Produces megastructures and weapons that rival ultratech creations.
+    Zenithite: T8 Material. Only obtainable three times. Rivals VOID creations. Exclusively carried by the Everveiled.
+-->
+
+    <!-- ================ Terramass ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TerramassMaterial</defName>
+        <label>Terramass</label>
+        <description>A moldable material made of thick plant matter, specked with bits of wood. A bit less durable and flammabible, but it's natural connection allows it to be manipulated faster. It's best trait is it's extremely high renewability.</description>
+        <graphicData>
+            <drawSize>0.6</drawSize>
+            <texPath>Things/Resource/Terramass</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>0.9</MarketValue>
+            <MaxHitPoints>175</MaxHitPoints>
+            <Mass>0.6</Mass>
+            <Flammability>3</Flammability>
+            <DeteriorationRate>1.5</DeteriorationRate>
+            <StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.25</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>6</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+            <BluntDamageMultiplier>0.4</BluntDamageMultiplier>
+        </statBases>
+        <burnableByRecipe>true</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>terramass</stuffAdjective>
+            <categories>
+                <li>ET_Organic</li>
+                <li>Woody</li>
+            </categories>
+            <color>(68,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructWood</constructEffect>
+            <appearance>Planks</appearance>
+            <statFactors>
+                <MaxHitPoints>0.8</MaxHitPoints>
+                <Flammability>3</Flammability>
+                <WorkToMake>1.2</WorkToMake>
+                <WorkToBuild>1.2</WorkToBuild>
+                <DoorOpenSpeed>1.2</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+    <!-- ================ Primwood ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TierOnePlating</defName>
+        <label>primwood plating</label>
+        <description>Organic plates of primwood, the hardy bark of shed from trees of the same name. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resoure-efficient.
+\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way. That said, the wood present on prima weapons is reminiscent of primwood's own sapwood or heartwood, but softer and smoother. This implies the bark of terratrees was designed for defense in mind, while inner layers were designed for offense.</description>
+        <graphicData>
+            <texPath>Things/Resource/Primwood</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>500</stackLimit>
+        <smallVolume>false</smallVolume>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <MaxHitPoints>225</MaxHitPoints>
+            <Mass>0.55</Mass>
+            <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>true</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>primwood</stuffAdjective>
+            <categories>
+                <li>Woody</li>
+            </categories>
+            <color>(85,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructWood</constructEffect>
+            <appearance>Planks</appearance>
+            <statFactors>
+                <MaxHitPoints>0.8</MaxHitPoints>
+                <Flammability>1</Flammability>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <DoorOpenSpeed>1.1</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+    <!-- ================ Elderwood ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TierTwoPlating</defName>
+        <label>elderwood plating</label>
+        <description>Hardly, organic plates that grow as the bark on elderwood trees. It's unique adaptive traits allow multiple pieces of it to meld and stich itself together, producing a psdeudo-composite material that's quite resilient and resource-efficient.
+        Sections of elderwood tend to harden faster than others, giving a mix of darker and lighter coloring. Generally the smaller the tree, the harder - and darker - the wood will be. This unique trait is where elderwood gets it's name, as this discoloration is generally only seen in long-lived trees.
+\n\nOnly the bark layer is useful as a building material, as anything below that is inferior to even normal wood in every way.</description>
+        <graphicData>
+            <texPath>Things/Resource/Elderwood</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>75</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.2</MarketValue>
+            <MaxHitPoints>225</MaxHitPoints>
+            <Mass>0.55</Mass>
+            <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>true</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>elderwood</stuffAdjective>
+            <categories>
+                <li>Woody</li>
+            </categories>
+            <color>(86,52,42)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructWood</constructEffect>
+            <appearance>Planks</appearance>
+            <statFactors>
+                <MaxHitPoints>0.8</MaxHitPoints>
+                <Flammability>1</Flammability>
+                <WorkToMake>0.8</WorkToMake>
+                <WorkToBuild>0.8</WorkToBuild>
+                <DoorOpenSpeed>1.1</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+    <!-- ================ Periwood Bases ================ -->
+
+    <!--VEF defs
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>ET_RandomTierTwoWeapon</defName>    
+    <label>carved periwood heart</label> 
+    <description>The heart of a periwood tree, in the middle of being carved into a periwood weapon.</description>
+    <graphicData>
+      <texPath>Things/Resource/PeriwoodHeart/PeriwoodHeart</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>1</MarketValue>
+      <Mass>1.4</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="VEF.Things.CompProperties_RandomOutcomeComp">
+        <canProvideTags>
+          <li>ET_PeriwoodWeapon</li>
+        </canProvideTags>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+<ThingDef ParentName="UnfinishedBase">
+    <defName>ET_UnfinishedTierTwoHeart</defName>
+    <label>partially carved periwood heart</label>
+    <statBases>
+      <Flammability>1</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Resource/PeriwoodHeart/PeriwoodHeart</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>-->
+
+    <!--<ThingDef ParentName="UnfinishedBase">
+        <defName>ET_UnfinishedTierTwoHeart</defName>
+        <label>partially carved periwood heart</label>
+        <description>The heart of a periwood tree, in the middle of being carved into a periwood weapon.</description>
+        <graphicData>
+            <texPath>Things/Resource/PeriwoodHeart/ET_PeriwoodHeart</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>1</stackLimit>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <MarketValue>1</MarketValue>
+            <Mass>1.2</Mass>
+            <Flammability>1</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <tickerType>Normal</tickerType>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>-->
+    <!-- ================ Periwood Heart ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_PeriwoodHeart</defName>
+        <label>periwood heart</label>
+        <description>The heart of a periwood tree, ever so faintly pulsing, as if it was alive. Used at a terraforge to carve a specific periwood weapon.</description>
+        <graphicData>
+            <texPath>Things/Resource/PeriwoodHeart/ET_PeriwoodHeart</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>1</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>1.4</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.25</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <comps>
+            <li Class="CompProperties_Lifespan">
+                <lifespanTicks>240000</lifespanTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- ================ Terrathyst ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_Terrathyst</defName>
+        <label>terrathyst fragments</label>
+        <description>tiny, broken shards of crystal that was once part of a &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; structure or item. While not very useful on it's own, these shards can be used in other, or reconstructed into, other lithoid items. It can be used as a building/crafting material, but terrathyst requires special techniques to properly use.
+\n\nTerrathyst has quite unique properties; it is a transparent material, but when stimulated it's appearance changes to a rather pretty multicolored one. Additionally, terrathyst can be compressed into other forms by using shocksap or starsap; the terrathyst with both bind and charge when in contact with these saps, forming new, stronger materials. The more terrathyst that melds together, the stronger the outcome. This makes terrathyst a universally viable material... as long as one can access it.</description>
+        <graphicData>
+            <texPath>Things/Resource/Terrathyst/Fragments</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.4</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>750</stackLimit>
+        <smallVolume>true</smallVolume>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>0.8</MarketValue>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>0.45</Mass>
+            <SharpDamageMultiplier>0.4</SharpDamageMultiplier>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>0.25</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>terrathyst</stuffAdjective>
+            <categories>
+                <li>Stony</li>
+            </categories>
+            <color>(85,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <appearance>Metal</appearance>
+            <statFactors>
+                <MaxHitPoints>0.6</MaxHitPoints>
+                <Flammability>0.25</Flammability>
+                <WorkToMake>1.6</WorkToMake>
+                <WorkToBuild>1.6</WorkToBuild>
+                <DoorOpenSpeed>1.4</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>
+
+    <!-- ================ Terrathyst Core ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_TerrathystCore</defName>
+        <label>terrathyst core</label>
+        <description>A clump of terrathyst that has melded together, forming a sharp, sealed vessel that contained shocksap. Critical to creating most &lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; items or structures that require charge.
+\n\nPlacing this in a prismite crucible will cause it to start creating a random lithic-class weapon or growth. this process takes a while, and once the item emerges, it generally requires more attention to reach it's full potential. As it contains shocksap already, only the heart is needed for this process.</description>
+        <graphicData>
+            <texPath>Things/Resource/TerrathystHeart</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.6</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>250</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>1.4</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.25</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <!-- ================ Liquid Vivium ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_LiquidVivium</defName>
+        <label>liquid vivium</label>
+        <description>A bottle of sealed liquid vivium. Vivium is an alloy consisting purely of gold and silver, and structurally reinforced with endosap. Vivium is a key component of &lt;color=#FFB92E&gt;Midas-class&lt;/color&gt; terratech.
+\n\nDespite being formed of such valuable materials, liquid vivium has little use as a commodity. It's use cases in this form are specific to lithic terratech applications; to be valuable to the rest of the world, it must be solidifed into another form.</description>
+        <graphicData>
+            <texPath>Things/Resource/Vivium</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.6</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>3</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>25</MarketValue>
+            <MaxHitPoints>20</MaxHitPoints>
+            <Mass>1.8</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0.2</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+    </ThingDef>
+
+<!-- ================ Uncracked Vivium Geode ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_ViviumGeodeSealed</defName>
+        <label>sealed vivium geode</label>
+        <description>A decently sized stone containing liquid vivium. Only the tiniest cracks that allow the metal to properly form into patterns are present; beyond that, the geode is perfectly sealed and harder than granite, to avoid those unworthy from extracting it's precious contents.
+\n\nSealed geodes can be opened with the proper terratech, but one should have clear intentions when doing so. Liquid vivium become impure and unusable after a short amount of time, and effectively means an opened geode has a finite lifetime if unused.</description>
+        <graphicData>
+            <texPath>Things/Resource/ViviumGeodeSealed</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.5</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>8</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>125</MarketValue>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>2.2</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <comps>
+        <li Class="CompProperties_InspectString">
+				<inspectString>Rick-click with a pawn
+to unleash the content within.</inspectString>
+			</li>
+        <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Form midas lance</useLabel>
+        <useMessage>{PAWN_nameDef} has allowed the geode's internal vivium to flow. The entire geode has turned into a massive heavy gun.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+	  <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ET_CrystalShatter</soundOnUsed>
+      </li>
+	<li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <ET_MidasRifleOne>1</ET_MidasRifleOne>
+        </leavings>
+        </li>
+        </comps>
+    </ThingDef>
+
+<!-- ================ Opened Vivium Geode ================ -->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ET_ViviumGeode</defName>
+        <label>vivium geode</label>
+        <description>A vivium geode that's been cracked open, revealing the contents inside. Used as a source for Midas-Class weaponry and structures.
+\n\nDespite the present valuable metals inside, an unopened geode is generally more valuable than an opened one. The products it create are much more potent, but the geode's liquid vivium becomes unusable after a short amount of time.</description>
+        <graphicData>
+            <texPath>Things/Resource/ViviumGeodeOpen</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.5</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>8</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>60</MarketValue>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>2.2</Mass>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>true</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <comps>
+        <li Class="CompProperties_InspectString">
+				<inspectString>Rick-click with a pawn
+to unleash the content within.</inspectString>
+			</li>
+        <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Form midas lance</useLabel>
+        <useMessage>{PAWN_nameDef} has allowed the geode's internal vivium to flow. The entire geode has turned into a massive heavy gun.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+	  <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ET_CrystalShatter</soundOnUsed>
+      </li>
+	<li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <ET_MidasRifleTwo>1</ET_MidasRifleTwo>
+        </leavings>
+    </li>
+    <li Class="CompProperties_Lifespan">
+        <lifespanTicks>360000</lifespanTicks>
+      </li>
+    </comps>
+    </ThingDef>
+
+    <!--=====Prismite=====-->
+
+    <!--<ThingDef ParentName="ResourceBase">
+        <defName>ET_TierTwoCrystal</defName>
+        <label>prismite</label>
+        <description>tiny shards of crystal that's effectively stimulated terrathyst. These shards course with electrical charge, which alters the crystal's opacity and refraction, giving it a pleasing, multicolored appearance.
+\n\nPrismite cannot be used in the same ways as terrathyst due to the present charge. However, it's charge enables crafted weapons, structures, and items to have electrical properties. These creations are highly effective against not just mechanoids, but anything mechanical.</description>
+        <graphicData>
+            <texPath>Things/Resource/Prismite/Fragments</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.4</drawSize>
+        </graphicData>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <tradeability>Sellable</tradeability>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <stackLimit>750</stackLimit>
+        <smallVolume>true</smallVolume>
+        <useHitPoints>true</useHitPoints>
+        <soundInteract>Wood_Drop</soundInteract>
+        <soundDrop>Wood_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1</MarketValue>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>0.45</Mass>
+            <SharpDamageMultiplier>0.4</SharpDamageMultiplier>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>0.25</DeteriorationRate>
+        </statBases>
+        <burnableByRecipe>false</burnableByRecipe>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <stuffProps>
+            <stuffAdjective>prismite</stuffAdjective>
+            <categories>
+                <li>Stony</li>
+            </categories>
+            <color>(85,74,49)</color>
+            <commonality>0</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <appearance>Metal</appearance>
+            <statFactors>
+                <MaxHitPoints>0.7</MaxHitPoints>
+                <Flammability>0.25</Flammability>
+                <WorkToMake>1.8</WorkToMake>
+                <WorkToBuild>1.8</WorkToBuild>
+                <DoorOpenSpeed>1.2</DoorOpenSpeed>
+            </statFactors>
+            <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+        </stuffProps>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <techHediffsTags>
+            <li>Poor</li>
+        </techHediffsTags>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    </ThingDef>-->
+
+</Defs>

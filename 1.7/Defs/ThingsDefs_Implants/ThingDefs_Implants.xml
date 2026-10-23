@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =============== Parent Modification classes =============== -->
+
+  <ThingDef Name ="ET_PrimaImplantBase" ParentName="ResourceBase" Abstract="True">
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/BlankImplant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+      <researchPrerequisite>RT_BasicGeneticImplants</researchPrerequisite>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+		</comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+		<thingSetMakerTags>
+			<li>AnimalPart</li>
+		</thingSetMakerTags>
+  </ThingDef>
+
+	<!-- =============== Nutrient Regulator =============== -->
+
+ <!--<ThingDef ParentName="ET_PrimaImplantBase">
+    <defName>ET_NutrientRootSeed</defName>
+    <label>Nutrient Root Seed</label>
+    <descriptionHyperlinks><HediffDef>ET_NutrientRootsHediff</HediffDef></descriptionHyperlinks>
+    <description></description>
+    <graphicData>
+      <texPath>Things/</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>-->
+
+</Defs>

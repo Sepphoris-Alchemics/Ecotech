@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!--<li Class="PipeSystem.CompProperties_Resource">
+  <pipeNet>ET_MidasNetwork</pipeNet>
+  <sustainer>SoundDef</sustainer>
+</li>-->
+
+<ThingDef ParentName="BuildingBase">
+    <defName>ET_MidasTransmutationPylon</defName>
+    <label>transmutation pylon</label>
+    <description>A large monolith consisting of a vivium crystal and reinforced by ebonwood. Designed by Wildheart tribes, the transmutation pylon is a highly successful - and lethal - structure. When activated, it will stun and begin transmuting organics within it's radius. Anything that can't quickly escape will be killed, and be turned into a variety of valuable resources.
+Even by terratech standards, this pylon was often seen excessive and overly violent, and it didn't often see use. Still, it's potential to turn raiders - and excess prisoners - into an abundance of usable resources should not be underestimated.
+\nThis pylon will transmute ANYONE within it's radius - including your own. Therefore, it is EXTREMELY suggested to outfit EVERY colonist you have with a Vivium Wardlimb before establishing one of these pylons.</description>
+    <tickerType>Normal</tickerType>
+    <size>(1,1)</size>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>1</fillPercent>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/TransmutePylon/ET_TransmutePylon_Vivium</texPath>
+      <drawSize>(1.5,1.5)</drawSize>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <shadowData>
+        <volume>(2.5, 5, 2.5)</volume>
+        <offset>(0, 0, -0.3)</offset>
+      </shadowData>
+    </graphicData>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <!--<minifiedDef>MinifiedThing</minifiedDef>-->
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <specialDisplayRadius>5</specialDisplayRadius>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <paintable>false</paintable>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <soundMeleeHitOverride>ObeliskDamaged</soundMeleeHitOverride>
+    </building>
+    <placeWorkers>
+      <li>VEF.Buildings.PlaceWorker_CompCustomCauseHediff_AoE</li>
+    </placeWorkers>
+    <killedLeavings>
+    </killedLeavings>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <MeditationFocusStrength>1</MeditationFocusStrength>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_CauseHediff_AoE">
+        <hediff>ET_TotalAlchemizingInfection</hediff>
+        <range>4.9</range>
+        <canTargetSelf>false</canTargetSelf>
+        <drawLines>true</drawLines>
+        <ignoreMechs>true</ignoreMechs>
+      </li>
+      <li Class="CompProperties_Refuelable"> <!--Same life duration-->
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>3</fuelConsumptionRate>
+        <destroyOnNoFuel>true</destroyOnNoFuel>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelLabel>Stability percentage left</fuelLabel>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelMultiplier>100</fuelMultiplier>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </fuelFilter>
+      </li> 
+      <!--<li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Natural</li>
+        </focusTypes>
+      </li>-->
+      <li Class="CompProperties_MoteEmitter">
+    <mote>Mote_SparkThrown</mote>
+    <emissionInterval>120</emissionInterval>
+    <offsetMin>(-0.45, 0, -0.45)</offsetMin>
+    <offsetMax>(0.45, 0, 0.12)</offsetMax>
+    <ticksSinceLastEmittedMaxOffset>60</ticksSinceLastEmittedMaxOffset>
+  </li>
+      <!--<li Class="PipeSystem.CompProperties_ResourceTrader">
+        <pipeNet>ET_MidasNetwork</pipeNet>
+        <consumptionPerTick>1</consumptionPerTick>
+      </li>-->
+<!--<li Class="CompProperties_Power">
+  <transmitsPower>true</transmitsPower>
+  <compClass>PipeSystem.CompPowerPlantNeedResource</compClass>
+  <basePowerConsumption>-1000</basePowerConsumption>
+</li>-->
+      <!--<li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.1</fuelConsumptionRate>
+        <fuelCapacity>100</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>0</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>-->
+<!--The comps below don't work with the hediff properly-->
+      <!--<li Class="CompProperties_GiveHediffSeverity">
+        <hediff>ET_TotalAlchemizingInfection</hediff>
+        <range>6.9</range>
+        <severityPerSecond>0.1</severityPerSecond>
+        <drugExposure>false</drugExposure>
+        <allowMechs>true</allowMechs>
+      </li>-->
+      <!--<li Class="VEF.Buildings.CompProperties_CustomCauseHediff_AoE">
+        <hediff>ET_TotalAlchemizingInfection</hediff>
+        <range>6.9</range>
+        <allowHumanlike>true</allowHumanlike>
+        <allowInsects>true</allowInsects>
+        <allowDryads>true</allowDryads>
+        <allowAnimals>true</allowAnimals>
+        <allowMechanoids>true</allowMechanoids>
+        <allowEntities>true</allowEntities>
+        <startingSeverity>0.0111</startingSeverity>
+        <checkInterval>305</checkInterval>
+        <hediffDuration>300</hediffDuration>
+      </li>-->
+      <!--<li Class="CompProperties_Flickable"/>-->
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(255,190,60,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="BuildingBase">
+    <defName>ET_GiftTreeTierOne</defName>
+    <label>Primwood Tidetree</label>
+    <description>TBE.</description>
+    <graphicData>
+      <texPath>Things/Plant/Custodians/ElderwoodCustodian</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>50</WoodLog>
+      <ET_Glowsap>80</ET_Glowsap>
+    </costList>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>42</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>EcotechDesignation</designationCategory>
+    <uiOrder>2710</uiOrder>
+    <constructEffect>ConstructWood</constructEffect>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_CyclicThingSpawner">
+        <compClass>Ecotech.ThingComp_CyclicThingSpawner</compClass>
+        <cycleDurationRangeTicks>90000~120000</cycleDurationRangeTicks>
+        <showNotificationWhenSpawningThings>true</showNotificationWhenSpawningThings>
+        <potentialSpawnedThings>
+          <li>
+            <weight>1.5</weight>
+            <things>
+              <ET_Endosap>1</ET_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+                <ET_Hypersap>1</ET_Hypersap>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+                <ET_Brightsap>1</ET_Brightsap>
+            </things>
+          </li>
+          <li>
+            <weight>0.5</weight>
+            <things>
+              <ET_Endosap>2~3</ET_Endosap>
+            </things>
+          </li>
+          <li>
+            <weight>0.2</weight>
+            <things>
+              <ET_Hypersap>2</ET_Hypersap>
+            </things>
+          </li>
+          <li>
+            <weight>0.3</weight>
+            <things>
+              <ET_Brightsap>2~3</ET_Brightsap>
+            </things>
+          </li>
+        </potentialSpawnedThings>
+      </li>
+    </comps>
+  </ThingDef>-->
+  
+</Defs>

@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>ET_KeeperMember</defName>
+    <label>terratech keeper</label>
+    <defaultFactionDef>ET_TerratechKeepers</defaultFactionDef>
+    <chemicalAddictionChance>0.06</chemicalAddictionChance>
+    <apparelRequired>
+      <li>ET_PeriwoodHelmet</li>
+      <li>ET_PeriwoodArmor</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>LightPlantArmor</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>400~800</apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>0</techHediffsChance>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsDisallowTags>
+      <li>PainCauser</li>
+    </techHediffsDisallowTags>
+    <initialResistanceRange>25~75</initialResistanceRange>
+    <disallowedTraits>
+      <li>ShootingAccuracy</li>
+			<li>Brawler</li>
+			<li>Wimp</li>
+			<li>Pyromaniac</li>
+			<li>Transhumanist</li>
+      <li>BodyPurist</li>
+		</disallowedTraits>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TribalBase" Name="ET_OrganicLowTierBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>ET_OrganicFaction</defaultFactionType>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <gearHealthRange>
+			<min>0.4</min>
+			<max>0.7</max>
+		</gearHealthRange>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <weaponMoney>10~300</weaponMoney>
+    <initialWillRange>25~75</initialWillRange>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <maxGenerationAge>65</maxGenerationAge>
+    <disallowedTraits>
+      <li>ShootingAccuracy</li>
+			<li>Brawler</li>
+			<li>Wimp</li>
+			<li>Pyromaniac</li>
+			<li>Transhumanist</li>
+      <li>BodyPurist</li>
+		</disallowedTraits>
+  </PawnKindDef>
+<!--==========-->
+  <PawnKindDef Abstract="True" Name="ET_OrganicMidTierBase" ParentName="ET_OrganicLowTierBase">
+    <defaultFactionDef>ET_TerratechKeepers</defaultFactionDef>
+    <combatPower>120</combatPower>
+    <maxGenerationAge>45</maxGenerationAge>
+    <gearHealthRange>
+      <min>.6</min>
+      <max>3.5</max>
+    </gearHealthRange>
+    <canBeSapper>true</canBeSapper>
+    <itemQuality>Normal</itemQuality>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>2500</min>
+      <max>4200</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <weaponMoney Inherit="false">800~1600</weaponMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+    <techHediffsChance>0.25</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.5</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>40</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <initialWillRange>12~18</initialWillRange>
+    <initialResistanceRange>50~75</initialResistanceRange>
+  </PawnKindDef>
+<!--==========-->
+  <PawnKindDef Abstract="True" Name="ET_OrganicHighTierBase" ParentName="ET_OrganicMidTierBase">
+    <defaultFactionDef>ET_TerratechKeepers</defaultFactionDef>
+    <combatPower>180</combatPower>
+    <maxGenerationAge>45</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>0.8</max>
+    </gearHealthRange>
+    <canBeSapper>true</canBeSapper>
+    <itemQuality>Normal</itemQuality>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>2500</min>
+      <max>4200</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <weaponMoney Inherit="false">1500~2000</weaponMoney>
+    <combatEnhancingDrugsCount>
+      <min>0</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+    <combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+    <techHediffsChance>0.25</techHediffsChance>
+    <inventoryOptions>
+      <skipChance>0.5</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>40</min>
+            <max>200</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>2</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <initialWillRange>18~24</initialWillRange>
+    <initialResistanceRange>50~100</initialResistanceRange>
+  </PawnKindDef>
+
+  <!--Trader-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_BriarTrader</defName>
+    <combatPower>150</combatPower>
+    <label>terratech trader</label>
+    <labelPlural>terratech trader</labelPlural>
+    <minGenerationAge>40</minGenerationAge>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <weaponTags>
+      <li>ET_BriarWeapon</li>
+      <li>ET_PrimaRangedUpgraded</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>LightPlantArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses Briar weaponry; very dangerous-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_BriarSentry_Random</defName>
+    <combatPower>150</combatPower>
+    <label>Prima Zealot</label>
+    <labelPlural>Prima Zealot</labelPlural>
+    <minGenerationAge>40</minGenerationAge>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_BriarWeapon</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>HeavyPlantArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses Bloomrot weaponry; very dangerous-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_BloomrotZealot_Random</defName>
+    <combatPower>160</combatPower>
+    <label>Bloomrot Zealot</label>
+    <labelPlural>Bloomrot Zealots</labelPlural>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_BloomrotWeapon</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>LightPlantArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses wild weaponry-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_WildSentry_Random</defName>
+    <combatPower>160</combatPower>
+    <label>Wildroot Devotee</label>
+    <labelPlural>Wildroot Devotees</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateWildWeapon</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>LightPlantArmor</li>
+      <li>HeavyPlantArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses heavy Prima and Periwood weaponry, such as sap launchers and hypercannons-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_InitiateSentry_HeavyAll</defName>
+    <combatPower>120</combatPower>
+    <label>Initiate Artillerist</label>
+    <labelPlural>Initiate Artillerists</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateHeavyWeapon</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>HeavyPlantArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses Periwood melee weapons-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_PeriwoodSentry_MeleeAll</defName>
+    <combatPower>60</combatPower>
+    <label>Initiate Guardian</label>
+    <labelPlural>Initiate Guardians</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PeriwoodMelee</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>LightPlantArmor</li>
+      <li>HeavyPlantArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses basic and upgraded Prima ranged weapons-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_PrimaSentry_GunnerBasic</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling</label>
+    <labelPlural>Seedlings</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaRangedBasic</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>LightPlantArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses basic and upgraded Prima melee weapons-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_PrimaSentry_FighterBasic</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling Fighter</label>
+    <labelPlural>Seedling Fighters</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaMeleeBasic</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!--Uses infused Prima ranged weapons; excludes advanced saps-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_PrimaSentry_GunnerInfused</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling Alchemist</label>
+    <labelPlural>Seedling Alchemists</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaRangedInfused</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses infused Prima melee weapons; excludes advanced saps-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_PrimaSentry_FighterInfused</defName>
+    <combatPower>60</combatPower>
+    <label>Seedling Battleheart</label>
+    <labelPlural>Seedling Battlehearts</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_PrimaMeleeInfused</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses Prima and Periwood weapons with range, such as Casters and rifles-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_Sentry_RangerAll</defName>
+    <combatPower>90</combatPower>
+    <label>Initiate Ranger</label>
+    <labelPlural>Initiate Rangers</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateRangerWeapon</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Uses Prima and Periwood CQC weapons, such as shotguns and SMGs-->
+  <PawnKindDef ParentName="ET_OrganicMidTierBase">
+    <defName>ET_Sentry_SkirmisherAll</defName>
+    <combatPower>90</combatPower>
+    <label>Initiate Skirmisher</label>
+    <labelPlural>Initiate Skirmishers</labelPlural>
+    <isFighter>true</isFighter>
+    <weaponTags>
+      <li>ET_InitiateSmirmisherWeapon</li>
+    </weaponTags>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+      <li>ET_PlantArmorTag</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--Faction leader; only uses Royal weapons-->
+  <PawnKindDef ParentName="ET_OrganicHighTierBase">
+    <defName>ET_OrganicFactionLeader</defName>
+    <combatPower>180</combatPower>
+    <label>Grovetender</label>
+    <labelPlural>Grovetenders</labelPlural>
+    <factionLeader>true</factionLeader>
+    <minGenerationAge>30</minGenerationAge>
+    <weaponTags>
+      <li>ET_RoyalWeapon</li>
+    </weaponTags>
+    <apparelRequired>
+			<li>ET_PrimaHeavyArmor</li>
+			<li>ET_PrimaHeavyHelmet</li>
+		</apparelRequired>
+    <backstoryCategories>
+      <li>ET_TerratechBackstories</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <techHediffsRequired>
+
+		</techHediffsRequired>
+  </PawnKindDef>
+
+</Defs>

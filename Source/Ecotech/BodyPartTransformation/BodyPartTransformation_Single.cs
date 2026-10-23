@@ -183,10 +183,6 @@ using UnityEngine;
                 if (Pawn == null)
                     return false;
 
-                /*
-                 * Prisoners first, because prisoners
-                 * may retain their original faction.
-                 */
                 if (Pawn.IsPrisonerOfColony)
                     return Props.sendLetterForPrisonersOfColony;
 

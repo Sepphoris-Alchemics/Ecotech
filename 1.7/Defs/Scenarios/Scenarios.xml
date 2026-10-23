@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ScenarioDef>
+		<defName>ET_EcotechKeepers</defName>
+		<label>Wardens of the Terratech</label>
+
+		<scenario>
+			<summary>Five decendants of different Terratech cultures come together to unite as one.</summary>
+			<description>Terratech knowledge across every path is quickly dying out. In a push for both preservation and change, the five main terratech factions have came together to form the foundation for a new, united culture entirely.
+\nThis scenario starts you off with several Ecotech technologies (Terratech), cultural items carried by each pawn (not listed in the scenario), and in high relations with the present Terratech tribes, but prohibits you from progressing mechanical research too far. Designed for low-tech-only playthroughs.</description>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>ET_TerratechKeepers</factionDef>
+			</playerFaction>
+      <surfaceLayer>
+        <def>SurfaceLayerFixed</def>
+        <tag>Surface</tag>
+        <layer>Surface</layer>
+        <settingsDef>Surface</settingsDef>
+        <hide>true</hide>
+        <connections>
+          <Orbit MayRequire="Ludeon.RimWorld.Odyssey">
+            <zoomMode>ZoomOut</zoomMode>
+          </Orbit>
+        </connections>
+      </surfaceLayer>
+			<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
+          			<def>ConfigurePawnsKindDefs</def>
+          			<pawnChoiceCount>5</pawnChoiceCount>
+          			<kindCounts>
+						<li>
+              				<kindDef>ET_SpacetouchedPawnKind</kindDef>
+              				<count>1</count>
+            			</li>
+            			<li>
+              				<kindDef>ET_SkytouchedPawnKind</kindDef>
+              				<count>1</count>
+            			</li>
+						<li>
+              				<kindDef>ET_GrovetouchedPawnKind</kindDef>
+              				<count>1</count>
+            			</li>
+						<li>
+              				<kindDef>ET_WatertouchedPawnKind</kindDef>
+              				<count>1</count>
+            			</li>
+						<li>
+              				<kindDef>ET_EarthtouchedPawnKind</kindDef>
+              				<count>1</count>
+            			</li>
+          			</kindCounts>
+				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+				</li>
+				<li Class="ScenPart_StatFactor">
+					<def>StatFactor</def>
+					<stat>PlantWorkSpeed</stat>
+					<factor>2</factor>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Pemmican</thingDef>
+					<count>600</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_PeriwoodArmor</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_PeriwoodHelmet</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_GenesiteNomadArmorOne</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_GenesiteNomadHelmetOne</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_FastSeed_PureTerrapod</thingDef>
+					<count>2</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_Terraforge</thingDef>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_TerrathystCrucible</thingDef>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_PrimaStakeTurret</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_PrimaSMGTurret</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Seed_SmallTerravat</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ET_TierOnePlating</thingDef>
+					<count>750</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>StartingThing_Defined</def>
+					<thingDef>ET_Glowsap</thingDef>
+					<count>50</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_TierOneConduitSeeds</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_PrimaTurretTerraseeds</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_TerrasapBasics</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_BasicTerrasapFiltering</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_SmallTerravats</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_PeriwoodTerraseeds</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicTerratechEssentials</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicTerrasapEssentials</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicWeaponCrafting</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ET_LithicArmorCrafting</project>
+				</li>
+				<li Class="ScenPart_DisallowBuilding">
+					<def>Rule_DisallowBuilding</def>
+					<building>HiTechResearchBench</building>
+				</li>
+				<li Class="ScenPart_DisallowBuilding">
+					<def>Rule_DisallowBuilding</def>
+					<building>MultiAnalyzer</building>
+				</li>
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>For generations, Terratech tribes were sworn to follow and guard their ancient secrets. Due to your bloodline heritage, your tribe has been chosen to take the next step in establishing a new front of protectors.
+
+Note: this scenario has been designed for runs that intend to have little-to-none electronic influence. Certain industrial+ technologies may never be aquirable, but in exchange, you will be able to access certain EcoTech content much more easily. Have fun!</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+				<li Class="VEF.Factions.ScenPart_ForcedFactionGoodwill" MayRequire="oskarpotocki.vanillafactionsexpanded.core">
+					<factionDef>ET_OrganicFaction</factionDef>
+					<affectHiddenFactions>True</affectHiddenFactions>
+					<affectStartingGoodwill>True</affectStartingGoodwill>
+					<startingGoodwillRange>60~90</startingGoodwillRange>
+					<affectNaturalGoodwill>True</affectNaturalGoodwill>
+					<naturalGoodwillRange>30~50</naturalGoodwillRange>
+					<def>VFEC_ForcedFactionGoodwill</def>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+
+</Defs>

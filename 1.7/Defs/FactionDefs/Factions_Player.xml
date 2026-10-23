@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>ET_TerratechKeepers</defName>
+    <label>terratech keepers</label>
+    <description>A small group of terratech keepers.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>ET_KeeperMember</basicMemberKind>
+    <pawnSingular>keeper</pawnSingular>
+    <pawnsPlural>keepers</pawnsPlural>
+    <techLevel>Neolithic</techLevel>
+    <factionNameMaker>ET_NamerOrganicFaction</factionNameMaker>
+    <settlementNameMaker>ET_NamerOrganicSettlement</settlementNameMaker>
+    <allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+          <li>ET_TerratechBackstories</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <colorSpectrum>
+      <li>(0, 119, 255)</li>
+    </colorSpectrum>
+    <factionIconPath>UI/World/TerratechTown</factionIconPath>
+    <startingResearchTags>
+      <li>TribalStart</li>
+      <li>ET_OrganicTechStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+  </FactionDef>
+</Defs>

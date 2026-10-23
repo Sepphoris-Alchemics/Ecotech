@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkGiverDef>
+    <defName>ET_FillThingConverter</defName>
+    <label>fill thing converter</label>
+    <giverClass>Ecotech.WorkGiver_FillThingConverter</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ET_EmptyThingConverter</defName>
+    <label>empty thing converter</label>
+    <giverClass>Ecotech.WorkGiver_EmptyThingConverter</giverClass>
+    <workType>Hauling</workType>
+    <verb>empty</verb>
+    <gerund>emptying</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>ET_FillAutoHaulThingContainer</defName>
+    <label>fill thing container</label>
+    <giverClass>Ecotech.WorkGiver_FillAutoHaulThingContainer</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>true</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ET_EmptyAutoHaulThingContainer</defName>
+    <label>empty thing container</label>
+    <giverClass>Ecotech.WorkGiver_EmptyAutoHaulThingContainer</giverClass>
+    <workType>Hauling</workType>
+    <verb>empty</verb>
+    <gerund>emptying</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>true</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ET_FillSlottedThingTransformer</defName>
+    <label>fill transformer</label>
+    <giverClass>Ecotech.WorkGiver_FillSlottedThingTransformer</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>true</canBeDoneByMechs>
+  </WorkGiverDef>
+  
+
+</Defs>

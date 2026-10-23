@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Terrathyst: material used for building, stuffables, and some simple weapons
+    Prismite: material used for higher tier weapons, armor, and buildings. Can be aquired by charing terrathyst
+    Biothite: compressed prismite combined with sunsap. Used for high tier structures, armor, and weapons
+    Metajade: jade charged with large amounts of shocksap or starsap. Used as a capacitor for weapons and structures that require high charge.
+    Solarite: rare material only found in specific ways. Used to create highest-tier structures and weapons.
+    Gravitite: special material found in specific ways. Used to create weapons, structures, and implants that manipulate gravity.-->
+
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ET_LithicForgeTierTwo</defName>
+    <label>prismite well</label>
+    <description>A crystal chamber that snakes deep into the planet. This particular structure holds large amounts of shocksap, which is generally used for creating and evolving lithoid weapons and items.
+This vessel can take a terrathyst core and use it as a catalyst to form a new, random lithic weapon. Adittionally, it can evolve most lithoid weapons as long as the desired weapon, and the required items, are near the crucible.
+This well is a staple amongst tribes that take interest in lithic terratech, as it can support many structures and items that allow a comfortable life.</description>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Things/Building/PrismiteWell</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_TierOneLithicMastery</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <ET_TierTwoCrystal>20</ET_TierTwoCrystal>
+    </killedLeavings>
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <uiOrder>2710</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(239,84,203,0)</glowColor>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <inspectString>Right-click to insert terrathyst core
+Place materials nearby to charge/evolve items</inspectString>
+      </li>
+      <li Class="Ecotech.ThingCompProperties_ThingConverter">
+        <compClass>Ecotech.ThingComp_ThingConverter</compClass>
+        <!-- when a pawn carries items to the converter / takes them out, this is how long they stand in front of the building-->
+        <timeToFillTicks>600</timeToFillTicks>
+        <timeToEmptyTicks>600</timeToEmptyTicks>
+        <drawFillableBar>true</drawFillableBar>
+        <!-- x, y, z offset for the bar. centered by default -->
+        <fillableBarDrawOffset>(0, 0.00001, 0)</fillableBarDrawOffset>
+        <fillableBarSize>(0.55, 0.1)</fillableBarSize>
+        <fillableBarBackgroundColor>(21, 25, 29)</fillableBarBackgroundColor>
+        <fillableBarFilledColor>(51, 204, 217)</fillableBarFilledColor>
+        <inputThings>
+          <!-- needs exactly one entry -->
+          <ET_TerrathystCore>1</ET_TerrathystCore>
+        </inputThings>
+        <conversionDurationTicks>480000</conversionDurationTicks>
+        <potentialResults>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_SoulsnareRifleOne>1</ET_SoulsnareRifleOne>
+            </things>
+          </li>
+          <!--<li>
+            <weight>1</weight>
+            <things>
+              <ET_Brightsap>1</ET_Brightsap>
+            </things>
+          </li>
+          <li>
+            <weight>1</weight>
+            <things>
+              <ET_Hypersap>1</ET_Hypersap>
+            </things>
+          </li>-->
+        </potentialResults>
+      </li>
+      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
+        <isAssemblingPawn>false</isAssemblingPawn>
+        <uiIconChooseRecipe>UI/Gizmo/InstallableInSlottedThingTransformerGizmo</uiIconChooseRecipe>
+        <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
+        <useConnectedFacility>false</useConnectedFacility>
+        <useZone>false</useZone>
+        <radius>11</radius>
+        <effectWorking>Smith</effectWorking>
+        <recipeSet>
+        <!--=====PRISMITE=====-->
+          <!--<li>            
+            <label>form prismite (x250)</label>
+            <description>Requirements:
+x750 terrathyst shards
+Duration: 18 days</description>
+            <duration>1080000</duration>
+            <resultDef>ET_TierTwoCrystal</resultDef>
+            <amount>250</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ET_Terrathyst</thingDef>
+                <amount>750</amount>
+              </li>
+            </ingredientSets>
+          </li>-->
+      <!--=====SOULSNARE RIFLE=====-->
+      <!--restore drained rifle-->
+      <li>
+        <label>restore drained soulsnare rifle</label>
+        <description>Requirements:
+x1 drained soulsnare rifle
+x30 shocksap
+Duration: 12 days</description>
+        <duration>720000</duration>
+        <resultDef>ET_SoulsnareRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>30</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleDrained</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle II-->
+      <li>
+        <label>evolve soulsnare rifle (II)</label>
+        <description>Requirements:
+x1 stage I soulsnare rifle
+x15 shocksap
+Duration: 4 days</description>
+        <duration>240000</duration>
+        <resultDef>ET_SoulsnareRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleThree</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle III-->
+      <li>
+        <label>evolve soulsnare rifle (III)</label>
+        <description>Requirements:
+x1 stage II soulsnare rifle
+x20 shocksap
+Duration: 6 days</description>
+        <duration>360000</duration>
+        <resultDef>ET_SoulsnareRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleOne</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle IV-->
+      <li>
+        <label>evolve soulsnare rifle (IV)</label>
+        <description>Requirements:
+x1 stage III soulsnare rifle
+x25 shocksap
+Duration: 8 days</description>
+        <duration>480000</duration>
+        <resultDef>ET_SoulsnareRifleThree</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleFour</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <!--soulsnare rifle restoration-->
+      <li>
+        <label>recharge soulsnare rifle (IV)</label>
+        <description>Requirements:
+x1 stage IV soulsnare rifle
+x20 shocksap
+Duration: 2 days</description>
+        <duration>120000</duration>
+        <resultDef>ET_SoulsnareRifleFour</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>20</amount> <!--Same amount of sap from 3 to 4-->
+          </li>
+          <li>
+            <thingDef>ET_SoulsnareRifleFour</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+
+      <!--=====VIVICORE RIFLE=====-->
+
+      <li MayRequire="Ludeon.RimWorld.Biotech">        <!--vivicore rifle II-->
+        <label>evolve vivicore rifle (II)</label>
+        <description>Requirements:
+x1 stage I vivicore rifle
+x15 shocksap
+Duration: 6 days</description>
+        <duration>360000</duration>
+        <resultDef>ET_HybridRoyalRifleTwo</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>15</amount>
+          </li>
+          <li>
+            <thingDef>ET_HybridRoyalRifleOne</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">        <!--vivicore rifle III-->
+        <label>evolve vivicore rifle (III)</label>
+        <description>Requirements:
+x1 stage II vivicore rifle
+x30 shocksap
+Duration: 8 days</description>
+        <duration>480000</duration>
+        <resultDef>ET_HybridRoyalRifleThree</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>30</amount>
+          </li>
+          <li>
+            <thingDef>ET_HybridRoyalRifleTwo</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">        <!--vivicore rifle IV-->
+        <label>evolve vivicore rifle (IV)</label>
+        <description>Requirements:
+x1 stage III vivicore rifle
+x45 shocksap
+Duration: 10 days</description>
+        <duration>600000</duration>
+        <resultDef>ET_HybridRoyalRifleFour</resultDef>
+        <amount>1</amount>
+        <ingredientSets>
+          <li>
+            <thingDef>ET_Shocksap</thingDef>
+            <amount>45</amount>
+          </li>
+          <li>
+            <thingDef>ET_HybridRoyalRifleThree</thingDef>
+            <amount>1</amount>
+          </li>
+        </ingredientSets>
+      </li>
+    </recipeSet>
+  </li>
+</comps>
+<specialDisplayRadius>11</specialDisplayRadius>
+</ThingDef>
+</Defs>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--THERMIC MECHANICS:
+		-The THERMIC LANCE is a rifle that can be attuned extreme heat, extreme cold... or both.
+		-THERMIC starts off as as a basic rifle that does rudimentary damage, with no bonuses. It has half the lifespan of an attuned lance, but it can be attuned with any temperature.
+			-The damage values and stats are incredibly low, on part with a standard assault rifle or carbine.
+			-It is charged with shocksap in this state.
+		-When the THERMIC LANCE is imbued with embersap or cryosap, it gains elemental attunement to fire or ice, respectively. This attunement increases most stats, and grants the projectiles elemental properties.
+			-The THERMIC LANCE (IGNITED) gains the following:
+				-Fast projectile output and speed
+				-Lowered accuracy and high spread
+				-Projectiles deal burning damage
+				-Alt fire mode that ignites a small area (cooldown)
+			-The THERMIC LANCE (FRIGID) gains the following:
+				-High accuracy and lowered spread
+				-Lowered projectile output and speed
+				-Projectiles deal frost damage
+				-Alt fire mode causes hypothermia in a small area (cooldown)
+		-Imbuing the weapon with that same sap once more will further improve it, granting them the following effects:
+			-THERMIC LANCE (INFERAL):
+				-All stats affected (both good and bad)
+				-Gains and additional ability: "Hellfire Barrage", which fires a barrage of 30 non-stop searing shots. Cannot be stopped.
+			-THERMIC LANCE (GLACIAL):
+				-All stats affected (good and bad)
+				-Gains an additional ability: "Deep Freeze", which stuns a large area for several seconds. Takes two days before cooldown ends.
+			
+		-HOWEVER, if the THERMIC LANCE is imbued with CHROMASAP, it will gain both stages of the ignited and frigid variants. This will only occur if the imbuement occurs while completely drained.
+		-The THERMIC LANCE *can* be imbued with the opposing sap, but this will only lower it's 'temperature' by one stage. This means a total of FOUR saps are needed to change one Stage 2 THERMIC LANCE to the other STAGE 2.
+			-For example, the process of obtaining an INFERAL THERMAL LANCE is:
+				THERMAL LANCE (dormant) -> Infuse with Embersap -> Create THERMAL LANCE (IGNITED) -> Infuse with Embersap -> Created THERMAL LANCE (INFERAL) (2 embersaps used)
+				...however, if you want to turn that into a THERMAL LANCE (FRIGID), the process would be:
+				THERMAL LANCE (INFERNAL) -> Infused with Cryosap -> Create THERMAL LANCE (IGNITED) -> Infuse with Cryosap -> Create THERMAL LANCE (dormant) -> Infuse with Cryosap ->  THERMAL LANCE (FRIGID)
+				... THEREFORE, IT IS HIGHLY SUGGESTED YOU LET YOUR LANCE SIMPLY RETURN TO THE DORMANT STAGE ITSELF.
+			-Because of this, it is very helpful to have a few THERMIC LANCES on hand, in case the need or desire for heat/cold-based weaponry changes.
+		-Per stage, the THERMIC LANCE has a shorter lifespan than most other lithic weapons, but it won't enter a 'drained' state like most others; instead, it will go back to it's prior "temperature". This can be avoided by infusing it with it's proper sap.
+			-However, the stage 1 (dormant) rifle will enter a drained state if it's lifespan runs out. It will take a significant amount of shocksap to recharge... but can also accept Embersap or Cryosap at this stage.
+				-Additionally, this is the only stage that can accept Chromasap
+		-Like most other Lithic weapons, the THERMIC LANCE has some basic rules it follows:
+			-It will never truly expire
+			-Lifespans are extremely long, and at full charge it can easily last over a year, if not two.
+		-The theme of the weapon is pretty straightforward.
+			This weapon is based around temperature - specifically, fire and ice.
+		-->
+
+</Defs>

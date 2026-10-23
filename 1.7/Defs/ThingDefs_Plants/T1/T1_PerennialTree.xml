@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Periwood Tree -->
+
+  <ThingDef ParentName="TreeBase">
+    <defName>ET_PeriwoodTree</defName>
+    <label>Periwood tree</label>
+    <description>A tree that is quite important to Terratech tribes, almost as important as many conduit trees. Periwood trees were carefully designed to be a staple plant of any Terratech tribe providing effective weaponry to it's tribe, while also requiring minimal effort in return.
+\nPeriwood Trees grow relatively fast (compared to a normal tree), last a very long time, and produces pods that will eventually grow a Periwood weapon. However, the tree can also be felled to access the heart inside, which can be used to carve a desired Periwood weapon - though those attuned with nature will not appreciate this.
+All weapons come from this Periwood heart, requiring no other ingredients. However, the carving process is very delicate; if the carving is paused, progress will be lost and the heart with VERY quickly expire.
+\n\n Like most terratech trees, Periwood trees are grown via seed.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Plant/PeriwoodTree</texPath>
+      <shadowData>
+        <volume>(0.4, 0.3, 0.1)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </shadowData>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>13</Beauty>
+      <BeautyOutdoors>13</BeautyOutdoors>
+      <Flammability>2</Flammability>
+      <MaxHitPoints>150</MaxHitPoints>
+    </statBases>
+    <ingestible />
+    <neverMultiSelect>false</neverMultiSelect>
+    <canScatterOver>false</canScatterOver>
+    <killedLeavings>
+      <ET_PeriwoodHeart>1</ET_PeriwoodHeart>
+    </killedLeavings>
+    <plant>
+      <pollution>Any</pollution>
+      <growDays>5</growDays>
+      <visualSizeRange>1.5~2.1</visualSizeRange>
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags Inherit="False" />
+      <lifespanDaysPerGrowDays>15</lifespanDaysPerGrowDays>
+      <fertilityMin>0.4</fertilityMin>
+      <fertilitySensitivity>0.6</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <sowWork>400</sowWork>
+      <harvestYield>15</harvestYield>
+      <harvestedThingDef>ET_TierTwoPlating</harvestedThingDef>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <sowResearchPrerequisites Inherit="False" />
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>11.9</minSpacingBetweenSamePlant>
+      <harvestWork>1600</harvestWork>
+      <choppedThingDef IsNull="True" />
+      <smashedThingDef IsNull="True" />
+    </plant>
+    <tickerType>Normal</tickerType> <!-- Spawn subplant only works with normal ticker -->
+    <comps>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+      <li Class="CompProperties_SpawnSubplant">
+        <compClass>CompSpawnSubplantDuration</compClass>
+        <subplant>ET_PeriwoodWeaponPod</subplant>
+        <maxRadius>11.9</maxRadius>
+        <subplantSpawnDays>14</subplantSpawnDays>
+        <minGrowthForSpawn>0.6</minGrowthForSpawn>
+        <initialGrowthRange>0.2~0.4</initialGrowthRange>
+        <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+        <plantsToNotOverwrite>
+          <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+        </plantsToNotOverwrite>
+      </li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>Grows a weapon pod every 12 days
+&lt;color=#FF2E2E&gt;heretical to defile&lt;/color&gt;</inspectString>
+			</li>
+    </comps>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+
+</Defs>

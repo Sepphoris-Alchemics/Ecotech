@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--
+		
+		
+		<ThingDef Abstract="True" Name="MeleeWeaponPlantBase" ParentName="BaseWeapon">
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponTags>
+      <li>ET_PlantWeapon</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+  </ThingDef>-->
+
+	<ThingDef ParentName="BaseTerraweapon">
+		<defName>ET_PeriwoodGlaive</defName>
+		<label>Periwood Stemglaive</label>
+		<description>A large bladed weapon with exceptionally long reach. Quite slow, but it's design allows many different form of attack, with each one being able to deal high damage.</description>
+		<graphicData>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodStemglaive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PeriwoodMelee</li>
+			<li>ET_PeriwoodWeapon</li>
+			<li>ET_GrovetouchedWeapon</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Mass>1.4</Mass>
+			<Flammability>1</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<!--Crafting-->
+		<costList>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
+			<ET_Brightsap>1</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_PrimaTerraforge</li>
+			</recipeUsers>
+			<workAmount>10000</workAmount>
+			<skillRequirements>
+				<Plants>4</Plants>
+				<Artistic>2</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodHeartshifting</li>
+			</researchPrerequisite>
+		</recipeMaker>
+		<!--End of crafting-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Poke</li>
+					<li>Blunt</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>19</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponMelee</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>12000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>1500000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

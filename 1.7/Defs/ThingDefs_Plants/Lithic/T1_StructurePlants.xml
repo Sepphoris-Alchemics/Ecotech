@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Pods should follow the following skill rules:
+Tier 1 weapons: 1-4
+Tier 1 heavy: 5-7
+Tier 1 upgrades: 6-8
+Tier 1 surge seeds: 6-8
+
+Tier 2 weapons: 4-8
+Tier 2 heavy: 9-11
+Tier 2 upgrades: 10-12
+Tier 2 surge seeds: 10-12
+
+Tier 3 weapons: 8-12
+Tier 3 heavy: 13-15
+Tier 3 upgrades: 14-16
+Tier 3 surge seeds: 14-16
+
+Tier 4 weapons: 16-20
+Tier 4 heavy: 17-19
+Tier 4 upgrades: 20
+Tier 4 surge seeds: 20
+-->
+
+  <!--<ThingDef ParentName="ET_TerrathystPlantBase">
+    <defName>ET_TerrathystGrower</defName>
+    <graphicData>
+      <texPath>Things/Plant/TerrathystGrower</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <label>Terrathyst Cultivator</label>
+    <description>A large crystal that will grow smaller, pure terrathyst crystals. While it can be shattered for terrathyst as well, it is highly inefficient and not recommended.
+The growth can be placed anywhere, but will only grow harvestable crystals in water, watery terrains, or sap-infused terrains. It is therefore recommended to placed this near, or in, one such terrain.</description>
+    <descriptionHyperlinks>
+      <ThingDef>ET_OverviewTerrathyst</ThingDef>
+    </descriptionHyperlinks>
+    <plant>
+      <showGrowthInInspectPane>false</showGrowthInInspectPane>
+      <harvestMinGrowth>0.8</harvestMinGrowth>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <harvestYield>16</harvestYield>
+      <sowMinSkill>4</sowMinSkill>
+      <growDays>6</growDays>
+      <harvestWork>600</harvestWork>
+      <sowTags Inherit="True">
+        <li>Ground</li>
+      </sowTags>
+      <sowResearchPrerequisites>
+        <li>ET_LithicTerratechEssentials</li>
+      </sowResearchPrerequisites>
+      <immatureGraphicPath>Things/Plant/TerrathystGrower</immatureGraphicPath>
+    </plant>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_SpawnSubplant">
+        <compClass>CompSpawnSubplantDuration</compClass>
+        <subplant>Plant_MossGauranlen</subplant>
+        <maxRadius>7.9</maxRadius>
+        <subplantSpawnDays>1</subplantSpawnDays>
+        <minGrowthForSpawn>0.6</minGrowthForSpawn>
+        <initialGrowthRange>0.2~0.4</initialGrowthRange>
+        <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+        <plantsToNotOverwrite>
+          <li MayRequire="Ludeon.Rimworld.Ideology">Plant_PodGauranlen</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+          <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+        </plantsToNotOverwrite>
+      </li>
+    </comps>
+  </ThingDef>-->
+</Defs>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--=====Heart Infection=====-->
+
+<!--<RecipeDef ParentName="SurgeryFlesh">
+  <defName>ET_GoldenHeartInfectionRecipe</defName>
+  <label>induce Midas heart infection</label>
+  <description>Begin a transmutation of the patient's heart, converting it into gold. The resulting heart will be worth thousands, should the process complete.</description>
+  <jobString>inducing Midas heart transmutation.</jobString>
+  <surgerySuccessChanceFactor>0.95</surgerySuccessChanceFactor>
+  <researchPrerequisite>ET_MidasClassEssentials</researchPrerequisite>
+  <workerClass>Recipe_AddHediff</workerClass>
+  <workAmount>4000</workAmount>
+  <workSkill>Medicine</workSkill>
+  <effectWorking>Surgery</effectWorking>
+  <soundWorking>Recipe_Surgery</soundWorking>
+  <addsHediff>ET_GoldenHeartInfectionHediff</addsHediff>
+  <targetsBodyPart>true</targetsBodyPart>
+  <appliedOnFixedBodyParts>
+    <li>Heart</li>
+  </appliedOnFixedBodyParts>
+  <recipeUsers>
+    <li>Human</li>
+  </recipeUsers>
+  <ingredients>
+    <li>
+      <filter>
+        <thingDefs>
+          <li>ET_LiquidVivium</li>
+        </thingDefs>
+      </filter>
+      <count>4</count>
+    </li>
+  </ingredients>
+  <fixedIngredientFilter>
+  <thingDefs>
+    <li>ET_LiquidVivium</li>
+  </thingDefs>
+</fixedIngredientFilter>
+</RecipeDef>
+
+<HediffDef>
+  <defName>ET_GoldenHeartInfectionHediff</defName>
+  <label>midas heart transmutation</label>
+  <hediffClass>HediffWithComps</hediffClass>
+  <description>A midas transmutation targetting the heart. If the process completes, the organ will be fully transmuted.</description>
+  <isBad>true</isBad>
+  <tendable>false</tendable>
+  <maxSeverity>1</maxSeverity>
+  <alwaysShowSeverity>true</alwaysShowSeverity>
+  <defaultLabelColor>(203,148,62)</defaultLabelColor>
+  <comps>
+    <li Class="HediffCompProperties_SeverityPerDay">
+      <severityPerDay>0.08</severityPerDay>
+    </li>
+    <li Class="Ecotech.HediffCompProperties_BodyPartTransformation_Single">
+      <blockedByHediffs>
+        <li>ET_AlchemicInhibitor</li>
+      </blockedByHediffs>
+      <letterLabelKey>ET_LetterLabel_BodyPartTransformed</letterLabelKey>
+      <letterTextKey>ET_LetterText_BodyPartTransformed</letterTextKey>
+      <drops>
+        <li>
+          <thingDef>Gold</thingDef>
+          <countRange>
+            <min>15</min>
+            <max>30</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+      </drops>
+      <bodyPartModifiers>
+        <li>
+          <bodyPart>Heart</bodyPart>
+          <severityMultiplier>0</severityMultiplier>
+          <yieldMultiplier>1</yieldMultiplier>
+          <sendLetter>true</sendLetter>
+          <overrideChance>1</overrideChance>
+          <overrideDrops>
+            <li>
+              <thingDef>ET_GoldenHeart</thingDef>
+              <countRange>
+                <min>1</min>
+                <max>1</max>
+              </countRange>
+              <chance>1</chance>
+            </li>
+          </overrideDrops>
+        </li>
+      </bodyPartModifiers>
+    </li>
+  </comps>
+</HediffDef>-->
+
+<!--=====Brain Infection=====-->
+
+<!--<RecipeDef ParentName="SurgeryFlesh">
+  <defName>ET_JadeBrainInfectionRecipe</defName>
+  <label>Induce Midas brain transmutation</label>
+  <description>Cause a transmutation of the brain, fragmenting it into many jade crystals and segments. The process is lethal, painful... and quite enriching.</description>
+  <jobString>inducing Midas brain transmutation.</jobString>
+  <surgerySuccessChanceFactor>0.95</surgerySuccessChanceFactor>
+  <researchPrerequisite>ET_MidasClassEssentials</researchPrerequisite>
+  <workerClass>Recipe_AddHediff</workerClass>
+  <workAmount>3000</workAmount>
+  <workSkill>Medicine</workSkill>
+  <effectWorking>Surgery</effectWorking>
+  <soundWorking>Recipe_Surgery</soundWorking>
+  <addsHediff>ET_JadeBrainInfectionHediff</addsHediff>
+  <targetsBodyPart>true</targetsBodyPart>
+  <appliedOnFixedBodyParts>
+    <li>Brain</li>
+  </appliedOnFixedBodyParts>
+  <recipeUsers>
+    <li>Human</li>
+  </recipeUsers>
+  <ingredients>
+    <li>
+      <filter>
+        <thingDefs>
+          <li>ET_LiquidVivium</li>
+        </thingDefs>
+      </filter>
+      <count>2</count>
+    </li>
+  </ingredients>
+  <fixedIngredientFilter>
+  <thingDefs>
+    <li>ET_LiquidVivium</li>
+  </thingDefs>
+</fixedIngredientFilter>
+</RecipeDef>
+
+<HediffDef>
+  <defName>ET_JadeBrainInfectionHediff</defName>
+  <label>midas brain transmutation</label>
+  <hediffClass>HediffWithComps</hediffClass>
+  <description>A Midas transmutation of the brain has begun. As the infection progresses, the victim's mind crystallizes into jade.</description>
+  <isBad>true</isBad>
+  <tendable>false</tendable>
+  <maxSeverity>1</maxSeverity>
+  <alwaysShowSeverity>true</alwaysShowSeverity>
+  <defaultLabelColor>(203,148,62)</defaultLabelColor>
+  <stages>
+    <li>
+      <minSeverity>0</minSeverity>
+      <label>rooting</label>
+      <painFactor>1.1</painFactor>
+    </li>
+    <li>
+      <minSeverity>0.4</minSeverity>
+      <label>alchemizing</label>
+      <painFactor>1.5</painFactor>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.2</offset>
+        </li>
+      </capMods>
+    </li>
+    <li>
+      <minSeverity>0.75</minSeverity>
+      <label>crystallized</label>
+      <painFactor>2</painFactor>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <offset>-0.5</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+  <comps>
+    <li Class="HediffCompProperties_SeverityPerDay">
+      <severityPerDay>0.06</severityPerDay>
+    </li>
+    <li Class="Ecotech.HediffCompProperties_BodyPartTransformation_Single">
+      <blockedByHediffs>
+        <li>ET_AlchemicInhibitor</li>
+      </blockedByHediffs>
+      <letterLabelKey>ET_LetterLabel_BodyPartTransformed</letterLabelKey>
+      <letterTextKey>ET_LetterText_BodyPartTransformed</letterTextKey>
+      <drops>
+        <li>
+          <thingDef>Jade</thingDef>
+          <countRange>
+            <min>15</min>
+            <max>30</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+        <li>
+          <thingDef>ET_SharpenedMind</thingDef>
+          <countRange>
+            <min>3</min>
+            <max>12</max>
+          </countRange>
+          <chance>1</chance>
+        </li>
+      </drops>
+    </li>
+  </comps>
+</HediffDef>-->
+
+</Defs>

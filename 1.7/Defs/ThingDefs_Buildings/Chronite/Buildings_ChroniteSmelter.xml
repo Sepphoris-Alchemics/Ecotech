@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+
+Tier 1: Terrathyst Crucible:
+-Creates only basic and genesite items.
+-Creates normal weapons and items.
+-High crafting speed
+-Low stone extraction output
+
+Tier 1: Terrathyst Charger:
+-Charges tier 1 and 2 gear at a low rate
+-Evolves lithic weapons
+-1 item capacity
+
+Tier 2: Chronite Forge:
+-Creates Tier 2 gear
+-Normal crafting speed
+-Better stone extraction output
+
+-->
+
+<!--Chronite Smelter: creates items from steel
+    -->
+
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>ET_ChroniteSmelter</defName> <!--Tier 2: Chronite Forge-->
+    <label>chronite smelter</label>
+    <description>A massive crystal chamber made out of stabilized chronite, and filled with embersap. Allows a tribe to melt down common fabricated items back into usable resources.
+The chronite of this structure allows it to handle any electrical current, but is unable to seperate both energies and physical materials at once.
+A chronite capacitor is needed to drain items specifically of energy, or charge items.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <size>(1,1)</size>
+    <graphicData>
+      <texPath>Things/Building/ChroniteSmelter/ChroniteSmelter_a</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1.8,1.8)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <interactionCellIcon IsNull="True"/>
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True"/>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <uiIconScale>0.5</uiIconScale>
+    <maxTechLevelToBuild>Ultra</maxTechLevelToBuild>
+    <researchPrerequisites>
+      <li>ET_TierOneLithicMastery</li>
+    </researchPrerequisites>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Item</surfaceType>
+    <killedLeavings>
+      <ET_Seed_ChroniteForge>1</ET_Seed_ChroniteForge>
+    </killedLeavings>
+    <!--<recipes>
+      <li>ET_FormChroniteForgeSeed</li>
+    </recipes>-->
+    <!--<inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>-->
+    <building>
+      <deconstructible>false</deconstructible>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <uiOrder>2720</uiOrder>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.9</glowRadius>
+        <glowColor>(34,159,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Art">
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <!--<li Class="CompProperties_Refuelable">
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>15</initialConfigurableTargetFuelLevel>
+        <fuelConsumptionRate>0.50</fuelConsumptionRate>
+        <fuelCapacity>30</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelLabel>Shocksap</fuelLabel>
+        <fuelGizmoLabel>Healthy shocksap</fuelGizmoLabel>
+        <outOfFuelMessage>Requires Shocksap replacement</outOfFuelMessage>
+        <showFuelGizmo>true</showFuelGizmo>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>-->
+      <!--<li Class="CompProperties_InspectString">
+        <inspectString>Right-click to insert terrathyst core
+Place materials nearby to charge/evolve items</inspectString>
+      </li>-->
+      <li Class="CVNPlantUtils.CompProperties_AssemblingItem">
+        <isManualOnly>true</isManualOnly>
+        <isAssemblingPawn>false</isAssemblingPawn>
+        <uiIconChooseRecipe>UI/Gizmo/InstallableInSlottedThingTransformerGizmo</uiIconChooseRecipe>
+        <uiIconStartProcess>UI/Gizmo/MultiLifespanGizmo</uiIconStartProcess>
+        <useConnectedFacility>false</useConnectedFacility>
+        <useZone>false</useZone>
+        <radius>125</radius>
+        <effectWorking>Smith</effectWorking>
+        <recipeSet>
+<!--=====Industrial Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Industrial Component</label>
+            <description>Requirements:
+x1 Industrial Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>4</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentIndustrial</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Spacer Component=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Advanced Component</label>
+            <description>Requirements:
+x1 Spacer Component
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>8</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ComponentSpacer</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====ASSAULT RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Assault Rifle</label>
+            <description>Requirements:
+x1 Assault Rifle
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>36</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_AssaultRifle</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====AUTOPISTOL=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Autopistol</label>
+            <description>Requirements:
+x1 Autopistol
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>14</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_Autopistol</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====BOLT ACTION RIFLE=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Bolt Action Rifle</label>
+            <description>Requirements:
+x1 Bolt Action Rifle
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>24</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_BoltActionRifle</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====CHAIN SHOTGUN=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Chain Shotgun</label>
+            <description>Requirements:
+x1 Chain Shotgun
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>33</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_ChainShotgun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EMP LAUNCHER=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: EMP Launcher</label>
+            <description>Requirements:
+x1 EMP Launcher
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>43</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_EmpLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Heavy SMG=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Heavy SMG</label>
+            <description>Requirements:
+x1 Heavy SMG
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>31</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_HeavySMG</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Incen. Launcher=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Incendiary Launcher</label>
+            <description>Requirements:
+x1 Incendiary Launcher
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>31</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_IncendiaryLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====LMG=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: LMG</label>
+            <description>Requirements:
+x1 LMG
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>34</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_LMG</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Machine Pistol=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Machine Pistol</label>
+            <description>Requirements:
+x1 Machine Pistol
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>20</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_MachinePistol</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Minigun=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Minigun</label>
+            <description>Requirements:
+x1 Minigun
+Duration: 10 days</description>
+            <duration>600000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>100</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_Minigun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Pump Shotgun=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Pump Shotgun</label>
+            <description>Requirements:
+x1 Pump Shotgun
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>24</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_PumpShotgun</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Revolver=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Revolver</label>
+            <description>Requirements:
+x1 Revolver
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>14</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_Revolver</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Smoke Launcher=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Smoke Launcher</label>
+            <description>Requirements:
+x1 Smoke Launcher
+Duration: 4 days</description>
+            <duration>240000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>31</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_SmokeLauncher</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Sniper Rifle=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Sniper Rifle</label>
+            <description>Requirements:
+x1 Sniper Rifle
+Duration: 6 days</description>
+            <duration>360000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>39</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Gun_SniperRifle</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Helmet=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Helmet</label>
+            <description>Requirements:
+x1 Flak Helmet
+Duration: 1 day</description>
+            <duration>60000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>3</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_AdvancedHelmet</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Jacket=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Jacket</label>
+            <description>Requirements:
+x1 Flak Jacket
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>21</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FlakJacket</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Pants=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Pants</label>
+            <description>Requirements:
+x1 Flak Pants
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>18</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FlakPants</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Flak Vest=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Flak Vest</label>
+            <description>Requirements:
+x1 Flak Vest
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>18</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FlakVest</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EMP Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: EMP Shell</label>
+            <description>Requirements:
+x1 EMP Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_EMP</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Incen. Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Incendiary Shell</label>
+            <description>Requirements:
+x1 Incendiary Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_Incendiary</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====High Explosive Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: High Explosive Shell</label>
+            <description>Requirements:
+x1 High Explosive Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_HighExplosive</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Smoke Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Smoke Shell</label>
+            <description>Requirements:
+x1 Smoke Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_Smoke</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Firefoam Shell=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Firefoam Shell</label>
+            <description>Requirements:
+x1 Firefoam Shell
+Duration: 0.5 days</description>
+            <duration>30000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>10</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Shell_Firefoam</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====EMP Grenade=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: EMP Grenade</label>
+            <description>Requirements:
+x1 EMP Grenade
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>23</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Weapon_GrenadeEMP</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Firefoam Pack=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Firefoam Pack</label>
+            <description>Requirements:
+x1 Firefoam Pack
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>23</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_FirefoampopPack</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+  <!--=====Shield Belt=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Shield Belt</label>
+            <description>Requirements:
+x1 Shield Belt
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>24</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>Apparel_ShieldBelt</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+<!--=====Mechanoid Chunk=====-->
+          <li>
+            <researchPrerequisite>
+              <li>ET_BasicMetalReclamation</li>
+            </researchPrerequisite>
+            <label>Basic Metal Reclamation: Mechanoid Slag Chunk</label>
+            <description>Requirements:
+x1 Mechanoid Slag Chunk
+Duration: 2 days</description>
+            <duration>120000</duration>
+            <resultDef>Steel</resultDef>
+            <amount>20</amount>
+            <ingredientSets>
+              <li>
+                <thingDef>ChunkMechanoidSlag</thingDef>
+                <amount>1</amount>
+              </li>
+            </ingredientSets>
+          </li>
+
+        </recipeSet>
+        </li>
+    </comps>
+    <specialDisplayRadius>125</specialDisplayRadius>
+  </ThingDef>
+
+</Defs>

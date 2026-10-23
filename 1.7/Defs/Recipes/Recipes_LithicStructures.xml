@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!--<RecipeDef>
+    <defName>ET_LithicForgeTierTwoRecipe</defName>
+    <label>form prismite well cluster</label>
+    <description>Shape a cluster of crystals that will grow into a prismite well. Prismite wells are direct upgrades to terrathyst crucibles, able to handle bigger amounts of sap and fragments.</description>
+    <jobString>shaping a crystal cluster.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Plants</workSkill>
+    <skillRequirements>
+      <Plants>6</Plants>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_TierTwoCrystal</li>
+          </thingDefs>
+        </filter>
+        <count>7.5</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_TierOneLithicMastery</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <workAmount>2400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_LithicForgeTierTwo>1</ET_Seed_LithicForgeTierTwo>
+    </products>
+    <displayPriority>2</displayPriority>
+  </RecipeDef>-->
+
+<!--=====Crack open Vivium Geode=====-->
+
+  <RecipeDef>
+    <defName>ET_OpenViviumGeodeSealedRecipe</defName>
+    <label>Open sealed vivium geode</label>
+    <description>Crack open an unsealed vivium geode, revealing the resources inside. The liquid vivium inside will dry up after a short amount of time, but the geode can also be processed into raw vivium, or turned into a more potent midas lance.
+Requires both a steady hand, and a precise eye.</description>
+    <jobString>Cracking geode open.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+      <Artistic>4</Artistic>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_ViviumGeodeSealed</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_MidasClassEssentials</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>2400</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_ViviumGeode>1</ET_ViviumGeode>
+    </products>
+    <displayPriority>1</displayPriority>
+  </RecipeDef>
+
+<!--=====Extract Liquid Vivium=====-->
+
+  <RecipeDef>
+    <defName>ET_ExtractLiquidViviumRecipe</defName>
+    <label>extract liquid vivium</label>
+    <description>Extract the liquid vivium from a geode that's been cracked open. The process wasn't made for human hands and is inefficient, but still produces results.</description>
+    <jobString>Extracting liquid vivium.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_ViviumGeode</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_MidasClassEssentials</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>3200</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_LiquidVivium>1</ET_LiquidVivium>
+    </products>
+    <displayPriority>2</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ET_FormChroniteForgeSeed</defName>
+    <label>form chronite forge lattice</label>
+    <description>Using chronite from the forge, create a brand new lattice ready for planting, which will grow into a new forge.
+This process takes a long time, requires several saps, and any progress will be lost if the process is interrupted.
+Requires both a steady hand, and a precise eye.</description>
+    <jobString>forming chronite forge lattice.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+      <Artistic>2</Artistic>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Endosap</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_TierOneLithicMastery</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>2800</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_ChroniteForge>1</ET_Seed_ChroniteForge>
+    </products>
+    <displayPriority>3</displayPriority>
+  </RecipeDef>
+
+<RecipeDef>
+    <defName>ET_FormViviumPylonSeed</defName>
+    <label>form vivium pylon lattice</label>
+    <description>Using chronite from the forge, create a brand new lattice ready for growth, which will grow into a vivium transmutation pylon. This pylon takes a while to grow, but is deadly and highly profitable once complete.
+This process takes a long time, requires several saps, and any progress will be lost if the process is interrupted.
+Requires both a steady hand, and a precise eye.</description>
+    <jobString>forming vivium pylon lattice.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+      <Artistic>4</Artistic>
+    </skillRequirements>
+<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Shocksap</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ET_Endosap</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ET_MidasClassStructures</researchPrerequisite>
+    <effectWorking>Sculpt</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>3000</workAmount>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <products>
+      <ET_Seed_ViviumPylon>1</ET_Seed_ViviumPylon>
+    </products>
+    <displayPriority>4</displayPriority>
+  </RecipeDef>
+</Defs>

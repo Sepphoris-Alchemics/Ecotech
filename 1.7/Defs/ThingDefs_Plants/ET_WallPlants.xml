@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>ET_TerramassWallPlant</defName>
+    <label>terramass wall growth</label>
+    <description>An organic clump that will grow into a Terramass Wall. It's quite weak, with it's only saving grace being it's infinite renewability and fast growth time.</description>
+    <graphicData>
+      <texPath>Things/Plant/PlantWall</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(68,74,49)</color>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>-1</Beauty>
+      <BeautyOutdoors>0</BeautyOutdoors>
+      <Flammability>4</Flammability> <!--Very vulnerable during it's growth state-->
+      <MaxHitPoints>32</MaxHitPoints> <!-- main wall's durability/8, rounded to nearest whole-->
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>28</pathCost>
+    <plant>
+      <fertilityMin>0.1</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growMinGlow>0</growMinGlow>
+      <harvestWork>1000</harvestWork>
+      <burnedThingDef IsNull="True" />
+      <harvestMinGrowth>0.8</harvestMinGrowth>
+      <harvestAfterGrowth>0.05</harvestAfterGrowth>
+      <harvestTag>Standard</harvestTag>
+      <allowAutoCut>false</allowAutoCut>
+      <sowWork>200</sowWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowMinSkill>2</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>ET_OrganicTerratechEssentials</li>
+      </sowResearchPrerequisites>
+      <blockAdjacentSow>false</blockAdjacentSow>
+      <topWindExposure>0.01</topWindExposure>
+      <growDays>0.5</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <visualSizeRange>0.3~0.8</visualSizeRange>
+      <treeLoversCareIfChopped>false</treeLoversCareIfChopped>
+      <purpose>Misc</purpose>
+    </plant>
+    <comps>
+      <li Class="Ecotech.ThingCompProperties_PlantTransformOnMaturity">
+        <compClass>Ecotech.ThingComp_PlantTransformOnMaturity</compClass>
+        <transformedThing>ET_TerramassWall</transformedThing>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
