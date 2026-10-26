@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="PlantBase">
+        <defName>Plant_Linkroot</defName>
+        <label>Linkroot - the very fucking basic.</label>
+        <description>this is a description for test plant, put something here probably.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.01</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/PotatoPlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <ingestible />
+        <plant>
+            <immatureGraphicPath>Things/Plant/PotatoPlant_Immature</immatureGraphicPath>
+            <fertilitySensitivity>0.1</fertilitySensitivity>
+            <sowTags />
+            <fertilityMin>0.1</fertilityMin>
+            <topWindExposure>0.1</topWindExposure>
+            <growDays>0.05</growDays>
+            <visualSizeRange>0.5~1.05</visualSizeRange>
+        </plant>
+        <comps>
+            <li Class="CompProperties_Forbiddable">
+
+            </li>
+            <li Class="Ecotech.CompProperties_LinkRoot">
+                <gizmoLabel>root linking</gizmoLabel>
+                <progressPerTick>0.1</progressPerTick>
+                <maxProgress>2500</maxProgress>
+                <tendIcon>Effects/SFX/Particle_Ring</tendIcon>
+                <isOnlyOneCanExist>true</isOnlyOneCanExist>
+                <linkedResearch>
+                    <li>
+                        <threshold>100</threshold>
+                        <unlockedResearch>ET_BasicBiosynthVat</unlockedResearch>
+                    </li>
+                    <li>
+                        <threshold>250</threshold>
+                        <unlockedResearch>MultiAnalyzer</unlockedResearch>
+                    </li>
+                    <li>
+                        <threshold>500</threshold>
+                        <unlockedResearch>Fabrication</unlockedResearch>
+                    </li>
+                    <li>
+                        <threshold>1000</threshold>
+                        <unlockedResearch>AdvancedFabrication</unlockedResearch>
+                    </li>
+                </linkedResearch>
+                <forbiddenResearch>
+                    <li>ShipBasics</li>
+                </forbiddenResearch>
+            </li>
+        </comps>
+    </ThingDef>
+    
+</Defs>

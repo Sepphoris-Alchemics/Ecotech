@@ -81,8 +81,8 @@
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
-    <fixedBillGiverDefs>
-      <li>EcoTechSeed_Basic</li>
+    <fixedBillGiverDefs> <!--Add seeds that allow multiple plants here-->
+      <li>ET_Seed_PrimaApexTurret</li>
     </fixedBillGiverDefs>
     <nonColonistsCanDo>true</nonColonistsCanDo>
     <canBeDoneByMechs>false</canBeDoneByMechs>

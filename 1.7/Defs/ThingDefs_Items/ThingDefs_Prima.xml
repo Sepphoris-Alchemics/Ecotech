@@ -175,19 +175,19 @@ The seed is awoken by hand, and at will. During the planting process, one can in
         <glowRadius>0.9</glowRadius>
         <glowColor>(370,370,370,0)</glowColor>
       </li>
-      <li Class="CompProperties_Usable">
+      <li Class="CompProperties_Usable"> <!--REQUIRED for new seed planting!-->
                 <useJob>UseItem</useJob>
                 <useLabel>Use {0_label}</useLabel>
                 <useDuration>5</useDuration>
                 <showUseGizmo>false</showUseGizmo>
             </li>
-            <li Class="Ecotech.CompProperties_UseEffecPlantSeed">
-                <plantDefs>
-                    <li>ET_PrimaTurretPlant_SMG</li>
-                    <li>ET_PrimaTurretPlant_Shotgun</li>
-                    <li>ET_PrimaTurretPlant_Spear</li>
-                </plantDefs>
-                <jobDef>ET_ReplantSeed</jobDef>
+            <li Class="Ecotech.CompProperties_UseEffecPlantSeed"> <!--Add thingDef to ET_PlantSeed workGiver!-->
+              <plantDefs>
+                <li>ET_PrimaTurretPlant_SMG</li>
+                <li>ET_PrimaTurretPlant_Shotgun</li>
+                <li>ET_PrimaTurretPlant_Spear</li>
+              </plantDefs>
+              <jobDef>ET_ReplantSeed</jobDef>
             </li>
     </comps>
     <tradeTags Inherit='false'>
