@@ -2,4 +2,8 @@
 <LanguageData>
   <MeditationFocusPerTerravatAbstract>{1} per nearby terravat (max {0})</MeditationFocusPerTerravatAbstract>
   <MeditationFocusPerTerravat>{2} per nearby terravat ({0} / {1})</MeditationFocusPerTerravat>
+  <Linkroot_ThresholdReached>Research Finished: {0}</Linkroot_ThresholdReached>
+  <LinkRoot_UnableToLinkReason>Linking Denied: {0}</LinkRoot_UnableToLinkReason>
+  <Linkroot_ChooseRootType>Chosen plant</Linkroot_ChooseRootType>
+  <Linkroot_ChooseRootTypeDesc>Choose what plant will be sown</Linkroot_ChooseRootTypeDesc>
 </LanguageData>

@@ -5,4 +5,10 @@
     <texturePath>UI/Designations/InstallableInSlottedThingTransformer</texturePath>
     <targetType>Thing</targetType>
   </DesignationDef>
+
+  <DesignationDef>
+    <defName>ET_PlantSeed</defName>
+    <texturePath>Designations/HarvestPlant</texturePath>
+    <targetType>Cell</targetType>
+  </DesignationDef>
 </Defs>

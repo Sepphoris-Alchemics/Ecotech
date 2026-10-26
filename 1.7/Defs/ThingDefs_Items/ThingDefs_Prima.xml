@@ -3,6 +3,7 @@
 
 <!--Turret seeds-->
 
+
   <ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_PrimaSMGTurret</defName>
     <label>Thistle Turret Seed</label>
@@ -138,7 +139,64 @@ Proper knowledge on the seed is required to plant it safely and effectively.
     <allowedArchonexusCount>8</allowedArchonexusCount>
   </ThingDef>
 
+
+
+<!--APEX SEEDS: doesn't expire, grows faster, and allows free choice of what turret to choose.-->
+
   <ThingDef ParentName="ResourceBase">
+    <defName>ET_Seed_PrimaApexTurret</defName>
+    <label>Prima Apex Seed</label>
+    <description>A seed acquired from matured Prima weapons. Can grow into any basic Prima turret the player desires.
+The seed is awoken by hand, and at will. During the planting process, one can influence what turret the seed will grow into.
+\n\nUnlike other Prima seeds, Apex seeds do not expire over time.</description>
+    <possessionCount>4</possessionCount>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Resource/PrimaSeeds/Turret</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.3</drawSize>
+    </graphicData>
+    <stackLimit>8</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <intricate>true</intricate>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>550</MarketValue>
+      <Mass>0.015</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>TerraseedsPrimaWeapons</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0.9</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Use {0_label}</useLabel>
+                <useDuration>5</useDuration>
+                <showUseGizmo>false</showUseGizmo>
+            </li>
+            <li Class="Ecotech.CompProperties_UseEffecPlantSeed">
+                <plantDefs>
+                    <li>ET_PrimaTurretPlant_SMG</li>
+                    <li>ET_PrimaTurretPlant_Shotgun</li>
+                    <li>ET_PrimaTurretPlant_Spear</li>
+                </plantDefs>
+                <jobDef>EcoTech_Replant</jobDef>
+            </li>
+    </comps>
+    <tradeTags Inherit='false'>
+      <li>ET_PrimaTurretSeedTag</li>
+    </tradeTags>
+    <allowedArchonexusCount>4</allowedArchonexusCount>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="ResourceBase">
     <defName>ET_Seed_PrimaApexTurret</defName>
     <label>Prima Apex Seed</label>
     <description>A special seed acquired from Apex (fully matured) Prima weapons. Once planted, the seed will immediately burst into vines and wood, taking root and forming into a Prima Turret.
@@ -154,7 +212,7 @@ This seed once could be awakened by hand, and at will; however, that knowledge i
     </graphicData>
     <stackLimit>8</stackLimit>
     <healthAffectsPrice>false</healthAffectsPrice>
-    <intricate>true</intricate>    <!-- Not returned to player when product made of this is smelted. -->
+    <intricate>true</intricate>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
       <MarketValue>550</MarketValue>
@@ -175,7 +233,7 @@ This seed once could be awakened by hand, and at will; however, that knowledge i
       <li>ET_PrimaTurretSeedTag</li>
     </tradeTags>
     <allowedArchonexusCount>4</allowedArchonexusCount>
-  </ThingDef>
+  </ThingDef>-->
 
 <!--Variant seeds-->
 

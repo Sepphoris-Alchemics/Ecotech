@@ -70,5 +70,65 @@
     <canBeDoneByMechs>true</canBeDoneByMechs>
   </WorkGiverDef>
   
+  <WorkGiverDef>
+    <defName>ET_PlantSeed</defName>
+    <label>replant seed</label>
+    <giverClass>Ecotech.WorkGiver_PlantSeed</giverClass>
+    <workType>Growing</workType>
+    <priorityInType>60</priorityInType>
+    <verb>replant</verb>
+    <gerund>replanting</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <fixedBillGiverDefs>
+      <li>EcoTechSeed_Basic</li>
+    </fixedBillGiverDefs>
+    <nonColonistsCanDo>true</nonColonistsCanDo>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>ET_TendLinkRoot</defName>
+    <label>perform tending</label>
+    <giverClass>Ecotech.WorkGiver_LinkrootMaintain</giverClass>
+    <workType>ET_TendLinkRoot</workType>
+    <priorityInType>50</priorityInType>
+    <verb>perform tending</verb>
+    <gerund>perform tending at</gerund>
+    <fixedBillGiverDefs>
+      <li>Plant_Linkroot</li>
+    </fixedBillGiverDefs>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+    <modExtensions>
+    <li Class="Ecotech.ModExtensions_LinkrootMaintain">
+      <tendingJobDef>ET_TendLinkRoot</tendingJobDef>
+    </li>
+    </modExtensions>
+  </WorkGiverDef>
+
+  <WorkTypeDef>
+    <defName>ET_TendLinkRoot</defName>
+    <labelShort>linkroot</labelShort>
+    <pawnLabel>Tender</pawnLabel>
+    <gerundLabel>linkroot</gerundLabel>
+    <description>perform highly skilled work related to linkroot.</description>
+    <verb>perform tending at</verb>
+    <naturalPriority>500</naturalPriority>
+    <relevantSkills>
+      <li>Plants</li>
+    </relevantSkills>
+    <requireCapableColonist>true</requireCapableColonist>
+    <alwaysStartActive>true</alwaysStartActive>
+    <workTags>
+      <li>PlantWork</li>
+      <li>ManualSkilled</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
 
 </Defs>
