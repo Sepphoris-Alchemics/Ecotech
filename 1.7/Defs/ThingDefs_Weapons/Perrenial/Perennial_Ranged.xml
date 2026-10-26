@@ -104,6 +104,7 @@
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1200000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -216,6 +217,7 @@ Renewable | Unable to be evolved or infused</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1500000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -318,6 +320,7 @@ The Tricaster features the following bonuses and penalties:
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1800000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -436,6 +439,7 @@ Upgradable | Renewable | ??? | ???</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>900000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -445,6 +449,203 @@ Upgradable | Renewable | ??? | ???</inspectString>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
 Renewable | Unable to be evolved or infused</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+<!--PERENNIAL WAR BOW-->
+
+	<ThingDef ParentName="BasePeriwoodTerraweapon">
+		<defName>ET_PeriwoodBow</defName>		<!--Counterpart: Grenade Launcher-->
+		<label>Periwood Warbow</label>
+		<description>The periwood warbow is an experimental weapon, and takes it's regenerative capabilites to the extreme. Despite being a bow, this particular weapon is one of the most vertisile - and lethal - periwood weapons that can be acquired.
+Rather than conventional warfare, the warbow is intended for siege and anti-siege combat. The giant bolts are designed to easily break through structures; alternatively, they can be fired in an arcing pattern, splintering off to damage anything and anyone nearby in a large radius.
+While the warbow is quite effective at it's purpose, it can only do so for so long. After excessive use, the warbow's ability to regenerate ammo will deplete, and it will have to be replanted or revitalized with glowsap.
+\n\nPeriwood weapons have a very long lifespan, but they still do eventually expire. However, the living moss patches they posess allows them to be replanted, and (rougly after a quadrum) fully revitilized.</description>
+		<graphicData>
+			<texPath>Things/WeaponPeriwood/Basic/ET_PeriwoodBow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags Inherit='False'>
+			<li>ET_PlantWeapon</li>
+			<li>ET_PeriwoodWeapon</li>
+			<li>ET_PeriwoodWeaponRanged</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>ET_NaturalWeapon</li>
+			<li>Ranged</li>
+		</weaponClasses>
+		<relicChance>0</relicChance>
+		<generateCommonality>0</generateCommonality>
+		<statBases>
+			<MaxHitPoints>55</MaxHitPoints>
+			<AccuracyTouch>0.35</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.65</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>			<!--half of the counterpart, rounded down-->
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2.6</Mass>
+			<Flammability>1</Flammability>
+			<WorkToMake>20000</WorkToMake>
+		</statBases>
+<!--Crafting-->
+		<costList>
+			<ET_PeriwoodHeart>1</ET_PeriwoodHeart>
+			<ET_Brightsap>4</ET_Brightsap>
+		</costList>
+		<recipeMaker>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Sculpt</effectWorking>
+			<unfinishedThingDef IsNull="True" />
+			<recipeUsers>
+				<li>ET_PrimaTerraforge</li>
+			</recipeUsers>
+			<workAmount>20000</workAmount>
+			<skillRequirements>
+				<Plants>8</Plants>
+				<Artistic>4</Artistic>
+			</skillRequirements>
+			<researchPrerequisite>
+				<li>ET_PeriwoodHeartshifting</li>
+			</researchPrerequisite>
+		</recipeMaker>
+	<!--End of crafting-->
+		<techLevel>Neolithic</techLevel>
+		<smeltable>false</smeltable>
+		<equippedAngleOffset>50</equippedAngleOffset>
+		<verbs>
+			<li>
+				<label>PeriwoodBowStraightShot</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Organic/BowStraightShot</commandIcon>
+				<accuracyTouch>0.35</accuracyTouch>
+				<accuracyShort>0.40</accuracyShort>
+				<accuracyMedium>0.75</accuracyMedium>
+				<accuracyLong>0.65</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PeriwoodBowStraightShot</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<minRange>2.9</minRange>
+				<range>38.9</range>
+				<soundCast>ET_Sound_Needle1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<commonality>.2</commonality>
+			</li>
+			<li>
+				<label>PeriwoodBowArcShot</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<commandIcon>UI/Gizmo/Organic/BowArcShot</commandIcon>
+				<accuracyTouch>0.30</accuracyTouch>
+				<accuracyShort>0.40</accuracyShort>
+				<accuracyMedium>0.60</accuracyMedium>
+				<accuracyLong>0.60</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_PeriwoodBowArcShot</defaultProjectile>
+				<warmupTime>2</warmupTime>
+				<minRange>6.9</minRange>
+				<range>32.9</range>
+				<forcedMissRadius>2.9</forcedMissRadius>
+				<soundCast>ET_Sound_Needle1</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<commonality>0</commonality>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>spear</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>24000</ticksPerHeal>				<!-- 6k ticks = 10hp/day, 12k ticks = 5hp/day, 24k ticks = 2.5hp/day -->
+			</li>
+			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
+				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
+				<lifespanTicks>900000</lifespanTicks>
+				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>
+				<!--<expireEffect></expireEffect>-->
+				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
+			</li>
+			<li Class="CompProperties_Plantable">
+				<plantDefToSpawn>ET_PeriwoodCannonGrowthPod</plantDefToSpawn>
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>&lt;color=#68bd46&gt;Organic-class&lt;/color&gt; | &lt;color=#dae691&gt;Immutable&lt;/color&gt;
+Renewable | Unable to be evolved or infused</inspectString>
+			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>PeriwoodBowStraightShot</label>
+						<visualLabel>bolt shot</visualLabel>
+						<description>Fires direct heavy bolts that are especially effective against structures and armor.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Organic/BowStraightShot</switchIcon>
+								<startEnabled>true</startEnabled>
+							</li>
+							<li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+							<compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+							<MaxShots>20</MaxShots>
+							<AmmoFilter>
+								<thingDefs>
+									<li>ET_Glowsap</li>
+								</thingDefs>
+							</AmmoFilter>
+							<ItemsPerShot>2</ItemsPerShot>
+							<ReloadTimePerShot>1</ReloadTimePerShot>
+              				<StartLoaded>true</StartLoaded>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>PeriwoodBowArcShot</label>
+						<visualLabel>storm fire</visualLabel>
+						<description>Fires arcing bolts that don't require a line of sight. The impact of the bolt creates a concussive force around it.</description>
+						<canBeToggled>true</canBeToggled>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+								<switchIcon>UI/Gizmo/Organic/BowArcShot</switchIcon>
+							</li>
+							<li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+							<compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+							<MaxShots>20</MaxShots>
+							<AmmoFilter>
+								<thingDefs>
+									<li>ET_Glowsap</li>
+								</thingDefs>
+							</AmmoFilter>
+							<ItemsPerShot>2</ItemsPerShot>
+							<ReloadTimePerShot>1</ReloadTimePerShot>
+              				<StartLoaded>true</StartLoaded>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
 			</li>
 		</comps>
 	</ThingDef>

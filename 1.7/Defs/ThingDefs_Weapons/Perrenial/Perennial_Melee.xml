@@ -118,6 +118,7 @@
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1500000</lifespanTicks>
 				<lifespanBarColor>(91, 61, 48)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>

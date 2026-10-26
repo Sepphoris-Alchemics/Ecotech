@@ -94,7 +94,8 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>960000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
@@ -204,7 +205,8 @@ Inflicts psychic fatigue | ??? | ??? | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1080000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage II&lt;/color&gt;
@@ -360,7 +362,8 @@ Inflicts psychic fatigue | Lowers conciousness | ??? | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1200000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage III&lt;/color&gt;
@@ -528,7 +531,8 @@ Inflicts psychic fatigue | Lowers conciousness, speed, and manipulation | ???</i
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1320000</lifespanTicks>				<!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>				<!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(53, 71, 108)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>				<!--To-do: find a unique color for biolith-->
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#BD9ABB&gt;Lithic-class&lt;/color&gt; | &lt;color=#FFC800&gt;Stage IV&lt;/color&gt;

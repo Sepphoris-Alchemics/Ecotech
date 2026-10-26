@@ -126,6 +126,7 @@ BLOOMSAP:
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -179,6 +180,7 @@ BLOOMSAP:
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -231,6 +233,7 @@ Can be replanted before expiry to be rapidly regrown</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
@@ -284,6 +287,7 @@ Can be replanted before expiry to be rapidly regrown</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>7200000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -336,6 +340,7 @@ Additionally, it will always have a 60-day lifespan, regardless of the weapon it
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1800000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_Seed_PrimaRogueWeapon</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -476,6 +481,7 @@ Projectiles inflict toxins</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -514,6 +520,7 @@ Projectiles inflict toxins</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>5400000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -573,6 +580,7 @@ Can burst fire at will | +2.5 hp/day (unequipped)</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>720000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -629,6 +637,7 @@ Additionally, it will always have a 60-day lifespan, regardless of the weapon it
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1800000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
@@ -688,6 +697,7 @@ Bound weapon | +10% higher accuracy | +2.5 hp/day (unequipped)</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>1080000</lifespanTicks>
 				<lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">

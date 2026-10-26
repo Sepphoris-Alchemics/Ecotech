@@ -6,7 +6,7 @@
   <ET_LetterLabel_TotalTransmutation>Total Transmutation</ET_LetterLabel_TotalTransmutation>
   <ET_LetterText_TotalTransmutation>{PAWN}'s entire body has been entirely transmuted. Nothing of their prior body remains.</ET_LetterText_TotalTransmutation>
 
-  <Ecotech_Message_LifespanAboutToExpire>Life span of {THING} is low.</Ecotech_Message_LifespanAboutToExpire>
+  <Ecotech_Message_LifespanAboutToExpire>The lifespan of {THING} is fading.</Ecotech_Message_LifespanAboutToExpire>
   <Ecotech_Message_SpawnedThingFromThingSpawner>{SOURCE} has provided a new gift.</Ecotech_Message_SpawnedThingFromThingSpawner>
   <Ecotech_Message_ThingTransformerFinishedTransformation>{TRANSFORMER} successfully transformed items.</Ecotech_Message_ThingTransformerFinishedTransformation>
 </LanguageData>

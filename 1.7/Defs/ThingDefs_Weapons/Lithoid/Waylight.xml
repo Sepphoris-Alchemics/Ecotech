@@ -103,6 +103,7 @@
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>2700000</lifespanTicks>
 				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
+<showExpirationAlertOnRemainingTicks>450000</showExpirationAlertOnRemainingTicks>
 			</li>-->
 			<li Class="CompProperties_InspectString">
 				<inspectString>&lt;color=#AA9CE8&gt;Stellar-class&lt;/color&gt; | &lt;color=#D46F44&gt;Stage I&lt;/color&gt;
@@ -188,6 +189,7 @@ Innate EMP damage | ??? | ??? | ???</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>3600000</lifespanTicks>
 				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>600000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
@@ -329,6 +331,7 @@ Innate EMP damage | Increased stats | ??? | ???</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>7200000</lifespanTicks>
 				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>600000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">
@@ -414,6 +417,7 @@ Innate EMP damage | Increased stats | Focused fire modes | ???</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
 				<lifespanTicks>9000000</lifespanTicks>
 				<lifespanBarColor>(115, 97, 162)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>600000</showExpirationAlertOnRemainingTicks>
 				<replacementToSpawn>ET_WaylightRifleOne</replacementToSpawn>
 			</li>
 			<li Class="CompProperties_InspectString">

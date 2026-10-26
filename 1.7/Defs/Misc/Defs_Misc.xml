@@ -135,7 +135,7 @@
     <workType>Crafting</workType>
     <priorityInType>125</priorityInType>
     <fixedBillGiverDefs>
-      <li>ET_ChroniteForge</li>
+      <li>ET_ChroniteCapacitor</li>
     </fixedBillGiverDefs>
     <verb>crafting items</verb>
     <gerund>crafting items at</gerund>

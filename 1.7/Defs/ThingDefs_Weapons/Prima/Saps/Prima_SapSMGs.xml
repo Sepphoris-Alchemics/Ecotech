@@ -84,6 +84,7 @@
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>3300000</lifespanTicks>
           <lifespanBarColor>(50, 127, 59)</lifespanBarColor>
+			<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
           <!--<expireEffect></expireEffect>-->
 		<replacementToSpawn>ET_Seed_PrimaApexTurret</replacementToSpawn>
         </li>
@@ -178,6 +179,7 @@
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>2700000</lifespanTicks> <!--Light weapon-->
           <lifespanBarColor>(159, 115, 255)</lifespanBarColor>
+			<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
         </li>
 		</comps>
 		<modExtensions>

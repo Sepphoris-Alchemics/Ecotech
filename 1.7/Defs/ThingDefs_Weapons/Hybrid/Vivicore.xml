@@ -90,7 +90,8 @@ Stage 4: grants new beam-like attack
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks> <!--To-do: find a unique color for biolith-->
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -199,6 +200,7 @@ Royal Weapon | ??? | ??? | ???</inspectString>
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
 				<lifespanBarColor>(174, 81, 123)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -303,7 +305,8 @@ Royal Weapon | +20% social impact | ??? | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks> <!--To-do: find a unique color for biolith-->
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>
@@ -452,7 +455,8 @@ Royal Weapon | +20% social impact | Slows/stuns targets | ???</inspectString>
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(174, 81, 123)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(174, 81, 123)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks> <!--To-do: find a unique color for biolith-->
 				<!--<expireEffect></expireEffect>-->
 				<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
 			</li>

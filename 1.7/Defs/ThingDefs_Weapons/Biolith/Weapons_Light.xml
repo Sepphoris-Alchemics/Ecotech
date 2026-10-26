@@ -103,7 +103,8 @@ Lithoid weapons fire slow, and have lower projectile speed, but hit very hard. A
 			<li Class="Ecotech.ThingCompProperties_EquippedLifespan">
 				<compClass>Ecotech.ThingComp_EquippedLifespan</compClass> 
 				<lifespanTicks>960000</lifespanTicks> <!--Should be twice as long as a standard wild weapon-->
-				<lifespanBarColor>(67, 102, 111)</lifespanBarColor> <!--To-do: find a unique color for biolith-->
+				<lifespanBarColor>(67, 102, 111)</lifespanBarColor>
+				<showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks> <!--To-do: find a unique color for biolith-->
 			</li>
     <li Class="CompProperties_InspectString">
       <inspectString>&lt;color=#A4D6B5&gt;Hybrid-class&lt;/color&gt; | &lt;color=#A4D6B5&gt;Immutable&lt;/color&gt;

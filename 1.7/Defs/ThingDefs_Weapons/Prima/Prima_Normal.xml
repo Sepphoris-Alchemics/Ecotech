@@ -87,6 +87,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>2700000</lifespanTicks> <!--45 days-->
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+		  <showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
@@ -165,6 +166,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>2700000</lifespanTicks> <!--45 days-->
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor> <!--old 47, 56, 35-->
+		  <showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>
@@ -254,6 +256,7 @@ Upgraded Primas get +10 health and -1 flammability. 1.2 lifespan times below:
           <compClass>Ecotech.ThingComp_EquippedLifespan</compClass>
           <lifespanTicks>2700000</lifespanTicks> <!--45 days-->
           <lifespanBarColor>(81, 89, 45)</lifespanBarColor>
+		  <showExpirationAlertOnRemainingTicks>300000</showExpirationAlertOnRemainingTicks>
           <!--<expireEffect></expireEffect>-->
 					<!--<replacementToSpawn>ChunkSlagSteel</replacementToSpawn>-->
         </li>

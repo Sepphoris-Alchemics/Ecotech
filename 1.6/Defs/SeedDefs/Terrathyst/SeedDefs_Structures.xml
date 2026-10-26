@@ -80,7 +80,7 @@
     <recipeMaker IsNull="True" />
     <comps>
       <li Class="CompProperties_Plantable">
-        <plantDefToSpawn>ET_ChroniteForgePlant</plantDefToSpawn>
+        <plantDefToSpawn>ET_ChroniteCapacitorPlant</plantDefToSpawn>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>0.9</glowRadius>
