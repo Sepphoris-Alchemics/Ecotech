@@ -187,7 +187,7 @@ The seed is awoken by hand, and at will. During the planting process, one can in
                     <li>ET_PrimaTurretPlant_Shotgun</li>
                     <li>ET_PrimaTurretPlant_Spear</li>
                 </plantDefs>
-                <jobDef>EcoTech_Replant</jobDef>
+                <jobDef>ET_ReplantSeed</jobDef>
             </li>
     </comps>
     <tradeTags Inherit='false'>
